@@ -9,7 +9,6 @@ class MaintenanceEquipment(models.Model):
 
     _inherit = 'maintenance.equipment'
 
-    asset_id = fields.Many2one('account.asset.asset', string='Asset')
     equipment_scrap_template_id = fields.Many2one(
         'mail.template',
         string='Equipment Scrap Email Template',
