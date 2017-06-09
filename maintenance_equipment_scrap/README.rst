@@ -15,7 +15,7 @@ Configuration
 To configure this module, you need to:
 
 #. Go to 'Settings' -> 'Technical' -> 'Email' -> 'Templates' and create a new template you wish to use for equipment scrapping notifications
-#. Go to 'Accounting' -> 'Configuration' -> 'Settings'
+#. Go to 'Inventory' -> 'Configuration' -> 'Settings'
 #. You will find a new section called 'Scrapping', there you will be able to select the mail template just created as 'Equipment Scrap Template Email'
 #. Go to 'Maintenance' -> 'Equipments' and create a new equipment or select an already existing one
 #. You will be able to select the mail template you previously created as 'Equipment Scrap Template Email' (for new equipments, the one selected in the settings will be automatically proposed)

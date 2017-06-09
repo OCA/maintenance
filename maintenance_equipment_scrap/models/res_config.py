@@ -5,8 +5,8 @@
 from odoo import fields, models
 
 
-class AccountConfigSettings(models.TransientModel):
-    _inherit = 'account.config.settings'
+class StockConfigSettings(models.TransientModel):
+    _inherit = 'stock.config.settings'
 
     equipment_scrap_template_id = fields.Many2one(
         'mail.template',
