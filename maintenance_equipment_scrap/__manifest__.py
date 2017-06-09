@@ -5,7 +5,7 @@
 {
     'name': 'Maintenance Equipments Scrap',
     'summary': 'Enhance the functionality for Scrapping Equipments',
-    'author': 'Onestein',
+    'author': 'Onestein, Odoo Community Association (OCA)',
     'website': 'http://www.onestein.eu',
     'category': 'Human Resources',
     'version': '10.0.1.0.0',
