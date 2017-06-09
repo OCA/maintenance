@@ -18,5 +18,6 @@
         'views/maintenance_equipment.xml',
         'views/account_config_setting_views.xml',
         'wizard/scrap_equipment.xml',
+        'data/maintenance_data.xml',
     ],
 }

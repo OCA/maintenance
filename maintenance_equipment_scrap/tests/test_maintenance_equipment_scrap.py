@@ -14,14 +14,9 @@ class TestMaintenanceEquipmentScrap(common.TransactionCase):
         self.Template = self.env['mail.template']
         self.Wizard = self.env['wizard.perform.equipment.scrap']
 
-        self.template = self.Template.create({
-            'name': 'Template 1',
-            'email_from': 'info@openerp.com',
-            'subject': 'Template Test',
-            'email_to': '',
-            'model_id': self.env.ref(
-                'maintenance.model_maintenance_equipment').id,
-        })
+        self.template = self.env.ref(
+            'maintenance_equipment_scrap.equipment_scrap_mail_template'
+        )
 
         self.equipment1 = self.Equipment.create({
             'name': 'Equipment 1',
