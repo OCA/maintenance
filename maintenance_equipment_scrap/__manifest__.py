@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 Onestein (<http://www.onestein.eu>)
+# Copyright 2017 Onestein (<http://www.onestein.eu>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
@@ -13,11 +13,10 @@
     'depends': [
         'maintenance',
         'mail',
-        'stock',
     ],
     'data': [
         'views/maintenance_equipment.xml',
-        'views/stock_config_setting_views.xml',
+        'views/maintenance_equipment_category.xml',
         'wizard/scrap_equipment.xml',
         'data/maintenance_data.xml',
     ],

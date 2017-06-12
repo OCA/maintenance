@@ -11,6 +11,7 @@ class TestMaintenanceEquipmentScrap(common.TransactionCase):
     def setUp(self):
         super(TestMaintenanceEquipmentScrap, self).setUp()
         self.Equipment = self.env['maintenance.equipment']
+        self.Category = self.env['maintenance.equipment.category']
         self.Template = self.env['mail.template']
         self.Wizard = self.env['wizard.perform.equipment.scrap']
 
@@ -27,6 +28,11 @@ class TestMaintenanceEquipmentScrap(common.TransactionCase):
             'name': 'Equipment 2',
         })
 
+        self.equipment_category = self.Category.create({
+            'name': 'Equipment Category',
+            'equipment_scrap_template_id': self.template.id,
+        })
+
     def test_01_wizard(self):
         wizard = self.Wizard.create({
             'scrap_date': fields.Date.today(),
@@ -40,3 +46,17 @@ class TestMaintenanceEquipmentScrap(common.TransactionCase):
             'maintenance_equipment_scrap.wizard_perform_equipment_scrap_action'
         ).read()[0]
         self.assertEqual(action, action2)
+
+    def test_02_onchange(self):
+        self.assertFalse(self.equipment2.equipment_scrap_template_id)
+
+        self.equipment2.category_id = self.equipment_category
+        self.equipment2.onchange_category_id()
+        self.assertEqual(
+            self.equipment2.equipment_scrap_template_id,
+            self.template
+        )
+
+        self.equipment2.category_id = None
+        self.equipment2.onchange_category_id()
+        self.assertFalse(self.equipment2.equipment_scrap_template_id)
