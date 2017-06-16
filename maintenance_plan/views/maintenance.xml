@@ -83,4 +83,16 @@
             </xpath>
         </field>
     </record>
+
+    <!-- request : views inheritance -->
+    <record id="hr_equipment_request_view_form" model="ir.ui.view">
+        <field name="name">equipment.request.form.inherit</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <field name="maintenance_type" position="after">
+                <field name="maintenance_kind_id" />
+            </field>
+        </field>
+    </record>
 </odoo>
