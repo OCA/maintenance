@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_stock_general_settings" name="Settings" parent="maintenance.menu_maintenance_configuration"
+            sequence="100" action="action_maintenance_config_settings" groups="maintenance.group_equipment_manager"/>
+
+        <record model="ir.ui.menu" id="maintenance.menu_maintenance_configuration">
+            <field eval="[(4,ref('maintenance_settings.group_maintenance_manager'))]" name="groups_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_maintenance_title">
+            <field eval="[(4,ref('maintenance_settings.group_maintenance_user'))]" name="groups_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_m_dashboard">
+            <field eval="[(3,ref('base.group_user')),(4,ref('maintenance_settings.group_maintenance_user'))]" name="groups_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_m_request">
+            <field eval="[(3,ref('base.group_user')),(4,ref('maintenance_settings.group_maintenance_user'))]" name="groups_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_m_request_form">
+            <field eval="[(3,ref('base.group_user')),(4,ref('maintenance_settings.group_maintenance_user'))]" name="groups_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_m_request_calendar">
+            <field eval="[(3,ref('base.group_user')),(4,ref('maintenance_settings.group_maintenance_user'))]" name="groups_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_equipment_form">
+            <field eval="[(3,ref('base.group_user')),(4,ref('maintenance_settings.group_maintenance_user'))]" name="groups_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_m_reports">
+            <field eval="[(3,ref('base.group_user')),(4,ref('maintenance_settings.group_maintenance_user'))]" name="groups_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_m_reports_oee">
+            <field eval="[(3,ref('base.group_user')),(4,ref('maintenance_settings.group_maintenance_user'))]" name="groups_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_m_reports_losses">
+            <field eval="[(3,ref('base.group_user')),(4,ref('maintenance_settings.group_maintenance_user'))]" name="groups_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_maintenance_teams">
+            <field eval="[(4,ref('maintenance_settings.group_maintenance_user'))]" name="groups_id"/>
+        </record>
+
+    </data>
+</odoo>
