@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-====================
-Maintenance Settings
-====================
+=======================
+Base Maintenance Config
+=======================
 
 This module doesn't introduce new functionalities; it rather provides maintenance-related generic tools to be used in further specific-purpose modules.
 Such generic tools include:

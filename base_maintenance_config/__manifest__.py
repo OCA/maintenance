@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
-    'name': 'Maintenance Settings',
+    'name': 'Base Maintenance Config',
     'summary': 'Provides general settings for the Maintenance App',
     'author': 'Onestein, Odoo Community Association (OCA)',
     'website': 'http://www.onestein.eu',
