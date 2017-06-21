@@ -7,6 +7,13 @@
 Odoo modules for businesses that involves maintenance tasks.
 
 [//]: # (addons)
+
+Available addons
+----------------
+addon | version | summary
+--- | --- | ---
+[maintenance_equipment_scrap](maintenance_equipment_scrap/) | 10.0.1.0.0 | Enhance the functionality for Scrapping Equipments
+
 [//]: # (end addons)
 
 ----
