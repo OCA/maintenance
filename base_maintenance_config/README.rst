@@ -1,5 +1,5 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :target: http://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
 =======================
@@ -10,11 +10,6 @@ This module doesn't introduce new functionalities; it rather provides maintenanc
 Such generic tools include:
 #. A general settings section for the maintenance functionalities.
 #. A security group category 'Maintenance' with two levels: 'User' and 'Manager'.
-
-Configuration
-=============
-
-No configuration needed.
 
 Usage
 =====
@@ -44,6 +39,8 @@ Contributors
 ------------
 
 * Antonio Esposito <a.esposito@onestein.nl>
+
+Do not contact contributors directly about support or help with technical issues.
 
 Maintainer
 ----------
