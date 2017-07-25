@@ -6,7 +6,7 @@
     'name': 'Base Maintenance Config',
     'summary': 'Provides general settings for the Maintenance App',
     'author': 'Onestein, Odoo Community Association (OCA)',
-    'website': 'http://www.onestein.eu',
+    'website': 'https://github.com/OCA/maintenance',
     'category': 'Maintenance',
     'version': '10.0.1.0.0',
     'license': 'AGPL-3',
