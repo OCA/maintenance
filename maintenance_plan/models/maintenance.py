@@ -121,6 +121,14 @@ class MaintenanceEquipment(models.Model):
     maintenance_plan_ids = fields.One2many(string='Maintenance plan',
                                            comodel_name='maintenance.plan',
                                            inverse_name='equipment_id')
+    maintenance_team_required = fields.Boolean(
+        compute='_compute_team_required')
+
+    @api.depends('maintenance_plan_ids')
+    def _compute_team_required(self):
+        for equipment in self:
+            equipment.maintenance_team_required = len(
+                equipment.maintenance_plan_ids) >= 1
 
     def _create_new_request(self, maintenance_plan):
         self.ensure_one()
