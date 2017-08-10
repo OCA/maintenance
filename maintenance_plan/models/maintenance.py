@@ -25,7 +25,8 @@ class MaintenancePlan(models.Model):
     _description = 'Maintenance Plan'
 
     equipment_id = fields.Many2one(string='Equipment',
-                                   comodel_name='maintenance.equipment')
+                                   comodel_name='maintenance.equipment',
+                                   ondelete='cascade')
     maintenance_kind_id = fields.Many2one(string='Maintenance kind',
                                           comodel_name='maintenance.kind')
 
