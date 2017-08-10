@@ -4,6 +4,7 @@
 
 from odoo import models, fields, api, _
 from datetime import timedelta
+from odoo.exceptions import UserError
 
 
 class MaintenanceKind(models.Model):
@@ -109,6 +110,26 @@ class MaintenancePlan(models.Model):
                     today_date + period_timedelta)
 
             plan.next_maintenance_date = next_date
+
+    @api.multi
+    def unlink(self):
+        """ Restrict deletion of maintenance plan should there be maintenance
+            requests of this kind which are not done for its equipment """
+        for plan in self:
+            request = plan.equipment_id.mapped('maintenance_ids').filtered(
+                lambda r: (
+                    r.maintenance_kind_id == plan.maintenance_kind_id and
+                    not r.stage_id.done and
+                    r.maintenance_type == 'preventive')
+            )
+            if request:
+                raise UserError(_('The maintenance plan %s of equipment %s '
+                                  'has generated a request which is not done '
+                                  'yet. You should either set the request as '
+                                  'done, remove its maintenance kind or '
+                                  'delete it first.') % (
+                    plan.maintenance_kind_id.name, plan.equipment_id.name))
+        super(MaintenancePlan, self).unlink()
 
     _sql_constraints = [
         ('equipment_kind_uniq', 'unique (equipment_id, maintenance_kind_id)',
