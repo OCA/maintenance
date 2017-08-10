@@ -24,7 +24,7 @@
 
     <!-- maintenance.kind : actions -->
     <record id="maintenance_kind_action" model="ir.actions.act_window">
-        <field name="name">Kinds</field>
+        <field name="name">Maintenance kinds</field>
         <field name="res_model">maintenance.kind</field>
         <field name="view_mode">tree</field>
         <field name="view_id" ref="maintenance_kind_view_tree"/>
@@ -32,7 +32,7 @@
 
     <menuitem
         id="menu_maintenance_kind_configuration"
-        name="Maintenance Kinds"
+        name="Maintenance kinds"
         parent="maintenance.menu_maintenance_configuration"
         action="maintenance_kind_action"
         sequence="4" />

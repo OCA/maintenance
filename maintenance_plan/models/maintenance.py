@@ -29,7 +29,8 @@ class MaintenancePlan(models.Model):
                                    comodel_name='maintenance.equipment',
                                    ondelete='cascade')
     maintenance_kind_id = fields.Many2one(string='Maintenance kind',
-                                          comodel_name='maintenance.kind')
+                                          comodel_name='maintenance.kind',
+                                          ondelete='restrict')
 
     period = fields.Integer(string='Period',
                             help='Days between each maintenance')
@@ -214,4 +215,5 @@ class MaintenanceRequest(models.Model):
     _inherit = 'maintenance.request'
 
     maintenance_kind_id = fields.Many2one(string='Maintenance kind',
-                                          comodel_name='maintenance.kind')
+                                          comodel_name='maintenance.kind',
+                                          ondelete='restrict')
