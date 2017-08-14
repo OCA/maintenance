@@ -154,12 +154,10 @@ class MaintenanceEquipment(models.Model):
             equipment.maintenance_team_required = len(
                 equipment.maintenance_plan_ids) >= 1
 
-    def _create_new_request(self, maintenance_plan):
-        self.ensure_one()
-        self.env['maintenance.request'].create({
-            'name': _('Preventive Maintenance (%s) - %s') %
-            (maintenance_plan.maintenance_kind_id.name,
-             self.name),
+    def _prepare_request_from_plan(self, maintenance_plan):
+        return {
+            'name': _('Preventive Maintenance (%s) - %s') % (
+                maintenance_plan.maintenance_kind_id.name, self.name),
             'request_date': maintenance_plan.next_maintenance_date,
             'schedule_date': maintenance_plan.next_maintenance_date,
             'category_id': self.category_id.id,
@@ -170,7 +168,12 @@ class MaintenanceEquipment(models.Model):
             'maintenance_team_id': self.maintenance_team_id.id,
             'maintenance_kind_id': maintenance_plan.maintenance_kind_id.id,
             'duration': maintenance_plan.duration,
-        })
+        }
+
+    def _create_new_request(self, maintenance_plan):
+        self.ensure_one()
+        vals = self._prepare_request_from_plan(maintenance_plan)
+        self.env['maintenance.request'].create(vals)
 
     @api.model
     def _cron_generate_requests(self):
