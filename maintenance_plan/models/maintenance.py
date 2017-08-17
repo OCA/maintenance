@@ -17,7 +17,7 @@ class MaintenanceKind(models.Model):
 
     _sql_constraints = [
         ('name_uniq', 'unique (name)',
-         "Maintenance kind name already exists !")]
+         "Maintenance kind name already exists.")]
 
 
 class MaintenancePlan(models.Model):
@@ -135,7 +135,7 @@ class MaintenancePlan(models.Model):
     _sql_constraints = [
         ('equipment_kind_uniq', 'unique (equipment_id, maintenance_kind_id)',
          "You cannot define multiple times the same maintenance kind on an "
-         "equipment maintenance plan!")]
+         "equipment maintenance plan.")]
 
 
 class MaintenanceEquipment(models.Model):
