@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Onestein (<http://www.onestein.eu>)
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo noupdate="1">
+
+    <record model="ir.module.category" id="module_maintenance">
+        <field name="name">Maintenance</field>
+        <field name="sequence">103</field>
+    </record>
+
+</odoo>
