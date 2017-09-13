@@ -8,6 +8,7 @@ Base Maintenance Config
 
 This module doesn't introduce new functionalities; it rather provides maintenance-related generic tools to be used in further specific-purpose modules.
 Such generic tools include:
+
 #. A general settings section for the maintenance functionalities.
 #. A security group category 'Maintenance' with two levels: 'User' and 'Manager'.
 
@@ -16,6 +17,7 @@ Usage
 
 This module doesn't provide new functionalities.
 Still you can now set a new security group on users. To do so, you need to:
+
 #. Go on 'Settings' -> 'Users' -> 'Users'
 #. Create a new user or select an already existing one
 #. In the tab 'Access Rights', at the 'Application' paragraph you'll now be able to select a group, including 'User' and 'Manager' for the 'Maintenance' category
