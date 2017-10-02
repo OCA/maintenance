@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--  Maintenance kinds -->
+        <record id="maintenance_kind_monthly" model="maintenance.kind">
+            <field name="name">Monthly</field>
+            <field name="active" eval="True" />
+        </record>
+        <record id="maintenance_kind_weekly" model="maintenance.kind">
+            <field name="name">Weekly</field>
+            <field name="active" eval="True" />
+        </record>
+
+        <!--  Maintenance plans -->
+        <record id="maintenance_plan_monthly_monitor1" model="maintenance.plan">
+            <field name="equipment_id" ref="maintenance.equipment_monitor1" />
+            <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
+            <field name="period">30</field>
+            <field name="duration">2</field>
+        </record>
+
+        <record id="maintenance_plan_monthly_monitor4" model="maintenance.plan">
+            <field name="equipment_id" ref="maintenance.equipment_monitor4" />
+            <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
+            <field name="period">30</field>
+            <field name="duration">2</field>
+        </record>
+
+        <record id="maintenance_plan_monthly_monitor6" model="maintenance.plan">
+            <field name="equipment_id" ref="maintenance.equipment_monitor6" />
+            <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
+            <field name="period">30</field>
+            <field name="duration">2</field>
+        </record>
+
+        <record id="maintenance_plan_monthly_printer1" model="maintenance.plan">
+            <field name="equipment_id" ref="maintenance.equipment_printer1" />
+            <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
+            <field name="period">30</field>
+            <field name="duration">4</field>
+        </record>
+
+        <record id="maintenance_plan_weekly_printer1" model="maintenance.plan">
+            <field name="equipment_id" ref="maintenance.equipment_printer1" />
+            <field name="maintenance_kind_id" ref="maintenance_kind_weekly" />
+            <field name="period">7</field>
+            <field name="duration">1</field>
+        </record>
+
+    </data>
+</odoo>
