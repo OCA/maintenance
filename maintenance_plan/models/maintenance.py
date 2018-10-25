@@ -1,9 +1,10 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 Camptocamp SA
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import models, fields, api, _
 from datetime import timedelta
+
+from odoo import _, api, fields, models
+
 from odoo.exceptions import UserError
 
 
@@ -130,7 +131,7 @@ class MaintenancePlan(models.Model):
                                   'done, remove its maintenance kind or '
                                   'delete it first.') % (
                     plan.maintenance_kind_id.name, plan.equipment_id.name))
-        super(MaintenancePlan, self).unlink()
+        super().unlink()
 
     _sql_constraints = [
         ('equipment_kind_uniq', 'unique (equipment_id, maintenance_kind_id)',
