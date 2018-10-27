@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
 
     <!-- maintenance.kind : views -->
     <record id="maintenance_kind_view_tree" model="ir.ui.view">
         <field name="name">maintenance.kind.tree</field>
         <field name="model">maintenance.kind</field>
         <field name="arch" type="xml">
-            <tree string="Maintenance Kinds" editable="true">
+            <tree string="Maintenance Kinds" editable="top">
                 <field name="name"/>
                 <field name="active"/>
             </tree>
@@ -88,5 +87,6 @@
             </field>
         </field>
     </record>
-  </data>
+
+  
 </odoo>

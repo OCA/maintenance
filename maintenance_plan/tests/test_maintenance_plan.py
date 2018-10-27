@@ -9,7 +9,7 @@ from datetime import timedelta
 class TestMaintenancePlan(test_common.TransactionCase):
 
     def setUp(self):
-        super(TestMaintenancePlan, self).setUp()
+        super().setUp()
         self.printer1 = self.env.ref('maintenance.equipment_printer1')
         self.cron = self.env.ref('maintenance.maintenance_requests_cron')
 
