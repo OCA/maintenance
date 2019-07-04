@@ -155,6 +155,9 @@ class MaintenanceEquipment(models.Model):
                 equipment.maintenance_plan_ids) >= 1
 
     def _prepare_request_from_plan(self, maintenance_plan):
+        team = self.maintenance_team_id
+        if not team:
+            team = self.env['maintenance.request']._get_default_team_id()
         return {
             'name': _('Preventive Maintenance (%s) - %s') % (
                 maintenance_plan.maintenance_kind_id.name, self.name),
@@ -165,7 +168,7 @@ class MaintenanceEquipment(models.Model):
             'maintenance_type': 'preventive',
             'owner_user_id': self.owner_user_id.id or self.env.user.id,
             'technician_user_id': self.technician_user_id.id,
-            'maintenance_team_id': self.maintenance_team_id.id,
+            'maintenance_team_id': team.id,
             'maintenance_kind_id': maintenance_plan.maintenance_kind_id.id,
             'duration': maintenance_plan.duration,
         }
