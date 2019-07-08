@@ -13,7 +13,7 @@ class MaintenanceKind(models.Model):
     _name = 'maintenance.kind'
     _description = 'Maintenance Kind'
 
-    name = fields.Char('Name', required=True, translate=True)
+    name = fields.Char(required=True, translate=True)
     active = fields.Boolean('Active Kind', required=True, default=True)
 
     _sql_constraints = [
@@ -33,10 +33,8 @@ class MaintenancePlan(models.Model):
                                           comodel_name='maintenance.kind',
                                           ondelete='restrict')
 
-    period = fields.Integer(string='Period',
-                            help='Days between each maintenance')
-    duration = fields.Float(string='Duration',
-                            help='Maintenance duration in hours')
+    period = fields.Integer(help='Days between each maintenance')
+    duration = fields.Float(help='Maintenance duration in hours')
 
     next_maintenance_date = fields.Date('Next maintenance date',
                                         compute='_compute_next_maintenance')
@@ -47,8 +45,7 @@ class MaintenancePlan(models.Model):
                  'equipment_id.maintenance_ids.maintenance_kind_id')
     def _compute_next_maintenance(self):
 
-        date_now = fields.Date.context_today(self)
-        today_date = fields.Date.from_string(date_now)
+        today_date = fields.Date.context_today(self)
 
         for plan in self.filtered(lambda x: x.period > 0):
 
@@ -68,48 +65,39 @@ class MaintenancePlan(models.Model):
                 ('close_date', '!=', False)], order="close_date desc", limit=1)
             if next_maintenance_todo and last_maintenance_done:
                 next_date = next_maintenance_todo.request_date
-                date_gap = fields.Date.from_string(
-                    next_maintenance_todo.request_date) - \
-                    fields.Date.from_string(last_maintenance_done.close_date)
+                date_gap = next_maintenance_todo.request_date - \
+                    last_maintenance_done.close_date
                 # If the gap between the last_maintenance_done and the
                 # next_maintenance_todo one is bigger than 2 times the period
                 # and next request is in the future
                 # We use 2 times the period to avoid creation too closed
                 # request from a manually one created
                 if date_gap > max(timedelta(0), period_timedelta * 2) \
-                        and fields.Date.from_string(
-                            next_maintenance_todo.request_date) > today_date:
+                        and next_maintenance_todo.request_date > today_date:
                     # If the new date still in the past, we set it for today
-                    if fields.Date.from_string(
-                            last_maintenance_done.close_date) + \
+                    if last_maintenance_done.close_date + \
                             period_timedelta < today_date:
-                        next_date = date_now
+                        next_date = today_date
                     else:
-                        next_date = fields.Date.to_string(
-                            fields.Date.from_string(
-                                last_maintenance_done.close_date) +
-                            period_timedelta)
+                        next_date = last_maintenance_done.close_date + \
+                            period_timedelta
             elif next_maintenance_todo:
                 next_date = next_maintenance_todo.request_date
-                date_gap = fields.Date.from_string(
-                    next_maintenance_todo.request_date) - today_date
+                date_gap = next_maintenance_todo.request_date - today_date
                 # If next maintenance to do is in the future, and in more than
                 # 2 times the period, we insert an new request
                 # We use 2 times the period to avoid creation too closed
                 # request from a manually one created
                 if date_gap > timedelta(0) and date_gap > period_timedelta * 2:
-                    next_date = fields.Date.to_string(
-                        today_date + period_timedelta)
+                    next_date = today_date + period_timedelta
             elif last_maintenance_done:
-                next_date = fields.Date.from_string(
-                    last_maintenance_done.close_date) + period_timedelta
+                next_date = last_maintenance_done.close_date + period_timedelta
                 # If when we add the period to the last maintenance done and
                 # we still in past, we plan it for today
                 if next_date < today_date:
-                    next_date = date_now
+                    next_date = today_date
             else:
-                next_date = fields.Date.to_string(
-                    today_date + period_timedelta)
+                next_date = today_date + period_timedelta
 
             plan.next_maintenance_date = next_date
 
@@ -156,9 +144,9 @@ class MaintenanceEquipment(models.Model):
                 equipment.maintenance_plan_ids) >= 1
 
     def _prepare_request_from_plan(self, maintenance_plan):
-        team = self.maintenance_team_id
-        if not team:
-            team = self.env['maintenance.request']._get_default_team_id()
+        team_id = self.maintenance_team_id.id
+        if not team_id:
+            team_id = self.env['maintenance.request']._get_default_team_id()
         return {
             'name': _('Preventive Maintenance (%s) - %s') % (
                 maintenance_plan.maintenance_kind_id.name, self.name),
@@ -168,8 +156,8 @@ class MaintenanceEquipment(models.Model):
             'equipment_id': self.id,
             'maintenance_type': 'preventive',
             'owner_user_id': self.owner_user_id.id or self.env.user.id,
-            'technician_user_id': self.technician_user_id.id,
-            'maintenance_team_id': team.id,
+            'user_id': self.technician_user_id.id,
+            'maintenance_team_id': team_id,
             'maintenance_kind_id': maintenance_plan.maintenance_kind_id.id,
             'duration': maintenance_plan.duration,
         }
