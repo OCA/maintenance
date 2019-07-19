@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="maintenance_kind_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.kind.tree</field>
+        <field name="model">maintenance.kind</field>
+        <field name="arch" type="xml">
+            <tree string="Maintenance Kinds" editable="top">
+                <field name="name"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="maintenance_kind_action" model="ir.actions.act_window">
+        <field name="name">Maintenance kinds</field>
+        <field name="res_model">maintenance.kind</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="maintenance_kind_view_tree"/>
+    </record>
+
+    <menuitem
+        id="menu_maintenance_kind_configuration"
+        name="Maintenance kinds"
+        parent="maintenance.menu_maintenance_configuration"
+        action="maintenance_kind_action"
+        sequence="4" />
+
+</odoo>

@@ -15,36 +15,50 @@
         <record id="maintenance_plan_monthly_monitor1" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance.equipment_monitor1" />
             <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
-            <field name="period">30</field>
+            <field name="interval">1</field>
+            <field name="interval_step">month</field>
             <field name="duration">2</field>
+            <field name="maintenance_plan_horizon">2</field>
+            <field name="planning_step">month</field>
         </record>
 
         <record id="maintenance_plan_monthly_monitor4" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance.equipment_monitor4" />
             <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
-            <field name="period">30</field>
+            <field name="interval">1</field>
+            <field name="interval_step">month</field>
             <field name="duration">2</field>
+            <field name="maintenance_plan_horizon">2</field>
+            <field name="planning_step">month</field>
         </record>
 
         <record id="maintenance_plan_monthly_monitor6" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance.equipment_monitor6" />
             <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
-            <field name="period">30</field>
+            <field name="interval">1</field>
+            <field name="interval_step">month</field>
             <field name="duration">2</field>
+            <field name="maintenance_plan_horizon">1</field>
+            <field name="planning_step">month</field>
         </record>
 
         <record id="maintenance_plan_monthly_printer1" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance.equipment_printer1" />
             <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
-            <field name="period">30</field>
+            <field name="interval">1</field>
+            <field name="interval_step">month</field>
             <field name="duration">4</field>
+            <field name="maintenance_plan_horizon">3</field>
+            <field name="planning_step">month</field>
         </record>
 
         <record id="maintenance_plan_weekly_printer1" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance.equipment_printer1" />
             <field name="maintenance_kind_id" ref="maintenance_kind_weekly" />
-            <field name="period">7</field>
-            <field name="duration">1</field>
+            <field name="interval">7</field>
+            <field name="duration">2</field>
+            <field name="maintenance_plan_horizon">1</field>
+            <field name="planning_step">month</field>
         </record>
 
     </data>
