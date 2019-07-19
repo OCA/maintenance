@@ -4,49 +4,62 @@
 import odoo.tests.common as test_common
 from odoo import fields
 from datetime import timedelta
+from dateutil.relativedelta import relativedelta
 
 
 class TestMaintenancePlan(test_common.TransactionCase):
 
     def setUp(self):
         super().setUp()
-        self.printer1 = self.env.ref('maintenance.equipment_printer1')
-        self.monitor1 = self.env.ref('maintenance.equipment_monitor1')
+        self.maintenance_request_obj = self.env['maintenance.request']
+        self.maintenance_plan_obj = self.env['maintenance.plan']
+        self.maintenance_equipment_obj = self.env['maintenance.equipment']
         self.cron = self.env.ref('maintenance.maintenance_requests_cron')
 
-        self.kind_quarterly = self.env['maintenance.kind'].create({
-            'name': 'Quarterly',
-            'active': True,
+        self.equipment_1 = self.maintenance_equipment_obj.create({
+            'name': 'Laptop 1',
         })
-        self.monitor1.maintenance_plan_ids = [(0, 0, {
-            'maintenance_kind_id': self.kind_quarterly.id,
-            'period': 90,
-            'duration': 3
-        })]
-
-    def test_next_maintenance_date(self):
+        self.maintenance_plan_1 = self.maintenance_plan_obj.create({
+            'equipment_id': self.equipment_1.id,
+            'interval': 1,
+            'interval_step': 'month',
+            'maintenance_plan_horizon': 2,
+            'planning_step': 'month'
+        })
 
         today = fields.Date.today()
+        self.today_date = fields.Date.from_string(today)
 
-        plan_ids = self.printer1.maintenance_plan_ids + \
-            self.monitor1.maintenance_plan_ids
-        for plan in plan_ids:
-            self.assertEqual(plan.next_maintenance_date,
-                             today + timedelta(days=plan.period))
+    def test_next_maintenance_date(self):
+        # We set start maintenance date tomorrow and check next maintenance
+        # date has been correctly computed
+        self.maintenance_plan_1.write({
+            'start_maintenance_date': fields.Date.to_string(
+                self.today_date - timedelta(days=1)),
+        })
+        self.maintenance_plan_1._compute_next_maintenance()
+        # Check next maintenance date is 1 month from start date
+        self.assertEqual(
+            fields.Date.from_string(
+                self.maintenance_plan_1.next_maintenance_date),
+            fields.Date.from_string(
+                self.maintenance_plan_1.start_maintenance_date) +
+            relativedelta(months=self.maintenance_plan_1.interval)
+        )
 
     def test_generate_requests(self):
-
         self.cron.method_direct_trigger()
 
-        generated_requests = self.env['maintenance.request'].search(
-            [('maintenance_kind_id', 'in', [
-                self.env.ref('maintenance_plan.maintenance_kind_monthly').id,
-                self.env.ref('maintenance_plan.maintenance_kind_weekly').id,
-                self.kind_quarterly.id])])
+        generated_requests = self.maintenance_request_obj.search(
+            [('maintenance_plan_id', '=', self.maintenance_plan_1.id)],
+            order="schedule_date asc"
+        )
+        self.assertEqual(len(generated_requests), 3)
+
+        request_date_schedule = self.today_date
 
         for req in generated_requests:
-            for plan in req.equipment_id.maintenance_plan_ids:
-                if plan.maintenance_kind_id == req.maintenance_kind_id:
-                    self.assertEqual(req.duration, plan.duration)
-                    self.assertEqual(req.request_date,
-                                     plan.next_maintenance_date)
+            self.assertEqual(fields.Date.from_string(req.schedule_date),
+                             request_date_schedule)
+            request_date_schedule = \
+                request_date_schedule + relativedelta(months=1)
