@@ -1,0 +1,36 @@
+# Copyright 2019 ForgeFlow S.L. (www.forgeflow.com)
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
+from odoo import fields, models, _
+from datetime import timedelta
+
+
+class MaintenancePlan(models.Model):
+    _inherit = 'maintenance.plan'
+
+    planned_activity_ids = fields.One2many(
+        'maintenance.planned.activity', 'maintenance_plan_id',
+        'Planned Activities'
+    )
+
+
+class MaintenanceEquipment(models.Model):
+    _inherit = 'maintenance.equipment'
+
+    def _create_new_request(self, maintenance_plan):
+        new_requests = super()._create_new_request(maintenance_plan)
+        for request in new_requests:
+            for planned_activity in maintenance_plan.planned_activity_ids:
+                self.env['mail.activity'].create({
+                    'activity_type_id': planned_activity.activity_type_id.id,
+                    'note': _('Activity automatically generated from '
+                              'maintenance plan'),
+                    'user_id': planned_activity.user_id.id or self.env.user.id,
+                    'res_id': request.id,
+                    'res_model_id': self.env.ref(
+                        'maintenance.model_maintenance_request').id,
+                    'date_deadline': fields.Date.from_string(
+                        request.schedule_date) - timedelta(
+                        days=planned_activity.date_before_request),
+                })
+        return new_requests
