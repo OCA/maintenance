@@ -119,20 +119,19 @@ class MaintenanceEquipment(models.Model):
 
     @api.model
     def create(self, vals):
-        if vals.get('category_id') and not vals.get('code'):
+        equipment = super(MaintenanceEquipment, self).create(vals)
+        if equipment.category_id and not equipment.code:
             sequence_id = self.env['maintenance.equipment.category'].browse(
                 vals['category_id']).sequence_id
             if sequence_id:
-                vals['code'] = sequence_id._next()
-        return super(MaintenanceEquipment, self).create(vals)
+                equipment.code = sequence_id._next()
+        return equipment
 
     @api.multi
     def write(self, vals):
-        if (not self.code or vals.get('code', None) is False) and \
-                (self.category_id or vals.get('category_id', False)):
-            category_id = self.category_id.id or vals.get('category_id', False)
-            sequence_id = self.env['maintenance.equipment.category'].browse(
-                category_id).sequence_id
-            if sequence_id:
-                vals['code'] = sequence_id._next()
-        return super(MaintenanceEquipment, self).write(vals)
+        rec = super(MaintenanceEquipment, self).write(vals)
+        for rec in self:
+            if rec.category_id and not rec.code and \
+                    rec.category_id.sequence_id:
+                rec.code = rec.category_id.sequence_id._next()
+        return rec
