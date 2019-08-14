@@ -114,7 +114,7 @@ class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
     code = fields.Char(
-        string='Equipment Code',
+        help='Equipment Code',
     )
 
     @api.model
