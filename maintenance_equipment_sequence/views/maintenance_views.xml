@@ -41,7 +41,18 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_tree"/>
         <field name="arch" type="xml">
             <field name="name" position="before">
-                <field name="code" string="ID#"/>
+                <field name="code"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="name">equipment.search</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="code"/>
             </field>
         </field>
     </record>
