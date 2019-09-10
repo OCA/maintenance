@@ -11,7 +11,7 @@ Maintenance Groups
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
-    :target: https://www.gnu.org/licenses/agpl-3.0-standalone.html
+    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fmaintenance-lightgray.png?logo=github
     :target: https://github.com/OCA/maintenance/tree/11.0/base_maintenance_group
