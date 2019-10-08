@@ -46,7 +46,7 @@
             </xpath>
             <xpath expr="//group[@name='maintenance']" position="after">
                 <group name="project_task">
-		            <field name="preventive_default_task_id"
+                    <field name="preventive_default_task_id"
                            domain="[('project_id', '=', project_id)]"
                            context="{'default_project_id': project_id}"/>
                 </group>
