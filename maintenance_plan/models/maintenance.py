@@ -150,6 +150,7 @@ class MaintenanceEquipment(models.Model):
         return {
             'name': _('Preventive Maintenance (%s) - %s') % (
                 maintenance_plan.maintenance_kind_id.name, self.name),
+            'company_id': self.company_id.id,
             'request_date': maintenance_plan.next_maintenance_date,
             'schedule_date': maintenance_plan.next_maintenance_date,
             'category_id': self.category_id.id,
