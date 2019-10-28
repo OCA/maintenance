@@ -37,7 +37,8 @@ class MaintenancePlan(models.Model):
     duration = fields.Float(help='Maintenance duration in hours')
 
     next_maintenance_date = fields.Date('Next maintenance date',
-                                        compute='_compute_next_maintenance')
+                                        compute='_compute_next_maintenance',
+                                        store=True)
 
     @api.depends('period', 'maintenance_kind_id',
                  'equipment_id.maintenance_ids.request_date',
