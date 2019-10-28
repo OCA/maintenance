@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_plan
+# 	* maintenance_plan
 #
 msgid ""
 msgstr ""
@@ -149,15 +149,18 @@ msgid "Period"
 msgstr ""
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance.py:151
+#: code:addons/maintenance_plan/models/maintenance.py:152
 #, python-format
 msgid "Preventive Maintenance (%s) - %s"
 msgstr ""
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance.py:116
+#: code:addons/maintenance_plan/models/maintenance.py:117
 #, python-format
-msgid "The maintenance plan %s of equipment %s has generated a request which is not done yet. You should either set the request as done, remove its maintenance kind or delete it first."
+msgid ""
+"The maintenance plan %s of equipment %s has generated a request which is not "
+"done yet. You should either set the request as done, remove its maintenance "
+"kind or delete it first."
 msgstr ""
 
 #. module: maintenance_plan
@@ -167,11 +170,16 @@ msgstr ""
 
 #. module: maintenance_plan
 #: sql_constraint:maintenance.plan:0
-msgid "You cannot define multiple times the same maintenance kind on an equipment maintenance plan."
+msgid ""
+"You cannot define multiple times the same maintenance kind on an equipment "
+"maintenance plan."
 msgstr ""
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/hooks.py:31
 #, python-format
-msgid "You have multiple preventive maintenance requests on equipment %s next action date (%s). Please leave only one preventive request on the date of equipment's next action to install the module."
+msgid ""
+"You have multiple preventive maintenance requests on equipment %s next "
+"action date (%s). Please leave only one preventive request on the date of "
+"equipment's next action to install the module."
 msgstr ""
