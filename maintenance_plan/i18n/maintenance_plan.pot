@@ -148,13 +148,13 @@ msgid "Period"
 msgstr ""
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance.py:151
+#: code:addons/maintenance_plan/models/maintenance.py:152
 #, python-format
 msgid "Preventive Maintenance (%s) - %s"
 msgstr ""
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance.py:116
+#: code:addons/maintenance_plan/models/maintenance.py:117
 #, python-format
 msgid "The maintenance plan %s of equipment %s has generated a request which is not done yet. You should either set the request as done, remove its maintenance kind or delete it first."
 msgstr ""
