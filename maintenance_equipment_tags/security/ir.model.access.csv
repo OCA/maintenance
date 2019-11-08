@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_maintenance_equipment_tag,access_maintenance_equipment_tag,model_maintenance_equipment_tag,base.group_user,1,0,0,0
+access_maintenance_equipment_tag_man,access_maintenance_equipment_tag_man,model_maintenance_equipment_tag,maintenance.group_equipment_manager,1,1,1,1
