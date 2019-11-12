@@ -4,7 +4,6 @@
 import odoo.tests.common as test_common
 from odoo import fields
 from odoo.exceptions import ValidationError
-from ..models import hr_timesheet
 
 
 class TestMaintenanceTimesheet(test_common.TransactionCase):
@@ -48,26 +47,20 @@ class TestMaintenanceTimesheet(test_common.TransactionCase):
 
     def test_check_request_done(self):
         self.request2.stage_id = self.stage_done
-        with self.assertRaises(ValidationError) as context:
+        with self.assertRaises(ValidationError):
             self.request2.timesheet_ids = [(0, 0, {
                 'name': 'Attempt to create a task for a done request',
                 'project_id': self.request2.project_id.id,
                 'user_id': self.env.ref('base.user_admin').id,
                 'date': fields.Date.today(),
                 'unit_amount': 2})]
-        self.assertTrue(hr_timesheet.BAD_TIMESHEET_REQUEST_DONE_MSG
-                        in str(context.exception))
-        with self.assertRaises(ValidationError) as context:
+        with self.assertRaises(ValidationError):
             # Attempt to modify a timesheet related a done request
             for timesheet in self.request2.timesheet_ids:
                 timesheet.unit_amount += 1
-        self.assertTrue(hr_timesheet.BAD_TIMESHEET_REQUEST_DONE_MSG
-                        in str(context.exception))
-        with self.assertRaises(ValidationError) as context:
+        with self.assertRaises(ValidationError):
             # Attempt to delete a timesheet related a done request
             self.request2.timesheet_ids.unlink()
-        self.assertTrue(hr_timesheet.BAD_TIMESHEET_REQUEST_DONE_MSG
-                        in str(context.exception))
 
     def test_action_view_timesheet_ids(self):
         act1 = self.request2.action_view_timesheet_ids()

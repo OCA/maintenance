@@ -4,9 +4,6 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
-BAD_TIMESHEET_REQUEST_DONE_MSG = \
-    'Cannot save or delete a timesheet for a maintenance request already done'
-
 
 class AccountAnalyticLine(models.Model):
     _inherit = 'account.analytic.line'
@@ -46,4 +43,5 @@ class AccountAnalyticLine(models.Model):
         Editing a timesheet related to a finished request is forbidden.
         """
         if self.env['maintenance.request'].browse(request_id).stage_id.done:
-            raise ValidationError(_(BAD_TIMESHEET_REQUEST_DONE_MSG))
+            raise ValidationError(_('Cannot save or delete a timesheet for '
+                                    'a maintenance request already done'))
