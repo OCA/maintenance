@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="hr_equipment_request_view_form">
+        <field name="name">maintenance.request.form (in maintenance_request_duplicated)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="arch" type="xml">
+            <button name="archive_equipment_request" position="before">
+                <button string="Mark as Duplicated" name="%(maintenance_request_duplicated.wizard_request_duplicated_act_window)d" class="oe_highlight"
+                        type="action" attrs="{'invisible': ['|', ('parent_id', '!=', False), ('archive', '=', True)]}"/>
+            </button>
+            <xpath expr="//span[hasclass('label')]/.." position="after">
+                <field name="parent_id" invisible="1"/>
+                <div attrs="{'invisible': [('parent_id', '=', False)]}">
+                    <span class="label label-danger pull-right">Duplicated Request</span>
+                </div>
+            </xpath>
+            <field name="owner_user_id" position="before">
+                <field name="parent_id" attrs="{'invisible': [('parent_id', '=', False)]}"/>
+            </field>
+            <field name="maintenance_type" position="after">
+                <field name="child_ids" attrs="{'invisible': [('child_ids', '=', [])]}">
+                    <tree>
+                        <field name="name"/>
+                        <field name="request_date"/>
+                        <field name="owner_user_id"/>
+                        <field name="technician_user_id"/>
+                        <field name="stage_id"/>
+                        <button name="deduplicate" type="object" icon="fa-trash" class='oe_edit_only oe_inline oe_stat_button' string="Deduplicate"/>
+                    </tree>
+                </field>
+            </field>
+        </field>
+    </record>
+
+</odoo>
