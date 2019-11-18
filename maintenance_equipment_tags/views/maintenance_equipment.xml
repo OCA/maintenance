@@ -29,4 +29,15 @@
         </field>
     </record>
 
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="name">maintenance.equipment.search (in maintenance_equipment_tags)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="tag_ids"/>
+            </field>
+        </field>
+    </record>
+
 </odoo>
