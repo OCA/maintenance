@@ -67,7 +67,7 @@ msgid "Equipment Statuses"
 msgstr ""
 
 #. module: maintenance_equipment_status
-#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status_id_2171
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status_id_2174
 msgid "ID"
 msgstr ""
 
@@ -92,7 +92,7 @@ msgid "Maintenance Equipment Status"
 msgstr ""
 
 #. module: maintenance_equipment_status
-#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status_name_2167
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status_name_2170
 msgid "Name"
 msgstr ""
 
