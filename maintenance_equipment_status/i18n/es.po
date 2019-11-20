@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_status
+# 	* maintenance_equipment_status
 #
 msgid ""
 msgstr ""
@@ -70,7 +70,7 @@ msgid "Equipment Statuses"
 msgstr "Estados de Equipamiento"
 
 #. module: maintenance_equipment_status
-#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status_id_2171
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status_id_2174
 msgid "ID"
 msgstr "ID"
 
@@ -95,7 +95,7 @@ msgid "Maintenance Equipment Status"
 msgstr "Estados de Equipos"
 
 #. module: maintenance_equipment_status
-#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status_name_2167
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status_name_2170
 msgid "Name"
 msgstr "Nombre"
 
@@ -122,7 +122,9 @@ msgstr "Nombre del Estado"
 
 #. module: maintenance_equipment_status
 #: model:ir.model.fields,help:maintenance_equipment_status.field_maintenance_equipment_status_category_ids
-msgid "When set, this status will only be applicable to the equipments under these categories."
+msgid ""
+"When set, this status will only be applicable to the equipments under these "
+"categories."
 msgstr ""
 "Si se establece, este estado solo se aplicara a equipamientos de estas "
 "categorías."
