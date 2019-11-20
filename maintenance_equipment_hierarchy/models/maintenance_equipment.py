@@ -13,7 +13,8 @@ class MaintenanceEquipment(models.Model):
     _parent_order = 'name'
 
     parent_id = fields.Many2one('maintenance.equipment', 'Parent Equipment',
-                                index=True, ondelete='cascade')
+                                index=True, ondelete='cascade',
+                                track_visibility='onchange',)
     child_ids = fields.One2many('maintenance.equipment', 'parent_id',
                                 'Child Equipments')
     parent_left = fields.Integer('Left Parent', index=1)
