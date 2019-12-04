@@ -34,7 +34,7 @@ msgid "Equipment"
 msgstr ""
 
 #. module: maintenance_equipment_hierarchy
-#: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:52
+#: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:53
 #, python-format
 msgid "Error ! You cannot create a recursive equipment hierarchy."
 msgstr ""
