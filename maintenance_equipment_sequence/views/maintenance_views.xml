@@ -26,9 +26,9 @@
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('oe_title')]" position="before">
                 <div class="row">
-                    <div class="col-xs-2">
+                    <div class="col-xs-2" style="padding-left:1.0em">
                         <label for="code" class="oe_edit_only"/>
-                        <h3><field name="code"/></h3>
+                        <h3><field name="code" /></h3>
                     </div>
                 </div>
             </xpath>
