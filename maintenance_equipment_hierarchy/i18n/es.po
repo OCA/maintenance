@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_hierarchy
+# 	* maintenance_equipment_hierarchy
 #
 msgid ""
 msgstr ""
@@ -37,7 +37,7 @@ msgid "Equipment"
 msgstr "Equipamiento"
 
 #. module: maintenance_equipment_hierarchy
-#: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:52
+#: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:53
 #, python-format
 msgid "Error ! You cannot create a recursive equipment hierarchy."
 msgstr "Error ! No puedes crear una jerarquía de equipamientos recursiva."
