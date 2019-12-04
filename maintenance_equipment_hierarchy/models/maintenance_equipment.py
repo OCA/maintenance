@@ -23,6 +23,7 @@ class MaintenanceEquipment(models.Model):
         string="Number of child equipments")
     display_name = fields.Char(compute='_compute_display_name')
     complete_name = fields.Char(compute='_compute_complete_name', store=True)
+    parent_path = fields.Char(index=True)
 
     def name_get(self):
         return [(equipment.id, equipment.complete_name) for equipment in self]
