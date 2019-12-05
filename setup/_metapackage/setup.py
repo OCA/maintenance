@@ -18,6 +18,7 @@ setuptools.setup(
         'odoo11-addon-maintenance_equipment_tags',
         'odoo11-addon-maintenance_plan',
         'odoo11-addon-maintenance_request_sequence',
+        'odoo11-addon-maintenance_request_stage_transition',
         'odoo11-addon-maintenance_team_hierarchy',
     ],
     classifiers=[
