@@ -3,7 +3,7 @@
 
 {
     "name": "Base Maintenance",
-    "version": "11.0.1.0.0",
+    "version": "12.0.1.0.0",
     "author": "Eficent, "
               "Odoo Community Association (OCA)",
     "development_status": "Beta",
@@ -14,10 +14,9 @@
         "maintenance",
     ],
     "data": [
-        "security/maintenance_security.xml",
-        "security/ir.model.access.csv",
         "views/maintenance_team_views.xml",
         "views/maintenance_request_views.xml",
+        "views/maintenance_equipment_views.xml"
     ],
     "installable": True,
 }
