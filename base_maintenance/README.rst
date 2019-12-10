@@ -23,7 +23,7 @@ Base Maintenance
     :target: https://runbot.odoo-community.org/runbot/240/11.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module extends the functionality of Odoo Maintenance module to add
 some basic features that are standard in other Odoo apps:
@@ -60,7 +60,7 @@ Credits
 Authors
 ~~~~~~~
 
-* Eficent
+* ForgeFlow
 
 Contributors
 ~~~~~~~~~~~~
