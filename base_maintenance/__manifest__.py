@@ -1,10 +1,10 @@
-# Copyright 2019 Eficent Business and IT Consulting Services, S.L.
+# Copyright 2019 ForgeFlow S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 {
     "name": "Base Maintenance",
     "version": "12.0.1.0.0",
-    "author": "Eficent, "
+    "author": "ForgeFlow, "
               "Odoo Community Association (OCA)",
     "development_status": "Beta",
     "website": "https://www.github.com/OCA/maintenance",
