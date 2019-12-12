@@ -129,9 +129,9 @@ class MaintenanceEquipment(models.Model):
 
     @api.multi
     def write(self, vals):
-        rec = super(MaintenanceEquipment, self).write(vals)
+        result = super(MaintenanceEquipment, self).write(vals)
         for rec in self:
             if rec.category_id and not rec.code and \
                     rec.category_id.sequence_id:
                 rec.code = rec.category_id.sequence_id._next()
-        return rec
+        return result
