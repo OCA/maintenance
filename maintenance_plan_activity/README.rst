@@ -23,7 +23,7 @@ Maintenance Plan Activity
     :target: https://runbot.odoo-community.org/runbot/240/11.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module allows defining in the maintenance plan activities that will be created once the maintenance
 requests are created as a consequence of the plan itself.
@@ -52,12 +52,12 @@ Credits
 Authors
 ~~~~~~~
 
-* Eficent Business and IT Consulting Services S.L.
+* ForgeFlow S.L.
 
 Contributors
 ~~~~~~~~~~~~
 
-* Adria Gil Sorribes <adria.gil@eficent.com>
+* Adria Gil Sorribes <adria.gil@forgeflow.com>
 
 Maintainers
 ~~~~~~~~~~~

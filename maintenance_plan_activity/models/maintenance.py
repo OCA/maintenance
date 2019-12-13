@@ -1,4 +1,4 @@
-# Copyright 2019 Eficent Business and IT Consulting Services S.L.
+# Copyright 2019 ForgeFlow S.L. (www.forgeflow.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import fields, models, _
@@ -18,13 +18,7 @@ class MaintenanceEquipment(models.Model):
     _inherit = 'maintenance.equipment'
 
     def _create_new_request(self, maintenance_plan):
-        existing_requests = self.maintenance_ids.filtered(
-            lambda l: l.maintenance_plan_id.id == maintenance_plan.id)
-        super(MaintenanceEquipment, self)._create_new_request(maintenance_plan)
-        new_requests = self.maintenance_ids.filtered(
-            lambda l: l.maintenance_plan_id.id == maintenance_plan.id and
-            l.id not in existing_requests.ids)
-        # Create planned activities for the new requests
+        new_requests = super()._create_new_request(maintenance_plan)
         for request in new_requests:
             for planned_activity in maintenance_plan.planned_activity_ids:
                 self.env['mail.activity'].create({
@@ -39,3 +33,4 @@ class MaintenanceEquipment(models.Model):
                         request.schedule_date) - timedelta(
                         days=planned_activity.date_before_request),
                 })
+        return new_requests
