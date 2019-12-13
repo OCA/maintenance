@@ -1,4 +1,4 @@
-# Copyright 2019 Eficent Business and IT Consulting Services S.L.
+# Copyright 2019 ForgeFlow S.L. (www.forgeflow.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 import odoo.tests.common as test_common
@@ -49,11 +49,11 @@ class TestMaintenancePlanActivity(test_common.TransactionCase):
         # Check if activity Call has been created for the request 1
         generated_activities = self.mail_activity_obj.search(
             [('res_id', '=', request_1.id)])
-        self.assertEqual(len(generated_activities), 1)
+        self.assertEqual(len(generated_activities), 2)
         self.assertEqual(
             generated_activities[0].activity_type_id.name, self.call.name)
         self.assertEqual(
-            generated_activities[0].date_deadline,
+            str(generated_activities[0].date_deadline),
             fields.Date.to_string(
                 fields.Date.from_string(
                     request_1.schedule_date) - timedelta(days=2)
