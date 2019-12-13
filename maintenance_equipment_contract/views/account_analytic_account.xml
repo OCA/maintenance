@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="account_analytic_account_purchase_form">
+        <field name="name">account.analytic.account.form (in maintenance_equipment_contract)</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="contract.account_analytic_account_purchase_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="equipment_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_analytic_account_search">
+        <field name="name">account.analytic.account.search (in maintenance_equipment_contract)</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_search"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="equipment_ids"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
