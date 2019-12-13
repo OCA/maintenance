@@ -34,7 +34,7 @@
                         <h1><field name="name" placeholder="e.g. Calibration"/></h1>
                     </div>
                     <group>
-                        <field name="equipment_id"/>
+                        <field name="equipment_id" invisible="context.get('hide_equipment_id', 0)"/>
                         <field name="maintenance_kind_id"/>
                     </group>
                     <group>
@@ -118,7 +118,7 @@
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="maintenance_plan_view_tree"/>
         <field name="context">{
-            'default_equipment_id': active_id,
+            'default_equipment_id': active_id, 'hide_equipment_id': 0
         }</field>
         <field name="domain">['|', ('active', '=', True), ('active', '=',
             False), ('equipment_id', '=', active_id)]
