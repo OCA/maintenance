@@ -17,6 +17,14 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__active
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
+#, fuzzy
+#| msgid "Active Kind"
+msgid "Active"
+msgstr "Tipo activo"
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__active
 msgid "Active Kind"
 msgstr "Tipo activo"
@@ -34,9 +42,35 @@ msgid "Created on"
 msgstr "Creado en"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__period
-msgid "Days between each maintenance"
-msgstr "Días entre cada mantenimiento"
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_open_count
+#, fuzzy
+#| msgid "Next maintenance date"
+msgid "Current Maintenance"
+msgstr "Próximo mantenimiento"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__start_maintenance_date
+msgid "Date from which the maintenance will we active"
+msgstr ""
+
+#. module: maintenance_plan
+#: selection:maintenance.plan,interval_step:0
+#: selection:maintenance.plan,planning_step:0
+msgid "Day(s)"
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "Describe the maintenance to do..."
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__name
+#, fuzzy
+#| msgid "Duration"
+msgid "Description"
+msgstr "Duración"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__display_name
@@ -46,7 +80,9 @@ msgstr "Nombre a mostrar"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__duration
-msgid "Duration"
+#, fuzzy
+#| msgid "Duration"
+msgid "Duration (hours)"
 msgstr "Duración"
 
 #. module: maintenance_plan
@@ -55,10 +91,38 @@ msgid "Equipment"
 msgstr "Equipo"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__interval
+msgid "Frequency"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__id
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__id
 msgid "ID"
 msgstr "ID"
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
+msgid "Inactive"
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "Instructions"
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_request_view_form
+msgid "Internal notes..."
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__interval
+#, fuzzy
+#| msgid "Days between each maintenance"
+msgid "Interval between each maintenance"
+msgstr "Días entre cada mantenimiento"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind____last_update
@@ -79,30 +143,79 @@ msgid "Last Updated on"
 msgstr "Última actualización en"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__planning_step
+msgid "Let the event automatically repeat at that interval"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__interval_step
+msgid "Let the event automatically repeat at that interval step"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_count
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+#, fuzzy
+#| msgid "Maintenance Kind"
+msgid "Maintenance"
+msgstr "Tipo de mantenimiento"
+
+#. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_equipment
 msgid "Maintenance Equipment"
 msgstr "Equipo"
 
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_kind
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_kind_id
 msgid "Maintenance Kind"
 msgstr "Tipo de mantenimiento"
 
 #. module: maintenance_plan
-#: model:ir.actions.act_window,name:maintenance_plan.maintenance_kind_action
-#: model:ir.ui.menu,name:maintenance_plan.menu_maintenance_kind_configuration
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_kind_view_tree
 msgid "Maintenance Kinds"
 msgstr "Tipos de mantenimiento"
 
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Maintenance Plan"
+msgstr "Plan de mantenimiento"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__maintenance_plan_count
+#, fuzzy
+#| msgid "Maintenance Plan"
+msgid "Maintenance Plan Count"
+msgstr "Plan de mantenimiento"
+
+#. module: maintenance_plan
+#: model:ir.ui.menu,name:maintenance_plan.menu_m_plan_form
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_tree
+#, fuzzy
+#| msgid "Maintenance Plan"
+msgid "Maintenance Plans"
 msgstr "Plan de mantenimiento"
 
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_request
 msgid "Maintenance Request"
 msgstr "Peticiones de mantenimiento"
+
+#. module: maintenance_plan
+#: model:ir.actions.act_window,name:maintenance_plan.hr_equipment_request_action_from_plan
+#, fuzzy
+#| msgid "Maintenance Request"
+msgid "Maintenance Requests"
+msgstr "Peticiones de mantenimiento"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_team_id
+#, fuzzy
+#| msgid "Maintenance Plan"
+msgid "Maintenance Team"
+msgstr "Plan de mantenimiento"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__maintenance_team_required
@@ -115,7 +228,6 @@ msgid "Maintenance duration in hours"
 msgstr "Duración del mantenimiento en horas"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_kind_id
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__maintenance_kind_id
 msgid "Maintenance kind"
 msgstr "Tipo de mantenimiento"
@@ -126,9 +238,48 @@ msgid "Maintenance kind name already exists."
 msgstr "Ya existe ese nombre de tipo de mantenimiento"
 
 #. module: maintenance_plan
+#: model:ir.actions.act_window,name:maintenance_plan.maintenance_kind_action
+#: model:ir.ui.menu,name:maintenance_plan.menu_maintenance_kind_configuration
+#, fuzzy
+#| msgid "Maintenance kind"
+msgid "Maintenance kinds"
+msgstr "Tipo de mantenimiento"
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__maintenance_plan_ids
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__maintenance_plan_id
 msgid "Maintenance plan"
 msgstr "Plan de mantenimiento"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__maintenance_plan_horizon
+msgid ""
+"Maintenance planning horizon. Only the maintenance requests inside the "
+"horizon will be created."
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.actions.act_window,name:maintenance_plan.maintenance_plan_action
+#: model:ir.actions.act_window,name:maintenance_plan.maintenance_plan_equipment_action
+#, fuzzy
+#| msgid "Maintenance plan"
+msgid "Maintenance plans"
+msgstr "Plan de mantenimiento"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_ids
+#, fuzzy
+#| msgid "Maintenance Request"
+msgid "Maintenance requests"
+msgstr "Peticiones de mantenimiento"
+
+#. module: maintenance_plan
+#: selection:maintenance.plan,interval_step:0
+#: selection:maintenance.plan,planning_step:0
+#, fuzzy
+#| msgid "Monthly"
+msgid "Month(s)"
+msgstr "Mensual"
 
 #. module: maintenance_plan
 #: model:maintenance.kind,name:maintenance_plan.maintenance_kind_monthly
@@ -146,18 +297,57 @@ msgid "Next maintenance date"
 msgstr "Próximo mantenimiento"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__period
-msgid "Period"
-msgstr "Periodo"
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__note
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__note
+msgid "Note"
+msgstr ""
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance.py:152
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__notes
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_request_view_form
+msgid "Notes"
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "Planning Horizon"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_plan_horizon
+msgid "Planning Horizon period"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__planning_step
+msgid "Planning Horizon step"
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "Plans"
+msgstr ""
+
+#. module: maintenance_plan
+#: code:addons/maintenance_plan/models/maintenance_equipment.py:45
 #, python-format
 msgid "Preventive Maintenance (%s) - %s"
 msgstr "Mantenimiento preventivo (%s) - %s"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance.py:117
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__interval_step
+msgid "Recurrence"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__start_maintenance_date
+#, fuzzy
+#| msgid "Next maintenance date"
+msgid "Start maintenance date"
+msgstr "Próximo mantenimiento"
+
+#. module: maintenance_plan
+#: code:addons/maintenance_plan/models/maintenance_plan.py:130
 #, python-format
 msgid ""
 "The maintenance plan %s of equipment %s has generated a request which is not "
@@ -169,9 +359,30 @@ msgstr ""
 "tipo de mantenimiento o eliminarlo primero"
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
+#, fuzzy
+#| msgid "Maintenance Kind"
+msgid "Under Maintenance"
+msgstr "Tipo de mantenimiento"
+
+#. module: maintenance_plan
+#: selection:maintenance.plan,interval_step:0
+#: selection:maintenance.plan,planning_step:0
+#, fuzzy
+#| msgid "Weekly"
+msgid "Week(s)"
+msgstr "Semanal"
+
+#. module: maintenance_plan
 #: model:maintenance.kind,name:maintenance_plan.maintenance_kind_weekly
 msgid "Weekly"
 msgstr "Semanal"
+
+#. module: maintenance_plan
+#: selection:maintenance.plan,interval_step:0
+#: selection:maintenance.plan,planning_step:0
+msgid "Year(s)"
+msgstr ""
 
 #. module: maintenance_plan
 #: sql_constraint:maintenance.plan:0
@@ -193,3 +404,11 @@ msgstr ""
 "Hay varias peticiones de mantenimiento preventivo en el equipo %s, próxima "
 "fecha de acción (%s). Por favor, deja solo una petición de preventivo en la "
 "fecha de la próxima acción del equipo para poder instalar el módulo"
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "e.g. Calibration"
+msgstr ""
+
+#~ msgid "Period"
+#~ msgstr "Periodo"

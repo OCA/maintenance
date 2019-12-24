@@ -78,6 +78,7 @@ class MaintenancePlan(models.Model):
         string="Current Maintenance",
         store=True,
     )
+    maintenance_team_id = fields.Many2one('maintenance.team')
 
     @api.depends('maintenance_ids.stage_id.done')
     def _compute_maintenance_count(self):

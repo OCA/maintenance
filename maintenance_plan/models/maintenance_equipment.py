@@ -29,11 +29,16 @@ class MaintenanceEquipment(models.Model):
     def _compute_team_required(self):
         for equipment in self:
             equipment.maintenance_team_required = len(
-                equipment.maintenance_plan_ids) >= 1
+                equipment.maintenance_plan_ids.filtered(
+                    lambda r: not r.maintenance_team_id
+                )) >= 1
 
     def _prepare_request_from_plan(self, maintenance_plan,
                                    next_maintenance_date):
-        team = self.maintenance_team_id.id
+        team = (
+            maintenance_plan.maintenance_team_id.id or
+            self.maintenance_team_id.id
+        )
         if not team:
             team = self.env['maintenance.request']._get_default_team_id()
         return {
