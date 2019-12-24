@@ -62,8 +62,8 @@ Maintenance Kinds have to be defined through the configuration menu. Their name
 have to be unique and can be set as active or inactive, should these not be
 used anymore.
 
-On any equipment over the maintenance tab, the maintenance plan will appear
-as an embedded list view, allowing to add different maintenance kind with their
+On any equipment over the maintenance tab, the maintenance plan be accessible,
+allowing to add different maintenance kind with their
 own frequency and duration. The next maintenance date will then be computed
 automatically according to the start's date and the frequency defined, but the
 maintenance request won't be created automatically as is the case in Odoo's
@@ -78,7 +78,6 @@ planning horizon. Therefore, the maintenance manager can have a proper planning
 of how many maintenance requests are programming for the future. Leaving planning
 horizon to 0 will only create those maintenance request that are scheduled for
 today.
-
 
 Bug Tracker
 ===========
@@ -97,6 +96,7 @@ Authors
 ~~~~~~~
 
 * Camptocamp SA
+* Eficent
 
 Contributors
 ~~~~~~~~~~~~
@@ -105,6 +105,7 @@ Contributors
 * Matteo Mazzoni <matteo@appcademy.tech>
 * David Alonso <david.alonso@solvos.es>
 * Adrià Gil Sorribes <adria.gil@eficent.com>
+* Jordi Ballester Alomar <jordi.ballester@eficent.com>
 
 Maintainers
 ~~~~~~~~~~~
