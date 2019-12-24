@@ -72,15 +72,17 @@ class MaintenanceEquipment(models.Model):
         else:
             next_maintenance_date = fields.Date.from_string(
                 maintenance_plan.next_maintenance_date)
+        requests = self.env['maintenance.request']
         # Create maintenance request until we reach planning horizon
         while next_maintenance_date <= horizon_date:
             if next_maintenance_date >= fields.Date.from_string(
                     fields.Date.today()):
                 vals = self._prepare_request_from_plan(maintenance_plan,
                                                        next_maintenance_date)
-                self.env['maintenance.request'].create(vals)
+                requests |= self.env['maintenance.request'].create(vals)
             next_maintenance_date = next_maintenance_date + get_relativedelta(
                 maintenance_plan.interval, maintenance_plan.interval_step)
+        return requests
 
     @api.model
     def _cron_generate_requests(self):
