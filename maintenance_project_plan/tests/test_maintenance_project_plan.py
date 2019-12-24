@@ -28,16 +28,20 @@ class TestMaintenanceProjectPlan(test_common.TransactionCase):
         plans = self.env['maintenance.plan'].search(
             [('project_id', '!=', False)])
         for plan in plans:
-            data = plan.equipment_id._prepare_request_from_plan(plan)
-            self.assertEqual(data['project_id'], plan.project_id.id)
-            self.assertEqual(data.get('task_id', False), plan.task_id.id)
+            requests = plan.equipment_id._create_new_request(plan)
+            self.assertTrue(requests)
+            request = requests[0]
+            self.assertEqual(request.project_id, plan.project_id)
+            self.assertEqual(
+                request.task_id,
+                plan.task_id or plan.equipment_id.preventive_default_task_id
+            )
 
     def test_plan_onchange_project(self):
         plan1 = self.env['maintenance.plan'].new({
             'equipment_id': self.env.ref(
                 'maintenance_plan.maintenance_plan_monthly_monitor4').id,
             'maintenance_kind_id': self.maintenance_kind_weekly.id,
-            'period': 7,
             'duration': 1,
             'project_id':
                 self.env.ref('maintenance_project.project_project_1').id,
