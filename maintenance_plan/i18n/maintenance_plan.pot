@@ -183,6 +183,11 @@ msgid "Maintenance Requests"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan_maintenance_team_id
+msgid "Maintenance Team"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment_maintenance_team_required
 msgid "Maintenance Team Required"
 msgstr ""
@@ -279,7 +284,7 @@ msgid "Plans"
 msgstr ""
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_equipment.py:40
+#: code:addons/maintenance_plan/models/maintenance_equipment.py:42
 #, python-format
 msgid "Preventive Maintenance (%s) - %s"
 msgstr ""
@@ -295,7 +300,7 @@ msgid "Start maintenance date"
 msgstr ""
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:130
+#: code:addons/maintenance_plan/models/maintenance_plan.py:131
 #, python-format
 msgid "The maintenance plan %s of equipment %s has generated a request which is not done yet. You should either set the request as done, remove its maintenance kind or delete it first."
 msgstr ""
