@@ -6,7 +6,8 @@
             <field name="maintenance_kind_id" ref="maintenance_plan.maintenance_kind_monthly" />
             <field name="project_id" ref="maintenance_project.project_project_1"/>
             <field name="task_id" ref="maintenance_project.project_task_12"/>
-            <field name="period">30</field>
+            <field name="interval">30</field>
+            <field name="interval_step">day</field>
             <field name="duration">2</field>
         </record>
 
@@ -14,7 +15,8 @@
             <field name="equipment_id" ref="maintenance_project.equipment_2" />
             <field name="maintenance_kind_id" ref="maintenance_plan.maintenance_kind_weekly" />
             <field name="project_id" ref="maintenance_project.project_project_1"/>
-            <field name="period">7</field>
+            <field name="interval">7</field>
+            <field name="interval_step">day</field>
             <field name="duration">1</field>
         </record>
 
