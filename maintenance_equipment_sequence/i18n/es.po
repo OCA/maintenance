@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_sequence
+# 	* maintenance_equipment_sequence
 #
 msgid ""
 msgstr ""
@@ -17,53 +17,60 @@ msgstr ""
 "X-Generator: Weblate 3.8\n"
 
 #. module: maintenance_equipment_sequence
-#: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment_category
-msgid "Asset Category"
-msgstr "Categoría del activo"
-
-#. module: maintenance_equipment_sequence
-#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_code
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment__code
 msgid "Code"
 msgstr "Código"
 
 #. module: maintenance_equipment_sequence
-#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category_sequence_id
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_id
 msgid "Entry Sequence"
 msgstr "Secuencia"
 
 #. module: maintenance_equipment_sequence
-#: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment
-msgid "Equipment"
-msgstr "Equipamiento"
-
-#. module: maintenance_equipment_sequence
-#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_code
+#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment__code
 msgid "Equipment Code"
 msgstr "Código del Equipamiento"
 
 #. module: maintenance_equipment_sequence
-#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category_sequence_number_next
+#: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment
+#, fuzzy
+#| msgid "Equipment"
+msgid "Maintenance Equipment"
+msgstr "Equipamiento"
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment_category
+msgid "Maintenance Equipment Category"
+msgstr ""
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_number_next
 msgid "Next Number"
 msgstr "Número siguiente"
 
 #. module: maintenance_equipment_sequence
-#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category_sequence_prefix
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_prefix
 msgid "Sequence Prefix"
 msgstr "Prefijo de la secuencia"
 
 #. module: maintenance_equipment_sequence
-#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category_sequence_prefix
+#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_prefix
 msgid "The equipment's sequence will be created using this prefix."
 msgstr "La secuencia de este equipamiento se creará usando este prefijo."
 
 #. module: maintenance_equipment_sequence
-#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category_sequence_number_next
+#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_number_next
 msgid "The next sequence number will be used for the next equipment."
 msgstr "Este campo se utilizará para el siguiente código de equipamiento."
 
 #. module: maintenance_equipment_sequence
-#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category_sequence_id
-msgid "This field contains the information related to the numbering of the equipments belonging to this category."
+#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_id
+msgid ""
+"This field contains the information related to the numbering of the "
+"equipments belonging to this category."
 msgstr ""
 "Este campo contiene la información relacionada con la numeración de los "
 "equipamientos de esta categoría."
+
+#~ msgid "Asset Category"
+#~ msgstr "Categoría del activo"
