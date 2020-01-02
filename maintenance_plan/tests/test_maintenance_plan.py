@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 import odoo.tests.common as test_common
-from odoo import fields
+from odoo import fields, _
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 
@@ -26,9 +26,40 @@ class TestMaintenancePlan(test_common.TransactionCase):
             'maintenance_plan_horizon': 2,
             'planning_step': 'month'
         })
+        self.maintenance_plan_2 = self.maintenance_plan_obj.create({
+            'equipment_id': self.equipment_1.id,
+            'maintenance_kind_id': self.env.ref(
+                'maintenance_plan.maintenance_kind_weekly').id,
+            'interval': 1,
+            'interval_step': 'week',
+            'maintenance_plan_horizon': 2,
+            'planning_step': 'month'
+        })
+        self.maintenance_plan_3 = self.maintenance_plan_obj.create({
+            'name': 'My custom plan',
+            'equipment_id': self.equipment_1.id,
+            'interval': 2,
+            'interval_step': 'week',
+            'maintenance_plan_horizon': 2,
+            'planning_step': 'month'
+        })
 
         today = fields.Date.today()
         self.today_date = fields.Date.from_string(today)
+
+    def test_name_get(self):
+        self.assertEqual(
+            self.maintenance_plan_1.name_get()[0][1],
+            _('Unnamed %s plan (%s)') % (
+                '', self.maintenance_plan_1.equipment_id.name))
+        self.assertEqual(
+            self.maintenance_plan_2.name_get()[0][1],
+            _('Unnamed %s plan (%s)') % (
+                self.maintenance_plan_2.maintenance_kind_id.name,
+                self.maintenance_plan_2.equipment_id.name))
+        self.assertEqual(
+            self.maintenance_plan_3.name_get()[0][1],
+            self.maintenance_plan_3.name)
 
     def test_next_maintenance_date(self):
         # We set start maintenance date tomorrow and check next maintenance
