@@ -79,6 +79,15 @@ class MaintenancePlan(models.Model):
     )
     maintenance_team_id = fields.Many2one('maintenance.team')
 
+    def name_get(self):
+        result = []
+        for plan in self:
+            result.append((
+                plan.id,
+                plan.name or _('Unnamed %s plan (%s)') %
+                (plan.maintenance_kind_id.name or '', plan.equipment_id.name)))
+        return result
+
     @api.depends('maintenance_ids.stage_id.done')
     def _compute_maintenance_count(self):
         for equipment in self:
