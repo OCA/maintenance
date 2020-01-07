@@ -53,9 +53,8 @@ class TestMaintenancePlanActivity(test_common.TransactionCase):
         self.assertEqual(
             generated_activities[0].activity_type_id.name, self.call.name)
         self.assertEqual(
-            str(generated_activities[0].date_deadline),
-            fields.Date.to_string(
-                fields.Date.from_string(
-                    request_1.schedule_date) - timedelta(days=2)
-            )
+            generated_activities[0].date_deadline,
+            fields.Date.from_string(
+                request_1.schedule_date) - timedelta(days=2)
+
         )
