@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_request_stage_transition
+# 	* maintenance_request_stage_transition
 #
 msgid ""
 msgstr ""
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Weblate 3.10\n"
 
 #. module: maintenance_request_stage_transition
-#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage_button_class
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__button_class
 msgid "Button Class"
 msgstr "Clase del Botón"
 
@@ -27,7 +27,7 @@ msgid "Danger"
 msgstr "Peligro"
 
 #. module: maintenance_request_stage_transition
-#: model:ir.model.fields,help:maintenance_request_stage_transition.field_maintenance_stage_button_class
+#: model:ir.model.fields,help:maintenance_request_stage_transition.field_maintenance_stage__button_class
 msgid "For default, the system uses primary"
 msgstr "Por defecto, el sistema usa Primario"
 
@@ -38,7 +38,9 @@ msgstr "Info"
 
 #. module: maintenance_request_stage_transition
 #: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_request
-msgid "Maintenance Requests"
+#, fuzzy
+#| msgid "Maintenance Requests"
+msgid "Maintenance Request"
 msgstr "Peticiones de mantenimiento"
 
 #. module: maintenance_request_stage_transition
@@ -47,12 +49,12 @@ msgid "Maintenance Stage"
 msgstr "Estado"
 
 #. module: maintenance_request_stage_transition
-#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage_next_stage_ids
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__next_stage_ids
 msgid "Next stages"
 msgstr "Próximos estados"
 
 #. module: maintenance_request_stage_transition
-#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage_previous_stage_ids
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__previous_stage_ids
 msgid "Previous stages"
 msgstr "Estados previos"
 
@@ -60,6 +62,11 @@ msgstr "Estados previos"
 #: selection:maintenance.stage,button_class:0
 msgid "Primary"
 msgstr "Primario"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_request__stage_id
+msgid "Stage"
+msgstr ""
 
 #. module: maintenance_request_stage_transition
 #: selection:maintenance.stage,button_class:0
