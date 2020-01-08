@@ -12,8 +12,8 @@ class MaintenanceTeam(models.Model):
     _inherit = "maintenance.team"
 
     parent_id = fields.Many2one("maintenance.team", ondelete="restrict")
-    parent_left = fields.Integer(index=True)
-    parent_right = fields.Integer(index=True)
+    parent_path = fields.Char(index=True)
+
     request_ids = fields.Many2many(
         "maintenance.request", compute="_compute_request_ids"
     )
