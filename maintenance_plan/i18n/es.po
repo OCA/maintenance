@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-12-30 13:49+0000\n"
-"Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
+"PO-Revision-Date: 2020-01-08 08:36+0000\n"
+"Last-Translator: Jaime Arroyo <jaime.arroyo@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -314,9 +314,9 @@ msgid ""
 "done yet. You should either set the request as done, remove its maintenance "
 "kind or delete it first."
 msgstr ""
-"El plan de mantenimiento %s del equipo %s ha generado una petición que no ha "
-"sido hecha todavía. Se deberían marcar la petición como hecha, borrar su "
-"tipo de mantenimiento o eliminarlo primero."
+"El plan de mantenimiento %s del equipamiento %s ha generado una petición que "
+"no ha sido hecha todavía. Se deberían marcar la petición como hecha, borrar "
+"su tipo de mantenimiento o eliminarlo primero."
 
 #. module: maintenance_plan
 #: model:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
@@ -347,7 +347,7 @@ msgid ""
 "maintenance plan."
 msgstr ""
 "No se pueden definir varias veces el mismo tipo de mantenimiento en el plan "
-"de mantenimiento de un equipo."
+"de mantenimiento de un equipamiento."
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/hooks.py:31
@@ -357,9 +357,10 @@ msgid ""
 "action date (%s). Please leave only one preventive request on the date of "
 "equipment's next action to install the module."
 msgstr ""
-"Hay varias peticiones de mantenimiento preventivo en el equipo %s, próxima "
-"fecha de acción (%s). Por favor, deja solo una petición de preventivo en la "
-"fecha de la próxima acción del equipo para poder instalar el módulo."
+"Hay varias peticiones de mantenimiento preventivo en el equipamiento %s, "
+"próxima fecha de acción (%s). Por favor, deja solo una petición de "
+"preventivo en la fecha de la próxima acción del equipamiento para poder "
+"instalar el módulo."
 
 #. module: maintenance_plan
 #: model:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
