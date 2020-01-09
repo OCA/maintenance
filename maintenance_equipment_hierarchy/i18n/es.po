@@ -17,27 +17,27 @@ msgstr ""
 "X-Generator: Weblate 3.8\n"
 
 #. module: maintenance_equipment_hierarchy
-#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment_child_ids
+#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__child_ids
 msgid "Child Equipments"
 msgstr "Equipamientos Hijos"
 
 #. module: maintenance_equipment_hierarchy
-#: model:ir.ui.view,arch_db:maintenance_equipment_hierarchy.hr_equipment_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_hierarchy.hr_equipment_view_form
 msgid "Children"
 msgstr "Hijos"
 
 #. module: maintenance_equipment_hierarchy
-#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment_complete_name
+#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__complete_name
 msgid "Complete Name"
 msgstr "Nombre Completo"
 
 #. module: maintenance_equipment_hierarchy
-#: model:ir.model,name:maintenance_equipment_hierarchy.model_maintenance_equipment
-msgid "Equipment"
-msgstr "Equipamiento"
+#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__display_name
+msgid "Display Name"
+msgstr ""
 
 #. module: maintenance_equipment_hierarchy
-#: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:53
+#: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:54
 #, python-format
 msgid "Error ! You cannot create a recursive equipment hierarchy."
 msgstr "Error ! No puedes crear una jerarquía de equipamientos recursiva."
@@ -53,21 +53,36 @@ msgid "HP Laptop case"
 msgstr "Funda de Portátil HP"
 
 #. module: maintenance_equipment_hierarchy
-#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment_parent_left
+#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_left
 msgid "Left Parent"
 msgstr "Padre Izquierdo"
 
 #. module: maintenance_equipment_hierarchy
-#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment_child_count
+#: model:ir.model,name:maintenance_equipment_hierarchy.model_maintenance_equipment
+#, fuzzy
+#| msgid "Parent Equipment"
+msgid "Maintenance Equipment"
+msgstr "Equipo Padre"
+
+#. module: maintenance_equipment_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__child_count
 msgid "Number of child equipments"
 msgstr "Número de Equipamientos Hijos"
 
 #. module: maintenance_equipment_hierarchy
-#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment_parent_id
+#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_id
 msgid "Parent Equipment"
 msgstr "Equipo Padre"
 
 #. module: maintenance_equipment_hierarchy
-#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment_parent_right
+#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#. module: maintenance_equipment_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_right
 msgid "Right Parent"
 msgstr "Padre derecho"
+
+#~ msgid "Equipment"
+#~ msgstr "Equipamiento"
