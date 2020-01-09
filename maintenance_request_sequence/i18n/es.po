@@ -1,12 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_request_sequence
+# 	* maintenance_request_sequence
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-12-30 13:49+0000\n"
+"PO-Revision-Date: 2020-05-18 08:19+0000\n"
 "Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -17,13 +17,13 @@ msgstr ""
 "X-Generator: Weblate 3.10\n"
 
 #. module: maintenance_request_sequence
-#: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_request_code
+#: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_request__code
 msgid "Code"
 msgstr "Código"
 
 #. module: maintenance_request_sequence
 #: model:ir.model,name:maintenance_request_sequence.model_maintenance_request
-msgid "Maintenance Requests"
+msgid "Maintenance Request"
 msgstr "Peticiones de mantenimiento"
 
 #. module: maintenance_request_sequence
@@ -32,19 +32,21 @@ msgid "Maintenance Teams"
 msgstr "Equipos de Mantenimiento"
 
 #. module: maintenance_request_sequence
-#: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team_code_prefix
+#: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team__code_prefix
 msgid "Prefix for Team Reference"
 msgstr "Prefijo por equipo"
 
 #. module: maintenance_request_sequence
-#: model:ir.model.fields,help:maintenance_request_sequence.field_maintenance_team_code_prefix
-msgid "Prefix used to generate the internal reference for re created with this category. If blank the default sequence will be used."
+#: model:ir.model.fields,help:maintenance_request_sequence.field_maintenance_team__code_prefix
+msgid ""
+"Prefix used to generate the internal reference for re created with this "
+"category. If blank the default sequence will be used."
 msgstr ""
 "El prefijo se usará para generar la referencia interna de las peticiones "
 "creadas en esta categoría. Si esta en blanco, se usará la secuencia por "
 "defecto."
 
 #. module: maintenance_request_sequence
-#: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team_sequence_id
+#: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team__sequence_id
 msgid "Team Sequence"
 msgstr "Secuencia del equipo"
