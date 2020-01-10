@@ -1,4 +1,4 @@
-# Copyright 2019 Eficent Business and IT Consulting Services S.L.
+# Copyright 2020 ForgeFlow S.L. (https://forgeflow.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models
@@ -41,7 +41,6 @@ class MaintenanceEquipmentCategory(models.Model):
         seq_date_range.number_next = vals.get("sequence_number_next", 1)
         return seq
 
-    @api.multi
     # do not depend on 'sequence_id.date_range_ids', because
     # sequence_id._get_current_sequence() may invalidate it!
     @api.depends("sequence_id.use_date_range", "sequence_id.number_next_actual")
@@ -56,7 +55,6 @@ class MaintenanceEquipmentCategory(models.Model):
             else:
                 category.sequence_number_next = 1
 
-    @api.multi
     def _inverse_seq_number_next(self):
         """
         Inverse 'sequence_number_next' to edit the current sequence next number
@@ -79,7 +77,6 @@ class MaintenanceEquipmentCategory(models.Model):
         self._compute_equipment_code()
         return result
 
-    @api.multi
     def write(self, vals):
         if not vals.get("sequence_id", False):
             if vals.get("sequence_prefix", False):
@@ -97,7 +94,6 @@ class MaintenanceEquipmentCategory(models.Model):
         if self.sequence_id:
             self.sequence_prefix = self.sequence_id.prefix
 
-    @api.multi
     def _compute_equipment_code(self):
         for category in self:
             if category.sequence_id:
@@ -127,7 +123,6 @@ class MaintenanceEquipment(models.Model):
                 equipment.code = sequence_id._next()
         return equipment
 
-    @api.multi
     def write(self, vals):
         result = super(MaintenanceEquipment, self).write(vals)
         for rec in self:

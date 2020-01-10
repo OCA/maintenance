@@ -1,1 +1,2 @@
-* Adria Gil Sorribes <adria.gil@eficent.com>
+* Adria Gil Sorribes <adria.gil@forgeflow.com>
+* Núria Martín Xifré <nuria.martin@forgeflow.com>
