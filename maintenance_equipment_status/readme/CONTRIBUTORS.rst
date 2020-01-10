@@ -1,2 +1,2 @@
-* Adri?? Gil <adria.gil@eficent.com>
-* Jordi Ballester Alomar <jordi.ballester@eficent.com>
+* Adri?? Gil <adria.gil@forgeflow.com>
+* Jordi Ballester Alomar <jordi.ballester@forgeflow.com>
