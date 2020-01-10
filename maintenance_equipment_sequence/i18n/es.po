@@ -34,7 +34,6 @@ msgstr "Código del Equipamiento"
 #. module: maintenance_equipment_sequence
 #: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment
 #, fuzzy
-#| msgid "Equipment"
 msgid "Maintenance Equipment"
 msgstr "Equipamiento"
 
