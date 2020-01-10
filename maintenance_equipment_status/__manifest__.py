@@ -1,14 +1,14 @@
-# Copyright 2019 Eficent Business and IT Consulting Services S.L.
+# Copyright 2020 ForgeFlow S.L. (https://forgeflow.com)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 {
     'name': 'Maintenance Equipment Status',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': '',
     'author': 'Eficent, Odoo Community Association (OCA)',
     'website': 'http://github.com/OCA/maintenance',
     'license': 'LGPL-3',
     'depends': [
-        'maintenance',
+        'base_maintenance',
     ],
     'data': [
         'security/ir.model.access.csv',
