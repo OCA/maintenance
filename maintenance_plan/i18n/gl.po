@@ -327,7 +327,7 @@ msgid "Start maintenance date"
 msgstr "Seguinte data de mantemento"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:131
+#: code:addons/maintenance_plan/models/maintenance_plan.py:140
 #, python-format
 msgid ""
 "The maintenance plan %s of equipment %s has generated a request which is not "
@@ -344,6 +344,14 @@ msgstr ""
 #| msgid "Maintenance Kind"
 msgid "Under Maintenance"
 msgstr "Tipo de mantemento"
+
+#. module: maintenance_plan
+#: code:addons/maintenance_plan/models/maintenance_plan.py:87
+#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:53
+#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:57
+#, python-format
+msgid "Unnamed %s plan (%s)"
+msgstr ""
 
 #. module: maintenance_plan
 #: selection:maintenance.plan,interval_step:0
