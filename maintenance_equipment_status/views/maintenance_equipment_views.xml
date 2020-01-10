@@ -7,13 +7,10 @@
         <field name="model">maintenance.equipment</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
         <field name="arch" type="xml">
-            <sheet position="before">
-                <header>
+            <xpath expr="header" position="inside">
                     <field name="status_id" widget="statusbar" clickable="True"
                            domain="['|', ('category_ids', 'in', [category_id]), ('category_ids', '=', False)]"/>
-
-                </header>
-            </sheet>
+            </xpath>
         </field>
     </record>
 
@@ -37,7 +34,7 @@
                 <field name="status_name"/>
             </field>
             <xpath expr="//div[hasclass('oe_kanban_bottom_left')]" position="inside">
-                <div class="label label-default" t-if="record.status_name.raw_value" >
+                <div class="badge badge-primary" t-if="record.status_name.raw_value" >
                     <t t-raw="record.status_name.raw_value"/>
                 </div>
             </xpath>
