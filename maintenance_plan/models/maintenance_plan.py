@@ -1,5 +1,5 @@
 # Copyright 2017 Camptocamp SA
-# Copyright 2019 Eficent Business and IT Consulting Services, S.L.
+# Copyright 2019 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from dateutil.relativedelta import relativedelta
 
@@ -23,7 +23,7 @@ class MaintenancePlan(models.Model):
     _name = "maintenance.plan"
     _description = "Maintenance Plan"
 
-    name = fields.Char("Description", oldname="description")
+    name = fields.Char("Description")
     active = fields.Boolean(default=True)
     equipment_id = fields.Many2one(
         string="Equipment", comodel_name="maintenance.equipment", ondelete="cascade"
@@ -141,7 +141,6 @@ class MaintenancePlan(models.Model):
                     next_date = next_date + interval_timedelta
                 plan.next_maintenance_date = next_date
 
-    @api.multi
     def unlink(self):
         """ Restrict deletion of maintenance plan should there be maintenance
             requests of this kind which are not done for its equipment """

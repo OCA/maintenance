@@ -23,7 +23,7 @@ Maintenance Plan
     :target: https://runbot.odoo-community.org/runbot/240/12.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module extends the functionality of Odoo Maintenance module by allowing
 an equipment to have different preventive maintenance kinds.
@@ -96,7 +96,7 @@ Authors
 ~~~~~~~
 
 * Camptocamp SA
-* Eficent
+* ForgeFlow
 
 Contributors
 ~~~~~~~~~~~~
@@ -104,8 +104,8 @@ Contributors
 * Akim Juillerat <akim.juillerat@camptocamp.com>
 * Matteo Mazzoni <matteo@appcademy.tech>
 * David Alonso <david.alonso@solvos.es>
-* Adrià Gil Sorribes <adria.gil@eficent.com>
-* Jordi Ballester Alomar <jordi.ballester@eficent.com>
+* Adrià Gil Sorribes <adria.gil@forgeflow.com>
+* Jordi Ballester Alomar <jordi.ballester@forgeflow.com>
 
 Maintainers
 ~~~~~~~~~~~
