@@ -7,12 +7,12 @@ from odoo import fields, models
 
 class MaintenanceKind(models.Model):
 
-    _name = 'maintenance.kind'
-    _description = 'Maintenance Kind'
+    _name = "maintenance.kind"
+    _description = "Maintenance Kind"
 
-    name = fields.Char('Name', required=True, translate=True)
-    active = fields.Boolean('Active Kind', required=True, default=True)
+    name = fields.Char("Name", required=True, translate=True)
+    active = fields.Boolean("Active Kind", required=True, default=True)
 
     _sql_constraints = [
-        ('name_uniq', 'unique (name)',
-         "Maintenance kind name already exists.")]
+        ("name_uniq", "unique (name)", "Maintenance kind name already exists.")
+    ]
