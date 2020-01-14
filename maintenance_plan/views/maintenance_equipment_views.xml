@@ -15,8 +15,11 @@
                     <field string="Plans" name="maintenance_plan_count" widget="statinfo"/>
                 </button>
             </div>
-            <xpath expr="//group[@name='maintenance']/.." position="replace">
-                <group name="maintenance">
+            <xpath expr="//group[@name='maintenance']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+             <xpath expr="//group[@name='maintenance']" position="after">
+                <group name="maintenance_plans">
                     <field name="maintenance_plan_ids" nolabel="1" context="{'default_equipment_id': active_id, 'hide_equipment_id': 1}">
                         <tree string="Plans">
                             <field name="maintenance_kind_id"/>
