@@ -4,7 +4,7 @@
     <record id="hr_equipment_request_action_from_plan" model="ir.actions.act_window">
         <field name="name">Maintenance Requests</field>
         <field name="res_model">maintenance.request</field>
-        <field name="src_model">maintenance.plan</field>
+        <field name="binding_model_id" ref="model_maintenance_plan"/>
         <field name="view_mode">kanban,tree,form,pivot,graph,calendar</field>
         <field name="context">{
             'default_maintenance_plan_id': active_id,
@@ -18,10 +18,9 @@
         <field name="arch" type="xml">
             <form string="Maintenance Plan">
                 <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <field name="active" invisible="1"/>
                     <div class="oe_button_box" name="button_box">
-                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
-                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
-                        </button>
                         <button name="%(hr_equipment_request_action_from_plan)d"
                             type="action"
                             class="oe_stat_button"

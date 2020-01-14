@@ -28,6 +28,11 @@ msgid "Active Kind"
 msgstr "Tipo activo"
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "Archived"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__create_uid
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__create_uid
 msgid "Created by"
@@ -50,8 +55,8 @@ msgid "Date from which the maintenance will we active"
 msgstr "Fecha desde la cual el mantenimiento estará activo"
 
 #. module: maintenance_plan
-#: selection:maintenance.plan,interval_step:0
-#: selection:maintenance.plan,planning_step:0
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__day
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__planning_step__day
 msgid "Day(s)"
 msgstr "Día(s)"
 
@@ -216,7 +221,7 @@ msgid "Maintenance kind"
 msgstr "Tipo de mantenimiento"
 
 #. module: maintenance_plan
-#: sql_constraint:maintenance.kind:0
+#: model:ir.model.constraint,message:maintenance_plan.constraint_maintenance_kind_name_uniq
 msgid "Maintenance kind name already exists."
 msgstr "Ya existe ese nombre de tipo de mantenimiento"
 
@@ -253,8 +258,8 @@ msgid "Maintenance requests"
 msgstr "Peticiones de mantenimiento"
 
 #. module: maintenance_plan
-#: selection:maintenance.plan,interval_step:0
-#: selection:maintenance.plan,planning_step:0
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__month
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__planning_step__month
 msgid "Month(s)"
 msgstr "Mensual(es)"
 
@@ -306,7 +311,7 @@ msgid "Plans"
 msgstr "Planes"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_equipment.py:45
+#: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid "Preventive Maintenance (%s) - %s"
 msgstr "Mantenimiento preventivo (%s) - %s"
@@ -322,7 +327,7 @@ msgid "Start maintenance date"
 msgstr "Fecha de inicio del mantenimiento"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:139
+#: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid ""
 "The maintenance plan %s of equipment %s has generated a request which is not "
@@ -339,16 +344,15 @@ msgid "Under Maintenance"
 msgstr "En mantenimiento"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:88
-#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:53
-#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:57
+#: code:addons/maintenance_plan/models/maintenance_plan.py:0
+#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
 msgid "Unnamed %s plan (%s)"
 msgstr "Plan %s sin nombre (%s)"
 
 #. module: maintenance_plan
-#: selection:maintenance.plan,interval_step:0
-#: selection:maintenance.plan,planning_step:0
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__week
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__planning_step__week
 msgid "Week(s)"
 msgstr "Semana(s)"
 
@@ -358,13 +362,13 @@ msgid "Weekly"
 msgstr "Semanal"
 
 #. module: maintenance_plan
-#: selection:maintenance.plan,interval_step:0
-#: selection:maintenance.plan,planning_step:0
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__year
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__planning_step__year
 msgid "Year(s)"
 msgstr "Año(s)"
 
 #. module: maintenance_plan
-#: sql_constraint:maintenance.plan:0
+#: model:ir.model.constraint,message:maintenance_plan.constraint_maintenance_plan_equipment_kind_uniq
 msgid ""
 "You cannot define multiple times the same maintenance kind on an equipment "
 "maintenance plan."
@@ -373,7 +377,7 @@ msgstr ""
 "de mantenimiento de un equipo"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/hooks.py:31
+#: code:addons/maintenance_plan/hooks.py:0
 #, python-format
 msgid ""
 "You have multiple preventive maintenance requests on equipment %s next "
