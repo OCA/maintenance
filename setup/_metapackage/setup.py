@@ -13,6 +13,7 @@ setuptools.setup(
         'odoo12-addon-maintenance_equipment_hierarchy',
         'odoo12-addon-maintenance_equipment_scrap',
         'odoo12-addon-maintenance_equipment_sequence',
+        'odoo12-addon-maintenance_equipment_status',
         'odoo12-addon-maintenance_plan',
         'odoo12-addon-maintenance_plan_activity',
         'odoo12-addon-maintenance_project',
