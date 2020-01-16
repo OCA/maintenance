@@ -8,8 +8,5 @@ class MaintenanceTeam(models.Model):
     _inherit = "maintenance.team"
 
     active = fields.Boolean(default=True)
-    user_id = fields.Many2one(
-        comodel_name="res.users",
-        string="Team Leader",
-    )
+    user_id = fields.Many2one(comodel_name="res.users", string="Team Leader")
     description = fields.Text()
