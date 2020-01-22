@@ -312,6 +312,7 @@ msgstr "Planes"
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
+#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
 msgid "Preventive Maintenance (%s) - %s"
 msgstr "Mantenimiento preventivo (%s) - %s"
@@ -349,6 +350,12 @@ msgstr "En mantenimiento"
 #, python-format
 msgid "Unnamed %s plan (%s)"
 msgstr "Plan %s sin nombre (%s)"
+
+#. module: maintenance_plan
+#: code:addons/maintenance_plan/models/maintenance_equipment.py:0
+#, python-format
+msgid "Unspecified kind"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__week
