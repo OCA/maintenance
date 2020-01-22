@@ -68,5 +68,4 @@
         <field name="context">{'hide_equipment_id': 1}</field>
     </record>
 
-
 </odoo>
