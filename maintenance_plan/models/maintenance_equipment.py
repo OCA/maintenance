@@ -46,9 +46,13 @@ class MaintenanceEquipment(models.Model):
         team = maintenance_plan.maintenance_team_id.id or self.maintenance_team_id.id
         if not team:
             team = self.env["maintenance.request"]._get_default_team_id()
+
+        description = self.name if self else maintenance_plan.name
+        kind = maintenance_plan.maintenance_kind_id.name or _("Unspecified kind")
+        name = _("Preventive Maintenance (%s) - %s") % (kind, description)
+
         return {
-            "name": _("Preventive Maintenance (%s) - %s")
-            % (maintenance_plan.maintenance_kind_id.name, self.name),
+            "name": name,
             "request_date": next_maintenance_date,
             "schedule_date": next_maintenance_date,
             "category_id": self.category_id.id,
@@ -64,7 +68,6 @@ class MaintenanceEquipment(models.Model):
         }
 
     def _create_new_request(self, maintenance_plan):
-        self.ensure_one()
         # Compute horizon date adding to today the planning horizon
         horizon_date = fields.Date.from_string(fields.Date.today()) + get_relativedelta(
             maintenance_plan.maintenance_plan_horizon, maintenance_plan.planning_step
