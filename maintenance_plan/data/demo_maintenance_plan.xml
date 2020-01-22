@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data noupdate="1">
         <!--  Maintenance kinds -->
@@ -10,7 +10,6 @@
             <field name="name">Weekly</field>
             <field name="active" eval="True" />
         </record>
-
         <!--  Maintenance plans -->
         <record id="maintenance_plan_monthly_monitor1" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance.equipment_monitor1" />
@@ -21,7 +20,6 @@
             <field name="maintenance_plan_horizon">2</field>
             <field name="planning_step">month</field>
         </record>
-
         <record id="maintenance_plan_monthly_monitor4" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance.equipment_monitor4" />
             <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
@@ -31,7 +29,6 @@
             <field name="maintenance_plan_horizon">2</field>
             <field name="planning_step">month</field>
         </record>
-
         <record id="maintenance_plan_monthly_monitor6" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance.equipment_monitor6" />
             <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
@@ -41,7 +38,6 @@
             <field name="maintenance_plan_horizon">1</field>
             <field name="planning_step">month</field>
         </record>
-
         <record id="maintenance_plan_monthly_printer1" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance.equipment_printer1" />
             <field name="maintenance_kind_id" ref="maintenance_kind_monthly" />
@@ -51,7 +47,6 @@
             <field name="maintenance_plan_horizon">3</field>
             <field name="planning_step">month</field>
         </record>
-
         <record id="maintenance_plan_weekly_printer1" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance.equipment_printer1" />
             <field name="maintenance_kind_id" ref="maintenance_kind_weekly" />
@@ -60,6 +55,5 @@
             <field name="maintenance_plan_horizon">1</field>
             <field name="planning_step">month</field>
         </record>
-
     </data>
 </odoo>
