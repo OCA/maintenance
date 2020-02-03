@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_team_hierarchy
+# 	* maintenance_team_hierarchy
 #
 msgid ""
 msgstr ""
@@ -22,16 +22,21 @@ msgid "Maintenance Teams"
 msgstr "Equipos de Mantenimiento"
 
 #. module: maintenance_team_hierarchy
-#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team_parent_id
+#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__parent_id
 msgid "Parent"
 msgstr "Padre"
 
 #. module: maintenance_team_hierarchy
-#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team_parent_left
-msgid "Parent Left"
+#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__parent_path
+#, fuzzy
+#| msgid "Parent Left"
+msgid "Parent Path"
 msgstr "Padre izquierdo"
 
 #. module: maintenance_team_hierarchy
-#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team_parent_right
-msgid "Parent Right"
-msgstr "Padre derecho"
+#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__request_ids
+msgid "Request"
+msgstr ""
+
+#~ msgid "Parent Right"
+#~ msgstr "Padre derecho"
