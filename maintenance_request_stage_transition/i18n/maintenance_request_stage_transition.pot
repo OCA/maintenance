@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: maintenance_request_stage_transition
-#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage_button_class
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__button_class
 msgid "Button Class"
 msgstr ""
 
@@ -24,7 +24,7 @@ msgid "Danger"
 msgstr ""
 
 #. module: maintenance_request_stage_transition
-#: model:ir.model.fields,help:maintenance_request_stage_transition.field_maintenance_stage_button_class
+#: model:ir.model.fields,help:maintenance_request_stage_transition.field_maintenance_stage__button_class
 msgid "For default, the system uses primary"
 msgstr ""
 
@@ -35,7 +35,7 @@ msgstr ""
 
 #. module: maintenance_request_stage_transition
 #: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_request
-msgid "Maintenance Requests"
+msgid "Maintenance Request"
 msgstr ""
 
 #. module: maintenance_request_stage_transition
@@ -44,18 +44,23 @@ msgid "Maintenance Stage"
 msgstr ""
 
 #. module: maintenance_request_stage_transition
-#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage_next_stage_ids
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__next_stage_ids
 msgid "Next stages"
 msgstr ""
 
 #. module: maintenance_request_stage_transition
-#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage_previous_stage_ids
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__previous_stage_ids
 msgid "Previous stages"
 msgstr ""
 
 #. module: maintenance_request_stage_transition
 #: selection:maintenance.stage,button_class:0
 msgid "Primary"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_request__stage_id
+msgid "Stage"
 msgstr ""
 
 #. module: maintenance_request_stage_transition
