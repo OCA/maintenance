@@ -15,6 +15,9 @@ class TestMaintenancePlan(test_common.TransactionCase):
         self.maintenance_plan_obj = self.env['maintenance.plan']
         self.maintenance_equipment_obj = self.env['maintenance.equipment']
         self.cron = self.env.ref('maintenance.maintenance_requests_cron')
+        self.weekly_kind = self.env.ref(
+            'maintenance_plan.maintenance_kind_weekly'
+        )
 
         self.equipment_1 = self.maintenance_equipment_obj.create({
             'name': 'Laptop 1',
@@ -28,8 +31,7 @@ class TestMaintenancePlan(test_common.TransactionCase):
         })
         self.maintenance_plan_2 = self.maintenance_plan_obj.create({
             'equipment_id': self.equipment_1.id,
-            'maintenance_kind_id': self.env.ref(
-                'maintenance_plan.maintenance_kind_weekly').id,
+            'maintenance_kind_id': self.weekly_kind.id,
             'interval': 1,
             'interval_step': 'week',
             'maintenance_plan_horizon': 2,
@@ -39,6 +41,14 @@ class TestMaintenancePlan(test_common.TransactionCase):
             'name': 'My custom plan',
             'equipment_id': self.equipment_1.id,
             'interval': 2,
+            'interval_step': 'week',
+            'maintenance_plan_horizon': 2,
+            'planning_step': 'month'
+        })
+        self.maintenance_plan_4 = self.maintenance_plan_obj.create({
+            'name': 'Plan without equipment',
+            'maintenance_kind_id': self.weekly_kind.id,
+            'interval': 1,
             'interval_step': 'week',
             'maintenance_plan_horizon': 2,
             'planning_step': 'month'
@@ -94,3 +104,14 @@ class TestMaintenancePlan(test_common.TransactionCase):
                              request_date_schedule)
             request_date_schedule = \
                 request_date_schedule + relativedelta(months=1)
+
+        generated_request = self.maintenance_request_obj.search(
+            [('maintenance_plan_id', '=', self.maintenance_plan_4.id)],
+            limit=1
+        )
+        self.assertEqual(
+            generated_request.name,
+            _('Preventive Maintenance (%s) - %s') % (
+                self.weekly_kind.name,
+                self.maintenance_plan_4.name)
+        )
