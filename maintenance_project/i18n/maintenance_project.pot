@@ -1,12 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_project
+# 	* maintenance_project
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -101,9 +101,3 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__task_id
 msgid "Task"
 msgstr ""
-
-#. module: maintenance_project
-#: model:project.project,label_tasks:maintenance_project.project_project_1
-msgid "Tasks"
-msgstr ""
-
