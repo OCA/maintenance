@@ -105,7 +105,5 @@ msgstr "Peticiones"
 msgid "Task"
 msgstr "Tarea"
 
-#. module: maintenance_project
-#: model:project.project,label_tasks:maintenance_project.project_project_1
-msgid "Tasks"
-msgstr "Tareas"
+#~ msgid "Tasks"
+#~ msgstr "Tareas"
