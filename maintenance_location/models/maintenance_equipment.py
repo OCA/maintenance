@@ -9,6 +9,7 @@ class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
     location_id = fields.Many2one("maintenance.location")
+    location = fields.Char(string="Location Old")
 
     def _prepare_request_from_plan(
         self, maintenance_plan, next_maintenance_date
