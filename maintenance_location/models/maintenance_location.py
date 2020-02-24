@@ -1,7 +1,7 @@
 # Copyright 2019 Creu Blanca
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -31,8 +31,7 @@ class MaintenanceLocation(models.Model):
     child_id = fields.One2many(
         "maintenance.location", "parent_id", "Child Locations"
     )
-    parent_left = fields.Integer("Left Parent", index=1)
-    parent_right = fields.Integer("Right Parent", index=1)
+    parent_path = fields.Char(index=True)
 
     sequence = fields.Integer(string="Sequence", default=10)
 
@@ -40,9 +39,8 @@ class MaintenanceLocation(models.Model):
     def _compute_complete_name(self):
         for location in self:
             if location.parent_id:
-                location.complete_name = "%s / %s" % (
-                    location.parent_id.complete_name,
-                    location.name,
+                location.complete_name = "{} / {}".format(
+                    location.parent_id.complete_name, location.name,
                 )
             else:
                 location.complete_name = location.name

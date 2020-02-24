@@ -12,6 +12,6 @@ class MaintenanceRequest(models.Model):
 
     @api.onchange("equipment_id")
     def _onchange_equipment_id(self):
-        for record in self.filtered("equipment_id"):
-            if record.equipment_id.location_id:
+        for record in self:
+            if record.equipment_id and record.equipment_id.location_id:
                 record.location_id = record.equipment_id.location_id
