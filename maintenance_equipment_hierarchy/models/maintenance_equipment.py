@@ -1,8 +1,7 @@
 # Copyright 2020 ForgeFlow S.L. (https://forgeflow.com)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from odoo import api, fields, models
 
 
 class MaintenanceEquipment(models.Model):
@@ -51,14 +50,6 @@ class MaintenanceEquipment(models.Model):
                 equipment.complete_name = parent_name + " / " + equipment.name
             else:
                 equipment.complete_name = equipment.name
-
-    @api.constrains("parent_id")
-    def _check_equipment_recursion(self):
-        if not self._check_recursion():
-            raise ValidationError(
-                _("Error ! You cannot create a recursive " "equipment hierarchy.")
-            )
-        return True
 
     def preview_child_list(self):
         return {
