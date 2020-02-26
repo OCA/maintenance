@@ -1,7 +1,7 @@
 # Copyright 2020 ForgeFlow S.L. (https://forgeflow.com)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from odoo.exceptions import ValidationError
+from odoo.exceptions import UserError
 from odoo.tests import common
 
 
@@ -19,7 +19,7 @@ class TestMaintenanceEquipmentHierarchy(common.TransactionCase):
         self.assertEqual(res["domain"], [("id", "in", self.equipment1_1.ids)])
 
     def test_02_recursion(self):
-        with self.assertRaises(ValidationError):
+        with self.assertRaises(UserError):
             self.equipment1.parent_id = self.equipment1
 
     def test_03_name_get_display_complete(self):
