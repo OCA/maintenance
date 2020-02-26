@@ -34,12 +34,6 @@ msgid "Display Name"
 msgstr ""
 
 #. module: maintenance_equipment_hierarchy
-#: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:54
-#, python-format
-msgid "Error ! You cannot create a recursive equipment hierarchy."
-msgstr ""
-
-#. module: maintenance_equipment_hierarchy
 #: model:maintenance.equipment,name:maintenance_equipment_hierarchy.equipment_computer9_1
 msgid "HP Laptop battery"
 msgstr ""
