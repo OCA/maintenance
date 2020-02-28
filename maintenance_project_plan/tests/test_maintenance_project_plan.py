@@ -21,7 +21,6 @@ class TestMaintenanceProjectPlan(test_common.TransactionCase):
                 0,
                 {
                     "maintenance_kind_id": self.maintenance_kind_weekly.id,
-                    "period": 7,
                     "duration": 1,
                     "project_id": self.env.ref(
                         "maintenance_project.project_project_1"
@@ -32,6 +31,9 @@ class TestMaintenanceProjectPlan(test_common.TransactionCase):
         ]
 
     def test_prepare_request_from_plan(self):
+        self.env["maintenance.request"].search(
+            [("maintenance_type", "=", "preventive")]
+        ).unlink()  # request cleanup in order to grant test execution
         plans = self.env["maintenance.plan"].search([("project_id", "!=", False)])
         for plan in plans:
             requests = plan.equipment_id._create_new_request(plan)
