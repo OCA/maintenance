@@ -6,7 +6,10 @@
         <field name="model">maintenance.equipment</field>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='maintenance_plan_ids']" position="attributes">
-                <attribute name="context">{'default_project_id': project_id, 'default_task_id': preventive_default_task_id}</attribute>
+                <attribute name="context">{
+                    'default_equipment_id': active_id, 'hide_equipment_id': 1,
+                    'default_project_id': project_id,
+                    'default_task_id': preventive_default_task_id}</attribute>
             </xpath>
         </field>
     </record>
