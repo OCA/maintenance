@@ -2,9 +2,9 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 {
     "name": "Maintenance Equipment Status",
-    "version": "12.0.1.0.0",
+    "version": "13.0.1.0.0",
     "category": "",
-    "author": "Eficent, Odoo Community Association (OCA)",
+    "author": "ForgeFlow, Odoo Community Association (OCA)",
     "website": "http://github.com/OCA/maintenance",
     "license": "LGPL-3",
     "depends": ["base_maintenance"],
