@@ -58,7 +58,6 @@
     <record id="maintenance_equipment_status_action" model="ir.actions.act_window">
         <field name="name">Equipment Statuses</field>
         <field name="res_model">maintenance.equipment.status</field>
-        <field name="view_type">form</field>
         <field name="view_id" ref="maintenance_equipment_status.maintenance_equipment_status_view_tree"/>
         <field name="help" type="html">
           <p class="oe_view_nocontent_create">
