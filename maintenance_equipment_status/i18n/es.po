@@ -87,7 +87,6 @@ msgstr "??ltima Actualizaci??n el"
 #. module: maintenance_equipment_status
 #: model:ir.model,name:maintenance_equipment_status.model_maintenance_equipment
 #, fuzzy
-#| msgid "Maintenance Equipment Status"
 msgid "Maintenance Equipment"
 msgstr "Estados de Equipos"
 
