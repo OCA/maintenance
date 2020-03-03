@@ -8,17 +8,12 @@
     "version": "12.0.1.0.1",
     "category": "Human Resources",
     "website": "https://github.com/OCA/maintenance",
-    "depends": [
-        "maintenance_project",
-        "hr_timesheet",
-    ],
+    "depends": ["maintenance_project", "hr_timesheet"],
     "data": [
         "security/maintenance_timesheet_security.xml",
         "views/hr_timesheet_views.xml",
         "views/maintenance_request_views.xml",
     ],
-    "demo": [
-        "data/demo_maintenance_timesheet.xml",
-    ],
-    'installable': True,
+    "demo": ["data/demo_maintenance_timesheet.xml"],
+    "installable": True,
 }
