@@ -22,7 +22,6 @@ class AccountAnalyticLine(models.Model):
             self._check_request_done(values.get("maintenance_request_id"))
         return super().create(values)
 
-    @api.multi
     def write(self, values):
         current_request = self.maintenance_request_id
         new_request_id = values.get("maintenance_request_id", False)
