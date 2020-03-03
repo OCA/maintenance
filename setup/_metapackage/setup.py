@@ -11,6 +11,7 @@ setuptools.setup(
         'odoo13-addon-base_maintenance',
         'odoo13-addon-maintenance_equipment_sequence',
         'odoo13-addon-maintenance_plan',
+        'odoo13-addon-maintenance_plan_activity',
         'odoo13-addon-maintenance_project',
     ],
     classifiers=[
