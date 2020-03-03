@@ -55,19 +55,13 @@
     <record id="hr_equipment_request_view_form" model="ir.ui.view">
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
-        <field name="priority" eval="110"/>
         <field name="arch" type="xml">
-            <xpath expr="//div[hasclass('oe_right')]" position="replace">
-                <div class="oe_button_box" name="button_box">
-                    <button class="oe_stat_button" type="object" name="action_view_timesheet_ids" icon="fa-calendar"
-                            groups="hr_timesheet.group_hr_timesheet_user">
-                        <field name="timesheet_total_hours"  widget="timesheet_uom" />
-                        <span class="o_label" style="padding-left: 5px;">Hours</span>
-                    </button>
-                </div>
-            </xpath>
-            <xpath expr="//div[hasclass('oe_title')]" position="before">
-              <field name="kanban_state" class="oe_inline" widget="state_selection"/>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" type="object" name="action_view_timesheet_ids" icon="fa-calendar"
+                        groups="hr_timesheet.group_hr_timesheet_user">
+                    <field name="timesheet_total_hours"  widget="timesheet_uom" />
+                    <span class="o_label" style="padding-left: 5px;">Hours</span>
+                </button>
             </xpath>
         </field>
     </record>
