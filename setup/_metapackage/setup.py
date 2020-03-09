@@ -15,6 +15,7 @@ setuptools.setup(
         'odoo13-addon-maintenance_plan',
         'odoo13-addon-maintenance_plan_activity',
         'odoo13-addon-maintenance_project',
+        'odoo13-addon-maintenance_project_plan',
     ],
     classifiers=[
         'Programming Language :: Python',
