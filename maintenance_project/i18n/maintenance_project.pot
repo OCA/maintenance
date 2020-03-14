@@ -101,3 +101,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__task_id
 msgid "Task"
 msgstr ""
+
+#. module: maintenance_project
+#: model:project.project,label_tasks:maintenance_project.project_project_1
+msgid "Tasks"
+msgstr ""
