@@ -13,13 +13,11 @@ class TestFlow(TransactionCase):
         super().setUp()
         self.request = self.env["maintenance.request"].create({"name": "Request"})
         self.original_stage = self.request.stage_id
-        self.last_stage = self.env["maintenance.stage"].create({"name": "Last state",})
+        self.last_stage = self.env["maintenance.stage"].create({"name": "Last state"})
         self.stage = self.env["maintenance.stage"].create(
-            {"name": "New state", "next_stage_ids": [(4, self.last_stage.id)],}
+            {"name": "New state", "next_stage_ids": [(4, self.last_stage.id)]}
         )
-        self.original_stage.write(
-            {"next_stage_ids": [(4, self.stage.id)],}
-        )
+        self.original_stage.write({"next_stage_ids": [(4, self.stage.id)]})
 
     def test_inverse(self):
         self.assertIn(self.original_stage, self.stage.previous_stage_ids)

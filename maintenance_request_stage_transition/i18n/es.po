@@ -22,7 +22,7 @@ msgid "Button Class"
 msgstr "Clase del Botón"
 
 #. module: maintenance_request_stage_transition
-#: selection:maintenance.stage,button_class:0
+#: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__danger
 msgid "Danger"
 msgstr "Peligro"
 
@@ -32,14 +32,13 @@ msgid "For default, the system uses primary"
 msgstr "Por defecto, el sistema usa Primario"
 
 #. module: maintenance_request_stage_transition
-#: selection:maintenance.stage,button_class:0
+#: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__info
 msgid "Info"
 msgstr "Info"
 
 #. module: maintenance_request_stage_transition
 #: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_request
 #, fuzzy
-#| msgid "Maintenance Requests"
 msgid "Maintenance Request"
 msgstr "Peticiones de mantenimiento"
 
@@ -59,7 +58,7 @@ msgid "Previous stages"
 msgstr "Estados previos"
 
 #. module: maintenance_request_stage_transition
-#: selection:maintenance.stage,button_class:0
+#: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__primary
 msgid "Primary"
 msgstr "Primario"
 
@@ -69,17 +68,17 @@ msgid "Stage"
 msgstr ""
 
 #. module: maintenance_request_stage_transition
-#: selection:maintenance.stage,button_class:0
+#: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__success
 msgid "Success"
 msgstr "Éxito"
 
 #. module: maintenance_request_stage_transition
-#: code:addons/maintenance_request_stage_transition/models/maintenance_stage.py:41
+#: code:addons/maintenance_request_stage_transition/models/maintenance_stage.py:0
 #, python-format
 msgid "To %s"
 msgstr "A %s"
 
 #. module: maintenance_request_stage_transition
-#: selection:maintenance.stage,button_class:0
+#: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__warning
 msgid "Warning"
 msgstr "Advertencia"
