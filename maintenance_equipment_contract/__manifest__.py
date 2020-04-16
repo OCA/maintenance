@@ -5,7 +5,7 @@
     'name': 'Maintenance Equipment Contract',
     'summary': """
         Manage equipment contracts""",
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'license': 'AGPL-3',
     'author': 'Creu Blanca,Odoo Community Association (OCA)',
     'website': 'https://github.com/OCA/maintenance',
@@ -14,8 +14,8 @@
         'base_maintenance',
     ],
     'data': [
+        'views/contract_contract.xml',
         'views/maintenance_equipment.xml',
-        'views/account_analytic_account.xml',
     ],
     'demo': [
         'demo/maintenance_equipment_contract_demo.xml',
