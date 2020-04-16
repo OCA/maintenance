@@ -1,2 +1,2 @@
-from . import account_analytic_account
+from . import contract_contract
 from . import maintenance_equipment

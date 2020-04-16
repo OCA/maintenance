@@ -4,9 +4,9 @@
 from odoo import fields, models
 
 
-class AccountAnalyticAccount(models.Model):
+class ContractContract(models.Model):
 
-    _inherit = 'account.analytic.account'
+    _inherit = 'contract.contract'
 
     equipment_ids = fields.Many2many(
         'maintenance.equipment', string='Equipments'
