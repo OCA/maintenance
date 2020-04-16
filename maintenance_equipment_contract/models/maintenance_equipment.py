@@ -9,7 +9,7 @@ class MaintenanceEquipment(models.Model):
     _inherit = 'maintenance.equipment'
 
     contract_ids = fields.Many2many(
-        'account.analytic.account', string='Contracts'
+        'contract.contract', string='Contracts'
     )
     contract_count = fields.Integer(
         compute='_compute_contract_count',
@@ -23,12 +23,12 @@ class MaintenanceEquipment(models.Model):
     @api.multi
     def action_view_contracts(self):
         action = self.env.ref(
-            'contract.action_account_analytic_purchase_overdue_all').read()[0]
+            'contract.action_customer_contract').read()[0]
         if len(self.contract_ids) > 1:
             action['domain'] = [('id', 'in', self.contract_ids.ids)]
         elif self.contract_ids:
             action['views'] = [(self.env.ref(
-                'contract.account_analytic_account_purchase_form'
+                'contract.contract_contract_form_view'
             ).id, 'form')]
             action['res_id'] = self.contract_ids.id
         action['context'] = {
