@@ -6,9 +6,8 @@ from odoo import fields, models
 
 class MaintenanceEquipmentCategory(models.Model):
 
-    _inherit = 'maintenance.equipment.category'
+    _inherit = "maintenance.equipment.category"
 
     equipment_scrap_template_id = fields.Many2one(
-        'mail.template',
-        string='Equipment Scrap Email Template',
+        "mail.template", string="Equipment Scrap Email Template",
     )

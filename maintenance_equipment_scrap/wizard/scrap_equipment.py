@@ -9,11 +9,7 @@ class WizardPerformEquipmentScrap(models.TransientModel):
     _description = "Perform Scrap (Equipment)"
 
     scrap_date = fields.Date(required=True)
-    equipment_id = fields.Many2one(
-        'maintenance.equipment',
-        'Equipment',
-        required=True
-    )
+    equipment_id = fields.Many2one("maintenance.equipment", "Equipment", required=True)
 
     @api.multi
     def do_scrap(self):
