@@ -9,10 +9,13 @@ class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
     equipment_scrap_template_id = fields.Many2one(
-        "mail.template", string="Equipment Scrap Email Template",
+        "mail.template",
+        compute="_compute_equipment_scrap_template_id",
+        store=True,
+        readonly=False,
+        string="Equipment Scrap Email Template",
     )
 
-    @api.multi
     def action_perform_scrap(self):
         self.ensure_one()
         action = self.env.ref(
@@ -21,9 +24,8 @@ class MaintenanceEquipment(models.Model):
         result = action.read()[0]
         return result
 
-    @api.multi
-    @api.onchange("category_id")
-    def onchange_category_id(self):
+    @api.depends("category_id.equipment_scrap_template_id")
+    def _compute_equipment_scrap_template_id(self):
         for equipment in self:
             if equipment.category_id:
                 equipment.equipment_scrap_template_id = (

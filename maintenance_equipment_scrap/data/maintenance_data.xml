@@ -9,7 +9,13 @@
             name="body_html"
         ><![CDATA[
             <p>Hello, <strong>${object.owner_user_id.name}</strong></p>
-            <p>Your equipment <strong>${object.name}</strong> with Serial Number: <strong>${object.serial_no}</strong> was scrapped.</p>]]>
+            <p>Your equipment <strong>${object.name}</strong>
+
+            % if object.serial_no:
+                with Serial Number: <strong>${object.serial_no}</strong>
+            % endif
+
+            was scrapped.</p>]]>
         </field>
     </record>
 </odoo>
