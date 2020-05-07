@@ -7,7 +7,7 @@ from odoo.tests import common
 
 class TestMaintenanceEquipmentScrap(common.TransactionCase):
     def setUp(self):
-        super(TestMaintenanceEquipmentScrap, self).setUp()
+        super().setUp()
         self.Equipment = self.env["maintenance.equipment"]
         self.Category = self.env["maintenance.equipment.category"]
         self.Template = self.env["mail.template"]
@@ -18,10 +18,10 @@ class TestMaintenanceEquipmentScrap(common.TransactionCase):
         )
 
         self.equipment1 = self.Equipment.create(
-            {"name": "Equipment 1", "equipment_scrap_template_id": self.template.id,}
+            {"name": "Equipment 1", "equipment_scrap_template_id": self.template.id}
         )
 
-        self.equipment2 = self.Equipment.create({"name": "Equipment 2",})
+        self.equipment2 = self.Equipment.create({"name": "Equipment 2"})
 
         self.equipment_category = self.Category.create(
             {
@@ -32,7 +32,7 @@ class TestMaintenanceEquipmentScrap(common.TransactionCase):
 
     def test_01_wizard(self):
         wizard = self.Wizard.create(
-            {"scrap_date": fields.Date.today(), "equipment_id": self.equipment1.id,}
+            {"scrap_date": fields.Date.today(), "equipment_id": self.equipment1.id}
         )
         wizard.do_scrap()
         self.assertEqual(self.equipment1.scrap_date, wizard.scrap_date)
@@ -47,9 +47,7 @@ class TestMaintenanceEquipmentScrap(common.TransactionCase):
         self.assertFalse(self.equipment2.equipment_scrap_template_id)
 
         self.equipment2.category_id = self.equipment_category
-        self.equipment2.onchange_category_id()
         self.assertEqual(self.equipment2.equipment_scrap_template_id, self.template)
 
         self.equipment2.category_id = None
-        self.equipment2.onchange_category_id()
         self.assertFalse(self.equipment2.equipment_scrap_template_id)

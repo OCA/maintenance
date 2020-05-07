@@ -1,7 +1,7 @@
-# Copyright 2017 Onestein (<http://www.onestein.eu>)
+# Copyright 2017-2020 Onestein (<http://www.onestein.eu>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class WizardPerformEquipmentScrap(models.TransientModel):
@@ -9,9 +9,8 @@ class WizardPerformEquipmentScrap(models.TransientModel):
     _description = "Perform Scrap (Equipment)"
 
     scrap_date = fields.Date(required=True)
-    equipment_id = fields.Many2one("maintenance.equipment", "Equipment", required=True)
+    equipment_id = fields.Many2one("maintenance.equipment", required=True)
 
-    @api.multi
     def do_scrap(self):
         for wizard in self:
             wizard.equipment_id.scrap_date = wizard.scrap_date
