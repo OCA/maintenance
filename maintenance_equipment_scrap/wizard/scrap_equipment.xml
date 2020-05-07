@@ -31,7 +31,6 @@
     <record model="ir.actions.act_window" id="wizard_perform_equipment_scrap_action">
         <field name="name">Wizard Scrap</field>
         <field name="res_model">wizard.perform.equipment.scrap</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="view_perform_equipment_scrap" />
         <field name="target">new</field>

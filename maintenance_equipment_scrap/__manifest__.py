@@ -7,9 +7,9 @@
     "author": "Onestein, Odoo Community Association (OCA)",
     "website": "http://github.com/OCA/maintenance",
     "category": "Human Resources",
-    "version": "12.0.1.0.0",
+    "version": "13.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["maintenance", "mail",],
+    "depends": ["maintenance", "mail"],
     "data": [
         "views/maintenance_equipment.xml",
         "views/maintenance_equipment_category.xml",
