@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-01-08 19:13+0000\n"
-"Last-Translator: David Alonso (Solvos) <david.alonso@solvos.es>\n"
+"PO-Revision-Date: 2020-05-18 08:19+0000\n"
+"Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__create_date
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__create_date
 msgid "Created on"
-msgstr "Creado en"
+msgstr "Creado el"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_open_count
@@ -80,7 +80,7 @@ msgstr "Duración (horas)"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__equipment_id
 msgid "Equipment"
-msgstr "Equipo"
+msgstr "Equipamiento"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__interval
@@ -130,7 +130,7 @@ msgstr "Última modificación por"
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__write_date
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__write_date
 msgid "Last Updated on"
-msgstr "Última actualización en"
+msgstr "Última Actualización el"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__planning_step
@@ -152,7 +152,7 @@ msgstr "Mantenimiento"
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr "Equipo"
+msgstr "Equipamiento"
 
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_kind
@@ -190,8 +190,6 @@ msgstr "Peticiones de mantenimiento"
 
 #. module: maintenance_plan
 #: model:ir.actions.act_window,name:maintenance_plan.hr_equipment_request_action_from_plan
-#, fuzzy
-#| msgid "Maintenance Request"
 msgid "Maintenance Requests"
 msgstr "Peticiones de mantenimiento"
 
@@ -218,7 +216,7 @@ msgstr "Tipo de mantenimiento"
 #. module: maintenance_plan
 #: sql_constraint:maintenance.kind:0
 msgid "Maintenance kind name already exists."
-msgstr "Ya existe ese nombre de tipo de mantenimiento"
+msgstr "Ya existe ese nombre de tipo de mantenimiento."
 
 #. module: maintenance_plan
 #: model:ir.actions.act_window,name:maintenance_plan.maintenance_kind_action
@@ -239,7 +237,7 @@ msgid ""
 "horizon will be created."
 msgstr ""
 "Horizonte del planning de mantenimiento. Solo se crearán las peticiones de "
-"mantenimiento dentro del horizonte"
+"mantenimiento dentro del horizonte."
 
 #. module: maintenance_plan
 #: model:ir.actions.act_window,name:maintenance_plan.maintenance_plan_action
@@ -332,7 +330,7 @@ msgid ""
 msgstr ""
 "El plan de mantenimiento %s del equipo %s ha generado una petición que no ha "
 "sido hecha todavía. Se deberían marcar la petición como hecha, borrar su "
-"tipo de mantenimiento o eliminarlo primero"
+"tipo de mantenimiento o eliminarlo primero."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
@@ -351,7 +349,7 @@ msgstr "Plan %s sin nombre (%s)"
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:46
 #, python-format
 msgid "Unspecified kind"
-msgstr ""
+msgstr "Tipo no especificado"
 
 #. module: maintenance_plan
 #: selection:maintenance.plan,interval_step:0
@@ -377,7 +375,7 @@ msgid ""
 "maintenance plan."
 msgstr ""
 "No se pueden definir varias veces el mismo tipo de mantenimiento en el plan "
-"de mantenimiento de un equipo"
+"de mantenimiento de un equipo."
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/hooks.py:31
@@ -389,7 +387,7 @@ msgid ""
 msgstr ""
 "Hay varias peticiones de mantenimiento preventivo en el equipo %s, próxima "
 "fecha de acción (%s). Por favor, deja solo una petición de preventivo en la "
-"fecha de la próxima acción del equipo para poder instalar el módulo"
+"fecha de la próxima acción del equipo para poder instalar el módulo."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
