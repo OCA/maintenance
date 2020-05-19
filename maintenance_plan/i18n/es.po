@@ -196,7 +196,6 @@ msgstr "Peticiones de mantenimiento"
 #. module: maintenance_plan
 #: model:ir.actions.act_window,name:maintenance_plan.hr_equipment_request_action_from_plan
 #, fuzzy
-#| msgid "Maintenance Request"
 msgid "Maintenance Requests"
 msgstr "Peticiones de mantenimiento"
 
