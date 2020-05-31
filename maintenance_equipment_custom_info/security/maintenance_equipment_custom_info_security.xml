@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="group_equipment_info" model="res.groups">
+            <field name="name">Display in maintenance equipment form</field>
+            <field name="category_id" ref="base_custom_info.category"/>
+            <field name="comment">Will be able to edit custom information from maintenance equipment's form.</field>
+        </record>
+
+        <record id="maintenance.group_equipment_manager" model="res.groups">
+            <field name="implied_ids" eval="[(4, ref('group_equipment_info'))]"/>
+        </record>
+
+    </data>
+</odoo>
