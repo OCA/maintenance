@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 10:33+0000\n"
-"PO-Revision-Date: 2020-05-31 10:33+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -36,7 +34,7 @@ msgid "Custom Properties"
 msgstr ""
 
 #. module: maintenance_equipment_custom_info
-#: model:res.groups,name:maintenance_equipment_custom_info.group_maintenance_equipment
+#: model:res.groups,name:maintenance_equipment_custom_info.group_equipment_info
 msgid "Display in maintenance equipment form"
 msgstr ""
 
@@ -81,7 +79,7 @@ msgid "Technical Data"
 msgstr ""
 
 #. module: maintenance_equipment_custom_info
-#: model:res.groups,comment:maintenance_equipment_custom_info.group_maintenance_equipment
+#: model:res.groups,comment:maintenance_equipment_custom_info.group_equipment_info
 msgid "Will be able to edit custom information from maintenance equipment's form."
 msgstr ""
 
