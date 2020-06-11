@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="prop_ram" model="custom.info.property">
+        <field name="default_value" eval="2"/>
+    </record>
+
+    <record id="prop_storage_gib" model="custom.info.property">
+        <field name="default_value" eval="256"/>
+    </record>
+
+</odoo>

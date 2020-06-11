@@ -1,0 +1,3 @@
+id,name,property_ids:id,template_id:id
+opt_hdd,HDD,prop_storage_type,
+opt_ssdd,SSD,prop_storage_type,

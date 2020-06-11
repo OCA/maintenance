@@ -1,0 +1,4 @@
+id,name,template_id:id,field_type,required,minimum,maximum,category_id:id,sequence
+prop_ram,RAM (GiB),tpl_laptop,int,True,2,16,cat_technical_data,100
+prop_storage_gib,Storage (GiB),tpl_laptop,int,True,128,1024,cat_technical_data,300
+prop_storage_type,Storage type,tpl_laptop,id,,0,-1,cat_technical_data,400
