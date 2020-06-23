@@ -6,76 +6,78 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-06-23 22:10+0000\n"
+"Last-Translator: Fernando Colus <fcolus1@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__child_ids
 msgid "Child Equipments"
-msgstr ""
+msgstr "Equipamentos Filho"
 
 #. module: maintenance_equipment_hierarchy
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_hierarchy.hr_equipment_view_form
 msgid "Children"
-msgstr ""
+msgstr "Filhos"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__complete_name
 msgid "Complete Name"
-msgstr ""
+msgstr "Nome Completo"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Exibir Nome"
 
 #. module: maintenance_equipment_hierarchy
 #: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:54
 #, python-format
 msgid "Error ! You cannot create a recursive equipment hierarchy."
-msgstr ""
+msgstr "Erro! Você não pode criar uma hierarquia de equipamentos recursivos."
 
 #. module: maintenance_equipment_hierarchy
 #: model:maintenance.equipment,name:maintenance_equipment_hierarchy.equipment_computer9_1
 msgid "HP Laptop battery"
-msgstr ""
+msgstr "Bateria de Laptop HP"
 
 #. module: maintenance_equipment_hierarchy
 #: model:maintenance.equipment,name:maintenance_equipment_hierarchy.equipment_computer9_2
 msgid "HP Laptop case"
-msgstr ""
+msgstr "Estojo para Laptop HP"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_left
 msgid "Left Parent"
-msgstr ""
+msgstr "Parente à esquerda"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model,name:maintenance_equipment_hierarchy.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Equipamento de Manutenção"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__child_count
 msgid "Number of child equipments"
-msgstr ""
+msgstr "Número de equipamentos filho"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_id
 msgid "Parent Equipment"
-msgstr ""
+msgstr "Equipamento Pai"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_path
 msgid "Parent Path"
-msgstr ""
+msgstr "Caminho Pai"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_right
 msgid "Right Parent"
-msgstr ""
+msgstr "Parente Direito"
