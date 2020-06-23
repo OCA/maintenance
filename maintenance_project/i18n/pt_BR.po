@@ -6,104 +6,106 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-06-23 22:10+0000\n"
+"Last-Translator: Fernando Colus <fcolus1@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.view_project_kanban
 msgid "<span class=\"o_label\">Equipments</span>"
-msgstr ""
+msgstr "<span class=\"o_label\">Equipamentos</span>"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.view_project_kanban
 msgid "<span class=\"o_label\">Requests</span>"
-msgstr ""
+msgstr "<span class=\"o_label\">Requisições</span>"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__create_project_from_equipment
 msgid "Create Project From Equipment"
-msgstr ""
+msgstr "Criar Projeto A Partir do Equipamento"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__preventive_default_task_id
 msgid "Default Task"
-msgstr ""
+msgstr "Tarefa Padrão"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__equipment_count
 msgid "Equipment Count"
-msgstr ""
+msgstr "Contador de Equipamento"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__equipment_ids
 #: model_terms:ir.ui.view,arch_db:maintenance_project.edit_project
 msgid "Equipments"
-msgstr ""
+msgstr "Equipamentos"
 
 #. module: maintenance_project
 #: model:maintenance.equipment,name:maintenance_project.equipment_3
 msgid "Generic Computer with own project"
-msgstr ""
+msgstr "Computador genérico com projeto próprio"
 
 #. module: maintenance_project
 #: model:maintenance.equipment,name:maintenance_project.equipment_1
 msgid "Generic Monitor"
-msgstr ""
+msgstr "Monitor Genérico"
 
 #. module: maintenance_project
 #: model:maintenance.equipment,name:maintenance_project.equipment_2
 msgid "Generic Monitor with preventive"
-msgstr ""
+msgstr "Monitor Genérico com Preventiva"
 
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Equipamento de Manutenção"
 
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_maintenance_request
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Requisição de Manutenção"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__maintenance_request_count
 msgid "Maintenance Request Count"
-msgstr ""
+msgstr "Contador de Requisições de Manutenção"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__maintenance_request_ids
 msgid "Maintenance Requests"
-msgstr ""
+msgstr "Requisições de Manutenção"
 
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_project_project
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__project_id
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__project_id
 msgid "Project"
-msgstr ""
+msgstr "Projeto"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.hr_equipment_request_view_kanban
 #: model_terms:ir.ui.view,arch_db:maintenance_project.hr_equipment_view_kanban
 msgid "Project:"
-msgstr ""
+msgstr "Projeto:"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.edit_project
 msgid "Requests"
-msgstr ""
+msgstr "Requisições"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__task_id
 msgid "Task"
-msgstr ""
+msgstr "Tarefa"
 
 #. module: maintenance_project
 #: model:project.project,label_tasks:maintenance_project.project_project_1
 msgid "Tasks"
-msgstr ""
+msgstr "Tarefas"
