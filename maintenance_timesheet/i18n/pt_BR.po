@@ -6,58 +6,62 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-06-23 22:10+0000\n"
+"Last-Translator: Fernando Colus <fcolus1@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_form
 msgid "<span class=\"o_label\" style=\"padding-left: 5px;\">Hours</span>"
-msgstr ""
+msgstr "<span class=\"o_label\" style=\"padding-left: 5px;\">Horas</span>"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_kanban
 msgid "<span class=\"o_label\">Hours</span>"
-msgstr ""
+msgstr "<span class=\"o_label\">Horas</span>"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_account_analytic_line
 msgid "Analytic Line"
-msgstr ""
+msgstr "Linha Analítica"
 
 #. module: maintenance_timesheet
 #: code:addons/maintenance_timesheet/models/hr_timesheet.py:46
 #, python-format
 msgid "Cannot save or delete a timesheet for a maintenance request already done"
 msgstr ""
+"Não é possível salvar ou excluir uma planilha de horários para uma "
+"solicitação de manutenção já concluída"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Equipamento de Manutenção"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Requisição de Manutenção"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_timesheet_line_search
 msgid "Request"
-msgstr ""
+msgstr "Requisição"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_total_hours
 msgid "Timesheet Total Hours"
-msgstr ""
+msgstr "Total de horas da planilha de horas"
 
 #. module: maintenance_timesheet
 #: model:ir.actions.act_window,name:maintenance_timesheet.timesheet_action_from_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_ids
 msgid "Timesheets"
-msgstr ""
+msgstr "Planilha de Horas"
