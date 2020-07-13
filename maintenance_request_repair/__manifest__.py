@@ -17,6 +17,4 @@
     'data': [
         'views/maintenance_request.xml',
     ],
-    'demo': [
-    ],
 }
