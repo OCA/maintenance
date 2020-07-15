@@ -10,11 +10,11 @@ msgstr ""
 "PO-Revision-Date: 2020-07-14 20:45-0300\n"
 "Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
 "Language-Team: \n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: pt_BR\n"
 "X-Generator: Poedit 2.3.1\n"
 
 #. module: base_maintenance
