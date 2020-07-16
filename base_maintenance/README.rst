@@ -23,7 +23,7 @@ Base Maintenance
     :target: https://runbot.odoo-community.org/runbot/240/13.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module extends the functionality of Odoo Maintenance module to add
 some basic features that are standard in other Odoo apps:
@@ -33,6 +33,7 @@ some basic features that are standard in other Odoo apps:
 * Description field in maintenance team.
 * Creates the unexisting search view for maintenance team.
 * Empty button box on maintenance request to be extended by other modules.
+* Maintenance Request Report
 
 **Table of contents**
 
@@ -61,6 +62,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Lois Rilo <lois.rilo@forgeflow.com>
+* Marcel Savegnago <marcel.savegnago@escodoo.com.br>
 
 Maintainers
 ~~~~~~~~~~~
