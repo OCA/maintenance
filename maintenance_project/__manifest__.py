@@ -1,4 +1,4 @@
-# Copyright 2019 Solvos Consultoría Informática (<http://www.solvos.es>)
+# Copyright 2020 Solvos Consultoría Informática (<http://www.solvos.es>)
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 {
     'name': 'Maintenance Projects',
@@ -9,7 +9,7 @@
     "category": "Maintenance",
     "website": "https://github.com/OCA/maintenance",
     "depends": [
-        "maintenance",
+        "base_maintenance",
         "project",
     ],
     "data": [
@@ -17,6 +17,7 @@
         "views/maintenance_equipment_views.xml",
         "views/maintenance_request_views.xml",
         "views/project_project_views.xml",
+        "report/maintenance_request_report.xml",
     ],
     "demo": [
         "data/demo_maintenance_project.xml",
