@@ -33,6 +33,7 @@ some basic features that are standard in other Odoo apps:
 * Description field in maintenance team.
 * Creates the unexisting search view for maintenance team.
 * Empty button box on maintenance request to be extended by other modules.
+* Maintenance Request Report
 
 **Table of contents**
 
@@ -61,6 +62,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Lois Rilo <lois.rilo@forgeflow.com>
+* Marcel Savegnago <marcel.savegnago@escodoo.com.br>
 
 Maintainers
 ~~~~~~~~~~~
