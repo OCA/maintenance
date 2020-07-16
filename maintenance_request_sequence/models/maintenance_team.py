@@ -6,17 +6,16 @@ from odoo import api, fields, models
 
 class MaintenanceTeam(models.Model):
 
-    _inherit = 'maintenance.team'
+    _inherit = "maintenance.team"
 
     code_prefix = fields.Char(
         string="Prefix for Team Reference",
         help="Prefix used to generate the internal reference for re "
-             "created with this category. If blank the "
-             "default sequence will be used.",
+        "created with this category. If blank the "
+        "default sequence will be used.",
     )
     sequence_id = fields.Many2one(
-        comodel_name="ir.sequence", string="Team Sequence",
-        copy=False, readonly=True,
+        comodel_name="ir.sequence", string="Team Sequence", copy=False, readonly=True,
     )
 
     @api.model

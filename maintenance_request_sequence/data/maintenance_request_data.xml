@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <odoo noupdate="1">
     <record id="seq_maintenance_request_auto" model="ir.sequence">
         <field name="name">Maintenance Request Default</field>
