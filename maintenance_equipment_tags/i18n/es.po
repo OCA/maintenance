@@ -75,7 +75,6 @@ msgstr "Última Actualización el"
 #. module: maintenance_equipment_tags
 #: model:ir.model,name:maintenance_equipment_tags.model_maintenance_equipment
 #, fuzzy
-#| msgid "Maintenance Equipment Tag"
 msgid "Maintenance Equipment"
 msgstr "Etiqueta de Equipamiento"
 
@@ -85,7 +84,7 @@ msgid "Maintenance Equipment Tag"
 msgstr "Etiqueta de Equipamiento"
 
 #. module: maintenance_equipment_tags
-#: sql_constraint:maintenance.equipment.tag:0
+#: model:ir.model.constraint,message:maintenance_equipment_tags.constraint_maintenance_equipment_tag_name_uniq
 msgid "Tag name already exists !"
 msgstr "Este nombre de etiqueta ya existe !"
 
