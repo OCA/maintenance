@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="maintenance_team_view_form">
+        <field
+            name="name"
+        >maintenance.team.form (in maintenance_request_sequence)</field>
+        <field name="model">maintenance.team</field>
+        <field name="inherit_id" ref="maintenance.maintenance_team_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='member_ids']/.." position="before">
+                <group>
+                    <label for="code_prefix" />
+                    <div>
+                        <field
+                            name="code_prefix"
+                            style="padding-right: 1.0em"
+                            class="oe_inline"
+                        />
+                        <field name="sequence_id" groups="base.group_no_one" />
+                    </div>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
