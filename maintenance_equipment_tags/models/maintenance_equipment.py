@@ -6,10 +6,12 @@ from odoo import fields, models
 
 class MaintenanceEquipment(models.Model):
 
-    _inherit = 'maintenance.equipment'
+    _inherit = "maintenance.equipment"
 
     tag_ids = fields.Many2many(
-        'maintenance.equipment.tag', 'equipment_tag_rel',
-        'equipment_id', 'tag_id',
-        string='Tags'
+        "maintenance.equipment.tag",
+        "equipment_tag_rel",
+        "equipment_id",
+        "tag_id",
+        string="Tags",
     )
