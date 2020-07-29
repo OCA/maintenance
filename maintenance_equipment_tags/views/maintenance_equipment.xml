@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.equipment.form (in maintenance_equipment_tags)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position="after">
+                <field
+                    name="tag_ids"
+                    widget="many2many_tags"
+                    options="{'color_field': 'color'}"
+                    placeholder="e.g. Computers"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_view_kanban" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.equipment.kanban (in maintenance_equipment_tags)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_record_top')]" position="after">
+                <field
+                    name="tag_ids"
+                    widget="many2many_tags"
+                    options="{'color_field': 'color'}"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_view_tree" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.equipment.tree (in maintenance_equipment_tags)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <field name="assign_date" position="before">
+                <field
+                    name="tag_ids"
+                    widget="many2many_tags"
+                    options="{'color_field': 'color'}"
+                />
+            </field>
+        </field>
+    </record>
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.equipment.search (in maintenance_equipment_tags)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="tag_ids" />
+            </field>
+        </field>
+    </record>
+</odoo>
