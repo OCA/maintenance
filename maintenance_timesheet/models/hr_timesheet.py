@@ -25,12 +25,13 @@ class AccountAnalyticLine(models.Model):
 
     @api.multi
     def write(self, values):
-        current_request = self.maintenance_request_id
-        new_request_id = values.get('maintenance_request_id', False)
-        if current_request:
-            self._check_request_done(current_request.id)
-        if new_request_id:
-            self._check_request_done(new_request_id)
+        for timesheet in self:
+            if timesheet.maintenance_request_id or values.get(
+                    'maintenance_request_id', False):
+                timesheet._check_request_done(
+                    timesheet.maintenance_request_id.id
+                    if timesheet.maintenance_request_id
+                    else values['maintenance_request_id'])
         return super().write(values)
 
     def unlink(self):
