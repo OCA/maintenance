@@ -5,7 +5,7 @@
     "summary": "Adds timesheets to maintenance requests",
     "author": "Odoo Community Association (OCA), Solvos",
     "license": "AGPL-3",
-    "version": "12.0.1.0.1",
+    "version": "12.0.1.0.2",
     "category": "Human Resources",
     "website": "https://github.com/OCA/maintenance",
     "depends": [
