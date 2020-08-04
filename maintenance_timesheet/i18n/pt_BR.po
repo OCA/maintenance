@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_timesheet
+# 	* maintenance_timesheet
 #
 msgid ""
 msgstr ""
@@ -32,9 +32,10 @@ msgid "Analytic Line"
 msgstr "Linha Analítica"
 
 #. module: maintenance_timesheet
-#: code:addons/maintenance_timesheet/models/hr_timesheet.py:46
+#: code:addons/maintenance_timesheet/models/hr_timesheet.py:47
 #, python-format
-msgid "Cannot save or delete a timesheet for a maintenance request already done"
+msgid ""
+"Cannot save or delete a timesheet for a maintenance request already done"
 msgstr ""
 "Não é possível salvar ou excluir uma planilha de horários para uma "
 "solicitação de manutenção já concluída"

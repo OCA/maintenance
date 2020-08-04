@@ -33,7 +33,7 @@ msgid "Analytic Line"
 msgstr "Cuenta analítica"
 
 #. module: maintenance_timesheet
-#: code:addons/maintenance_timesheet/models/hr_timesheet.py:46
+#: code:addons/maintenance_timesheet/models/hr_timesheet.py:47
 #, python-format
 msgid ""
 "Cannot save or delete a timesheet for a maintenance request already done"
