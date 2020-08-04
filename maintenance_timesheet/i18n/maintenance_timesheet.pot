@@ -6,6 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-04 11:08+0000\n"
+"PO-Revision-Date: 2020-08-04 11:08+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -24,6 +26,21 @@ msgid "<span class=\"o_label\">Hours</span>"
 msgstr ""
 
 #. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<span id=\"timesheet_information_title\">Timesheet Entries</span>"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<strong>Timesheet Total Hours:</strong>"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_account_analytic_line
 msgid "Analytic Line"
 msgstr ""
@@ -32,6 +49,16 @@ msgstr ""
 #: code:addons/maintenance_timesheet/models/hr_timesheet.py:47
 #, python-format
 msgid "Cannot save or delete a timesheet for a maintenance request already done"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Date"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Description"
 msgstr ""
 
 #. module: maintenance_timesheet
@@ -46,8 +73,28 @@ msgid "Maintenance Request"
 msgstr ""
 
 #. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Project -"
+msgstr ""
+
+#. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_timesheet_line_search
 msgid "Request"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Responsible"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Task"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Time"
 msgstr ""
 
 #. module: maintenance_timesheet
