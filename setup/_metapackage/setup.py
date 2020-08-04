@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo13-addon-base_maintenance',
         'odoo13-addon-maintenance_equipment_hierarchy',
+        'odoo13-addon-maintenance_equipment_scrap',
         'odoo13-addon-maintenance_equipment_sequence',
         'odoo13-addon-maintenance_equipment_status',
         'odoo13-addon-maintenance_equipment_tags',
