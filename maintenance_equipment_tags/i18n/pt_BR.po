@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_tags
+# 	* maintenance_equipment_tags
 #
 msgid ""
 msgstr ""
@@ -83,7 +83,7 @@ msgid "Maintenance Equipment Tag"
 msgstr "Etiqueta do Equipamento de Manutenção"
 
 #. module: maintenance_equipment_tags
-#: sql_constraint:maintenance.equipment.tag:0
+#: model:ir.model.constraint,message:maintenance_equipment_tags.constraint_maintenance_equipment_tag_name_uniq
 msgid "Tag name already exists !"
 msgstr "Nome da etiqueta já existe !"
 
