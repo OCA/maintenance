@@ -29,7 +29,7 @@ addon | version | summary
 [maintenance_request_sequence](maintenance_request_sequence/) | 12.0.1.0.0 | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 12.0.1.0.0 | Manage transition visibility and management between stages
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 12.0.1.0.0 | Create hierarchies on teams
-[maintenance_timesheet](maintenance_timesheet/) | 12.0.1.0.1 | Adds timesheets to maintenance requests
+[maintenance_timesheet](maintenance_timesheet/) | 12.0.1.0.2 | Adds timesheets to maintenance requests
 
 [//]: # (end addons)
 
