@@ -54,7 +54,6 @@ msgstr "Padre Izquierdo"
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model,name:maintenance_equipment_hierarchy.model_maintenance_equipment
 #, fuzzy
-#| msgid "Parent Equipment"
 msgid "Maintenance Equipment"
 msgstr "Equipo Padre"
 
