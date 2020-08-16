@@ -75,7 +75,6 @@ msgstr "Última Actualización el"
 #. module: maintenance_equipment_tags
 #: model:ir.model,name:maintenance_equipment_tags.model_maintenance_equipment
 #, fuzzy
-#| msgid "Maintenance Equipment Tag"
 msgid "Maintenance Equipment"
 msgstr "Etiqueta de Equipamiento"
 
