@@ -39,7 +39,6 @@ msgstr "Info"
 #. module: maintenance_request_stage_transition
 #: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_request
 #, fuzzy
-#| msgid "Maintenance Requests"
 msgid "Maintenance Request"
 msgstr "Peticiones de mantenimiento"
 
