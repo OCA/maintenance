@@ -29,7 +29,6 @@ msgstr "Padre"
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__parent_path
 #, fuzzy
-#| msgid "Parent Left"
 msgid "Parent Path"
 msgstr "Padre izquierdo"
 
