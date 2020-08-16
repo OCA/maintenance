@@ -20,7 +20,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan_active
 #: model:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
 #, fuzzy
-#| msgid "Active Kind"
 msgid "Active"
 msgstr "Tipo activo"
 
@@ -44,7 +43,6 @@ msgstr "Creado en"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan_maintenance_open_count
 #, fuzzy
-#| msgid "Next maintenance date"
 msgid "Current Maintenance"
 msgstr "Seguinte data de mantemento"
 
@@ -68,7 +66,6 @@ msgstr ""
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan_name
 #, fuzzy
-#| msgid "Duration"
 msgid "Description"
 msgstr "Duración"
 
@@ -81,7 +78,6 @@ msgstr "Nome a amosar"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan_duration
 #, fuzzy
-#| msgid "Duration"
 msgid "Duration (hours)"
 msgstr "Duración"
 
@@ -121,7 +117,6 @@ msgstr ""
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan_interval
 #, fuzzy
-#| msgid "Days between each maintenance"
 msgid "Interval between each maintenance"
 msgstr "Días entre cada mantemento"
 
@@ -158,7 +153,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan_maintenance_ids
 #: model:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 #, fuzzy
-#| msgid "Maintenance Kind"
 msgid "Maintenance"
 msgstr "Tipo de mantemento"
 
@@ -182,7 +176,6 @@ msgstr "Plan de mantemento"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment_maintenance_plan_count
 #, fuzzy
-#| msgid "Maintenance Plan"
 msgid "Maintenance Plan Count"
 msgstr "Plan de mantemento"
 
@@ -202,7 +195,6 @@ msgstr "Peticións de mantemento"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan_maintenance_team_id
 #, fuzzy
-#| msgid "Maintenance Kind"
 msgid "Maintenance Team"
 msgstr "Tipo de mantemento"
 
@@ -249,7 +241,6 @@ msgstr ""
 #: model:ir.actions.act_window,name:maintenance_plan.maintenance_plan_action
 #: model:ir.actions.act_window,name:maintenance_plan.maintenance_plan_equipment_action
 #, fuzzy
-#| msgid "Maintenance plan"
 msgid "Maintenance plans"
 msgstr "Plan de mantemento"
 
@@ -257,7 +248,6 @@ msgstr "Plan de mantemento"
 #: selection:maintenance.plan,interval_step:0
 #: selection:maintenance.plan,planning_step:0
 #, fuzzy
-#| msgid "Monthly"
 msgid "Month(s)"
 msgstr "Mensual"
 
@@ -323,7 +313,6 @@ msgstr ""
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan_start_maintenance_date
 #, fuzzy
-#| msgid "Next maintenance date"
 msgid "Start maintenance date"
 msgstr "Seguinte data de mantemento"
 
@@ -342,7 +331,6 @@ msgstr ""
 #. module: maintenance_plan
 #: model:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
 #, fuzzy
-#| msgid "Maintenance Kind"
 msgid "Under Maintenance"
 msgstr "Tipo de mantemento"
 
@@ -364,7 +352,6 @@ msgstr ""
 #: selection:maintenance.plan,interval_step:0
 #: selection:maintenance.plan,planning_step:0
 #, fuzzy
-#| msgid "Weekly"
 msgid "Week(s)"
 msgstr "Semanal"
 
