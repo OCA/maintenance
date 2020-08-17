@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_move_search" model="ir.ui.view">
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_move_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="maintenance_equipment_id" />
+                <field name="maintenance_request_id" />
+            </xpath>
+            <xpath expr="//filter[@name='outgoing']" position="after">
+                <separator/>
+                <filter string="Maintenance Request consumption" name="maintenance_request_consumption"
+                        domain="[('maintenance_request_id', '!=', False)]" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_move_tree" model="ir.ui.view">
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_move_tree" />
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="maintenance_request_id"
+                       invisible="not context.get('show_maintenance_request_id', False)"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='origin_grp']" position="inside">
+                <field name="maintenance_equipment_id"
+                       attrs="{'invisible': [('maintenance_request_id', '=', False)]}" />
+                <field name="maintenance_request_id"
+                       attrs="{'invisible': [('maintenance_request_id', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_move_action" model="ir.actions.act_window">
+        <field name="name">Stock Moves</field>
+        <field name="res_model">stock.move</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="stock.view_move_tree"/>
+        <field name="search_view_id" ref="stock.view_move_search"/>
+        <field name="domain">[('maintenance_request_id', '!=', False)]</field>
+        <field name="context">{
+            'search_default_done': 1,
+            'search_default_groupby_location_id': 1,
+            'show_maintenance_request_id': True,
+        }</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new stock movement
+          </p><p>
+            This menu gives you the full traceability of inventory
+            operations on a specific product. You can filter on the product
+            to see all the past or future movements for the product.
+          </p>
+        </field>
+    </record>
+
+    <menuitem
+        action="stock_move_action"
+        id="stock_move_menu"
+        parent="maintenance.maintenance_reporting"
+        sequence="140"
+        groups="base.group_no_one"/>
+
+</odoo>
