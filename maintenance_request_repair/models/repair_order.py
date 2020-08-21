@@ -24,16 +24,26 @@ class RepairOrder(models.Model):
         for repair in self:
             repair.maintenance_request_count = len(repair.maintenance_request_ids)
 
-    def action_view_maintenance(self):
-        return {
-            'name': 'Child equipment of %s' % self.name,
-            'type': 'ir.actions.act_window',
-            'res_model': 'maintenance.request',
-            'res_id': self.id,
-            'view_mode': 'list,form',
-            'context': {
-                **self.env.context,
-                'default_repair_order_id': self.id,
-                'repair_order_id_editable': False},
-            'domain': [('id', 'in', self.maintenance_request_ids.ids)],
-        }
+    def action_view_maintenance_request(self):
+        """ This function returns an action that display existing maintenance requests
+        of given repair order ids. When only one found, show the maintenance request
+        immediately.
+        """
+        action = self.env.ref('maintenance.hr_equipment_request_action')
+        result = action.read()[0]
+        # override the context to get rid of the default filtering on repair order
+        result['context'] = {'default_repair_order_id': self.id}
+        maintenance_request_ids = self.mapped('maintenance_request_ids')
+        # choose the view_mode accordingly
+        if not maintenance_request_ids or len(maintenance_request_ids) > 1:
+            result['domain'] = "[('id','in',%s)]" % (maintenance_request_ids.ids)
+        elif len(maintenance_request_ids) == 1:
+            res = self.env.ref('maintenance.hr_equipment_request_view_form', False)
+            form_view = [(res and res.id or False, 'form')]
+            if 'views' in result:
+                result['views'] = form_view + [(state, view) for state, view in
+                                               result['views'] if view != 'form']
+            else:
+                result['views'] = form_view
+            result['res_id'] = maintenance_request_ids.id
+        return result
