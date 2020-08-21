@@ -47,7 +47,7 @@
                             <p class="m-0" t-field="doc.category_id" />
                         </div>
                         <div t-if="doc.equipment_id" class="col-auto mw-100 mb-2">
-                            <strong>Equipament:</strong>
+                            <strong>Equipment:</strong>
                             <p class="m-0" t-field="doc.equipment_id" />
                         </div>
                         <div t-if="doc.equipment_id.model" class="col-auto mw-100 mb-2">
