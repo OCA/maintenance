@@ -16,5 +16,6 @@
     ],
     'data': [
         'views/maintenance_request.xml',
+        'views/repair_order.xml',
     ],
 }
