@@ -26,6 +26,7 @@ addon | version | summary
 [maintenance_project](maintenance_project/) | 12.0.1.0.1 | Adds projects to maintenance equipments and requests
 [maintenance_project_plan](maintenance_project_plan/) | 12.0.2.1.0 | Adds project and task to a Maintenance Plan
 [maintenance_remote](maintenance_remote/) | 12.0.1.0.0 | Define remote on maintenance request
+[maintenance_request_repair](maintenance_request_repair/) | 12.0.1.0.0 | This is a bridge module between Maintenance and Repair
 [maintenance_request_sequence](maintenance_request_sequence/) | 12.0.1.0.0 | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 12.0.1.0.0 | Manage transition visibility and management between stages
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 12.0.1.0.0 | Create hierarchies on teams
