@@ -22,6 +22,7 @@ setuptools.setup(
         'odoo12-addon-maintenance_project',
         'odoo12-addon-maintenance_project_plan',
         'odoo12-addon-maintenance_remote',
+        'odoo12-addon-maintenance_request_repair',
         'odoo12-addon-maintenance_request_sequence',
         'odoo12-addon-maintenance_request_stage_transition',
         'odoo12-addon-maintenance_team_hierarchy',
