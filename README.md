@@ -29,6 +29,7 @@ addon | version | summary
 [maintenance_request_repair](maintenance_request_repair/) | 12.0.1.0.0 | This is a bridge module between Maintenance and Repair
 [maintenance_request_sequence](maintenance_request_sequence/) | 12.0.1.0.0 | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 12.0.1.0.0 | Manage transition visibility and management between stages
+[maintenance_stock](maintenance_stock/) | 12.0.1.0.0 | Links maintenance requests to stock
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 12.0.1.0.0 | Create hierarchies on teams
 [maintenance_timesheet](maintenance_timesheet/) | 12.0.1.2.0 | Adds timesheets to maintenance requests
 
