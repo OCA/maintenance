@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Weblate 3.10\n"
 
 #. module: maintenance_timesheet
-#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "<span class=\"o_label\" style=\"padding-left: 5px;\">Hours</span>"
 msgstr "<span class=\"o_label\" style=\"padding-left: 5px;\">Horas</span>"
 
