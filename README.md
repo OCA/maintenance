@@ -20,7 +20,7 @@ addon | version | summary
 [maintenance_equipment_scrap](maintenance_equipment_scrap/) | 12.0.1.0.0 | Enhance the functionality for Scrapping Equipments
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 12.0.1.0.0 | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 12.0.1.0.0 | Maintenance Equipment Status
-[maintenance_equipment_tags](maintenance_equipment_tags/) | 12.0.1.0.0 | Adds category tags to equipment
+[maintenance_equipment_tags](maintenance_equipment_tags/) | 12.0.1.0.1 | Adds category tags to equipment
 [maintenance_plan](maintenance_plan/) | 12.0.3.1.1 | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 12.0.1.0.0 | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
 [maintenance_project](maintenance_project/) | 12.0.1.0.1 | Adds projects to maintenance equipments and requests
