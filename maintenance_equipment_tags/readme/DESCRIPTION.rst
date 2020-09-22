@@ -1,1 +1,1 @@
-Adds category tags to equipment
+Adds grouping tags to equipments

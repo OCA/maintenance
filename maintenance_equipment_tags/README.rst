@@ -25,7 +25,7 @@ Maintenance Equipment Tags
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
 
-Adds category tags to equipment
+Adds grouping tags to equipments
 
 **Table of contents**
 
