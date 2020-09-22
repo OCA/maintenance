@@ -25,6 +25,7 @@ setuptools.setup(
         'odoo12-addon-maintenance_request_repair',
         'odoo12-addon-maintenance_request_sequence',
         'odoo12-addon-maintenance_request_stage_transition',
+        'odoo12-addon-maintenance_stock',
         'odoo12-addon-maintenance_team_hierarchy',
         'odoo12-addon-maintenance_timesheet',
     ],
