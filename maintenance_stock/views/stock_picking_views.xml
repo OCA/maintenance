@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_picking_internal_search" model="ir.ui.view">
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='group_id']" position="after">
+                <field name="maintenance_equipment_id" />
+                <field name="maintenance_request_id" />
+            </xpath>
+            <xpath expr="//filter[@name='activities_upcoming_all']" position="after">
+                <separator/>
+                <filter string="Maintenance Request consumption" name="maintenance_request_consumption"
+                        domain="[('maintenance_request_id', '!=', False)]" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="vpicktree" model="ir.ui.view">
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <field name="origin" position="after">
+                <field name="maintenance_request_id"
+                       invisible="not context.get('show_maintenance_request_id', False)"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='extra']" position="before">
+                <page string="Maintenance Info" name="maintenance"
+                      attrs="{'invisible': [('maintenance_request_id', '=', False)]}">
+                    <group>
+                        <group>
+                            <field name="maintenance_request_id" readonly="True"/>
+                        </group>
+                        <group>
+                            <field name="maintenance_equipment_id" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
