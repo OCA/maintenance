@@ -10,7 +10,7 @@
                 <field
                     name="status_id"
                     widget="statusbar"
-                    clickable="True"
+                    options="{'clickable': '1'}"
                     domain="['|', ('category_ids', 'in', [category_id]), ('category_ids', '=', False)]"
                 />
             </xpath>
