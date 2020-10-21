@@ -1,8 +1,9 @@
 # Copyright 2019 Creu Blanca
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models
 from random import randint
+
+from odoo import api, fields, models
 
 
 class MaintenanceRequestTag(models.Model):
