@@ -48,15 +48,23 @@
                         </h1>
                     </div>
                     <group>
-                        <field
-                            name="equipment_id"
-                            invisible="context.get('hide_equipment_id', 0)"
-                        />
-                        <field name="maintenance_kind_id" />
-                        <field
-                            name="maintenance_team_id"
-                            attrs="{'required': [('equipment_id', '=', False)]}"
-                        />
+                        <group>
+                            <field
+                                name="equipment_id"
+                                invisible="context.get('hide_equipment_id', 0)"
+                            />
+                            <field name="maintenance_kind_id" />
+                            <field
+                                name="maintenance_team_id"
+                                attrs="{'required': [('equipment_id', '=', False)]}"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                            />
+                        </group>
                     </group>
                     <group>
                         <group>
@@ -109,6 +117,7 @@
                 <field name="maintenance_plan_horizon" />
                 <field name="planning_step" />
                 <field name="active" invisible="True" />
+                <field name="company_id" groups="base.group_multi_company" />
             </tree>
         </field>
     </record>
@@ -121,6 +130,7 @@
                 <field name="maintenance_kind_id" />
                 <field name="maintenance_team_id" />
                 <field name="name" />
+                <field name="company_id" groups="base.group_multi_company" />
                 <field name="start_maintenance_date" />
                 <filter string="Active" name="active" domain="[('active', '=',True)]" />
                 <filter
