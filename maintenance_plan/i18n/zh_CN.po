@@ -31,6 +31,11 @@ msgid "Archived"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__company_id
+msgid "Company"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__create_uid
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__create_uid
 msgid "Created by"
@@ -143,6 +148,12 @@ msgstr ""
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__interval_step
 msgid "Let the event automatically repeat at that interval step"
+msgstr ""
+
+#. module: maintenance_plan
+#: code:addons/maintenance_plan/models/maintenance_plan.py:0
+#, python-format
+msgid "Maintenace Equipment must belong to the equipment's company"
 msgstr ""
 
 #. module: maintenance_plan
@@ -313,6 +324,14 @@ msgstr ""
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__interval_step
 msgid "Recurrence"
+msgstr ""
+
+#. module: maintenance_plan
+#: code:addons/maintenance_plan/models/maintenance_equipment.py:0
+#, python-format
+msgid ""
+"Some maintenance plan's company is incompatible with the company of this "
+"equipment."
 msgstr ""
 
 #. module: maintenance_plan
