@@ -1,10 +1,11 @@
 # Copyright 2017 Camptocamp SA
-# Copyright 2019 ForgeFlow S.L. (https://www.forgeflow.com)
+# Copyright 2019-20 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
 from dateutil.relativedelta import relativedelta
 
 from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError, ValidationError
 
 
 def get_relativedelta(interval, step):
@@ -19,7 +20,6 @@ def get_relativedelta(interval, step):
 
 
 class MaintenancePlan(models.Model):
-
     _name = "maintenance.plan"
     _description = "Maintenance Plan"
 
@@ -27,6 +27,9 @@ class MaintenancePlan(models.Model):
     active = fields.Boolean(default=True)
     equipment_id = fields.Many2one(
         string="Equipment", comodel_name="maintenance.equipment", ondelete="cascade"
+    )
+    company_id = fields.Many2one(
+        comodel_name="res.company", default=lambda self: self.env.company,
     )
     maintenance_kind_id = fields.Many2one(
         string="Maintenance Kind", comodel_name="maintenance.kind", ondelete="restrict"
@@ -140,6 +143,17 @@ class MaintenancePlan(models.Model):
                 while next_date < fields.Date.today():
                     next_date = next_date + interval_timedelta
                 plan.next_maintenance_date = next_date
+
+    @api.constrains("company_id", "equipment_id")
+    def _check_company_id(self):
+        for rec in self:
+            if (
+                rec.equipment_id.company_id
+                and rec.company_id != rec.equipment_id.company_id
+            ):
+                raise ValidationError(
+                    _("Maintenace Equipment must belong to the equipment's company")
+                )
 
     def unlink(self):
         """ Restrict deletion of maintenance plan should there be maintenance
