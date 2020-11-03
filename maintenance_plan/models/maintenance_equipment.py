@@ -1,7 +1,9 @@
 # Copyright 2017 Camptocamp SA
-# Copyright 2019 ForgeFlow S.L. (https://www.forgeflow.com)
+# Copyright 2019-20 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
 from odoo import _, api, fields, models
+from odoo.exceptions import ValidationError
 
 from .maintenance_plan import get_relativedelta
 
@@ -42,6 +44,19 @@ class MaintenanceEquipment(models.Model):
                 >= 1
             )
 
+    @api.constrains("company_id", "maintenance_plan_ids")
+    def _check_company_id(self):
+        for rec in self:
+            if rec.company_id and not all(
+                rec.company_id == p.company_id for p in rec.maintenance_plan_ids
+            ):
+                raise ValidationError(
+                    _(
+                        "Some maintenance plan's company is incompatible with "
+                        "the company of this equipment."
+                    )
+                )
+
     def _prepare_request_from_plan(self, maintenance_plan, next_maintenance_date):
         team = maintenance_plan.maintenance_team_id.id or self.maintenance_team_id.id
         if not team:
@@ -65,6 +80,7 @@ class MaintenanceEquipment(models.Model):
             "maintenance_plan_id": maintenance_plan.id,
             "duration": maintenance_plan.duration,
             "note": maintenance_plan.note,
+            "company_id": maintenance_plan.company_id.id or self.company_id.id,
         }
 
     def _create_new_request(self, maintenance_plan):
