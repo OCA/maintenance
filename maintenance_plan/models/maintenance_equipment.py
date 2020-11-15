@@ -121,8 +121,8 @@ class MaintenanceEquipment(models.Model):
     @api.model
     def _cron_generate_requests(self):
         """
-            Generates maintenance request on the next_maintenance_date or
-            today if none exists
+        Generates maintenance request on the next_maintenance_date or
+        today if none exists
         """
         for plan in self.env["maintenance.plan"].search([("interval", ">", 0)]):
             equipment = plan.equipment_id
