@@ -21,7 +21,7 @@
                 </button>
             </div>
             <xpath expr="//group[@name='maintenance']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="attrs">{'invisible': 1}</attribute>
             </xpath>
             <xpath expr="//group[@name='maintenance']" position="after">
                 <group name="maintenance_plans">
@@ -46,7 +46,7 @@
                 </group>
             </xpath>
             <field name="maintenance_team_id" position="after">
-                <field name="maintenance_team_required" invisible="1" />
+                <field name="maintenance_team_required" attrs="{'invisible': 1}" />
             </field>
             <field name="maintenance_team_id" position="attributes">
                 <attribute
