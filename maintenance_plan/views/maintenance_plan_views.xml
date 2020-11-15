@@ -22,7 +22,7 @@
                         bg_color="bg-danger"
                         attrs="{'invisible': [('active', '=', True)]}"
                     />
-                    <field name="active" invisible="1" />
+                    <field name="active" attrs="{'invisible': 1}" />
                     <div class="oe_button_box" name="button_box">
                         <button
                             name="%(hr_equipment_request_action_from_plan)d"
@@ -116,7 +116,7 @@
                 <field name="next_maintenance_date" />
                 <field name="maintenance_plan_horizon" />
                 <field name="planning_step" />
-                <field name="active" invisible="True" />
+                <field name="active" attrs="{'invisible': True}" />
                 <field name="company_id" groups="base.group_multi_company" />
             </tree>
         </field>
