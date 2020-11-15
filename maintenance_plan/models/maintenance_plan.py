@@ -29,7 +29,8 @@ class MaintenancePlan(models.Model):
         string="Equipment", comodel_name="maintenance.equipment", ondelete="cascade"
     )
     company_id = fields.Many2one(
-        comodel_name="res.company", default=lambda self: self.env.company,
+        comodel_name="res.company",
+        default=lambda self: self.env.company,
     )
     maintenance_kind_id = fields.Many2one(
         string="Maintenance Kind", comodel_name="maintenance.kind", ondelete="restrict"
@@ -156,8 +157,8 @@ class MaintenancePlan(models.Model):
                 )
 
     def unlink(self):
-        """ Restrict deletion of maintenance plan should there be maintenance
-            requests of this kind which are not done for its equipment """
+        """Restrict deletion of maintenance plan should there be maintenance
+        requests of this kind which are not done for its equipment"""
         for plan in self:
             request = plan.equipment_id.mapped("maintenance_ids").filtered(
                 lambda r: (
