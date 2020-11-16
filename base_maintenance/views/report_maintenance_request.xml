@@ -106,14 +106,24 @@
                 </t>
             </t>
         </template>
-        <report
-            id="action_report_maintenance_request"
-            string="Maintenance Request"
-            model="maintenance.request"
-            report_type="qweb-pdf"
-            file="base_maintenance.report_maintenance_request"
-            name="base_maintenance.report_maintenance_request"
-            print_report_name="'Maintenance Request - %s' % (object.name)"
-        />
+        <record id="action_report_maintenance_request" model="ir.actions.report">
+            <field name="name">Maintenance Request</field>
+            <field name="model">maintenance.request</field>
+            <field name="report_type">qweb-pdf</field>
+            <field
+                name="report_name"
+            >base_maintenance.report_maintenance_request</field>
+            <field
+                name="report_file"
+            >base_maintenance.report_maintenance_request</field>
+            <field
+                name="print_report_name"
+            >'Maintenance Request - %s' % (object.name)</field>
+            <field
+                name="binding_model_id"
+                ref="maintenance.model_maintenance_request"
+            />
+            <field name="binding_type">report</field>
+        </record>
     </data>
 </odoo>
