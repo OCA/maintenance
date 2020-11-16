@@ -20,19 +20,4 @@
             </xpath>
         </field>
     </record>
-    <!-- There is no search view to inherit, so creating it-->
-    <record id="maintenance_team_view_search" model="ir.ui.view">
-        <field name="name">maintenance.team.search</field>
-        <field name="model">maintenance.team</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="name" />
-                <filter
-                    string="Archived"
-                    name="inactive"
-                    domain="[('active','=',False)]"
-                />
-            </search>
-        </field>
-    </record>
 </odoo>
