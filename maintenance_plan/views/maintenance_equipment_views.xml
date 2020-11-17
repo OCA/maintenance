@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- equipment : views inheritance -->
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="name">equipment.form.inherit</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="model">maintenance.equipment</field>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    name="%(maintenance_plan_equipment_action)d"
+                    type="action"
+                    class="oe_stat_button"
+                    icon="fa-list"
+                >
+                    <field
+                        string="Plans"
+                        name="maintenance_plan_count"
+                        widget="statinfo"
+                    />
+                </button>
+            </div>
+            <xpath expr="//group[@name='maintenance']" position="attributes">
+                <attribute name="attrs">{'invisible': 1}</attribute>
+            </xpath>
+            <xpath expr="//group[@name='maintenance']" position="after">
+                <group name="maintenance_plans">
+                    <field
+                        name="maintenance_plan_ids"
+                        nolabel="1"
+                        context="{'default_equipment_id': active_id, 'hide_equipment_id': 1}"
+                    >
+                        <tree string="Plans">
+                            <field name="maintenance_kind_id" />
+                            <field name="maintenance_team_id" />
+                            <field name="name" />
+                            <field name="start_maintenance_date" />
+                            <field name="interval" />
+                            <field name="interval_step" />
+                            <field name="duration" />
+                            <field name="next_maintenance_date" />
+                            <field name="maintenance_plan_horizon" />
+                            <field name="planning_step" />
+                        </tree>
+                    </field>
+                </group>
+            </xpath>
+            <field name="maintenance_team_id" position="after">
+                <field name="maintenance_team_required" attrs="{'invisible': 1}" />
+            </field>
+            <field name="maintenance_team_id" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'required': [('maintenance_team_required', '=', True)]}</attribute>
+            </field>
+        </field>
+    </record>
+    <!-- request : views inheritance -->
+    <record id="hr_equipment_request_view_form" model="ir.ui.view">
+        <field name="name">equipment.request.form.inherit</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <field name="maintenance_type" position="after">
+                <field name="maintenance_kind_id" />
+            </field>
+            <field name="description" position="replace">
+                <notebook>
+                    <page string="Instructions">
+                        <field
+                            name="note"
+                            placeholder="Describe the maintenance to do..."
+                        />
+                    </page>
+                    <page string="Notes">
+                        <field name="description" placeholder="Internal notes..." />
+                    </page>
+                </notebook>
+            </field>
+        </field>
+    </record>
+    <record id="maintenance.hr_equipment_action" model="ir.actions.act_window">
+        <field name="context">{'hide_equipment_id': 1}</field>
+    </record>
+</odoo>
