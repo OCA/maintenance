@@ -7,7 +7,7 @@
     'author': 'Onestein, Odoo Community Association (OCA)',
     'website': 'https://github.com/OCA/maintenance',
     'category': 'Maintenance',
-    'version': '12.0.1.0.0',
+    'version': '12.0.1.1.0',
     'license': 'AGPL-3',
     'depends': [
         'maintenance',
