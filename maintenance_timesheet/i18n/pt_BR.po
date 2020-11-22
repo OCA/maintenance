@@ -34,7 +34,6 @@ msgstr ""
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 #, fuzzy
-#| msgid "Timesheet Total Hours"
 msgid "<strong>Timesheet Total Hours:</strong>"
 msgstr "Total de horas da planilha de horas"
 
