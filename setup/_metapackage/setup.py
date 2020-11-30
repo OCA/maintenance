@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-maintenance Odoo addons",
     version=version,
     install_requires=[
+        'odoo14-addon-base_maintenance',
         'odoo14-addon-maintenance_plan',
     ],
     classifiers=[
