@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2020 - TODAY, Marcel Savegnago - Escodoo
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <data>
+        <template id="report_maintenance_request_document">
+            <t t-call="web.internal_layout">
+                <t
+                    t-set="doc"
+                    t-value="doc.with_context(lang=doc.user_id.partner_id.lang)"
+                />
+                <div class="page">
+                    <div class="oe_structure" />
+                    <h2 class="mt16">
+                        <t>
+                            <span>Maintenance Request</span>
+                        </t>
+                    </h2>
+                    <h3 class="mt16">
+                        <span t-field="doc.name" />
+                    </h3>
+                    <div class="row mt32 mb32" id="informations">
+                        <div t-if="doc.owner_user_id" class="col-auto mw-100 mb-2">
+                            <strong>Requested By:</strong>
+                            <p class="m-0" t-field="doc.owner_user_id" />
+                        </div>
+                        <div t-if="doc.request_date" class="col-auto mw-100 mb-2">
+                            <strong>Request Date:</strong>
+                            <p class="m-0" t-field="doc.request_date" />
+                        </div>
+                        <div t-if="doc.maintenance_type" class="col-auto mw-100 mb-2">
+                            <strong>Maintenance Type:</strong>
+                            <p class="m-0" t-field="doc.maintenance_type" />
+                        </div>
+                        <div t-if="doc.close_date" class="col-auto mw-100 mb-2">
+                            <strong>Close Date:</strong>
+                            <p class="m-0" t-field="doc.close_date" />
+                        </div>
+                        <div t-if="doc.stage_id" class="col-auto mw-100 mb-2">
+                            <strong>Stage:</strong>
+                            <p class="m-0" t-field="doc.stage_id" />
+                        </div>
+                    </div>
+                    <div class="row mt32 mb32" id="equipament_informations">
+                        <div t-if="doc.category_id" class="col-auto mw-100 mb-2">
+                            <strong>Category:</strong>
+                            <p class="m-0" t-field="doc.category_id" />
+                        </div>
+                        <div t-if="doc.equipment_id" class="col-auto mw-100 mb-2">
+                            <strong>Equipment:</strong>
+                            <p class="m-0" t-field="doc.equipment_id" />
+                        </div>
+                        <div t-if="doc.equipment_id.model" class="col-auto mw-100 mb-2">
+                            <strong>Model:</strong>
+                            <p class="m-0" t-field="doc.equipment_id.model" />
+                        </div>
+                        <div
+                            t-if="doc.equipment_id.serial_no"
+                            class="col-auto mw-100 mb-2"
+                        >
+                            <strong>Serial:</strong>
+                            <p class="m-0" t-field="doc.equipment_id.serial_no" />
+                        </div>
+                    </div>
+                    <div class="row mt32 mb32" id="schedule_informations">
+                        <div t-if="doc.schedule_date" class="col-auto mw-100 mb-2">
+                            <strong>Schedule Date:</strong>
+                            <p class="m-0" t-field="doc.schedule_date" />
+                        </div>
+                        <div t-if="doc.duration" class="col-auto mw-100 mb-2">
+                            <strong>Duration:</strong>
+                            <p class="m-0" t-field="doc.duration" />
+                        </div>
+                        <div t-if="doc.priority" class="col-auto mw-100 mb-2">
+                            <strong>Priority:</strong>
+                            <p class="m-0" t-field="doc.priority" />
+                        </div>
+                        <div
+                            t-if="doc.maintenance_team_id"
+                            class="col-auto mw-100 mb-2"
+                        >
+                            <strong>Team:</strong>
+                            <p class="m-0" t-field="doc.maintenance_team_id" />
+                        </div>
+                        <div t-if="doc.user_id" class="col-auto mw-100 mb-2">
+                            <strong>Responsible:</strong>
+                            <p class="m-0" t-field="doc.user_id" />
+                        </div>
+                    </div>
+                    <div class="row mt32 mb32" id="description">
+                        <div t-if="doc.description" class="col-auto mw-100 mb-2">
+                            <strong>Description:</strong>
+                            <p class="m-0" t-field="doc.description" />
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <template id="report_maintenance_request">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t
+                        t-call="base_maintenance.report_maintenance_request_document"
+                        t-lang="doc.user_id.partner_id.lang"
+                    />
+                </t>
+            </t>
+        </template>
+        <record id="action_report_maintenance_request" model="ir.actions.report">
+            <field name="name">Maintenance Request</field>
+            <field name="model">maintenance.request</field>
+            <field name="report_type">qweb-pdf</field>
+            <field
+                name="report_name"
+            >base_maintenance.report_maintenance_request</field>
+            <field
+                name="report_file"
+            >base_maintenance.report_maintenance_request</field>
+            <field
+                name="print_report_name"
+            >'Maintenance Request - %s' % (object.name)</field>
+            <field
+                name="binding_model_id"
+                ref="maintenance.model_maintenance_request"
+            />
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>
