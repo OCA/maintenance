@@ -5,7 +5,7 @@
     "version": "13.0.1.0.1",
     "category": "",
     "author": "ForgeFlow, Odoo Community Association (OCA)",
-    "website": "http://github.com/OCA/maintenance",
+    "website": "https://github.com/OCA/maintenance",
     "license": "LGPL-3",
     "depends": ["base_maintenance"],
     "data": [
