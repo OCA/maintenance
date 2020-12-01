@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_team_hierarchy
+# 	* maintenance_team_hierarchy
 #
 msgid ""
 msgstr ""
@@ -17,9 +17,44 @@ msgstr ""
 "X-Generator: Weblate 3.10\n"
 
 #. module: maintenance_team_hierarchy
+#: model:maintenance.team,name:maintenance_team_hierarchy.equipment_team_child_1
+msgid "Child Team 1"
+msgstr ""
+
+#. module: maintenance_team_hierarchy
+#: model:maintenance.team,name:maintenance_team_hierarchy.equipment_team_child_2
+msgid "Child Team 2"
+msgstr ""
+
+#. module: maintenance_team_hierarchy
 #: model:ir.model,name:maintenance_team_hierarchy.model_maintenance_team
 msgid "Maintenance Teams"
 msgstr "Equipes de Manutenção"
+
+#. module: maintenance_team_hierarchy
+#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count
+msgid "Number of Requests"
+msgstr ""
+
+#. module: maintenance_team_hierarchy
+#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_block
+msgid "Number of Requests Blocked"
+msgstr ""
+
+#. module: maintenance_team_hierarchy
+#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_date
+msgid "Number of Requests Scheduled"
+msgstr ""
+
+#. module: maintenance_team_hierarchy
+#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_unscheduled
+msgid "Number of Requests Unscheduled"
+msgstr ""
+
+#. module: maintenance_team_hierarchy
+#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_high_priority
+msgid "Number of Requests in High Priority"
+msgstr ""
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__parent_id
@@ -32,6 +67,16 @@ msgid "Parent Path"
 msgstr "Caminho Pai"
 
 #. module: maintenance_team_hierarchy
+#: model:maintenance.team,name:maintenance_team_hierarchy.equipment_team_parent
+msgid "Parent Team"
+msgstr ""
+
+#. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__request_ids
 msgid "Request"
 msgstr "Requisição"
+
+#. module: maintenance_team_hierarchy
+#: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_ids
+msgid "Requests"
+msgstr ""

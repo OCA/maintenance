@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="equipment_team_parent" model="maintenance.team">
+        <field name="name">Parent Team</field>
+    </record>
+    <record id="equipment_team_child_1" model="maintenance.team">
+        <field name="name">Child Team 1</field>
+        <field name="parent_id" ref="equipment_team_parent" />
+    </record>
+    <record id="equipment_team_child_2" model="maintenance.team">
+        <field name="name">Child Team 2</field>
+        <field name="parent_id" ref="equipment_team_parent" />
+    </record>
+</odoo>

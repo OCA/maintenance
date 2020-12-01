@@ -11,4 +11,5 @@
     "website": "https://github.com/OCA/maintenance",
     "depends": ["maintenance"],
     "data": ["views/maintenance_team.xml"],
+    "demo": ["demo/maintenance_team_demo.xml", "demo/maintenance_request_demo.xml"],
 }
