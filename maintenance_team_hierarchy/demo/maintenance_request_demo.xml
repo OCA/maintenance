@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="m_request_1" model="maintenance.request">
+        <field name="name">Very Serious Issue 1</field>
+        <field name="user_id" ref="base.user_demo" />
+        <field name="owner_user_id" ref="base.user_admin" />
+        <field name="maintenance_team_id" ref="equipment_team_parent" />
+    </record>
+    <record id="m_request_2" model="maintenance.request">
+        <field name="name">Very Serious Issue 2</field>
+        <field name="user_id" ref="base.user_demo" />
+        <field name="owner_user_id" ref="base.user_admin" />
+        <field name="maintenance_team_id" ref="equipment_team_child_1" />
+    </record>
+    <record id="m_request_3" model="maintenance.request">
+        <field name="name">Very Serious Issue 3</field>
+        <field name="user_id" ref="base.user_demo" />
+        <field name="owner_user_id" ref="base.user_admin" />
+        <field name="maintenance_team_id" ref="equipment_team_child_2" />
+    </record>
+</odoo>
