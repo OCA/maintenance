@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record
+            id="maintenance_equipment_status_1"
+            model="maintenance.equipment.status"
+        >
+            <field name="name">New</field>
+            <field name="sequence" eval="5" />
+        </record>
+        <record
+            id="maintenance_equipment_status_2"
+            model="maintenance.equipment.status"
+        >
+            <field name="name">Working</field>
+            <field name="sequence" eval="10" />
+        </record>
+        <record
+            id="maintenance_equipment_status_3"
+            model="maintenance.equipment.status"
+        >
+            <field name="name">Retired</field>
+            <field name="sequence" eval="15" />
+        </record>
+
+        <record id="maintenance.equipment_monitor1" model="maintenance.equipment">
+            <field name="status_id" ref="maintenance_equipment_status_1" />
+        </record>
+        <record id="maintenance.equipment_monitor4" model="maintenance.equipment">
+            <field name="status_id" ref="maintenance_equipment_status_2" />
+        </record>
+    </data>
+</odoo>

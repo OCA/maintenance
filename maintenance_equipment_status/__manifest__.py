@@ -2,7 +2,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 {
     "name": "Maintenance Equipment Status",
-    "version": "13.0.1.0.1",
+    "version": "14.0.1.0.0",
     "category": "",
     "author": "ForgeFlow, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
@@ -13,6 +13,7 @@
         "views/maintenance_equipment_status_views.xml",
         "views/maintenance_equipment_views.xml",
     ],
+    "demo": ["data/demo_maintenance_equipment_status.xml"],
     "installable": True,
     "auto_install": False,
     "application": False,
