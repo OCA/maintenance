@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* base_maintenance
+# 	* base_maintenance
 #
 msgid ""
 msgstr ""
@@ -102,11 +102,6 @@ msgid "Active"
 msgstr "Aktiboa"
 
 #. module: base_maintenance
-#: model_terms:ir.ui.view,arch_db:base_maintenance.maintenance_team_view_search
-msgid "Archived"
-msgstr "Artxibatuta"
-
-#. module: base_maintenance
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__description
 msgid "Description"
 msgstr "Deskribapena"
@@ -127,6 +122,14 @@ msgid "Maintenance Teams"
 msgstr "Mantenimendu Taldeak"
 
 #. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.maintenance_team_view_search
+msgid "Team"
+msgstr ""
+
+#. module: base_maintenance
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__user_id
 msgid "Team Leader"
 msgstr "Taldeko burua"
+
+#~ msgid "Archived"
+#~ msgstr "Artxibatuta"
