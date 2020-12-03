@@ -12,7 +12,7 @@
     <record id="contract_supplier" model="res.partner">
         <field name="name">Contract Supplier</field>
         <field name="company_id" ref="base.main_company" />
-        <field name="supplier" eval="True" />
+        <field name="supplier_rank">1</field>
     </record>
     <record id="equipment_contract" model="contract.contract">
         <field name="name">Contract for an Equipment</field>

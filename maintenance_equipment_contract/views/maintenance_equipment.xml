@@ -22,4 +22,26 @@
             </div>
         </field>
     </record>
+    <record model="ir.ui.view" id="hr_equipment_view_search">
+        <field
+            name="name"
+        >maintenance.equipment.search (in maintenance_equipment_contract)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <filter name="under_maintenance" position="after">
+                <separator />
+                <filter
+                    string="Has Contracts"
+                    name="has_contracts"
+                    domain="[('contract_ids', '!=', False)]"
+                />
+                <filter
+                    string="Doesn't have Contracts"
+                    name="no_contracts"
+                    domain="[('contract_ids', '=', False)]"
+                />
+            </filter>
+        </field>
+    </record>
 </odoo>
