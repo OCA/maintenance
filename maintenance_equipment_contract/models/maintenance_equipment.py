@@ -16,7 +16,6 @@ class MaintenanceEquipment(models.Model):
         for record in self:
             record.contract_count = len(record.contract_ids.ids)
 
-    @api.multi
     def action_view_contracts(self):
         action = self.env.ref("contract.action_customer_contract").read()[0]
         if len(self.contract_ids) > 1:
