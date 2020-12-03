@@ -20,6 +20,7 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [base_maintenance](base_maintenance/) | 14.0.1.0.0 | Base Maintenance
+[maintenance_equipment_status](maintenance_equipment_status/) | 14.0.1.0.0 | Maintenance Equipment Status
 [maintenance_plan](maintenance_plan/) | 14.0.1.0.0 | Extends preventive maintenance planning
 
 [//]: # (end addons)
