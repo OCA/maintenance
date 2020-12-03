@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="maintenance_equipment_status_view_form" model="ir.ui.view">
+        <field name="name">maintenance.equipment.status.form</field>
+        <field name="model">maintenance.equipment.status</field>
+        <field name="arch" type="xml">
+            <form string="Equipment Status">
+                <header />
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            name="toggle_active"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-archive"
+                        >
+                            <field
+                                name="active"
+                                widget="boolean_button"
+                                options="{&quot;terminology&quot;: &quot;archive&quot;}"
+                            />
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" />
+                        <h1>
+                            <field name="name" placeholder="e.g. Operational" />
+                        </h1>
+                    </div>
+                    <group name="categories">
+                        <field name="category_ids" widget="many2many_tags" />
+                    </group>
+                    <group name="notes">
+                        <div>
+                            <separator string="Notes" />
+                            <field name="note" nolabel="1" />
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="maintenance_equipment_status_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.equipment.status.tree</field>
+        <field name="model">maintenance.equipment.status</field>
+        <field name="arch" type="xml">
+            <tree string="Equipment Status">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="category_ids" widget="many2many_tags" />
+            </tree>
+        </field>
+    </record>
+    <record id="maintenance_equipment_status_view_search" model="ir.ui.view">
+        <field name="name">maintenance.equipment.status.search</field>
+        <field name="model">maintenance.equipment.status</field>
+        <field name="arch" type="xml">
+            <search string="Equipment Status">
+                <field name="name" />
+                <field name="category_ids" />
+                <filter
+                    string="Archived"
+                    name="inactive"
+                    domain="[('active','=',False)]"
+                />
+            </search>
+        </field>
+    </record>
+    <record id="maintenance_equipment_status_action" model="ir.actions.act_window">
+        <field name="name">Equipment Statuses</field>
+        <field name="res_model">maintenance.equipment.status</field>
+        <field
+            name="view_id"
+            ref="maintenance_equipment_status.maintenance_equipment_status_view_tree"
+        />
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+            Click to set a new status for your equipments.
+          </p>
+        </field>
+    </record>
+    <menuitem
+        id="menu_maintenance_equipment_status_act"
+        name="Equipment Statuses"
+        action="maintenance_equipment_status_action"
+        parent="maintenance.menu_maintenance_configuration"
+        groups="maintenance.group_equipment_manager"
+    />
+</odoo>
