@@ -6,8 +6,6 @@ from odoo import fields, models
 
 class ContractContract(models.Model):
 
-    _inherit = 'contract.contract'
+    _inherit = "contract.contract"
 
-    equipment_ids = fields.Many2many(
-        'maintenance.equipment', string='Equipments'
-    )
+    equipment_ids = fields.Many2many("maintenance.equipment", string="Equipments")
