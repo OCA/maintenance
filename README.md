@@ -13,6 +13,7 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [base_maintenance](base_maintenance/) | 13.0.1.1.0 | Base Maintenance
+[maintenance_equipment_contract](maintenance_equipment_contract/) | 13.0.1.0.0 | Manage equipment contracts
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 13.0.1.0.0 | Manage equipment hierarchy
 [maintenance_equipment_scrap](maintenance_equipment_scrap/) | 13.0.1.0.0 | Enhance the functionality for Scrapping Equipments
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 13.0.1.0.0 | Adds sequence to maintenance equipment defined in the equipment's category
