@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template
+            id="report_maintenance_request_document"
+            inherit_id="base_maintenance.report_maintenance_request_document"
+        >
+            <xpath expr="//div[@id='schedule_informations']" position="after">
+                <div class="row mt32 mb32" id="project_informations">
+                    <div t-if="doc.project_id" class="col-auto mw-100 mb-2">
+                        <strong>Project:</strong>
+                        <p class="m-0" t-field="doc.project_id" />
+                    </div>
+                    <div t-if="doc.task_id" class="col-auto mw-100 mb-2">
+                        <strong>Task:</strong>
+                        <p class="m-0" t-field="doc.task_id" />
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>
