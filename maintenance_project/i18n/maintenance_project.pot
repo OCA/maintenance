@@ -24,6 +24,16 @@ msgid "<span class=\"o_label\">Requests</span>"
 msgstr ""
 
 #. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.report_maintenance_request_document
+msgid "<strong>Project:</strong>"
+msgstr ""
+
+#. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.report_maintenance_request_document
+msgid "<strong>Task:</strong>"
+msgstr ""
+
+#. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__create_project_from_equipment
 msgid "Create Project From Equipment"
 msgstr ""
