@@ -28,6 +28,21 @@ msgid "<span class=\"o_label\">Hours</span>"
 msgstr "<span class=\"o_label\">horas</span>"
 
 #. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<span id=\"timesheet_information_title\">Timesheet Entries</span>"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<strong>Timesheet Total Hours:</strong>"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_account_analytic_line
 msgid "Analytic Line"
 msgstr "Cuenta analítica"
@@ -42,6 +57,16 @@ msgstr ""
 "mantenimiento ya finalizada"
 
 #. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Date"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Description"
+msgstr ""
+
+#. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_equipment
 msgid "Maintenance Equipment"
 msgstr "Equipo"
@@ -53,9 +78,29 @@ msgid "Maintenance Request"
 msgstr "Petición de mantenimiento"
 
 #. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Project -"
+msgstr ""
+
+#. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_timesheet_line_search
 msgid "Request"
 msgstr "Petición"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Responsible"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Task"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Time"
+msgstr ""
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_total_hours
