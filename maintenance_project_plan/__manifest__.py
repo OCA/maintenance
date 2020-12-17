@@ -1,9 +1,9 @@
-# Copyright 2019 Solvos Consultor??a Inform??tica (<http://www.solvos.es>)
+# Copyright 2019 Solvos Consultoría Informática (<http://www.solvos.es>)
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 {
     "name": "Maintenance Project Plans",
     "summary": "Adds project and task to a Maintenance Plan",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "author": "Odoo Community Association (OCA), Solvos",
     "license": "AGPL-3",
     "category": "Maintenance",
