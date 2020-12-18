@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- Add categoy with always fold -->
+    <record id="maintenance_equipment_category_AF" model="maintenance.equipment.category">
+        <field name="name">AF Category</field>
+        <field name="always_fold">True</field>
+    </record>
+    <record id="maintenance_equipment_category_AF_1" model="maintenance.equipment">
+        <field name="name">Equipment with AF Category</field>
+        <field name="category_id" eval="ref('maintenance_equipment_category_AF')"/>
+    </record>
+  </data>
+</odoo>
