@@ -23,6 +23,7 @@ addon | version | summary
 [maintenance_equipment_status](maintenance_equipment_status/) | 14.0.1.0.0 | Maintenance Equipment Status
 [maintenance_plan](maintenance_plan/) | 14.0.1.0.0 | Extends preventive maintenance planning
 [maintenance_project](maintenance_project/) | 14.0.1.1.0 | Adds projects to maintenance equipments and requests
+[maintenance_project_plan](maintenance_project_plan/) | 14.0.1.0.0 | Adds project and task to a Maintenance Plan
 
 [//]: # (end addons)
 
