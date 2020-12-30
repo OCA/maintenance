@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo12-addon-base_maintenance',
         'odoo12-addon-base_maintenance_group',
+        'odoo12-addon-maintenance_equipment_always_fold',
         'odoo12-addon-maintenance_equipment_contract',
         'odoo12-addon-maintenance_equipment_custom_info',
         'odoo12-addon-maintenance_equipment_hierarchy',
