@@ -14,7 +14,7 @@ class StockWarehouse(models.Model):
 
     def _create_or_update_sequences_and_picking_types(self):
         warehouse_data = \
-            super()._create_or_update_sequences_and_picking_types()
+            super(StockWarehouse, self)._create_or_update_sequences_and_picking_types()
         PickingType = self.env['stock.picking.type']
 
         # TODO when is called for an existing warehouse (e.g. during the
@@ -47,6 +47,7 @@ class StockWarehouse(models.Model):
                 'default_location_dest_id': self.wh_cons_loc_id.id,
                 'sequence': max_sequence_new,
                 'barcode': self.code.replace(" ", "").upper() + "-CONS",
+                'sequence_code': 'OUT',
             }
         }, max_sequence_new + 1
 
@@ -68,8 +69,8 @@ class StockWarehouse(models.Model):
             },
         }
 
-    def _get_locations_values(self, vals):
-        sub_locations = super()._get_locations_values(vals)
+    def _get_locations_values(self, vals, code=False):
+        sub_locations = super()._get_locations_values(vals,code)
         code = vals.get('code') or self.code
         code = code.replace(' ', '').upper()
         company_id = vals.get('company_id', self.company_id.id)
@@ -78,6 +79,6 @@ class StockWarehouse(models.Model):
             'wh_cons_loc_id': {
                 'name': _('Consumptions'),
                 'usage': 'inventory',
-                'barcode': self._valid_barcode(code + '-CONS', company_id)
+                'barcode': self._valid_barcode(code + '-CONSU', company_id),    
             },
         }
