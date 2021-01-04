@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Copyright 2019 Eficent Business and IT Consulting Services S.L.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
@@ -21,7 +22,7 @@ class TestMaintenanceEquipmentHierarchy(common.TransactionCase):
     def test_01_hierarchy(self):
         self.equipment1_1.parent_id = self.equipment1
         res = self.equipment1.preview_child_list()
-        self.assertEqual(res['domain'], [('id', 'in', self.equipment1_1.ids)])
+        self.assertEqual(res['domain'], [('parent_id', '=', self.equipment1.id)])
 
     def test_02_recursion(self):
         with self.assertRaises(ValidationError):
