@@ -48,6 +48,7 @@ class StockWarehouse(models.Model):
                 'sequence': max_sequence_new,
                 'barcode': self.code.replace(" ", "").upper() + "-CONS",
                 'sequence_code': 'OUT',
+                'company_id': self.company_id.id,
             }
         }, max_sequence_new + 1
 
