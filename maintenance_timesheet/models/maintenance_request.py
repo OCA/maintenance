@@ -40,9 +40,9 @@ class MaintenanceRequest(models.Model):
         could create timesheets for every employee
         """
         self.ensure_one()
-        action = self.env.ref(
+        action = self.env["ir.actions.act_window"]._for_xml_id(
             "maintenance_timesheet.timesheet_action_from_request"
-        ).read()[0]
+        )
         action["domain"] = [("maintenance_request_id", "=", self.id)]
         action["context"] = {
             "default_project_id": self.project_id.id,

@@ -69,12 +69,27 @@ class TestMaintenanceTimesheet(test_common.TransactionCase):
                 )
             ]
         with self.assertRaises(ValidationError):
+            self.env["account.analytic.line"].create(
+                {
+                    "name": "Attepting to create a task 2",
+                    "project_id": self.request2.project_id.id,
+                    "user_id": self.env.ref("base.user_admin").id,
+                    "maintenance_request_id": self.request2.id,
+                    "date": fields.Date.today(),
+                    "unit_amount": 1,
+                }
+            )
+        with self.assertRaises(ValidationError):
             # Attempt to modify a timesheet related a done request
             for timesheet in self.request2.timesheet_ids:
                 timesheet.unit_amount += 1
         with self.assertRaises(ValidationError):
             # Attempt to delete a timesheet related a done request
             self.request2.timesheet_ids.unlink()
+
+        self.request2.stage_id = self.stage_undone
+        # Deleting timesheets is enabled again
+        self.request2.timesheet_ids.unlink()
 
     def test_action_view_timesheet_ids(self):
         act1 = self.request2.action_view_timesheet_ids()
@@ -84,3 +99,9 @@ class TestMaintenanceTimesheet(test_common.TransactionCase):
         )
         self.assertFalse(act1["context"]["default_task_id"])
         self.assertFalse(act1["context"]["readonly_employee_id"])
+
+    def test_prepare_project_from_equipment_values(self):
+        data = self.env["maintenance.equipment"]._prepare_project_from_equipment_values(
+            {"name": "my name"}
+        )
+        self.assertTrue(data["allow_timesheets"])
