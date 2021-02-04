@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="timesheet_action_from_request" model="ir.actions.act_window">
+        <field name="name">Timesheets</field>
+        <field name="res_model">account.analytic.line</field>
+        <field name="search_view_id" ref="hr_timesheet_line_search" />
+        <field
+            name="domain"
+        >[('project_id', '!=', False), ('maintenance_request_id', '!=', False)]</field>
+    </record>
+    <record
+        id="timesheet_action_view_from_request_list"
+        model="ir.actions.act_window.view"
+    >
+        <field name="sequence" eval="5" />
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="hr_timesheet.timesheet_view_tree_user" />
+        <field name="act_window_id" ref="timesheet_action_from_request" />
+    </record>
+    <record
+        id="timesheet_action_view_from_request_form"
+        model="ir.actions.act_window.view"
+    >
+        <field name="sequence" eval="10" />
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="hr_timesheet_line_form" />
+        <field name="act_window_id" ref="timesheet_action_from_request" />
+    </record>
+    <!-- maintenance.request: view inheritance -->
+    <record id="hr_equipment_request_view_tree" model="ir.ui.view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
+        <field name="arch" type="xml">
+            <field name="stage_id" position="after">
+                <field
+                    name="timesheet_total_hours"
+                    groups="maintenance.group_equipment_manager"
+                    widget="timesheet_uom"
+                />
+            </field>
+        </field>
+    </record>
+    <record id="hr_equipment_request_view_kanban" model="ir.ui.view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='activity_state']" position="after">
+                <field
+                    name="timesheet_total_hours"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+            </xpath>
+            <xpath expr="//div[hasclass('oe_kanban_bottom_left')]" position="inside">
+                <a
+                    class="o_project_kanban_box"
+                    name="action_view_timesheet_ids"
+                    type="object"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                >
+                    <div>
+                        <span class="o_value">
+                            <field
+                                name="timesheet_total_hours"
+                                class="oe_inline"
+                                widget="timesheet_uom"
+                            />
+                            <!-- t t-esc="record.timesheet_total_hours.value"/-->
+                        </span>
+                        <span class="o_label">Hours</span>
+                    </div>
+                </a>
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_request_view_form" model="ir.ui.view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    class="oe_stat_button"
+                    type="object"
+                    name="action_view_timesheet_ids"
+                    icon="fa-calendar"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                >
+                    <field name="timesheet_total_hours" widget="timesheet_uom" />
+                    <span class="o_label" style="padding-left: 5px;">Hours</span>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>
