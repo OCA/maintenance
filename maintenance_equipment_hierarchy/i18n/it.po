@@ -6,49 +6,51 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2021-03-18 12:46+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__child_ids
 msgid "Child Equipments"
-msgstr ""
+msgstr "Attrezzature componenti"
 
 #. module: maintenance_equipment_hierarchy
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_hierarchy.hr_equipment_view_form
 msgid "Children"
-msgstr ""
+msgstr "Componente"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__complete_name
 msgid "Complete Name"
-msgstr ""
+msgstr "Nome completo"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: maintenance_equipment_hierarchy
 #: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:54
 #, python-format
 msgid "Error ! You cannot create a recursive equipment hierarchy."
-msgstr ""
+msgstr "Errore! Non si può creare una gerarchia delle attrezzature ricorsiva."
 
 #. module: maintenance_equipment_hierarchy
 #: model:maintenance.equipment,name:maintenance_equipment_hierarchy.equipment_computer9_1
 msgid "HP Laptop battery"
-msgstr ""
+msgstr "Batteria laptop HP"
 
 #. module: maintenance_equipment_hierarchy
 #: model:maintenance.equipment,name:maintenance_equipment_hierarchy.equipment_computer9_2
 msgid "HP Laptop case"
-msgstr ""
+msgstr "Case laptop HP"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_left
@@ -58,17 +60,17 @@ msgstr ""
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model,name:maintenance_equipment_hierarchy.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Attrezzatura di manutenzione"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__child_count
 msgid "Number of child equipments"
-msgstr ""
+msgstr "Numero di attrezzature componenti"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_id
 msgid "Parent Equipment"
-msgstr ""
+msgstr "Attrezzatura principale"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_path
