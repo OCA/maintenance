@@ -16,6 +16,7 @@ addon | version | summary
 [base_maintenance_config](base_maintenance_config/) | 12.0.1.0.0 | Provides general settings for the Maintenance App
 [base_maintenance_group](base_maintenance_group/) | 12.0.1.1.0 | Provides base access groups for the Maintenance App
 [maintenance_equipment_always_fold](maintenance_equipment_always_fold/) | 12.0.1.0.0 | Equipment categories will always be folded if I indicate it with an always_fold Boolean; if not, let him behave as before
+[maintenance_equipment_category_kanban](maintenance_equipment_category_kanban/) | 12.0.1.0.0 | Sets kanban category groping by default for equipments
 [maintenance_equipment_contract](maintenance_equipment_contract/) | 12.0.1.0.0 | Manage equipment contracts
 [maintenance_equipment_custom_info](maintenance_equipment_custom_info/) | 12.0.2.0.0 | Add custom info in equipments
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 12.0.1.0.0 | Manage equipment hierarchy
