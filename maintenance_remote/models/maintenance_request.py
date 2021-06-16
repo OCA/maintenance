@@ -6,14 +6,12 @@ from odoo import api, fields, models
 
 class MaintenanceRequest(models.Model):
 
-    _inherit = 'maintenance.request'
+    _inherit = "maintenance.request"
 
     @api.model
     def _default_remote(self):
         return self.remote.id
 
     remote_id = fields.Many2one(
-        'res.remote',
-        readonly=True,
-        default=lambda r: r._default_remote()
+        "res.remote", readonly=True, default=lambda r: r._default_remote()
     )
