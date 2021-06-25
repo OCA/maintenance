@@ -1,7 +1,7 @@
 # Copyright 2019 Creu Blanca
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo.exceptions import ValidationError
+from odoo.exceptions import UserError
 from odoo.tests.common import SavepointCase
 
 
@@ -42,7 +42,7 @@ class TestMaintenanceLocation(SavepointCase):
 
     def test_maintenance_location(self):
         self.assertEqual(self.location_2.complete_name, "L1 / L2")
-        with self.assertRaises(ValidationError):
+        with self.assertRaises(UserError):
             self.location_1.write({"parent_id": self.location_2.id})
 
         self.request.write({"equipment_id": self.equipment.id})
