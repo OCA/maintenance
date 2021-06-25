@@ -40,7 +40,8 @@ class MaintenanceLocation(models.Model):
         for location in self:
             if location.parent_id:
                 location.complete_name = "{} / {}".format(
-                    location.parent_id.complete_name, location.name,
+                    location.parent_id.complete_name,
+                    location.name,
                 )
             else:
                 location.complete_name = location.name
