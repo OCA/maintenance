@@ -1,0 +1,76 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* maintenance_request_stage_transition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage_button_class
+msgid "Button Class"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: selection:maintenance.stage,button_class:0
+msgid "Danger"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,help:maintenance_request_stage_transition.field_maintenance_stage_button_class
+msgid "For default, the system uses primary"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: selection:maintenance.stage,button_class:0
+msgid "Info"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_request
+msgid "Maintenance Requests"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_stage
+msgid "Maintenance Stage"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage_next_stage_ids
+msgid "Next stages"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage_previous_stage_ids
+msgid "Previous stages"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: selection:maintenance.stage,button_class:0
+msgid "Primary"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: selection:maintenance.stage,button_class:0
+msgid "Success"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: code:addons/maintenance_request_stage_transition/models/maintenance_stage.py:41
+#, python-format
+msgid "To %s"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: selection:maintenance.stage,button_class:0
+msgid "Warning"
+msgstr ""
