@@ -24,6 +24,7 @@ addon | version | summary
 [maintenance_plan_activity](maintenance_plan_activity/) | 13.0.1.0.0 | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
 [maintenance_project](maintenance_project/) | 13.0.1.1.0 | Adds projects to maintenance equipments and requests
 [maintenance_project_plan](maintenance_project_plan/) | 13.0.1.0.0 | Adds project and task to a Maintenance Plan
+[maintenance_remote](maintenance_remote/) | 13.0.1.0.0 | Define remote on maintenance request
 [maintenance_request_sequence](maintenance_request_sequence/) | 13.0.1.0.0 | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 13.0.1.0.0 | Manage transition visibility and management between stages
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 13.0.1.0.0 | Create hierarchies on teams
