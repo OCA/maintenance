@@ -1,0 +1,114 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_timesheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-04 08:28+0000\n"
+"PO-Revision-Date: 2019-11-13 11:35+0000\n"
+"Last-Translator: David Alonso (Solvos) <david.alonso@solvos.es>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_form
+msgid "<span class=\"o_label\" style=\"padding-left: 5px;\">Hours</span>"
+msgstr "<span class=\"o_label\" style=\"padding-left: 5px;\">horas</span>"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_kanban
+msgid "<span class=\"o_label\">Hours</span>"
+msgstr "<span class=\"o_label\">horas</span>"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<span id=\"timesheet_information_title\">Timesheet Entries</span>"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<strong>Timesheet Total Hours:</strong>"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model:ir.model,name:maintenance_timesheet.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Cuenta analítica"
+
+#. module: maintenance_timesheet
+#: code:addons/maintenance_timesheet/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"Cannot save or delete a timesheet for a maintenance request already done"
+msgstr ""
+"No se puede editar o borrar un parte de trabajo de una petición de "
+"mantenimiento ya finalizada"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Date"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Description"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model:ir.model,name:maintenance_timesheet.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipo"
+
+#. module: maintenance_timesheet
+#: model:ir.model,name:maintenance_timesheet.model_maintenance_request
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
+msgid "Maintenance Request"
+msgstr "Petición de mantenimiento"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Project -"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_timesheet_line_search
+msgid "Request"
+msgstr "Petición"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Responsible"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Task"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Time"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_total_hours
+msgid "Timesheet Total Hours"
+msgstr "Horas totales en partes de trabajo"
+
+#. module: maintenance_timesheet
+#: model:ir.actions.act_window,name:maintenance_timesheet.timesheet_action_from_request
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_ids
+msgid "Timesheets"
+msgstr "Partes de trabajo"
