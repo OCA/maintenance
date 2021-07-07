@@ -24,6 +24,7 @@ addon | version | summary
 [maintenance_plan](maintenance_plan/) | 14.0.1.0.0 | Extends preventive maintenance planning
 [maintenance_project](maintenance_project/) | 14.0.1.1.0 | Adds projects to maintenance equipments and requests
 [maintenance_project_plan](maintenance_project_plan/) | 14.0.1.0.0 | Adds project and task to a Maintenance Plan
+[maintenance_timesheet](maintenance_timesheet/) | 14.0.1.0.0 | Adds timesheets to maintenance requests
 
 [//]: # (end addons)
 
