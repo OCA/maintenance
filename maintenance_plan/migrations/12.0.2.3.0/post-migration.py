@@ -12,7 +12,7 @@ def fill_interval_column(cr):
                 maintenance_plan mp2
             INNER JOIN
                 maintenance_equipment meq ON mp2.equipment_id = meq.id
-            WHERE period is not null and mp2.id = mp.id
+            WHERE meq.period is not null and mp2.id = mp.id
         """
     )
 
