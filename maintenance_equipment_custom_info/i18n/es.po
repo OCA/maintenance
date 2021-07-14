@@ -6,81 +6,85 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2021-07-14 15:48+0000\n"
+"Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: maintenance_equipment_custom_info
 #: model:custom.info.property,default_value:maintenance_equipment_custom_info.prop_storage_gib
 msgid "256"
-msgstr ""
+msgstr "256"
 
 #. module: maintenance_equipment_custom_info
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_custom_info.hr_equipment_view_form
 msgid "Custom Information"
-msgstr ""
+msgstr "Información personalizada"
 
 #. module: maintenance_equipment_custom_info
 #: model:ir.model.fields,field_description:maintenance_equipment_custom_info.field_maintenance_equipment__custom_info_template_id
 msgid "Custom Information Template"
-msgstr ""
+msgstr "Plantilla de información personalizada"
 
 #. module: maintenance_equipment_custom_info
 #: model:ir.model.fields,field_description:maintenance_equipment_custom_info.field_maintenance_equipment__custom_info_ids
 msgid "Custom Properties"
-msgstr ""
+msgstr "Propiedades personalizadas"
 
 #. module: maintenance_equipment_custom_info
 #: model:res.groups,name:maintenance_equipment_custom_info.group_equipment_info
 msgid "Display in maintenance equipment form"
-msgstr ""
+msgstr "Mostrar en el formulario de equipamiento"
 
 #. module: maintenance_equipment_custom_info
 #: model:custom.info.option,name:maintenance_equipment_custom_info.opt_hdd
 msgid "HDD"
-msgstr ""
+msgstr "HDD"
 
 #. module: maintenance_equipment_custom_info
 #: model:custom.info.template,name:maintenance_equipment_custom_info.tpl_laptop
 msgid "Laptops"
-msgstr ""
+msgstr "Ordenadores"
 
 #. module: maintenance_equipment_custom_info
 #: model:ir.model,name:maintenance_equipment_custom_info.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Equipamiento"
 
 #. module: maintenance_equipment_custom_info
 #: model:custom.info.property,name:maintenance_equipment_custom_info.prop_ram
 msgid "RAM (GiB)"
-msgstr ""
+msgstr "RAM (GiB)"
 
 #. module: maintenance_equipment_custom_info
 #: model:custom.info.option,name:maintenance_equipment_custom_info.opt_ssdd
 msgid "SSD"
-msgstr ""
+msgstr "SSD"
 
 #. module: maintenance_equipment_custom_info
 #: model:custom.info.property,name:maintenance_equipment_custom_info.prop_storage_gib
 msgid "Storage (GiB)"
-msgstr ""
+msgstr "Almacenamiento (GiB)"
 
 #. module: maintenance_equipment_custom_info
 #: model:custom.info.property,name:maintenance_equipment_custom_info.prop_storage_type
 msgid "Storage type"
-msgstr ""
+msgstr "Tipo de almacenamiento"
 
 #. module: maintenance_equipment_custom_info
 #: model:custom.info.category,name:maintenance_equipment_custom_info.cat_technical_data
 msgid "Technical Data"
-msgstr ""
+msgstr "Datos técnicos"
 
 #. module: maintenance_equipment_custom_info
 #: model:res.groups,comment:maintenance_equipment_custom_info.group_equipment_info
 msgid ""
 "Will be able to edit custom information from maintenance equipment's form."
 msgstr ""
+"Se permitirá editar la información personalizada en el formulario del "
+"equipamiento."
