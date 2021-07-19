@@ -50,6 +50,7 @@ class MaintenanceEquipment(models.Model):
 
         return {
             'name': name,
+            'company_id': self.company_id.id,
             'request_date': next_maintenance_date,
             'schedule_date': next_maintenance_date,
             'category_id': self.category_id.id,
@@ -104,7 +105,7 @@ class MaintenanceEquipment(models.Model):
         for plan in self.env['maintenance.plan'].search(
                 [('interval', '>', 0)]):
             equipment = plan.equipment_id
-            equipment._create_new_request(plan)
+            equipment.sudo()._create_new_request(plan)
 
     @api.depends('maintenance_plan_ids.next_maintenance_date',
                  'maintenance_ids.request_date')
