@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-03-18 12:46+0000\n"
+"PO-Revision-Date: 2021-07-23 15:49+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -55,7 +55,7 @@ msgstr "Case laptop HP"
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_left
 msgid "Left Parent"
-msgstr ""
+msgstr "Principale precedente"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model,name:maintenance_equipment_hierarchy.model_maintenance_equipment
@@ -75,9 +75,9 @@ msgstr "Attrezzatura principale"
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_path
 msgid "Parent Path"
-msgstr ""
+msgstr "Percorso principale"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_right
 msgid "Right Parent"
-msgstr ""
+msgstr "Principale seguente"
