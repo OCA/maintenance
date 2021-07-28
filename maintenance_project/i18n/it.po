@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-03-18 12:46+0000\n"
+"PO-Revision-Date: 2021-07-28 09:49+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -34,7 +34,7 @@ msgstr "<strong>Progetto:</strong>"
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.report_maintenance_request_document
 msgid "<strong>Task:</strong>"
-msgstr "<strong>Incarico:</strong>"
+msgstr "<strong>Lavoro:</strong>"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__create_project_from_equipment
@@ -44,7 +44,7 @@ msgstr "Crea un progetto dall'attrezzatura"
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__preventive_default_task_id
 msgid "Default Task"
-msgstr "Incarico predefinito"
+msgstr "Lavoro predefinito"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__equipment_count
@@ -75,12 +75,12 @@ msgstr "Monitor generico con preventiva"
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr "Attrezzatura di manutenzione"
+msgstr "Attrezzatura manutenzione"
 
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_maintenance_request
 msgid "Maintenance Request"
-msgstr "Richiesta di manutenzione"
+msgstr "Richiesta manutenzione"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__maintenance_request_count
@@ -90,7 +90,7 @@ msgstr "Conta richiesta manutenzione"
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__maintenance_request_ids
 msgid "Maintenance Requests"
-msgstr "Richieste di manutenzione"
+msgstr "Richieste manutenzione"
 
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_project_project
@@ -113,9 +113,9 @@ msgstr "Richieste"
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__task_id
 msgid "Task"
-msgstr "Incarico"
+msgstr "Lavoro"
 
 #. module: maintenance_project
 #: model:project.project,label_tasks:maintenance_project.project_project_1
 msgid "Tasks"
-msgstr "Incarichi"
+msgstr "Lavori"
