@@ -10,12 +10,12 @@ Odoo modules for businesses that involves maintenance tasks.
 
 Available addons
 ----------------
-addon | version | summary
---- | --- | ---
-[account_asset_maintenance](account_asset_maintenance/) | 10.0.1.0.0 | Create equipment when validating an invoice with assets
-[base_maintenance_config](base_maintenance_config/) | 10.0.1.0.0 | Provides general settings for the Maintenance App
-[maintenance_equipment_scrap](maintenance_equipment_scrap/) | 10.0.1.0.0 | Enhance the functionality for Scrapping Equipments
-[maintenance_plan](maintenance_plan/) | 10.0.1.0.0 | Extends preventive maintenance planning
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[account_asset_maintenance](account_asset_maintenance/) | 10.0.1.0.0 |  | Create equipment when validating an invoice with assets
+[base_maintenance_config](base_maintenance_config/) | 10.0.1.0.0 |  | Provides general settings for the Maintenance App
+[maintenance_equipment_scrap](maintenance_equipment_scrap/) | 10.0.1.0.0 |  | Enhance the functionality for Scrapping Equipments
+[maintenance_plan](maintenance_plan/) | 10.0.1.0.0 |  | Extends preventive maintenance planning
 
 [//]: # (end addons)
 
