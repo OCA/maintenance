@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_plan
+# 	* maintenance_plan
 #
 msgid ""
 msgstr ""
@@ -233,7 +233,9 @@ msgstr "Piano di manutenzione"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__maintenance_plan_horizon
-msgid "Maintenance planning horizon. Only the maintenance requests inside the horizon will be created."
+msgid ""
+"Maintenance planning horizon. Only the maintenance requests inside the "
+"horizon will be created."
 msgstr ""
 "Orizzonte pianificazione manutenzione. Solo le manutenzioni richieste entro "
 "l'orizzonte verranno create."
@@ -320,9 +322,12 @@ msgid "Start maintenance date"
 msgstr "Data inizio manutenzione"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:139
+#: code:addons/maintenance_plan/models/maintenance_plan.py:140
 #, python-format
-msgid "The maintenance plan %s of equipment %s has generated a request which is not done yet. You should either set the request as done, remove its maintenance kind or delete it first."
+msgid ""
+"The maintenance plan %s of equipment %s has generated a request which is not "
+"done yet. You should either set the request as done, remove its maintenance "
+"kind or delete it first."
 msgstr ""
 "Il piano di manutenzione %s dell'attrezzatura %s ha generato una richiesta "
 "che non è ancora stata eseguita. Si deve prima impostare la richiesta come "
@@ -334,7 +339,7 @@ msgid "Under Maintenance"
 msgstr "In manutenzione"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:88
+#: code:addons/maintenance_plan/models/maintenance_plan.py:89
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:63
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:67
 #, python-format
@@ -366,7 +371,9 @@ msgstr "Anno(i)"
 
 #. module: maintenance_plan
 #: sql_constraint:maintenance.plan:0
-msgid "You cannot define multiple times the same maintenance kind on an equipment maintenance plan."
+msgid ""
+"You cannot define multiple times the same maintenance kind on an equipment "
+"maintenance plan."
 msgstr ""
 "Non si può definire più volte lo stesso tipo di manutenzione nel piano di "
 "manutenzione di una attrezzatura."
@@ -374,7 +381,10 @@ msgstr ""
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/hooks.py:31
 #, python-format
-msgid "You have multiple preventive maintenance requests on equipment %s next action date (%s). Please leave only one preventive request on the date of equipment's next action to install the module."
+msgid ""
+"You have multiple preventive maintenance requests on equipment %s next "
+"action date (%s). Please leave only one preventive request on the date of "
+"equipment's next action to install the module."
 msgstr ""
 "Ci sono richieste di manutenzione multiple per l'attrezzatura %s alla data "
 "della prossima azione (%s). Per installare il modulo, lasciare solo una "
