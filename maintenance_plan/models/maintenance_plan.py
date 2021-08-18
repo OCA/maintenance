@@ -26,6 +26,7 @@ class MaintenancePlan(models.Model):
     active = fields.Boolean(default=True)
     equipment_id = fields.Many2one(string='Equipment',
                                    comodel_name='maintenance.equipment',
+                                   auto_join=True,
                                    ondelete='cascade')
     maintenance_kind_id = fields.Many2one(string='Maintenance Kind',
                                           comodel_name='maintenance.kind',

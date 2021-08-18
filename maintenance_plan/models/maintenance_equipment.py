@@ -102,10 +102,10 @@ class MaintenanceEquipment(models.Model):
             Generates maintenance request on the next_maintenance_date or
             today if none exists
         """
-        for plan in self.env['maintenance.plan'].search(
+        for plan in self.env['maintenance.plan'].sudo().search(
                 [('interval', '>', 0)]):
             equipment = plan.equipment_id
-            equipment.sudo()._create_new_request(plan)
+            equipment._create_new_request(plan)
 
     @api.depends('maintenance_plan_ids.next_maintenance_date',
                  'maintenance_ids.request_date')
