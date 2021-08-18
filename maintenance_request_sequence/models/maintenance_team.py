@@ -15,7 +15,10 @@ class MaintenanceTeam(models.Model):
         "default sequence will be used.",
     )
     sequence_id = fields.Many2one(
-        comodel_name="ir.sequence", string="Team Sequence", copy=False, readonly=True,
+        comodel_name="ir.sequence",
+        string="Team Sequence",
+        copy=False,
+        readonly=True,
     )
 
     @api.model
