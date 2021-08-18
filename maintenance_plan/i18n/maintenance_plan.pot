@@ -313,7 +313,7 @@ msgid "Start maintenance date"
 msgstr ""
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:139
+#: code:addons/maintenance_plan/models/maintenance_plan.py:140
 #, python-format
 msgid "The maintenance plan %s of equipment %s has generated a request which is not done yet. You should either set the request as done, remove its maintenance kind or delete it first."
 msgstr ""
@@ -324,7 +324,7 @@ msgid "Under Maintenance"
 msgstr ""
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:88
+#: code:addons/maintenance_plan/models/maintenance_plan.py:89
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:63
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:67
 #, python-format
