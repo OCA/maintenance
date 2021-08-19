@@ -5,9 +5,10 @@
     "name": "Maintenance Equipments Scrap",
     "summary": "Enhance the functionality for Scrapping Equipments",
     "author": "Onestein, Odoo Community Association (OCA)",
+    "maintainers": ["espo-tony"],
     "website": "https://github.com/OCA/maintenance",
     "category": "Human Resources",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "license": "AGPL-3",
     "depends": ["maintenance", "mail"],
     "data": [
@@ -15,5 +16,6 @@
         "views/maintenance_equipment_category.xml",
         "wizard/scrap_equipment.xml",
         "data/maintenance_data.xml",
+        "security/ir.model.access.csv",
     ],
 }
