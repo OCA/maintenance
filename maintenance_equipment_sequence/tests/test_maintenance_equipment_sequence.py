@@ -14,9 +14,9 @@ class TestMaintenanceEquipmentSequence(TransactionCase):
         self.sequence_obj = self.env["ir.sequence"]
 
     def test_01_maintenance_equipment_sequence(self):
-        """ Create equipment category and check sequence has been
-            automatically created, create equipments inside category and check
-            sequence number has been set
+        """Create equipment category and check sequence has been
+        automatically created, create equipments inside category and check
+        sequence number has been set
         """
         # Create category
         categ_1 = self.maintenance_equipment_categ_obj.create(
