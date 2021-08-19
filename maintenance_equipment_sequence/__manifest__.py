@@ -9,7 +9,7 @@
     "version": "13.0.1.0.0",
     "license": "AGPL-3",
     "author": "ForgeFlow S.L.," "Odoo Community Association (OCA)",
-    "website": "https://www.github.com/OCA/maintenance",
+    "website": "https://github.com/OCA/maintenance",
     "depends": ["maintenance"],
     "data": ["views/maintenance_views.xml"],
 }
