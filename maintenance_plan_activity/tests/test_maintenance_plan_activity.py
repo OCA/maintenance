@@ -39,8 +39,8 @@ class TestMaintenancePlanActivity(test_common.TransactionCase):
         )
 
     def test_01_cron_auto_create_activities(self):
-        """ Execute cron and check the request and the activities that have
-            been created
+        """Execute cron and check the request and the activities that have
+        been created
         """
         self.cron.method_direct_trigger()
 
