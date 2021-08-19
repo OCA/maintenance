@@ -45,8 +45,8 @@ class MaintenanceEquipmentCategory(models.Model):
     # sequence_id._get_current_sequence() may invalidate it!
     @api.depends("sequence_id.use_date_range", "sequence_id.number_next_actual")
     def _compute_seq_number_next(self):
-        """ Compute 'sequence_number_next' according to the current sequence
-            in use, an ir.sequence or an ir.sequence.date_range.
+        """Compute 'sequence_number_next' according to the current sequence
+        in use, an ir.sequence or an ir.sequence.date_range.
         """
         for category in self:
             if category.sequence_id:
