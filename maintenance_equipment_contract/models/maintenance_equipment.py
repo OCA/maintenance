@@ -9,7 +9,9 @@ class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
     contract_ids = fields.Many2many("contract.contract", string="Contracts")
-    contract_count = fields.Integer(compute="_compute_contract_count",)
+    contract_count = fields.Integer(
+        compute="_compute_contract_count",
+    )
 
     @api.depends("contract_ids")
     def _compute_contract_count(self):
