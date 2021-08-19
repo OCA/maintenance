@@ -16,7 +16,7 @@ class MaintenanceEquipment(models.Model):
         "Parent Equipment",
         index=True,
         ondelete="cascade",
-        track_visibility="onchange",
+        tracking=True,
     )
     child_ids = fields.One2many(
         "maintenance.equipment", "parent_id", "Child Equipments"
