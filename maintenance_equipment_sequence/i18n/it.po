@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_sequence
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-07-28 09:49+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment__code
+msgid "Code"
+msgstr "Codice"
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_id
+msgid "Entry Sequence"
+msgstr "Sequenza iniziale"
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment__code
+msgid "Equipment Code"
+msgstr "Codice attrezzatura"
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Attrezzatura manutenzione"
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment_category
+msgid "Maintenance Equipment Category"
+msgstr "Categoria attrezzatura menutenzione"
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_number_next
+msgid "Next Number"
+msgstr "Numero successivo"
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_prefix
+msgid "Sequence Prefix"
+msgstr "Prefisso sequenza"
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_prefix
+msgid "The equipment's sequence will be created using this prefix."
+msgstr "La sequenza dell'attrezzatura verrà creata utilizzando questo prefisso."
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_number_next
+msgid "The next sequence number will be used for the next equipment."
+msgstr ""
+"Il numero di sequenza successivo verrà utilizzato per la prossima "
+"attrezzatura."
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_id
+msgid ""
+"This field contains the information related to the numbering of the "
+"equipments belonging to this category."
+msgstr ""
+"Questo campo contiene l'informazione relativa alla numerazione delle "
+"attrezzature appartenenti a questa categoria."
