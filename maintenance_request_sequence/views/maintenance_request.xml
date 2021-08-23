@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="hr_equipment_request_view_form">
+        <field
+            name="name"
+        >maintenance.request.form (in maintenance_request_sequence)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']/../.." position="before">
+                <strong>
+                    <field
+                        name="code"
+                        nolabel="1"
+                        attrs="{'invisible': [('code', '=', '/')]}"
+                    />
+                </strong>
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_request_view_search">
+        <field
+            name="name"
+        >maintenance.request.search (in maintenance_request_sequence)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="code" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_request_view_tree">
+        <field
+            name="name"
+        >maintenance.request.tree (in maintenance_request_sequence)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="code" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_request_view_kanban">
+        <field
+            name="name"
+        >maintenance.request.tree (in maintenance_request_sequence)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <span>(<strong>
+                        <field name="code" />
+                    </strong>)</span>
+            </field>
+        </field>
+    </record>
+</odoo>
