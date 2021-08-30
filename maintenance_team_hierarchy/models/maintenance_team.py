@@ -15,7 +15,8 @@ class MaintenanceTeam(models.Model):
     parent_path = fields.Char(index=True)
 
     request_ids = fields.Many2many(
-        "maintenance.request", compute="_compute_request_ids",
+        "maintenance.request",
+        compute="_compute_request_ids",
     )
 
     todo_request_ids = fields.One2many(compute="_compute_new_todo_requests")
@@ -40,7 +41,7 @@ class MaintenanceTeam(models.Model):
 
     @api.depends()
     def _compute_new_todo_requests(self):
-        """ This is the only way to remove the api depends fields. This is necessary
+        """This is the only way to remove the api depends fields. This is necessary
         because request_ids is now a computed field
         """
         self._compute_todo_requests()
