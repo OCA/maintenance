@@ -3,20 +3,14 @@
 {
     "name": "Maintenance Equipment Categories always_fold is indicate it",
     "summary": "Equipment categories will always be folded if I indicate it "
-               "with an always_fold Boolean; if not, let him behave as before",
+    "with an always_fold Boolean; if not, let him behave as before",
     "author": "Odoo Community Association (OCA), Solvos",
     "license": "AGPL-3",
     "version": "12.0.1.0.0",
     "category": "Equipments",
     "website": "https://github.com/OCA/maintenance",
-    "depends": [
-        "maintenance",
-    ],
-    "data": [
-        'views/maintenance_views.xml',
-        'demo/maintenance_demo.xml',
-    ],
-    "demo": [
-    ],
-    'installable': True,
+    "depends": ["maintenance",],
+    "data": ["views/maintenance_views.xml", "demo/maintenance_demo.xml",],
+    "demo": [],
+    "installable": True,
 }

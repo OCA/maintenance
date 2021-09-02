@@ -5,14 +5,15 @@ from odoo import api, fields, models
 
 
 class MaintenanceEquipmentCategory(models.Model):
-    _inherit = 'maintenance.equipment.category'
+    _inherit = "maintenance.equipment.category"
 
-    @api.depends('equipment_ids', 'always_fold')
+    @api.depends("equipment_ids", "always_fold")
     def _compute_fold(self):
         if self.always_fold:
             self.fold = True
         else:
             super()._compute_fold()
 
-    always_fold = fields.Boolean(string='Always Folded in Maintenance Pipe',
-                                 default=False)
+    always_fold = fields.Boolean(
+        string="Always Folded in Maintenance Pipe", default=False
+    )
