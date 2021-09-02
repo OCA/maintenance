@@ -6,9 +6,10 @@
     "summary": """
         Sets kanban category groping by default for equipments
         """,
-    "version": "12.0.1.0.0",
+    "version": "13.0.1.0.0",
     "license": "AGPL-3",
     "author": "Solvos," "Odoo Community Association (OCA)",
+    "maintainers": ["dalonsod"],
     "website": "https://www.github.com/OCA/maintenance",
     "depends": ["maintenance"],
     "data": [
