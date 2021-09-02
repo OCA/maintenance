@@ -12,7 +12,7 @@ class TestMaintenanceEquipment(common.SavepointCase):
         cls.Equipment = cls.env["maintenance.equipment"]
         cls.Category = cls.env["maintenance.equipment.category"]
 
-        cls.equipment_category = cls.Category.create({"name": "AF Category",})
+        cls.equipment_category = cls.Category.create({"name": "AF Category"})
 
         cls.equipment1 = cls.Equipment.create(
             {

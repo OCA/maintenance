@@ -5,12 +5,13 @@
     "summary": "Equipment categories will always be folded if I indicate it "
     "with an always_fold Boolean; if not, let him behave as before",
     "author": "Odoo Community Association (OCA), Solvos",
+    "maintainers": ["dalonsod"],
     "license": "AGPL-3",
-    "version": "12.0.1.0.0",
+    "version": "13.0.1.0.0",
     "category": "Equipments",
     "website": "https://github.com/OCA/maintenance",
-    "depends": ["maintenance",],
-    "data": ["views/maintenance_views.xml", "demo/maintenance_demo.xml",],
-    "demo": [],
+    "depends": ["maintenance"],
+    "data": ["views/maintenance_views.xml"],
+    "demo": ["demo/maintenance_demo.xml"],
     "installable": True,
 }

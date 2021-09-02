@@ -9,10 +9,9 @@ class MaintenanceEquipmentCategory(models.Model):
 
     @api.depends("equipment_ids", "always_fold")
     def _compute_fold(self):
-        if self.always_fold:
-            self.fold = True
-        else:
-            super()._compute_fold()
+        super()._compute_fold()
+        for record in self.filtered(lambda x: x.always_fold):
+            record.fold = True
 
     always_fold = fields.Boolean(
         string="Always Folded in Maintenance Pipe", default=False
