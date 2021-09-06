@@ -20,6 +20,19 @@
             </xpath>
         </field>
     </record>
+    <record id="maintenance_team_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.team.tree</field>
+        <field name="model">maintenance.team</field>
+        <field name="inherit_id" ref="maintenance.maintenance_team_view_tree" />
+        <field name="arch" type="xml">
+            <field name="member_ids" position="before">
+                <field name="user_id" />
+            </field>
+            <field name="member_ids" position="after">
+                <field name="description" />
+            </field>
+        </field>
+    </record>
     <!-- There is no search view to inherit, so creating it-->
     <record id="maintenance_team_view_search" model="ir.ui.view">
         <field name="name">maintenance.team.search</field>
