@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="maintenance_stage_tree_view">
+        <field name="name">maintenance.stage.tree (in maintenance_request_flow)</field>
+        <field name="model">maintenance.stage</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_stage_view_tree" />
+        <field name="arch" type="xml">
+            <field name="done" position="before">
+                <field name="button_class" />
+                <field
+                    name="next_stage_ids"
+                    widget="many2many_tags"
+                    domain="[('id', '!=', id)]"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
