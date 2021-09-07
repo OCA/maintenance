@@ -17,6 +17,7 @@ setuptools.setup(
         'odoo14-addon-maintenance_project',
         'odoo14-addon-maintenance_project_plan',
         'odoo14-addon-maintenance_request_sequence',
+        'odoo14-addon-maintenance_request_stage_transition',
         'odoo14-addon-maintenance_timesheet',
     ],
     classifiers=[
