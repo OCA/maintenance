@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [maintenance_project_plan](maintenance_project_plan/) | 14.0.1.0.0 |  | Adds project and task to a Maintenance Plan
 [maintenance_request_sequence](maintenance_request_sequence/) | 14.0.1.0.0 |  | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 14.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Manage transition visibility and management between stages
+[maintenance_team_hierarchy](maintenance_team_hierarchy/) | 14.0.1.0.0 |  | Create hierarchies on teams
 [maintenance_timesheet](maintenance_timesheet/) | 14.0.1.0.0 |  | Adds timesheets to maintenance requests
 
 [//]: # (end addons)
