@@ -14,6 +14,7 @@ setuptools.setup(
         'odoo14-addon-maintenance_equipment_status',
         'odoo14-addon-maintenance_equipment_tags',
         'odoo14-addon-maintenance_plan',
+        'odoo14-addon-maintenance_plan_activity',
         'odoo14-addon-maintenance_project',
         'odoo14-addon-maintenance_project_plan',
         'odoo14-addon-maintenance_request_sequence',
