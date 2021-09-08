@@ -99,11 +99,6 @@ msgid "<strong>Team:</strong>"
 msgstr ""
 
 #. module: base_maintenance
-#: model_terms:ir.ui.view,arch_db:base_maintenance.maintenance_team_view_search
-msgid "Archived"
-msgstr ""
-
-#. module: base_maintenance
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__description
 msgid "Description"
 msgstr ""
