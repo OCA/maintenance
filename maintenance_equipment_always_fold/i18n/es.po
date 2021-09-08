@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* maintenance_equipment_always_fold
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-07-06 13:48+0000\n"
+"Last-Translator: David Alonso (Solvos) <david.alonso@solvos.es>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: maintenance_equipment_always_fold
+#: model:maintenance.equipment.category,name:maintenance_equipment_always_fold.maintenance_equipment_category_AF
+msgid "AF Category"
+msgstr "Categoría siempre plegada"
+
+#. module: maintenance_equipment_always_fold
+#: model:ir.model.fields,field_description:maintenance_equipment_always_fold.field_maintenance_equipment_category__always_fold
+msgid "Always Folded in Maintenance Pipe"
+msgstr "Siempre plegada en la vista de Equipos"
+
+#. module: maintenance_equipment_always_fold
+#: model:maintenance.equipment,name:maintenance_equipment_always_fold.maintenance_equipment_category_AF_1
+msgid "Equipment with AF Category"
+msgstr "Equipo con categoría siempre plegada"
+
+#. module: maintenance_equipment_always_fold
+#: model:ir.model,name:maintenance_equipment_always_fold.model_maintenance_equipment_category
+msgid "Maintenance Equipment Category"
+msgstr "Categoría de equipo de mantenimiento"
