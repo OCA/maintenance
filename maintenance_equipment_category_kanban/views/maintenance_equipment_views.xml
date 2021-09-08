@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_equipment_view_kanban" model="ir.ui.view">
+        <field
+            name="name"
+        >equipment.kanban (in maintenance_equipment_category_kanban)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="default_group_by">category_id</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
