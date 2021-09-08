@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- maintenance.plan : views -->
+    <record id="maintenance_plan_view_form" model="ir.ui.view">
+        <field name="name">maintenance.plan.form</field>
+        <field name="model">maintenance.plan</field>
+        <field name="inherit_id" ref="maintenance_plan.maintenance_plan_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/notebook/page[1]" position="after">
+                <page string="Scheduled Activities">
+                    <field name="planned_activity_ids" nolabel="1" />
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <!--    maintenance.planned.activities : views-->
+    <record id="maintenance_planned_activity_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.planned.activity.tree</field>
+        <field name="model">maintenance.planned.activity</field>
+        <field name="arch" type="xml">
+            <tree string="Maintenance Planned Activities" editable="bottom">
+                <field name="activity_type_id" />
+                <field name="user_id" />
+                <field name="date_before_request" />
+            </tree>
+        </field>
+    </record>
+</odoo>
