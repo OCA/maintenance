@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="maintenance_team_form_view">
+        <field name="name">maintenance.team.form (in maintenance_team_hierarchy)</field>
+        <field name="model">maintenance.team</field>
+        <field name="inherit_id" ref="maintenance.maintenance_team_view_form" />
+        <field name="arch" type="xml">
+            <field name="member_ids" position="after">
+                <field name="parent_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_request_search_view">
+        <field
+            name="name"
+        >maintenance.request.search (in maintenance_team_hierarchy)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
+        <field name="arch" type="xml">
+            <field name="maintenance_team_id" position="attributes">
+                <attribute
+                    name="filter_domain"
+                >[('maintenance_team_id', 'child_of', raw_value)]</attribute>
+            </field>
+        </field>
+    </record>
+    <record
+        id="maintenance.hr_equipment_todo_request_action_from_dashboard"
+        model="ir.actions.act_window"
+    >
+        <field
+            name="domain"
+        >[('maintenance_team_id', 'child_of', active_id), ('maintenance_type', 'in', context.get('maintenance_type', ['preventive', 'corrective']))]</field>
+    </record>
+</odoo>
