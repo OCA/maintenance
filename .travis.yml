@@ -1,7 +1,5 @@
 language: python
-branches:
-  except:
-    - "14.0"
+
 cache:
   directories:
     - $HOME/.cache/pip
