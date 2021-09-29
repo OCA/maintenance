@@ -7,7 +7,9 @@
     "license": "AGPL-3",
     "category": "Maintenance",
     "website": "https://github.com/OCA/maintenance",
-    "depends": ["base_maintenance", "mail"],
+    "depends": ["base_maintenance"],
     "data": ["views/maintenance_team_view_form.xml"],
+    "pre_init_hook": "pre_init_hook",
+    "post_init_hook": "post_init_hook",
     "installable": True,
 }
