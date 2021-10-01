@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_plan
+# 	* maintenance_plan
 #
 msgid ""
 msgstr ""
@@ -224,7 +224,9 @@ msgstr "Piano manutenzione"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan_maintenance_plan_horizon
-msgid "Maintenance planning horizon. Only the maintenance requests inside the horizon will be created."
+msgid ""
+"Maintenance planning horizon. Only the maintenance requests inside the "
+"horizon will be created."
 msgstr ""
 "Orizzonte pianificazione manutenzione. Verranno create solo le richieste di "
 "manutenzione entro l'orizzonte."
@@ -306,9 +308,12 @@ msgid "Start maintenance date"
 msgstr "Data inizio manutenzione"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:140
+#: code:addons/maintenance_plan/models/maintenance_plan.py:153
 #, python-format
-msgid "The maintenance plan %s of equipment %s has generated a request which is not done yet. You should either set the request as done, remove its maintenance kind or delete it first."
+msgid ""
+"The maintenance plan %s of equipment %s has generated a request which is not "
+"done yet. You should either set the request as done, remove its maintenance "
+"kind or delete it first."
 msgstr ""
 "Il piano di manutenzione %s dell'attrezzatura %s ha generato una richiesta "
 "che non è ancora completata. Prima bisogna impostare la richiesta come "
@@ -352,7 +357,9 @@ msgstr "Anno(i)"
 
 #. module: maintenance_plan
 #: sql_constraint:maintenance.plan:0
-msgid "You cannot define multiple times the same maintenance kind on an equipment maintenance plan."
+msgid ""
+"You cannot define multiple times the same maintenance kind on an equipment "
+"maintenance plan."
 msgstr ""
 "Non si può definire più volte lo stesso tipo di manutenzione nel piano "
 "manutenzione attrezzatura."
@@ -360,7 +367,10 @@ msgstr ""
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/hooks.py:31
 #, python-format
-msgid "You have multiple preventive maintenance requests on equipment %s next action date (%s). Please leave only one preventive request on the date of equipment's next action to install the module."
+msgid ""
+"You have multiple preventive maintenance requests on equipment %s next "
+"action date (%s). Please leave only one preventive request on the date of "
+"equipment's next action to install the module."
 msgstr ""
 "Per l'attrezzatura %s ci sono richieste di manutenzione preventiva multiple "
 "alla prossima scadenza (%s). Per installare il modulo impostare una sola "

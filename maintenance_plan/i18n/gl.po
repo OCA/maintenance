@@ -317,7 +317,7 @@ msgid "Start maintenance date"
 msgstr "Seguinte data de mantemento"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:140
+#: code:addons/maintenance_plan/models/maintenance_plan.py:153
 #, python-format
 msgid ""
 "The maintenance plan %s of equipment %s has generated a request which is not "
