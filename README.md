@@ -24,7 +24,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 13.0.1.0.0 |  | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 13.0.1.0.1 |  | Maintenance Equipment Status
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 13.0.1.0.0 |  | Adds category tags to equipment
-[maintenance_plan](maintenance_plan/) | 13.0.1.2.0 |  | Extends preventive maintenance planning
+[maintenance_plan](maintenance_plan/) | 13.0.1.2.1 |  | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 13.0.1.0.0 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
 [maintenance_project](maintenance_project/) | 13.0.1.1.0 |  | Adds projects to maintenance equipments and requests
 [maintenance_project_plan](maintenance_project_plan/) | 13.0.1.0.0 |  | Adds project and task to a Maintenance Plan
