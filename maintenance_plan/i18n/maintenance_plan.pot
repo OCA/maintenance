@@ -285,7 +285,7 @@ msgstr ""
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:46
-#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:114
+#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:191
 #, python-format
 msgid "Preventive Maintenance (%s) - %s"
 msgstr ""
@@ -301,7 +301,7 @@ msgid "Start maintenance date"
 msgstr ""
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:153
+#: code:addons/maintenance_plan/models/maintenance_plan.py:155
 #, python-format
 msgid "The maintenance plan %s of equipment %s has generated a request which is not done yet. You should either set the request as done, remove its maintenance kind or delete it first."
 msgstr ""
@@ -313,8 +313,8 @@ msgstr ""
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_plan.py:87
-#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:63
-#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:67
+#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:70
+#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:74
 #, python-format
 msgid "Unnamed %s plan (%s)"
 msgstr ""
