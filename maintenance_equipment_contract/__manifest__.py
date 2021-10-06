@@ -10,6 +10,11 @@
     "author": "Creu Blanca,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
     "depends": ["contract", "base_maintenance"],
-    "data": ["views/contract_contract.xml", "views/maintenance_equipment.xml"],
+    "data": [
+        "security/ir.model.access.csv",
+        "security/contract_security.xml",
+        "views/contract_contract.xml",
+        "views/maintenance_equipment.xml",
+    ],
     "demo": ["demo/maintenance_equipment_contract_demo.xml"],
 }
