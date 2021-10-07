@@ -127,8 +127,9 @@ class MaintenancePlan(models.Model):
                     ("maintenance_plan_id", "=", plan.id),
                     ("stage_id.done", "!=", True),
                     ("close_date", "=", False),
+                    ("request_date", ">=", plan.start_maintenance_date),
                 ],
-                order="request_date desc",
+                order="request_date asc",
                 limit=1,
             )
 
@@ -136,7 +137,10 @@ class MaintenancePlan(models.Model):
                 plan.next_maintenance_date = next_maintenance_todo.request_date
             else:
                 last_maintenance_done = self.env["maintenance.request"].search(
-                    [("maintenance_plan_id", "=", plan.id)],
+                    [
+                        ("maintenance_plan_id", "=", plan.id),
+                        ("request_date", ">=", plan.start_maintenance_date),
+                    ],
                     order="request_date desc",
                     limit=1,
                 )
