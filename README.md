@@ -12,7 +12,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[base_maintenance](base_maintenance/) | 13.0.1.1.1 |  | Base Maintenance
+[base_maintenance](base_maintenance/) | 13.0.1.1.2 |  | Base Maintenance
 [base_maintenance_config](base_maintenance_config/) | 13.0.1.0.0 |  | Provides general settings for the Maintenance App
 [base_maintenance_group](base_maintenance_group/) | 13.0.1.0.0 |  | Provides base access groups for the Maintenance App
 [maintenance_equipment_always_fold](maintenance_equipment_always_fold/) | 13.0.1.0.0 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Equipment categories will always be folded if I indicate it with an always_fold Boolean; if not, let him behave as before
