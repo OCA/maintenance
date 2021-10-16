@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-10-02 13:34+0000\n"
+"PO-Revision-Date: 2021-10-16 21:35+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -25,7 +25,7 @@ msgstr "Attivo"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__active
 msgid "Active Kind"
-msgstr "Frequenza attiva"
+msgstr "Pianificazione attiva"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
@@ -182,12 +182,12 @@ msgstr "Attrezzatura manutenzione"
 #: model:ir.model,name:maintenance_plan.model_maintenance_kind
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_kind_id
 msgid "Maintenance Kind"
-msgstr "Frequenza manutenzione"
+msgstr "Pianificazione manutenzione"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_kind_view_tree
 msgid "Maintenance Kinds"
-msgstr "Frequenze manutenzione"
+msgstr "Pianificazioni manutenzione"
 
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_plan
@@ -235,18 +235,18 @@ msgstr "Durata manutenzione in ore"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__maintenance_kind_id
 msgid "Maintenance kind"
-msgstr "Frequenza manutenzione"
+msgstr "Pianificazione manutenzione"
 
 #. module: maintenance_plan
 #: model:ir.model.constraint,message:maintenance_plan.constraint_maintenance_kind_name_uniq
 msgid "Maintenance kind name already exists."
-msgstr "Nome frequenza manutenzione già esistente."
+msgstr "Nome pianificazione manutenzione già esistente."
 
 #. module: maintenance_plan
 #: model:ir.actions.act_window,name:maintenance_plan.maintenance_kind_action
 #: model:ir.ui.menu,name:maintenance_plan.menu_maintenance_kind_configuration
 msgid "Maintenance kinds"
-msgstr "Frequenze manutenzione"
+msgstr "Pianificazioni manutenzione"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__maintenance_plan_ids
@@ -364,7 +364,7 @@ msgid ""
 msgstr ""
 "Il piano di manutenzione %s dell'attrezzatura %s ha generato una richiesta "
 "che non è ancora stata eseguita. Si deve prima impostare la richiesta come "
-"eseguita, eliminare la sua frequenza di manutenzione o cancellarla."
+"eseguita, eliminare la sua pianificazione o cancellarla."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
@@ -383,7 +383,7 @@ msgstr "Piano %s senza nome (%s)"
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid "Unspecified kind"
-msgstr "Frequenza non specificata"
+msgstr "Pianificazione non specificata"
 
 #. module: maintenance_plan
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__week
@@ -408,8 +408,8 @@ msgid ""
 "You cannot define multiple times the same maintenance kind on an equipment "
 "maintenance plan."
 msgstr ""
-"Non si può definire più volte la stessa frequenza di manutenzione nel piano "
-"di manutenzione di una attrezzatura."
+"Non si può definire più volte la stessa pianificazione nel piano di "
+"manutenzione di una attrezzatura."
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/hooks.py:0
