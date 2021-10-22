@@ -16,4 +16,4 @@ class MaintenanceRequest(models.Model):
     maintenance_plan_id = fields.Many2one(
         string="Maintenance plan", comodel_name="maintenance.plan", ondelete="restrict"
     )
-    note = fields.Html("Note")
+    note = fields.Html()

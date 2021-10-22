@@ -33,11 +33,12 @@ def post_init_hook(cr, registry):
                 raise UserError(
                     _(
                         "You have multiple preventive maintenance requests on "
-                        "equipment %s next action date (%s). Please leave only "
+                        "equipment %(name)s next action date (%(date)s). Please leave only "
                         "one preventive request on the date of equipment's next "
-                        "action to install the module."
+                        "action to install the module.",
+                        name=equipment.name,
+                        date=equipment.next_action_date,
                     )
-                    % (equipment.name, equipment.next_action_date)
                 )
             elif len(request) == 1:
                 request.write({"maintenance_kind_id": maintenance_kind.id})
