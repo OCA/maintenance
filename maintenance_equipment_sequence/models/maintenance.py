@@ -27,7 +27,7 @@ class MaintenanceEquipmentCategory(models.Model):
 
     @api.model
     def _create_sequence(self, vals):
-        """ Create new no_gap entry sequence"""
+        """Create new no_gap entry sequence"""
         seq = {
             "name": vals.get("name", False) or self.name,
             "implementation": "no_gap",
