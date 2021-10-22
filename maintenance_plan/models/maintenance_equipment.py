@@ -19,11 +19,10 @@ class MaintenanceEquipment(models.Model):
     )
     maintenance_plan_count = fields.Integer(
         compute="_compute_maintenance_plan_count",
-        string="Maintenance Plan Count",
         store=True,
     )
     maintenance_team_required = fields.Boolean(compute="_compute_team_required")
-    notes = fields.Text(string="Notes")
+    notes = fields.Text()
 
     @api.depends("maintenance_plan_ids", "maintenance_plan_ids.active")
     def _compute_maintenance_plan_count(self):
@@ -64,7 +63,11 @@ class MaintenanceEquipment(models.Model):
 
         description = self.name if self else maintenance_plan.name
         kind = maintenance_plan.maintenance_kind_id.name or _("Unspecified kind")
-        name = _("Preventive Maintenance (%s) - %s") % (kind, description)
+        name = _(
+            "Preventive Maintenance (%(kind)s) - %(description)s",
+            kind=kind,
+            description=description,
+        )
 
         return {
             "name": name,

@@ -24,26 +24,24 @@
                 <attribute name="attrs">{'invisible': 1}</attribute>
             </xpath>
             <xpath expr="//group[@name='maintenance']" position="after">
-                <group name="maintenance_plans">
-                    <field
-                        name="maintenance_plan_ids"
-                        nolabel="1"
-                        context="{'default_equipment_id': active_id, 'hide_equipment_id': 1}"
-                    >
-                        <tree string="Plans">
-                            <field name="maintenance_kind_id" />
-                            <field name="maintenance_team_id" />
-                            <field name="name" />
-                            <field name="start_maintenance_date" />
-                            <field name="interval" />
-                            <field name="interval_step" />
-                            <field name="duration" />
-                            <field name="next_maintenance_date" />
-                            <field name="maintenance_plan_horizon" />
-                            <field name="planning_step" />
-                        </tree>
-                    </field>
-                </group>
+                <field
+                    name="maintenance_plan_ids"
+                    nolabel="1"
+                    context="{'default_equipment_id': active_id, 'hide_equipment_id': 1}"
+                >
+                    <tree>
+                        <field name="maintenance_kind_id" />
+                        <field name="maintenance_team_id" />
+                        <field name="name" />
+                        <field name="start_maintenance_date" />
+                        <field name="interval" />
+                        <field name="interval_step" />
+                        <field name="duration" />
+                        <field name="next_maintenance_date" />
+                        <field name="maintenance_plan_horizon" />
+                        <field name="planning_step" />
+                    </tree>
+                </field>
             </xpath>
             <field name="maintenance_team_id" position="after">
                 <field name="maintenance_team_required" attrs="{'invisible': 1}" />
@@ -64,7 +62,7 @@
             <field name="maintenance_type" position="after">
                 <field name="maintenance_kind_id" />
             </field>
-            <field name="description" position="replace">
+            <field name="description" position="after">
                 <notebook>
                     <page string="Instructions">
                         <field
@@ -76,6 +74,9 @@
                         <field name="description" placeholder="Internal notes..." />
                     </page>
                 </notebook>
+            </field>
+            <field name="description" position="attributes">
+                <attribute name="invisible">1</attribute>
             </field>
         </field>
     </record>
