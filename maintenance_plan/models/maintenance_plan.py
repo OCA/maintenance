@@ -53,13 +53,10 @@ class MaintenancePlan(models.Model):
         string="Duration (hours)", help="Maintenance duration in hours"
     )
     start_maintenance_date = fields.Date(
-        string="Start maintenance date",
         default=fields.Date.context_today,
         help="Date from which the maintenance will we active",
     )
-    next_maintenance_date = fields.Date(
-        "Next maintenance date", compute="_compute_next_maintenance", store=True
-    )
+    next_maintenance_date = fields.Date(compute="_compute_next_maintenance", store=True)
     maintenance_plan_horizon = fields.Integer(
         string="Planning Horizon period",
         default=1,
@@ -77,7 +74,7 @@ class MaintenancePlan(models.Model):
         default="year",
         help="Let the event automatically repeat at that interval",
     )
-    note = fields.Html("Note")
+    note = fields.Html()
     maintenance_ids = fields.One2many(
         "maintenance.request", "maintenance_plan_id", string="Maintenance requests"
     )
@@ -96,8 +93,11 @@ class MaintenancePlan(models.Model):
                 (
                     plan.id,
                     plan.name
-                    or _("Unnamed %s plan (%s)")
-                    % (plan.maintenance_kind_id.name or "", plan.equipment_id.name),
+                    or _(
+                        "Unnamed %(kind)s plan (%(plan)s)",
+                        kind=plan.maintenance_kind_id.name or "",
+                        plan=plan.equipment_id.name,
+                    ),
                 )
             )
         return result
@@ -179,15 +179,16 @@ class MaintenancePlan(models.Model):
             if request:
                 raise UserError(
                     _(
-                        "The maintenance plan %s of equipment %s "
+                        "The maintenance plan %(kind)s of equipment %(plan)s "
                         "has generated a request which is not done "
                         "yet. You should either set the request as "
                         "done, remove its maintenance kind or "
-                        "delete it first."
+                        "delete it first.",
+                        kind=plan.maintenance_kind_id.name,
+                        plan=plan.equipment_id.name,
                     )
-                    % (plan.maintenance_kind_id.name, plan.equipment_id.name)
                 )
-        super().unlink()
+        return super().unlink()
 
     _sql_constraints = [
         (

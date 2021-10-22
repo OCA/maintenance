@@ -72,14 +72,18 @@ class TestMaintenancePlan(test_common.TransactionCase):
     def test_name_get(self):
         self.assertEqual(
             self.maintenance_plan_1.name_get()[0][1],
-            _("Unnamed %s plan (%s)") % ("", self.maintenance_plan_1.equipment_id.name),
+            _(
+                "Unnamed %(nothing)s plan (%(equipment)s)",
+                nothing="",
+                equipment=self.maintenance_plan_1.equipment_id.name,
+            ),
         )
         self.assertEqual(
             self.maintenance_plan_2.name_get()[0][1],
-            _("Unnamed %s plan (%s)")
-            % (
-                self.maintenance_plan_2.maintenance_kind_id.name,
-                self.maintenance_plan_2.equipment_id.name,
+            _(
+                "Unnamed %(kind)s plan (%(equipment)s)",
+                kind=self.maintenance_plan_2.maintenance_kind_id.name,
+                equipment=self.maintenance_plan_2.equipment_id.name,
             ),
         )
         self.assertEqual(
@@ -206,6 +210,9 @@ class TestMaintenancePlan(test_common.TransactionCase):
         )
         self.assertEqual(
             generated_request.name,
-            _("Preventive Maintenance (%s) - %s")
-            % (self.weekly_kind.name, self.maintenance_plan_4.name),
+            _(
+                "Preventive Maintenance (%(kind)s) - %(plan)s",
+                kind=self.weekly_kind.name,
+                plan=self.maintenance_plan_4.name,
+            ),
         )
