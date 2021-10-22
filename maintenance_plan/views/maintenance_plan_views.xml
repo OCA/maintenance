@@ -104,7 +104,7 @@
         <field name="name">maintenance.plan.tree</field>
         <field name="model">maintenance.plan</field>
         <field name="arch" type="xml">
-            <tree string="Maintenance Plans" decoration-muted="active == False">
+            <tree decoration-muted="active == False">
                 <field name="equipment_id" />
                 <field name="maintenance_kind_id" />
                 <field name="maintenance_team_id" />
