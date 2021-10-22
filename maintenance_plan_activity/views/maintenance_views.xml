@@ -18,7 +18,7 @@
         <field name="name">maintenance.planned.activity.tree</field>
         <field name="model">maintenance.planned.activity</field>
         <field name="arch" type="xml">
-            <tree string="Maintenance Planned Activities" editable="bottom">
+            <tree editable="bottom">
                 <field name="activity_type_id" />
                 <field name="user_id" />
                 <field name="date_before_request" />
