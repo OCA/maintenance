@@ -4,7 +4,7 @@
         <field name="name">maintenance.kind.tree</field>
         <field name="model">maintenance.kind</field>
         <field name="arch" type="xml">
-            <tree string="Maintenance Kinds" editable="top">
+            <tree editable="top">
                 <field name="name" />
                 <field name="active" />
             </tree>
