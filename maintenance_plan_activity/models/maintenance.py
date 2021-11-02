@@ -21,7 +21,12 @@ class MaintenanceEquipment(models.Model):
         new_requests = super()._create_new_request(maintenance_plan)
         for request in new_requests:
             for planned_activity in maintenance_plan.planned_activity_ids:
-                self.env["mail.activity"].create(
+                # In case mail_activty_team is installed this makes sure
+                # the correct activity team is selected. If that module is
+                # not installed the context does nothing
+                self.env["mail.activity"].with_context(
+                    default_res_model="maintenance.request"
+                ).create(
                     {
                         "activity_type_id": planned_activity.activity_type_id.id,
                         "note": _(
