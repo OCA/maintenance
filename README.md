@@ -19,6 +19,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[maintenance_equipment_sequence](maintenance_equipment_sequence/) | 15.0.1.0.0 | [![AdriaGForgeFlow](https://github.com/AdriaGForgeFlow.png?size=30px)](https://github.com/AdriaGForgeFlow) | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_plan](maintenance_plan/) | 15.0.1.0.0 |  | Extends preventive maintenance planning
 
 [//]: # (end addons)
