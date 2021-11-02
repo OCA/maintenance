@@ -28,15 +28,14 @@
         <field name="model">maintenance.equipment</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//div[hasclass('oe_title')]" position="before">
-                <div class="row">
-                    <div class="col-xs-2" style="padding-left:1.0em">
-                        <label for="code" class="oe_edit_only" />
-                        <h3>
-                            <field name="code" />
-                        </h3>
-                    </div>
-                </div>
+            <field name="serial_no" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <xpath expr="//div[hasclass('oe_title')]/*[1]" position="before">
+                <label for="serial_no" class="oe_edit_only" />
+                <h3>
+                    <field name="serial_no" />
+                </h3>
             </xpath>
         </field>
     </record>
@@ -46,7 +45,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
         <field name="arch" type="xml">
             <field name="name" position="before">
-                <field name="code" />
+                <field name="serial_no" />
             </field>
         </field>
     </record>
@@ -56,7 +55,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
         <field name="arch" type="xml">
             <field name="name" position="after">
-                <field name="code" />
+                <field name="serial_no" />
             </field>
         </field>
     </record>

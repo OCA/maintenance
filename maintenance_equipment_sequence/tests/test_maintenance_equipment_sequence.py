@@ -52,10 +52,10 @@ class TestMaintenanceEquipmentSequence(TransactionCase):
             {"name": "Laptop 1", "category_id": categ_2.id}
         )
         categ_2._compute_equipment_code()
-        self.assertEqual(equipment_1.code, "TTC0001")
+        self.assertEqual(equipment_1.serial_no, "TTC0001")
         # Set code manually
-        equipment_1.write({"code": "TTC0023"})
-        self.assertEqual(equipment_1.code, "TTC0023")
+        equipment_1.write({"serial_no": "TTC0023"})
+        self.assertEqual(equipment_1.serial_no, "TTC0023")
         # Remove code and be automatically set to sequence next value
-        equipment_1.write({"code": False})
-        self.assertEqual(equipment_1.code, "TTC0002")
+        equipment_1.write({"serial_no": False})
+        self.assertEqual(equipment_1.serial_no, "TTC0002")

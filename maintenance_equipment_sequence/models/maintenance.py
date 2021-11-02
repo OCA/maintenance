@@ -101,31 +101,29 @@ class MaintenanceEquipmentCategory(models.Model):
                     [("category_id", "=", category.id)]
                 )
                 for equipment in category_equipments:
-                    if not equipment.code and equipment.category_id.sequence_id:
-                        equipment.code = equipment.category_id.sequence_id._next()
+                    if not equipment.serial_no and equipment.category_id.sequence_id:
+                        equipment.serial_no = equipment.category_id.sequence_id._next()
 
 
 class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
-    code = fields.Char(help="Equipment Code")
-
     @api.model
     def create(self, vals):
         equipment = super(MaintenanceEquipment, self).create(vals)
-        if equipment.category_id and not equipment.code:
+        if equipment.category_id and not equipment.serial_no:
             sequence_id = (
                 self.env["maintenance.equipment.category"]
                 .browse(vals["category_id"])
                 .sequence_id
             )
             if sequence_id:
-                equipment.code = sequence_id._next()
+                equipment.serial_no = sequence_id._next()
         return equipment
 
     def write(self, vals):
         result = super(MaintenanceEquipment, self).write(vals)
         for rec in self:
-            if rec.category_id and not rec.code and rec.category_id.sequence_id:
-                rec.code = rec.category_id.sequence_id._next()
+            if rec.category_id and not rec.serial_no and rec.category_id.sequence_id:
+                rec.serial_no = rec.category_id.sequence_id._next()
         return result
