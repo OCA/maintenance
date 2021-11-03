@@ -24,7 +24,7 @@ msgid "Activity Type"
 msgstr ""
 
 #. module: maintenance_plan_activity
-#: code:addons/maintenance_plan_activity/models/maintenance.py:26
+#: code:addons/maintenance_plan_activity/models/maintenance.py:33
 #, python-format
 msgid "Activity automatically generated from maintenance plan"
 msgstr ""
