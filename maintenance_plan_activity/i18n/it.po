@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_plan_activity
+# 	* maintenance_plan_activity
 #
 msgid ""
 msgstr ""
@@ -27,7 +27,7 @@ msgid "Activity Type"
 msgstr "Tipo attività"
 
 #. module: maintenance_plan_activity
-#: code:addons/maintenance_plan_activity/models/maintenance.py:26
+#: code:addons/maintenance_plan_activity/models/maintenance.py:33
 #, python-format
 msgid "Activity automatically generated from maintenance plan"
 msgstr "Attività generata automaticamente dal piano manutenzione"
@@ -105,7 +105,9 @@ msgstr "Attività schedulate"
 
 #. module: maintenance_plan_activity
 #: model:ir.model.fields,help:maintenance_plan_activity.field_maintenance_planned_activity_date_before_request
-msgid "This is the number of days the due date of the activity will beset before the Maintenance request scheduled date"
+msgid ""
+"This is the number of days the due date of the activity will beset before "
+"the Maintenance request scheduled date"
 msgstr ""
 "Questo è il numero di giorni di anticipo della scadenza dell'attività "
 "rispetto alla data schedulata della manutenzione"
