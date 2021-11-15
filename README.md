@@ -21,7 +21,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_maintenance](base_maintenance/) | 14.0.1.1.0 |  | Base Maintenance
 [base_maintenance_config](base_maintenance_config/) | 14.0.1.0.0 |  | Provides general settings for the Maintenance App
-[base_maintenance_group](base_maintenance_group/) | 14.0.1.0.0 |  | Provides base access groups for the Maintenance App
+[base_maintenance_group](base_maintenance_group/) | 14.0.1.0.1 |  | Provides base access groups for the Maintenance App
 [maintenance_equipment_contract](maintenance_equipment_contract/) | 14.0.1.0.0 |  | Manage equipment contracts
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 14.0.1.0.0 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
 [maintenance_equipment_scrap](maintenance_equipment_scrap/) | 14.0.1.0.0 | [![espo-tony](https://github.com/espo-tony.png?size=30px)](https://github.com/espo-tony) | Enhance the functionality for Scrapping Equipments
