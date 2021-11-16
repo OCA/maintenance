@@ -2,7 +2,6 @@
 # Copyright 2019 Eficent Business and IT Consulting Services, S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from odoo import _, api, fields, models
-from .maintenance_plan import get_relativedelta
 
 
 class MaintenanceEquipment(models.Model):
@@ -12,11 +11,9 @@ class MaintenanceEquipment(models.Model):
     maintenance_plan_ids = fields.One2many(string='Maintenance plan',
                                            comodel_name='maintenance.plan',
                                            inverse_name='equipment_id')
-    maintenance_plan_count = fields.Integer(
-        compute='_compute_maintenance_plan_count',
-        string="Maintenance Plan Count", store=True)
-    maintenance_team_required = fields.Boolean(
-        compute='_compute_team_required')
+    maintenance_plan_count = fields.Integer(compute='_compute_maintenance_plan_count',
+                                            string="Maintenance Plan Count", store=True)
+    maintenance_team_required = fields.Boolean(compute='_compute_team_required')
     notes = fields.Text(string='Notes')
 
     @api.depends('maintenance_plan_ids', 'maintenance_plan_ids.active')
@@ -43,9 +40,7 @@ class MaintenanceEquipment(models.Model):
             team = self.env['maintenance.request']._get_default_team_id()
 
         description = self.name if self else maintenance_plan.name
-        kind = maintenance_plan.maintenance_kind_id.name or _(
-            'Unspecified kind'
-        )
+        kind = maintenance_plan.maintenance_kind_id.name or _('Unspecified kind')
         name = _('Preventive Maintenance (%s) - %s') % (kind, description)
 
         return {
@@ -68,9 +63,9 @@ class MaintenanceEquipment(models.Model):
     def _create_new_request(self, maintenance_plan):
         # Compute horizon date adding to today the planning horizon
         horizon_date = fields.Date.from_string(
-            fields.Date.today()) + get_relativedelta(
-            maintenance_plan.maintenance_plan_horizon,
-            maintenance_plan.planning_step)
+            fields.Date.today()) + maintenance_plan.get_relativedelta(
+                maintenance_plan.maintenance_plan_horizon,
+                maintenance_plan.planning_step)
         # We check maintenance request already created and create until
         # planning horizon is met
         furthest_maintenance_todo = self.env['maintenance.request'].search(
@@ -78,22 +73,23 @@ class MaintenanceEquipment(models.Model):
             order="request_date desc", limit=1)
         if furthest_maintenance_todo:
             next_maintenance_date = fields.Date.from_string(
-                furthest_maintenance_todo.request_date) + get_relativedelta(
-                maintenance_plan.interval, maintenance_plan.interval_step)
+                furthest_maintenance_todo.request_date) + \
+                maintenance_plan.get_relativedelta(
+                    maintenance_plan.interval, maintenance_plan.interval_step)
         else:
             next_maintenance_date = fields.Date.from_string(
                 maintenance_plan.next_maintenance_date)
         requests = self.env['maintenance.request']
         # Create maintenance request until we reach planning horizon
         while next_maintenance_date <= horizon_date:
-            if next_maintenance_date >= fields.Date.from_string(
-                    fields.Date.today()):
+            if next_maintenance_date >= fields.Date.from_string(fields.Date.today()):
                 vals = self._prepare_request_from_plan(
                     maintenance_plan, next_maintenance_date
                 )
                 requests |= self.env['maintenance.request'].create(vals)
-            next_maintenance_date = next_maintenance_date + get_relativedelta(
-                maintenance_plan.interval, maintenance_plan.interval_step)
+            next_maintenance_date = next_maintenance_date + \
+                maintenance_plan.get_relativedelta(
+                    maintenance_plan.interval, maintenance_plan.interval_step)
         return requests
 
     @api.model
@@ -124,5 +120,4 @@ class MaintenanceEquipment(models.Model):
             if len(next_plan_dates + next_unplanned_dates) <= 0:
                 equipment.next_action_date = None
             else:
-                equipment.next_action_date = min(next_plan_dates +
-                                                 next_unplanned_dates)
+                equipment.next_action_date = min(next_plan_dates + next_unplanned_dates)
