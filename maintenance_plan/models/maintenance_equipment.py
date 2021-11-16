@@ -5,8 +5,6 @@
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
-from .maintenance_plan import get_relativedelta
-
 
 class MaintenanceEquipment(models.Model):
 
@@ -85,7 +83,9 @@ class MaintenanceEquipment(models.Model):
 
     def _create_new_request(self, maintenance_plan):
         # Compute horizon date adding to today the planning horizon
-        horizon_date = fields.Date.from_string(fields.Date.today()) + get_relativedelta(
+        horizon_date = fields.Date.from_string(
+            fields.Date.today()
+        ) + maintenance_plan.get_relativedelta(
             maintenance_plan.maintenance_plan_horizon, maintenance_plan.planning_step
         )
         # We check maintenance request already created and create until
@@ -98,7 +98,7 @@ class MaintenanceEquipment(models.Model):
         if furthest_maintenance_todo:
             next_maintenance_date = fields.Date.from_string(
                 furthest_maintenance_todo.request_date
-            ) + get_relativedelta(
+            ) + maintenance_plan.get_relativedelta(
                 maintenance_plan.interval, maintenance_plan.interval_step
             )
         else:
@@ -113,8 +113,11 @@ class MaintenanceEquipment(models.Model):
                     maintenance_plan, next_maintenance_date
                 )
                 requests |= self.env["maintenance.request"].create(vals)
-            next_maintenance_date = next_maintenance_date + get_relativedelta(
-                maintenance_plan.interval, maintenance_plan.interval_step
+            next_maintenance_date = (
+                next_maintenance_date
+                + maintenance_plan.get_relativedelta(
+                    maintenance_plan.interval, maintenance_plan.interval_step
+                )
             )
         return requests
 
