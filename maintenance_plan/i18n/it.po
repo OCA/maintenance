@@ -291,7 +291,7 @@ msgid "Plans"
 msgstr "Piani"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_equipment.py:46
+#: code:addons/maintenance_plan/models/maintenance_equipment.py:45
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:191
 #, python-format
 msgid "Preventive Maintenance (%s) - %s"
@@ -308,7 +308,7 @@ msgid "Start maintenance date"
 msgstr "Data inizio manutenzione"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:155
+#: code:addons/maintenance_plan/models/maintenance_plan.py:153
 #, python-format
 msgid ""
 "The maintenance plan %s of equipment %s has generated a request which is not "
@@ -325,7 +325,7 @@ msgid "Under Maintenance"
 msgstr "In manutenzione"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:87
+#: code:addons/maintenance_plan/models/maintenance_plan.py:76
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:70
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:74
 #, python-format
@@ -333,7 +333,7 @@ msgid "Unnamed %s plan (%s)"
 msgstr "Piano %s senza nome (%s)"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_equipment.py:43
+#: code:addons/maintenance_plan/models/maintenance_equipment.py:42
 #, python-format
 msgid "Unspecified kind"
 msgstr "Pianificazione non specificata"
