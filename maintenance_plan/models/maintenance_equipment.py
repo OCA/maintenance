@@ -5,8 +5,6 @@
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
-from .maintenance_plan import get_relativedelta
-
 
 class MaintenanceEquipment(models.Model):
 
@@ -83,38 +81,36 @@ class MaintenanceEquipment(models.Model):
             "company_id": maintenance_plan.company_id.id or self.company_id.id,
         }
 
-    def _create_new_request(self, maintenance_plan):
+    def _create_new_request(self, mtn_plan):
         # Compute horizon date adding to today the planning horizon
-        horizon_date = fields.Date.from_string(fields.Date.today()) + get_relativedelta(
-            maintenance_plan.maintenance_plan_horizon, maintenance_plan.planning_step
+        horizon_date = fields.Date.from_string(
+            fields.Date.today()
+        ) + mtn_plan.get_relativedelta(
+            mtn_plan.maintenance_plan_horizon, mtn_plan.planning_step
         )
         # We check maintenance request already created and create until
         # planning horizon is met
         furthest_maintenance_todo = self.env["maintenance.request"].search(
-            [("maintenance_plan_id", "=", maintenance_plan.id)],
+            [("maintenance_plan_id", "=", mtn_plan.id)],
             order="request_date desc",
             limit=1,
         )
         if furthest_maintenance_todo:
             next_maintenance_date = fields.Date.from_string(
                 furthest_maintenance_todo.request_date
-            ) + get_relativedelta(
-                maintenance_plan.interval, maintenance_plan.interval_step
-            )
+            ) + mtn_plan.get_relativedelta(mtn_plan.interval, mtn_plan.interval_step)
         else:
             next_maintenance_date = fields.Date.from_string(
-                maintenance_plan.next_maintenance_date
+                mtn_plan.next_maintenance_date
             )
         requests = self.env["maintenance.request"]
         # Create maintenance request until we reach planning horizon
         while next_maintenance_date <= horizon_date:
             if next_maintenance_date >= fields.Date.from_string(fields.Date.today()):
-                vals = self._prepare_request_from_plan(
-                    maintenance_plan, next_maintenance_date
-                )
+                vals = self._prepare_request_from_plan(mtn_plan, next_maintenance_date)
                 requests |= self.env["maintenance.request"].create(vals)
-            next_maintenance_date = next_maintenance_date + get_relativedelta(
-                maintenance_plan.interval, maintenance_plan.interval_step
+            next_maintenance_date = next_maintenance_date + mtn_plan.get_relativedelta(
+                mtn_plan.interval, mtn_plan.interval_step
             )
         return requests
 
