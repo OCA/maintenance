@@ -6,17 +6,6 @@ from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 
 
-def get_relativedelta(interval, step):
-    if step == 'day':
-        return relativedelta(days=interval)
-    elif step == 'week':
-        return relativedelta(weeks=interval)
-    elif step == 'month':
-        return relativedelta(months=interval)
-    elif step == 'year':
-        return relativedelta(years=interval)
-
-
 class MaintenancePlan(models.Model):
 
     _name = 'maintenance.plan'
@@ -96,6 +85,16 @@ class MaintenancePlan(models.Model):
                 len(equipment.maintenance_ids.filtered(
                     lambda x: not x.stage_id.done))
 
+    def get_relativedelta(self, interval, step):
+        if step == 'day':
+            return relativedelta(days=interval)
+        elif step == 'week':
+            return relativedelta(weeks=interval)
+        elif step == 'month':
+            return relativedelta(months=interval)
+        elif step == 'year':
+            return relativedelta(years=interval)
+
     @api.depends(
         "interval",
         "interval_step",
@@ -106,16 +105,15 @@ class MaintenancePlan(models.Model):
     def _compute_next_maintenance(self):
         for plan in self.filtered(lambda x: x.interval > 0):
 
-            interval_timedelta = get_relativedelta(plan.interval,
-                                                   plan.interval_step)
+            interval_timedelta = self.get_relativedelta(
+                plan.interval, plan.interval_step)
 
             next_maintenance_todo = self.env["maintenance.request"].search(
-                [
-                    ("maintenance_plan_id", "=", plan.id),
-                    ("stage_id.done", "!=", True),
-                    ("close_date", "=", False),
-                    ("request_date", ">=", plan.start_maintenance_date)
-                ],
+                [("maintenance_plan_id", "=", plan.id),
+                 ("stage_id.done", "!=", True),
+                 ("close_date", "=", False),
+                 ("request_date", ">=", plan.start_maintenance_date)
+                 ],
                 order="request_date asc",
                 limit=1,
             )

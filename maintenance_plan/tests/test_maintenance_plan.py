@@ -192,3 +192,14 @@ class TestMaintenancePlan(test_common.TransactionCase):
                 self.weekly_kind.name,
                 self.maintenance_plan_4.name)
         )
+
+    def test_get_relativedelta(self):
+        plan = self.maintenance_plan_1
+        result = plan.get_relativedelta(1, 'day')
+        self.assertEqual(relativedelta(days=1), result)
+        result = plan.get_relativedelta(1, 'week')
+        self.assertEqual(relativedelta(weeks=1), result)
+        result = plan.get_relativedelta(1, 'month')
+        self.assertEqual(relativedelta(months=1), result)
+        result = plan.get_relativedelta(1, 'year')
+        self.assertEqual(relativedelta(years=1), result)
