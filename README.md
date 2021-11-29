@@ -7,7 +7,7 @@
 
 # maintenance
 
-TODO: add repo description.
+Maintenance modules
 
 <!-- /!\ do not modify below this line -->
 
