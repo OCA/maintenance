@@ -27,7 +27,9 @@ class MaintenanceEquipment(models.Model):
         compute="_compute_child_count", string="Number of child equipments"
     )
     display_name = fields.Char(compute="_compute_display_name")
-    complete_name = fields.Char(compute="_compute_complete_name", store=True)
+    complete_name = fields.Char(
+        compute="_compute_complete_name", store=True, recursive=True
+    )
     parent_path = fields.Char(index=True)
 
     def name_get(self):
