@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="name">equipment.form</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    name="preview_child_list"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-sitemap"
+                >
+                    <field string="Children" name="child_count" widget="statinfo" />
+                </button>
+            </div>
+            <field name="category_id" position="before">
+                <field
+                    name="parent_id"
+                    readonly="not context.get('parent_id_editable', True)"
+                />
+            </field>
+        </field>
+    </record>
+    <record id="hr_equipment_view_tree" model="ir.ui.view">
+        <field name="name">equipment.tree</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field
+                    name="parent_id"
+                    invisible="not context.get('parent_id_editable', True)"
+                />
+            </field>
+        </field>
+    </record>
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="name">equipment.search</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <field name="name" position="attributes">
+                <attribute
+                    name="filter_domain"
+                >['|','|','|',('complete_name','ilike',self),('model','ilike',self),('serial_no','ilike',self),('partner_ref', 'ilike', self)]</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
