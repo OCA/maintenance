@@ -8,7 +8,7 @@
     "maintainers": ["dalonsod"],
     "website": "https://github.com/OCA/maintenance",
     "category": "Equipments, Assets, Internal Hardware, Allocation Tracking",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "license": "LGPL-3",
     "depends": ["maintenance"],
     "data": ["views/maintenance_equipment_views.xml"],
