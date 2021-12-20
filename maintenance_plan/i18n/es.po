@@ -304,7 +304,7 @@ msgid "Plans"
 msgstr "Planes"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_equipment.py:49
+#: code:addons/maintenance_plan/models/maintenance_equipment.py:44
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:191
 #, python-format
 msgid "Preventive Maintenance (%s) - %s"
@@ -338,7 +338,7 @@ msgid "Under Maintenance"
 msgstr "En mantenimiento"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:89
+#: code:addons/maintenance_plan/models/maintenance_plan.py:78
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:70
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:74
 #, python-format
@@ -346,7 +346,7 @@ msgid "Unnamed %s plan (%s)"
 msgstr "Plan %s sin nombre (%s)"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_equipment.py:46
+#: code:addons/maintenance_plan/models/maintenance_equipment.py:43
 #, python-format
 msgid "Unspecified kind"
 msgstr "Tipo no especificado"
