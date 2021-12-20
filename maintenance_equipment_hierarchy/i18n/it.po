@@ -22,6 +22,12 @@ msgid "Child Equipments"
 msgstr "Attrezzature discendenti"
 
 #. module: maintenance_equipment_hierarchy
+#: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:0
+#, python-format
+msgid "Child equipment of %s"
+msgstr ""
+
+#. module: maintenance_equipment_hierarchy
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_hierarchy.hr_equipment_view_form
 msgid "Children"
 msgstr "Discendente"
@@ -45,6 +51,16 @@ msgstr "Batteria laptop HP"
 #: model:maintenance.equipment,name:maintenance_equipment_hierarchy.equipment_computer9_2
 msgid "HP Laptop case"
 msgstr "Case laptop HP"
+
+#. module: maintenance_equipment_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_equipment_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment____last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_left
