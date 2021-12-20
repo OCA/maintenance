@@ -1,7 +1,7 @@
 # Copyright 2020 ForgeFlow S.L. (https://forgeflow.com)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from odoo import api, fields, models
+from odoo import _, api, fields, models
 
 
 class MaintenanceEquipment(models.Model):
@@ -55,7 +55,7 @@ class MaintenanceEquipment(models.Model):
 
     def preview_child_list(self):
         return {
-            "name": "Child equipment of %s" % self.name,
+            "name": _("Child equipment of %s") % self.name,
             "type": "ir.actions.act_window",
             "res_model": "maintenance.equipment",
             "res_id": self.id,
@@ -65,5 +65,5 @@ class MaintenanceEquipment(models.Model):
                 "default_parent_id": self.id,
                 "parent_id_editable": False,
             },
-            "domain": [("id", "in", self.child_ids.ids)],
+            "domain": [("parent_id", "=", self.id)],
         }
