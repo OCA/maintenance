@@ -1,0 +1,115 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_plan_activity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__date_before_request
+msgid "# Days before request"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__activity_type_id
+msgid "Activity Type"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: code:addons/maintenance_plan_activity/models/maintenance.py:0
+#, python-format
+msgid "Activity automatically generated from maintenance plan"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_plan__display_name
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_plan__id
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_plan____last_update
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model,name:maintenance_plan_activity.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model,name:maintenance_plan_activity.model_maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__maintenance_plan_id
+msgid "Maintenance Plan"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model_terms:ir.ui.view,arch_db:maintenance_plan_activity.maintenance_planned_activity_view_tree
+msgid "Maintenance Planned Activities"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model,name:maintenance_plan_activity.model_maintenance_planned_activity
+msgid "Maintenance Planned Activity"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_plan__planned_activity_ids
+msgid "Planned Activities"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__user_id
+msgid "Responsible"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model_terms:ir.ui.view,arch_db:maintenance_plan_activity.maintenance_plan_view_form
+msgid "Scheduled Activities"
+msgstr ""
+
+#. module: maintenance_plan_activity
+#: model:ir.model.fields,help:maintenance_plan_activity.field_maintenance_planned_activity__date_before_request
+msgid ""
+"This is the number of days the due date of the activity will beset before "
+"the Maintenance request scheduled date"
+msgstr ""
