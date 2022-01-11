@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-12-04 12:36+0000\n"
+"PO-Revision-Date: 2022-01-11 14:39+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: none\n"
 "Language: pt\n"
@@ -25,7 +25,7 @@ msgstr "Equipamentos Descendentes"
 #: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:0
 #, python-format
 msgid "Child equipment of %s"
-msgstr ""
+msgstr "Equipamento descendente de %s"
 
 #. module: maintenance_equipment_hierarchy
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_hierarchy.hr_equipment_view_form
