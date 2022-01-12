@@ -10,9 +10,9 @@ class MaintenanceEquipmentStatus(models.Model):
     _order = "sequence"
 
     active = fields.Boolean(default=True)
-    name = fields.Char("Name")
+    name = fields.Char()
     note = fields.Text("Notes")
-    sequence = fields.Integer(string="Sequence", default=10)
+    sequence = fields.Integer(default=10)
     category_ids = fields.Many2many(
         string="Categories",
         comodel_name="maintenance.equipment.category",
