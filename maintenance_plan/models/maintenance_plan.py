@@ -161,6 +161,14 @@ class MaintenancePlan(models.Model):
                     plan.maintenance_kind_id.name, plan.equipment_id.name))
         super().unlink()
 
+    def write(self, vals):
+        if "start_maintenance_date" in vals and (
+            fields.Date.from_string(vals["start_maintenance_date"])
+            > self.next_maintenance_date
+        ):
+            vals["next_maintenance_date"] = vals["start_maintenance_date"]
+        return super(MaintenancePlan, self).write(vals)
+
     _sql_constraints = [
         ('equipment_kind_uniq', 'unique (equipment_id, maintenance_kind_id)',
          "You cannot define multiple times the same maintenance kind on an "
