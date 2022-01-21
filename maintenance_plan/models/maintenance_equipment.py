@@ -93,14 +93,20 @@ class MaintenanceEquipment(models.Model):
         )
         # We check maintenance request already created and create until
         # planning horizon is met
-        furthest_maintenance_todo = self.env["maintenance.request"].search(
-            [("maintenance_plan_id", "=", maintenance_plan.id)],
+        start_maintenance_date_plan = fields.Date.from_string(
+            maintenance_plan.start_maintenance_date
+        )
+        furthest_maintenance_request = self.env["maintenance.request"].search(
+            [
+                ("maintenance_plan_id", "=", maintenance_plan.id),
+                ("request_date", ">=", start_maintenance_date_plan),
+            ],
             order="request_date desc",
             limit=1,
         )
-        if furthest_maintenance_todo:
+        if furthest_maintenance_request:
             next_maintenance_date = fields.Date.from_string(
-                furthest_maintenance_todo.request_date
+                furthest_maintenance_request.request_date
             ) + get_relativedelta(
                 maintenance_plan.interval, maintenance_plan.interval_step
             )
