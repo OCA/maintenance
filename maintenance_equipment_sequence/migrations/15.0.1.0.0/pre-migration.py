@@ -5,36 +5,6 @@ from openupgradelib import openupgrade
 
 @openupgrade.migrate()
 def migrate(env, version):
-    """
-    Fields 'code' and 'serial_no' of model 'maintenance.equipment' fulfill the
-    same function, which is to have an internal identifier of an equipment.
-    Therefore, as a solution we will use only one column.
-
-    Field 'serial_no' is the one in odoo core and the one supposedly used for
-    identifying our equipment.
-
-    Based on this assumption, this migration will save on 'serial_no' column
-    all the original values plus all the 'code' values that are null in
-    'serial_no' original column. And after this, it will delete 'code' column.
-
-
-
-    POSSIBLE ISSUE:
-    Considering that this migration may not work correctly to everyone,
-    because it's giving priority to 'serial_no' before 'code', we will create
-    two new columns 'old_code' and 'old_serial_no' with the values of the
-    original columns.
-
-    ISSUE: If you identify your equipments with the 'code' field and you prefer to
-    save it's values rather than 'serial_no' values. We provide you the following
-    query:
-
-    SQL STATEMENT:
-        UPDATE maintenance_equipment
-        SET serial_no = old_code
-        WHERE old_code IS NOT NULL;
-    """
-
     if not version:
         return
 
