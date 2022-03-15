@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- equipment : views -->
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="name">equipment.form</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="header" position="inside">
+                <field
+                    name="status_id"
+                    widget="statusbar"
+                    options="{'clickable': '1'}"
+                    domain="['|', ('category_ids', 'in', [category_id]), ('category_ids', '=', False)]"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_view_tree" model="ir.ui.view">
+        <field name="name">equipment.tree</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="status_id" />
+            </field>
+        </field>
+    </record>
+    <record id="hr_equipment_view_kanban" model="ir.ui.view">
+        <field name="name">equipment.kanban</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
+        <field name="arch" type="xml">
+            <field name="activity_state" position="after">
+                <field name="status_id" />
+            </field>
+            <xpath expr="//div[hasclass('oe_kanban_bottom_left')]" position="inside">
+                <div class="badge badge-primary" t-if="record.status_id.value">
+                    <t t-raw="record.status_id.value" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

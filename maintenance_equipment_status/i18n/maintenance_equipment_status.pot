@@ -1,0 +1,128 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_status
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__active
+msgid "Active"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_search
+msgid "Archived"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__category_ids
+msgid "Categories"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model_terms:ir.actions.act_window,help:maintenance_equipment_status.maintenance_equipment_status_action
+msgid "Click to set a new status for your equipments."
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_search
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_tree
+msgid "Equipment Status"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.actions.act_window,name:maintenance_equipment_status.maintenance_equipment_status_action
+#: model:ir.ui.menu,name:maintenance_equipment_status.menu_maintenance_equipment_status_act
+msgid "Equipment Statuses"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model,name:maintenance_equipment_status.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model,name:maintenance_equipment_status.model_maintenance_equipment_status
+msgid "Maintenance Equipment Status"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__name
+msgid "Name"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__note
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
+msgid "Notes"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment__status_id
+msgid "Status"
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model:ir.model.fields,help:maintenance_equipment_status.field_maintenance_equipment_status__category_ids
+msgid ""
+"When set, this status will only be applicable to the equipments under these "
+"categories."
+msgstr ""
+
+#. module: maintenance_equipment_status
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
+msgid "e.g. Operational"
+msgstr ""
