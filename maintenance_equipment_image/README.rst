@@ -72,13 +72,13 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-.. |maintainer-cubells| image:: https://github.com/cubells.png?size=40px
-    :target: https://github.com/cubells
-    :alt: cubells
+.. |maintainer-pedrocasi| image:: https://github.com/pedrocasi.png?size=40px
+    :target: https://github.com/pedrocasi
+    :alt: pedrocasi
 
 Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
-|maintainer-cubells| 
+|maintainer-pedrocasi| 
 
 This module is part of the `OCA/maintenance <https://github.com/OCA/maintenance/tree/12.0/maintenance_equipment_image>`_ project on GitHub.
 
