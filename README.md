@@ -20,6 +20,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_contract](maintenance_equipment_contract/) | 12.0.1.0.0 |  | Manage equipment contracts
 [maintenance_equipment_custom_info](maintenance_equipment_custom_info/) | 12.0.2.0.0 |  | Add custom info in equipments
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 12.0.1.0.0 |  | Manage equipment hierarchy
+[maintenance_equipment_image](maintenance_equipment_image/) | 12.0.1.0.0 | [![pedrocasi](https://github.com/pedrocasi.png?size=30px)](https://github.com/pedrocasi) | Adds images to equipment.
 [maintenance_equipment_scrap](maintenance_equipment_scrap/) | 12.0.1.0.0 |  | Enhance the functionality for Scrapping Equipments
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 12.0.1.0.0 |  | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 12.0.1.0.0 |  | Maintenance Equipment Status
