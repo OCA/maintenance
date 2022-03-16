@@ -16,6 +16,7 @@ setuptools.setup(
         'odoo12-addon-maintenance_equipment_contract',
         'odoo12-addon-maintenance_equipment_custom_info',
         'odoo12-addon-maintenance_equipment_hierarchy',
+        'odoo12-addon-maintenance_equipment_image',
         'odoo12-addon-maintenance_equipment_scrap',
         'odoo12-addon-maintenance_equipment_sequence',
         'odoo12-addon-maintenance_equipment_status',
