@@ -13,6 +13,7 @@ setuptools.setup(
         'odoo14-addon-base_maintenance_group',
         'odoo14-addon-maintenance_equipment_contract',
         'odoo14-addon-maintenance_equipment_hierarchy',
+        'odoo14-addon-maintenance_equipment_image',
         'odoo14-addon-maintenance_equipment_scrap',
         'odoo14-addon-maintenance_equipment_sequence',
         'odoo14-addon-maintenance_equipment_status',
