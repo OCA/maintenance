@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button
+                    name="action_view_equipments"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-cubes"
+                    attrs="{'invisible': [('equipment_count', '=', 0)]}"
+                >
+                    <field
+                        string="Equipment(s)"
+                        name="equipment_count"
+                        widget="statinfo"
+                    />
+                </button>
+            </xpath>
+            <xpath
+                expr="//field[@name='invoice_line_ids']/tree/field[@name='quantity']"
+                position="before"
+            >
+                <field
+                    name="equipment_category_id"
+                    attrs="{'column_invisible': [('parent.move_type', '!=', 'in_invoice')]}"
+                    optional="hide"
+                />
+            </xpath>
+            <xpath
+                expr="//notebook//field[@name='line_ids']/tree/field[@name='date_maturity']"
+                position="after"
+            >
+                <field
+                    name="equipment_category_id"
+                    domain="[('company_id','=', parent.company_id)]"
+                    optional="hide"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
