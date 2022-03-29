@@ -1,0 +1,88 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maintenance_account
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move__display_name
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:maintenance_account.field_maintenance_equipment__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__equipment_category_id
+msgid "Equipment Category"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model.fields,field_description:maintenance_account.field_account_bank_statement_line__equipment_count
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move__equipment_count
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__equipment_count
+#: model:ir.model.fields,field_description:maintenance_account.field_account_payment__equipment_count
+msgid "Equipment Count"
+msgstr ""
+
+#. module: maintenance_account
+#: model_terms:ir.ui.view,arch_db:maintenance_account.view_move_form
+msgid "Equipment(s)"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__equipment_ids
+msgid "Equipments"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move__id
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__id
+#: model:ir.model.fields,field_description:maintenance_account.field_maintenance_equipment__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model,name:maintenance_account.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model,name:maintenance_account.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move____last_update
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:maintenance_account.field_maintenance_equipment____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model,name:maintenance_account.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model.fields,field_description:maintenance_account.field_maintenance_equipment__move_id
+msgid "Move"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model.fields,field_description:maintenance_account.field_maintenance_equipment__move_line_id
+msgid "Move line"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model.fields,help:maintenance_account.field_maintenance_equipment__move_id
+msgid "The move of this entry line."
+msgstr ""
