@@ -26,7 +26,7 @@ addon | version | maintainers | summary
 [base_maintenance_group](base_maintenance_group/) | 13.0.1.0.1 |  | Provides base access groups for the Maintenance App
 [maintenance_equipment_always_fold](maintenance_equipment_always_fold/) | 13.0.1.0.0 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Equipment categories will always be folded if I indicate it with an always_fold Boolean; if not, let him behave as before
 [maintenance_equipment_category_kanban](maintenance_equipment_category_kanban/) | 13.0.1.1.0 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Sets kanban category groping by default for equipments
-[maintenance_equipment_contract](maintenance_equipment_contract/) | 13.0.1.0.1 |  | Manage equipment contracts
+[maintenance_equipment_contract](maintenance_equipment_contract/) | 13.0.1.0.2 |  | Manage equipment contracts
 [maintenance_equipment_custom_info](maintenance_equipment_custom_info/) | 13.0.1.0.0 |  | Add custom info in equipments
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 13.0.1.0.2 |  | Manage equipment hierarchy
 [maintenance_equipment_scrap](maintenance_equipment_scrap/) | 13.0.1.0.0 |  | Enhance the functionality for Scrapping Equipments
