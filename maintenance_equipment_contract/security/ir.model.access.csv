@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_equipment_contract,equipment.contract.user,model_contract_contract,maintenance.group_equipment_manager,1,0,0,0
+access_equipment_contract_modification,equipment.contract.modification.user,contract.model_contract_modification,maintenance.group_equipment_manager,1,0,0,0
+access_equipment_contract_line,equipment.contract.line.user,contract.model_contract_line,maintenance.group_equipment_manager,1,0,0,0
