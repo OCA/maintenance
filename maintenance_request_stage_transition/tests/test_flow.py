@@ -47,7 +47,7 @@ class TestFlow(TransactionCase):
             self.request, self.env["maintenance.request"].search(attr["invisible"])
         )
         getattr(
-            self.request.with_context(json.loads(button_stage.attrib["context"])),
+            self.request.with_context(**json.loads(button_stage.attrib["context"])),
             button.attrib["name"],
         )()
         self.request.refresh()
