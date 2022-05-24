@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-30 07:28+0000\n"
-"PO-Revision-Date: 2022-03-30 07:28+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,6 +28,7 @@ msgstr ""
 #. module: maintenance_account
 #: model:ir.model.fields,field_description:maintenance_account.field_account_bank_statement_line__equipment_count
 #: model:ir.model.fields,field_description:maintenance_account.field_account_move__equipment_count
+#: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__equipment_count
 #: model:ir.model.fields,field_description:maintenance_account.field_account_payment__equipment_count
 msgid "Equipment Count"
 msgstr ""
@@ -81,4 +80,9 @@ msgstr ""
 #. module: maintenance_account
 #: model:ir.model.fields,field_description:maintenance_account.field_maintenance_equipment__move_line_id
 msgid "Move line"
+msgstr ""
+
+#. module: maintenance_account
+#: model:ir.model.fields,help:maintenance_account.field_maintenance_equipment__move_id
+msgid "The move of this entry line."
 msgstr ""
