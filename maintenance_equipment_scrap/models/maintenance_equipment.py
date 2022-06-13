@@ -18,11 +18,10 @@ class MaintenanceEquipment(models.Model):
 
     def action_perform_scrap(self):
         self.ensure_one()
-        action = self.env.ref(
+        action = self.env["ir.actions.act_window"]._for_xml_id(
             "maintenance_equipment_scrap.wizard_perform_equipment_scrap_action"
         )
-        result = action.read()[0]
-        return result
+        return action
 
     @api.depends("category_id.equipment_scrap_template_id")
     def _compute_equipment_scrap_template_id(self):

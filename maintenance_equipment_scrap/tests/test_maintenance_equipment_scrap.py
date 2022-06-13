@@ -38,9 +38,9 @@ class TestMaintenanceEquipmentScrap(common.TransactionCase):
         self.assertEqual(self.equipment1.scrap_date, wizard.scrap_date)
 
         action = self.equipment2.action_perform_scrap()
-        action2 = self.env.ref(
+        action2 = self.env["ir.actions.act_window"]._for_xml_id(
             "maintenance_equipment_scrap.wizard_perform_equipment_scrap_action"
-        ).read()[0]
+        )
         self.assertEqual(action, action2)
 
     def test_02_onchange(self):
