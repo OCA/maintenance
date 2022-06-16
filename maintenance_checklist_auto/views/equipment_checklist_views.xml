@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_equipment_checklist_tree" model="ir.ui.view">
+        <field name="name">equipment.checklist.tree</field>
+        <field name="model">equipment.checklist</field>
+        <field name="inherit_id" ref="maintenance_checklist.view_equipment_checklist_tree"/>
+        <field name="arch" type="xml">
+            <field name="description" position="after">
+                <field name="equipment_id"/>
+            </field>
+
+        </field>
+    </record>
+
+    <record id="view_equipment_checklist_form" model="ir.ui.view">
+        <field name="name">equipment.checklist.form</field>
+        <field name="model">equipment.checklist</field>
+        <field name="inherit_id" ref="maintenance_checklist.view_equipment_checklist_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group/group[1]" position="after">
+                <group>
+                    <field name="equipment_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
