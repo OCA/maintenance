@@ -5,11 +5,11 @@ from datetime import timedelta
 
 from dateutil.relativedelta import relativedelta
 
-import odoo.tests.common as test_common
 from odoo import _, fields
+from odoo.tests import common
 
 
-class TestMaintenancePlan(test_common.TransactionCase):
+class TestMaintenancePlan(common.TransactionCase):
     def setUp(self):
         super().setUp()
         self.env = self.env(
@@ -26,12 +26,11 @@ class TestMaintenancePlan(test_common.TransactionCase):
         self.done_stage = self.env.ref("maintenance.stage_3")
 
         self.equipment_1 = self.maintenance_equipment_obj.create({"name": "Laptop 1"})
-        today = fields.Date.today()
-        self.today_date = fields.Date.from_string(today)
+        self.today_date = fields.Date.today()
         self.maintenance_plan_1 = self.maintenance_plan_obj.create(
             {
                 "equipment_id": self.equipment_1.id,
-                "start_maintenance_date": today,
+                "start_maintenance_date": self.today_date,
                 "interval": 1,
                 "interval_step": "month",
                 "maintenance_plan_horizon": 2,
@@ -103,8 +102,8 @@ class TestMaintenancePlan(test_common.TransactionCase):
         self.maintenance_plan_1._compute_next_maintenance()
         # Check next maintenance date is 1 month from start date
         self.assertEqual(
-            fields.Date.from_string(self.maintenance_plan_1.next_maintenance_date),
-            fields.Date.from_string(self.maintenance_plan_1.start_maintenance_date)
+            self.maintenance_plan_1.next_maintenance_date,
+            self.maintenance_plan_1.start_maintenance_date
             + relativedelta(months=self.maintenance_plan_1.interval),
         )
 
@@ -116,22 +115,22 @@ class TestMaintenancePlan(test_common.TransactionCase):
         )
         self.assertEqual(len(generated_requests), 3)
         next_maintenance = generated_requests[0]
-        next_date = fields.Date.from_string(next_maintenance.request_date)
+        next_date = next_maintenance.request_date
         # First maintenance was planned today:
         self.assertEqual(next_date, self.today_date)
         self.assertEqual(
             next_date,
-            fields.Date.from_string(self.maintenance_plan_1.start_maintenance_date),
+            self.maintenance_plan_1.start_maintenance_date,
         )
         self.assertEqual(
             next_date,
-            fields.Date.from_string(self.maintenance_plan_1.next_maintenance_date),
+            self.maintenance_plan_1.next_maintenance_date,
         )
         # Complete request:
         next_maintenance.stage_id = self.done_stage
         # Check next one:
         next_maintenance = generated_requests[1]
-        next_date = fields.Date.from_string(next_maintenance.request_date)
+        next_date = next_maintenance.request_date
         # This should be expected next month:
         self.assertEqual(
             next_date,
@@ -139,12 +138,12 @@ class TestMaintenancePlan(test_common.TransactionCase):
         )
         self.assertEqual(
             next_date,
-            fields.Date.from_string(self.maintenance_plan_1.next_maintenance_date),
+            self.maintenance_plan_1.next_maintenance_date,
         )
         # Complete request and Check next one:
         next_maintenance.stage_id = self.done_stage
         next_maintenance = generated_requests[2]
-        next_date = fields.Date.from_string(next_maintenance.request_date)
+        next_date = next_maintenance.request_date
         # This one should be expected in 2 months:
         self.assertEqual(
             next_date,
@@ -153,7 +152,7 @@ class TestMaintenancePlan(test_common.TransactionCase):
         )
         self.assertEqual(
             next_date,
-            fields.Date.from_string(self.maintenance_plan_1.next_maintenance_date),
+            self.maintenance_plan_1.next_maintenance_date,
         )
         # Move it to a date before `start_maintenance_date` (the request should
         # be ignored)
@@ -163,10 +162,10 @@ class TestMaintenancePlan(test_common.TransactionCase):
         next_maintenance.request_date = past_date
         self.assertNotEqual(
             past_date,
-            fields.Date.from_string(self.maintenance_plan_1.next_maintenance_date),
+            self.maintenance_plan_1.next_maintenance_date,
         )
         self.assertEqual(
-            fields.Date.from_string(self.maintenance_plan_1.next_maintenance_date),
+            self.maintenance_plan_1.next_maintenance_date,
             self.today_date
             + relativedelta(months=2 * self.maintenance_plan_1.interval),
         )
@@ -177,13 +176,13 @@ class TestMaintenancePlan(test_common.TransactionCase):
         next_maintenance.request_date = future_date
         self.assertEqual(
             future_date,
-            fields.Date.from_string(self.maintenance_plan_1.next_maintenance_date),
+            self.maintenance_plan_1.next_maintenance_date,
         )
         # Complete request in that date, next expected date should be 1 month
         # after latest request done.:
         next_maintenance.stage_id = self.done_stage
         self.assertEqual(
-            fields.Date.from_string(self.maintenance_plan_1.next_maintenance_date),
+            self.maintenance_plan_1.next_maintenance_date,
             self.today_date
             + relativedelta(months=6 * self.maintenance_plan_1.interval),
         )
@@ -201,7 +200,7 @@ class TestMaintenancePlan(test_common.TransactionCase):
 
         for req in generated_requests:
             self.assertEqual(
-                fields.Date.from_string(req.schedule_date), request_date_schedule
+                fields.Date.to_date(req.schedule_date), request_date_schedule
             )
             request_date_schedule = request_date_schedule + relativedelta(months=1)
 
@@ -247,6 +246,6 @@ class TestMaintenancePlan(test_common.TransactionCase):
 
         self.assertEqual(len(generated_requests), 4)
         self.assertEqual(
-            fields.Date.from_string(generated_requests[-1].request_date),
+            generated_requests[-1].request_date,
             self.today_date + timedelta(weeks=9),
         )
