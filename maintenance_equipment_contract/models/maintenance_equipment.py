@@ -19,7 +19,9 @@ class MaintenanceEquipment(models.Model):
             record.contract_count = len(record.contract_ids.ids)
 
     def action_view_contracts(self):
-        action = self.env.ref("contract.action_customer_contract").read()[0]
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "contract.action_customer_contract"
+        )
         if len(self.contract_ids) > 1:
             action["domain"] = [("id", "in", self.contract_ids.ids)]
         elif self.contract_ids:
