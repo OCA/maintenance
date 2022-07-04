@@ -56,9 +56,9 @@ class MaintenanceEquipment(models.Model):
                 )
 
     def _prepare_request_from_plan(self, maintenance_plan, next_maintenance_date):
-        team = maintenance_plan.maintenance_team_id.id or self.maintenance_team_id.id
-        if not team:
-            team = self.env["maintenance.request"]._get_default_team_id()
+        team_id = maintenance_plan.maintenance_team_id.id or self.maintenance_team_id.id
+        if not team_id:
+            team_id = self.env["maintenance.request"]._get_default_team_id()
 
         description = self.name if self else maintenance_plan.name
         kind = maintenance_plan.maintenance_kind_id.name or _("Unspecified kind")
@@ -73,7 +73,7 @@ class MaintenanceEquipment(models.Model):
             "maintenance_type": "preventive",
             "owner_user_id": self.owner_user_id.id or self.env.user.id,
             "user_id": self.technician_user_id.id,
-            "maintenance_team_id": team,
+            "maintenance_team_id": team_id,
             "maintenance_kind_id": maintenance_plan.maintenance_kind_id.id,
             "maintenance_plan_id": maintenance_plan.id,
             "duration": maintenance_plan.duration,
@@ -83,16 +83,12 @@ class MaintenanceEquipment(models.Model):
 
     def _create_new_request(self, mtn_plan):
         # Compute horizon date adding to today the planning horizon
-        horizon_date = fields.Date.from_string(
-            fields.Date.today()
-        ) + mtn_plan.get_relativedelta(
-            mtn_plan.maintenance_plan_horizon, mtn_plan.planning_step
+        horizon_date = fields.Date.today() + mtn_plan.get_relativedelta(
+            mtn_plan.maintenance_plan_horizon, mtn_plan.planning_step or "year"
         )
         # We check maintenance request already created and create until
         # planning horizon is met
-        start_maintenance_date_plan = fields.Date.from_string(
-            mtn_plan.start_maintenance_date
-        )
+        start_maintenance_date_plan = mtn_plan.start_maintenance_date
         furthest_maintenance_request = self.env["maintenance.request"].search(
             [
                 ("maintenance_plan_id", "=", mtn_plan.id),
@@ -102,21 +98,22 @@ class MaintenanceEquipment(models.Model):
             limit=1,
         )
         if furthest_maintenance_request:
-            next_maintenance_date = fields.Date.from_string(
+            next_maintenance_date = (
                 furthest_maintenance_request.request_date
-            ) + mtn_plan.get_relativedelta(mtn_plan.interval, mtn_plan.interval_step)
-        else:
-            next_maintenance_date = fields.Date.from_string(
-                mtn_plan.next_maintenance_date
+                + mtn_plan.get_relativedelta(
+                    mtn_plan.interval, mtn_plan.interval_step or "year"
+                )
             )
+        else:
+            next_maintenance_date = mtn_plan.next_maintenance_date
         requests = self.env["maintenance.request"]
         # Create maintenance request until we reach planning horizon
         while next_maintenance_date <= horizon_date:
-            if next_maintenance_date >= fields.Date.from_string(fields.Date.today()):
+            if next_maintenance_date >= fields.Date.today():
                 vals = self._prepare_request_from_plan(mtn_plan, next_maintenance_date)
                 requests |= self.env["maintenance.request"].create(vals)
             next_maintenance_date = next_maintenance_date + mtn_plan.get_relativedelta(
-                mtn_plan.interval, mtn_plan.interval_step
+                mtn_plan.interval, mtn_plan.interval_step or "year"
             )
         return requests
 

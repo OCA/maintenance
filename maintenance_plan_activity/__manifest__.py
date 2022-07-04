@@ -10,7 +10,7 @@
     "version": "14.0.1.0.1",
     "license": "AGPL-3",
     "author": "ForgeFlow, Odoo Community Association (OCA)",
-    "maintainers": ["AdriaGForgeFlow"],
+    "maintainers": [],
     "website": "https://github.com/OCA/maintenance",
     "depends": ["maintenance_plan"],
     "data": ["security/ir.model.access.csv", "views/maintenance_views.xml"],
