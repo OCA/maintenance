@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_status](maintenance_equipment_status/) | 15.0.1.0.0 |  | Maintenance Equipment Status
 [maintenance_plan](maintenance_plan/) | 15.0.1.0.1 |  | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 15.0.1.0.1 | [![AdriaGForgeFlow](https://github.com/AdriaGForgeFlow.png?size=30px)](https://github.com/AdriaGForgeFlow) | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
+[maintenance_request_sequence](maintenance_request_sequence/) | 15.0.1.0.0 |  | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 15.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Manage transition visibility and management between stages
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 15.0.1.0.0 |  | Create hierarchies on teams
 
