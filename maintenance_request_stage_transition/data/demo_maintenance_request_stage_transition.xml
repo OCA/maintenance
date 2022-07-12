@@ -1,0 +1,19 @@
+<odoo noupdate="1">
+        <record id="maintenance.stage_0" model="maintenance.stage">
+            <field name="button_class">info</field>
+            <field name="next_stage_ids" eval="[(4, ref('maintenance.stage_1'))]" />
+        </record>
+        <record id="maintenance.stage_1" model="maintenance.stage">
+            <field name="button_class">warning</field>
+            <field
+            name="next_stage_ids"
+            eval="[(4, ref('maintenance.stage_3')), (4, ref('maintenance.stage_4'))]"
+        />
+        </record>
+        <record id="maintenance.stage_3" model="maintenance.stage">
+            <field name="button_class">success</field>
+        </record>
+        <record id="maintenance.stage_4" model="maintenance.stage">
+            <field name="button_class">danger</field>
+        </record>
+</odoo>
