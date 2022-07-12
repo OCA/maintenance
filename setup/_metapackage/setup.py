@@ -15,6 +15,7 @@ setuptools.setup(
         'odoo-addon-maintenance_equipment_status>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_plan>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_plan_activity>=15.0dev,<15.1dev',
+        'odoo-addon-maintenance_request_stage_transition>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_team_hierarchy>=15.0dev,<15.1dev',
     ],
     classifiers=[
