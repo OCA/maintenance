@@ -11,6 +11,7 @@ from odoo.exceptions import UserError, ValidationError
 class MaintenancePlan(models.Model):
     _name = "maintenance.plan"
     _description = "Maintenance Plan"
+    _inherit = ["mail.thread", "mail.activity.mixin"]
 
     name = fields.Char("Description")
     active = fields.Boolean(default=True)
