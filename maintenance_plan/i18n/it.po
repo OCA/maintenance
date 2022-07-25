@@ -17,6 +17,11 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__active
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
 msgid "Active"
@@ -28,9 +33,34 @@ msgid "Active Kind"
 msgstr "Pianificazione attiva"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Archived"
 msgstr "Archiviato"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__company_id
@@ -77,10 +107,8 @@ msgid "Description"
 msgstr "Descrizione"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__display_name
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__display_name
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__display_name
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__display_name
 msgid "Display Name"
 msgstr "Nome visualizzato"
 
@@ -95,17 +123,57 @@ msgid "Equipment"
 msgstr "Attrezzatura"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__interval
 msgid "Frequency"
 msgstr "Frequenza"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__id
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__id
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__id
 msgid "ID"
 msgstr "ID"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_needaction
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_error
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
@@ -129,10 +197,13 @@ msgid "Interval between each maintenance"
 msgstr "Intervallo tra le manutenzioni"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind____last_update
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan____last_update
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request____last_update
 msgid "Last Modified on"
 msgstr "Ultima modifica il"
 
@@ -161,6 +232,11 @@ msgstr ""
 "intervallo"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid "Maintenace Equipment must belong to the equipment's company"
@@ -185,11 +261,6 @@ msgid "Maintenance Kind"
 msgstr "Pianificazione manutenzione"
 
 #. module: maintenance_plan
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_kind_view_tree
-msgid "Maintenance Kinds"
-msgstr "Pianificazioni manutenzione"
-
-#. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Maintenance Plan"
@@ -203,7 +274,6 @@ msgstr "Conteggio piano di manutenzione"
 #. module: maintenance_plan
 #: model:ir.ui.menu,name:maintenance_plan.menu_m_plan_form
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_tree
 msgid "Maintenance Plans"
 msgstr "Piani di manutenzione"
 
@@ -275,6 +345,16 @@ msgid "Maintenance requests"
 msgstr "Richieste di manutenzione"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__month
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__planning_step__month
 msgid "Month(s)"
@@ -286,14 +366,34 @@ msgid "Monthly"
 msgstr "Mensile"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__name
 msgid "Name"
 msgstr "Nome"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__next_maintenance_date
-msgid "Next maintenance date"
-msgstr "Data manutenzione successiva"
+msgid "Next Maintenance Date"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__note
@@ -306,6 +406,31 @@ msgstr "Nota"
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_request_view_form
 msgid "Notes"
 msgstr "Note"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
@@ -329,15 +454,30 @@ msgstr "Piani"
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
+#, python-format
+msgid "Preventive Maintenance (%(kind)s) - %(description)s"
+msgstr ""
+
+#. module: maintenance_plan
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
-msgid "Preventive Maintenance (%s) - %s"
-msgstr "Manutenzione preventiva (%s) - %s"
+msgid "Preventive Maintenance (%(kind)s) - %(plan)s"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__interval_step
 msgid "Recurrence"
 msgstr "Ricorrenza"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
@@ -351,20 +491,31 @@ msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__start_maintenance_date
-msgid "Start maintenance date"
-msgstr "Data inizio manutenzione"
+msgid "Start Maintenance Date"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid ""
-"The maintenance plan %s of equipment %s has generated a request which is not"
-" done yet. You should either set the request as done, remove its maintenance"
-" kind or delete it first."
+"The maintenance plan %(kind)s of equipment %(plan)s has generated a request "
+"which is not done yet. You should either set the request as done, remove its "
+"maintenance kind or delete it first."
 msgstr ""
-"Il piano di manutenzione %s dell'attrezzatura %s ha generato una richiesta "
-"che non è ancora stata eseguita. Si deve prima impostare la richiesta come "
-"eseguita, eliminare la sua pianificazione o cancellarla."
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
@@ -372,18 +523,48 @@ msgid "Under Maintenance"
 msgstr "In manutenzione"
 
 #. module: maintenance_plan
-#: code:addons/maintenance_plan/models/maintenance_plan.py:0
-#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
-msgid "Unnamed %s plan (%s)"
-msgstr "Piano %s senza nome (%s)"
+msgid "Unnamed %(kind)s plan (%(equipment)s)"
+msgstr ""
+
+#. module: maintenance_plan
+#: code:addons/maintenance_plan/models/maintenance_plan.py:0
+#, python-format
+msgid "Unnamed %(kind)s plan (%(plan)s)"
+msgstr ""
+
+#. module: maintenance_plan
+#: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
+#, python-format
+msgid "Unnamed %(nothing)s plan (%(equipment)s)"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid "Unspecified kind"
 msgstr "Pianificazione non specificata"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__website_message_ids
+msgid "Website communication history"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__week
@@ -415,15 +596,45 @@ msgstr ""
 #: code:addons/maintenance_plan/hooks.py:0
 #, python-format
 msgid ""
-"You have multiple preventive maintenance requests on equipment %s next "
-"action date (%s). Please leave only one preventive request on the date of "
-"equipment's next action to install the module."
+"You have multiple preventive maintenance requests on equipment %(name)s next "
+"action date (%(date)s). Please leave only one preventive request on the date "
+"of equipment's next action to install the module."
 msgstr ""
-"Ci sono richieste di manutenzione multiple per l'attrezzatura %s alla data "
-"della prossima azione (%s). Per installare il modulo, lasciare solo una "
-"richiesta preventiva nella data della prossima azione."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "e.g. Calibration"
 msgstr "es. calibrazione"
+
+#~ msgid "Maintenance Kinds"
+#~ msgstr "Pianificazioni manutenzione"
+
+#~ msgid "Next maintenance date"
+#~ msgstr "Data manutenzione successiva"
+
+#~ msgid "Preventive Maintenance (%s) - %s"
+#~ msgstr "Manutenzione preventiva (%s) - %s"
+
+#~ msgid "Start maintenance date"
+#~ msgstr "Data inizio manutenzione"
+
+#~ msgid ""
+#~ "The maintenance plan %s of equipment %s has generated a request which is "
+#~ "not done yet. You should either set the request as done, remove its "
+#~ "maintenance kind or delete it first."
+#~ msgstr ""
+#~ "Il piano di manutenzione %s dell'attrezzatura %s ha generato una "
+#~ "richiesta che non è ancora stata eseguita. Si deve prima impostare la "
+#~ "richiesta come eseguita, eliminare la sua pianificazione o cancellarla."
+
+#~ msgid "Unnamed %s plan (%s)"
+#~ msgstr "Piano %s senza nome (%s)"
+
+#~ msgid ""
+#~ "You have multiple preventive maintenance requests on equipment %s next "
+#~ "action date (%s). Please leave only one preventive request on the date of "
+#~ "equipment's next action to install the module."
+#~ msgstr ""
+#~ "Ci sono richieste di manutenzione multiple per l'attrezzatura %s alla "
+#~ "data della prossima azione (%s). Per installare il modulo, lasciare solo "
+#~ "una richiesta preventiva nella data della prossima azione."
