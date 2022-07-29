@@ -72,14 +72,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-.. |maintainer-AdriaGForgeFlow| image:: https://github.com/AdriaGForgeFlow.png?size=40px
-    :target: https://github.com/AdriaGForgeFlow
-    :alt: AdriaGForgeFlow
-
-Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
-
-|maintainer-AdriaGForgeFlow| 
-
 This module is part of the `OCA/maintenance <https://github.com/OCA/maintenance/tree/15.0/maintenance_plan_activity>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
