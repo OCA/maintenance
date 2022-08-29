@@ -11,6 +11,5 @@ class StockPicking(models.Model):
         index=True,
     )
     maintenance_equipment_id = fields.Many2one(
-        comodel_name="maintenance.equipment",
         related="maintenance_request_id.equipment_id",
     )

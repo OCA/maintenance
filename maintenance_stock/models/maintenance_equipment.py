@@ -36,24 +36,29 @@ class MaintenanceEquipment(models.Model):
 
     def action_view_stock_move_ids(self):
         self.ensure_one()
-        action = self.env.ref('stock.stock_move_action').read()[0]
-        action['domain'] = [('maintenance_equipment_id', '=', self.id)]
+        action = self.env.ref("stock.stock_move_action").read()[0]
+        action["domain"] = [("maintenance_equipment_id", "=", self.id)]
         return action
 
     def action_view_stock_move_line_ids(self):
         self.ensure_one()
-        action = self.env.ref('stock.stock_move_line_action').read()[0]
-        action['domain'] = [('maintenance_equipment_id', '=', self.id)]
+        action = self.env.ref("stock.stock_move_line_action").read()[0]
+        action["domain"] = [("maintenance_equipment_id", "=", self.id)]
 
         # TODO Grouping by destination allows separating consumptions
         #      and returns. Look for a better system and remove this
-        show_groupby_to = len(self.env['stock.move.line'].search(
-            [('maintenance_equipment_id', '=', self.id)]
-        ).mapped('location_dest_id')) > 1
+        show_groupby_to = (
+            len(
+                self.env["stock.move.line"]
+                .search([("maintenance_equipment_id", "=", self.id)])
+                .mapped("location_dest_id")
+            )
+            > 1
+        )
 
-        action['context'] = {
-            'search_default_done': 1,
-            'search_default_groupby_location_dest_id': show_groupby_to,
-            'search_default_groupby_product_id': 1,
+        action["context"] = {
+            "search_default_done": 1,
+            "search_default_groupby_location_dest_id": show_groupby_to,
+            "search_default_groupby_product_id": 1,
         }
         return action

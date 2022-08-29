@@ -5,7 +5,7 @@
     "summary": "Links maintenance requests to stock",
     "author": "Odoo Community Association (OCA), Solvos",
     "license": "AGPL-3",
-    "version": "12.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Warehouse",
     "website": "https://github.com/OCA/maintenance",
     "depends": [
@@ -23,5 +23,5 @@
         "data/demo_maintenance_stock.xml",
     ],
     "post_init_hook": "post_init_hook",
-    'installable': True,
+    "installable": True,
 }
