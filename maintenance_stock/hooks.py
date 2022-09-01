@@ -13,10 +13,10 @@ def post_init_hook(cr, registry):
 
     env = api.Environment(cr, SUPERUSER_ID, {})
     PickingType = env["stock.picking.type"]
-    print(env["stock.warehouse"].count_search([]))
+    print(len(env["stock.warehouse"].search([])))
     for warehouse in env["stock.warehouse"].search([]):
         warehouse._create_missing_locations(vals={})
-        print(env["stock.warehouse"].count_search([]))
+        print(len(env["stock.warehouse"].search([])))
         print(warehouse)
         new_vals = warehouse._create_or_update_sequences_and_picking_types()
         print(new_vals)
