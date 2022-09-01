@@ -36,7 +36,7 @@
         <field name="uom_id" ref="uom.product_uom_unit" />
         <field name="uom_po_id" ref="uom.product_uom_unit" />
         <field
-            name="image"
+            name="image_1024"
             type="base64"
             file="maintenance_stock/static/img/toner.png"
         />
