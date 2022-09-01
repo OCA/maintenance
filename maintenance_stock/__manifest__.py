@@ -19,9 +19,6 @@
         "views/stock_move_line_views.xml",
         "views/stock_picking_views.xml",
     ],
-    "demo": [
-        "data/demo_maintenance_stock.xml",
-    ],
     "post_init_hook": "post_init_hook",
     "installable": True,
 }
