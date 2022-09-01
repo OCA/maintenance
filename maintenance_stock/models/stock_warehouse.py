@@ -11,20 +11,20 @@ class StockWarehouse(models.Model):
     )
     cons_type_id = fields.Many2one("stock.picking.type", "Consumption Type")
 
-    # def _create_or_update_sequences_and_picking_types(self):
-    #     warehouse_data = super()._create_or_update_sequences_and_picking_types()
-    #     PickingType = self.env["stock.picking.type"]
-    #
-    #     # TODO when is called for an existing warehouse (e.g. during the
-    #     #      module installation in_type_id is not accesible). Temporary
-    #     #      solved with a hook
-    #     if "cons_type_id" in warehouse_data:
-    #         PickingType.browse(warehouse_data["cons_type_id"]).write(
-    #             {
-    #                 "return_picking_type_id": warehouse_data.get("in_type_id", False),
-    #             }
-    #         )
-    #     return warehouse_data
+    def _create_or_update_sequences_and_picking_types(self):
+        warehouse_data = super()._create_or_update_sequences_and_picking_types()
+        PickingType = self.env["stock.picking.type"]
+
+        # TODO when is called for an existing warehouse (e.g. during the
+        #      module installation in_type_id is not accesible). Temporary
+        #      solved with a hook
+        if "cons_type_id" in warehouse_data:
+            PickingType.browse(warehouse_data["cons_type_id"]).write(
+                {
+                    "return_picking_type_id": warehouse_data.get("in_type_id", False),
+                }
+            )
+        return warehouse_data
 
     def _update_name_and_code(self, new_name=False, new_code=False):
         for warehouse in self:
