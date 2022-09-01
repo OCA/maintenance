@@ -13,17 +13,12 @@ def post_init_hook(cr, registry):
 
     env = api.Environment(cr, SUPERUSER_ID, {})
     PickingType = env["stock.picking.type"]
-    print(len(env["stock.warehouse"].search([])))
     for warehouse in env["stock.warehouse"].search([]):
         warehouse._create_missing_locations(vals={})
-        print(len(env["stock.warehouse"].search([])))
-        print(warehouse)
-        new_vals = warehouse._create_or_update_sequences_and_picking_types()
-        print(new_vals)
-        warehouse.write(new_vals)
-        print(warehouse)
-        # return picking type workaround for existing warehouses
-        if "cons_type_id" in new_vals:
-            PickingType.browse(new_vals["cons_type_id"]).write(
-                {"return_picking_type_id": warehouse.in_type_id.id}
-            )
+        # new_vals = warehouse._create_or_update_sequences_and_picking_types()
+        # warehouse.write(new_vals)
+        # # return picking type workaround for existing warehouses
+        # if "cons_type_id" in new_vals:
+        #     PickingType.browse(new_vals["cons_type_id"]).write(
+        #         {"return_picking_type_id": warehouse.in_type_id.id}
+        #     )
