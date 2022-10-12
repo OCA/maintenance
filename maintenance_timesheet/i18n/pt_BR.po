@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-03-15 06:45+0000\n"
-"Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
+"PO-Revision-Date: 2022-10-12 03:44+0000\n"
+"Last-Translator: Douglas Custódio <douglascstd@yahoo.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -30,12 +30,13 @@ msgstr "<span class=\"o_label\">Horas</span>"
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "<span id=\"timesheet_information_title\">Timesheet Entries</span>"
 msgstr ""
-"<span id=\"timesheet_information_title\">Entradas na Planilha de Tempo</span>"
+"<span id=\"timesheet_information_title\">Entradas de Apontamentos de "
+"horas</span>"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "<strong>Timesheet Total Hours:</strong>"
-msgstr "<strong>Total de Horas da Planilha de Tempo:</strong>"
+msgstr "<strong>Horas Totais de Apontamentos de horas:</strong>"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
@@ -53,8 +54,8 @@ msgstr "Linha Analítica"
 msgid ""
 "Cannot save or delete a timesheet for a maintenance request already done"
 msgstr ""
-"Não é possível salvar ou excluir uma planilha de horários para uma "
-"solicitação de manutenção já concluída"
+"Não é possível salvar ou excluir um apontamento de hora de uma solicitação "
+"de manutenção já concluída"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
@@ -105,10 +106,10 @@ msgstr "Equipe"
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_total_hours
 msgid "Timesheet Total Hours"
-msgstr "Total de horas da planilha de horas"
+msgstr "Horas totais de apontamento de horas"
 
 #. module: maintenance_timesheet
 #: model:ir.actions.act_window,name:maintenance_timesheet.timesheet_action_from_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_ids
 msgid "Timesheets"
-msgstr "Planilha de Horas"
+msgstr "Apontamento de horas"
