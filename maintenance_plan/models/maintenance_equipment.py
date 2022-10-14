@@ -123,7 +123,12 @@ class MaintenanceEquipment(models.Model):
         Generates maintenance request on the next_maintenance_date or
         today if none exists
         """
-        for plan in self.env["maintenance.plan"].search([("interval", ">", 0)]):
+        for plan in (
+            self.env["maintenance.plan"]
+            .sudo()
+            .search([("interval", ">", 0)])
+            .filtered(lambda x: True if not x.equipment_id else x.equipment_id.active)
+        ):
             equipment = plan.equipment_id
             equipment._create_new_request(plan)
 
