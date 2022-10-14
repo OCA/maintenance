@@ -249,3 +249,19 @@ class TestMaintenancePlan(common.TransactionCase):
             generated_requests[-1].request_date,
             self.today_date + timedelta(weeks=9),
         )
+
+    def test_generate_requests_inactive_equipment(self):
+        self.equipment_1.active = False
+        self.cron.method_direct_trigger()
+        generated_requests = self.maintenance_request_obj.search(
+            [("maintenance_plan_id", "=", self.maintenance_plan_1.id)],
+            order="schedule_date asc",
+        )
+        self.assertEqual(len(generated_requests), 0)
+        self.equipment_1.active = True
+        self.cron.method_direct_trigger()
+        generated_requests = self.maintenance_request_obj.search(
+            [("maintenance_plan_id", "=", self.maintenance_plan_1.id)],
+            order="schedule_date asc",
+        )
+        self.assertEqual(len(generated_requests), 3)
