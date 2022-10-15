@@ -17,13 +17,13 @@ Maintenance Equipments Hierarchy
     :target: https://github.com/OCA/maintenance/tree/16.0/maintenance_equipment_hierarchy
     :alt: OCA/maintenance
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/maintenance-15-0/maintenance-15-0-maintenance_equipment_hierarchy
+    :target: https://translation.odoo-community.org/projects/maintenance-16-0/maintenance-16-0-maintenance_equipment_hierarchy
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
     :target: https://runbot.odoo-community.org/runbot/240/16.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5|
+|badge1| |badge2| |badge3| |badge4| |badge5| 
 
 This module allows to manage a hierarchy of equipments.
 
@@ -76,7 +76,7 @@ promote its widespread use.
 
 Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
-|maintainer-dalonsod|
+|maintainer-dalonsod| 
 
 This module is part of the `OCA/maintenance <https://github.com/OCA/maintenance/tree/16.0/maintenance_equipment_hierarchy>`_ project on GitHub.
 
