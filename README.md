@@ -25,7 +25,7 @@ addon | version | maintainers | summary
 [base_maintenance_config](base_maintenance_config/) | 14.0.1.0.0 |  | Provides general settings for the Maintenance App
 [base_maintenance_group](base_maintenance_group/) | 14.0.1.0.1 |  | Provides base access groups for the Maintenance App
 [maintenance_account](maintenance_account/) | 14.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Account
-[maintenance_equipment_contract](maintenance_equipment_contract/) | 14.0.1.0.1 |  | Manage equipment contracts
+[maintenance_equipment_contract](maintenance_equipment_contract/) | 14.0.1.0.2 |  | Manage equipment contracts
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 14.0.1.0.1 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
 [maintenance_equipment_image](maintenance_equipment_image/) | 14.0.1.0.0 | [![pedrocasi](https://github.com/pedrocasi.png?size=30px)](https://github.com/pedrocasi) | Adds images to equipment.
 [maintenance_equipment_scrap](maintenance_equipment_scrap/) | 14.0.1.0.0 | [![espo-tony](https://github.com/espo-tony.png?size=30px)](https://github.com/espo-tony) | Enhance the functionality for Scrapping Equipments
