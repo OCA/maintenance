@@ -22,7 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_maintenance](base_maintenance/) | 15.0.1.0.0 |  | Base Maintenance
-[maintenance_equipment_contract](maintenance_equipment_contract/) | 15.0.1.0.0 |  | Manage equipment contracts
+[maintenance_equipment_contract](maintenance_equipment_contract/) | 15.0.1.0.1 |  | Manage equipment contracts
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 15.0.1.0.1 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 15.0.1.0.1 | [![AdriaGForgeFlow](https://github.com/AdriaGForgeFlow.png?size=30px)](https://github.com/AdriaGForgeFlow) | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 15.0.1.0.0 |  | Maintenance Equipment Status
