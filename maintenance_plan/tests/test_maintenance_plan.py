@@ -249,3 +249,19 @@ class TestMaintenancePlan(test_common.TransactionCase):
         self.assertEqual(relativedelta(months=1), result)
         result = plan.get_relativedelta(1, "year")
         self.assertEqual(relativedelta(years=1), result)
+
+    def test_generate_requests_inactive_equipment(self):
+        self.equipment_1.active = False
+        self.cron.method_direct_trigger()
+        generated_requests = self.maintenance_request_obj.search(
+            [("maintenance_plan_id", "=", self.maintenance_plan_1.id)],
+            order="schedule_date asc",
+        )
+        self.assertEqual(len(generated_requests), 0)
+        self.equipment_1.active = True
+        self.cron.method_direct_trigger()
+        generated_requests = self.maintenance_request_obj.search(
+            [("maintenance_plan_id", "=", self.maintenance_plan_1.id)],
+            order="schedule_date asc",
+        )
+        self.assertEqual(len(generated_requests), 3)
