@@ -17,5 +17,6 @@
         'security/ir.model.access.csv',
         'views/maintenance_equipment.xml',
         'views/maintenance_equipment_tag.xml',
+        'views/maintenance_request_views.xml',
     ],
 }
