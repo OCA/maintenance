@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-28 09:49+0000\n"
+"PO-Revision-Date: 2022-11-04 18:45+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,17 +14,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__child_ids
 msgid "Child Equipments"
-msgstr "Attrezzature discendenti"
+msgstr "Attrezzature figlie"
 
 #. module: maintenance_equipment_hierarchy
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_hierarchy.hr_equipment_view_form
 msgid "Children"
-msgstr "Discendente"
+msgstr "Figli"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__complete_name
@@ -55,7 +55,7 @@ msgstr "Case laptop HP"
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_left
 msgid "Left Parent"
-msgstr "Ascendente precedente"
+msgstr "Padre precedente"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model,name:maintenance_equipment_hierarchy.model_maintenance_equipment
@@ -65,19 +65,19 @@ msgstr "Attrezzatura manutenzione"
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__child_count
 msgid "Number of child equipments"
-msgstr "Numero di attrezzature discendenti"
+msgstr "Numero di attrezzature figlie"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_id
 msgid "Parent Equipment"
-msgstr "Attrezzatura principale"
+msgstr "Attrezzatura padre"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_path
 msgid "Parent Path"
-msgstr "Percorso ascendente"
+msgstr "Percorso padre"
 
 #. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_right
 msgid "Right Parent"
-msgstr "Ascendente successivo"
+msgstr "Padre successivo"
