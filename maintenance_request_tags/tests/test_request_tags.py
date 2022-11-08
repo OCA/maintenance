@@ -9,12 +9,8 @@ class TestRequestTags(SavepointCase):
     def setUpClass(cls):
         super().setUpClass()
         self = cls
-        self.tag_1 = self.env["maintenance.request.tag"].create(
-            {"name": "Test Tag 1"}
-        )
-        self.tag_2 = self.env["maintenance.request.tag"].create(
-            {"name": "Test Tag 2"}
-        )
+        self.tag_1 = self.env["maintenance.request.tag"].create({"name": "Test Tag 1"})
+        self.tag_2 = self.env["maintenance.request.tag"].create({"name": "Test Tag 2"})
         self.team_1 = self.env["maintenance.team"].create(
             {"name": "T1", "selectable_tags_ids": [(4, self.tag_1.id)]}
         )
@@ -25,9 +21,7 @@ class TestRequestTags(SavepointCase):
                 "parent_id": self.team_1.id,
             }
         )
-        self.equipment = self.env["maintenance.equipment"].create(
-            {"name": "Laptop"}
-        )
+        self.equipment = self.env["maintenance.equipment"].create({"name": "Laptop"})
 
         self.plan = self.env["maintenance.plan"].create(
             {
