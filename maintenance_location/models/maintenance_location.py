@@ -28,9 +28,7 @@ class MaintenanceLocation(models.Model):
         index=True,
         ondelete="cascade",
     )
-    child_id = fields.One2many(
-        "maintenance.location", "parent_id", "Child Locations"
-    )
+    child_id = fields.One2many("maintenance.location", "parent_id", "Child Locations")
     parent_path = fields.Char(index=True)
 
     sequence = fields.Integer(string="Sequence", default=10)
@@ -49,7 +47,5 @@ class MaintenanceLocation(models.Model):
     @api.constrains("parent_id")
     def _check_category_recursion(self):
         if not self._check_recursion():
-            raise ValidationError(
-                _("Error ! You cannot create recursive Locations.")
-            )
+            raise ValidationError(_("Error ! You cannot create recursive Locations."))
         return True
