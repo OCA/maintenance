@@ -10,9 +10,7 @@ class TestMaintenanceLocation(SavepointCase):
     def setUpClass(cls):
         super().setUpClass()
         self = cls
-        self.location_1 = self.env["maintenance.location"].create(
-            {"name": "L1"}
-        )
+        self.location_1 = self.env["maintenance.location"].create({"name": "L1"})
         self.location_2 = self.env["maintenance.location"].create(
             {"name": "L2", "parent_id": self.location_1.id}
         )
