@@ -46,13 +46,16 @@ class MaintenanceStage(models.Model):
     def _get_stage_node(self):
         return etree.Element(
             "button",
-            attrib={
-                "name": "set_maintenance_stage",
-                "id": str(self.id),
-                "type": "object",
-                "class": "btn-%s" % (self.button_class or "primary"),
-                "context": json.dumps({"next_stage_id": self.id}),
-                "attrs": json.dumps(self._get_stage_node_attrs()),
-                "string": self._get_stage_node_name(),
-            },
+            attrib=self._get_stage_node_attrib(),
         )
+
+    def _get_stage_node_attrib(self):
+        return {
+            "name": "set_maintenance_stage",
+            "id": str(self.id),
+            "type": "object",
+            "class": "btn-%s" % (self.button_class or "primary"),
+            "context": json.dumps({"next_stage_id": self.id}),
+            "attrs": json.dumps(self._get_stage_node_attrs()),
+            "string": self._get_stage_node_name(),
+        }
