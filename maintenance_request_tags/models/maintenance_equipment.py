@@ -8,9 +8,7 @@ class MaintenanceEquipment(models.Model):
 
     _inherit = "maintenance.equipment"
 
-    def _prepare_request_from_plan(
-        self, maintenance_plan, next_maintenance_date
-    ):
+    def _prepare_request_from_plan(self, maintenance_plan, next_maintenance_date):
         res = super()._prepare_request_from_plan(
             maintenance_plan, next_maintenance_date
         )
