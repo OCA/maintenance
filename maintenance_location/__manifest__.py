@@ -8,7 +8,7 @@
     "version": "13.0.1.0.0",
     "license": "AGPL-3",
     "author": "Creu Blanca,Odoo Community Association (OCA)",
-    "website": "www.creublanca.es",
+    "website": "https://github.com/tegin/cb-maintenance",
     "depends": ["maintenance_plan", "web_widget_child_selector"],
     "data": [
         "views/maintenance_plan.xml",
