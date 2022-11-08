@@ -34,6 +34,4 @@ class MaintenanceRequestTag(models.Model):
         for record in self:
             record.selectable_team_count = len(record.selectable_team_ids)
 
-    _sql_constraints = [
-        ("name_uniq", "unique (name)", "Tag name already exists !")
-    ]
+    _sql_constraints = [("name_uniq", "unique (name)", "Tag name already exists !")]
