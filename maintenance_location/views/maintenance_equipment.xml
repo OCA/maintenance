@@ -54,7 +54,7 @@
         <field name="arch" type="xml">
             <div class="o_kanban_record_body" position="inside">
                 <div t-if="record.location_id.raw_value">
-                    <i class="fa fa-map-marker" />
+                    <i class="fa fa-map-marker" title='location' />
                     <field name="location_id" />
                 </div>
             </div>
