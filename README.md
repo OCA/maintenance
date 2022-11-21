@@ -32,7 +32,6 @@ addon | version | maintainers | summary
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 15.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Adds category tags to equipment
 [maintenance_plan](maintenance_plan/) | 15.0.1.2.0 |  | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 15.0.1.0.2 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
-[maintenance_product](maintenance_product/) | 15.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Product
 [maintenance_remote](maintenance_remote/) | 15.0.1.0.0 |  | Define remote on maintenance request
 [maintenance_request_sequence](maintenance_request_sequence/) | 15.0.1.0.0 |  | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 15.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Manage transition visibility and management between stages
