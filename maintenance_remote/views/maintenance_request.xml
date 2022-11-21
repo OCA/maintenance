@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="maintenance_request_form_view">
+        <field name="name">maintenance.request.form (in maintenance_remote)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <field name="equipment_id" position="before">
+                <field name="remote_id" groups="maintenance.group_equipment_manager" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_request_search_view">
+        <field name="name">maintenance.request.search (in maintenance_remote)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
+        <field name="arch" type="xml">
+            <field name="equipment_id" position="after">
+                <field name="remote_id" groups="maintenance.group_equipment_manager" />
+            </field>
+        </field>
+    </record>
+</odoo>
