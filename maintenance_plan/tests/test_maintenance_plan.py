@@ -72,17 +72,17 @@ class TestMaintenancePlan(common.TransactionCase):
         self.assertEqual(
             self.maintenance_plan_1.name_get()[0][1],
             _(
-                "Unnamed %(nothing)s plan (%(equipment)s)",
-                nothing="",
-                equipment=self.maintenance_plan_1.equipment_id.name,
+                "Unnamed %(void)s plan (%(eqpmnt)s)",
+                void="",
+                eqpmnt=self.maintenance_plan_1.equipment_id.name,
             ),
         )
         self.assertEqual(
             self.maintenance_plan_2.name_get()[0][1],
             _(
-                "Unnamed %(kind)s plan (%(equipment)s)",
+                "Unnamed %(kind)s plan (%(eqpmnt)s)",
                 kind=self.maintenance_plan_2.maintenance_kind_id.name,
-                equipment=self.maintenance_plan_2.equipment_id.name,
+                eqpmnt=self.maintenance_plan_2.equipment_id.name,
             ),
         )
         self.assertEqual(
@@ -247,8 +247,19 @@ class TestMaintenancePlan(common.TransactionCase):
         self.assertEqual(len(generated_requests), 4)
         self.assertEqual(
             generated_requests[-1].request_date,
-            self.today_date + timedelta(weeks=9),
+            self.today_date + relativedelta(weeks=9),
         )
+
+    def test_get_relativedelta(self):
+        plan = self.maintenance_plan_1
+        result = plan.get_relativedelta(1, "day")
+        self.assertEqual(relativedelta(days=1), result)
+        result = plan.get_relativedelta(1, "week")
+        self.assertEqual(relativedelta(weeks=1), result)
+        result = plan.get_relativedelta(1, "month")
+        self.assertEqual(relativedelta(months=1), result)
+        result = plan.get_relativedelta(1, "year")
+        self.assertEqual(relativedelta(years=1), result)
 
     def test_generate_requests_inactive_equipment(self):
         self.equipment_1.active = False
