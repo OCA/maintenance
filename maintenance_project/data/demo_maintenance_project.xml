@@ -4,12 +4,12 @@
         <field name="user_id" ref="base.user_admin" />
     </record>
     <record id="project_task_11" model="project.task">
-        <field name="user_id" ref="base.user_admin" />
+        <field name="user_ids" eval="[(4, ref('base.user_admin'))]" />
         <field name="project_id" ref="maintenance_project.project_project_1" />
         <field name="name">General task</field>
     </record>
     <record id="project_task_12" model="project.task">
-        <field name="user_id" ref="base.user_admin" />
+        <field name="user_ids" eval="[(4, ref('base.user_admin'))]" />
         <field name="project_id" ref="maintenance_project.project_project_1" />
         <field name="name">Default preventive task</field>
     </record>
