@@ -28,7 +28,9 @@ class ProjectProject(models.Model):
         Access to the current equipments for this project
         """
         self.ensure_one()
-        action = self.env.ref("maintenance.hr_equipment_action").read()[0]
+        action = self.env["ir.actions.actions"]._for_xml_id(
+            "maintenance.hr_equipment_action"
+        )
         action["domain"] = [("project_id", "=", self.id)]
         action["context"] = {
             "default_project_id": self.id,
@@ -48,7 +50,9 @@ class ProjectProject(models.Model):
         Access to the undone maintenance requests for this project
         """
         self.ensure_one()
-        action = self.env.ref("maintenance.hr_equipment_request_action").read()[0]
+        action = self.env["ir.actions.actions"]._for_xml_id(
+            "maintenance.hr_equipment_request_action"
+        )
         action["domain"] = [("project_id", "=", self.id), ("stage_id.done", "=", False)]
         action["context"] = {"default_project_id": self.id}
         return action
