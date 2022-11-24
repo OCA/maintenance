@@ -29,3 +29,4 @@ class MaintenanceRequest(models.Model):
         super(MaintenanceRequest, self).onchange_equipment_id()
         if self.equipment_id and self.equipment_id.project_id:
             self.project_id = self.equipment_id.project_id
+        return
