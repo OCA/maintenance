@@ -26,7 +26,7 @@ class MaintenanceRequest(models.Model):
 
     @api.onchange("equipment_id")
     def onchange_equipment_id(self):
-        super(MaintenanceRequest, self).onchange_equipment_id()
+        res = super().onchange_equipment_id()
         if self.equipment_id and self.equipment_id.project_id:
             self.project_id = self.equipment_id.project_id
-        return
+        return res
