@@ -20,7 +20,7 @@ class AccountMove(models.Model):
     def action_post(self):
         super().action_post()
         equipment_model = self.env["maintenance.equipment"]
-        for move in self:
+        for move in self.filtered(lambda r: r.is_purchase_document()):
             for line in move.line_ids.filtered(
                 lambda x: (
                     not x.equipment_ids
