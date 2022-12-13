@@ -44,9 +44,9 @@ class TestAccountMove(common.SavepointCase):
             }
         )
 
-    def _create_invoice(self):
+    def _create_invoice(self, move_type="in_invoice"):
         move_form = Form(
-            self.env["account.move"].with_context(default_type="in_invoice")
+            self.env["account.move"].with_context(default_move_type=move_type)
         )
         move_form.partner_id = self.partner
         move_form.ref = "SUPPLIE-REF"
@@ -61,6 +61,16 @@ class TestAccountMove(common.SavepointCase):
             line_form.account_id = self.account_expense
         invoice = move_form.save()
         return invoice
+
+    def test_invoice_out_invoice_action_post_equipment_1(self):
+        invoice = self._create_invoice("out_invoice")
+        line_a = invoice.line_ids.filtered(lambda x: x.product_id == self.product_a)
+        line_b = invoice.line_ids.filtered(lambda x: x.product_id == self.product_b)
+        self.assertFalse(line_a.equipment_category_id)
+        self.assertFalse(line_b.equipment_category_id)
+        invoice.action_post()
+        equipments = invoice.mapped("line_ids.equipment_ids")
+        self.assertEqual(len(equipments), 0)
 
     def test_invoice_action_post_equipment_1(self):
         invoice = self._create_invoice()
