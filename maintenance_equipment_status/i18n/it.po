@@ -103,10 +103,20 @@ msgid "Name"
 msgstr "Nome"
 
 #. module: maintenance_equipment_status
+#: model:maintenance.equipment.status,name:maintenance_equipment_status.maintenance_equipment_status_1
+msgid "New"
+msgstr ""
+
+#. module: maintenance_equipment_status
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__note
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
 msgid "Notes"
 msgstr "Note"
+
+#. module: maintenance_equipment_status
+#: model:maintenance.equipment.status,name:maintenance_equipment_status.maintenance_equipment_status_3
+msgid "Retired"
+msgstr ""
 
 #. module: maintenance_equipment_status
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__sequence
@@ -126,6 +136,11 @@ msgid ""
 msgstr ""
 "Quando impostato, questo stato potrà essere applicato solo alle attrezzature "
 "di queste categorie."
+
+#. module: maintenance_equipment_status
+#: model:maintenance.equipment.status,name:maintenance_equipment_status.maintenance_equipment_status_2
+msgid "Working"
+msgstr ""
 
 #. module: maintenance_equipment_status
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
