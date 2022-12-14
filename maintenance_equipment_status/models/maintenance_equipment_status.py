@@ -10,7 +10,7 @@ class MaintenanceEquipmentStatus(models.Model):
     _order = "sequence"
 
     active = fields.Boolean(default=True)
-    name = fields.Char("Name")
+    name = fields.Char("Name", translate=True)
     note = fields.Text("Notes")
     sequence = fields.Integer(string="Sequence", default=10)
     category_ids = fields.Many2many(
