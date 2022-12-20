@@ -103,6 +103,7 @@ msgstr "<strong>Squadra:</strong>"
 
 #. module: base_maintenance
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__description
+#: model_terms:ir.ui.view,arch_db:base_maintenance.equipment_request_view_form
 msgid "Description"
 msgstr "Descrizione"
 
@@ -110,21 +111,6 @@ msgstr "Descrizione"
 #: model_terms:ir.ui.view,arch_db:base_maintenance.maintenance_team_view_form
 msgid "Description of the team's function"
 msgstr "Descrizione del compito del team"
-
-#. module: base_maintenance
-#: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: base_maintenance
-#: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__id
-msgid "ID"
-msgstr "ID"
-
-#. module: base_maintenance
-#: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
 
 #. module: base_maintenance
 #: model:ir.actions.report,name:base_maintenance.action_report_maintenance_request
@@ -140,3 +126,12 @@ msgstr "Squadra manutenzione"
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__user_id
 msgid "Team Leader"
 msgstr "Responsabile squadra"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"

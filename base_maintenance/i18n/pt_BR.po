@@ -103,12 +103,8 @@ msgid "<strong>Team:</strong>"
 msgstr "<strong>Equipe:</strong>"
 
 #. module: base_maintenance
-#: model_terms:ir.ui.view,arch_db:base_maintenance.maintenance_team_view_search
-msgid "Archived"
-msgstr "Arquivado"
-
-#. module: base_maintenance
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__description
+#: model_terms:ir.ui.view,arch_db:base_maintenance.equipment_request_view_form
 msgid "Description"
 msgstr "Descri????o"
 
@@ -131,6 +127,9 @@ msgstr "Equipes de Manuten????o"
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__user_id
 msgid "Team Leader"
 msgstr "L??der de Equipe"
+
+#~ msgid "Archived"
+#~ msgstr "Arquivado"
 
 #~ msgid "<strong>Equipament:</strong>"
 #~ msgstr "<strong>Equipamento:</strong>"
