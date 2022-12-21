@@ -12,7 +12,35 @@ class MaintenanceRequest(models.Model):
         comodel_name="account.analytic.line",
         inverse_name="maintenance_request_id",
     )
-    timesheet_total_hours = fields.Float(compute="_compute_timesheet_total_hours")
+    timesheet_total_hours = fields.Float(
+        compute="_compute_timesheet_total_hours", readonly=True, store=True
+    )
+    planned_hours = fields.Float(string="Planned Hours", tracking=True)
+    progress = fields.Float(
+        compute="_compute_progress_hours",
+        group_operator="avg",
+        store=True,
+        string="Progress",
+    )
+    remaining_hours = fields.Float(
+        compute="_compute_progress_hours",
+        readonly=True,
+        store=True,
+        string="Remaining Hours",
+    )
+
+    @api.depends("planned_hours", "timesheet_total_hours")
+    def _compute_progress_hours(self):
+        for item in self:
+            item.progress = 0.0
+            if item.planned_hours > 0.0:
+                if item.timesheet_total_hours > item.planned_hours:
+                    item.progress = 100
+                else:
+                    item.progress = round(
+                        100.0 * item.timesheet_total_hours / item.planned_hours, 2
+                    )
+            item.remaining_hours = item.planned_hours - item.timesheet_total_hours
 
     def _add_followers(self):
         """

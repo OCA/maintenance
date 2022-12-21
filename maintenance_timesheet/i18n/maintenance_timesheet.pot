@@ -68,6 +68,11 @@ msgid "Display Name"
 msgstr ""
 
 #. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
+msgid "Duration (Hour(s))"
+msgstr ""
+
+#. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__id
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__id
@@ -93,8 +98,23 @@ msgid "Maintenance Request"
 msgstr ""
 
 #. module: maintenance_timesheet
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__planned_hours
+msgid "Planned Hours"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__progress
+msgid "Progress"
+msgstr ""
+
+#. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Project -"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__remaining_hours
+msgid "Remaining Hours"
 msgstr ""
 
 #. module: maintenance_timesheet
@@ -125,5 +145,6 @@ msgstr ""
 #. module: maintenance_timesheet
 #: model:ir.actions.act_window,name:maintenance_timesheet.timesheet_action_from_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Timesheets"
 msgstr ""
