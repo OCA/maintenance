@@ -202,6 +202,11 @@ msgid "Is Follower"
 msgstr "É Seguidor"
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "Kind"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind____last_update
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan____last_update
 msgid "Last Modified on"
@@ -430,6 +435,16 @@ msgid "Number of unread messages"
 msgstr "Número de mensagens não lidas"
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "P. Horizon period"
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "P. Horizon step"
+msgstr ""
+
+#. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Planning Horizon"
 msgstr "Horizonte de Planeamento"
@@ -487,6 +502,11 @@ msgstr ""
 "equipamento."
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "Start Date"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__start_maintenance_date
 msgid "Start Maintenance Date"
 msgstr "Data de Início da manutenção"
@@ -505,16 +525,18 @@ msgstr ""
 "Planeado: Atividades futuras."
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "Team"
+msgstr ""
+
+#. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid ""
-"The maintenance plan %(kind)s of equipment %(plan)s has generated a request "
-"which is not done yet. You should either set the request as done, remove its"
-" maintenance kind or delete it first."
+"The maintenance plan %(kind)s of equipment %(eqpmnt)s has generated a "
+"request which is not done yet. You should either set the request as done, "
+"remove its maintenance kind or delete it first."
 msgstr ""
-"O plano de manutenção %(kind)s do equipamento %(plan)s gerou um pedido que "
-"ainda não foi efetuado. Deve definir o pedido como feito, remover o seu tipo "
-"de manutenção ou eliminá-lo primeiro."
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__activity_exception_decoration
@@ -529,20 +551,20 @@ msgstr "Em Manutenção"
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
-msgid "Unnamed %(kind)s plan (%(equipment)s)"
-msgstr "Plano %(kind)s sem nome (%(equipment)s)"
+msgid "Unnamed %(kind)s plan (%(eqpmnt)s)"
+msgstr ""
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
-msgid "Unnamed %(kind)s plan (%(plan)s)"
-msgstr "Plano %(kind)s sem nome (%(plan)s)"
+msgid "Unnamed %(kind)s plan (%(eqpmt)s)"
+msgstr ""
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
-msgid "Unnamed %(nothing)s plan (%(equipment)s)"
-msgstr "Plano %(nothing)s sem nome (%(equipment)s)"
+msgid "Unnamed %(void)s plan (%(eqpmnt)s)"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_unread
@@ -600,9 +622,9 @@ msgstr ""
 #: code:addons/maintenance_plan/hooks.py:0
 #, python-format
 msgid ""
-"You have multiple preventive maintenance requests on equipment %(name)s next"
-" action date (%(date)s). Please leave only one preventive request on the "
-"date of equipment's next action to install the module."
+"You have multiple preventive maintenance requests on equipment %(name)s next "
+"action date (%(date)s). Please leave only one preventive request on the date "
+"of equipment's next action to install the module."
 msgstr ""
 "Tem múltiplos pedidos de manutenção preventiva para o equipamento %(name)s e "
 "próxima data de ação (%(date)s). Por favor, deixe apenas uma solicitação "
@@ -612,3 +634,25 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "e.g. Calibration"
 msgstr "p. ex., Calibração"
+
+#, python-format
+#~ msgid ""
+#~ "The maintenance plan %(kind)s of equipment %(plan)s has generated a "
+#~ "request which is not done yet. You should either set the request as done, "
+#~ "remove its maintenance kind or delete it first."
+#~ msgstr ""
+#~ "O plano de manutenção %(kind)s do equipamento %(plan)s gerou um pedido "
+#~ "que ainda não foi efetuado. Deve definir o pedido como feito, remover o "
+#~ "seu tipo de manutenção ou eliminá-lo primeiro."
+
+#, python-format
+#~ msgid "Unnamed %(kind)s plan (%(equipment)s)"
+#~ msgstr "Plano %(kind)s sem nome (%(equipment)s)"
+
+#, python-format
+#~ msgid "Unnamed %(kind)s plan (%(plan)s)"
+#~ msgstr "Plano %(kind)s sem nome (%(plan)s)"
+
+#, python-format
+#~ msgid "Unnamed %(nothing)s plan (%(equipment)s)"
+#~ msgstr "Plano %(nothing)s sem nome (%(equipment)s)"
