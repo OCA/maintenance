@@ -6,6 +6,7 @@ import json
 from lxml import etree
 
 from odoo import _, fields, models
+from odoo.osv.expression import OR
 
 
 class MaintenanceStage(models.Model):
@@ -37,8 +38,15 @@ class MaintenanceStage(models.Model):
         help="For default, the system uses primary",
     )
 
+    team_ids = fields.Many2many("maintenance.team",)
+
     def _get_stage_node_attrs(self):
-        return {"invisible": [("stage_id", "not in", self.previous_stage_ids.ids)]}
+        domain = [("stage_id", "not in", self.previous_stage_ids.ids)]
+        if self.team_ids:
+            domain = OR(
+                [domain, [("maintenance_team_id", "not in", self.team_ids.ids)]]
+            )
+        return {"invisible": domain}
 
     def _get_stage_node_name(self):
         return _("To %s") % self.name
