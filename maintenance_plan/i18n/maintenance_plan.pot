@@ -199,6 +199,11 @@ msgid "Is Follower"
 msgstr ""
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "Kind"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind____last_update
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan____last_update
 msgid "Last Modified on"
@@ -425,6 +430,16 @@ msgid "Number of unread messages"
 msgstr ""
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "P. Horizon period"
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "P. Horizon step"
+msgstr ""
+
+#. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Planning Horizon"
 msgstr ""
@@ -480,6 +495,11 @@ msgid ""
 msgstr ""
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "Start Date"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__start_maintenance_date
 msgid "Start Maintenance Date"
 msgstr ""
@@ -494,12 +514,17 @@ msgid ""
 msgstr ""
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
+msgid "Team"
+msgstr ""
+
+#. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid ""
-"The maintenance plan %(kind)s of equipment %(plan)s has generated a request "
-"which is not done yet. You should either set the request as done, remove its"
-" maintenance kind or delete it first."
+"The maintenance plan %(kind)s of equipment %(eqpmnt)s has generated a "
+"request which is not done yet. You should either set the request as done, "
+"remove its maintenance kind or delete it first."
 msgstr ""
 
 #. module: maintenance_plan
@@ -515,19 +540,19 @@ msgstr ""
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
-msgid "Unnamed %(kind)s plan (%(equipment)s)"
+msgid "Unnamed %(kind)s plan (%(eqpmnt)s)"
 msgstr ""
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
-msgid "Unnamed %(kind)s plan (%(plan)s)"
+msgid "Unnamed %(kind)s plan (%(eqpmt)s)"
 msgstr ""
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
-msgid "Unnamed %(nothing)s plan (%(equipment)s)"
+msgid "Unnamed %(void)s plan (%(eqpmnt)s)"
 msgstr ""
 
 #. module: maintenance_plan
