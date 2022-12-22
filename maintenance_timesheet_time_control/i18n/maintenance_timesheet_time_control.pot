@@ -14,6 +14,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: maintenance_timesheet_time_control
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.equipment_request_view_form
+msgid "Date"
+msgstr ""
+
+#. module: maintenance_timesheet_time_control
 #: model:ir.model,name:maintenance_timesheet_time_control.model_hr_timesheet_switch
 msgid "Helper to quickly switch between timesheet lines"
 msgstr ""
@@ -24,6 +29,11 @@ msgid "Maintenance Request"
 msgstr ""
 
 #. module: maintenance_timesheet_time_control
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.equipment_request_view_form
+msgid "Resume work"
+msgstr ""
+
+#. module: maintenance_timesheet_time_control
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.hr_equipment_request_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.hr_equipment_request_view_kanban
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.hr_equipment_request_view_tree
@@ -31,6 +41,7 @@ msgid "Start work"
 msgstr ""
 
 #. module: maintenance_timesheet_time_control
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.equipment_request_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.hr_equipment_request_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.hr_equipment_request_view_kanban
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.hr_equipment_request_view_tree
