@@ -44,6 +44,11 @@ msgid "Maintenance Stage"
 msgstr ""
 
 #. module: maintenance_request_stage_transition
+#: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_team
+msgid "Maintenance Teams"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
 #: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__next_stage_ids
 msgid "Next stages"
 msgstr ""
@@ -66,6 +71,11 @@ msgstr ""
 #. module: maintenance_request_stage_transition
 #: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__success
 msgid "Success"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__team_ids
+msgid "Team"
 msgstr ""
 
 #. module: maintenance_request_stage_transition
