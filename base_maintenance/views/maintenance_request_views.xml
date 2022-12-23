@@ -6,12 +6,20 @@
         <field name="name">equipment.request.form</field>
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="priority" eval="999" />
         <field name="arch" type="xml">
             <xpath expr="//sheet/*[1]" position="before">
                 <div class="oe_button_box" name="button_box">
                     <!--Empty, to be inherited by other modules.-->
                 </div>
             </xpath>
+            <field name="description" position="replace">
+                <notebook>
+                    <page name="description_page" string="Description">
+                        <field name="description" />
+                    </page>
+                </notebook>
+            </field>
         </field>
     </record>
 </odoo>
