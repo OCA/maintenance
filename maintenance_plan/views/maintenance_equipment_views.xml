@@ -63,25 +63,22 @@
         <field name="name">equipment.request.form.inherit</field>
         <field name="model">maintenance.request</field>
         <field name="priority" eval="999" />
-        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="inherit_id" ref="base_maintenance.equipment_request_view_form" />
         <field name="arch" type="xml">
             <field name="maintenance_type" position="after">
                 <field name="maintenance_kind_id" />
             </field>
-            <!-- TODO: Use position="move" instead -->
-            <field name="description" position="replace">
-                <notebook>
-                    <page string="Instructions">
-                        <field
-                            name="note"
-                            placeholder="Describe the maintenance to do..."
-                        />
-                    </page>
-                    <page string="Notes">
-                        <field name="description" placeholder="Internal notes..." />
-                    </page>
-                </notebook>
-            </field>
+            <notebook position="inside">
+                <page string="Instructions">
+                    <field
+                        name="note"
+                        placeholder="Describe the maintenance to do..."
+                    />
+                </page>
+                <page string="Notes">
+                    <field name="description" placeholder="Internal notes..." />
+                </page>
+            </notebook>
         </field>
     </record>
     <record id="maintenance.hr_equipment_action" model="ir.actions.act_window">

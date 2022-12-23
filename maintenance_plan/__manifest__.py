@@ -9,7 +9,7 @@
     "category": "Maintenance",
     "website": "https://github.com/OCA/maintenance",
     "images": [],
-    "depends": ["maintenance"],
+    "depends": ["base_maintenance"],
     "data": [
         "security/ir.model.access.csv",
         "security/maintenance_security.xml",
