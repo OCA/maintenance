@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-28 09:49+0000\n"
+"PO-Revision-Date: 2022-12-23 12:44+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: maintenance_request_stage_transition
 #: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__button_class
@@ -49,7 +49,7 @@ msgstr "Fase manutenzione"
 #. module: maintenance_request_stage_transition
 #: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_team
 msgid "Maintenance Teams"
-msgstr ""
+msgstr "Squadra manutenzione"
 
 #. module: maintenance_request_stage_transition
 #: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__next_stage_ids
@@ -79,7 +79,7 @@ msgstr "Successo"
 #. module: maintenance_request_stage_transition
 #: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__team_ids
 msgid "Team"
-msgstr ""
+msgstr "Squadra"
 
 #. module: maintenance_request_stage_transition
 #: code:addons/maintenance_request_stage_transition/models/maintenance_stage.py:0
