@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-10-31 18:44+0000\n"
+"PO-Revision-Date: 2022-12-23 13:45+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -204,7 +204,7 @@ msgstr "È iscritto"
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
 msgid "Kind"
-msgstr ""
+msgstr "Genere"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind____last_update
@@ -440,12 +440,12 @@ msgstr "Numero di messaggi non letti"
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
 msgid "P. Horizon period"
-msgstr ""
+msgstr "Periodo orizzonte P."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
 msgid "P. Horizon step"
-msgstr ""
+msgstr "Passo orizzonte P."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
@@ -507,7 +507,7 @@ msgstr ""
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
 msgid "Start Date"
-msgstr ""
+msgstr "Data partenza"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__start_maintenance_date
@@ -530,7 +530,7 @@ msgstr ""
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
 msgid "Team"
-msgstr ""
+msgstr "Squadra"
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
@@ -540,6 +540,9 @@ msgid ""
 "request which is not done yet. You should either set the request as done, "
 "remove its maintenance kind or delete it first."
 msgstr ""
+"Il piano di manutenzione %(kind)s dell'attrezzatura %(eqpmnt)s ha generato "
+"una richiesta che non è ancora stata evasa. Bisogna prima impostarla ad "
+"eseguita o eliminare il genere di manutenzione o eliminarla."
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__activity_exception_decoration
@@ -555,19 +558,19 @@ msgstr "In manutenzione"
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
 msgid "Unnamed %(kind)s plan (%(eqpmnt)s)"
-msgstr ""
+msgstr "Piano %(kind)s anonimo (%(eqpmnt)s)"
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid "Unnamed %(kind)s plan (%(eqpmt)s)"
-msgstr ""
+msgstr "Piano %(kind)s anonimo (%(eqpmt)s)"
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
 msgid "Unnamed %(void)s plan (%(eqpmnt)s)"
-msgstr ""
+msgstr "Piano %(void)s anonimo (%(eqpmnt)s)"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_unread
