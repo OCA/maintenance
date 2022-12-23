@@ -66,7 +66,7 @@
                 <field name="show_time_control" invisible="1" />
                 <button
                     name="button_resume_work"
-                    string="Resume work"
+                    title="Resume work"
                     tabindex="-1"
                     type="object"
                     icon="fa-play-circle text-success"
@@ -75,7 +75,7 @@
                 />
                 <button
                     name="button_end_work"
-                    string="Stop work"
+                    title="Stop work"
                     tabindex="-1"
                     type="object"
                     icon="fa-stop-circle text-warning"
@@ -105,7 +105,7 @@
                     name="button_start_work"
                     attrs="{'invisible': [('show_time_control', '!=', 'start')]}"
                     class="o_kanban_inline_block fa fa-lg fa-play-circle text-success"
-                    string="Start work"
+                    title="Start work"
                     tabindex="-1"
                     type="object"
                 />
@@ -113,7 +113,7 @@
                     name="button_end_work"
                     attrs="{'invisible': [('show_time_control', '!=', 'stop')]}"
                     class="o_kanban_inline_block fa fa-lg fa-stop-circle text-warning"
-                    string="Stop work"
+                    title="Stop work"
                     tabindex="-1"
                     type="object"
                 />
@@ -138,7 +138,7 @@
                 <field name="show_time_control" invisible="1" />
                 <button
                     name="button_start_work"
-                    string="Start work"
+                    title="Start work"
                     tabindex="-1"
                     type="object"
                     icon="fa-play-circle text-success"
@@ -147,7 +147,7 @@
                 />
                 <button
                     name="button_end_work"
-                    string="Stop work"
+                    title="Stop work"
                     tabindex="-1"
                     type="object"
                     icon="fa-stop-circle text-warning"
