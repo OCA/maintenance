@@ -3,7 +3,7 @@
 
 {
     "name": "Base Maintenance",
-    "version": "13.0.1.1.2",
+    "version": "13.0.1.2.0",
     "author": "ForgeFlow, Odoo Community Association (OCA)",
     "development_status": "Beta",
     "website": "https://github.com/OCA/maintenance",
