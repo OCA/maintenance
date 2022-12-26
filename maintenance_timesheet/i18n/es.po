@@ -100,6 +100,7 @@ msgstr "Equipo"
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_hr_timesheet_switch__maintenance_request_id
 msgid "Maintenance Request"
 msgstr "Petición de mantenimiento"
 
