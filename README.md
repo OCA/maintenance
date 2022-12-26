@@ -21,7 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[base_maintenance](base_maintenance/) | 14.0.1.1.0 |  | Base Maintenance
+[base_maintenance](base_maintenance/) | 14.0.1.2.0 |  | Base Maintenance
 [base_maintenance_config](base_maintenance_config/) | 14.0.1.0.0 |  | Provides general settings for the Maintenance App
 [base_maintenance_group](base_maintenance_group/) | 14.0.1.0.1 |  | Provides base access groups for the Maintenance App
 [maintenance_account](maintenance_account/) | 14.0.1.0.1 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Account
@@ -41,7 +41,7 @@ addon | version | maintainers | summary
 [maintenance_request_sequence](maintenance_request_sequence/) | 14.0.1.0.0 |  | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 14.0.1.0.1 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Manage transition visibility and management between stages
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 14.0.1.0.0 |  | Create hierarchies on teams
-[maintenance_timesheet](maintenance_timesheet/) | 14.0.2.0.0 |  | Adds timesheets to maintenance requests
+[maintenance_timesheet](maintenance_timesheet/) | 14.0.2.1.0 |  | Adds timesheets to maintenance requests
 
 [//]: # (end addons)
 
