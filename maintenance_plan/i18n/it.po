@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-12-23 13:45+0000\n"
+"PO-Revision-Date: 2022-12-29 01:35+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -167,13 +167,13 @@ msgstr "Icona per indicare una eccezione."
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_needaction
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_unread
 msgid "If checked, new messages require your attention."
-msgstr "Se settato, nuovi messaggi richiedono la tua attenzione."
+msgstr "Se selezionata, nuovi messaggi richiedono attenzione."
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_error
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Se settato, alcuni messaggi hanno un errore di consegna."
+msgstr "Se selezionata, alcuni messaggi hanno un errore di consegna."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
@@ -522,10 +522,10 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-"Stato in base alle attività\n"
-"Scaduta: data richiesta già passata\n"
+"Stati in base alle attività\n"
+"Scaduti: la data richiesta è trascorsa\n"
 "Oggi: la data attività è oggi\n"
-"Pianificata: attività future."
+"Pianificate: attività future."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
