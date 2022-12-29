@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_maintenance](base_maintenance/) | 15.0.1.0.0 |  | Base Maintenance
 [base_maintenance_config](base_maintenance_config/) | 15.0.1.0.0 |  | Provides general settings for the Maintenance App
+[base_maintenance_group](base_maintenance_group/) | 15.0.1.0.1 |  | Provides base access groups for the Maintenance App
 [maintenance_equipment_contract](maintenance_equipment_contract/) | 15.0.1.0.1 |  | Manage equipment contracts
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 15.0.1.0.1 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 15.0.1.0.1 | [![AdriaGForgeFlow](https://github.com/AdriaGForgeFlow.png?size=30px)](https://github.com/AdriaGForgeFlow) | Adds sequence to maintenance equipment defined in the equipment's category
