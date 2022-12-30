@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [base_maintenance_group](base_maintenance_group/) | 15.0.1.0.1 |  | Provides base access groups for the Maintenance App
 [maintenance_equipment_contract](maintenance_equipment_contract/) | 15.0.1.0.1 |  | Manage equipment contracts
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 15.0.1.0.1 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
+[maintenance_equipment_scrap](maintenance_equipment_scrap/) | 15.0.1.0.1 | [![espo-tony](https://github.com/espo-tony.png?size=30px)](https://github.com/espo-tony) | Enhance the functionality for Scrapping Equipments
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 15.0.1.0.1 | [![AdriaGForgeFlow](https://github.com/AdriaGForgeFlow.png?size=30px)](https://github.com/AdriaGForgeFlow) | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 15.0.1.0.0 |  | Maintenance Equipment Status
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 15.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Adds category tags to equipment
