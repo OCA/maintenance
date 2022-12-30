@@ -58,7 +58,6 @@ class MaintenanceEquipment(models.Model):
             "name": _("Child equipment of %s") % self.name,
             "type": "ir.actions.act_window",
             "res_model": "maintenance.equipment",
-            "res_id": self.id,
             "view_mode": "list,form",
             "context": {
                 **self.env.context,
