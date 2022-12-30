@@ -1,0 +1,135 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_scrap
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-07-28 09:49+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: maintenance_equipment_scrap
+#: model:mail.template,body_html:maintenance_equipment_scrap.equipment_scrap_mail_template
+msgid ""
+"\n"
+"            <p>Hello, <strong>${object.owner_user_id.name}</strong></p>\n"
+"            <p>Your equipment <strong>${object.name}</strong>\n"
+"\n"
+"            % if object.serial_no:\n"
+"                with Serial Number: <strong>${object.serial_no}</strong>\n"
+"            % endif\n"
+"\n"
+"            was scrapped.</p>\n"
+"        "
+msgstr ""
+"\n"
+"            <p>Salve, <strong>${object.owner_user_id.name}</strong></p>\n"
+"            <p>La tua attrezzatura <strong>${object.name}</strong>\n"
+"\n"
+"            % if object.serial_no:\n"
+"                con numero di matricola: <strong>${object.serial_no}</strong>"
+"\n"
+"            % endif\n"
+"\n"
+"            è stata rottamata.</p>\n"
+"        "
+
+#. module: maintenance_equipment_scrap
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_scrap.view_perform_equipment_scrap
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__equipment_id
+msgid "Equipment"
+msgstr "Attrezzatura"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment__equipment_scrap_template_id
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment_category__equipment_scrap_template_id
+msgid "Equipment Scrap Email Template"
+msgstr "Modello email rottamazione attrezzatura"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__id
+msgid "ID"
+msgstr "ID"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model,name:maintenance_equipment_scrap.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Attrezzatura manutenzione"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model,name:maintenance_equipment_scrap.model_maintenance_equipment_category
+msgid "Maintenance Equipment Category"
+msgstr "Categoria attrezzatura manutenzione"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model,name:maintenance_equipment_scrap.model_wizard_perform_equipment_scrap
+msgid "Perform Scrap (Equipment)"
+msgstr "Esegui rottamazione (attrezzatura)"
+
+#. module: maintenance_equipment_scrap
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_scrap.hr_equipment_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_scrap.view_perform_equipment_scrap
+msgid "Scrap"
+msgstr "Rottamazione"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__scrap_date
+msgid "Scrap Date"
+msgstr "Data rottamazione"
+
+#. module: maintenance_equipment_scrap
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_scrap.view_perform_equipment_scrap
+msgid "Scrapping equipment"
+msgstr "Rottamazione attrezzatura"
+
+#. module: maintenance_equipment_scrap
+#: model:ir.actions.act_window,name:maintenance_equipment_scrap.wizard_perform_equipment_scrap_action
+msgid "Wizard Scrap"
+msgstr "Rottamazione guidata"
+
+#. module: maintenance_equipment_scrap
+#: model:mail.template,subject:maintenance_equipment_scrap.equipment_scrap_mail_template
+msgid "Your equipment ${object.name} was scrapped!"
+msgstr "La tua attrezzatura ${object.name} è stata rottamata!"
