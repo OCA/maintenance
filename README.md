@@ -22,7 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_maintenance](base_maintenance/) | 16.0.1.0.0 |  | Base Maintenance
-[maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 16.0.1.0.1 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
+[maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 16.0.1.1.0 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
 
 [//]: # (end addons)
 
