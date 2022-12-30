@@ -37,6 +37,7 @@ addon | version | maintainers | summary
 [maintenance_product](maintenance_product/) | 14.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Product
 [maintenance_project](maintenance_project/) | 14.0.1.1.0 |  | Adds projects to maintenance equipments and requests
 [maintenance_project_plan](maintenance_project_plan/) | 14.0.1.0.0 |  | Adds project and task to a Maintenance Plan
+[maintenance_purchase](maintenance_purchase/) | 14.0.1.0.0 |  | Create Equipments with purchases
 [maintenance_remote](maintenance_remote/) | 14.0.1.0.0 |  | Define remote on maintenance request
 [maintenance_request_sequence](maintenance_request_sequence/) | 14.0.1.0.0 |  | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 14.0.1.0.1 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Manage transition visibility and management between stages
