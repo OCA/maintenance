@@ -73,6 +73,11 @@ msgid "Equipment Scrap Email Template"
 msgstr "Plantilla de email para desechado de equipamientos"
 
 #. module: maintenance_equipment_scrap
+#: model:mail.template,name:maintenance_equipment_scrap.equipment_scrap_mail_template
+msgid "Equipment Scrapped"
+msgstr ""
+
+#. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__id
 msgid "ID"
 msgstr "ID"
