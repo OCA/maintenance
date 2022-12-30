@@ -35,8 +35,8 @@ msgstr ""
 "            <p>La tua attrezzatura <strong>${object.name}</strong>\n"
 "\n"
 "            % if object.serial_no:\n"
-"                con numero di matricola: <strong>${object.serial_no}</strong>"
-"\n"
+"                con numero di matricola: <strong>${object.serial_no}</"
+"strong>\n"
 "            % endif\n"
 "\n"
 "            è stata rottamata.</p>\n"
@@ -72,6 +72,11 @@ msgstr "Attrezzatura"
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment_category__equipment_scrap_template_id
 msgid "Equipment Scrap Email Template"
 msgstr "Modello email rottamazione attrezzatura"
+
+#. module: maintenance_equipment_scrap
+#: model:mail.template,name:maintenance_equipment_scrap.equipment_scrap_mail_template
+msgid "Equipment Scrapped"
+msgstr ""
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__id
