@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-03 21:48+0000\n"
-"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"PO-Revision-Date: 2023-01-02 12:06+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: maintenance_equipment_scrap
 #: model:mail.template,body_html:maintenance_equipment_scrap.equipment_scrap_mail_template
@@ -48,7 +48,7 @@ msgstr "Creata da"
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap_create_date
 msgid "Created on"
-msgstr "Creata il"
+msgstr "Creato il"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap_display_name
