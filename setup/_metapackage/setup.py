@@ -30,6 +30,7 @@ setuptools.setup(
         'odoo14-addon-maintenance_request_stage_transition',
         'odoo14-addon-maintenance_team_hierarchy',
         'odoo14-addon-maintenance_timesheet',
+        'odoo14-addon-maintenance_timesheet_time_control',
     ],
     classifiers=[
         'Programming Language :: Python',
