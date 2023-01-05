@@ -34,7 +34,7 @@ class AccountAnalyticLine(models.Model):
     def unlink(self):
         for timesheet in self.filtered(lambda x: x.maintenance_request_id):
             self._check_request_done(timesheet.maintenance_request_id.id)
-        super().unlink()
+        return super().unlink()
 
     def _check_request_done(self, request_id):
         """
