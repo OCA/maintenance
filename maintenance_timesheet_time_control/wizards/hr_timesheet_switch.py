@@ -11,17 +11,13 @@ class HrTimesheetSwitch(models.TransientModel):
     def _closest_suggestion(self):
         """Allow to search the best suggestion by maintenance.request."""
         result = super()._closest_suggestion()
-        try:
-            if not result and self.env.context["active_model"] == "maintenance.request":
-                return self.env["account.analytic.line"].search(
-                    [
-                        ("user_id", "=", self.env.user.id),
-                        ("maintenance_request_id", "=", self.env.context["active_id"]),
-                    ],
-                    order="date_time DESC",
-                    limit=1,
-                )
-        except KeyError:
-            # If I don't know where's the user, I don't know what to suggest
-            pass
+        if not result and self.env.context["active_model"] == "maintenance.request":
+            return self.env["account.analytic.line"].search(
+                [
+                    ("user_id", "=", self.env.user.id),
+                    ("maintenance_request_id", "=", self.env.context["active_id"]),
+                ],
+                order="date_time DESC",
+                limit=1,
+            )
         return result

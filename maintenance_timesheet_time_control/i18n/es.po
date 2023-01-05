@@ -28,6 +28,11 @@ msgid "Helper to quickly switch between timesheet lines"
 msgstr "Ayudante para cambiar rápidamente de línea del parte de horas"
 
 #. module: maintenance_timesheet_time_control
+#: model:ir.model.fields,help:maintenance_timesheet_time_control.field_maintenance_request__show_time_control
+msgid "Indicate which time control button to show, if any."
+msgstr ""
+
+#. module: maintenance_timesheet_time_control
 #: model:ir.model,name:maintenance_timesheet_time_control.model_maintenance_request
 msgid "Maintenance Request"
 msgstr "Petición de mantenimiento"
@@ -35,6 +40,11 @@ msgstr "Petición de mantenimiento"
 #. module: maintenance_timesheet_time_control
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.equipment_request_view_form
 msgid "Resume work"
+msgstr ""
+
+#. module: maintenance_timesheet_time_control
+#: model:ir.model.fields,field_description:maintenance_timesheet_time_control.field_maintenance_request__show_time_control
+msgid "Show Time Control"
 msgstr ""
 
 #. module: maintenance_timesheet_time_control
