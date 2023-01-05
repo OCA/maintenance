@@ -1,13 +1,13 @@
-# Copyright 2022 Tecnativa - Víctor Martínez
+# Copyright 2022-2023 Tecnativa - Víctor Martínez
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0
 
 from datetime import datetime, timedelta
 
-from odoo import exceptions, fields
+from odoo import exceptions
 from odoo.tests import common, new_test_user, users
 
 
-class TestMaintenanceTimesheetTimeControl(common.SavepointCase):
+class TestMaintenanceTimesheetTimeControl(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -86,15 +86,13 @@ class TestMaintenanceTimesheetTimeControl(common.SavepointCase):
         self.assertEqual(request.show_time_control, "start")
         start_action = request.button_start_work()
         wizard = self._create_wizard(start_action, request)
-        self.assertFalse(wizard.amount)
         self.assertLessEqual(wizard.date_time, datetime.now())
-        self.assertLessEqual(wizard.date, fields.Date.context_today(wizard))
-        self.assertFalse(wizard.unit_amount)
-        self.assertEqual(wizard.account_id, request.project_id.analytic_account_id)
-        self.assertEqual(wizard.employee_id, self.env.user.employee_id)
         self.assertEqual(wizard.name, analytic_line.name)
         self.assertEqual(wizard.project_id, request.project_id)
-        self.assertEqual(wizard.maintenance_request_id, request)
+        self.assertEqual(
+            wizard.analytic_line_id.account_id, request.project_id.analytic_account_id
+        )
+        self.assertEqual(wizard.analytic_line_id, analytic_line)
         new_act = wizard.with_context(show_created_timer=True).action_switch()
         new_line = self.env[new_act["res_model"]].browse(new_act["res_id"])
         self.assertEqual(new_line.employee_id, self.env.user.employee_id)
