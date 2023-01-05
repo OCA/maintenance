@@ -15,18 +15,16 @@ class MaintenanceRequest(models.Model):
     timesheet_total_hours = fields.Float(
         compute="_compute_timesheet_total_hours", readonly=True, store=True
     )
-    planned_hours = fields.Float(string="Planned Hours", tracking=True)
+    planned_hours = fields.Float(tracking=True)
     progress = fields.Float(
         compute="_compute_progress_hours",
         group_operator="avg",
         store=True,
-        string="Progress",
     )
     remaining_hours = fields.Float(
         compute="_compute_progress_hours",
         readonly=True,
         store=True,
-        string="Remaining Hours",
     )
 
     @api.depends("planned_hours", "timesheet_total_hours")
@@ -47,12 +45,13 @@ class MaintenanceRequest(models.Model):
         Members of maintenance team are included as followers to automatically
         grant request visibility and timesheet permissions for this request
         """
-        super()._add_followers()
+        res = super()._add_followers()
         for request in self:
             partner_ids = request.maintenance_team_id.member_ids.mapped(
                 "partner_id"
             ).ids
             request.message_subscribe(partner_ids=partner_ids)
+        return res
 
     @api.depends("timesheet_ids.unit_amount")
     def _compute_timesheet_total_hours(self):
