@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo-addon-maintenance_plan>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_plan_activity>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_product>=15.0dev,<15.1dev',
+        'odoo-addon-maintenance_project>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_remote>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_request_sequence>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_request_stage_transition>=15.0dev,<15.1dev',
