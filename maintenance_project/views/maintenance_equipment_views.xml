@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='owner_user_id']" position="after">
+                <field name="project_id" />
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_view_tree" model="ir.ui.view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="project_id" />
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_view_kanban" model="ir.ui.view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='activity_state']" position="after">
+                <field name="project_id" />
+            </xpath>
+            <xpath expr="//div[hasclass('o_kanban_record_body')]" position="inside">
+                <div t-if="record.project_id.raw_value">
+                    <small>Project: <t t-raw="record.project_id.value" /></small>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='location']" position="after">
+                <field
+                    name="create_project_from_equipment"
+                    attrs="{'invisible': [('id', '!=', False)]}"
+                />
+                <field
+                    name="project_id"
+                    attrs="{'invisible': [('create_project_from_equipment', '=', True), ('id', '=', False)]}"
+                />
+            </xpath>
+            <xpath expr="//group[@name='maintenance']" position="after">
+                <group name="project_task">
+                    <field
+                        name="preventive_default_task_id"
+                        domain="[('project_id', '=', project_id)]"
+                        context="{'default_project_id': project_id}"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
