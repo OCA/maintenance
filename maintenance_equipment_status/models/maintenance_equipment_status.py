@@ -1,4 +1,4 @@
-# Copyright 2020 ForgeFlow S.L. (https://forgeflow.com)
+# Copyright 2023 Serpent CS
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from odoo import fields, models
