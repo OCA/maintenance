@@ -25,6 +25,7 @@ setuptools.setup(
         'odoo-addon-maintenance_request_sequence>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_request_stage_transition>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_team_hierarchy>=15.0dev,<15.1dev',
+        'odoo-addon-maintenance_timesheet>=15.0dev,<15.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
