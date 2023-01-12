@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -61,29 +61,8 @@ msgid "Description"
 msgstr ""
 
 #. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__display_name
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__display_name
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__display_name
-msgid "Display Name"
-msgstr ""
-
-#. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Duration (Hour(s))"
-msgstr ""
-
-#. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__id
-msgid "ID"
-msgstr ""
-
-#. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line____last_update
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment____last_update
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request____last_update
-msgid "Last Modified on"
 msgstr ""
 
 #. module: maintenance_timesheet
@@ -94,7 +73,6 @@ msgstr ""
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_hr_timesheet_switch__maintenance_request_id
 msgid "Maintenance Request"
 msgstr ""
 
