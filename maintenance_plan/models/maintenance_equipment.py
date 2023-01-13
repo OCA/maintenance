@@ -57,14 +57,15 @@ class MaintenanceEquipment(models.Model):
 
     def _prepare_request_from_plan(self, maintenance_plan, next_maintenance_date):
         team_id = maintenance_plan.maintenance_team_id.id or self.maintenance_team_id.id
+        request_model = self.env["maintenance.request"]
         if not team_id:
-            team_id = self.env["maintenance.request"]._get_default_team_id()
+            team_id = request_model._get_default_team_id()
 
         description = self.name if self else maintenance_plan.name
         kind = maintenance_plan.maintenance_kind_id.name or _("Unspecified kind")
         name = _("Preventive Maintenance (%s) - %s") % (kind, description)
 
-        return {
+        data = {
             "name": name,
             "request_date": next_maintenance_date,
             "schedule_date": next_maintenance_date,
@@ -80,6 +81,10 @@ class MaintenanceEquipment(models.Model):
             "note": maintenance_plan.note,
             "company_id": maintenance_plan.company_id.id or self.company_id.id,
         }
+        # This field comes from maintenance_timesheet for avoiding a glue module
+        if "planned_hours" in request_model._fields:
+            data["planned_hours"] = maintenance_plan.duration
+        return data
 
     def _create_new_request(self, mtn_plan):
         # Compute horizon date adding to today the planning horizon
