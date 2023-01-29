@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="maintenance_request_view_form_inherit_checklist" model="ir.ui.view">
+        <field name="name">maintenance.request.view.form.inherit.checklist</field>
+        <field name="model">maintenance.request</field>
+        <field
+            name="inherit_id"
+            ref="maintenance_checklist.maintenance_request_view_form_inherit_checklist"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='checklist_ids']/tree" position="inside">
+                <field name="timer_pause" invisible="1" />
+                <field
+                    name="timer_start"
+                    widget="timer_timer"
+                    string="Timer"
+                    class="text-danger ml-auto h2 ml-4 font-weight-bold"
+                />
+            </xpath>
+            <xpath expr="//button[@name='mark_as_done']" position="attributes">
+                <attribute name="states">process,block</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='checklist_ids']//tree/button[last()]"
+                position="attributes"
+            >
+                <attribute name="string">Resume</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
