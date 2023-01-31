@@ -50,6 +50,14 @@ class StockWarehouse(models.Model):
             }
         }, max_sequence_new + 1
 
+    def _get_picking_type_update_values(self):
+        data = super()._get_picking_type_update_values()
+        print(data)
+        return {
+            **data,
+            "cons_type_id": {'sequence_code': ''}
+        }
+
     def _get_sequence_values(self):
         data = super()._get_sequence_values()
         return {
