@@ -8,7 +8,7 @@
     "version": "13.0.1.0.0",
     "category": "Warehouse",
     "website": "https://github.com/OCA/maintenance",
-    "depends": ["base_maintenance", "stock",],
+    "depends": ["base_maintenance", "stock"],
     "data": [
         "views/maintenance_equipment_views.xml",
         "views/maintenance_request_views.xml",

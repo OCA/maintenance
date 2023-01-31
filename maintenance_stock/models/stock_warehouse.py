@@ -20,7 +20,7 @@ class StockWarehouse(models.Model):
         #      solved with a hook
         if "cons_type_id" in warehouse_data:
             PickingType.browse(warehouse_data["cons_type_id"]).write(
-                {"return_picking_type_id": warehouse_data.get("in_type_id", False),}
+                {"return_picking_type_id": warehouse_data.get("in_type_id", False)}
             )
         return warehouse_data
 
