@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-01-06 01:05+0000\n"
-"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"PO-Revision-Date: 2023-02-01 19:47+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Nome visualizzato"
 #. module: maintenance_timesheet_time_control
 #: model:ir.model,name:maintenance_timesheet_time_control.model_hr_timesheet_switch
 msgid "Helper to quickly switch between timesheet lines"
-msgstr "Aiuto per spostarsi rapidamente tra le righe del foglio ore"
+msgstr "Assistente per spostarsi velocemente tra righe del foglio ore"
 
 #. module: maintenance_timesheet_time_control
 #: model:ir.model.fields,field_description:maintenance_timesheet_time_control.field_hr_timesheet_switch__id
@@ -57,19 +57,19 @@ msgstr "Richiesta di manutenzione"
 #. module: maintenance_timesheet_time_control
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.equipment_request_view_form
 msgid "Resume work"
-msgstr "Ricomincia lavoro"
+msgstr "Riprendi lavoro"
 
 #. module: maintenance_timesheet_time_control
 #: model:ir.model.fields,field_description:maintenance_timesheet_time_control.field_maintenance_request__show_time_control
 msgid "Show Time Control"
-msgstr "Visualizza controllo tempo"
+msgstr "Mostra controllo tempo"
 
 #. module: maintenance_timesheet_time_control
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.hr_equipment_request_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.hr_equipment_request_view_kanban
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.hr_equipment_request_view_tree
 msgid "Start work"
-msgstr "Inizia lavoro"
+msgstr "Avvia lavoro"
 
 #. module: maintenance_timesheet_time_control
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.equipment_request_view_form
