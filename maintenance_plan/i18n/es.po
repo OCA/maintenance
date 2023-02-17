@@ -154,6 +154,12 @@ msgid "Has Message"
 msgstr "Tiene mensaje"
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "Generate requests for current threshold"
+msgstr "Generar peticiones para el umbral actual"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__id
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__id
 msgid "ID"
@@ -491,7 +497,7 @@ msgstr "Usuario responsable"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr ""
+msgstr "Error de envío SMS"
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
@@ -580,16 +586,6 @@ msgstr "Contador de mensajes sin leer"
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid "Unspecified kind"
-msgstr ""
-
-#. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__website_message_ids
-msgid "Website Messages"
-msgstr ""
-
-#. module: maintenance_plan
-#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__website_message_ids
-msgid "Website communication history"
 msgstr ""
 
 #. module: maintenance_plan
