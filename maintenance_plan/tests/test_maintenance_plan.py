@@ -283,3 +283,8 @@ class TestMaintenancePlan(common.TransactionCase):
             "base_maintenance.report_maintenance_request"
         )._render_qweb_text(generated_request.ids, False)
         self.assertRegex(str(res[0]), "TEST-INSTRUCTIONS")
+
+    def test_maintenance_plan_button_manual_request_generation(self):
+        self.assertEqual(len(self.maintenance_plan_1.maintenance_ids), 0)
+        self.maintenance_plan_1.button_manual_request_generation()
+        self.assertEqual(len(self.maintenance_plan_1.maintenance_ids), 3)
