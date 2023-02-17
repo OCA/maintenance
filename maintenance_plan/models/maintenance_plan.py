@@ -200,3 +200,10 @@ class MaintenancePlan(models.Model):
             "equipment maintenance plan.",
         )
     ]
+
+    def button_manual_request_generation(self):
+        """Call the same method that the cron for generating manually the maintenance
+        requests."""
+        for plan in self:
+            equipment = plan.equipment_id
+            equipment._create_new_request(plan)
