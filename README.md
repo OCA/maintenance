@@ -35,6 +35,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 13.0.1.0.0 |  | Adds category tags to equipment
 [maintenance_plan](maintenance_plan/) | 13.0.1.5.0 |  | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 13.0.1.0.1 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
+[maintenance_product](maintenance_product/) | 13.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Product
 [maintenance_project](maintenance_project/) | 13.0.1.1.0 |  | Adds projects to maintenance equipments and requests
 [maintenance_project_plan](maintenance_project_plan/) | 13.0.1.0.0 |  | Adds project and task to a Maintenance Plan
 [maintenance_remote](maintenance_remote/) | 13.0.1.0.0 |  | Define remote on maintenance request
