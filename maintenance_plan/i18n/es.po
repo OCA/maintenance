@@ -187,11 +187,6 @@ msgid "Instructions"
 msgstr "Instrucciones"
 
 #. module: maintenance_plan
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_request_view_form
-msgid "Internal notes..."
-msgstr "Notas internas..."
-
-#. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__interval
 msgid "Interval between each maintenance"
 msgstr "Intervalo entre cada mantenimiento"
@@ -627,6 +622,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "e.g. Calibration"
 msgstr "p.ej. Calibración"
+
+#~ msgid "Internal notes..."
+#~ msgstr "Notas internas..."
 
 #~ msgid "Maintenance Kinds"
 #~ msgstr "Tipos de mantenimiento"
