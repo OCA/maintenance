@@ -13,7 +13,5 @@ class MaintenanceEquipment(models.Model):
         readonly=True,
     )
     move_line_id = fields.Many2one(
-        comodel_name="account.move.line",
-        string="Move line",
-        readonly=True,
+        comodel_name="account.move.line", string="Move line", readonly=True,
     )

@@ -65,8 +65,7 @@ class AccountMoveLine(models.Model):
         readonly=False,
     )
     equipment_ids = fields.Many2many(
-        comodel_name="maintenance.equipment",
-        string="Equipments",
+        comodel_name="maintenance.equipment", string="Equipments",
     )
     equipment_count = fields.Integer(compute="_compute_equipment_count")
 

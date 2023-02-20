@@ -38,11 +38,7 @@ class TestAccountMove(common.SavepointCase):
                 "code": "TEST-PURCHASE",
             }
         )
-        cls.partner = cls.env["res.partner"].create(
-            {
-                "name": "Test partner",
-            }
-        )
+        cls.partner = cls.env["res.partner"].create({"name": "Test partner",})
 
     def _create_invoice(self, move_type="in_invoice"):
         move_form = Form(

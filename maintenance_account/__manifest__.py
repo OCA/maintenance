@@ -9,9 +9,6 @@
     "license": "AGPL-3",
     "depends": ["maintenance_product", "account"],
     "installable": True,
-    "data": [
-        "views/maintenance_equipment_view.xml",
-        "views/account_move_view.xml",
-    ],
+    "data": ["views/maintenance_equipment_view.xml", "views/account_move_view.xml",],
     "maintainers": ["victoralmau"],
 }
