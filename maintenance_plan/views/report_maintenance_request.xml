@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="report_maintenance_request_document"
+        inherit_id="base_maintenance.report_maintenance_request_document"
+    >
+        <xpath expr="//div[@id='description']" position="after">
+            <div class="row mt32 mb32" id="note">
+                <div t-if="doc.note" class="col-auto mw-100 mb-2">
+                    <strong>Instructions:</strong>
+                    <div class="m-0" t-field="doc.note" />
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
