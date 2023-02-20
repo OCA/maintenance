@@ -18,14 +18,14 @@ msgstr ""
 "X-Generator: Weblate 3.10\n"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_needaction
-msgid "Action Needed"
-msgstr ""
-
-#. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.report_maintenance_request_document
 msgid "<strong>Instructions:</strong>"
 msgstr "<strong>Instrucciones:</strong>"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_needaction
+msgid "Action Needed"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__active
