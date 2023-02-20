@@ -35,7 +35,7 @@ class AccountMove(models.Model):
                 vals = line._prepare_equipment_vals()
                 equipment_ids = []
                 for _i in range(1, limit):
-                    equipment = equipment_model.create(vals)
+                    equipment = equipment_model.create(vals.copy())
                     equipment_ids.append((4, equipment.id))
                 line.equipment_ids = equipment_ids
 

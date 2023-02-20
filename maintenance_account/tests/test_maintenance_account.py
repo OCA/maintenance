@@ -38,12 +38,10 @@ class TestAccountMove(common.SavepointCase):
                 "code": "TEST-PURCHASE",
             }
         )
-        cls.partner = cls.env["res.partner"].create({"name": "Test partner",})
+        cls.partner = cls.env["res.partner"].create({"name": "Test partner"})
 
     def _create_invoice(self, move_type="in_invoice"):
-        move_form = Form(
-            self.env["account.move"].with_context(default_move_type=move_type)
-        )
+        move_form = Form(self.env["account.move"].with_context(default_type=move_type))
         move_form.partner_id = self.partner
         move_form.ref = "SUPPLIE-REF"
         move_form.invoice_date = fields.Date.from_string("2000-01-01")

@@ -27,7 +27,7 @@
             >
                 <field
                     name="equipment_category_id"
-                    attrs="{'column_invisible': [('parent.move_type', '!=', 'in_invoice')]}"
+                    attrs="{'column_invisible': [('parent.type', '!=', 'in_invoice')]}"
                     optional="hide"
                 />
             </xpath>
