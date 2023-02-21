@@ -104,10 +104,20 @@ msgid "Frequency"
 msgstr "Frecuencia"
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "Generate requests for current threshold"
+msgstr "Generar peticiones para el umbral actual"
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__id
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__id
 msgid "ID"
 msgstr "ID"
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "If not clicked, the scheduled action will do it for you."
+msgstr "Si no se hace click, la acción programada lo hará por usted."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
