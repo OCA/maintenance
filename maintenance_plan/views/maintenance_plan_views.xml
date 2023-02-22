@@ -15,6 +15,15 @@
         <field name="model">maintenance.plan</field>
         <field name="arch" type="xml">
             <form string="Maintenance Plan">
+                <header>
+                    <button
+                        name="button_manual_request_generation"
+                        string="Generate requests for current threshold"
+                        help="If not clicked, the scheduled action will do it for you."
+                        type="object"
+                        attrs="{'invisible' : ['|', ('id', '=', False),('interval', '=', 0)]}"
+                    />
+                </header>
                 <sheet>
                     <widget
                         name="web_ribbon"
