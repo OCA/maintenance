@@ -148,6 +148,11 @@ msgid "Frequency"
 msgstr "Frequenza"
 
 #. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "Generate requests for current threshold"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__has_message
 msgid "Has Message"
 msgstr "Ha un messaggio"
@@ -179,6 +184,11 @@ msgstr "Se selezionata, nuovi messaggi richiedono attenzione."
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Se selezionata, alcuni messaggi hanno un errore di consegna."
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "If not clicked, the scheduled action will do it for you."
+msgstr ""
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
