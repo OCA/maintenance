@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_request_employee
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-22 10:23+0000\n"
+"PO-Revision-Date: 2023-02-22 11:24+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: maintenance_request_employee
+#: model_terms:ir.ui.view,arch_db:maintenance_request_employee.maintenance_request_view_kanban_inherit_hr
+msgid "Employee"
+msgstr ""
+
+#. module: maintenance_request_employee
+#: model:ir.model.fields,field_description:maintenance_request_employee.field_maintenance_request__employee_ids
+msgid "Employees"
+msgstr "Empleados"
+
+#. module: maintenance_request_employee
+#: model_terms:ir.ui.view,arch_db:maintenance_request_employee.maintenance_request_view_search_inherit_hr
+msgid "Involved Maintenances"
+msgstr "Mantenimientos involucrados"
+
+#. module: maintenance_request_employee
+#: model:ir.model,name:maintenance_request_employee.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Petición de mantenimiento"
