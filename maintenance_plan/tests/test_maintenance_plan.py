@@ -6,69 +6,11 @@ from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 
 from odoo import _, fields
-from odoo.tests import common
+
+from .common import TestMaintenancePlanBase
 
 
-class TestMaintenancePlan(common.TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.env = self.env(
-            context=dict(
-                self.env.context,
-                tracking_disable=True,
-            )
-        )
-        self.maintenance_request_obj = self.env["maintenance.request"]
-        self.maintenance_plan_obj = self.env["maintenance.plan"]
-        self.maintenance_equipment_obj = self.env["maintenance.equipment"]
-        self.cron = self.env.ref("maintenance.maintenance_requests_cron")
-        self.weekly_kind = self.env.ref("maintenance_plan.maintenance_kind_weekly")
-        self.done_stage = self.env.ref("maintenance.stage_3")
-
-        self.equipment_1 = self.maintenance_equipment_obj.create({"name": "Laptop 1"})
-        self.today_date = fields.Date.today()
-        self.maintenance_plan_1 = self.maintenance_plan_obj.create(
-            {
-                "equipment_id": self.equipment_1.id,
-                "start_maintenance_date": self.today_date,
-                "interval": 1,
-                "interval_step": "month",
-                "maintenance_plan_horizon": 2,
-                "planning_step": "month",
-            }
-        )
-        self.maintenance_plan_2 = self.maintenance_plan_obj.create(
-            {
-                "equipment_id": self.equipment_1.id,
-                "maintenance_kind_id": self.weekly_kind.id,
-                "interval": 1,
-                "interval_step": "week",
-                "maintenance_plan_horizon": 2,
-                "planning_step": "month",
-            }
-        )
-        self.maintenance_plan_3 = self.maintenance_plan_obj.create(
-            {
-                "name": "My custom plan",
-                "equipment_id": self.equipment_1.id,
-                "interval": 2,
-                "interval_step": "week",
-                "maintenance_plan_horizon": 2,
-                "planning_step": "month",
-            }
-        )
-        self.maintenance_plan_4 = self.maintenance_plan_obj.create(
-            {
-                "name": "Plan without equipment",
-                "maintenance_kind_id": self.weekly_kind.id,
-                "interval": 1,
-                "interval_step": "week",
-                "maintenance_plan_horizon": 2,
-                "planning_step": "month",
-            }
-        )
-        self.report_obj = self.env["ir.actions.report"]
-
+class TestMaintenancePlan(TestMaintenancePlanBase):
     def test_name_get(self):
         self.assertEqual(
             self.maintenance_plan_1.name_get()[0][1],
