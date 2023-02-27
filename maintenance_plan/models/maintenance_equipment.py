@@ -111,12 +111,18 @@ class MaintenanceEquipment(models.Model):
             )
         else:
             next_maintenance_date = mtn_plan.next_maintenance_date
-        requests = self.env["maintenance.request"]
+        skip_notify_follower = mtn_plan.skip_notify_follower_on_requests
+        # Skip assigned mail + Activity mail
+        request_model = self.env["maintenance.request"].with_context(
+            mail_activity_quick_update=skip_notify_follower,
+            mail_auto_subscribe_no_notify=skip_notify_follower,
+        )
+        requests = request_model
         # Create maintenance request until we reach planning horizon
         while next_maintenance_date <= horizon_date:
             if next_maintenance_date >= fields.Date.today():
                 vals = self._prepare_request_from_plan(mtn_plan, next_maintenance_date)
-                requests |= self.env["maintenance.request"].create(vals)
+                requests |= request_model.create(vals)
             next_maintenance_date = next_maintenance_date + mtn_plan.get_relativedelta(
                 mtn_plan.interval, mtn_plan.interval_step or "year"
             )
