@@ -18,6 +18,11 @@ msgstr ""
 "X-Generator: Poedit 3.0.1\n"
 
 #. module: maintenance_request_employee
+#: model_terms:ir.ui.view,arch_db:maintenance_request_employee.maintenance_request_view_kanban_inherit_hr
+msgid "Employee"
+msgstr ""
+
+#. module: maintenance_request_employee
 #: model:ir.model.fields,field_description:maintenance_request_employee.field_maintenance_request__employee_ids
 msgid "Employees"
 msgstr "Empleados"
