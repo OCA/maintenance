@@ -23,6 +23,11 @@ msgid "Employees"
 msgstr "Empleados"
 
 #. module: maintenance_plan_employee
+#: model:ir.model,name:maintenance_plan_employee.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
+
+#. module: maintenance_plan_employee
 #: model:ir.model,name:maintenance_plan_employee.model_maintenance_plan
 msgid "Maintenance Plan"
 msgstr "Plan de mantenimiento"
