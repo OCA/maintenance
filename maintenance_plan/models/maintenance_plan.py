@@ -76,6 +76,9 @@ class MaintenancePlan(models.Model):
         compute="_compute_maintenance_count", string="Current Maintenance", store=True
     )
     maintenance_team_id = fields.Many2one("maintenance.team")
+    skip_notify_follower_on_requests = fields.Boolean(
+        string="Do not notify to follower when creating requests?", default=True
+    )
 
     def name_get(self):
         result = []
