@@ -1,14 +1,27 @@
-# Copyright 2022 Tecnativa - Víctor Martínez
+# Copyright 2022-2023 Tecnativa - Víctor Martínez
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl)
 
 from odoo import fields
-from odoo.tests import Form, common
+from odoo.tests import Form, common, new_test_user
+from odoo.tests.common import users
 
 
 class TestAccountMove(common.SavepointCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        ctx = {
+            "mail_create_nolog": True,
+            "mail_create_nosubscribe": True,
+            "mail_notrack": True,
+            "no_reset_password": True,
+        }
+        new_test_user(
+            cls.env,
+            login="test-account-user",
+            groups="account.group_account_invoice",
+            context=ctx,
+        )
         cls.categ = cls.env["product.category"].create({"name": "Test category"})
         cls.product_a = cls.env["product.product"].create(
             {"name": "Test product A", "maintenance_ok": True, "categ_id": cls.categ.id}
@@ -56,6 +69,7 @@ class TestAccountMove(common.SavepointCase):
         invoice = move_form.save()
         return invoice
 
+    @users("test-account-user")
     def test_invoice_out_invoice_action_post_equipment_1(self):
         invoice = self._create_invoice("out_invoice")
         line_a = invoice.line_ids.filtered(lambda x: x.product_id == self.product_a)
@@ -66,6 +80,7 @@ class TestAccountMove(common.SavepointCase):
         equipments = invoice.mapped("line_ids.equipment_ids")
         self.assertEqual(len(equipments), 0)
 
+    @users("test-account-user")
     def test_invoice_action_post_equipment_1(self):
         invoice = self._create_invoice()
         line_a = invoice.line_ids.filtered(lambda x: x.product_id == self.product_a)
@@ -87,9 +102,12 @@ class TestAccountMove(common.SavepointCase):
         self.assertEqual(equipment.partner_id, self.partner)
         self.assertEqual(equipment.partner_ref, invoice.ref)
 
+    @users("test-account-user")
     def test_invoice_action_post_equipment_2(self):
-        category = self.env["maintenance.equipment.category"].create(
-            {"name": self.categ.name, "product_category_id": self.categ.id}
+        category = (
+            self.env["maintenance.equipment.category"]
+            .sudo()
+            .create({"name": self.categ.name, "product_category_id": self.categ.id})
         )
         invoice = self._create_invoice()
         line_a = invoice.line_ids.filtered(lambda x: x.product_id == self.product_a)
