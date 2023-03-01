@@ -86,6 +86,11 @@ msgid "Display Name"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__skip_notify_follower_on_requests
+msgid "Do not notify to follower when creating requests?"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__duration
 msgid "Duration (hours)"
 msgstr ""
