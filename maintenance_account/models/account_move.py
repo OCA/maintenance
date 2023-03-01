@@ -19,7 +19,8 @@ class AccountMove(models.Model):
 
     def action_post(self):
         super().action_post()
-        equipment_model = self.env["maintenance.equipment"]
+        # Prevent error if user does not have permission to create equipments
+        equipment_model = self.env["maintenance.equipment"].sudo()
         for move in self.filtered(lambda r: r.is_purchase_document()):
             for line in move.line_ids.filtered(
                 lambda x: (
@@ -35,7 +36,9 @@ class AccountMove(models.Model):
                 vals = line._prepare_equipment_vals()
                 equipment_ids = []
                 for _i in range(1, limit):
-                    equipment = equipment_model.create(vals.copy())
+                    equipment = equipment_model.with_context(
+                        force_company=move.company_id.id,
+                    ).create(vals.copy())
                     equipment_ids.append((4, equipment.id))
                 line.equipment_ids = equipment_ids
 
@@ -96,8 +99,11 @@ class AccountMoveLine(models.Model):
 
     def _set_equipment_category(self):
         if not self.equipment_category_id:
-            category_model = self.env["maintenance.equipment.category"]
-            category = category_model.create(self._prepare_equipment_category_vals())
+            # Prevent error if user does not have permission to create equipments
+            category_model = self.env["maintenance.equipment.category"].sudo()
+            category = category_model.with_context(
+                force_company=self.company_id.id
+            ).create(self._prepare_equipment_category_vals())
             self.equipment_category_id = category.id
 
     def _prepare_equipment_vals(self):
