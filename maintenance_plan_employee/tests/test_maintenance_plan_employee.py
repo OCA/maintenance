@@ -23,6 +23,12 @@ class TestMaintenancePlanEmployee(TestMaintenancePlanBase):
         )
         self.assertIn(self.employee_a, generated_request.employee_ids)
         self.assertIn(self.employee_b, generated_request.employee_ids)
+        # report
+        res = self.report_obj._get_report_from_name(
+            "base_maintenance.report_maintenance_request"
+        ).render_qweb_text(generated_request.ids, False)
+        self.assertRegex(str(res[0]), "Test employee A")
+        self.assertRegex(str(res[0]), "Test employee B")
         # maintenance_plan_2
         self.maintenance_plan_2.button_manual_request_generation()
         generated_request = self.maintenance_request_obj.search(

@@ -14,6 +14,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: maintenance_plan_employee
+#: model_terms:ir.ui.view,arch_db:maintenance_plan_employee.report_maintenance_request_document
+msgid "<strong>Employees:</strong>"
+msgstr ""
+
+#. module: maintenance_plan_employee
 #: model:ir.model.fields,field_description:maintenance_plan_employee.field_maintenance_plan__employee_ids
 msgid "Employees"
 msgstr ""
