@@ -6,7 +6,7 @@ from odoo.tests import Form, common, new_test_user
 from odoo.tests.common import users
 
 
-class TestAccountMove(common.SavepointCase):
+class TestAccountMove(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -107,6 +107,17 @@ class TestAccountMove(common.SavepointCase):
         self.assertEqual(equipment.effective_date, invoice.date)
         self.assertEqual(equipment.partner_id, self.partner)
         self.assertEqual(equipment.partner_ref, invoice.ref)
+
+    @users("test-account-user")
+    def test_invoice_action_post_equipment_1_multi_lines(self):
+        self.product_b.maintenance_ok = True
+        invoice = self._create_invoice()
+        line_a = invoice.line_ids.filtered(lambda x: x.product_id == self.product_a)
+        line_b = invoice.line_ids.filtered(lambda x: x.product_id == self.product_b)
+        invoice.action_post()
+        equipments = invoice.mapped("line_ids.equipment_ids")
+        self.assertEqual(len(equipments.mapped("category_id")), 1)
+        self.assertEqual(line_a.equipment_category_id, line_b.equipment_category_id)
 
     @users("test-account-user")
     def test_invoice_action_post_equipment_2(self):
