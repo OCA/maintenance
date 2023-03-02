@@ -44,10 +44,7 @@
             <field name="user_id" position="after">
                 <field name="employee_ids" />
             </field>
-            <xpath
-                expr="//span[@t-if='record.department_id.raw_value']"
-                position="after"
-            >
+            <xpath expr="//span[@t-if='record.employee_id.raw_value']" position="after">
                 <div t-if="record.employee_ids.raw_value">
                     <t
                         t-foreach="record.employee_ids.raw_value.slice(0,11)"
