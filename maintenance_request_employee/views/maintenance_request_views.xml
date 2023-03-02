@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="maintenance_request_view_search_inherit_hr" model="ir.ui.view">
+        <field name="name">maintenance.request.view.search.inherit.hr</field>
+        <field
+            name="inherit_id"
+            ref="hr_maintenance.maintenance_request_view_search_inherit_hr"
+        />
+        <field name="model">maintenance.request</field>
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <field name="employee_ids" />
+            </field>
+            <xpath expr="//filter[@name='my_maintenances']" position="after">
+                <filter
+                    string="Involved Maintenances"
+                    name="involved_maintenances"
+                    domain="[('employee_ids.user_id', '=', uid)]"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="maintenance_request_view_form_inherit_hr" model="ir.ui.view">
+        <field name="name">maintenance.request.view.form.inherit.hr</field>
+        <field
+            name="inherit_id"
+            ref="hr_maintenance.maintenance_request_view_form_inherit_hr"
+        />
+        <field name="model">maintenance.request</field>
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <field name="employee_ids" widget="many2many_tags" />
+            </field>
+        </field>
+    </record>
+    <record id="maintenance_request_view_kanban_inherit_hr" model="ir.ui.view">
+        <field name="name">maintenance.request.view.kanban.inherit.hr</field>
+        <field
+            name="inherit_id"
+            ref="hr_maintenance.maintenance_request_view_kanban_inherit_hr"
+        />
+        <field name="model">maintenance.request</field>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="employee_ids" />
+            </field>
+            <xpath expr="//span[@t-if='record.employee_id.raw_value']" position="after">
+                <div t-if="record.employee_ids.raw_value">
+                    <t
+                        t-foreach="record.employee_ids.raw_value.slice(0,11)"
+                        t-as="employee"
+                    >
+                        <img
+                            class="oe_kanban_avatar o_image_24_cover"
+                            t-att-src="kanban_image('hr.employee', 'image_128', employee)"
+                            t-att-data-member_id="employee"
+                            alt="Employee"
+                        />
+                    </t>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
