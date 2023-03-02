@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     "name": "Maintenance Account",
-    "version": "14.0.1.0.3",
+    "version": "15.0.1.0.0",
     "category": "Maintenance",
     "website": "https://github.com/OCA/maintenance",
     "author": "Tecnativa, Odoo Community Association (OCA)",
