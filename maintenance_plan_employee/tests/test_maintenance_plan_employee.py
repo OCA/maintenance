@@ -26,7 +26,7 @@ class TestMaintenancePlanEmployee(TestMaintenancePlanBase):
         # report
         res = self.report_obj._get_report_from_name(
             "base_maintenance.report_maintenance_request"
-        ).render_qweb_text(generated_request.ids, False)
+        )._render_qweb_text(generated_request.ids, False)
         self.assertRegex(str(res[0]), "Test employee A")
         self.assertRegex(str(res[0]), "Test employee B")
         # maintenance_plan_2
