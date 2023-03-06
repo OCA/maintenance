@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo-addon-maintenance_equipment_tags>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_plan>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_plan_activity>=15.0dev,<15.1dev',
+        'odoo-addon-maintenance_plan_employee>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_product>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_project>=15.0dev,<15.1dev',
         'odoo-addon-maintenance_remote>=15.0dev,<15.1dev',
