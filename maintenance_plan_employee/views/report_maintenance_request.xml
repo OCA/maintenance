@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="report_maintenance_request_document"
+        inherit_id="base_maintenance.report_maintenance_request_document"
+    >
+        <xpath expr="//div[@id='schedule_informations']" position="inside">
+            <div t-if="doc.employee_ids" class="col-auto mw-100 mb-2">
+                <strong>Employees:</strong>
+                <p
+                    class="m-0"
+                    t-esc="', '.join(map( lambda x: x.name, doc.employee_ids))"
+                />
+            </div>
+        </xpath>
+    </template>
+</odoo>
