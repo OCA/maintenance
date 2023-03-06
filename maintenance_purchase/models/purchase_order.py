@@ -106,8 +106,14 @@ class PurchaseOrderLine(models.Model):
 
     def _set_equipment_category(self):
         if not self.equipment_category_id:
-            category_model = self.env["maintenance.equipment.category"]
-            category = category_model.create(self._prepare_equipment_category_vals())
+            category_model = self.env["maintenance.equipment.category"].sudo()
+            category = fields.first(
+                self.product_id.product_tmpl_id.categ_id.equipment_category_ids
+            )
+            if not category:
+                category = category_model.create(
+                    self._prepare_equipment_category_vals()
+                )
             self.equipment_category_id = category.id
 
     def _prepare_equipment_vals(self):
