@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-03-08 21:22+0000\n"
+"PO-Revision-Date: 2023-04-04 15:25+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -367,7 +367,7 @@ msgstr "Richieste di manutenzione"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_has_error
 msgid "Message Delivery error"
-msgstr "Messaggio errore consegna"
+msgstr "Errore consegna messaggio"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_ids
