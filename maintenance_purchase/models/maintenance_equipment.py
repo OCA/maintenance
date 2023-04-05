@@ -15,6 +15,5 @@ class MaintenanceEquipment(models.Model):
         readonly=True,
     )
     purchase_line_id = fields.Many2one(
-        comodel_name="purchase.order.line",
-        readonly=True,
+        comodel_name="purchase.order.line", readonly=True,
     )

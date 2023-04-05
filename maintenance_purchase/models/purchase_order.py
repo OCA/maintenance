@@ -69,8 +69,7 @@ class PurchaseOrderLine(models.Model):
         readonly=False,
     )
     equipment_ids = fields.Many2many(
-        comodel_name="maintenance.equipment",
-        string="Equipments",
+        comodel_name="maintenance.equipment", string="Equipments",
     )
     equipment_count = fields.Integer(compute="_compute_equipment_count")
 
@@ -95,7 +94,6 @@ class PurchaseOrderLine(models.Model):
         )
         mapping = {x["purchase_line_id"][0]: x["purchase_line_id_count"] for x in data}
         for item in self:
-            item.equipment_count
             item.equipment_count = mapping.get(item.id, 0)
 
     def _prepare_equipment_category_vals(self):
