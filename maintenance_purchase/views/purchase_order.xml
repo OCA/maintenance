@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 CreuBlanca
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="purchase_order_form_view">
+        <field name="name">purchase.order.form (in maintenance_purchase)</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button
+                    name="action_view_equipments"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-cubes"
+                    attrs="{'invisible': [('equipment_count', '=', 0)]}"
+                >
+                    <field
+                        string="Equipment(s)"
+                        name="equipment_count"
+                        widget="statinfo"
+                    />
+                </button>
+            </xpath>
+            <xpath
+                expr="//notebook//field[@name='order_line']/tree/field[@name='product_qty']"
+                position="before"
+            >
+                <field name="equipment_category_id" optional="hide" />
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>
