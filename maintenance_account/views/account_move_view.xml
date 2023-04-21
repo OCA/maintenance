@@ -30,6 +30,7 @@
                     attrs="{'column_invisible': [('parent.move_type', '!=', 'in_invoice')]}"
                     optional="hide"
                 />
+                <field name="equipment_ids" invisible="1" />
             </xpath>
             <xpath
                 expr="//notebook//field[@name='line_ids']/tree/field[@name='date_maturity']"
@@ -40,6 +41,7 @@
                     domain="[('company_id','=', parent.company_id)]"
                     optional="hide"
                 />
+                <field name="equipment_ids" invisible="1" />
             </xpath>
         </field>
     </record>
