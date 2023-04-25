@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-23 15:49+0000\n"
+"PO-Revision-Date: 2023-04-25 21:34+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: maintenance_request_repair
 #: model:ir.model.fields,field_description:maintenance_request_repair.field_repair_order__maintenance_request_count
@@ -25,19 +25,19 @@ msgstr "N° manutenzioni"
 #: model:ir.model.fields,field_description:maintenance_request_repair.field_maintenance_request__display_name
 #: model:ir.model.fields,field_description:maintenance_request_repair.field_repair_order__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: maintenance_request_repair
 #: model:ir.model.fields,field_description:maintenance_request_repair.field_maintenance_request__id
 #: model:ir.model.fields,field_description:maintenance_request_repair.field_repair_order__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_request_repair
 #: model:ir.model.fields,field_description:maintenance_request_repair.field_maintenance_request____last_update
 #: model:ir.model.fields,field_description:maintenance_request_repair.field_repair_order____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: maintenance_request_repair
 #: model:ir.model,name:maintenance_request_repair.model_maintenance_request
