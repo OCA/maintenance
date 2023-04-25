@@ -5,7 +5,7 @@
     "name": "Maintenance Equipment Image",
     "summary": """Adds images to equipment.""",
     "category": "Manufacturing/Maintenance",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "license": "AGPL-3",
     "author": "Exo Software," "Odoo Community Association (OCA)",
     "maintainers": ["pedrocasi"],
