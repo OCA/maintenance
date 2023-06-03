@@ -8,7 +8,11 @@ class TestMaintenanceStock(test_common.TransactionCase):
         super().setUp()
 
         self.maintenance_warehouse = self.env["stock.warehouse"].create(
+<<<<<<< HEAD
             {"name": "Test warehouse", "code": "TEST",}
+=======
+            {"name": "Test warehouse", "code": "TEST"}
+>>>>>>> 9a9e9cf ([MIG] maintenance_stock: Migration to 13.0)
         )
 
         self.product1 = self.env["product.product"].create(
@@ -107,6 +111,16 @@ class TestMaintenanceStock(test_common.TransactionCase):
         self.assertEqual(len(self.equipment_1.stock_picking_ids), 0)
 
         qty_done = 5.0
+<<<<<<< HEAD
+=======
+        move_line_data = {
+            "product_id": self.product1.id,
+            "product_uom_id": self.env.ref("uom.product_uom_unit").id,
+            "qty_done": qty_done,
+            "location_id": self.maintenance_warehouse.lot_stock_id.id,
+            "location_dest_id": self.maintenance_warehouse.wh_cons_loc_id.id,
+        }
+>>>>>>> 9a9e9cf ([MIG] maintenance_stock: Migration to 13.0)
         picking = self.env["stock.picking"].create(
             {
                 "maintenance_request_id": self.request_1.id,
@@ -125,21 +139,7 @@ class TestMaintenanceStock(test_common.TransactionCase):
                             "picking_type_id": self.maintenance_warehouse.cons_type_id.id,
                             "location_id": self.maintenance_warehouse.lot_stock_id.id,
                             "location_dest_id": self.maintenance_warehouse.wh_cons_loc_id.id,
-                            "move_line_ids": [
-                                (
-                                    0,
-                                    0,
-                                    {
-                                        "product_id": self.product1.id,
-                                        "product_uom_id": self.env.ref(
-                                            "uom.product_uom_unit"
-                                        ).id,
-                                        "qty_done": qty_done,
-                                        "location_id": self.maintenance_warehouse.lot_stock_id.id,
-                                        "location_dest_id": self.maintenance_warehouse.wh_cons_loc_id.id,
-                                    },
-                                )
-                            ],
+                            "move_line_ids": [(0, 0, move_line_data)],
                         },
                     )
                 ],
