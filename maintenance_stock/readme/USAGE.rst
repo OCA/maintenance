@@ -6,7 +6,7 @@ and filling a default warehouse for the picking operations:
    :width: 600 px
 
 Then, for every mainteance request of this equipment, *Picking List* button
-allows us to make consumptions, that will be picking documents with their own 
+allows us to make consumptions, that will be picking documents with their own
 sequence:
 
 .. figure:: ../static/description/request-1.png
@@ -28,7 +28,7 @@ will not compute for stock inventory, like e.g. partner locations:
 From both request and equipment forms these stock operations and *Product Moves*
 are available.
 
-Return operations are also enabled, and will be linked to the request and 
+Return operations are also enabled, and will be linked to the request and
 equipment as well:
 
 .. figure:: ../static/description/pick-2.png
