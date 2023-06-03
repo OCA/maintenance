@@ -16,11 +16,11 @@ class StockWarehouse(models.Model):
         PickingType = self.env["stock.picking.type"]
 
         # TODO when is called for an existing warehouse (e.g. during the
-        #      module installation in_type_id is not accesible). Temporary
-        #      solved with a hook
+        # module installation in_type_id is not accesible). Temporary
+        # solved with a hook
         if "cons_type_id" in warehouse_data:
             PickingType.browse(warehouse_data["cons_type_id"]).write(
-                {"return_picking_type_id": warehouse_data.get("in_type_id", False),}
+                {"return_picking_type_id": warehouse_data.get("in_type_id", False)}
             )
         return warehouse_data
 
@@ -43,6 +43,8 @@ class StockWarehouse(models.Model):
                     "default_location_dest_id": self.wh_cons_loc_id.id,
                     "sequence": max_sequence_new,
                     "barcode": self.code.replace(" ", "").upper() + "-CONS",
+                    "sequence_code": "CONS",
+                    "company_id": self.company_id and self.company_id.id,
                 },
             },
             max_sequence_new + 1,
@@ -64,8 +66,8 @@ class StockWarehouse(models.Model):
             },
         }
 
-    def _get_locations_values(self, vals):
-        sub_locations = super()._get_locations_values(vals)
+    def _get_locations_values(self, vals, code=False):
+        sub_locations = super()._get_locations_values(vals, code=code)
         code = vals.get("code") or self.code
         code = code.replace(" ", "").upper()
         company_id = vals.get("company_id", self.company_id.id)

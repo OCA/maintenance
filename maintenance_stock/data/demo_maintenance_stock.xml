@@ -5,7 +5,6 @@
         <record id="stock_warehouse_maintenance" model="stock.warehouse">
             <field name="name">Maintenance Warehouse</field>
             <field name="partner_id" ref="stock.res_partner_address_41" />
-            <field name="company_id" ref="stock.res_company_1" />
             <field name="code">Main</field>
         </record>
 
@@ -37,9 +36,8 @@
             <field name="standard_price">70.0</field>
             <field name="uom_id" ref="uom.product_uom_unit" />
             <field name="uom_po_id" ref="uom.product_uom_unit" />
-            <field name="property_stock_inventory" ref="stock.location_inventory" />
             <field
-                name="image"
+                name="image_1920"
                 type="base64"
                 file="maintenance_stock/static/img/toner.png"
             />
@@ -47,8 +45,10 @@
 
         <record id="stock_inventory_toner" model="stock.inventory">
             <field name="name">Inventory for Toner</field>
-            <field name="filter">product</field>
-            <field name="product_id" ref="maintenance_stock.product_toner" />
+            <field
+                name="product_ids"
+                eval="[(4, ref('maintenance_stock.product_toner'))]"
+            />
         </record>
 
         <record id="stock_inventory_toner_line" model="stock.inventory.line">
@@ -59,9 +59,17 @@
             <field name="location_id" ref="maintenance_stock.main_location_stock" />
         </record>
 
-        <function model="stock.inventory" name="action_validate">
+        <function model="stock.inventory" name="_action_start">
             <function
                 eval="[[('state','=','draft'),('id', '=', ref('maintenance_stock.stock_inventory_toner'))]]"
+                model="stock.inventory"
+                name="search"
+            />
+        </function>
+
+        <function model="stock.inventory" name="action_validate">
+            <function
+                eval="[[('state','=','confirm'),('id', '=', ref('maintenance_stock.stock_inventory_toner'))]]"
                 model="stock.inventory"
                 name="search"
             />
