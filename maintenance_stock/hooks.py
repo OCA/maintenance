@@ -2,13 +2,14 @@
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
 import logging
+
 from odoo import SUPERUSER_ID, api
 
 
 def post_init_hook(cr, registry):
-    logging.getLogger('odoo.addons.maintenance_stock').info(
-        'Adding pending locations, sequences and pìcking types to '
-        'current warehouses')
+    logging.getLogger("odoo.addons.maintenance_stock").info(
+        "Adding pending locations, sequences and pìcking types to " "current warehouses"
+    )
 
     env = api.Environment(cr, SUPERUSER_ID, {})
     PickingType = env["stock.picking.type"]
@@ -18,5 +19,6 @@ def post_init_hook(cr, registry):
         warehouse.write(new_vals)
         # return picking type workaround for existing warehouses
         if "cons_type_id" in new_vals:
-            PickingType.browse(new_vals["cons_type_id"]).write({
-                "return_picking_type_id": warehouse.in_type_id.id})
+            PickingType.browse(new_vals["cons_type_id"]).write(
+                {"return_picking_type_id": warehouse.in_type_id.id}
+            )
