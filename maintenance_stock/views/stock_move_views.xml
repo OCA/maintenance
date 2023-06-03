@@ -54,7 +54,6 @@
         <field name="name">Stock Moves</field>
         <field name="res_model">stock.move</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="view_type">form</field>
         <field name="view_id" ref="stock.view_move_tree" />
         <field name="search_view_id" ref="stock.view_move_search" />
         <field name="domain">[('maintenance_request_id', '!=', False)]</field>
