@@ -5,41 +5,42 @@ import odoo.tests.common as test_common
 
 
 class TestMaintenanceProject(test_common.TransactionCase):
-    def setUp(self):
-        super().setUp()
+    @classmethod
+    def setUpClass(cls):
+        super(TestMaintenanceProject, cls).setUpClass()
 
-        self.cron = self.env.ref("maintenance.maintenance_requests_cron")
-        self.project1 = self.env["project.project"].create({"name": "My project"})
-        self.project_demo1 = self.env.ref("maintenance_project.project_project_1")
+        cls.cron = cls.env.ref("maintenance.maintenance_requests_cron")
+        cls.project1 = cls.env["project.project"].create({"name": "My project"})
+        cls.project_demo1 = cls.env.ref("maintenance_project.project_project_1")
 
-        self.equipment1 = self.env["maintenance.equipment"].create(
+        cls.equipment1 = cls.env["maintenance.equipment"].create(
             {
                 "name": "My equipment",
                 "create_project_from_equipment": True,
-                "maintenance_team_id": self.env.ref(
+                "maintenance_team_id": cls.env.ref(
                     "maintenance.equipment_team_metrology"
                 ).id,
                 "period": 30,
                 "maintenance_duration": 1.0,
             }
         )
-        self.equipment2 = self.env["maintenance.equipment"].create(
+        cls.equipment2 = cls.env["maintenance.equipment"].create(
             {
                 "name": "My equipment without project",
                 "create_project_from_equipment": False,
             }
         )
-        self.equipment3 = self.env["maintenance.equipment"].create(
+        cls.equipment3 = cls.env["maintenance.equipment"].create(
             {
                 "name": "My equipment with related project",
                 "create_project_from_equipment": False,
-                "project_id": self.project1.id,
+                "project_id": cls.project1.id,
             }
         )
 
-        self.equipment_demo1 = self.env.ref("maintenance_project.equipment_1")
-        self.equipment_demo2 = self.env.ref("maintenance_project.equipment_2")
-        self.equipment_demo3 = self.env.ref("maintenance_project.equipment_3")
+        cls.equipment_demo1 = cls.env.ref("maintenance_project.equipment_1")
+        cls.equipment_demo2 = cls.env.ref("maintenance_project.equipment_2")
+        cls.equipment_demo3 = cls.env.ref("maintenance_project.equipment_3")
 
     def test_maintenance_equipment_project(self):
         self.assertEqual(self.equipment1.name, self.equipment1.project_id.name)

@@ -13,14 +13,16 @@ class MaintenanceEquipment(models.Model):
         string="Default Task", comodel_name="project.task"
     )
 
-    @api.model
-    def create(self, values):
-        if values.get("create_project_from_equipment"):
-            new_project = self.env["project.project"].create(
-                self._prepare_project_from_equipment_values(values)
-            )
-            values["project_id"] = new_project.id
-        return super().create(values)
+    @api.model_create_multi
+    def create(self, vals_list):
+        project_obj = self.env["project.project"]
+        for values in vals_list:
+            if values.get("create_project_from_equipment"):
+                new_project = project_obj.create(
+                    self._prepare_project_from_equipment_values(values)
+                )
+                values["project_id"] = new_project.id
+        return super().create(vals_list)
 
     def _prepare_project_from_equipment_values(self, values):
         """
