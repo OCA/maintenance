@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo-addon-base_maintenance>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_equipment_hierarchy>=16.0dev,<16.1dev',
+        'odoo-addon-maintenance_project>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
