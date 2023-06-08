@@ -47,13 +47,6 @@ msgid "Default Task"
 msgstr "Lavoro predefinito"
 
 #. module: maintenance_project
-#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__display_name
-#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__display_name
-#: model:ir.model.fields,field_description:maintenance_project.field_project_project__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__equipment_count
 msgid "Equipment Count"
 msgstr "Conta attrezzatura"
@@ -63,6 +56,11 @@ msgstr "Conta attrezzatura"
 #: model_terms:ir.ui.view,arch_db:maintenance_project.edit_project
 msgid "Equipments"
 msgstr "Attrezzature"
+
+#. module: maintenance_project
+#: model:project.project,name:maintenance_project.project_project_1
+msgid "General equipment project"
+msgstr ""
 
 #. module: maintenance_project
 #: model:maintenance.equipment,name:maintenance_project.equipment_3
@@ -78,20 +76,6 @@ msgstr "Monitor generico"
 #: model:maintenance.equipment,name:maintenance_project.equipment_2
 msgid "Generic Monitor with preventive"
 msgstr "Monitor generico con preventiva"
-
-#. module: maintenance_project
-#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__id
-#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__id
-#: model:ir.model.fields,field_description:maintenance_project.field_project_project__id
-msgid "ID"
-msgstr "ID"
-
-#. module: maintenance_project
-#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment____last_update
-#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request____last_update
-#: model:ir.model.fields,field_description:maintenance_project.field_project_project____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
 
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_maintenance_equipment
@@ -140,3 +124,12 @@ msgstr "Lavoro"
 #: model:project.project,label_tasks:maintenance_project.project_project_1
 msgid "Tasks"
 msgstr "Lavori"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
