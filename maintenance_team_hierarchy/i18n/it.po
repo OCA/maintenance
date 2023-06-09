@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-04-10 19:23+0000\n"
+"PO-Revision-Date: 2023-06-09 13:11+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model,name:maintenance_team_hierarchy.model_maintenance_team
@@ -24,7 +24,7 @@ msgstr "Team manutenzione"
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team_parent_id
 msgid "Parent"
-msgstr "Principale"
+msgstr "Padre"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team_parent_left
