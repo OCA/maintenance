@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-28 11:49+0000\n"
+"PO-Revision-Date: 2023-06-12 09:09+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.view_project_kanban
@@ -60,7 +60,7 @@ msgstr "Attrezzature"
 #. module: maintenance_project
 #: model:project.project,name:maintenance_project.project_project_1
 msgid "General equipment project"
-msgstr ""
+msgstr "Progetto attrezzatura generica"
 
 #. module: maintenance_project
 #: model:maintenance.equipment,name:maintenance_project.equipment_3
