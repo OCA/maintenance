@@ -18,6 +18,6 @@ class TestMaintenanceProductBase(common.TransactionCase):
                 "categ_id": cls.product_category.id,
                 "standard_price": 10,
                 "maintenance_ok": True,
-                "seller_ids": [(0, 0, {"name": cls.partner.id})],
+                "seller_ids": [(0, 0, {"partner_id": cls.partner.id})],
             }
         )
