@@ -5,14 +5,13 @@ from odoo.tests.common import TransactionCase
 
 
 class TestMaintenanceRequestSequence(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.team_id = self.env["maintenance.team"].create(
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.team_id = cls.env["maintenance.team"].create(
             {"name": "Maintenance Team", "code_prefix": "MT-TEST"}
         )
-        self.team_id_2 = self.env["maintenance.team"].create(
-            {"name": "Maintenance Team"}
-        )
+        cls.team_id_2 = cls.env["maintenance.team"].create({"name": "Maintenance Team"})
 
     def test_maintenance_request_sequence(self):
         sequence = self.env["ir.sequence"].search([("prefix", "=", "MT-TEST")])
