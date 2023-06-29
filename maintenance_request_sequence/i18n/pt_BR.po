@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_request_sequence
+# 	* maintenance_request_sequence
 #
 msgid ""
 msgstr ""
@@ -38,7 +38,9 @@ msgstr "Prefixo para Referência da Equipe"
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,help:maintenance_request_sequence.field_maintenance_team__code_prefix
-msgid "Prefix used to generate the internal reference for re created with this category. If blank the default sequence will be used."
+msgid ""
+"Prefix used to generate the internal reference for re created with this "
+"category. If blank the default sequence will be used."
 msgstr ""
 "Prefixo usado para gerar a referência interna para recriar com esta "
 "categoria. Se estiver em branco, a sequência padrão será usada."
