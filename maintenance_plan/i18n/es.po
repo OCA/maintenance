@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:30+0000\n"
-"PO-Revision-Date: 2023-03-01 14:31+0100\n"
-"Last-Translator: Víctor Martínez <victor.martinez@tecnativa.com>\n"
+"PO-Revision-Date: 2023-06-30 11:08+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.report_maintenance_request_document
@@ -232,7 +232,7 @@ msgstr "Última modificación en"
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__write_uid
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__write_uid
 msgid "Last Updated by"
-msgstr "Última modificación por"
+msgstr "actualizado por última vez por"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__write_date
