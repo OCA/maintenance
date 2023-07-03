@@ -23,7 +23,7 @@ class TestFlow(TransactionCase):
         self.assertIn(self.original_stage, self.stage.previous_stage_ids)
 
     def get_button(self, stage):
-        data = self.request.fields_view_get(view_type="form")
+        data = self.request.get_view(view_type="form")
         form = etree.XML(data["arch"])
         path = "//header/button[@name='set_maintenance_stage' and @id='%s']"
         button = form.xpath(path % stage.id)[0]
@@ -36,13 +36,13 @@ class TestFlow(TransactionCase):
 
     def test_form(self):
         button_stage = self.get_button(self.stage)
-        attr_stage = json.loads(button_stage.attrib["attrs"])
+        attr_stage = json.loads(button_stage.attrib["modifiers"])
         self.assertNotIn(
             self.request,
             self.env["maintenance.request"].search(attr_stage["invisible"]),
         )
         button = self.get_button(self.last_stage)
-        attr = json.loads(button.attrib["attrs"])
+        attr = json.loads(button.attrib["modifiers"])
         self.assertIn(
             self.request, self.env["maintenance.request"].search(attr["invisible"])
         )
@@ -50,7 +50,7 @@ class TestFlow(TransactionCase):
             self.request.with_context(**json.loads(button_stage.attrib["context"])),
             button.attrib["name"],
         )()
-        self.request.refresh()
+        self.request.env.invalidate_all()
         self.assertEqual(self.request.stage_id, self.stage)
         self.assertIn(
             self.request,
