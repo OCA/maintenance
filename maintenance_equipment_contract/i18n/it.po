@@ -1,0 +1,58 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-07-28 09:49+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: maintenance_equipment_contract
+#: model:ir.model,name:maintenance_equipment_contract.model_contract_contract
+msgid "Contract"
+msgstr "Contratto"
+
+#. module: maintenance_equipment_contract
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__contract_count
+msgid "Contract Count"
+msgstr "Conteggio contratto"
+
+#. module: maintenance_equipment_contract
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__contract_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_form
+msgid "Contracts"
+msgstr "Contratti"
+
+#. module: maintenance_equipment_contract
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_search
+msgid "Doesn't have Contracts"
+msgstr "Non ha contratti"
+
+#. module: maintenance_equipment_contract
+#: model:maintenance.equipment,name:maintenance_equipment_contract.equipment_with_contract
+msgid "Equipment With A Contract"
+msgstr "Attrezzatura con un contratto"
+
+#. module: maintenance_equipment_contract
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__equipment_ids
+msgid "Equipments"
+msgstr "Attrezzature"
+
+#. module: maintenance_equipment_contract
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_search
+msgid "Has Contracts"
+msgstr "Ha contratti"
+
+#. module: maintenance_equipment_contract
+#: model:ir.model,name:maintenance_equipment_contract.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Attrezzatura manutenzione"
