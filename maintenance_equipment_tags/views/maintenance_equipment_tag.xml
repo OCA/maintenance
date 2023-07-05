@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="maintenance_equipment_tag_form_view" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.equipment.tag.form (in maintenance_equipment_tags)</field>
+        <field name="model">maintenance.equipment.tag</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="info_group">
+                        <field name="name" />
+                        <field name="color" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="maintenance_equipment_tag_tree_view" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.equipment.tag.tree (in maintenance_equipment_tags)</field>
+        <field name="model">maintenance.equipment.tag</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="maintenance_equipment_tag_act_window" model="ir.actions.act_window">
+        <field name="name">Equipment Tags</field>
+        <field name="res_model">maintenance.equipment.tag</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+    <record id="maintenance_equipment_tag_menu" model="ir.ui.menu">
+        <field name="name">Equipment Tags</field>
+        <field name="parent_id" ref="maintenance.menu_maintenance_configuration" />
+        <field name="action" ref="maintenance_equipment_tag_act_window" />
+        <field name="sequence" eval="35" />
+    </record>
+</odoo>

@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_tags
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2020-06-23 22:10+0000\n"
+"Last-Translator: Fernando Colus <fcolus1@gmail.com>\n"
+"Language-Team: none\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.10\n"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__color
+msgid "Color Index (0-15)"
+msgstr "Índice de Cores (0-15)"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__display_name
+msgid "Display Name"
+msgstr "Exibir Nome"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__equipment_ids
+msgid "Equipment"
+msgstr "Equipamento"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__name
+msgid "Equipment Tag"
+msgstr "Etiqueta do Equipamento"
+
+#. module: maintenance_equipment_tags
+#: model:ir.actions.act_window,name:maintenance_equipment_tags.maintenance_equipment_tag_act_window
+#: model:ir.ui.menu,name:maintenance_equipment_tags.maintenance_equipment_tag_menu
+msgid "Equipment Tags"
+msgstr "Etiquetas do Equipamento"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__id
+msgid "ID"
+msgstr "ID (Identificação)"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação Feita em"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização Feita por"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização Feita em"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model,name:maintenance_equipment_tags.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipamento de Manutenção"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model,name:maintenance_equipment_tags.model_maintenance_equipment_tag
+msgid "Maintenance Equipment Tag"
+msgstr "Etiqueta do Equipamento de Manutenção"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.constraint,message:maintenance_equipment_tags.constraint_maintenance_equipment_tag_name_uniq
+msgid "Tag name already exists !"
+msgstr "Nome da etiqueta já existe !"
+
+#. module: maintenance_equipment_tags
+#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment__tag_ids
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: maintenance_equipment_tags
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_tags.hr_equipment_view_form
+msgid "e.g. Computers"
+msgstr "Por Exemplo Computadores"
