@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_maintenance](base_maintenance/) | 16.0.1.0.0 |  | Base Maintenance
+[base_maintenance_group](base_maintenance_group/) | 16.0.1.0.0 |  | Provides base access groups for the Maintenance App
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 16.0.1.1.0 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
 [maintenance_equipment_image](maintenance_equipment_image/) | 16.0.1.0.0 | [![pedrocasi](https://github.com/pedrocasi.png?size=30px)](https://github.com/pedrocasi) | Adds images to equipment.
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 16.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Adds category tags to equipment
