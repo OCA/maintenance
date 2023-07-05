@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo-addon-base_maintenance>=16.0dev,<16.1dev',
+        'odoo-addon-base_maintenance_group>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_equipment_hierarchy>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_equipment_image>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_equipment_tags>=16.0dev,<16.1dev',
