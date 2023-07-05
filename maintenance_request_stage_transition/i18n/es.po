@@ -72,6 +72,7 @@ msgid "Success"
 msgstr "Éxito"
 
 #. module: maintenance_request_stage_transition
+#. odoo-python
 #: code:addons/maintenance_request_stage_transition/models/maintenance_stage.py:0
 #, python-format
 msgid "To %s"
