@@ -1,0 +1,83 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_request_stage_transition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-07-14 15:48+0000\n"
+"Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__button_class
+msgid "Button Class"
+msgstr "Clase del Botón"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__danger
+msgid "Danger"
+msgstr "Peligro"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,help:maintenance_request_stage_transition.field_maintenance_stage__button_class
+msgid "For default, the system uses primary"
+msgstr "Por defecto, el sistema usa Primario"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__info
+msgid "Info"
+msgstr "Info"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Petición de mantenimiento"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_stage
+msgid "Maintenance Stage"
+msgstr "Estado"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__next_stage_ids
+msgid "Next stages"
+msgstr "Próximos estados"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__previous_stage_ids
+msgid "Previous stages"
+msgstr "Estados previos"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__primary
+msgid "Primary"
+msgstr "Primario"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_request__stage_id
+msgid "Stage"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__success
+msgid "Success"
+msgstr "Éxito"
+
+#. module: maintenance_request_stage_transition
+#: code:addons/maintenance_request_stage_transition/models/maintenance_stage.py:0
+#, python-format
+msgid "To %s"
+msgstr "A %s"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__warning
+msgid "Warning"
+msgstr "Advertencia"
