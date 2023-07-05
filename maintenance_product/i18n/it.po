@@ -23,15 +23,6 @@ msgid "Can be Maintenance"
 msgstr "Manutenibile"
 
 #. module: maintenance_product
-#: model:ir.model.fields,field_description:maintenance_product.field_maintenance_equipment__display_name
-#: model:ir.model.fields,field_description:maintenance_product.field_maintenance_equipment_category__display_name
-#: model:ir.model.fields,field_description:maintenance_product.field_product_category__display_name
-#: model:ir.model.fields,field_description:maintenance_product.field_product_product__display_name
-#: model:ir.model.fields,field_description:maintenance_product.field_product_template__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: maintenance_product
 #: model:ir.model.fields,field_description:maintenance_product.field_product_category__equipment_category_ids
 msgid "Equipment Categories"
 msgstr "Categorie attrezzatura"
@@ -40,24 +31,6 @@ msgstr "Categorie attrezzatura"
 #: model:ir.model.fields,field_description:maintenance_product.field_product_product__equipment_ids
 msgid "Equipments"
 msgstr "Attrezzature"
-
-#. module: maintenance_product
-#: model:ir.model.fields,field_description:maintenance_product.field_maintenance_equipment__id
-#: model:ir.model.fields,field_description:maintenance_product.field_maintenance_equipment_category__id
-#: model:ir.model.fields,field_description:maintenance_product.field_product_category__id
-#: model:ir.model.fields,field_description:maintenance_product.field_product_product__id
-#: model:ir.model.fields,field_description:maintenance_product.field_product_template__id
-msgid "ID"
-msgstr "ID"
-
-#. module: maintenance_product
-#: model:ir.model.fields,field_description:maintenance_product.field_maintenance_equipment____last_update
-#: model:ir.model.fields,field_description:maintenance_product.field_maintenance_equipment_category____last_update
-#: model:ir.model.fields,field_description:maintenance_product.field_product_category____last_update
-#: model:ir.model.fields,field_description:maintenance_product.field_product_product____last_update
-#: model:ir.model.fields,field_description:maintenance_product.field_product_template____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
 
 #. module: maintenance_product
 #: model:ir.model,name:maintenance_product.model_maintenance_equipment
@@ -70,7 +43,7 @@ msgid "Maintenance Equipment Category"
 msgstr "Categoria attrezzatura manutenzione"
 
 #. module: maintenance_product
-#: model:ir.model,name:maintenance_product.model_product_product
+#: model:ir.model,name:maintenance_product.model_product_template
 #: model:ir.model.fields,field_description:maintenance_product.field_maintenance_equipment__product_id
 msgid "Product"
 msgstr "Prodotto"
@@ -83,6 +56,18 @@ msgid "Product Category"
 msgstr "Categoria prodotto"
 
 #. module: maintenance_product
-#: model:ir.model,name:maintenance_product.model_product_template
-msgid "Product Template"
-msgstr "Modello prodotto"
+#: model:ir.model,name:maintenance_product.model_product_product
+msgid "Product Variant"
+msgstr ""
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
+
+#~ msgid "Product Template"
+#~ msgstr "Modello prodotto"
