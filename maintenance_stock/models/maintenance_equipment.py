@@ -6,11 +6,6 @@ from odoo import api, fields, models
 class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
-    stock_picking_ids = fields.One2many(
-        comodel_name="stock.picking",
-        inverse_name="maintenance_equipment_id",
-        groups="stock.group_stock_user",
-    )
     allow_consumptions = fields.Boolean(
         groups="stock.group_stock_user",
     )
@@ -27,7 +22,9 @@ class MaintenanceEquipment(models.Model):
 
     def action_view_stock_picking_ids(self):
         self.ensure_one()
-        action = self.env.ref("stock.action_picking_tree_all").read()[0]
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "stock.action_picking_tree_all"
+        )
         action["domain"] = [("maintenance_equipment_id", "=", self.id)]
         action["context"] = {
             "show_maintenance_request_id": True,
@@ -36,13 +33,17 @@ class MaintenanceEquipment(models.Model):
 
     def action_view_stock_move_ids(self):
         self.ensure_one()
-        action = self.env.ref("stock.stock_move_action").read()[0]
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "stock.stock_move_action"
+        )
         action["domain"] = [("maintenance_equipment_id", "=", self.id)]
         return action
 
     def action_view_stock_move_line_ids(self):
         self.ensure_one()
-        action = self.env.ref("stock.stock_move_line_action").read()[0]
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "stock.stock_move_line_action"
+        )
         action["domain"] = [("maintenance_equipment_id", "=", self.id)]
 
         # TODO Grouping by destination allows separating consumptions

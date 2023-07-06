@@ -1,15 +1,13 @@
 # © 2020 Solvos Consultoría Informática (<http://www.solvos.es>)
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 import odoo.tests.common as test_common
+from odoo.tests.common import Form
 
 
 class TestMaintenanceStock(test_common.TransactionCase):
     def setUp(self):
         super().setUp()
-
         self.maintenance_warehouse = self.env["stock.warehouse"].create(
-            {"name": "Test warehouse", "code": "TEST",}
-            {"name": "Test warehouse", "code": "TEST"}
             {
                 "name": "Test warehouse",
                 "code": "TEST",
@@ -30,6 +28,7 @@ class TestMaintenanceStock(test_common.TransactionCase):
             {
                 "name": "Test equipment",
                 "allow_consumptions": True,
+                "equipment_assign_to": "employee",
                 "default_consumption_warehouse_id": self.maintenance_warehouse.id,
             }
         )
@@ -109,61 +108,26 @@ class TestMaintenanceStock(test_common.TransactionCase):
 
     def test_picking(self):
         self.assertEqual(len(self.request_1.stock_picking_ids), 0)
-        self.assertEqual(len(self.equipment_1.stock_picking_ids), 0)
-
-        qty_done = 5.0
-        move_line_data = {
-            "product_id": self.product1.id,
-            "product_uom_id": self.env.ref("uom.product_uom_unit").id,
-            "qty_done": qty_done,
-            "location_id": self.maintenance_warehouse.lot_stock_id.id,
-            "location_dest_id": self.maintenance_warehouse.wh_cons_loc_id.id,
-        }
-        location_id = self.maintenance_warehouse.lot_stock_id.id
-        location_dest_id = self.maintenance_warehouse.wh_cons_loc_id.id
-        picking_type_id = self.maintenance_warehouse.cons_type_id.id
-        picking = self.env["stock.picking"].create(
+        location_id = self.maintenance_warehouse.lot_stock_id
+        location_dest_id = self.maintenance_warehouse.wh_cons_loc_id
+        picking_type_id = self.maintenance_warehouse.cons_type_id
+        self.env["stock.quant"].create(
             {
-                "maintenance_request_id": self.request_1.id,
-                "picking_type_id": picking_type_id,
-                "location_id": location_id,
-                "location_dest_id": location_dest_id,
-                "move_lines": [
-                    (
-                        0,
-                        0,
-                        {
-                            "name": "Test move",
-                            "product_id": self.product1.id,
-                            "product_uom": self.env.ref("uom.product_uom_unit").id,
-                            "product_uom_qty": 5.0,
-                            "picking_type_id": picking_type_id,
-                            "location_id": location_id,
-                            "location_dest_id": location_dest_id,
-                            "move_line_ids": [
-                                (
-                                    0,
-                                    0,
-                                    {
-                                        "product_id": self.product1.id,
-                                        "product_uom_id": self.env.ref(
-                                            "uom.product_uom_unit"
-                                        ).id,
-                                        "qty_done": qty_done,
-                                        "location_id": location_id,
-                                        "location_dest_id": location_dest_id,
-                                    },
-                                )
-                            ],
-                        },
-                    )
-                ],
+                "product_id": self.product1.id,
+                "location_id": location_id.id,
+                "quantity": 5,
             }
         )
-
+        picking_form = Form(self.env["stock.picking"])
+        picking_form.picking_type_id = picking_type_id
+        picking_form.location_id = location_id
+        picking_form.location_dest_id = location_dest_id
+        with picking_form.move_ids_without_package.new() as move:
+            move.product_id = self.product1
+            move.product_uom_qty = 5.0
+        picking = picking_form.save()
+        picking.write({"maintenance_request_id": self.request_1.id})
         self.assertEqual(len(self.request_1.stock_picking_ids), 1)
-        self.assertEqual(len(self.equipment_1.stock_picking_ids), 1)
-
         stock_quant_obj = self.env["stock.quant"]
         domain_from = [
             ("product_id", "=", self.product1.id),
@@ -173,11 +137,12 @@ class TestMaintenanceStock(test_common.TransactionCase):
             ("product_id", "=", self.product1.id),
             ("location_id", "=", self.maintenance_warehouse.wh_cons_loc_id.id),
         ]
-        self.assertEqual(stock_quant_obj.search(domain_from).quantity, 0)
+        self.assertEqual(stock_quant_obj.search(domain_from).quantity, 5)
         self.assertEqual(stock_quant_obj.search(domain_to).quantity, 0)
 
         picking.action_confirm()
-        picking.action_done()
-
-        self.assertEqual(stock_quant_obj.search(domain_from).quantity, -qty_done)
-        self.assertEqual(stock_quant_obj.search(domain_to).quantity, qty_done)
+        picking.action_assign()
+        picking.move_line_ids.write({"qty_done": 5.0})
+        picking.button_validate()
+        self.assertEqual(stock_quant_obj.search(domain_from).quantity, 0)
+        self.assertEqual(stock_quant_obj.search(domain_to).quantity, 5)
