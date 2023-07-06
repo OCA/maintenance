@@ -22,6 +22,7 @@ msgid "Active"
 msgstr "Activo"
 
 #. module: maintenance_equipment_status
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_search
 msgid "Archived"
 msgstr "Archivado"
@@ -54,7 +55,6 @@ msgstr "Nombre a mostrar"
 #. module: maintenance_equipment_status
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_search
-#: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_tree
 msgid "Equipment Status"
 msgstr "Estado del Equipamiento"
 
@@ -102,6 +102,10 @@ msgstr "Nombre"
 
 #. module: maintenance_equipment_status
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__note
+msgid "Note"
+msgstr ""
+
+#. module: maintenance_equipment_status
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
 msgid "Notes"
 msgstr "Notas"
@@ -117,11 +121,6 @@ msgid "Status"
 msgstr "Estado"
 
 #. module: maintenance_equipment_status
-#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment__status_name
-msgid "Status name"
-msgstr "Nombre del Estado"
-
-#. module: maintenance_equipment_status
 #: model:ir.model.fields,help:maintenance_equipment_status.field_maintenance_equipment_status__category_ids
 msgid ""
 "When set, this status will only be applicable to the equipments under these "
@@ -134,6 +133,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
 msgid "e.g. Operational"
 msgstr "p. e. Operativo"
+
+#~ msgid "Status name"
+#~ msgstr "Nombre del Estado"
 
 #~ msgid "Equipment"
 #~ msgstr "Equipamiento"
