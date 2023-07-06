@@ -20,7 +20,9 @@ class StockWarehouse(models.Model):
         # solved with a hook
         if "cons_type_id" in warehouse_data:
             PickingType.browse(warehouse_data["cons_type_id"]).write(
-                {"return_picking_type_id": warehouse_data.get("in_type_id", False),}
+                {
+                    "return_picking_type_id": warehouse_data.get("in_type_id", False),
+                }
             )
         return warehouse_data
 
@@ -41,8 +43,9 @@ class StockWarehouse(models.Model):
                     "use_existing_lots": True,
                     "default_location_src_id": self.lot_stock_id.id,
                     "default_location_dest_id": self.wh_cons_loc_id.id,
-                    "sequence": max_sequence_new,
+                    "sequence_code": max_sequence_new,
                     "barcode": self.code.replace(" ", "").upper() + "-CONS",
+                    "company_id": self.company_id.id or self.env.company.id,
                 },
             },
             max_sequence_new + 1,
@@ -64,8 +67,8 @@ class StockWarehouse(models.Model):
             },
         }
 
-    def _get_locations_values(self, vals):
-        sub_locations = super()._get_locations_values(vals)
+    def _get_locations_values(self, vals, code=False):
+        sub_locations = super()._get_locations_values(vals, code)
         code = vals.get("code") or self.code
         code = code.replace(" ", "").upper()
         company_id = vals.get("company_id", self.company_id.id)
