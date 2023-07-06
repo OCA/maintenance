@@ -5,7 +5,7 @@
         <field name="model">stock.picking</field>
         <field name="inherit_id" ref="stock.view_picking_internal_search" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='group_id']" position="after">
+            <xpath expr="//field[@name='picking_type_id']" position="after">
                 <field name="maintenance_equipment_id" />
                 <field name="maintenance_request_id" />
             </xpath>
