@@ -7,7 +7,8 @@ class StockMoveLine(models.Model):
     _inherit = "stock.move.line"
 
     maintenance_request_id = fields.Many2one(
-        comodel_name="maintenance.request", related="picking_id.maintenance_request_id",
+        comodel_name="maintenance.request",
+        related="picking_id.maintenance_request_id",
     )
     maintenance_equipment_id = fields.Many2one(
         comodel_name="maintenance.equipment",

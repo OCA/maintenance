@@ -7,7 +7,8 @@ class StockPicking(models.Model):
     _inherit = "stock.picking"
 
     maintenance_request_id = fields.Many2one(
-        comodel_name="maintenance.request", index=True,
+        comodel_name="maintenance.request",
+        index=True,
     )
     maintenance_equipment_id = fields.Many2one(
         comodel_name="maintenance.equipment",

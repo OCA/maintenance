@@ -11,7 +11,9 @@ class MaintenanceEquipment(models.Model):
         inverse_name="maintenance_equipment_id",
         groups="stock.group_stock_user",
     )
-    allow_consumptions = fields.Boolean(groups="stock.group_stock_user",)
+    allow_consumptions = fields.Boolean(
+        groups="stock.group_stock_user",
+    )
     default_consumption_warehouse_id = fields.Many2one(
         string="Default Consumption Warehouse",
         comodel_name="stock.warehouse",
