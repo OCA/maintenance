@@ -24,7 +24,9 @@ class MaintenanceRequest(models.Model):
 
     def action_view_stock_picking_ids(self):
         self.ensure_one()
-        action = self.env.ref("stock.stock_picking_action_picking_type").read()[0]
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "stock.stock_picking_action_picking_type"
+        )
         action["domain"] = [("maintenance_request_id", "=", self.id)]
         action["context"] = {
             "default_picking_type_id": self.default_consumption_warehouse_id.cons_type_id.id,
@@ -34,13 +36,17 @@ class MaintenanceRequest(models.Model):
 
     def action_view_stock_move_ids(self):
         self.ensure_one()
-        action = self.env.ref("stock.stock_move_action").read()[0]
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "stock.stock_move_action"
+        )
         action["domain"] = [("maintenance_request_id", "=", self.id)]
         return action
 
     def action_view_stock_move_line_ids(self):
         self.ensure_one()
-        action = self.env.ref("stock.stock_move_line_action").read()[0]
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "stock.stock_move_line_action"
+        )
         action["domain"] = [("maintenance_request_id", "=", self.id)]
 
         # TODO Grouping by destination allows separating consumptions
