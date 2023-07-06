@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+        <record id="repair_order_form_view" model="ir.ui.view">
+        <field name="name">repair.order.form (in maintenance_request_repair)</field>
+        <field name="model">repair.order</field>
+            <field name="inherit_id" ref="repair.view_repair_order_form" />
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <div name="button_box" position="inside">
+                    <field name="maintenance_request_ids" invisible="1" />
+                    <button
+                    type="object"
+                    name="action_view_maintenance_request"
+                    class="oe_stat_button"
+                    icon="fa-wrench"
+                    groups="base.group_user"
+                >
+                        <field
+                        name="maintenance_request_count"
+                        widget="statinfo"
+                        string="Maintenances"
+                    />
+                    </button>
+                </div>
+            </field>
+        </record>
+
+
+</odoo>
