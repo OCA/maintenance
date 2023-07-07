@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_stock
+# 	* maintenance_stock
 #
 msgid ""
 msgstr ""
@@ -43,7 +43,7 @@ msgid "Allow Consumptions"
 msgstr "Consenti consumo"
 
 #. module: maintenance_stock
-#: code:addons/maintenance_stock/models/stock_warehouse.py:42
+#: code:addons/maintenance_stock/models/stock_warehouse.py:0
 #: model:stock.picking.type,name:maintenance_stock.main_picking_type_cons
 #, python-format
 msgid "Consumption"
@@ -60,7 +60,7 @@ msgid "Consumption Type"
 msgstr "Tipi di consumo"
 
 #. module: maintenance_stock
-#: code:addons/maintenance_stock/models/stock_warehouse.py:79
+#: code:addons/maintenance_stock/models/stock_warehouse.py:0
 #, python-format
 msgid "Consumptions"
 msgstr "Consumi"
@@ -125,7 +125,7 @@ msgid "Product Moves (Stock Move Line)"
 msgstr "Movimenti prodotto (riga movimento di magazzino)"
 
 #. module: maintenance_stock
-#: code:addons/maintenance_stock/models/stock_warehouse.py:65
+#: code:addons/maintenance_stock/models/stock_warehouse.py:0
 #, python-format
 msgid "Sequence consumption"
 msgstr "Sequenza di consumo"
@@ -153,7 +153,8 @@ msgstr "Non ci sono ancora movimenti di prodotto"
 
 #. module: maintenance_stock
 #: model_terms:ir.actions.act_window,help:maintenance_stock.stock_move_action
-msgid "This menu gives you the full traceability of inventory\n"
+msgid ""
+"This menu gives you the full traceability of inventory\n"
 "            operations on a specific product. You can filter on the product\n"
 "            to see all the past or future movements for the product."
 msgstr ""
@@ -181,16 +182,16 @@ msgstr "Trasferimento"
 #. module: maintenance_stock
 #: model:product.product,uom_name:maintenance_stock.product_toner
 #: model:product.template,uom_name:maintenance_stock.product_toner_product_template
-msgid "Unit(s)"
-msgstr "Unità"
+msgid "Units"
+msgstr ""
 
 #. module: maintenance_stock
 #: model:ir.model,name:maintenance_stock.model_stock_warehouse
 msgid "Warehouse"
 msgstr "Magazzino"
 
-#. module: maintenance_stock
-#: model:product.product,weight_uom_name:maintenance_stock.product_toner
-#: model:product.template,weight_uom_name:maintenance_stock.product_toner_product_template
-msgid "kg"
-msgstr "kg"
+#~ msgid "Unit(s)"
+#~ msgstr "Unità"
+
+#~ msgid "kg"
+#~ msgstr "kg"
