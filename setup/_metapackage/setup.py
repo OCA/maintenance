@@ -31,6 +31,7 @@ setuptools.setup(
         'odoo13-addon-maintenance_request_employee',
         'odoo13-addon-maintenance_request_sequence',
         'odoo13-addon-maintenance_request_stage_transition',
+        'odoo13-addon-maintenance_stock',
         'odoo13-addon-maintenance_team_hierarchy',
         'odoo13-addon-maintenance_timesheet',
         'odoo13-addon-maintenance_timesheet_time_control',
