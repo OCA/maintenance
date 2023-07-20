@@ -1,37 +1,38 @@
 # Copyright 2019 Solvos Consultoría Informática (<http://www.solvos.es>)
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-import odoo.tests.common as test_common
 from odoo import fields
 from odoo.exceptions import ValidationError
+from odoo.tests.common import TransactionCase
 
 
-class TestMaintenanceTimesheet(test_common.TransactionCase):
-    def setUp(self):
-        super().setUp()
+class TestMaintenanceTimesheet(TransactionCase):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
 
-        self.stage_undone = self.env.ref("maintenance.stage_0")
-        self.stage_done = self.env.ref("maintenance.stage_4")
+        cls.stage_undone = cls.env.ref("maintenance.stage_0")
+        cls.stage_done = cls.env.ref("maintenance.stage_4")
 
-        self.request_demo1 = self.env.ref("maintenance_timesheet.request_1")
-        self.request2 = self.env["maintenance.request"].create(
+        cls.request_demo1 = cls.env.ref("maintenance_timesheet.request_1")
+        cls.request2 = cls.env["maintenance.request"].create(
             {
                 "name": "Corrective #2 for Generic Monitor",
-                "equipment_id": self.env.ref("maintenance_project.equipment_1").id,
-                "user_id": self.env.ref("base.user_admin").id,
+                "equipment_id": cls.env.ref("maintenance_project.equipment_1").id,
+                "user_id": cls.env.ref("base.user_admin").id,
                 "schedule_date": fields.Date.today(),
-                "stage_id": self.stage_undone.id,
+                "stage_id": cls.stage_undone.id,
                 "maintenance_type": "corrective",
             }
         )
-        self.timesheet21_data = {
+        cls.timesheet21_data = {
             "name": "Some tasks done",
-            "project_id": self.request2.project_id.id,
-            "user_id": self.env.ref("base.user_admin").id,
+            "project_id": cls.request2.project_id.id,
+            "user_id": cls.env.ref("base.user_admin").id,
             "date": fields.Date.today(),
             "unit_amount": 1.5,
         }
-        self.request2.timesheet_ids = [(0, 0, self.timesheet21_data)]
+        cls.request2.timesheet_ids = [(0, 0, cls.timesheet21_data)]
 
     def test_request_timesheets(self):
         self.assertEqual(self.request_demo1.timesheet_total_hours, 2)

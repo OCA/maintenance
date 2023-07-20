@@ -84,8 +84,17 @@
                     icon="fa-calendar"
                     groups="hr_timesheet.group_hr_timesheet_user"
                 >
-                    <field name="timesheet_total_hours" widget="timesheet_uom" />
-                    <span class="o_label" style="padding-left: 5px;">Hours</span>
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value">
+                            <field
+                                name="timesheet_total_hours"
+                                widget="timesheet_uom"
+                            />
+                        </span>
+                        <span class="o_stat_text">
+                            Hours
+                        </span>
+                    </div>
                 </button>
             </xpath>
         </field>
