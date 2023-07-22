@@ -1,0 +1,128 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_maintenance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-22 23:09+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: base_maintenance
+#: model:ir.actions.report,print_report_name:base_maintenance.action_report_maintenance_request
+msgid "'Maintenance Request - %s' % (object.name)"
+msgstr "'Solicitud de mantenimiento - %s' % (object.name)"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<span>Maintenance Request</span>"
+msgstr "<span>Solicitud de mantenimiento</span>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Category:</strong>"
+msgstr "<strong>Categoría:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Close Date:</strong>"
+msgstr "<strong>Fecha de cierre:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Description:</strong>"
+msgstr "<strong>Descripción:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Duration:</strong>"
+msgstr "<strong>Duración:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Equipment:</strong>"
+msgstr "<strong>Equipamiento:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Maintenance Type:</strong>"
+msgstr "<strong>Tipo de mantenimiento:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Model:</strong>"
+msgstr "<strong>Modelo:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Priority:</strong>"
+msgstr "<strong>Prioridad:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Request Date:</strong>"
+msgstr "<strong>Fecha de solicitud:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Requested By:</strong>"
+msgstr "<strong>Solicitado por:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Responsible:</strong>"
+msgstr "<strong>Responsable:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Schedule Date:</strong>"
+msgstr "<strong>Fecha programada:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Serial:</strong>"
+msgstr "<strong>Serie:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Stage:</strong>"
+msgstr "<strong>Estado:</strong>"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
+msgid "<strong>Team:</strong>"
+msgstr "<strong>Equipo:</strong>"
+
+#. module: base_maintenance
+#: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__description
+#: model_terms:ir.ui.view,arch_db:base_maintenance.equipment_request_view_form
+msgid "Description"
+msgstr "descripción"
+
+#. module: base_maintenance
+#: model_terms:ir.ui.view,arch_db:base_maintenance.maintenance_team_view_form
+msgid "Description of the team's function"
+msgstr "Descripción de la función del equipo"
+
+#. module: base_maintenance
+#: model:ir.actions.report,name:base_maintenance.action_report_maintenance_request
+msgid "Maintenance Request"
+msgstr "Solicitud de mantenimiento"
+
+#. module: base_maintenance
+#: model:ir.model,name:base_maintenance.model_maintenance_team
+msgid "Maintenance Teams"
+msgstr "Equipos de Mantenimiento"
+
+#. module: base_maintenance
+#: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__user_id
+msgid "Team Leader"
+msgstr "Líder de equipo"
