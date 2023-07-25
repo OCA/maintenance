@@ -12,7 +12,6 @@
                 <div
                     class="oe_button_box"
                     name="button_box"
-                    style="margin-right: 10px;"
                 >
                     <!--Empty, to be inherited by other modules.-->
                 </div>
