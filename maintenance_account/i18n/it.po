@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-10-24 11:43+0000\n"
+"PO-Revision-Date: 2023-11-12 17:39+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_account
 #: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__equipment_category_id
@@ -27,7 +27,7 @@ msgstr "Categoria attrezzatura"
 #: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__equipment_count
 #: model:ir.model.fields,field_description:maintenance_account.field_account_payment__equipment_count
 msgid "Equipment Count"
-msgstr "Conteggio attrezzatura"
+msgstr "Conteggio attrezzature"
 
 #. module: maintenance_account
 #: model_terms:ir.ui.view,arch_db:maintenance_account.view_move_form
@@ -67,7 +67,7 @@ msgstr "Riga movimento"
 #. module: maintenance_account
 #: model:ir.model.fields,help:maintenance_account.field_maintenance_equipment__move_id
 msgid "The move of this entry line."
-msgstr "Il movimento di questa registrazione."
+msgstr "Il movimento per questa riga di registrazione."
 
 #~ msgid "Display Name"
 #~ msgstr "Nome visualizzato"
