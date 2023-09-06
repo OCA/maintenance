@@ -17,14 +17,17 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_timesheet
-#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_form
-msgid "<span class=\"o_label\" style=\"padding-left: 5px;\">Hours</span>"
-msgstr "<span class=\"o_label\" style=\"padding-left: 5px;\">Ore</span>"
-
-#. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_kanban
 msgid "<span class=\"o_label\">Hours</span>"
 msgstr "<span class=\"o_label\">Ore</span>"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_form
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                            Hours\n"
+"                        </span>"
+msgstr ""
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
@@ -48,6 +51,7 @@ msgid "Analytic Line"
 msgstr "Riga analitica"
 
 #. module: maintenance_timesheet
+#. odoo-python
 #: code:addons/maintenance_timesheet/models/hr_timesheet.py:0
 #, python-format
 msgid ""
@@ -67,30 +71,9 @@ msgid "Description"
 msgstr "Descrizione"
 
 #. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__display_name
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__display_name
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Duration (Hour(s))"
 msgstr "Durata (ora(e))"
-
-#. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__id
-msgid "ID"
-msgstr "ID"
-
-#. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line____last_update
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment____last_update
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_equipment
@@ -100,7 +83,6 @@ msgstr "Attrezzatura manutenzione"
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_hr_timesheet_switch__maintenance_request_id
 msgid "Maintenance Request"
 msgstr "Richiesta manutenzione"
 
@@ -155,3 +137,15 @@ msgstr "Ore totali foglio presenze"
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Timesheets"
 msgstr "Foglio presenze"
+
+#~ msgid "<span class=\"o_label\" style=\"padding-left: 5px;\">Hours</span>"
+#~ msgstr "<span class=\"o_label\" style=\"padding-left: 5px;\">Ore</span>"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
