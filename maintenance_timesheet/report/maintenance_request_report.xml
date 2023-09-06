@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="report_maintenance_request_document"
+        inherit_id="maintenance_project.report_maintenance_request_document"
+    >
+        <xpath expr="//div[@id='project_informations']" position="inside">
+            <div
+                groups="hr_timesheet.group_hr_timesheet_user"
+                class="col-auto mw-100 mb-2"
+            >
+                <strong>Timesheet Total Hours:</strong>
+                <p
+                    class="m-0"
+                    t-field="doc.timesheet_total_hours"
+                    t-options="{'widget': 'duration', 'digital': True, 'unit': 'hour', 'round': 'minute'}"
+                />
+            </div>
+        </xpath>
+        <xpath expr="//div[@id='description']" position="after">
+            <div
+                id="timesheet_information"
+                t-if="doc.timesheet_ids"
+                groups="hr_timesheet.group_hr_timesheet_user"
+                class="col-auto mw-100 mb-2"
+            >
+                <h5>
+                    <span id="timesheet_information_title">Timesheet Entries</span>
+                </h5>
+                <div id="timesheet_information_detail" class="row">
+                    <div class="col-md-12">
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Responsible</th>
+                                    <th>Description</th>
+                                    <th t-if="show_task"><t
+                                            t-if="show_project"
+                                        >Project - </t>Task</th>
+                                    <th class="text-right">Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.timesheet_ids" t-as="l">
+                                    <tr>
+                                        <td>
+                                            <span t-field="l.date" />
+                                        </td>
+                                        <td>
+                                            <span t-field="l.user_id.partner_id.name" />
+                                        </td>
+                                        <td>
+                                            <span
+                                                t-field="l.name"
+                                                t-options="{'widget': 'text'}"
+                                            />
+                                        </td>
+                                        <td t-if="show_task or show_project">
+                                            <t t-if="show_project">
+                                                <span t-field="l.project_id.name" />
+                                            </t>
+                                            <t t-if="show_project and l.task_id"> - </t>
+                                            <t t-if="l.task_id">
+                                                <span t-field="l.task_id.name" />
+                                            </t>
+                                        </td>
+                                        <td class="text-right">
+                                            <span
+                                                t-field="l.unit_amount"
+                                                t-options="{'widget': 'duration', 'digital': True, 'unit': 'hour', 'round': 'minute'}"
+                                            />
+                                        </td>
+                                    </tr>
+                                </t>
+                                <tr>
+                                    <td />
+                                    <td />
+                                    <td t-if="show_task" />
+                                    <td class="text-right">
+                                        <strong>Total</strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <strong
+                                            t-esc="sum(doc.timesheet_ids.mapped('unit_amount'))"
+                                            t-options="{'widget': 'duration', 'digital': True, 'unit': 'hour', 'round': 'minute'}"
+                                        />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
