@@ -22,3 +22,7 @@ planning horizon. Therefore, the maintenance manager can have a proper planning
 of how many maintenance requests are programming for the future. Leaving planning
 horizon to 0 will only create those maintenance request that are scheduled for
 today.
+
+We can also create maintenance requests from a plan using a domain for selecting the equipments.
+This way, we might have a single plan that will generate all the requests.
+In order to use it, we need to mark the `Generate with Domain` field.
