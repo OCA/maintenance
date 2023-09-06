@@ -186,6 +186,41 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
             self.today_date + relativedelta(weeks=9),
         )
 
+    def test_generate_requests_no_equipment(self):
+        self.cron.method_direct_trigger()
+        generated_requests = self.maintenance_request_obj.search(
+            [("maintenance_plan_id", "=", self.maintenance_plan_5.id)],
+            order="schedule_date asc",
+        )
+
+        self.assertEqual(len(generated_requests), 3)
+
+        # We set plan start_maintenanca_date to a future one. New requests should take
+        # into account this new date.
+
+        self.maintenance_plan_5.write(
+            {
+                "start_maintenance_date": fields.Date.to_string(
+                    self.today_date + timedelta(weeks=9)
+                ),
+                "maintenance_plan_horizon": 3,
+            }
+        )
+
+        self.cron.method_direct_trigger()
+
+        generated_requests = self.maintenance_request_obj.search(
+            [("maintenance_plan_id", "=", self.maintenance_plan_5.id)],
+            order="schedule_date asc",
+        )
+
+        self.assertEqual(len(generated_requests), 4)
+        self.assertEqual(
+            generated_requests[-1].request_date,
+            self.today_date + relativedelta(weeks=9),
+        )
+        self.assertFalse(generated_requests.mapped("equipment_id"))
+
     def test_get_relativedelta(self):
         plan = self.maintenance_plan_1
         result = plan.get_relativedelta(1, "day")
