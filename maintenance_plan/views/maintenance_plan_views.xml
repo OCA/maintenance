@@ -67,6 +67,16 @@
                                 name="maintenance_team_id"
                                 attrs="{'required': [('equipment_id', '=', False)]}"
                             />
+                            <field
+                                name="generate_with_domain"
+                                attrs="{'invisible': [('equipment_id', '!=', False)]}"
+                            />
+                            <field
+                                name="generate_domain"
+                                widget="domain"
+                                options="{'model': 'maintenance.equipment', 'in_dialog': True}"
+                                attrs="{'invisible': ['|', ('equipment_id', '!=', False), ('generate_with_domain', '=', False)]}"
+                            />
                         </group>
                         <group>
                             <field name="skip_notify_follower_on_requests" />
@@ -181,7 +191,7 @@
             'default_equipment_id': active_id, 'hide_equipment_id': 0
         }</field>
         <field name="domain">['|', ('active', '=', True), ('active', '=',
-            False), ('equipment_id', '=', active_id)]
+            False), ('search_equipment_id', '=', active_id)]
         </field>
     </record>
     <menuitem
