@@ -7,7 +7,7 @@
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
         <field name="arch" type="xml">
-            <field name="owner_user_id" position="after">
+            <field name="company_id" position="after">
                 <field
                     name="location_id"
                     widget="child_selector"
@@ -44,12 +44,12 @@
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
         <field name="arch" type="xml">
-            <span name="owner_user_id" position="after">
+            <xpath expr="//span/field[@name='equipment_id']/.." position="before">
                 <span
                     name="location_id"
                     t-if="record.location_id.raw_value"
                 >Location : <field name="location_id" /><br /></span>
-            </span>
+            </xpath>
         </field>
     </record>
 </odoo>
