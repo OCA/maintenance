@@ -15,7 +15,13 @@
                         </h1>
                     </div>
                     <group name="first" col="2">
+                        <field name="description" />
                         <field name="parent_id" class="oe_inline" />
+                        <label for="latitude" string="Location" />
+                        <span class="oe_inline">
+                            Latitude: <field name="latitude" nolabel="1" /><br />
+                            Longitude: <field name="longitude" nolabel="1" />
+                        </span>
                     </group>
                 </sheet>
             </form>
