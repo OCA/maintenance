@@ -16,6 +16,7 @@ class MaintenanceLocation(models.Model):
     _order = "complete_name,id"
 
     name = fields.Char(required=True)
+    description = fields.Char()
     complete_name = fields.Char(
         "Complete Name", compute="_compute_complete_name", store=True
     )
@@ -30,8 +31,10 @@ class MaintenanceLocation(models.Model):
     )
     child_id = fields.One2many("maintenance.location", "parent_id", "Child Locations")
     parent_path = fields.Char(index=True)
-
+    latitude = fields.Float(digits=(16, 5))
+    longitude = fields.Float(digits=(16, 5))
     sequence = fields.Integer(string="Sequence", default=10)
+    active = fields.Boolean(default=True)
 
     @api.depends("name", "parent_id.complete_name")
     def _compute_complete_name(self):
