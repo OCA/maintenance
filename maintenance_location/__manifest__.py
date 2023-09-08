@@ -9,7 +9,7 @@
     "license": "AGPL-3",
     "author": "CreuBlanca,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
-    "depends": ["maintenance_plan", "web_widget_child_selector"],
+    "depends": ["maintenance_plan"],
     "data": [
         "views/maintenance_plan.xml",
         "views/maintenance_equipment.xml",

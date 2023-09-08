@@ -8,11 +8,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
         <field name="arch" type="xml">
             <field name="company_id" position="after">
-                <field
-                    name="location_id"
-                    widget="child_selector"
-                    options="{'child_selection_field': 'name'}"
-                />
+                <field name="location_id" />
             </field>
         </field>
     </record>
@@ -35,7 +31,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
         <field name="arch" type="xml">
             <field name="name" position="after">
-                <field name="location_id" />
+                <field name="location_id" optional="hide" />
             </field>
         </field>
     </record>
