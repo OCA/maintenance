@@ -8,11 +8,7 @@
         <field name="inherit_id" ref="maintenance_plan.maintenance_plan_view_form" />
         <field name="arch" type="xml">
             <field name="maintenance_team_id" position="after">
-                <field
-                    name="location_id"
-                    widget="child_selector"
-                    options="{'child_selection_field': 'name'}"
-                />
+                <field name="location_id" />
             </field>
         </field>
     </record>
