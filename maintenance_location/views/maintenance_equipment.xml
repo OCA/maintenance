@@ -10,13 +10,9 @@
             <field name="location" position="attributes">
                 <attribute name="invisible">1</attribute>
             </field>
-            <field name="location" position="before">
-                <field
-                    name="location_id"
-                    widget="child_selector"
-                    options="{'child_selection_field': 'name', 'no_open': True}"
-                />
-            </field>
+            <xpath expr="//field[@name='company_id']/.." position="inside">
+                <field name="location_id" />
+            </xpath>
             <xpath expr="//tree/field[@name='maintenance_team_id']" position="after">
                 <field
                     name="location_id"
