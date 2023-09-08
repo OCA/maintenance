@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- equipment.category : views -->
+    <record id="hr_equipment_category_view_form" model="ir.ui.view">
+        <field name="name">equipment.category.form</field>
+        <field name="model">maintenance.equipment.category</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_category_view_form" />
+        <field name="arch" type="xml">
+            <group name="group_alias" position="after">
+                <group>
+                    <field
+                        name="sequence_prefix"
+                        attrs="{'readonly': [('sequence_id', '!=', False)]}"
+                    />
+                    <field
+                        name="sequence_number_next"
+                        style="padding-right: 1.0em"
+                        attrs="{'readonly': [('sequence_id', '!=', False)], 'invisible': [('sequence_prefix', '=', False)]}"
+                    />
+                    <field name="sequence_id" required="0" />
+                </group>
+            </group>
+        </field>
+    </record>
+    <!-- equiment : views -->
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="name">equipment.form</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <field name="serial_no" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <xpath expr="//div[hasclass('oe_title')]/*[1]" position="before">
+                <label for="serial_no" class="oe_edit_only" />
+                <h3>
+                    <field name="serial_no" />
+                </h3>
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_view_tree" model="ir.ui.view">
+        <field name="name">equipment.tree</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="serial_no" />
+            </field>
+        </field>
+    </record>
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="name">equipment.search</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="serial_no" />
+            </field>
+        </field>
+    </record>
+</odoo>
