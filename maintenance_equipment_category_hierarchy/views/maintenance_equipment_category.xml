@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="hr_equipment_category_view_tree">
+        <field
+            name="name"
+        >maintenance.equipment.category.tree (in maintenance_equipment_category_hierarchy)</field>
+        <field name="model">maintenance.equipment.category</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_category_view_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="parent_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_category_view_form">
+        <field
+            name="name"
+        >maintenance.equipment.category.form (in maintenance_equipment_category_hierarchy)</field>
+        <field name="model">maintenance.equipment.category</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_category_view_form" />
+        <field name="arch" type="xml">
+            <field name="technician_user_id" position="after">
+                <field name="parent_id" />
+                <field name="child_id" widget="many2many_tags" readonly="1" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_request_view_search">
+        <field name="name">maintenance.request.search (in maintenance_location)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
+        <field name="arch" type="xml">
+            <field name="category_id" position="attributes">
+                <attribute
+                    name="filter_domain"
+                >[('category_id', 'child_of', raw_value)]</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
