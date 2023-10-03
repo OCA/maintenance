@@ -39,7 +39,7 @@ addon | version | maintainers | summary
 [maintenance_project_plan](maintenance_project_plan/) | 14.0.1.0.0 |  | Adds project and task to a Maintenance Plan
 [maintenance_purchase](maintenance_purchase/) | 14.0.1.0.1 |  | Create Equipments with purchases
 [maintenance_remote](maintenance_remote/) | 14.0.1.0.0 |  | Define remote on maintenance request
-[maintenance_request_repair](maintenance_request_repair/) | 14.0.1.0.0 |  | This is a bridge module between Maintenance and Repair
+[maintenance_request_repair](maintenance_request_repair/) | 14.0.1.0.1 |  | This is a bridge module between Maintenance and Repair
 [maintenance_request_sequence](maintenance_request_sequence/) | 14.0.1.0.0 |  | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 14.0.1.0.1 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Manage transition visibility and management between stages
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 14.0.1.0.0 |  | Create hierarchies on teams
