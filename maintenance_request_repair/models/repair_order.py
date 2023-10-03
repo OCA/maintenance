@@ -26,8 +26,9 @@ class RepairOrder(models.Model):
         of given repair order ids. When only one found, show the maintenance request
         immediately.
         """
-        action = self.env.ref("maintenance.hr_equipment_request_action")
-        result = action.read()[0]
+        result = self.env["ir.actions.act_window"]._for_xml_id(
+            "maintenance.hr_equipment_request_action"
+        )
         # override the context to get rid of the default filtering on repair order
         result["context"] = {"default_repair_order_id": self.id}
         maintenance_request_ids = self.mapped("maintenance_request_ids")
