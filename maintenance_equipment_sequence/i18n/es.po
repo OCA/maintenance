@@ -22,6 +22,12 @@ msgid "Code"
 msgstr "Código"
 
 #. module: maintenance_equipment_sequence
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_equipment_sequence
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_id
 msgid "Entry Sequence"
 msgstr "Secuencia"
@@ -30,6 +36,18 @@ msgstr "Secuencia"
 #: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment__code
 msgid "Equipment Code"
 msgstr "Código del Equipamiento"
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_equipment_sequence
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category____last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment
