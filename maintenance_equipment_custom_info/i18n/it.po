@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_custom_info
+# 	* maintenance_equipment_custom_info
 #
 msgid ""
 msgstr ""
@@ -83,7 +83,8 @@ msgstr "Dati tecnici"
 
 #. module: maintenance_equipment_custom_info
 #: model:res.groups,comment:maintenance_equipment_custom_info.group_equipment_info
-msgid "Will be able to edit custom information from maintenance equipment's form."
+msgid ""
+"Will be able to edit custom information from maintenance equipment's form."
 msgstr ""
 "Sarà possibile modificare le informazioni predefinite dalla maschera di "
 "manutenzione attrezzatura."
