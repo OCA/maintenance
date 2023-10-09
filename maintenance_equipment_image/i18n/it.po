@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_image
+# 	* maintenance_equipment_image
 #
 msgid ""
 msgstr ""
@@ -38,7 +38,10 @@ msgstr "Immagine dimensione media"
 
 #. module: maintenance_equipment_image
 #: model:ir.model.fields,help:maintenance_equipment_image.field_maintenance_equipment__image_medium
-msgid "Medium-sized image of the equipment. It is automatically resized as a 128x128px image, with aspect ratio preserved, only when the image exceeds one of those sizes. Use this field in form views or some kanban views."
+msgid ""
+"Medium-sized image of the equipment. It is automatically resized as a "
+"128x128px image, with aspect ratio preserved, only when the image exceeds "
+"one of those sizes. Use this field in form views or some kanban views."
 msgstr ""
 "Immagine dell'attrezzatura a dimensione media . Viene ridimensionata "
 "automaticamente ad una immagine 128x128px, con il rapporto dei lati "
@@ -52,7 +55,10 @@ msgstr "Immagine dimensione piccola"
 
 #. module: maintenance_equipment_image
 #: model:ir.model.fields,help:maintenance_equipment_image.field_maintenance_equipment__image_small
-msgid "Small-sized image of the equipment. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgid ""
+"Small-sized image of the equipment. It is automatically resized as a 64x64px "
+"image, with aspect ratio preserved. Use this field anywhere a small image is "
+"required."
 msgstr ""
 "Immagine dell'attrezzatura a dimensione piccola. Viene ridimensionata "
 "automaticamente ad una immagine 64x64px, con il rapporto dei lati "
@@ -60,7 +66,9 @@ msgstr ""
 
 #. module: maintenance_equipment_image
 #: model:ir.model.fields,help:maintenance_equipment_image.field_maintenance_equipment__image
-msgid "This field holds the image used as image for the equipment, limited to 1024x1024px."
+msgid ""
+"This field holds the image used as image for the equipment, limited to "
+"1024x1024px."
 msgstr ""
 "Questo campo contiene l'immagine utilizzata per l'attrezzatura, limitata a "
 "1024x1024px."
