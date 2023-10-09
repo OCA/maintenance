@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_scrap
+# 	* maintenance_equipment_scrap
 #
 msgid ""
 msgstr ""
@@ -18,16 +18,18 @@ msgstr ""
 
 #. module: maintenance_equipment_scrap
 #: model:mail.template,body_html:maintenance_equipment_scrap.equipment_scrap_mail_template
-msgid "\n"
+msgid ""
+"\n"
 "            <p>Hello, <strong>${object.owner_user_id.name}</strong></p>\n"
-"            <p>Your equipment <strong>${object.name}</strong> with Serial Number: <strong>${object.serial_no}</strong> was scrapped.</p>\n"
+"            <p>Your equipment <strong>${object.name}</strong> with Serial "
+"Number: <strong>${object.serial_no}</strong> was scrapped.</p>\n"
 "        "
 msgstr ""
 "\n"
 "            <p>Salve, <strong>${object.owner_user_id.name}</strong></p>\n"
 "            <p>La tua attrezzatura <strong>${object.name}</strong> con "
-"numero di serie: <strong>${object.serial_no}</strong> è stata rottamata.</p>"
-"\n"
+"numero di serie: <strong>${object.serial_no}</strong> è stata rottamata.</"
+"p>\n"
 "        "
 
 #. module: maintenance_equipment_scrap
