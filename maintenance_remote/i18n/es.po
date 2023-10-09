@@ -17,6 +17,21 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: maintenance_remote
+#: model:ir.model.fields,field_description:maintenance_remote.field_maintenance_request__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_remote
+#: model:ir.model.fields,field_description:maintenance_remote.field_maintenance_request__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_remote
+#: model:ir.model.fields,field_description:maintenance_remote.field_maintenance_request____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: maintenance_remote
 #: model:ir.model,name:maintenance_remote.model_maintenance_request
 msgid "Maintenance Request"
 msgstr "Peticiones de mantenimiento"
