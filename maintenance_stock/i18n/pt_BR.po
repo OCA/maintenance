@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_stock
+# 	* maintenance_stock
 #
 msgid ""
 msgstr ""
@@ -153,7 +153,8 @@ msgstr "Ainda não há nenhum movimento do produto"
 
 #. module: maintenance_stock
 #: model_terms:ir.actions.act_window,help:maintenance_stock.stock_move_action
-msgid "This menu gives you the full traceability of inventory\n"
+msgid ""
+"This menu gives you the full traceability of inventory\n"
 "            operations on a specific product. You can filter on the product\n"
 "            to see all the past or future movements for the product."
 msgstr ""
