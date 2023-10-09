@@ -33,6 +33,12 @@ msgid "Contracts"
 msgstr "Contratti"
 
 #. module: maintenance_equipment_contract
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_equipment_contract
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_search
 msgid "Doesn't have Contracts"
 msgstr "Non ha contratti"
@@ -51,6 +57,18 @@ msgstr "Attrezzature"
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_search
 msgid "Has Contracts"
 msgstr "Ha contratti"
+
+#. module: maintenance_equipment_contract
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__id
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_equipment_contract
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract____last_update
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment____last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: maintenance_equipment_contract
 #: model:ir.model,name:maintenance_equipment_contract.model_maintenance_equipment

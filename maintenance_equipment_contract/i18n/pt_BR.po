@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_contract
+# 	* maintenance_equipment_contract
 #
 msgid ""
 msgstr ""
@@ -33,6 +33,17 @@ msgid "Contracts"
 msgstr "Contratos"
 
 #. module: maintenance_equipment_contract
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_equipment_contract
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_search
+msgid "Doesn't have Contracts"
+msgstr ""
+
+#. module: maintenance_equipment_contract
 #: model:maintenance.equipment,name:maintenance_equipment_contract.equipment_with_contract
 msgid "Equipment With A Contract"
 msgstr "Equipamento Com Um Contrato"
@@ -41,6 +52,23 @@ msgstr "Equipamento Com Um Contrato"
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__equipment_ids
 msgid "Equipments"
 msgstr "Equipamentos"
+
+#. module: maintenance_equipment_contract
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_search
+msgid "Has Contracts"
+msgstr ""
+
+#. module: maintenance_equipment_contract
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__id
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_equipment_contract
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract____last_update
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment____last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: maintenance_equipment_contract
 #: model:ir.model,name:maintenance_equipment_contract.model_maintenance_equipment
