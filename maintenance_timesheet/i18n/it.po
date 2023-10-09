@@ -67,30 +67,9 @@ msgid "Description"
 msgstr "Descrizione"
 
 #. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__display_name
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__display_name
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Duration (Hour(s))"
 msgstr "Durata (ora(e))"
-
-#. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__id
-msgid "ID"
-msgstr "ID"
-
-#. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line____last_update
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment____last_update
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_equipment
@@ -100,7 +79,6 @@ msgstr "Attrezzatura manutenzione"
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_hr_timesheet_switch__maintenance_request_id
 msgid "Maintenance Request"
 msgstr "Richiesta manutenzione"
 
@@ -155,3 +133,12 @@ msgstr "Ore totali foglio presenze"
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Timesheets"
 msgstr "Foglio presenze"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"

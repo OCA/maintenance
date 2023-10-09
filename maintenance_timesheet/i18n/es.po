@@ -68,30 +68,9 @@ msgid "Description"
 msgstr "descripción"
 
 #. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__display_name
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__display_name
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__display_name
-msgid "Display Name"
-msgstr "nombre para mostrar"
-
-#. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Duration (Hour(s))"
 msgstr "Duración (Hora(s))"
-
-#. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__id
-msgid "ID"
-msgstr "ID(identificador)"
-
-#. module: maintenance_timesheet
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line____last_update
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment____last_update
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request____last_update
-msgid "Last Modified on"
-msgstr "modificado por última vez el"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_equipment
@@ -101,7 +80,6 @@ msgstr "Equipo"
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
-#: model:ir.model.fields,field_description:maintenance_timesheet.field_hr_timesheet_switch__maintenance_request_id
 msgid "Maintenance Request"
 msgstr "Petición de mantenimiento"
 
@@ -156,3 +134,12 @@ msgstr "Horas totales en partes de trabajo"
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Timesheets"
 msgstr "Partes de trabajo"
+
+#~ msgid "Display Name"
+#~ msgstr "nombre para mostrar"
+
+#~ msgid "ID"
+#~ msgstr "ID(identificador)"
+
+#~ msgid "Last Modified on"
+#~ msgstr "modificado por última vez el"
