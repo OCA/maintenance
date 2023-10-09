@@ -17,22 +17,13 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_account
-#: model:ir.model.fields,field_description:maintenance_account.field_account_move__display_name
-#: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__display_name
-#: model:ir.model.fields,field_description:maintenance_account.field_maintenance_equipment__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: maintenance_account
 #: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__equipment_category_id
 msgid "Equipment Category"
 msgstr "Categoria attrezzatura"
 
 #. module: maintenance_account
-#: model:ir.model.fields,field_description:maintenance_account.field_account_bank_statement_line__equipment_count
 #: model:ir.model.fields,field_description:maintenance_account.field_account_move__equipment_count
 #: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__equipment_count
-#: model:ir.model.fields,field_description:maintenance_account.field_account_payment__equipment_count
 msgid "Equipment Count"
 msgstr "Conteggio attrezzatura"
 
@@ -47,28 +38,14 @@ msgid "Equipments"
 msgstr "Attrezzature"
 
 #. module: maintenance_account
-#: model:ir.model.fields,field_description:maintenance_account.field_account_move__id
-#: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__id
-#: model:ir.model.fields,field_description:maintenance_account.field_maintenance_equipment__id
-msgid "ID"
-msgstr "ID"
-
-#. module: maintenance_account
 #: model:ir.model,name:maintenance_account.model_account_move
-msgid "Journal Entry"
-msgstr "Registrazione contabile"
+msgid "Journal Entries"
+msgstr ""
 
 #. module: maintenance_account
 #: model:ir.model,name:maintenance_account.model_account_move_line
 msgid "Journal Item"
 msgstr "Movimento contabile"
-
-#. module: maintenance_account
-#: model:ir.model.fields,field_description:maintenance_account.field_account_move____last_update
-#: model:ir.model.fields,field_description:maintenance_account.field_account_move_line____last_update
-#: model:ir.model.fields,field_description:maintenance_account.field_maintenance_equipment____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
 
 #. module: maintenance_account
 #: model:ir.model,name:maintenance_account.model_maintenance_equipment
@@ -89,3 +66,15 @@ msgstr "Riga movimento"
 #: model:ir.model.fields,help:maintenance_account.field_maintenance_equipment__move_id
 msgid "The move of this entry line."
 msgstr "Il movimento per questa riga di registrazione."
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Journal Entry"
+#~ msgstr "Registrazione contabile"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
