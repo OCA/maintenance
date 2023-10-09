@@ -30,8 +30,8 @@ msgstr "<span class=\"o_label\">Horas</span>"
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "<span id=\"timesheet_information_title\">Timesheet Entries</span>"
 msgstr ""
-"<span id=\"timesheet_information_title\">Entradas de Apontamentos de "
-"horas</span>"
+"<span id=\"timesheet_information_title\">Entradas de Apontamentos de horas</"
+"span>"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
