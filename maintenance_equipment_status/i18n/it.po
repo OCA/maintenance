@@ -47,7 +47,6 @@ msgid "Created on"
 msgstr "Creato il"
 
 #. module: maintenance_equipment_status
-#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment__display_name
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__display_name
 msgid "Display Name"
 msgstr "Nome visualizzato"
@@ -55,7 +54,6 @@ msgstr "Nome visualizzato"
 #. module: maintenance_equipment_status
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_search
-#: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_tree
 msgid "Equipment Status"
 msgstr "Stato attrezzatura"
 
@@ -66,13 +64,11 @@ msgid "Equipment Statuses"
 msgstr "Stati attrezzatura"
 
 #. module: maintenance_equipment_status
-#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__id
 msgid "ID"
 msgstr "ID"
 
 #. module: maintenance_equipment_status
-#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status____last_update
 msgid "Last Modified on"
 msgstr "Ultima modifica il"
@@ -104,6 +100,10 @@ msgstr "Nome"
 
 #. module: maintenance_equipment_status
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__note
+msgid "Note"
+msgstr ""
+
+#. module: maintenance_equipment_status
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
 msgid "Notes"
 msgstr "Note"
