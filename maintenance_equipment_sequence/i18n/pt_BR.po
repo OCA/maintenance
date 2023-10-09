@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_sequence
+# 	* maintenance_equipment_sequence
 #
 msgid ""
 msgstr ""
@@ -63,7 +63,9 @@ msgstr "O próximo número de sequência será usado para o próximo equipamento
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_id
-msgid "This field contains the information related to the numbering of the equipments belonging to this category."
+msgid ""
+"This field contains the information related to the numbering of the "
+"equipments belonging to this category."
 msgstr ""
 "Este campo contém as informações relacionadas à numeração dos equipamentos "
 "pertencentes a esta categoria."

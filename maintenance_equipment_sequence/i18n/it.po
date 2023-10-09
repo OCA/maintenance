@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_sequence
+# 	* maintenance_equipment_sequence
 #
 msgid ""
 msgstr ""
@@ -54,7 +54,8 @@ msgstr "Prefisso sequenza"
 #. module: maintenance_equipment_sequence
 #: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_prefix
 msgid "The equipment's sequence will be created using this prefix."
-msgstr "La sequenza dell'attrezzatura verrà creata utilizzando questo prefisso."
+msgstr ""
+"La sequenza dell'attrezzatura verrà creata utilizzando questo prefisso."
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_number_next
@@ -65,7 +66,9 @@ msgstr ""
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_id
-msgid "This field contains the information related to the numbering of the equipments belonging to this category."
+msgid ""
+"This field contains the information related to the numbering of the "
+"equipments belonging to this category."
 msgstr ""
 "Questo campo contiene l'informazione relativa alla numerazione delle "
 "attrezzature appartenenti a questa categoria."
