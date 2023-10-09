@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_plan_activity
+# 	* maintenance_plan_activity
 #
 msgid ""
 msgstr ""
@@ -105,7 +105,9 @@ msgstr "Atividades Agendadas"
 
 #. module: maintenance_plan_activity
 #: model:ir.model.fields,help:maintenance_plan_activity.field_maintenance_planned_activity__date_before_request
-msgid "This is the number of days the due date of the activity will beset before the Maintenance request scheduled date"
+msgid ""
+"This is the number of days the due date of the activity will beset before "
+"the Maintenance request scheduled date"
 msgstr ""
 "Este é o número de dias em que a data de vencimento da atividade será "
 "definida antes da data agendada da requisição de manutenção"
