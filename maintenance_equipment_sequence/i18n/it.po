@@ -17,19 +17,9 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: maintenance_equipment_sequence
-#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment__code
-msgid "Code"
-msgstr "Codice"
-
-#. module: maintenance_equipment_sequence
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_id
 msgid "Entry Sequence"
 msgstr "Sequenza iniziale"
-
-#. module: maintenance_equipment_sequence
-#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment__code
-msgid "Equipment Code"
-msgstr "Codice attrezzatura"
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment
@@ -54,7 +44,8 @@ msgstr "Prefisso sequenza"
 #. module: maintenance_equipment_sequence
 #: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_prefix
 msgid "The equipment's sequence will be created using this prefix."
-msgstr "La sequenza dell'attrezzatura verrà creata utilizzando questo prefisso."
+msgstr ""
+"La sequenza dell'attrezzatura verrà creata utilizzando questo prefisso."
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_number_next
@@ -71,3 +62,9 @@ msgid ""
 msgstr ""
 "Questo campo contiene l'informazione relativa alla numerazione delle "
 "attrezzature appartenenti a questa categoria."
+
+#~ msgid "Code"
+#~ msgstr "Codice"
+
+#~ msgid "Equipment Code"
+#~ msgstr "Codice attrezzatura"
