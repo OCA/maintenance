@@ -17,19 +17,9 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_equipment_sequence
-#: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment__code
-msgid "Code"
-msgstr "Código"
-
-#. module: maintenance_equipment_sequence
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_id
 msgid "Entry Sequence"
 msgstr "Secuencia"
-
-#. module: maintenance_equipment_sequence
-#: model:ir.model.fields,help:maintenance_equipment_sequence.field_maintenance_equipment__code
-msgid "Equipment Code"
-msgstr "Código del Equipamiento"
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment
@@ -69,6 +59,12 @@ msgid ""
 msgstr ""
 "Este campo contiene la información relacionada con la numeración de los "
 "equipamientos de esta categoría."
+
+#~ msgid "Code"
+#~ msgstr "Código"
+
+#~ msgid "Equipment Code"
+#~ msgstr "Código del Equipamiento"
 
 #~ msgid "Asset Category"
 #~ msgstr "Categoría del activo"
