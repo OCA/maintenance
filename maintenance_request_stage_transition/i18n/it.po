@@ -27,14 +27,32 @@ msgid "Danger"
 msgstr "Pericolo"
 
 #. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_request__display_name
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
 #: model:ir.model.fields,help:maintenance_request_stage_transition.field_maintenance_stage__button_class
 msgid "For default, the system uses primary"
 msgstr "Il sistema usa come predefinito Primaria"
 
 #. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_request__id
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_request_stage_transition
 #: model:ir.model.fields.selection,name:maintenance_request_stage_transition.selection__maintenance_stage__button_class__info
 msgid "Info"
 msgstr "Informazioni"
+
+#. module: maintenance_request_stage_transition
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_request____last_update
+#: model:ir.model.fields,field_description:maintenance_request_stage_transition.field_maintenance_stage____last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: maintenance_request_stage_transition
 #: model:ir.model,name:maintenance_request_stage_transition.model_maintenance_request
