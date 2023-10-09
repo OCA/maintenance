@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_equipment_category_kanban
+# 	* maintenance_equipment_category_kanban
 #
 msgid ""
 msgstr ""
