@@ -43,16 +43,22 @@ msgid "Created on"
 msgstr "Creato il"
 
 #. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_plan__display_name
 #: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__display_name
 msgid "Display Name"
 msgstr "Nome visualizzato"
 
 #. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_plan__id
 #: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity__id
 msgid "ID"
 msgstr "ID"
 
 #. module: maintenance_plan_activity
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_plan____last_update
 #: model:ir.model.fields,field_description:maintenance_plan_activity.field_maintenance_planned_activity____last_update
 msgid "Last Modified on"
 msgstr "Ultima modifica il"
