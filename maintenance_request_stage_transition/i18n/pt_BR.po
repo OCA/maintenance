@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_request_stage_transition
+# 	* maintenance_request_stage_transition
 #
 msgid ""
 msgstr ""
