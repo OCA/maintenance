@@ -35,8 +35,8 @@ msgstr ""
 "            <p>La tua attrezzatura <strong>${object.name}</strong>\n"
 "\n"
 "            % if object.serial_no:\n"
-"                con numero di matricola: <strong>${object.serial_no}</strong>"
-"\n"
+"                con numero di matricola: <strong>${object.serial_no}</"
+"strong>\n"
 "            % endif\n"
 "\n"
 "            è stata rottamata.</p>\n"
@@ -58,6 +58,8 @@ msgid "Created on"
 msgstr "Creato il"
 
 #. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment_category__display_name
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__display_name
 msgid "Display Name"
 msgstr "Nome visualizzato"
@@ -74,11 +76,15 @@ msgid "Equipment Scrap Email Template"
 msgstr "Modello email rottamazione attrezzatura"
 
 #. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment_category__id
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__id
 msgid "ID"
 msgstr "ID"
 
 #. module: maintenance_equipment_scrap
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment_category____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap____last_update
 msgid "Last Modified on"
 msgstr "Ultima modifica il"
