@@ -22,6 +22,12 @@ msgid "Child Equipments"
 msgstr "Attrezzature discendenti"
 
 #. module: maintenance_equipment_hierarchy
+#: code:addons/maintenance_equipment_hierarchy/models/maintenance_equipment.py:0
+#, python-format
+msgid "Child equipment of %s"
+msgstr ""
+
+#. module: maintenance_equipment_hierarchy
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_hierarchy.hr_equipment_view_form
 msgid "Children"
 msgstr "Figli"
