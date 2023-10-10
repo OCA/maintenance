@@ -32,7 +32,6 @@ msgid "Created on"
 msgstr "Criado em"
 
 #. module: maintenance_equipment_tags
-#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment__display_name
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__display_name
 msgid "Display Name"
 msgstr "Nome a Apresentar"
@@ -54,13 +53,11 @@ msgid "Equipment Tags"
 msgstr "Etiquetas de Equipamentos"
 
 #. module: maintenance_equipment_tags
-#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__id
 msgid "ID"
 msgstr "ID"
 
 #. module: maintenance_equipment_tags
-#: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag____last_update
 msgid "Last Modified on"
 msgstr "Última Modificação Em"
