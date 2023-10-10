@@ -18,6 +18,14 @@
                     domain="[('employee_ids.user_id', '=', uid)]"
                 />
             </xpath>
+            <xpath expr="//filter[@name='created_by']" position="after">
+                <filter
+                    string='Employees'
+                    name='employees'
+                    domain="[]"
+                    context="{'group_by': 'employee_ids'}"
+                />
+            </xpath>
         </field>
     </record>
     <record id="maintenance_request_view_form_inherit_hr" model="ir.ui.view">
@@ -61,4 +69,18 @@
             </xpath>
         </field>
     </record>
+    <record id="maintenance_request_view_tree_inherit_hr" model="ir.ui.view">
+        <field name="name">maintenance.request.view.tree.inherit.hr</field>
+        <field name="model">maintenance.request</field>
+        <field
+            name="inherit_id"
+            ref="hr_maintenance.maintenance_request_view_tree_inherit_hr"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="employee_ids" widget="many2many_tags" />
+            </xpath>
+        </field>
+    </record>
+
 </odoo>
