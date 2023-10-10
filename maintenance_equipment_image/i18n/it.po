@@ -17,19 +17,9 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_equipment_image
-#: model:ir.model.fields,field_description:maintenance_equipment_image.field_maintenance_equipment__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: maintenance_equipment_image
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_image.hr_equipment_view_kanban
 msgid "Equipment"
 msgstr "Attrezzatura"
-
-#. module: maintenance_equipment_image
-#: model:ir.model.fields,field_description:maintenance_equipment_image.field_maintenance_equipment__id
-msgid "ID"
-msgstr "ID"
 
 #. module: maintenance_equipment_image
 #: model:ir.model.fields,field_description:maintenance_equipment_image.field_maintenance_equipment__image_1920
@@ -57,11 +47,15 @@ msgid "Image 512"
 msgstr "Immagine 512"
 
 #. module: maintenance_equipment_image
-#: model:ir.model.fields,field_description:maintenance_equipment_image.field_maintenance_equipment____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: maintenance_equipment_image
 #: model:ir.model,name:maintenance_equipment_image.model_maintenance_equipment
 msgid "Maintenance Equipment"
 msgstr "Attrezzatura manutenzione"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
