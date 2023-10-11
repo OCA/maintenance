@@ -9,12 +9,23 @@
         <field name="model">contract.contract</field>
         <field name="inherit_id" ref="contract.contract_contract_form_view" />
         <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    type="object"
+                    name="action_show_maintenance_requests"
+                    class="oe_stat_button"
+                    icon="fa-wrench"
+                    string="Maintenances"
+                    attrs="{'invisible': [('equipment_count', '=', 0)]}"
+                />
+            </div>
             <field name="tag_ids" position="before">
                 <field
                     name="equipment_ids"
                     widget="many2many_tags"
                     options="{'no_create_edit': True}"
                 />
+                <field name="equipment_count" invisible="1" />
             </field>
         </field>
     </record>
