@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-28 09:49+0000\n"
+"PO-Revision-Date: 2023-10-13 10:37+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment__code
@@ -25,7 +25,7 @@ msgstr "Codice"
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment__display_name
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__sequence_id
@@ -41,13 +41,13 @@ msgstr "Codice attrezzatura"
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_sequence.field_maintenance_equipment_category____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: maintenance_equipment_sequence
 #: model:ir.model,name:maintenance_equipment_sequence.model_maintenance_equipment
