@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-07-13 11:09+0000\n"
+"PO-Revision-Date: 2023-10-13 10:37+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -36,7 +36,7 @@ msgstr "Contratti"
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__display_name
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: maintenance_equipment_contract
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_search
@@ -62,13 +62,13 @@ msgstr "Ha contratti"
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__id
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_equipment_contract
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: maintenance_equipment_contract
 #: model:ir.model,name:maintenance_equipment_contract.model_maintenance_equipment
