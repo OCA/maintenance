@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-06-09 13:08+0000\n"
+"PO-Revision-Date: 2023-10-13 10:37+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -29,17 +29,17 @@ msgstr "Discendente di Team 2"
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model,name:maintenance_team_hierarchy.model_maintenance_team
