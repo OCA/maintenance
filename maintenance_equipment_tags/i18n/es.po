@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-12-30 13:49+0000\n"
+"PO-Revision-Date: 2023-10-18 14:16+0000\n"
 "Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -14,12 +14,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__color
 msgid "Color Index (0-15)"
-msgstr "Número del  Color (0-15)"
+msgstr "Número del Color (0-15)"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__create_uid
@@ -77,9 +77,8 @@ msgstr "Última Actualización el"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model,name:maintenance_equipment_tags.model_maintenance_equipment
-#, fuzzy
 msgid "Maintenance Equipment"
-msgstr "Etiqueta de Equipamiento"
+msgstr "Equipamiento"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model,name:maintenance_equipment_tags.model_maintenance_equipment_tag
