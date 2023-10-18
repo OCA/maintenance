@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:30+0000\n"
-"PO-Revision-Date: 2023-03-01 14:31+0100\n"
-"Last-Translator: Víctor Martínez <victor.martinez@tecnativa.com>\n"
+"PO-Revision-Date: 2023-10-18 14:16+0000\n"
+"Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.report_maintenance_request_document
@@ -224,7 +224,7 @@ msgstr "Es seguidor"
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
 msgid "Kind"
-msgstr ""
+msgstr "Clase"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment____last_update
@@ -266,7 +266,7 @@ msgstr "Adjunto principal"
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid "Maintenace Equipment must belong to the equipment's company"
-msgstr ""
+msgstr "El plan de mantenimiento debe pertenecer a la compañía del equipamiento"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_count
@@ -341,7 +341,7 @@ msgstr "Tipo de mantenimiento"
 #. module: maintenance_plan
 #: model:ir.model.constraint,message:maintenance_plan.constraint_maintenance_kind_name_uniq
 msgid "Maintenance kind name already exists."
-msgstr "Ya existe ese nombre de tipo de mantenimiento"
+msgstr "Ya existe ese nombre de tipo de mantenimiento."
 
 #. module: maintenance_plan
 #: model:ir.actions.act_window,name:maintenance_plan.maintenance_kind_action
@@ -361,8 +361,8 @@ msgid ""
 "Maintenance planning horizon. Only the maintenance requests inside the "
 "horizon will be created."
 msgstr ""
-"Horizonte del planning de mantenimiento. Solo se crearán las peticiones de "
-"mantenimiento dentro del horizonte"
+"Horizonte del planificación de mantenimiento. Solo se crearán las peticiones "
+"de mantenimiento dentro del horizonte."
 
 #. module: maintenance_plan
 #: model:ir.actions.act_window,name:maintenance_plan.maintenance_plan_action
@@ -466,12 +466,12 @@ msgstr "Número de mensajes no leídos"
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
 msgid "P. Horizon period"
-msgstr ""
+msgstr "Horizonte planificación"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
 msgid "P. Horizon step"
-msgstr ""
+msgstr "Paso horizonte"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
@@ -522,6 +522,8 @@ msgid ""
 "Some maintenance plan's company is incompatible with the company of this "
 "equipment."
 msgstr ""
+"Alguno de los planes de la compañía es incompatible con la compañía del "
+"equipamiento."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
@@ -561,7 +563,7 @@ msgid ""
 msgstr ""
 "El plan de mantenimiento %s del equipo %s ha generado una petición que no ha "
 "sido hecha todavía. Se deberían marcar la petición como hecha, borrar su "
-"tipo de mantenimiento o eliminarlo primero"
+"tipo de mantenimiento o eliminarlo primero."
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__activity_exception_decoration
@@ -594,17 +596,17 @@ msgstr "Contador de mensajes sin leer"
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid "Unspecified kind"
-msgstr ""
+msgstr "Clase no específica"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "Mensajes en website"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "Historia de comunicación en el website"
 
 #. module: maintenance_plan
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__week
@@ -630,7 +632,7 @@ msgid ""
 "maintenance plan."
 msgstr ""
 "No se pueden definir varias veces el mismo tipo de mantenimiento en el plan "
-"de mantenimiento de un equipo"
+"de mantenimiento de un equipo."
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/hooks.py:0
@@ -642,7 +644,7 @@ msgid ""
 msgstr ""
 "Hay varias peticiones de mantenimiento preventivo en el equipo %s, próxima "
 "fecha de acción (%s). Por favor, deja solo una petición de preventivo en la "
-"fecha de la próxima acción del equipo para poder instalar el módulo"
+"fecha de la próxima acción del equipo para poder instalar el módulo."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
