@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-14 15:48+0000\n"
+"PO-Revision-Date: 2023-10-18 14:16+0000\n"
 "Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_equipment_contract
 #: model:ir.model,name:maintenance_equipment_contract.model_contract_contract
@@ -36,7 +36,7 @@ msgstr "Contratos"
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__display_name
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre a mostrar"
 
 #. module: maintenance_equipment_contract
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_search
@@ -62,13 +62,13 @@ msgstr "Tiene contratos"
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__id
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_equipment_contract
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificación en"
 
 #. module: maintenance_equipment_contract
 #: model:ir.model,name:maintenance_equipment_contract.model_maintenance_equipment
