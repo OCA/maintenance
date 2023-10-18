@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-07-20 11:08+0000\n"
-"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"PO-Revision-Date: 2023-10-18 14:16+0000\n"
+"Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -105,7 +105,7 @@ msgstr "Nombre"
 #. module: maintenance_equipment_status
 #: model:maintenance.equipment.status,name:maintenance_equipment_status.maintenance_equipment_status_1
 msgid "New"
-msgstr ""
+msgstr "Nuevo"
 
 #. module: maintenance_equipment_status
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__note
@@ -116,7 +116,7 @@ msgstr "Notas"
 #. module: maintenance_equipment_status
 #: model:maintenance.equipment.status,name:maintenance_equipment_status.maintenance_equipment_status_3
 msgid "Retired"
-msgstr ""
+msgstr "Retirado"
 
 #. module: maintenance_equipment_status
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__sequence
@@ -140,7 +140,7 @@ msgstr ""
 #. module: maintenance_equipment_status
 #: model:maintenance.equipment.status,name:maintenance_equipment_status.maintenance_equipment_status_2
 msgid "Working"
-msgstr ""
+msgstr "Trabajando"
 
 #. module: maintenance_equipment_status
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
