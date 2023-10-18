@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-10-18 14:16+0000\n"
+"PO-Revision-Date: 2023-10-18 17:36+0000\n"
 "Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -75,22 +75,22 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status____last_update
 msgid "Last Modified on"
-msgstr "??ltima modificaci??n en"
+msgstr "Última modificación el"
 
 #. module: maintenance_equipment_status
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__write_uid
 msgid "Last Updated by"
-msgstr "actualizado por última vez por"
+msgstr "Última actualización de"
 
 #. module: maintenance_equipment_status
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__write_date
 msgid "Last Updated on"
-msgstr "actualizado por última vez el"
+msgstr "Última actualización en"
 
 #. module: maintenance_equipment_status
 #: model:ir.model,name:maintenance_equipment_status.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr "Mantenimiento de Equipos"
+msgstr "Equipamiento"
 
 #. module: maintenance_equipment_status
 #: model:ir.model,name:maintenance_equipment_status.model_maintenance_equipment_status
