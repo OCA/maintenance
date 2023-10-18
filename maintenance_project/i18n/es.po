@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-18 17:04+0000\n"
-"PO-Revision-Date: 2023-02-20 14:43+0000\n"
-"Last-Translator: Víctor Martínez <victor.martinez@tecnativa.com>\n"
+"PO-Revision-Date: 2023-10-18 14:16+0000\n"
+"Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.view_project_kanban
@@ -102,12 +102,12 @@ msgstr "Equipo"
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_maintenance_request
 msgid "Maintenance Request"
-msgstr "Petici??n de mantenimiento"
+msgstr "Petición de mantenimiento"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__maintenance_request_count
 msgid "Maintenance Request Count"
-msgstr "N??mero de peticiones de mantenimiento"
+msgstr "Número de peticiones de mantenimiento"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__maintenance_request_ids
