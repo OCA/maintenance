@@ -74,6 +74,7 @@ class PurchaseOrderLine(models.Model):
     equipment_ids = fields.Many2many(
         comodel_name="maintenance.equipment",
         string="Equipments",
+        copy=False,
     )
     equipment_count = fields.Integer(compute="_compute_equipment_count")
 
