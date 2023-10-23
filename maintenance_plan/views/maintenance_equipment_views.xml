@@ -15,7 +15,7 @@
                 >
                     <field
                         string="Plans"
-                        name="maintenance_plan_count"
+                        name="search_maintenance_plan_count"
                         widget="statinfo"
                     />
                 </button>
