@@ -92,7 +92,7 @@ class MaintenancePlan(models.Model):
 
     @api.model
     def _search_search_equipment(self, operator, value):
-        if operator != "=" or not value:
+        if operator != "=" or (not value and not isinstance(value, models.NewId)):
             raise ValueError(_("Unsupported search operator"))
         plans = self.search([("generate_with_domain", "=", True)])
         plan_ids = []
