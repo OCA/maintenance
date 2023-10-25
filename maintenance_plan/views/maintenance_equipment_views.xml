@@ -58,6 +58,16 @@
             </field>
         </field>
     </record>
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="name">equipment.search-oxigen</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='owner_user_id']" position="after">
+                <field name="maintenance_team_id" />
+            </xpath>
+        </field>
+    </record>
     <!-- request : views inheritance -->
     <record id="hr_equipment_request_view_form" model="ir.ui.view">
         <field name="name">equipment.request.form.inherit</field>
