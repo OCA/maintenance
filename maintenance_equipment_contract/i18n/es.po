@@ -44,6 +44,11 @@ msgid "Doesn't have Contracts"
 msgstr "No tiene contratos"
 
 #. module: maintenance_equipment_contract
+#: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__equipment_count
+msgid "Equipment Count"
+msgstr ""
+
+#. module: maintenance_equipment_contract
 #: model:maintenance.equipment,name:maintenance_equipment_contract.equipment_with_contract
 msgid "Equipment With A Contract"
 msgstr "Equipamiento con contrato"
@@ -74,3 +79,8 @@ msgstr "Última modificación en"
 #: model:ir.model,name:maintenance_equipment_contract.model_maintenance_equipment
 msgid "Maintenance Equipment"
 msgstr "Equipamiento"
+
+#. module: maintenance_equipment_contract
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.contract_contract_form_view
+msgid "Maintenances"
+msgstr ""
