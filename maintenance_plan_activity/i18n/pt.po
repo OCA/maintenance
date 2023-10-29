@@ -83,11 +83,6 @@ msgid "Maintenance Plan"
 msgstr ""
 
 #. module: maintenance_plan_activity
-#: model_terms:ir.ui.view,arch_db:maintenance_plan_activity.maintenance_planned_activity_view_tree
-msgid "Maintenance Planned Activities"
-msgstr ""
-
-#. module: maintenance_plan_activity
 #: model:ir.model,name:maintenance_plan_activity.model_maintenance_planned_activity
 msgid "Maintenance Planned Activity"
 msgstr ""
