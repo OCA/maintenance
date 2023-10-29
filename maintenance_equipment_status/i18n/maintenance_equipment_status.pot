@@ -52,7 +52,6 @@ msgstr ""
 #. module: maintenance_equipment_status
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_search
-#: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_tree
 msgid "Equipment Status"
 msgstr ""
 
