@@ -295,11 +295,6 @@ msgid "Maintenance Kind"
 msgstr ""
 
 #. module: maintenance_plan
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_kind_view_tree
-msgid "Maintenance Kinds"
-msgstr ""
-
-#. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Maintenance Plan"
@@ -313,7 +308,6 @@ msgstr ""
 #. module: maintenance_plan
 #: model:ir.ui.menu,name:maintenance_plan.menu_m_plan_form
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_tree
 msgid "Maintenance Plans"
 msgstr ""
 
