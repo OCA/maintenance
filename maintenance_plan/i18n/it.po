@@ -186,7 +186,6 @@ msgstr "Se selezionata, nuovi messaggi richiedono attenzione."
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_error
-#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Se selezionata, alcuni messaggi hanno un errore di consegna."
 
@@ -505,11 +504,6 @@ msgid "Responsible User"
 msgstr "Utente responsabile"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Errore consegna SMS"
-
-#. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid ""
@@ -656,6 +650,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "e.g. Calibration"
 msgstr "es. calibrazione"
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Errore consegna SMS"
 
 #~ msgid "Internal notes..."
 #~ msgstr "Note interne..."
