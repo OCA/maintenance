@@ -30,7 +30,7 @@
                         nolabel="1"
                         context="{'default_equipment_id': active_id, 'hide_equipment_id': 1}"
                     >
-                        <tree string="Plans">
+                        <tree>
                             <field name="maintenance_kind_id" string="Kind" />
                             <field name="maintenance_team_id" string="Team" />
                             <field name="name" />

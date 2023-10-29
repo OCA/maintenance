@@ -44,7 +44,7 @@
         <field name="name">maintenance.equipment.status.tree</field>
         <field name="model">maintenance.equipment.status</field>
         <field name="arch" type="xml">
-            <tree string="Equipment Status">
+            <tree>
                 <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="category_ids" widget="many2many_tags" />
