@@ -1,5 +1,4 @@
-<odoo>
-    <data noupdate="1">
+<odoo noupdate="1">
         <record id="project_project_1" model="project.project">
             <field name="name">General equipment project</field>
             <field name="user_id" ref="base.user_admin" />
@@ -31,9 +30,9 @@
             <field name="owner_user_id" ref="base.user_admin" />
             <field name="technician_user_id" ref="base.user_admin" />
             <field
-                name="maintenance_team_id"
-                ref="maintenance.equipment_team_maintenance"
-            />
+            name="maintenance_team_id"
+            ref="maintenance.equipment_team_maintenance"
+        />
             <field name="assign_date" eval="time.strftime('%Y-%m-10')" />
             <field name="serial_no">S/N 2</field>
             <field name="model">MODEL2</field>
@@ -42,9 +41,9 @@
             <field name="period" eval="30" />
             <field name="maintenance_duration" eval="2" />
             <field
-                name="preventive_default_task_id"
-                ref="maintenance_project.project_task_12"
-            />
+            name="preventive_default_task_id"
+            ref="maintenance_project.project_task_12"
+        />
         </record>
         <record id="equipment_3" model="maintenance.equipment">
             <field name="name">Generic Computer with own project</field>
@@ -56,5 +55,4 @@
             <field name="model">MODEL3</field>
             <field name="create_project_from_equipment" eval="True" />
         </record>
-    </data>
 </odoo>
