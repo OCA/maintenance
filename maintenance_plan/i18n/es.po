@@ -201,7 +201,6 @@ msgstr "Si está marcado, hay nuevos mensajes que requieren de su atención."
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_error
-#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si está marcado, hay mensajes que tienen error de entrega."
 
@@ -302,11 +301,6 @@ msgid "Maintenance Kind"
 msgstr "Tipo de mantenimiento"
 
 #. module: maintenance_plan
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_kind_view_tree
-msgid "Maintenance Kinds"
-msgstr "Tipos de mantenimiento"
-
-#. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Maintenance Plan"
@@ -320,7 +314,6 @@ msgstr "Número de planes de mantenimiento"
 #. module: maintenance_plan
 #: model:ir.ui.menu,name:maintenance_plan.menu_m_plan_form
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_tree
 msgid "Maintenance Plans"
 msgstr "Planes de mantenimiento"
 
@@ -527,11 +520,6 @@ msgid "Responsible User"
 msgstr "Usuario responsable"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Error de envío SMS"
-
-#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__search_equipment_id
 msgid "Search Equipment"
 msgstr ""
@@ -677,3 +665,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "e.g. Calibration"
 msgstr "p.ej. Calibración"
+
+#~ msgid "Maintenance Kinds"
+#~ msgstr "Tipos de mantenimiento"
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error de envío SMS"
