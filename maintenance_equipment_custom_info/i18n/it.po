@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-23 16:49+0000\n"
+"PO-Revision-Date: 2023-11-06 15:39+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_equipment_custom_info
 #: model:custom.info.property,default_value:maintenance_equipment_custom_info.prop_storage_gib
@@ -29,12 +29,12 @@ msgstr "Informazioni dedicate"
 #. module: maintenance_equipment_custom_info
 #: model:ir.model.fields,field_description:maintenance_equipment_custom_info.field_maintenance_equipment__custom_info_template_id
 msgid "Custom Information Template"
-msgstr "Modello informazioni dedicate"
+msgstr "Modello informazioni personalizzate"
 
 #. module: maintenance_equipment_custom_info
 #: model:ir.model.fields,field_description:maintenance_equipment_custom_info.field_maintenance_equipment__custom_info_ids
 msgid "Custom Properties"
-msgstr "Proprietà dedicate"
+msgstr "Proprietà personalizzate"
 
 #. module: maintenance_equipment_custom_info
 #: model:res.groups,name:maintenance_equipment_custom_info.group_equipment_info
