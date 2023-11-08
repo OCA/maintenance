@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-11-06 15:39+0000\n"
+"PO-Revision-Date: 2023-11-08 09:47+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -24,7 +24,7 @@ msgstr "256"
 #. module: maintenance_equipment_custom_info
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_custom_info.hr_equipment_view_form
 msgid "Custom Information"
-msgstr "Informazioni dedicate"
+msgstr "Informazioni personalizzate"
 
 #. module: maintenance_equipment_custom_info
 #: model:ir.model.fields,field_description:maintenance_equipment_custom_info.field_maintenance_equipment__custom_info_template_id
