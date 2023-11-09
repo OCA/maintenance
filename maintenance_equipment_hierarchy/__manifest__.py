@@ -13,4 +13,5 @@
     "depends": ["maintenance"],
     "data": ["views/maintenance_equipment_views.xml"],
     "demo": ["data/demo_maintenance_equipment_hierarchy.xml"],
+    "installable": False,
 }

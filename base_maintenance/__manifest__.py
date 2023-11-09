@@ -10,11 +10,10 @@
     "category": "Maintenance",
     "license": "LGPL-3",
     "depends": ["maintenance"],
-    "data": [
-        "views/maintenance_team_views.xml",
-        "views/maintenance_request_views.xml",
-        "views/maintenance_equipment_views.xml",
-        "views/report_maintenance_request.xml",
-    ],
+    # "data": [
+    # "views/maintenance_team_views.xml",
+    # "views/maintenance_request_views.xml",
+    # "views/maintenance_equipment_views.xml",
+    # ],
     "installable": True,
 }

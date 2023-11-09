@@ -8,7 +8,7 @@
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": ["maintenance", "product"],
-    "installable": True,
+    "installable": False,
     "data": [
         "views/maintenance_equipment_view.xml",
         "views/product_template_view.xml",

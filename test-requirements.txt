@@ -1,0 +1,4 @@
+# generated from manifests external_dependencies
+python-dateutil
+regex
+odoo_test_helper

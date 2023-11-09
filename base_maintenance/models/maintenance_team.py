@@ -7,5 +7,5 @@ from odoo import fields, models
 class MaintenanceTeam(models.Model):
     _inherit = "maintenance.team"
 
-    user_id = fields.Many2one(comodel_name="res.users", string="Team Leader")
+    # user_id = fields.Many2one(comodel_name="res.users", string="Team Leader")
     description = fields.Text()

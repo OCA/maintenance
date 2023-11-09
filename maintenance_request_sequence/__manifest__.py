@@ -15,4 +15,5 @@
         "views/maintenance_team.xml",
         "views/maintenance_request.xml",
     ],
+    "installable": False,
 }

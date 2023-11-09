@@ -17,5 +17,5 @@
         "report/maintenance_request_report.xml",
     ],
     "demo": ["data/demo_maintenance_project.xml"],
-    "installable": True,
+    "installable": False,
 }

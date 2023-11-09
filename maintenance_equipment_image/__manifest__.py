@@ -14,6 +14,6 @@
     "data": [
         "views/maintenance_equipment_views.xml",
     ],
-    "installable": True,
+    "installable": False,
     "application": False,
 }

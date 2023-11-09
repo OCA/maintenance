@@ -13,4 +13,5 @@
     "data": ["views/maintenance_request.xml", "views/maintenance_stage.xml"],
     "demo": ["data/demo_maintenance_request_stage_transition.xml"],
     "maintainers": ["etobella"],
+    "installable": False,
 }

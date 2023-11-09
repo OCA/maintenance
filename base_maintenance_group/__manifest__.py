@@ -15,4 +15,5 @@
         "security/maintenance_security.xml",
         "menuitems.xml",
     ],
+    "installable": False,
 }

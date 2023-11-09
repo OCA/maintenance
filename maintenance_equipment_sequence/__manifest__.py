@@ -13,4 +13,5 @@
     "website": "https://github.com/OCA/maintenance",
     "depends": ["maintenance"],
     "data": ["views/maintenance_views.xml"],
+    "installable": False,
 }

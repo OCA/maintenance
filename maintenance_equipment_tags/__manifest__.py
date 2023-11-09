@@ -17,4 +17,5 @@
         "views/maintenance_equipment.xml",
         "views/maintenance_equipment_tag.xml",
     ],
+    "installable": False,
 }

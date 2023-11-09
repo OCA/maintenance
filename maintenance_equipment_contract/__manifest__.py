@@ -12,4 +12,5 @@
     "depends": ["contract", "base_maintenance"],
     "data": ["views/contract_contract.xml", "views/maintenance_equipment.xml"],
     "demo": ["demo/maintenance_equipment_contract_demo.xml"],
+    "installable": False,
 }
