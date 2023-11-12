@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-01-02 12:45+0000\n"
-"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
+"PO-Revision-Date: 2023-11-12 17:37+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_purchase
 #: model:ir.model.fields,field_description:maintenance_purchase.field_maintenance_equipment__display_name
@@ -32,7 +32,7 @@ msgstr "Categoria attrezzatura"
 #: model:ir.model.fields,field_description:maintenance_purchase.field_purchase_order__equipment_count
 #: model:ir.model.fields,field_description:maintenance_purchase.field_purchase_order_line__equipment_count
 msgid "Equipment Count"
-msgstr "Conteggio attrezzatura"
+msgstr "Conteggio attrezzature"
 
 #. module: maintenance_purchase
 #: model_terms:ir.ui.view,arch_db:maintenance_purchase.purchase_order_form_view
