@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-06-12 09:09+0000\n"
+"PO-Revision-Date: 2023-11-12 17:41+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -49,7 +49,7 @@ msgstr "Lavoro predefinito"
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__equipment_count
 msgid "Equipment Count"
-msgstr "Conta attrezzatura"
+msgstr "Conteggio attrezzature"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__equipment_ids
