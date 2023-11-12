@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-08-07 09:11+0000\n"
+"PO-Revision-Date: 2023-11-12 17:39+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -27,7 +27,7 @@ msgstr "Categoria attrezzatura"
 #: model:ir.model.fields,field_description:maintenance_account.field_account_move_line__equipment_count
 #: model:ir.model.fields,field_description:maintenance_account.field_account_payment__equipment_count
 msgid "Equipment Count"
-msgstr "Conteggio attrezzatura"
+msgstr "Conteggio attrezzature"
 
 #. module: maintenance_account
 #: model_terms:ir.ui.view,arch_db:maintenance_account.view_move_form
