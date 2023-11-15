@@ -6,90 +6,92 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-11-15 18:36+0000\n"
+"Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_team_hierarchy
 #: model:maintenance.team,name:maintenance_team_hierarchy.equipment_team_child_1
 msgid "Child Team 1"
-msgstr ""
+msgstr "Equip fill 1"
 
 #. module: maintenance_team_hierarchy
 #: model:maintenance.team,name:maintenance_team_hierarchy.equipment_team_child_2
 msgid "Child Team 2"
-msgstr ""
+msgstr "Equip fill 2"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nom a mostrar"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificació el"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model,name:maintenance_team_hierarchy.model_maintenance_team
 msgid "Maintenance Teams"
-msgstr ""
+msgstr "Equips de manteniment"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count
 msgid "Number of Requests"
-msgstr ""
+msgstr "Nombre de peticions"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_block
 msgid "Number of Requests Blocked"
-msgstr ""
+msgstr "Nombre de peticions bloquejades"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_date
 msgid "Number of Requests Scheduled"
-msgstr ""
+msgstr "Nombre de peticions programades"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_unscheduled
 msgid "Number of Requests Unscheduled"
-msgstr ""
+msgstr "Nombre de peticions no programades"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_high_priority
 msgid "Number of Requests in High Priority"
-msgstr ""
+msgstr "Nombre de peticions d'alta prioritat"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__parent_id
 msgid "Parent"
-msgstr ""
+msgstr "Pare"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__parent_path
 msgid "Parent Path"
-msgstr ""
+msgstr "Ruta dels pares"
 
 #. module: maintenance_team_hierarchy
 #: model:maintenance.team,name:maintenance_team_hierarchy.equipment_team_parent
 msgid "Parent Team"
-msgstr ""
+msgstr "Equip pare"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__request_ids
 msgid "Request"
-msgstr ""
+msgstr "Petició"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_ids
 msgid "Requests"
-msgstr ""
+msgstr "Peticions"
