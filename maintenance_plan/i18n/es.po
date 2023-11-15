@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:30+0000\n"
-"PO-Revision-Date: 2023-10-18 14:16+0000\n"
+"PO-Revision-Date: 2023-11-15 18:36+0000\n"
 "Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -168,7 +168,7 @@ msgstr "Frecuencia"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__generate_with_domain
 msgid "Generate With Domain"
-msgstr ""
+msgstr "Generar con dominio"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
@@ -292,7 +292,7 @@ msgstr ""
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr "Equipo"
+msgstr "Equipament"
 
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_kind
@@ -387,7 +387,7 @@ msgstr "Peticiones de mantenimiento"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_has_error
 msgid "Message Delivery error"
-msgstr "Mensaje de error de entrega"
+msgstr "Error en la entrega del mensaje"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_ids
