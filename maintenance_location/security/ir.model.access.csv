@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_maintenance_location,access_maintenance_location,model_maintenance_location,base.group_user,1,0,0,0
+access_maintenance_location_maintenance,access_maintenance_location_maintenance,model_maintenance_location,maintenance.group_equipment_manager,1,1,1,1

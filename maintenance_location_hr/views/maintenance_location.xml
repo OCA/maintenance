@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Dixmit
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="maintenance_location_form_view">
+        <field
+            name="name"
+        >maintenance.location.form (in maintenance_location_hr)</field>
+        <field name="model">maintenance.location</field>
+        <field
+            name="inherit_id"
+            ref="maintenance_location.maintenance_location_form_view"
+        />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field name="owner_id" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_location_search_view">
+        <field
+            name="name"
+        >maintenance.location.search (in maintenance_location_hr)</field>
+        <field name="model">maintenance.location</field>
+        <field
+            name="inherit_id"
+            ref="maintenance_location.maintenance_location_search_view"
+        />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="owner_id" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_location_tree_view">
+        <field
+            name="name"
+        >maintenance.location.tree (in maintenance_location_hr)</field>
+        <field name="model">maintenance.location</field>
+        <field
+            name="inherit_id"
+            ref="maintenance_location.maintenance_location_tree_view"
+        />
+        <field name="arch" type="xml">
+            <field name="complete_name" position="after">
+                <field name="owner_id" />
+            </field>
+        </field>
+    </record>
+
+</odoo>
