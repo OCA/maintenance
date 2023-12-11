@@ -59,6 +59,11 @@ msgid "Activity Type Icon"
 msgstr "Actividad de Tipo de Iconos"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__generate_domain
+msgid "Apply on"
+msgstr ""
+
+#. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Archived"
 msgstr "Archivado"
@@ -152,6 +157,11 @@ msgstr "Icono de Font Awesome ej. fa-tasks"
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__interval
 msgid "Frequency"
 msgstr "Frecuencia"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__generate_with_domain
+msgid "Generate With Domain"
+msgstr ""
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
@@ -266,6 +276,11 @@ msgstr "El equipo de mantenimiento debe pertenecer a la empresa del equipo"
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Maintenance"
 msgstr "Mantenimiento"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__search_maintenance_plan_count
+msgid "Maintenance All Plan Count"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_equipment
@@ -503,6 +518,11 @@ msgid "Responsible User"
 msgstr "Usuario responsable"
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__search_equipment_id
+msgid "Search Equipment"
+msgstr ""
+
+#. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid ""
@@ -595,6 +615,12 @@ msgstr "Contador de mensajes sin leer"
 #, python-format
 msgid "Unspecified kind"
 msgstr "Tipo no especificado"
+
+#. module: maintenance_plan
+#: code:addons/maintenance_plan/models/maintenance_plan.py:0
+#, python-format
+msgid "Unsupported search operator"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__website_message_ids
