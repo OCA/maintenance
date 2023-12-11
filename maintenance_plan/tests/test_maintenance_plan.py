@@ -163,7 +163,7 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         self.maintenance_plan_5.write(
             {
                 "start_maintenance_date": fields.Date.to_string(
-                    self.today_date + timedelta(weeks=9)
+                    self.today_date + relativedelta(weeks=9)
                 ),
                 "maintenance_plan_horizon": 3,
             }

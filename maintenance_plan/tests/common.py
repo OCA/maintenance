@@ -73,7 +73,7 @@ class TestMaintenancePlanBase(test_common.TransactionCase):
         )
         cls.maintenance_plan_5 = cls.maintenance_plan_obj.create(
             {
-                "start_maintenance_date": today,
+                "start_maintenance_date": "2023-01-25",
                 "interval": 1,
                 "interval_step": "month",
                 "maintenance_plan_horizon": 2,
