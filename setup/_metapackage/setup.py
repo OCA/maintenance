@@ -21,6 +21,7 @@ setuptools.setup(
         'odoo-addon-maintenance_request_repair>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_request_sequence>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_request_stage_transition>=16.0dev,<16.1dev',
+        'odoo-addon-maintenance_security>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_team_hierarchy>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_timesheet>=16.0dev,<16.1dev',
     ],
