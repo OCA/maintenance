@@ -14,6 +14,7 @@ class PurchaseOrder(models.Model):
         "purchase_order_id",
         "maintenance_request_id",
         string="Maintenance Requests",
+        copy=False,
     )
 
     maintenance_requests_count = fields.Integer(
