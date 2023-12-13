@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Dixmit
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="maintenance_equipment_meter_form_view">
+        <field name="model">maintenance.equipment.meter</field>
+        <field name="arch" type="xml">
+            <form>
+                <header />
+                <sheet>
+                    <group>
+                        <field name="equipment_id" />
+                        <field name="date" />
+                        <field name="value" />
+                        <field name="meter_unit_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_equipment_meter_search_view">
+        <field name="model">maintenance.equipment.meter</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="equipment_id" />
+                <field name="date" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_equipment_meter_tree_view">
+        <field name="model">maintenance.equipment.meter</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="equipment_id" />
+                <field name="date" />
+                <field name="value" />
+                <field name="meter_unit_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="maintenance_equipment_meter_graph_view" model="ir.ui.view">
+        <field name="model">maintenance.equipment.meter</field>
+        <field name="arch" type="xml">
+             <graph string="Meter Values Per Equipment" type="line" sample="1">
+                 <field name="date" type="row" />
+                 <field name="value" type="measure" />
+             </graph>
+         </field>
+     </record>
+    <record
+        model="ir.actions.act_window"
+        id="maintenance_equipment_meter_equipment_act_window"
+    >
+        <field name="name">Maintenance Equipment Meter</field>
+        <field name="res_model">maintenance.equipment.meter</field>
+        <field name="view_mode">tree,form,graph</field>
+        <field name="domain">[('equipment_id', '=', active_id)]</field>
+        <field name="context">{'default_equipment_id': active_id}</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="maintenance_equipment_meter_act_window">
+        <field name="name">Equipment Meters</field>
+        <field name="res_model">maintenance.equipment.meter</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.ui.menu" id="maintenance_equipment_meter_menu">
+        <field name="name">Equipment Meter</field>
+        <field name="parent_id" ref="maintenance.menu_m_request" />
+        <field name="action" ref="maintenance_equipment_meter_act_window" />
+        <field name="sequence" eval="80" />
+    </record>
+</odoo>
