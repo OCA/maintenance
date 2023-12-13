@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Dixmit
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="hr_equipment_request_view_form">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="has_meter" invisible="1" />
+                <label
+                    for="current_meter"
+                    attrs="{'invisible': [('has_meter','=', False)]}"
+                />
+                <div class="o_row" attrs="{'invisible': [('has_meter','=', False)]}">
+                    <field name="current_meter" />
+                    <field name="meter_unit_id" />
+                </div>
+                <field name="meter_id" invisible="1" />
+            </field>
+        </field>
+    </record>
+
+
+
+</odoo>
