@@ -15,6 +15,7 @@ class MaintenanceRequest(models.Model):
         "purchase_order_id",
         groups="purchase.group_purchase_user",
         string="Purchase Orders",
+        copy=False,
     )
     purchases_count = fields.Integer(
         compute="_compute_purchases_count",
