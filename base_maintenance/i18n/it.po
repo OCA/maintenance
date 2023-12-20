@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-11-04 18:44+0000\n"
+"PO-Revision-Date: 2023-12-20 14:34+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: base_maintenance
 #: model:ir.actions.report,print_report_name:base_maintenance.action_report_maintenance_request
@@ -125,7 +125,7 @@ msgstr "Squadre manutenzione"
 #. module: base_maintenance
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__user_id
 msgid "Team Leader"
-msgstr "Responsabile della squadra"
+msgstr "Responsabile squadra"
 
 #~ msgid "Archived"
 #~ msgstr "Archiviata"
