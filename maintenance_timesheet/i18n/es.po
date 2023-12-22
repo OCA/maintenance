@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-04 08:28+0000\n"
-"PO-Revision-Date: 2019-11-13 11:35+0000\n"
-"Last-Translator: David Alonso (Solvos) <david.alonso@solvos.es>\n"
+"PO-Revision-Date: 2023-12-23 01:34+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_form
@@ -30,17 +30,17 @@ msgstr "<span class=\"o_label\">horas</span>"
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "<span id=\"timesheet_information_title\">Timesheet Entries</span>"
-msgstr ""
+msgstr "<span id=\"timesheet_information_title\">Partes de Trabajo</span>"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "<strong>Timesheet Total Hours:</strong>"
-msgstr ""
+msgstr "<strong>Horas totales de la hoja de horas:</strong>"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "<strong>Total</strong>"
-msgstr ""
+msgstr "<strong>Total</strong>"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_account_analytic_line
@@ -59,38 +59,38 @@ msgstr ""
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__display_name
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__display_name
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Mostrar Nombre"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Duration (Hour(s))"
-msgstr ""
+msgstr "Duración (Hora(s))"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__id
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line____last_update
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment____last_update
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificación el"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_equipment
@@ -107,22 +107,22 @@ msgstr "Petición de mantenimiento"
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__planned_hours
 msgid "Planned Hours"
-msgstr ""
+msgstr "Horas planificadas"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__progress
 msgid "Progress"
-msgstr ""
+msgstr "Progreso"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Project -"
-msgstr ""
+msgstr "Proyecto -"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__remaining_hours
 msgid "Remaining Hours"
-msgstr ""
+msgstr "Horas restantes"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_timesheet_line_search
@@ -132,17 +132,17 @@ msgstr "Petición"
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Responsible"
-msgstr ""
+msgstr "Responsable"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Task"
-msgstr ""
+msgstr "Tarea"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Time"
-msgstr ""
+msgstr "Tiempo"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_total_hours
