@@ -7,26 +7,26 @@ msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-21 10:34+0000\n"
-"PO-Revision-Date: 2022-12-21 11:34+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2023-12-28 12:33+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"X-Generator: Poedit 3.0.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_timesheet_time_control
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.equipment_request_view_form
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #. module: maintenance_timesheet_time_control
 #: model:ir.model.fields,field_description:maintenance_timesheet_time_control.field_hr_timesheet_switch__display_name
 #: model:ir.model.fields,field_description:maintenance_timesheet_time_control.field_maintenance_request__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Mostrar Nombre"
 
 #. module: maintenance_timesheet_time_control
 #: model:ir.model,name:maintenance_timesheet_time_control.model_hr_timesheet_switch
@@ -37,18 +37,18 @@ msgstr "Ayudante para cambiar rápidamente de línea del parte de horas"
 #: model:ir.model.fields,field_description:maintenance_timesheet_time_control.field_hr_timesheet_switch__id
 #: model:ir.model.fields,field_description:maintenance_timesheet_time_control.field_maintenance_request__id
 msgid "ID"
-msgstr ""
+msgstr "ID (identificación)"
 
 #. module: maintenance_timesheet_time_control
 #: model:ir.model.fields,help:maintenance_timesheet_time_control.field_maintenance_request__show_time_control
 msgid "Indicate which time control button to show, if any."
-msgstr ""
+msgstr "Indicar qué botón de control horario mostrar, si lo hay."
 
 #. module: maintenance_timesheet_time_control
 #: model:ir.model.fields,field_description:maintenance_timesheet_time_control.field_hr_timesheet_switch____last_update
 #: model:ir.model.fields,field_description:maintenance_timesheet_time_control.field_maintenance_request____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificación el"
 
 #. module: maintenance_timesheet_time_control
 #: model:ir.model,name:maintenance_timesheet_time_control.model_maintenance_request
@@ -58,12 +58,12 @@ msgstr "Petición de mantenimiento"
 #. module: maintenance_timesheet_time_control
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.equipment_request_view_form
 msgid "Resume work"
-msgstr ""
+msgstr "Resumen del trabajo"
 
 #. module: maintenance_timesheet_time_control
 #: model:ir.model.fields,field_description:maintenance_timesheet_time_control.field_maintenance_request__show_time_control
 msgid "Show Time Control"
-msgstr ""
+msgstr "Mostrar Control de Tiempo"
 
 #. module: maintenance_timesheet_time_control
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet_time_control.hr_equipment_request_view_form
