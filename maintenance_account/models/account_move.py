@@ -18,7 +18,7 @@ class AccountMove(models.Model):
         return super().unlink()
 
     def action_post(self):
-        super().action_post()
+        res = super().action_post()
         # Prevent error if user does not have permission to create equipments
         equipment_model = self.env["maintenance.equipment"].sudo()
         for move in self.filtered(lambda r: r.is_purchase_document()):
@@ -41,6 +41,7 @@ class AccountMove(models.Model):
                     ).create(vals.copy())
                     equipment_ids.append((4, equipment.id))
                 line.equipment_ids = equipment_ids
+        return res
 
     def action_view_equipments(self):
         items = self.env["maintenance.equipment"].search([("move_id", "=", self.id)])
