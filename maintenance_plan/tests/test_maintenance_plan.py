@@ -218,9 +218,11 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
             limit=1,
         )
         generated_request.note = "TEST-INSTRUCTIONS"
-        res = self.report_obj._get_report_from_name(
-            "base_maintenance.report_maintenance_request"
-        )._render_qweb_text(generated_request.ids, False)
+        res = self.report_obj._render_qweb_text(
+            "base_maintenance.report_maintenance_request",
+            generated_request.ids,
+            False,
+        )
         self.assertRegex(str(res[0]), "TEST-INSTRUCTIONS")
 
     def test_maintenance_plan_button_manual_request_generation(self):

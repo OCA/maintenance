@@ -23,30 +23,28 @@
             <xpath expr="//group[@name='maintenance']" position="attributes">
                 <attribute name="attrs">{'invisible': 1}</attribute>
             </xpath>
-            <xpath expr="//group[@name='maintenance']" position="after">
-                <group name="maintenance_plans" colspan="4">
-                    <field
-                        name="maintenance_plan_ids"
-                        nolabel="1"
-                        context="{'default_equipment_id': active_id, 'hide_equipment_id': 1}"
-                    >
-                        <tree>
-                            <field name="maintenance_kind_id" string="Kind" />
-                            <field name="maintenance_team_id" string="Team" />
-                            <field name="name" />
-                            <field name="start_maintenance_date" string="Start Date" />
-                            <field name="interval" />
-                            <field name="interval_step" />
-                            <field name="duration" />
-                            <field name="next_maintenance_date" />
-                            <field
-                                name="maintenance_plan_horizon"
-                                string="P. Horizon period"
-                            />
-                            <field name="planning_step" string="P. Horizon step" />
-                        </tree>
-                    </field>
-                </group>
+            <xpath expr="//group[@name='maintenance']/.." position="after">
+                <field
+                    name="maintenance_plan_ids"
+                    nolabel="1"
+                    context="{'default_equipment_id': active_id, 'hide_equipment_id': 1}"
+                >
+                    <tree>
+                        <field name="maintenance_kind_id" string="Kind" />
+                        <field name="maintenance_team_id" string="Team" />
+                        <field name="name" />
+                        <field name="start_maintenance_date" string="Start Date" />
+                        <field name="interval" />
+                        <field name="interval_step" />
+                        <field name="duration" />
+                        <field name="next_maintenance_date" />
+                        <field
+                            name="maintenance_plan_horizon"
+                            string="P. Horizon period"
+                        />
+                        <field name="planning_step" string="P. Horizon step" />
+                    </tree>
+                </field>
             </xpath>
             <field name="maintenance_team_id" position="after">
                 <field name="maintenance_team_required" attrs="{'invisible': 1}" />
