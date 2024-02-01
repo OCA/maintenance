@@ -143,7 +143,7 @@
                 <field name="next_maintenance_date" />
                 <field name="maintenance_plan_horizon" />
                 <field name="planning_step" />
-                <field name="active" attrs="{'invisible': True}" />
+                <field name="active" invisible="1" />
                 <field name="company_id" groups="base.group_multi_company" />
             </tree>
         </field>
