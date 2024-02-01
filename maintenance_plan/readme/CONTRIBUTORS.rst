@@ -5,3 +5,4 @@
 * Jordi Ballester Alomar <jordi.ballester@forgeflow.com>
 * Lois Rilo <lois.rilo@forgeflow.com>
 * Enric Tobella <enric.tobella@dixmit.com>
+* Alexei Rivera <arivera@archeti.com>
