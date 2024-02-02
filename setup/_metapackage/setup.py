@@ -16,6 +16,7 @@ setuptools.setup(
         'odoo-addon-maintenance_equipment_sequence>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_equipment_status>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_equipment_tags>=16.0dev,<16.1dev',
+        'odoo-addon-maintenance_plan>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_product>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_project>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_request_repair>=16.0dev,<16.1dev',
