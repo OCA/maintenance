@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="0">
+    <record id="maintenance_plan_comp_rule" model="ir.rule">
+        <field name="name">Maintenance plan multi-company</field>
+        <field name="model_id" ref="model_maintenance_plan" />
+        <field name="global" eval="True" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="maintenance_plan_rule_user" model="ir.rule">
+        <field
+            name="name"
+        >Users are allowed to access plan from equipments they follow</field>
+        <field name="model_id" ref="model_maintenance_plan" />
+        <field
+            name="domain_force"
+        >[('equipment_id.message_partner_ids', 'in', [user.partner_id.id])]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    </record>
+    <record id="maintenance_plan_rule_admin_user" model="ir.rule">
+        <field name="name">Administrator of maintenance plans</field>
+        <field name="model_id" ref="model_maintenance_plan" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('maintenance.group_equipment_manager'))]" />
+    </record>
+</odoo>
