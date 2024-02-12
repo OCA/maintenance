@@ -69,12 +69,3 @@ msgstr "Apunte"
 #: model:ir.model.fields,help:maintenance_account.field_maintenance_equipment__move_id
 msgid "The move of this entry line."
 msgstr "El movimiento de esta línea de entrada."
-
-#~ msgid "Display Name"
-#~ msgstr "Nombre mostrado"
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Last Modified on"
-#~ msgstr "Última modificación el"

@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='serial_no']" position="after">
-                <field name="move_id" />
+                <field name="move_id" groups="account.group_account_invoice" />
             </xpath>
         </field>
     </record>
