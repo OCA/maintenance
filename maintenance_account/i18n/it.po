@@ -68,12 +68,3 @@ msgstr "Riga movimento"
 #: model:ir.model.fields,help:maintenance_account.field_maintenance_equipment__move_id
 msgid "The move of this entry line."
 msgstr "Il movimento per questa riga di registrazione."
-
-#~ msgid "Display Name"
-#~ msgstr "Nome visualizzato"
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Last Modified on"
-#~ msgstr "Ultima modifica il"

@@ -1,26 +1,20 @@
-# Copyright 2022-2023 Tecnativa - Víctor Martínez
+# Copyright 2022-2024 Tecnativa - Víctor Martínez
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl)
 
 from odoo import fields
 from odoo.tests import Form, common, new_test_user
 from odoo.tests.common import users
 
+from odoo.addons.base.tests.common import DISABLED_MAIL_CONTEXT
+
 
 class TestAccountMove(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        ctx = {
-            "mail_create_nolog": True,
-            "mail_create_nosubscribe": True,
-            "mail_notrack": True,
-            "no_reset_password": True,
-        }
+        cls.env = cls.env(context=dict(cls.env.context, **DISABLED_MAIL_CONTEXT))
         new_test_user(
-            cls.env,
-            login="test-account-user",
-            groups="account.group_account_invoice",
-            context=ctx,
+            cls.env, login="test-account-user", groups="account.group_account_invoice"
         )
         cls.categ = cls.env["product.category"].create({"name": "Test category"})
         cls.product_a = cls.env["product.product"].create(
@@ -33,7 +27,7 @@ class TestAccountMove(common.TransactionCase):
             {
                 "name": "Test Account",
                 "code": "TEST",
-                "user_type_id": cls.env.ref("account.data_account_type_payable").id,
+                "account_type": "liability_payable",
                 "reconcile": True,
             }
         )
@@ -41,7 +35,7 @@ class TestAccountMove(common.TransactionCase):
             {
                 "name": "Test Account",
                 "code": "ACC",
-                "user_type_id": cls.env.ref("account.data_account_type_expenses").id,
+                "account_type": "expense",
             }
         )
         cls.journal = cls.env["account.journal"].create(
@@ -67,11 +61,9 @@ class TestAccountMove(common.TransactionCase):
         with move_form.invoice_line_ids.new() as line_form:
             line_form.product_id = self.product_a
             line_form.quantity = 2
-            line_form.account_id = self.account_expense
         with move_form.invoice_line_ids.new() as line_form:
             line_form.product_id = self.product_b
             line_form.quantity = 2
-            line_form.account_id = self.account_expense
         invoice = move_form.save()
         return invoice
 
