@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-12-19 15:34+0000\n"
+"PO-Revision-Date: 2024-02-16 17:45+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -55,7 +55,7 @@ msgstr "Categoria attrezzatura menutenzione"
 #. module: maintenance_equipment_category_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__parent_id
 msgid "Parent Category"
-msgstr "Categoria madre"
+msgstr "Categoria padre"
 
 #. module: maintenance_equipment_category_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__parent_path
