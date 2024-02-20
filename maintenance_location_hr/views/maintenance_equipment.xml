@@ -12,6 +12,8 @@
         <field name="arch" type="xml">
             <field name="location_id" position="after">
                 <field name="equipment_assign_to" invisible="1" />
+                <field name="employee_id" invisible="1" />
+                <field name="department_id" invisible="1" />
             </field>
             <field name="location_id" position="attributes">
                 <attribute
