@@ -27,7 +27,7 @@ addon | version | maintainers | summary
 [maintenance_account](maintenance_account/) | 14.0.1.0.4 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Account
 [maintenance_equipment_category_hierarchy](maintenance_equipment_category_hierarchy/) | 14.0.1.0.0 |  | Equipment Categories Hierarchy
 [maintenance_equipment_contract](maintenance_equipment_contract/) | 14.0.1.0.3 |  | Manage equipment contracts
-[maintenance_equipment_custom_info](maintenance_equipment_custom_info/) | 14.0.1.0.0 |  | Add Custom Info on Maintenance Equipments
+[maintenance_equipment_custom_info](maintenance_equipment_custom_info/) | 14.0.1.0.1 |  | Add Custom Info on Maintenance Equipments
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 14.0.1.0.2 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
 [maintenance_equipment_image](maintenance_equipment_image/) | 14.0.1.0.1 | [![pedrocasi](https://github.com/pedrocasi.png?size=30px)](https://github.com/pedrocasi) | Adds images to equipment.
 [maintenance_equipment_scrap](maintenance_equipment_scrap/) | 14.0.1.0.2 | [![espo-tony](https://github.com/espo-tony.png?size=30px)](https://github.com/espo-tony) | Enhance the functionality for Scrapping Equipments
