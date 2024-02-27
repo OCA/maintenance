@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="maintenance_equipment_usage_tree" model="ir.ui.view">
+        <field name="name">maintenance.equipment.usage.tree</field>
+        <field name="model">maintenance.equipment.usage</field>
+        <field name="arch" type="xml">
+            <tree decoration-muted="state in ('done','cancel')">
+                <field name="name" />
+                <field name="equipment_id" />
+                <field name="user_id" />
+                <field name="partner_id" />
+                <field name="date_picking" />
+                <field name="date_return" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+    <record id="maintenance_equipment_usage_form" model="ir.ui.view">
+        <field name="name">maintenance.equipment.usage.form</field>
+        <field name="model">maintenance.equipment.usage</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="action_pick"
+                        states="draft,reserved"
+                        string="Pick"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    <button
+                        name="action_return"
+                        states="in_use"
+                        string="Return"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    <button
+                        name="action_cancel"
+                        states="draft,reserved,in_use"
+                        string="Cancel"
+                        type="object"
+                    />
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" nolabel="1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="user_id" />
+                            <field name="equipment_id" />
+                        </group>
+                        <group>
+                            <field name="partner_id" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                            />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="create_date" invisible="1" />
+                            <field
+                                name="picking_user_id"
+                                attrs="{'required': [('create_date', '!=', False)]}"
+                            />
+                            <field
+                                name="return_user_id"
+                                states="in_use,returned,cancel"
+                            />
+                        </group>
+                        <group>
+                            <field name="date_picking" />
+                            <field name="date_return" states="in_use,returned,cancel" />
+                        </group>
+                    </group>
+                    <separator string="Notes" />
+                    <field name="notes" />
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="maintenance_equipment_usage_search" model="ir.ui.view">
+        <field name="name">maintenance.equipment.usage.search</field>
+        <field name="model">maintenance.equipment.usage</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="user_id" />
+                <field name="equipment_id" />
+                <field name="picking_user_id" />
+                <field name="return_user_id" />
+                <filter
+                    string="To Pick"
+                    name="to_pick"
+                    domain="[('state', 'in', ('draft', 'readonly'))]"
+                />
+                <filter
+                    string="In Use"
+                    name="in_use"
+                    domain="[('state', '=', 'in_use')]"
+                />
+                <filter
+                    string="Returned"
+                    name="returned"
+                    domain="[('state', '=', 'returned')]"
+                />
+                <filter
+                    string="Cancelled"
+                    name="cancel"
+                    domain="[('state', '=', 'cancel')]"
+                />
+                <filter
+                    string="Not Returned"
+                    name="not_returned"
+                    domain="[('state', 'not in', ('returned', 'cancel'))]"
+                />
+                <group expand="0" string="Group By...">
+                    <filter
+                        name="group_by_user_id"
+                        string="Driver"
+                        domain="[]"
+                        context="{'group_by':'user_id'}"
+                    />
+                    <filter
+                        name="group_by_equipment_id"
+                        string="Equipment"
+                        domain="[]"
+                        context="{'group_by':'equipment_id'}"
+                    />
+                    <filter
+                        name="group_by_state"
+                        string="Status"
+                        domain="[]"
+                        context="{'group_by':'state'}"
+                    />
+                    <filter
+                        name="group_by_date_picking"
+                        string="Picking Month"
+                        domain="[]"
+                        context="{'group_by':'date_picking'}"
+                        help="Picking Date by Month"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="maintenance_equipment_usage_action" model="ir.actions.act_window">
+        <field name="name">Equipment Usage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">maintenance.equipment.usage</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="maintenance_equipment_usage_search" />
+        <field name="context">{'search_default_not_returned': 1}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to create an Equipment Usage.</p>
+        </field>
+    </record>
+    <menuitem
+        id="submenu_equipment_form"
+        name="Equipments"
+        parent="maintenance.menu_equipment_form"
+        action="maintenance.hr_equipment_action"
+        groups="maintenance.group_equipment_manager,base.group_user"
+        sequence="1"
+    />
+    <menuitem
+        id="menu_maintenance_equipment_usage_action"
+        name="Usages"
+        action="maintenance_equipment_usage_action"
+        parent="maintenance.menu_equipment_form"
+        groups="maintenance.group_equipment_manager"
+        sequence="2"
+    />
+    <record
+        id="maintenance_equipment_usage_action_from_equipment"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Equipment Usage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">maintenance.equipment.usage</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" eval="False" />
+        <field name="search_view_id" ref="maintenance_equipment_usage_search" />
+        <field
+            name="context"
+        >{'default_equipment_id': active_id, 'search_default_not_returned': 1}</field>
+        <field name="domain">[('equipment_id', '=', active_id)]</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to create an Equipment Usage.</p>
+        </field>
+    </record>
+</odoo>
