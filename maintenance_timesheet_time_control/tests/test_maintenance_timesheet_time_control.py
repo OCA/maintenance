@@ -1,44 +1,38 @@
-# Copyright 2022-2023 Tecnativa - Víctor Martínez
+# Copyright 2022-2024 Tecnativa - Víctor Martínez
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0
 
 from datetime import datetime, timedelta
 
 from odoo import exceptions
-from odoo.tests import common, new_test_user, users
+from odoo.tests import new_test_user, users
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestMaintenanceTimesheetTimeControl(common.TransactionCase):
+class TestMaintenanceTimesheetTimeControl(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        ctx = {
-            "mail_create_nolog": True,
-            "mail_create_nosubscribe": True,
-            "mail_notrack": True,
-            "no_reset_password": True,
-        }
-        maintenance_group = "maintenance.group_equipment_manager"
-        timesheet_group = "hr_timesheet.group_hr_timesheet_user"
         cls.user = new_test_user(
             cls.env,
             login="test-maintenance-user",
-            groups="%s,%s" % (maintenance_group, timesheet_group),
-            context=ctx,
+            groups="maintenance.group_equipment_manager,"
+            "hr_timesheet.group_hr_timesheet_user",
         )
-        cls.employee = cls.env["hr.employee"].create(
-            {"name": "Test employee", "user_id": cls.user.id}
-        )
+        cls.user.action_create_employee()
         cls.project = cls.env["project.project"].create(
             {"name": "Test project", "allow_timesheets": True}
         )
+        cls.category = cls.env["maintenance.equipment.category"].create(
+            {"name": "Test category"}
+        )
+        cls.team = cls.env["maintenance.team"].create({"name": "Test team"})
         cls.equipment = cls.env["maintenance.equipment"].create(
             {
                 "name": "Test computer",
-                "category_id": cls.env.ref("maintenance.equipment_computer").id,
+                "category_id": cls.category.id,
                 "project_id": cls.project.id,
-                "maintenance_team_id": cls.env.ref(
-                    "maintenance.equipment_team_maintenance"
-                ).id,
+                "maintenance_team_id": cls.team.id,
             }
         )
 
