@@ -1,9 +1,11 @@
 # Copyright 2022-2023 Tecnativa - Víctor Martínez
+# Copyright 2024 Tecnativa - Carolina Fernandez
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl)
 
 from odoo import fields
 from odoo.tests import Form, common, new_test_user
 from odoo.tests.common import users
+from odoo.tools import html2plaintext
 
 
 class TestAccountMove(common.TransactionCase):
@@ -66,6 +68,7 @@ class TestAccountMove(common.TransactionCase):
         move_form.invoice_date = fields.Date.from_string("2000-01-01")
         with move_form.invoice_line_ids.new() as line_form:
             line_form.product_id = self.product_a
+            line_form.name = "Product A \nTest description product A"
             line_form.quantity = 2
             line_form.account_id = self.account_expense
         with move_form.invoice_line_ids.new() as line_form:
@@ -100,7 +103,9 @@ class TestAccountMove(common.TransactionCase):
         self.assertEqual(len(line_a.equipment_ids), 2)
         self.assertEqual(len(line_b.equipment_ids), 0)
         equipment = fields.first(equipments)
-        self.assertEqual(equipment.name, self.product_a.name)
+        name_list = line_a.name.split("\n")
+        self.assertEqual(equipment.name, name_list[0])
+        self.assertEqual(html2plaintext(equipment.note), name_list[1])
         self.assertEqual(equipment.product_id, self.product_a)
         self.assertEqual(equipment.category_id.product_category_id, self.categ)
         self.assertEqual(equipment.assign_date, invoice.date)
