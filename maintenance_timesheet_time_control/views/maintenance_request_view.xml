@@ -9,13 +9,13 @@
             name="inherit_id"
             ref="maintenance_timesheet.hr_equipment_request_view_form"
         />
-        <field
-            name="groups_id"
-            eval="[(6, 0, [ref('hr_timesheet.group_hr_timesheet_user')])]"
-        />
         <field name="arch" type="xml">
             <div name="button_box" position="inside">
-                <field name="show_time_control" invisible="1" />
+                <field
+                    name="show_time_control"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                    invisible="1"
+                />
                 <button
                     name="button_start_work"
                     string="Start work"
@@ -23,6 +23,7 @@
                     icon="fa-play-circle text-success"
                     attrs="{'invisible': [('show_time_control', '!=', 'start')]}"
                     class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
                 />
                 <button
                     name="button_end_work"
@@ -31,6 +32,7 @@
                     icon="fa-stop-circle text-warning"
                     attrs="{'invisible': [('show_time_control', '!=', 'stop')]}"
                     class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
                 />
             </div>
         </field>
@@ -43,10 +45,6 @@
         <field
             name="inherit_id"
             ref="maintenance_timesheet.equipment_request_view_form"
-        />
-        <field
-            name="groups_id"
-            eval="[(6, 0, [ref('hr_timesheet.group_hr_timesheet_user')])]"
         />
         <field name="arch" type="xml">
             <!-- Sub-tree view for timesheet_ids -->
@@ -63,7 +61,11 @@
                 <field name="date_time" string="Date" required="1" />
             </xpath>
             <xpath expr="//field[@name='timesheet_ids']/tree" position="inside">
-                <field name="show_time_control" invisible="1" />
+                <field
+                    name="show_time_control"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                    invisible="1"
+                />
                 <button
                     name="button_resume_work"
                     title="Resume work"
@@ -72,6 +74,7 @@
                     icon="fa-play-circle text-success"
                     attrs="{'invisible': [('show_time_control', '!=', 'resume')]}"
                     class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
                 />
                 <button
                     name="button_end_work"
@@ -81,6 +84,7 @@
                     icon="fa-stop-circle text-warning"
                     attrs="{'invisible': [('show_time_control', '!=', 'stop')]}"
                     class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
                 />
             </xpath>
             <xpath expr="//field[@name='timesheet_ids']/tree" position="attributes">
@@ -94,13 +98,13 @@
         >maintenance.request.kanban (in maintenance_timesheet_time_control)</field>
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
-        <field
-            name="groups_id"
-            eval="[(6, 0, [ref('hr_timesheet.group_hr_timesheet_user')])]"
-        />
         <field name="arch" type="xml">
             <xpath expr="//*[hasclass('oe_kanban_bottom_left')]" position="inside">
-                <field name="show_time_control" invisible="1" />
+                <field
+                    name="show_time_control"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                    invisible="1"
+                />
                 <a
                     name="button_start_work"
                     attrs="{'invisible': [('show_time_control', '!=', 'start')]}"
@@ -108,6 +112,7 @@
                     title="Start work"
                     tabindex="-1"
                     type="object"
+                    groups="hr_timesheet.group_hr_timesheet_user"
                 />
                 <a
                     name="button_end_work"
@@ -116,6 +121,7 @@
                     title="Stop work"
                     tabindex="-1"
                     type="object"
+                    groups="hr_timesheet.group_hr_timesheet_user"
                 />
             </xpath>
         </field>
@@ -129,13 +135,13 @@
             name="inherit_id"
             ref="maintenance_timesheet.hr_equipment_request_view_tree"
         />
-        <field
-            name="groups_id"
-            eval="[(6, 0, [ref('hr_timesheet.group_hr_timesheet_user')])]"
-        />
         <field name="arch" type="xml">
             <field name="timesheet_total_hours" position="after">
-                <field name="show_time_control" invisible="1" />
+                <field
+                    name="show_time_control"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                    invisible="1"
+                />
                 <button
                     name="button_start_work"
                     title="Start work"
@@ -144,6 +150,7 @@
                     icon="fa-play-circle text-success"
                     attrs="{'invisible': [('show_time_control', '!=', 'start')]}"
                     class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
                 />
                 <button
                     name="button_end_work"
@@ -153,6 +160,7 @@
                     icon="fa-stop-circle text-warning"
                     attrs="{'invisible': [('show_time_control', '!=', 'stop')]}"
                     class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
                 />
             </field>
         </field>
