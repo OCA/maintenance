@@ -395,3 +395,13 @@ msgstr "Usos"
 #: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__user_id
 msgid "User"
 msgstr "Usuario"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__website_message_ids
+msgid "Website communication history"
+msgstr ""
