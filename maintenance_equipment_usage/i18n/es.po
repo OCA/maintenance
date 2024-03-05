@@ -1,0 +1,397 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_usage
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-27 10:56+0000\n"
+"PO-Revision-Date: 2024-02-27 12:01+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_kanban
+msgid ""
+"<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
+"primary\" attrs=\"{'invisible': [('in_use', '=', False)]}\">In use</span>"
+msgstr ""
+"<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
+"primary\" attrs=\"{'invisible': [('in_use', '=', False)]}\">En uso</span>"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_needaction
+msgid "Action Needed"
+msgstr "Acción Necesaria"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Actividad Excepción Decoración"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_state
+msgid "Activity State"
+msgstr "Estado de Actividad"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de tipo de actividad"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_attachment_count
+msgid "Attachment Count"
+msgstr "Total adjuntos"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields.selection,name:maintenance_equipment_usage.selection__maintenance_equipment_usage__state__cancel
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.actions.act_window,help:maintenance_equipment_usage.maintenance_equipment_usage_action
+#: model_terms:ir.actions.act_window,help:maintenance_equipment_usage.maintenance_equipment_usage_action_from_equipment
+msgid "Click to create an Equipment Usage."
+msgstr "Haga clic para crear un uso del equipo."
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "Driver"
+msgstr "Conductor"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__equipment_id
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "Equipment"
+msgstr "Equipo"
+
+#. module: maintenance_equipment_usage
+#: model:ir.actions.act_window,name:maintenance_equipment_usage.maintenance_equipment_usage_action
+#: model:ir.actions.act_window,name:maintenance_equipment_usage.maintenance_equipment_usage_action_from_equipment
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__name
+msgid "Equipment Usage"
+msgstr "Uso del equipo"
+
+#. module: maintenance_equipment_usage
+#: model:ir.ui.menu,name:maintenance_equipment_usage.submenu_equipment_form
+msgid "Equipments"
+msgstr "Equipos"
+
+#. module: maintenance_equipment_usage
+#. odoo-python
+#: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
+#, python-format
+msgid "Every equipment can only be picked once at the same time!"
+msgstr "¡Cada equipo solo se puede recoger una vez al mismo tiempo!"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icono de Font Awesome ej. fa-tasks"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__has_message
+msgid "Has Message"
+msgstr "Tiene mensaje"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__id
+msgid "ID"
+msgstr "ID"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, los nuevos mensajes requieren su atención."
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment__in_use
+#: model:ir.model.fields.selection,name:maintenance_equipment_usage.selection__maintenance_equipment_usage__state__in_use
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "In Use"
+msgstr "En uso"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__write_uid
+msgid "Last Updated by"
+msgstr "Modificado por"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__write_date
+msgid "Last Updated on"
+msgstr "Última modificación el"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__partner_id
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto Principal"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model,name:maintenance_equipment_usage.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipo de mantenimiento"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model,name:maintenance_equipment_usage.model_maintenance_equipment_usage
+msgid "Maintenance Equipment Usage"
+msgstr "Uso de equipo de mantenimiento"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_has_error
+msgid "Message Delivery error"
+msgstr "Mensaje de Entrega de error"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Mi fecha de límite de actividad"
+
+#. module: maintenance_equipment_usage
+#. odoo-python
+#: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
+#: model:ir.model.fields.selection,name:maintenance_equipment_usage.selection__maintenance_equipment_usage__state__draft
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha Límite de Actividad Siguiente"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de actividad siguiente"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "Not Returned"
+msgstr "No devuelto"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__notes
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_form
+msgid "Pick"
+msgstr "Recoger"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__picking_user_id
+msgid "Picked up by"
+msgstr "Recogido por"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__date_picking
+msgid "Picking Date"
+msgstr "Fecha de recogida"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "Picking Date by Month"
+msgstr "Fecha de recogida por mes"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "Picking Month"
+msgstr "Mes de recogida"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields.selection,name:maintenance_equipment_usage.selection__maintenance_equipment_usage__state__reserved
+msgid "Reserved"
+msgstr "Reservado"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario Responsable"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_form
+msgid "Return"
+msgstr "Devolver"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__date_return
+msgid "Return Date"
+msgstr "Fecha de devolución"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields.selection,name:maintenance_equipment_usage.selection__maintenance_equipment_usage__state__returned
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "Returned"
+msgstr "Devuelto"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__return_user_id
+msgid "Returned by"
+msgstr "Devuelto por"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__state
+msgid "State"
+msgstr "Estado"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "Status"
+msgstr "Estado"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Atrasado: La fecha de vencimiento ya ha pasado\n"
+"Hoy: La fecha de la actividad es hoy\n"
+"Planeado: Actividades futuras."
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
+msgid "To Pick"
+msgstr "Para recoger"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment__usage_count
+msgid "Usage Count"
+msgstr "Nº usos"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment__usage_ids
+#: model:ir.ui.menu,name:maintenance_equipment_usage.menu_maintenance_equipment_usage_action
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_form
+msgid "Usages"
+msgstr "Usos"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__user_id
+msgid "User"
+msgstr "Usuario"
