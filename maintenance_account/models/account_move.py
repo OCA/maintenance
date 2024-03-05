@@ -1,6 +1,8 @@
 # Copyright 2022 Tecnativa - Víctor Martínez
+# Copyright 2024 Tecnativa - Carolina Fernandez
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 from odoo import api, fields, models
+from odoo.tools import plaintext2html
 
 
 class AccountMove(models.Model):
@@ -113,13 +115,20 @@ class AccountMoveLine(models.Model):
             self.equipment_category_id = category.id
 
     def _prepare_equipment_vals(self):
+        equipment_name = self.name
+        description = False
+        if "\n" in self.name:
+            lf_index = self.name.index("\n")
+            equipment_name = self.name[:lf_index]
+            description = plaintext2html(self.name[lf_index + 1 :])
         return {
             "move_line_id": self.id,
-            "name": self.product_id.name,
+            "name": equipment_name,
             "product_id": self.product_id.id,
             "category_id": self.equipment_category_id.id,
             "assign_date": self.move_id.date,
             "effective_date": self.move_id.date,
             "partner_id": self.move_id.partner_id.id,
             "partner_ref": self.move_id.ref,
+            "note": description,
         }
