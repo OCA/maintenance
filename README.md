@@ -40,6 +40,7 @@ addon | version | maintainers | summary
 [maintenance_security](maintenance_security/) | 16.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Security
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 16.0.1.0.0 |  | Create hierarchies on teams
 [maintenance_timesheet](maintenance_timesheet/) | 16.0.1.0.0 |  | Adds timesheets to maintenance requests
+[maintenance_timesheet_time_control](maintenance_timesheet_time_control/) | 16.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Timesheets Timesheet Time Control
 
 [//]: # (end addons)
 
