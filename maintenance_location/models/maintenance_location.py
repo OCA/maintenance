@@ -17,9 +17,7 @@ class MaintenanceLocation(models.Model):
 
     name = fields.Char(required=True)
     description = fields.Char()
-    complete_name = fields.Char(
-        "Complete Name", compute="_compute_complete_name", store=True
-    )
+    complete_name = fields.Char(compute="_compute_complete_name", store=True)
 
     partner_id = fields.Many2one("res.partner")
 
@@ -33,7 +31,7 @@ class MaintenanceLocation(models.Model):
     parent_path = fields.Char(index=True)
     latitude = fields.Float(digits=(16, 5))
     longitude = fields.Float(digits=(16, 5))
-    sequence = fields.Integer(string="Sequence", default=10)
+    sequence = fields.Integer(default=10)
     active = fields.Boolean(default=True)
 
     @api.depends("name", "parent_id.complete_name")
