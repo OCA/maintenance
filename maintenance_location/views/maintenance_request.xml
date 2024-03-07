@@ -7,9 +7,9 @@
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
         <field name="arch" type="xml">
-            <field name="company_id" position="after">
+            <xpath expr="//sheet//field[@name='company_id']" position="after">
                 <field name="location_id" />
-            </field>
+            </xpath>
         </field>
     </record>
     <record model="ir.ui.view" id="hr_equipment_request_view_search">
