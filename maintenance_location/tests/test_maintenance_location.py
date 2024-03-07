@@ -2,10 +2,10 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo.exceptions import UserError
-from odoo.tests.common import SavepointCase
+from odoo.tests.common import TransactionCase
 
 
-class TestMaintenanceLocation(SavepointCase):
+class TestMaintenanceLocation(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -44,7 +44,6 @@ class TestMaintenanceLocation(SavepointCase):
             self.location_1.write({"parent_id": self.location_2.id})
 
         self.request.write({"equipment_id": self.equipment.id})
-        self.request._onchange_equipment_id()
         self.assertEqual(self.request.location_id.id, self.location_1.id)
 
     def test_request_creation(self):
