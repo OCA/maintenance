@@ -2,6 +2,7 @@
 # Copyright 2024 Tecnativa - Carolina Fernandez
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 from odoo import api, fields, models
+from odoo.tools import plaintext2html
 
 
 class AccountMove(models.Model):
@@ -119,7 +120,7 @@ class AccountMoveLine(models.Model):
         if "\n" in self.name:
             lf_index = self.name.index("\n")
             equipment_name = self.name[:lf_index]
-            description = self.name[lf_index + 1 :]
+            description = plaintext2html(self.name[lf_index + 1 :])
         return {
             "move_line_id": self.id,
             "name": equipment_name,
