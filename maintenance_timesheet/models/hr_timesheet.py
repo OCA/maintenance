@@ -16,11 +16,15 @@ class AccountAnalyticLine(models.Model):
             self.project_id = self.maintenance_request_id.project_id
             self.task_id = self.maintenance_request_id.task_id
 
-    @api.model
-    def create(self, values):
-        if values.get("maintenance_request_id"):
-            self._check_request_done(values.get("maintenance_request_id"))
-        return super().create(values)
+    @api.model_create_multi
+    def create(self, vals_list):
+        maintenance_request_ids = [
+            vals.get("maintenance_request_id")
+            for vals in vals_list
+            if vals.get("maintenance_request_id")
+        ]
+        self._check_request_done(maintenance_request_ids)
+        return super().create(vals_list)
 
     def write(self, values):
         current_request = self.maintenance_request_id
@@ -32,15 +36,19 @@ class AccountAnalyticLine(models.Model):
         return super().write(values)
 
     def unlink(self):
-        for timesheet in self.filtered(lambda x: x.maintenance_request_id):
-            self._check_request_done(timesheet.maintenance_request_id.id)
+        self._check_request_done(
+            self.filtered(lambda x: x.maintenance_request_id).maintenance_request_id.ids
+        )
         return super().unlink()
 
-    def _check_request_done(self, request_id):
+    def _check_request_done(self, request_id: int | list[int]):
         """
         Editing a timesheet related to a finished request is forbidden.
         """
-        if self.env["maintenance.request"].browse(request_id).stage_id.done:
+        request_ids = [request_id] if isinstance(request_id, int) else request_id
+        if any(
+            self.env["maintenance.request"].browse(request_ids).stage_id.mapped("done")
+        ):
             raise ValidationError(
                 _(
                     "Cannot save or delete a timesheet for "
