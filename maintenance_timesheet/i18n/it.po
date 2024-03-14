@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-09-20 17:47+0000\n"
+"PO-Revision-Date: 2024-03-14 15:36+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -139,7 +139,7 @@ msgstr "Ore totali foglio presenze"
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_ids
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Timesheets"
-msgstr "Foglio presenze"
+msgstr "Fogli ore"
 
 #~ msgid "<span class=\"o_label\" style=\"padding-left: 5px;\">Hours</span>"
 #~ msgstr "<span class=\"o_label\" style=\"padding-left: 5px;\">Ore</span>"
