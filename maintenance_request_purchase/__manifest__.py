@@ -5,7 +5,7 @@
     "name": "Maintenance Request Purchase",
     "summary": """
         Allows you to link PO with maintenance requests""",
-    "version": "14.0.1.0.1",
+    "version": "16.0.1.0.0",
     "license": "AGPL-3",
     "author": "CreuBlanca,Dixmit,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
