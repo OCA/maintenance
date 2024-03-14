@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="purchase_order_form">
+        <field
+            name="name"
+        >purchase.order.form (in maintenance_equipment_purchase)</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <field name="maintenance_request_ids" invisible="1" />
+                <button
+                    name="action_view_maintenance_request"
+                    class="oe_stat_button"
+                    icon="fa-wrench"
+                    type="object"
+                    groups="purchase.group_purchase_user"
+                    attrs="{'invisible': [('maintenance_request_ids', '=', [])]}"
+                >
+                    <field
+                        name="maintenance_requests_count"
+                        widget="statinfo"
+                        string="Maintenance"
+                    />
+                </button>
+            </div>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="purchase_order_line_search">
+        <field
+            name="name"
+        >purchase.order.line.search (in maintenance_equipment_purchase)</field>
+        <field name="model">purchase.order.line</field>
+        <field name="inherit_id" ref="purchase.purchase_order_line_search" />
+        <field name="arch" type="xml">
+            <field name="order_id" position="after">
+                <field name="name" />
+            </field>
+        </field>
+    </record>
+</odoo>
