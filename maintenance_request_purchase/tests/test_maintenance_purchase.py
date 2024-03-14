@@ -1,10 +1,10 @@
 # Copyright 2023 Dixmit
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo.tests.common import SavepointCase
+from odoo.tests.common import TransactionCase
 
 
-class TestMaintenancePurchase(SavepointCase):
+class TestMaintenancePurchase(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
