@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="maintenance_location_form_view">
+        <field name="name">maintenance.location.form (in cb_maintenance)</field>
+        <field name="model">maintenance.location</field>
+        <field name="arch" type="xml">
+            <form class="oe_form_configuration">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" string="Location name" class="oe_edit_only" />
+                        <h1>
+                            <field name="name" placeholder="e.g. Building A" />
+                        </h1>
+                    </div>
+                    <group name="first" col="2">
+                        <field name="description" />
+                        <field name="parent_id" class="oe_inline" />
+                        <label for="latitude" string="Location" />
+                        <span class="oe_inline">
+                            Latitude: <field name="latitude" nolabel="1" /><br />
+                            Longitude: <field name="longitude" nolabel="1" />
+                        </span>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_location_search_view">
+        <field name="name">maintenance.location.search (in cb_maintenance)</field>
+        <field name="model">maintenance.location</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_location_tree_view">
+        <field name="name">maintenance.location.tree (in cb_maintenance)</field>
+        <field name="model">maintenance.location</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="complete_name" />
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="maintenance_location_act_window">
+        <field name="name">Maintenance Location</field>
+        <field name="res_model">maintenance.location</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+    <record model="ir.ui.menu" id="maintenance_location_menu">
+        <field name="name">Maintenance Locations</field>
+        <field name="parent_id" ref="maintenance.menu_maintenance_configuration" />
+        <field name="action" ref="maintenance_location_act_window" />
+        <field name="sequence" eval="4" />
+    </record>
+</odoo>

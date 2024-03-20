@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2020 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="maintenance_plan_view_form">
+        <field name="name">maintenance.plan.form (in maintenance_location)</field>
+        <field name="model">maintenance.plan</field>
+        <field name="inherit_id" ref="maintenance_plan.maintenance_plan_view_form" />
+        <field name="arch" type="xml">
+            <field name="maintenance_team_id" position="after">
+                <field name="location_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_plan_view_search">
+        <field name="name">maintenance.plan.search (in maintenance_location)</field>
+        <field name="model">maintenance.plan</field>
+        <field name="inherit_id" ref="maintenance_plan.maintenance_plan_view_search" />
+        <field name="arch" type="xml">
+            <field name="maintenance_team_id" position="after">
+                <field name="location_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_plan_view_tree">
+        <field name="name">maintenance.plan.tree (in maintenance_location)</field>
+        <field name="model">maintenance.plan</field>
+        <field name="inherit_id" ref="maintenance_plan.maintenance_plan_view_tree" />
+        <field name="arch" type="xml">
+            <field name="maintenance_team_id" position="after">
+                <field name="location_id" />
+            </field>
+        </field>
+    </record>
+</odoo>
