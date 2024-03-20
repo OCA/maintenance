@@ -87,7 +87,11 @@ class MaintenanceEquipment(models.Model):
         if not team_id:
             team_id = request_model._get_default_team_id()
 
-        description = self.name if self else maintenance_plan.name
+        description = (
+            self.with_context(lang=self.env.user.lang).name
+            if self
+            else maintenance_plan.name
+        )
         kind = maintenance_plan.maintenance_kind_id.name or _("Unspecified kind")
         name = _("Preventive Maintenance (%s) - %s") % (kind, description)
 
