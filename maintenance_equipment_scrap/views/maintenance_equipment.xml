@@ -17,6 +17,7 @@
             </xpath>
             <xpath expr="//field[@name='scrap_date']" position='attributes'>
                 <attribute name="readonly">1</attribute>
+                <attribute name="groups" />
             </xpath>
             <xpath expr="//field[@name='location']" position='after'>
                 <field
