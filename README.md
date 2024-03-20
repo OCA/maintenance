@@ -36,7 +36,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 14.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Adds category tags to equipment
 [maintenance_location](maintenance_location/) | 14.0.1.0.0 |  | Define a location system for maintenance
 [maintenance_location_hr](maintenance_location_hr/) | 14.0.1.0.0 |  | Assign equipments to locations
-[maintenance_plan](maintenance_plan/) | 14.0.1.6.4 |  | Extends preventive maintenance planning
+[maintenance_plan](maintenance_plan/) | 14.0.1.6.5 |  | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 14.0.1.0.3 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
 [maintenance_product](maintenance_product/) | 14.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Product
 [maintenance_project](maintenance_project/) | 14.0.1.1.2 |  | Adds projects to maintenance equipments and requests
