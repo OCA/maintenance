@@ -24,7 +24,7 @@ addon | version | maintainers | summary
 [base_maintenance](base_maintenance/) | 14.0.1.3.1 |  | Base Maintenance
 [base_maintenance_config](base_maintenance_config/) | 14.0.1.0.0 |  | Provides general settings for the Maintenance App
 [base_maintenance_group](base_maintenance_group/) | 14.0.1.0.1 |  | Provides base access groups for the Maintenance App
-[maintenance_account](maintenance_account/) | 14.0.1.0.4 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Account
+[maintenance_account](maintenance_account/) | 14.0.1.0.5 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Account
 [maintenance_equipment_category_hierarchy](maintenance_equipment_category_hierarchy/) | 14.0.1.0.0 |  | Equipment Categories Hierarchy
 [maintenance_equipment_contract](maintenance_equipment_contract/) | 14.0.1.0.3 |  | Manage equipment contracts
 [maintenance_equipment_custom_info](maintenance_equipment_custom_info/) | 14.0.1.0.1 |  | Add Custom Info on Maintenance Equipments
