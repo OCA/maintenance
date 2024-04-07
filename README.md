@@ -30,6 +30,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_custom_info](maintenance_equipment_custom_info/) | 14.0.1.0.1 |  | Add Custom Info on Maintenance Equipments
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 14.0.1.0.2 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
 [maintenance_equipment_image](maintenance_equipment_image/) | 14.0.1.0.1 | [![pedrocasi](https://github.com/pedrocasi.png?size=30px)](https://github.com/pedrocasi) | Adds images to equipment.
+[maintenance_equipment_meter](maintenance_equipment_meter/) | 14.0.1.0.0 |  | Track meter for equipments
 [maintenance_equipment_scrap](maintenance_equipment_scrap/) | 14.0.1.0.2 | [![espo-tony](https://github.com/espo-tony.png?size=30px)](https://github.com/espo-tony) | Enhance the functionality for Scrapping Equipments
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 14.0.1.0.0 | [![AdriaGForgeFlow](https://github.com/AdriaGForgeFlow.png?size=30px)](https://github.com/AdriaGForgeFlow) | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 14.0.1.1.1 |  | Maintenance Equipment Status

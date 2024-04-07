@@ -17,6 +17,7 @@ setuptools.setup(
         'odoo14-addon-maintenance_equipment_custom_info',
         'odoo14-addon-maintenance_equipment_hierarchy',
         'odoo14-addon-maintenance_equipment_image',
+        'odoo14-addon-maintenance_equipment_meter',
         'odoo14-addon-maintenance_equipment_scrap',
         'odoo14-addon-maintenance_equipment_sequence',
         'odoo14-addon-maintenance_equipment_status',
