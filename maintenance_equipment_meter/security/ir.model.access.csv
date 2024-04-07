@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_maintenance_equipment_meter,access_maintenance_equipment_meter,model_maintenance_equipment_meter,maintenance.group_equipment_manager,1,1,1,0
