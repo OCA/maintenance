@@ -32,6 +32,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 16.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Adds category tags to equipment
 [maintenance_equipment_usage](maintenance_equipment_usage/) | 16.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Equipment Usage
 [maintenance_plan](maintenance_plan/) | 16.0.1.0.0 |  | Extends preventive maintenance planning
+[maintenance_plan_activity](maintenance_plan_activity/) | 16.0.1.0.0 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
 [maintenance_product](maintenance_product/) | 16.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Product
 [maintenance_project](maintenance_project/) | 16.0.1.0.0 |  | Adds projects to maintenance equipments and requests
 [maintenance_purchase](maintenance_purchase/) | 16.0.1.0.0 |  | Create Equipments with purchases
