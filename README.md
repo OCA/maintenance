@@ -35,6 +35,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 14.0.1.0.0 | [![AdriaGForgeFlow](https://github.com/AdriaGForgeFlow.png?size=30px)](https://github.com/AdriaGForgeFlow) | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 14.0.1.1.1 |  | Maintenance Equipment Status
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 14.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Adds category tags to equipment
+[maintenance_inspection](maintenance_inspection/) | 14.0.1.0.0 |  | Allow to manage inspections inside Preventive requests
 [maintenance_location](maintenance_location/) | 14.0.1.0.0 |  | Define a location system for maintenance
 [maintenance_location_hr](maintenance_location_hr/) | 14.0.1.0.0 |  | Assign equipments to locations
 [maintenance_plan](maintenance_plan/) | 14.0.1.6.5 |  | Extends preventive maintenance planning
