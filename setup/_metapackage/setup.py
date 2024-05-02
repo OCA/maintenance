@@ -24,6 +24,7 @@ setuptools.setup(
         'odoo-addon-maintenance_product>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_project>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_purchase>=16.0dev,<16.1dev',
+        'odoo-addon-maintenance_request_purchase>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_request_repair>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_request_sequence>=16.0dev,<16.1dev',
         'odoo-addon-maintenance_request_stage_transition>=16.0dev,<16.1dev',
