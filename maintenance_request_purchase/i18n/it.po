@@ -17,24 +17,6 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_request_purchase
-#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__display_name
-#: model:ir.model.fields,field_description:maintenance_request_purchase.field_purchase_order__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: maintenance_request_purchase
-#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__id
-#: model:ir.model.fields,field_description:maintenance_request_purchase.field_purchase_order__id
-msgid "ID"
-msgstr "ID"
-
-#. module: maintenance_request_purchase
-#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request____last_update
-#: model:ir.model.fields,field_description:maintenance_request_purchase.field_purchase_order____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: maintenance_request_purchase
 #: model_terms:ir.ui.view,arch_db:maintenance_request_purchase.purchase_order_form
 msgid "Maintenance"
 msgstr "Manutenzione"
@@ -69,3 +51,12 @@ msgstr "Ordini di acquisto"
 #: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__purchases_count
 msgid "Purchases Count"
 msgstr "Conteggio acquisti"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
