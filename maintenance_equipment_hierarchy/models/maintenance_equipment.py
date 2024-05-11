@@ -5,7 +5,6 @@ from odoo import _, api, fields, models
 
 
 class MaintenanceEquipment(models.Model):
-
     _inherit = "maintenance.equipment"
     _parent_name = "parent_id"
     _parent_store = True
