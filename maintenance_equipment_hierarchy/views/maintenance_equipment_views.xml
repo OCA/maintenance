@@ -46,6 +46,14 @@
                     name="filter_domain"
                 >['|','|','|',('complete_name','ilike',self),('model','ilike',self),('serial_no','ilike',self),('partner_ref', 'ilike', self)]</attribute>
             </field>
+            <filter name="under_maintenance" position="after">
+                <separator />
+                <filter
+                    string="Has Children"
+                    name="has_children"
+                    domain="[('child_ids', '!=', False)]"
+                />
+            </filter>
         </field>
     </record>
 </odoo>
