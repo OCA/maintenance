@@ -31,7 +31,7 @@
             <field name="name" position="after">
                 <field
                     name="parent_id"
-                    invisible="not context.get('parent_id_editable', True)"
+                    column_invisible="not context.get('parent_id_editable', True)"
                 />
             </field>
         </field>
