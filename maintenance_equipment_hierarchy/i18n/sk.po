@@ -52,6 +52,11 @@ msgid "HP Laptop case"
 msgstr ""
 
 #. module: maintenance_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_hierarchy.hr_equipment_view_search
+msgid "Has Children"
+msgstr ""
+
+#. module: maintenance_equipment_hierarchy
 #: model:ir.model.fields,field_description:maintenance_equipment_hierarchy.field_maintenance_equipment__parent_left
 msgid "Left Parent"
 msgstr ""
