@@ -1,4 +1,7 @@
 <odoo noupdate="1">
+
+    <!-- Equipments -->
+
         <record id="maintenance_plan_monthly_equipment2_task" model="maintenance.plan">
             <field name="equipment_id" ref="maintenance_project.equipment_2" />
             <field

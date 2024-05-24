@@ -13,19 +13,49 @@ class TestMaintenanceProjectPlan(test_common.TransactionCase):
         self.maintenance_kind_test = self.env["maintenance.kind"].create(
             {"name": "Test kind"}
         )
+        self.maintenance_category = self.env["maintenance.equipment.category"].create(
+            {"name": "Test category"}
+        )
+        self.monitor1 = self.env["maintenance.equipment"].create(
+            {
+                "name": "Samsung Monitor 15",
+                "category_id": self.maintenance_category.id,
+                "owner_user_id": self.env.ref("base.user_admin").id,
+                "technician_user_id": self.env.ref("base.user_admin").id,
+                "assign_date": "2020-01-10",
+                "serial_no": "MT/122/11112222",
+                "model": "NP300E5X",
+            }
+        )
+        self.maintenance_project = self.env["project.project"].create(
+            {"name": "Test Project"}
+        )
+        self.maintenance_project_task = self.env["project.task"].create(
+            {
+                "name": "Test Task",
+                "project_id": self.maintenance_project.id,
+            }
+        )
+        self.maintenance_plan = self.env["maintenance.plan"].create(
+            {
+                "equipment_id": self.monitor1.id,
+                "maintenance_kind_id": self.maintenance_kind_test.id,
+                "duration": 1,
+                "project_id": self.maintenance_project.id,
+                "task_id": self.maintenance_project_task.id,
+            }
+        )
 
-        self.monitor1 = self.env.ref("maintenance.equipment_monitor1")
+        # self.monitor1 = self.env.ref("maintenance_project_plan.equipment_monitor1")
         self.monitor1.maintenance_plan_ids = [
             (
-                0,
+                4,
                 0,
                 {
                     "maintenance_kind_id": self.maintenance_kind_test.id,
                     "duration": 1,
-                    "project_id": self.env.ref(
-                        "maintenance_project.project_project_1"
-                    ).id,
-                    "task_id": self.env.ref("maintenance_project.project_task_11").id,
+                    "project_id": self.maintenance_project.id,
+                    "task_id": self.maintenance_project_task.id,
                 },
             )
         ]
@@ -48,23 +78,17 @@ class TestMaintenanceProjectPlan(test_common.TransactionCase):
     def test_plan_onchange_project(self):
         plan1 = self.env["maintenance.plan"].new(
             {
-                "equipment_id": self.env.ref(
-                    "maintenance_plan.maintenance_plan_monthly_monitor4"
-                ).id,
+                "equipment_id": self.maintenance_plan.id,
                 "maintenance_kind_id": self.maintenance_kind_test.id,
                 "duration": 1,
-                "project_id": self.env.ref("maintenance_project.project_project_1").id,
-                "task_id": self.env.ref("maintenance_project.project_task_11").id,
+                "project_id": self.maintenance_project.id,
+                "task_id": self.maintenance_project_task.id,
             }
         )
-        self.assertEqual(
-            plan1.project_id, self.env.ref("maintenance_project.project_project_1")
-        )
-        self.assertEqual(
-            plan1.task_id, self.env.ref("maintenance_project.project_task_11")
-        )
+        self.assertEqual(plan1.project_id, self.maintenance_project)
+        self.assertEqual(plan1.task_id, self.maintenance_project_task)
         plan1.project_id = False
         self.assertFalse(plan1.task_id)
 
-        plan1.project_id = self.env.ref("maintenance_project.project_project_1")
+        plan1.project_id = self.maintenance_project
         self.assertFalse(plan1.task_id)

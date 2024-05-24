@@ -3,12 +3,12 @@
 {
     "name": "Maintenance Project Plans",
     "summary": "Adds project and task to a Maintenance Plan",
-    "version": "14.0.1.0.1",
-    "author": "Odoo Community Association (OCA), Solvos",
+    "version": "15.0.1.0.1",
+    "author": "Odoo Community Association (OCA), Solvos, Dani Domínguez (xtendoo.es)",
     "license": "AGPL-3",
     "category": "Maintenance",
     "website": "https://github.com/OCA/maintenance",
-    "depends": ["maintenance_plan", "maintenance_project"],
+    "depends": ["maintenance_plan", "maintenance_project", "maintenance"],
     "data": [
         "views/maintenance_equipment_views.xml",
         "views/maintenance_plan_views.xml",
