@@ -6,25 +6,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-07-16 16:19+0000\n"
-"Last-Translator: Fernando Colus <fcolus1@gmail.com>\n"
+"PO-Revision-Date: 2024-05-29 16:37+0000\n"
+"Last-Translator: Rodrigo Macedo <sottomaiormacedotec@users.noreply."
+"translation.odoo-community.org>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_team_hierarchy
 #: model:maintenance.team,name:maintenance_team_hierarchy.equipment_team_child_1
 msgid "Child Team 1"
-msgstr ""
+msgstr "Equipe infantil 1"
 
 #. module: maintenance_team_hierarchy
 #: model:maintenance.team,name:maintenance_team_hierarchy.equipment_team_child_2
 msgid "Child Team 2"
-msgstr ""
+msgstr "Equipe infantil 2"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model,name:maintenance_team_hierarchy.model_maintenance_team
@@ -34,27 +35,27 @@ msgstr "Equipes de Manutenção"
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count
 msgid "Number of Requests"
-msgstr ""
+msgstr "Número de solicitações"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_block
 msgid "Number of Requests Blocked"
-msgstr ""
+msgstr "Número de solicitações bloqueadas"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_date
 msgid "Number of Requests Scheduled"
-msgstr ""
+msgstr "Número de solicitações agendadas"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_unscheduled
 msgid "Number of Requests Unscheduled"
-msgstr ""
+msgstr "Número de solicitações não-agendadas"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_count_high_priority
 msgid "Number of Requests in High Priority"
-msgstr ""
+msgstr "Número de solicitações em prioridade alta"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__parent_id
@@ -69,14 +70,14 @@ msgstr "Caminho Pai"
 #. module: maintenance_team_hierarchy
 #: model:maintenance.team,name:maintenance_team_hierarchy.equipment_team_parent
 msgid "Parent Team"
-msgstr ""
+msgstr "Equipe Pai"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__request_ids
 msgid "Request"
-msgstr "Requisição"
+msgstr "Solicitação"
 
 #. module: maintenance_team_hierarchy
 #: model:ir.model.fields,field_description:maintenance_team_hierarchy.field_maintenance_team__todo_request_ids
 msgid "Requests"
-msgstr ""
+msgstr "Solicitações"
