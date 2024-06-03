@@ -72,7 +72,7 @@ class MaintenanceEquipmentCategory(models.Model):
             vals["sequence_prefix"] = (
                 self.env["ir.sequence"].browse(vals["sequence_id"]).prefix
             )
-        result = super(MaintenanceEquipmentCategory, self).create(vals)
+        result = super().create(vals)
         self._compute_equipment_code()
         return result
 
@@ -84,7 +84,7 @@ class MaintenanceEquipmentCategory(models.Model):
             vals["sequence_prefix"] = (
                 self.env["ir.sequence"].browse(vals["sequence_id"]).prefix
             )
-        result = super(MaintenanceEquipmentCategory, self).write(vals)
+        result = super().write(vals)
         self._compute_equipment_code()
         return result
 
@@ -109,7 +109,7 @@ class MaintenanceEquipment(models.Model):
 
     @api.model
     def create(self, vals):
-        equipment = super(MaintenanceEquipment, self).create(vals)
+        equipment = super().create(vals)
         if equipment.category_id and not equipment.serial_no:
             sequence_id = (
                 self.env["maintenance.equipment.category"]
@@ -121,7 +121,7 @@ class MaintenanceEquipment(models.Model):
         return equipment
 
     def write(self, vals):
-        result = super(MaintenanceEquipment, self).write(vals)
+        result = super().write(vals)
         for rec in self:
             if rec.category_id and not rec.serial_no and rec.category_id.sequence_id:
                 rec.serial_no = rec.category_id.sequence_id._next()
