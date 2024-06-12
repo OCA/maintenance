@@ -27,7 +27,7 @@
             </xpath>
             <xpath expr="//div[hasclass('o_kanban_record_body')]" position="inside">
                 <div t-if="record.project_id.raw_value">
-                    <small>Project: <t t-raw="record.project_id.value" /></small>
+                    <small>Project: <t t-out="record.project_id.value" /></small>
                 </div>
             </xpath>
         </field>
@@ -37,16 +37,13 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='location']" position="after">
-                <field
-                    name="create_project_from_equipment"
-                    attrs="{'invisible': [('id', '!=', False)]}"
-                />
+                <field name="create_project_from_equipment" invisible="id" />
                 <field
                     name="project_id"
-                    attrs="{'invisible': [('create_project_from_equipment', '=', True), ('id', '=', False)]}"
+                    invisible="create_project_from_equipment and not id"
                 />
             </xpath>
-            <xpath expr="//group[@name='maintenance']" position="after">
+            <xpath expr="//group[@name='statistics']" position="after">
                 <group name="project_task">
                     <field
                         name="preventive_default_task_id"

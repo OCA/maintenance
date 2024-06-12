@@ -7,9 +7,8 @@ import odoo.tests.common as test_common
 class TestMaintenanceProject(test_common.TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(TestMaintenanceProject, cls).setUpClass()
+        super().setUpClass()
 
-        cls.cron = cls.env.ref("maintenance.maintenance_requests_cron")
         cls.project1 = cls.env["project.project"].create({"name": "My project"})
         cls.project_demo1 = cls.env.ref("maintenance_project.project_project_1")
 
@@ -20,8 +19,6 @@ class TestMaintenanceProject(test_common.TransactionCase):
                 "maintenance_team_id": cls.env.ref(
                     "maintenance.equipment_team_metrology"
                 ).id,
-                "period": 30,
-                "maintenance_duration": 1.0,
             }
         )
         cls.equipment2 = cls.env["maintenance.equipment"].create(
@@ -69,15 +66,34 @@ class TestMaintenanceProject(test_common.TransactionCase):
         self.assertFalse(req2.project_id)
 
     def test_generate_requests(self):
-        self.cron.method_direct_trigger()
-
-        generated_requests = self.env["maintenance.request"].search(
-            [("project_id", "!=", False)]
+        req_name = "My new recurring test request"
+        req = self.env["maintenance.request"].create(
+            {
+                "name": req_name,
+                "maintenance_type": "preventive",
+                "duration": 1.0,
+                "recurring_maintenance": True,
+                "repeat_interval": 1,
+                "repeat_unit": "month",
+                "repeat_type": "forever",
+            }
         )
-        for req in generated_requests:
-            self.assertEqual(req.project_id, req.equipment_id.project_id)
-            self.assertEqual(req.task_id, req.equipment_id.preventive_default_task_id)
-            self.assertEqual(req.project_id.maintenance_request_count, 1)
+        req.equipment_id = self.equipment1
+        req.onchange_equipment_id()
+        req.description = "Request done!"
+
+        request_obj = self.env["maintenance.request"]
+        domain = [
+            ("name", "=", req_name),
+            ("equipment_id", "=", self.equipment1.id),
+            ("project_id", "=", self.equipment1.project_id.id),
+        ]
+        my_requests = request_obj.search(domain)
+        self.assertEqual(len(my_requests), 1)
+
+        req.stage_id = self.env.ref("maintenance.stage_3")
+        my_requests = request_obj.search(domain)
+        self.assertEqual(len(my_requests), 2)
 
     def test_action_views(self):
         act1 = self.project1.action_view_equipment_ids()

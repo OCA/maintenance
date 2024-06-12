@@ -27,7 +27,7 @@
             </xpath>
             <xpath expr="//div[hasclass('o_kanban_record_body')]" position="inside">
                 <div t-if="record.project_id.raw_value">
-                    <small>Project: <t t-raw="record.project_id.value" /></small>
+                    <small>Project: <t t-out="record.project_id.value" /></small>
                 </div>
             </xpath>
         </field>

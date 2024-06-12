@@ -38,8 +38,6 @@
         <field name="model">MODEL2</field>
         <field name="create_project_from_equipment" eval="False" />
         <field name="project_id" ref="maintenance_project.project_project_1" />
-        <field name="period" eval="30" />
-        <field name="maintenance_duration" eval="2" />
         <field
             name="preventive_default_task_id"
             ref="maintenance_project.project_task_12"
