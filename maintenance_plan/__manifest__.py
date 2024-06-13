@@ -4,7 +4,7 @@
 {'name': 'Maintenance Plan',
  'summary': 'Extends preventive maintenance planning',
  'version': '10.0.1.0.0',
- 'author': 'Odoo Community Association (OCA), Camptocamp SA',
+ 'author': 'Odoo Community Association (OCA), Camptocamp',
  'license': 'AGPL-3',
  'category': 'Maintenance',
  'website': 'http://www.camptocamp.com',
