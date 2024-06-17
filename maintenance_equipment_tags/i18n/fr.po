@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-06-17 12:21+0000\n"
+"PO-Revision-Date: 2024-06-17 13:38+0000\n"
 "Last-Translator: Yann Papouin <ypa@decgroupe.com>\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -19,17 +19,17 @@ msgstr ""
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__color
 msgid "Color Index (0-15)"
-msgstr ""
+msgstr "Indice de couleur (0-15)"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Créé par"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Créé le"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment__display_name
@@ -40,18 +40,18 @@ msgstr "Nom affiché"
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__equipment_ids
 msgid "Equipment"
-msgstr ""
+msgstr "Matériel"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__name
 msgid "Equipment Tag"
-msgstr ""
+msgstr "Étiquette d'équipement"
 
 #. module: maintenance_equipment_tags
 #: model:ir.actions.act_window,name:maintenance_equipment_tags.maintenance_equipment_tag_act_window
 #: model:ir.ui.menu,name:maintenance_equipment_tags.maintenance_equipment_tag_menu
 msgid "Equipment Tags"
-msgstr ""
+msgstr "Étiquettes d'équipement"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment__id
@@ -68,12 +68,12 @@ msgstr "Dernière modification le"
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Mis-à-jour par"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Dernière MàJ le"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model,name:maintenance_equipment_tags.model_maintenance_equipment
@@ -83,19 +83,19 @@ msgstr "Equipement de maintenance"
 #. module: maintenance_equipment_tags
 #: model:ir.model,name:maintenance_equipment_tags.model_maintenance_equipment_tag
 msgid "Maintenance Equipment Tag"
-msgstr ""
+msgstr "Étiquette d'équipement de maintenance"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.constraint,message:maintenance_equipment_tags.constraint_maintenance_equipment_tag_name_uniq
 msgid "Tag name already exists !"
-msgstr ""
+msgstr "Ce nom d'étiquette existe déjà !"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment__tag_ids
 msgid "Tags"
-msgstr ""
+msgstr "Étiquettes"
 
 #. module: maintenance_equipment_tags
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_tags.hr_equipment_view_form
 msgid "e.g. Computers"
-msgstr ""
+msgstr "ex. Ordinateurs"
