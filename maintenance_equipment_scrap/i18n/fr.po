@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2024-06-17 16:34+0000\n"
+"Last-Translator: Yann Papouin <ypa@decgroupe.com>\n"
 "Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_equipment_scrap
 #: model:mail.template,body_html:maintenance_equipment_scrap.equipment_scrap_mail_template
@@ -28,101 +30,112 @@ msgid ""
 "            was scrapped.</p>\n"
 "        "
 msgstr ""
+"\n"
+"            <p>Bonjour, <strong>${object.owner_user_id.name}</strong></p>\n"
+"            <p>Votre équipement <strong>${object.name}</strong>\n"
+"\n"
+"            % if object.serial_no:\n"
+"                avec le numéro de série : <strong>${object."
+"serial_no}</strong>\n"
+"            % endif\n"
+"\n"
+"            a été mis au rebut.</p>\n"
+"        "
 
 #. module: maintenance_equipment_scrap
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_scrap.view_perform_equipment_scrap
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Créé par"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Créé le"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment__display_name
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment_category__display_name
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nom affiché"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__equipment_id
 msgid "Equipment"
-msgstr ""
+msgstr "Matériel"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment__equipment_scrap_template_id
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment_category__equipment_scrap_template_id
 msgid "Equipment Scrap Email Template"
-msgstr ""
+msgstr "Modèle d'e-mail pour la mise au rebut d'équipement"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment_category__id
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_maintenance_equipment_category____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Dernière modification le"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Modifié par"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Modifié le"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model,name:maintenance_equipment_scrap.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Equipement de maintenance"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model,name:maintenance_equipment_scrap.model_maintenance_equipment_category
 msgid "Maintenance Equipment Category"
-msgstr ""
+msgstr "Catégorie d'équipment de maintenance"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model,name:maintenance_equipment_scrap.model_wizard_perform_equipment_scrap
 msgid "Perform Scrap (Equipment)"
-msgstr ""
+msgstr "Effectuer la mise au rebut (équipement)"
 
 #. module: maintenance_equipment_scrap
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_scrap.hr_equipment_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_scrap.view_perform_equipment_scrap
 msgid "Scrap"
-msgstr ""
+msgstr "Rebut"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.model.fields,field_description:maintenance_equipment_scrap.field_wizard_perform_equipment_scrap__scrap_date
 msgid "Scrap Date"
-msgstr ""
+msgstr "Date de mise au rebut"
 
 #. module: maintenance_equipment_scrap
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_scrap.view_perform_equipment_scrap
 msgid "Scrapping equipment"
-msgstr ""
+msgstr "Mise au rebut d'équipement"
 
 #. module: maintenance_equipment_scrap
 #: model:ir.actions.act_window,name:maintenance_equipment_scrap.wizard_perform_equipment_scrap_action
 msgid "Wizard Scrap"
-msgstr ""
+msgstr "Assistant de mise au rebut"
 
 #. module: maintenance_equipment_scrap
 #: model:mail.template,subject:maintenance_equipment_scrap.equipment_scrap_mail_template
 msgid "Your equipment ${object.name} was scrapped!"
-msgstr ""
+msgstr "Votre équipement ${object.name} a été mis au rebut !"
