@@ -6,51 +6,53 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2024-06-18 12:02+0000\n"
+"Last-Translator: Yann Papouin <ypa@decgroupe.com>\n"
 "Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_request__code
 msgid "Code"
-msgstr ""
+msgstr "Code"
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_request__display_name
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nom affiché"
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_request__id
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_request____last_update
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Dernière modification le"
 
 #. module: maintenance_request_sequence
 #: model:ir.model,name:maintenance_request_sequence.model_maintenance_request
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Demande de maintenance"
 
 #. module: maintenance_request_sequence
 #: model:ir.model,name:maintenance_request_sequence.model_maintenance_team
 msgid "Maintenance Teams"
-msgstr ""
+msgstr "Équipes de maintenance"
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team__code_prefix
 msgid "Prefix for Team Reference"
-msgstr ""
+msgstr "Préfixe pour la référence de l'équipe"
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,help:maintenance_request_sequence.field_maintenance_team__code_prefix
@@ -58,8 +60,10 @@ msgid ""
 "Prefix used to generate the internal reference for re created with this "
 "category. If blank the default sequence will be used."
 msgstr ""
+"Préfixe utilisé pour générer la référence interne des demandes créées avec "
+"cette catégorie. Si vide, la séquence par défaut sera utilisée."
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team__sequence_id
 msgid "Team Sequence"
-msgstr ""
+msgstr "Séquence d'équipe"
