@@ -5,13 +5,12 @@ from odoo.tests.common import TransactionCase
 
 
 class TestMaintenanceEquipmentSequence(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.maintenance_equipment_categ_obj = self.env[
-            "maintenance.equipment.category"
-        ]
-        self.maintenance_equipment_obj = self.env["maintenance.equipment"]
-        self.sequence_obj = self.env["ir.sequence"]
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.maintenance_equipment_categ_obj = cls.env["maintenance.equipment.category"]
+        cls.maintenance_equipment_obj = cls.env["maintenance.equipment"]
+        cls.sequence_obj = cls.env["ir.sequence"]
 
     def test_01_maintenance_equipment_sequence(self):
         """Create equipment category and check sequence has been
