@@ -6,147 +6,149 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2024-06-18 12:02+0000\n"
+"Last-Translator: Yann Papouin <ypa@decgroupe.com>\n"
 "Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Créé par"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Créé le"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__date
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment__display_name
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__display_name
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_request__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nom affiché"
 
 #. module: maintenance_equipment_meter
 #: code:addons/maintenance_equipment_meter/models/maintenance_request.py:0
 #, python-format
 msgid "Emptying the odometer value of an equipment is not allowed."
-msgstr ""
+msgstr "La remise à zéro du compteur d'un équipement est interdite."
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__equipment_id
 msgid "Equipment"
-msgstr ""
+msgstr "Matériel"
 
 #. module: maintenance_equipment_meter
 #: model:ir.ui.menu,name:maintenance_equipment_meter.maintenance_equipment_meter_menu
 msgid "Equipment Meter"
-msgstr ""
+msgstr "Compteur d'équipement"
 
 #. module: maintenance_equipment_meter
 #: model:ir.actions.act_window,name:maintenance_equipment_meter.maintenance_equipment_meter_act_window
 msgid "Equipment Meters"
-msgstr ""
+msgstr "Compteurs d'équipement"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment__has_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_request__has_meter
 msgid "Has Meter"
-msgstr ""
+msgstr "A un compteur"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__id
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_request__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter____last_update
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_request____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Dernière modification le"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Mis à jour par"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Mis à jour le"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment__current_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment__current_meter_show
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_request__current_meter
 msgid "Last meter"
-msgstr ""
+msgstr "Dernier compteur"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model,name:maintenance_equipment_meter.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Équipement de maintenance"
 
 #. module: maintenance_equipment_meter
 #: model:ir.actions.act_window,name:maintenance_equipment_meter.maintenance_equipment_meter_equipment_act_window
 msgid "Maintenance Equipment Meter"
-msgstr ""
+msgstr "Compteur d'équipement de maintenance"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model,name:maintenance_equipment_meter.model_maintenance_request
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Demande de maintenance"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_request__meter_id
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_meter.hr_equipment_view_form
 msgid "Meter"
-msgstr ""
+msgstr "Compteur"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment__meter_unit_id
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_request__meter_unit_id
 msgid "Meter Unit"
-msgstr ""
+msgstr "Unité de comptage"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__value
 msgid "Meter Value"
-msgstr ""
+msgstr "Valeur de comptage"
 
 #. module: maintenance_equipment_meter
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_meter.maintenance_equipment_meter_graph_view
 msgid "Meter Values Per Equipment"
-msgstr ""
+msgstr "Valeur de comptage par équipement"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model,name:maintenance_equipment_meter.model_maintenance_equipment_meter
 msgid "Meter log for an equipment"
-msgstr ""
+msgstr "Journal de comptage pour un équipement"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__name
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #. module: maintenance_equipment_meter
 #: model:ir.model.fields,field_description:maintenance_equipment_meter.field_maintenance_equipment_meter__meter_unit_id
 msgid "Unit"
-msgstr ""
+msgstr "Unité"
 
 #. module: maintenance_equipment_meter
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_meter.hr_equipment_view_form
 msgid "show the meter logs for this equipment"
-msgstr ""
+msgstr "Afficher les journaux du compteur de cet équipement"
