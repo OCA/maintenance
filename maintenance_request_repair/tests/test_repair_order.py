@@ -6,7 +6,7 @@ from odoo.tests import common
 
 class TestRepairOrder(common.TransactionCase):
     def setUp(self):
-        super(TestRepairOrder, self).setUp()
+        super().setUp()
 
         self.product = self.env["product.product"].create(
             {
@@ -59,7 +59,6 @@ class TestRepairOrder(common.TransactionCase):
         assert self.repair_order.maintenance_request_count == 2
 
     def test_action_view_maintenance_request(self):
-
         self.result = self.repair_order.with_user(
             self.env.user
         ).action_view_maintenance_request()
@@ -73,7 +72,6 @@ class TestRepairOrder(common.TransactionCase):
             "maintenance_request_ids"
         )
         with self.subTest("Choose the view_mode accordingly"):
-
             with self.subTest(
                 "Check maintenance_request_ids > 1 OR not self.maintenance_request_ids"
             ):
@@ -96,13 +94,11 @@ class TestRepairOrder(common.TransactionCase):
             self.result = self.repair_order.action_view_maintenance_request()
 
             with self.subTest("Check maintenance_request_ids == 1"):
-
                 self.assertEqual(len(self.maintenance_request_ids), 1)
                 res = self.env.ref("maintenance.hr_equipment_request_view_form", False)
                 form_view = [(res and res.id or False, "form")]
 
                 with self.subTest("Check view in result"):
-
                     self.assertIn("views", self.result)
                     self.result["views"] = form_view + [
                         (state, view)

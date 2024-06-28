@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class RepairOrder(models.Model):
-
     _inherit = "repair.order"
 
     maintenance_request_ids = fields.One2many(
