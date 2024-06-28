@@ -5,51 +5,53 @@ from odoo.tests import common
 
 
 class TestRepairOrder(common.TransactionCase):
-    def setUp(self):
-        super().setUp()
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
 
-        self.product = self.env["product.product"].create(
+        cls.product = cls.env["product.product"].create(
             {
                 "name": "Product Test",
-                "uom_id": self.env.ref("uom.product_uom_unit").id,
-                "uom_po_id": self.env.ref("uom.product_uom_unit").id,
+                "uom_id": cls.env.ref("uom.product_uom_unit").id,
+                "uom_po_id": cls.env.ref("uom.product_uom_unit").id,
             }
         )
 
-        self.location_id = self.env["stock.location"].create(
+        cls.location_id = cls.env["stock.location"].create(
             {
                 "name": "Test Location",
                 "usage": "internal",
-                "location_id": self.env.ref("stock.stock_location_stock").id,
+                "location_id": cls.env.ref("stock.stock_location_stock").id,
             }
         )
 
-        self.repair_order = self.env["repair.order"].create(
+        cls.repair_order = cls.env["repair.order"].create(
             {
                 "name": "Test Repair Order",
-                "product_id": self.product.id,
-                "product_uom": self.product.uom_id.id,
-                "location_id": self.location_id.id,
+                "product_id": cls.product.id,
+                "product_uom": cls.product.uom_id.id,
+                "location_id": cls.location_id.id,
+                "picking_type_id": cls.env.ref(
+                    "repair.picking_type_warehouse0_repair"
+                ).id,
             }
         )
 
-        self.request1 = self.env["maintenance.request"].create(
+        cls.request1 = cls.env["maintenance.request"].create(
             {
                 "name": "Request 1",
-                "repair_order_id": self.repair_order.id,
+                "repair_order_id": cls.repair_order.id,
             }
         )
-        self.request2 = self.env["maintenance.request"].create(
+        cls.request2 = cls.env["maintenance.request"].create(
             {
                 "name": "Request 2",
-                "repair_order_id": self.repair_order.id,
+                "repair_order_id": cls.repair_order.id,
             }
         )
 
-        self.equipment = self.env["maintenance.equipment"].create(
-            {"name": "Equipment 1"}
-        )
-        self.partner = self.env["res.partner"].create({"name": "Test Partner"})
+        cls.equipment = cls.env["maintenance.equipment"].create({"name": "Equipment 1"})
+        cls.partner = cls.env["res.partner"].create({"name": "Test Partner"})
 
     def test_compute_maintenance_request_count(self):
         self.repair_order.write(
@@ -138,6 +140,9 @@ class TestRepairOrder(common.TransactionCase):
             {
                 "partner_id": self.partner.id,
                 "product_id": self.product.id,
+                "picking_type_id": self.env.ref(
+                    "repair.picking_type_warehouse0_repair"
+                ).id,
             }
         )
         self.repair_order.name = "Repair Order Test 2"
@@ -151,6 +156,9 @@ class TestRepairOrder(common.TransactionCase):
                 "name": "Repair Order Test",
                 "partner_id": self.partner.id,
                 "product_id": self.product.id,
+                "picking_type_id": self.env.ref(
+                    "repair.picking_type_warehouse0_repair"
+                ).id,
             }
         )
         self.maintenance_request = self.env["maintenance.request"].create(
@@ -163,7 +171,7 @@ class TestRepairOrder(common.TransactionCase):
         self.assertEqual(self.action["type"], "ir.actions.act_window")
         self.assertEqual(self.action["res_model"], "maintenance.request")
         self.assertEqual(
-            self.action["view_mode"], "kanban,tree,form,pivot,graph,calendar"
+            self.action["view_mode"], "kanban,tree,form,pivot,graph,calendar,activity"
         )
         self.assertEqual(self.action["target"], "current")
         self.assertEqual(self.action["res_id"], self.maintenance_request.id)
@@ -190,4 +198,5 @@ class TestRepairOrder(common.TransactionCase):
         self.assertEqual(self.action["views"][3][1], "pivot")
         self.assertEqual(self.action["views"][4][1], "graph")
         self.assertEqual(self.action["views"][5][1], "calendar")
-        self.assertEqual(len(self.action["views"]), 6)
+        self.assertEqual(self.action["views"][6][1], "activity")
+        self.assertEqual(len(self.action["views"]), 7)

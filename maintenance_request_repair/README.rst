@@ -77,6 +77,10 @@ Contributors
    -  Marcel Savegnago <marcel.savegnago@escodoo.com.br>
    -  Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
 
+-  `APSL-Nagarro <https://apsl.tech>`__:
+
+   -  Antoni Marroig <amarroig@apsl.net>
+
 Maintainers
 -----------
 
