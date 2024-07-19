@@ -11,7 +11,7 @@
                     type="object"
                     class="oe_stat_button"
                     icon="fa-cubes"
-                    attrs="{'invisible': [('equipment_count', '=', 0)]}"
+                    invisible="not equipment_count"
                     groups="account.group_account_invoice"
                 >
                     <field
@@ -28,13 +28,13 @@
             >
                 <field
                     name="equipment_category_id"
-                    attrs="{'column_invisible': [('parent.move_type', '!=', 'in_invoice')]}"
+                    column_invisible="parent.move_type != 'in_invoice'"
                     optional="hide"
                     groups="account.group_account_invoice"
                 />
                 <field
                     name="equipment_ids"
-                    invisible="1"
+                    column_invisible="1"
                     groups="account.group_account_invoice"
                 />
             </xpath>
@@ -50,7 +50,7 @@
                 />
                 <field
                     name="equipment_ids"
-                    invisible="1"
+                    column_invisible="1"
                     groups="account.group_account_invoice"
                 />
             </xpath>
