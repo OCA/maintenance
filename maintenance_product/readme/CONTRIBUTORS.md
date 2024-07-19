@@ -2,3 +2,4 @@
 - [Tecnativa](https://www.tecnativa.com):
   - Víctor Martínez
   - Pedro M. Baeza
+  - Carolina Fernandez
