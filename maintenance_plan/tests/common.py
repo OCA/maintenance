@@ -4,6 +4,8 @@ from freezegun import freeze_time
 
 import odoo.tests.common as test_common
 
+from odoo.addons.base.tests.common import DISABLED_MAIL_CONTEXT
+
 
 class TestMaintenancePlanBase(test_common.TransactionCase):
     @classmethod
@@ -13,20 +15,11 @@ class TestMaintenancePlanBase(test_common.TransactionCase):
         freezer = freeze_time("2023-01-25 15:30:00")
         freezer.__enter__()
         cls.addClassCleanup(freezer.__exit__)
-        # Remove this variable in v16 and put instead:
-        # from odoo.addons.base.tests.common import DISABLED_MAIL_CONTEXT
-        DISABLED_MAIL_CONTEXT = {
-            "tracking_disable": True,
-            "mail_create_nolog": True,
-            "mail_create_nosubscribe": True,
-            "mail_notrack": True,
-            "no_reset_password": True,
-        }
         cls.env = cls.env(context=dict(cls.env.context, **DISABLED_MAIL_CONTEXT))
         cls.maintenance_request_obj = cls.env["maintenance.request"]
         cls.maintenance_plan_obj = cls.env["maintenance.plan"]
         cls.maintenance_equipment_obj = cls.env["maintenance.equipment"]
-        cls.cron = cls.env.ref("maintenance.maintenance_requests_cron")
+        cls.cron = cls.env.ref("maintenance_plan.maintenance_requests_cron")
         cls.weekly_kind = cls.env.ref("maintenance_plan.maintenance_kind_weekly")
         cls.done_stage = cls.env.ref("maintenance.stage_3")
 

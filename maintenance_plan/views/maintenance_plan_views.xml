@@ -6,9 +6,9 @@
         <field name="binding_model_id" ref="model_maintenance_plan" />
         <field name="view_mode">kanban,tree,form,pivot,graph,calendar</field>
         <field name="context">{
-            'default_maintenance_plan_id': active_id,
+            'default_maintenance_plan_id': id,
         }</field>
-        <field name="domain">[('maintenance_plan_id', '=', active_id)]</field>
+        <field name="domain">[('maintenance_plan_id', '=', id)]</field>
     </record>
     <record id="maintenance_plan_view_form" model="ir.ui.view">
         <field name="name">maintenance.plan.form</field>
@@ -21,7 +21,7 @@
                         string="Generate requests for current threshold"
                         help="If not clicked, the scheduled action will do it for you."
                         type="object"
-                        attrs="{'invisible' : ['|', ('id', '=', False),('interval', '=', 0)]}"
+                        invisible="not id or interval == 0"
                     />
                 </header>
                 <sheet>
@@ -29,9 +29,9 @@
                         name="web_ribbon"
                         title="Archived"
                         bg_color="bg-danger"
-                        attrs="{'invisible': [('active', '=', True)]}"
+                        invisible="active"
                     />
-                    <field name="active" attrs="{'invisible': 1}" />
+                    <field name="active" invisible="True" />
                     <div class="oe_button_box" name="button_box">
                         <button
                             name="%(hr_equipment_request_action_from_plan)d"
@@ -52,7 +52,7 @@
                             <field
                                 name="name"
                                 placeholder="e.g. Calibration"
-                                attrs="{'required': [('equipment_id', '=', False)]}"
+                                required="not equipment_id"
                             />
                         </h1>
                     </div>
@@ -65,17 +65,17 @@
                             <field name="maintenance_kind_id" />
                             <field
                                 name="maintenance_team_id"
-                                attrs="{'required': [('equipment_id', '=', False)]}"
+                                required="not equipment_id"
                             />
                             <field
                                 name="generate_with_domain"
-                                attrs="{'invisible': [('equipment_id', '!=', False)]}"
+                                invisible="equipment_id"
                             />
                             <field
                                 name="generate_domain"
                                 widget="domain"
                                 options="{'model': 'maintenance.equipment', 'in_dialog': True}"
-                                attrs="{'invisible': ['|', ('equipment_id', '!=', False), ('generate_with_domain', '=', False)]}"
+                                invisible="equipment_id or not generate_with_domain"
                             />
                         </group>
                         <group>
@@ -188,10 +188,10 @@
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="maintenance_plan_view_tree" />
         <field name="context">{
-            'default_equipment_id': active_id, 'hide_equipment_id': 0
+            'default_equipment_id': id, 'hide_equipment_id': 0
         }</field>
         <field name="domain">['|', ('active', '=', True), ('active', '=',
-            False), ('search_equipment_id', '=', active_id)]
+            False), ('search_equipment_id', '=', id)]
         </field>
     </record>
     <menuitem

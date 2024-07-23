@@ -4,9 +4,7 @@
         <field name="name">Maintenance plan multi-company</field>
         <field name="model_id" ref="model_maintenance_plan" />
         <field name="global" eval="True" />
-        <field
-            name="domain_force"
-        >['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        <field name="domain_force">[('company_id', 'in', company_ids + [False])]</field>
     </record>
     <record id="maintenance_plan_rule_user" model="ir.rule">
         <field
