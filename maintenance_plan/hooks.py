@@ -8,7 +8,6 @@ from odoo.exceptions import UserError
 
 
 def post_init_hook(cr, registry):
-
     logging.getLogger("odoo.addons.maintenance_plan").info(
         "Migrating existing preventive maintenance"
     )
@@ -18,7 +17,6 @@ def post_init_hook(cr, registry):
     equipments = env["maintenance.equipment"].search([("period", "!=", False)])
 
     if equipments:
-
         maintenance_kind = env["maintenance.kind"].create(
             {"name": "Install", "active": True}
         )
