@@ -161,7 +161,6 @@ class MaintenancePlan(models.Model):
     )
     def _compute_next_maintenance(self):
         for plan in self.filtered(lambda x: x.interval > 0):
-
             interval_timedelta = plan.get_relativedelta(
                 plan.interval, plan.interval_step
             )
