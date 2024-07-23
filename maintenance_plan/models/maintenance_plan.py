@@ -213,7 +213,7 @@ class MaintenancePlan(models.Model):
         requests of this kind which are not done for its equipment"""
         for plan in self:
             request = plan.equipment_id.mapped("maintenance_ids").filtered(
-                lambda r: (
+                lambda r, plan=plan: (
                     r.maintenance_kind_id == plan.maintenance_kind_id
                     and not r.stage_id.done
                     and r.maintenance_type == "preventive"
