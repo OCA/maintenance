@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 ForgeFlow S.L.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+    <record id="equipment_request_view_form" model="ir.ui.view">
+        <field name="name">equipment.request.form</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="priority" eval="999" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <!--Empty, to be inherited by other modules.-->
+                </div>
+            </xpath>
+            <field name="description" position="replace">
+                <notebook colspan="2">
+                    <page name="description_page" string="Description">
+                        <field name="description" />
+                    </page>
+                </notebook>
+            </field>
+        </field>
+    </record>
+</odoo>
