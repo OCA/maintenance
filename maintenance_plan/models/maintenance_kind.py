@@ -6,7 +6,6 @@ from odoo import fields, models
 
 
 class MaintenanceKind(models.Model):
-
     _name = "maintenance.kind"
     _description = "Maintenance Kind"
 
