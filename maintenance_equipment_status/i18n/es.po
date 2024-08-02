@@ -70,11 +70,6 @@ msgid "ID"
 msgstr "ID"
 
 #. module: maintenance_equipment_status
-#: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status____last_update
-msgid "Last Modified on"
-msgstr "??ltima modificaci??n en"
-
-#. module: maintenance_equipment_status
 #: model:ir.model.fields,field_description:maintenance_equipment_status.field_maintenance_equipment_status__write_uid
 msgid "Last Updated by"
 msgstr "actualizado por última vez por"
@@ -132,6 +127,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_status.maintenance_equipment_status_view_form
 msgid "e.g. Operational"
 msgstr "p. e. Operativo"
+
+#~ msgid "Last Modified on"
+#~ msgstr "??ltima modificaci??n en"
 
 #~ msgid "Status name"
 #~ msgstr "Nombre del Estado"
