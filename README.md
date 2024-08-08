@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [maintenance_account](maintenance_account/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Account
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 17.0.1.0.0 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
 [maintenance_equipment_status](maintenance_equipment_status/) | 17.0.1.0.0 |  | Maintenance Equipment Status
+[maintenance_plan](maintenance_plan/) | 17.0.1.0.0 |  | Extends preventive maintenance planning
 [maintenance_product](maintenance_product/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Product
 
 [//]: # (end addons)
