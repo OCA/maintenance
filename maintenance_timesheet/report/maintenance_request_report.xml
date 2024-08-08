@@ -82,7 +82,7 @@
                                     </td>
                                     <td class="text-right">
                                         <strong
-                                            t-esc="sum(doc.timesheet_ids.mapped('unit_amount'))"
+                                            t-out="sum(doc.timesheet_ids.mapped('unit_amount'))"
                                             t-options="{'widget': 'duration', 'digital': True, 'unit': 'hour', 'round': 'minute'}"
                                         />
                                     </td>

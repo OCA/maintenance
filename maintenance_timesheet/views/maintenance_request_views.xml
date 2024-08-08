@@ -64,7 +64,6 @@
                                 class="oe_inline"
                                 widget="timesheet_uom"
                             />
-                            <!-- t t-esc="record.timesheet_total_hours.value"/-->
                         </span>
                         <span class="o_label">Hours</span>
                     </div>
@@ -107,7 +106,7 @@
                 <page
                     string="Timesheets"
                     name="timesheets"
-                    attrs="{'invisible':[('project_id', '=', False)]}"
+                    invisible="not project_id"
                     groups="hr_timesheet.group_hr_timesheet_user"
                 >
                     <group>
