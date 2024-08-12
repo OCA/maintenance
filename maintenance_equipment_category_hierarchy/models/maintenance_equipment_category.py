@@ -16,7 +16,7 @@ class MaintenanceEquipmentCategory(models.Model):
     _order = "parent_id"
 
     complete_name = fields.Char(
-        "Complete Name", compute="_compute_complete_name", store=True
+        compute="_compute_complete_name", store=True, recursive=True
     )
 
     parent_id = fields.Many2one(
@@ -28,7 +28,7 @@ class MaintenanceEquipmentCategory(models.Model):
     child_id = fields.One2many(
         "maintenance.equipment.category", "parent_id", "Child Categories"
     )
-    parent_path = fields.Char(index=True)
+    parent_path = fields.Char(index=True, unaccent=False)
 
     @api.depends("name", "parent_id.complete_name")
     def _compute_complete_name(self):
