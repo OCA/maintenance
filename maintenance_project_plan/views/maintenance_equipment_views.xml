@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_equipment_view_form_plan" model="ir.ui.view">
+        <field name="inherit_id" ref="maintenance_plan.hr_equipment_view_form" />
+        <field name="model">maintenance.equipment</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='maintenance_plan_ids']" position="attributes">
+                <attribute name="context">{
+                    'default_equipment_id': active_id, 'hide_equipment_id': 1,
+                    'default_project_id': project_id,
+                    'default_task_id': preventive_default_task_id}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
