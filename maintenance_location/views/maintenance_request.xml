@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="hr_equipment_request_view_form">
+        <field name="name">maintenance.request.form (in maintenance_location)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="location_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_request_view_search">
+        <field name="name">maintenance.request.search (in maintenance_location)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field
+                    name="location_id"
+                    filter_domain="[('location_id', 'child_of', raw_value)]"
+                />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_request_view_tree">
+        <field name="name">maintenance.request.tree (in maintenance_location)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="location_id" optional="hide" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_request_view_kanban">
+        <field name="name">maintenance.request.kanban (in maintenance_location)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//span/field[@name='equipment_id']/.." position="before">
+                <span
+                    name="location_id"
+                    t-if="record.location_id.raw_value"
+                >Location : <field name="location_id" /><br /></span>
+            </xpath>
+        </field>
+    </record>
+</odoo>

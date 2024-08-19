@@ -1,0 +1,195 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_location
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2024-06-17 13:38+0000\n"
+"Last-Translator: Yann Papouin <ypa@decgroupe.com>\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: maintenance_location
+#: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
+msgid ""
+"<br/>\n"
+"                            Longitude:"
+msgstr ""
+"<br/>\n"
+"                            Longitude:"
+
+#. module: maintenance_location
+#: model_terms:ir.ui.view,arch_db:maintenance_location.hr_equipment_view_kanban
+msgid "<i class=\"fa fa-map-marker\" title=\"location\"/>"
+msgstr "<i class=\"fa fa-map-marker\" title=\"emplacement\"/>"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__child_id
+msgid "Child Locations"
+msgstr "Emplacements enfants"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__complete_name
+msgid "Complete Name"
+msgstr "Nom complet"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__description
+msgid "Description"
+msgstr "Description"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__display_name
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_plan__display_name
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_request__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: maintenance_location
+#: code:addons/maintenance_location/models/maintenance_location.py:0
+#, python-format
+msgid "Error ! You cannot create recursive Locations."
+msgstr "Erreur ! Vous ne pouvez pas créer d'emplacements récursifs."
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__id
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_plan__id
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_request__id
+msgid "ID"
+msgstr "ID"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location____last_update
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_plan____last_update
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_request____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__write_uid
+msgid "Last Updated by"
+msgstr "Modifié par"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__write_date
+msgid "Last Updated on"
+msgstr "Modifié le"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__latitude
+msgid "Latitude"
+msgstr "Latitude"
+
+#. module: maintenance_location
+#: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
+msgid "Latitude:"
+msgstr "Latitude :"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_equipment__location_id
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_plan__location_id
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_request__location_id
+#: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
+msgid "Location"
+msgstr "Emplacement"
+
+#. module: maintenance_location
+#: model_terms:ir.ui.view,arch_db:maintenance_location.hr_equipment_request_view_kanban
+msgid "Location :"
+msgstr "Emplacement :"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_equipment__location
+msgid "Location Old"
+msgstr "Ancien emplacement"
+
+#. module: maintenance_location
+#: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
+msgid "Location name"
+msgstr "Nom de l'emplacement"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__longitude
+msgid "Longitude"
+msgstr "Longitude"
+
+#. module: maintenance_location
+#: model:ir.model,name:maintenance_location.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipement de maintenance"
+
+#. module: maintenance_location
+#: model:ir.actions.act_window,name:maintenance_location.maintenance_location_act_window
+#: model:ir.model,name:maintenance_location.model_maintenance_location
+msgid "Maintenance Location"
+msgstr "Emplacement de maintenance"
+
+#. module: maintenance_location
+#: model:ir.ui.menu,name:maintenance_location.maintenance_location_menu
+msgid "Maintenance Locations"
+msgstr "Emplacements de maintenance"
+
+#. module: maintenance_location
+#: model:ir.model,name:maintenance_location.model_maintenance_plan
+msgid "Maintenance Plan"
+msgstr "Plan de Maintenance"
+
+#. module: maintenance_location
+#: model:ir.model,name:maintenance_location.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Demande de maintenance"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__parent_id
+msgid "Parent Location"
+msgstr "Emplacement parent"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__parent_path
+msgid "Parent Path"
+msgstr "Chemin parent"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__partner_id
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: maintenance_location
+#: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
+msgid "e.g. Building A"
+msgstr "ex : Bâtiment A"

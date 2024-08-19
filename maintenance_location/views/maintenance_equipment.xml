@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="hr_equipment_view_form">
+        <field name="name">maintenance.equipment.form (in maintenance_location)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance_plan.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <field name="location" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <xpath expr="//field[@name='company_id']/.." position="inside">
+                <field name="location_id" />
+            </xpath>
+            <xpath expr="//tree/field[@name='maintenance_team_id']" position="after">
+                <field
+                    name="location_id"
+                    options="{'no_create': True, 'no_open': True}"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_view_search">
+        <field
+            name="name"
+        >maintenance.equipment.search (in maintenance_location)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <field name="owner_user_id" position="after">
+                <field name="location_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_view_tree">
+        <field name="name">maintenance.equipment.tree (in maintenance_location)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="location_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_view_kanban">
+        <field name="name">maintenance.equipment.tree (in maintenance_location)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
+        <field name="arch" type="xml">
+            <div class="o_kanban_record_body" position="inside">
+                <div t-if="record.location_id.raw_value">
+                    <i class="fa fa-map-marker" title='location' />
+                    <field name="location_id" />
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>
