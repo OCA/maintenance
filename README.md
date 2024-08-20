@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_status](maintenance_equipment_status/) | 17.0.1.0.0 |  | Maintenance Equipment Status
 [maintenance_plan](maintenance_plan/) | 17.0.1.0.0 |  | Extends preventive maintenance planning
 [maintenance_product](maintenance_product/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Product
+[maintenance_project](maintenance_project/) | 17.0.1.0.0 |  | Adds projects to maintenance equipments and requests
 
 [//]: # (end addons)
 
