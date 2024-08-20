@@ -190,7 +190,6 @@ msgstr "Icona per indicare un'attività eccezione."
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_needaction
-#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_unread
 msgid "If checked, new messages require your attention."
 msgstr "Se selezionata, nuovi messaggi richiedono attenzione."
 
@@ -231,12 +230,6 @@ msgid "Kind"
 msgstr "Genere"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind____last_update
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__write_uid
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__write_uid
 msgid "Last Updated by"
@@ -261,11 +254,7 @@ msgstr ""
 "intervallo"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_main_attachment_id
-msgid "Main Attachment"
-msgstr "Allegato principale"
-
-#. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid "Maintenace Equipment must belong to the equipment's company"
@@ -379,6 +368,11 @@ msgid "Maintenance requests"
 msgstr "Richieste di manutenzione"
 
 #. module: maintenance_plan
+#: model:ir.actions.server,name:maintenance_plan.maintenance_requests_cron_ir_actions_server
+msgid "Maintenance: generate preventive maintenance requests"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_has_error
 msgid "Message Delivery error"
 msgstr "Errore di consegna messaggio"
@@ -453,18 +447,13 @@ msgstr "Numero di errori"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_needaction_counter
-msgid "Number of messages which requires an action"
-msgstr "Numero di messaggi che richiedono un'azione"
+msgid "Number of messages requiring action"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr "Numero di messaggi con errore di consegna"
-
-#. module: maintenance_plan
-#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__message_unread_counter
-msgid "Number of unread messages"
-msgstr "Numero di messaggi non letti"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
@@ -497,16 +486,23 @@ msgid "Plans"
 msgstr "Piani"
 
 #. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid "Preventive Maintenance (%(kind)s) - %(description)s"
 msgstr "Manutenzione preventiva (%(kind)s) - %(description)s"
 
 #. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
 msgid "Preventive Maintenance (%(kind)s) - %(plan)s"
 msgstr "Manutenzione preventiva (%(kind)s) - %(plan)s"
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__rating_ids
+msgid "Ratings"
+msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__interval_step
@@ -524,6 +520,7 @@ msgid "Search Equipment"
 msgstr "Cerca attrezzatura"
 
 #. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid ""
@@ -562,6 +559,7 @@ msgid "Team"
 msgstr "Squadra"
 
 #. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid ""
@@ -584,40 +582,35 @@ msgid "Under Maintenance"
 msgstr "In manutenzione"
 
 #. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
 msgid "Unnamed %(kind)s plan (%(eqpmnt)s)"
 msgstr "Piano %(kind)s anonimo (%(eqpmnt)s)"
 
 #. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid "Unnamed %(kind)s plan (%(eqpmt)s)"
 msgstr "Piano %(kind)s anonimo (%(eqpmt)s)"
 
 #. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 #, python-format
 msgid "Unnamed %(void)s plan (%(eqpmnt)s)"
 msgstr "Piano %(void)s anonimo (%(eqpmnt)s)"
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_unread
-msgid "Unread Messages"
-msgstr "Messaggi non letti"
-
-#. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_unread_counter
-msgid "Unread Messages Counter"
-msgstr "Numero messaggi non letti"
-
-#. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid "Unspecified kind"
 msgstr "Pianificazione non specificata"
 
 #. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 #, python-format
 msgid "Unsupported search operator"
@@ -660,6 +653,7 @@ msgstr ""
 "manutenzione di una attrezzatura."
 
 #. module: maintenance_plan
+#. odoo-python
 #: code:addons/maintenance_plan/hooks.py:0
 #, python-format
 msgid ""
@@ -676,6 +670,24 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "e.g. Calibration"
 msgstr "es. calibrazione"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
+
+#~ msgid "Main Attachment"
+#~ msgstr "Allegato principale"
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "Numero di messaggi che richiedono un'azione"
+
+#~ msgid "Number of unread messages"
+#~ msgstr "Numero di messaggi non letti"
+
+#~ msgid "Unread Messages"
+#~ msgstr "Messaggi non letti"
+
+#~ msgid "Unread Messages Counter"
+#~ msgstr "Numero messaggi non letti"
 
 #~ msgid "SMS Delivery error"
 #~ msgstr "Errore consegna SMS"
