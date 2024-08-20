@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_project_kanban" model="ir.ui.view">
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='rating_status']" position="after">
+                <field name="equipment_count" />
+                <field name="maintenance_request_count" />
+            </xpath>
+            <xpath expr="//div[hasclass('o_project_kanban_boxes')]" position="inside">
+                <a
+                    class="o_project_kanban_box"
+                    name="action_view_equipment_ids"
+                    type="object"
+                >
+                    <div>
+                        <span class="o_value">
+                            <t t-esc="record.equipment_count.value" />
+                        </span>
+                        <span class="o_label">Equipments</span>
+                    </div>
+                </a>
+                <a
+                    class="o_project_kanban_box"
+                    name="action_view_maintenance_request_ids"
+                    type="object"
+                >
+                    <div>
+                        <span class="o_value">
+                            <t t-esc="record.maintenance_request_count.value" />
+                        </span>
+                        <span class="o_label">Requests</span>
+                    </div>
+                </a>
+            </xpath>
+        </field>
+    </record>
+    <record id="edit_project" model="ir.ui.view">
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    class="oe_stat_button"
+                    name="action_view_equipment_ids"
+                    type="object"
+                    icon="fa-ticket"
+                >
+                    <field
+                        string="Equipments"
+                        name="equipment_count"
+                        widget="statinfo"
+                    />
+                </button>
+                <button
+                    class="oe_stat_button"
+                    name="action_view_maintenance_request_ids"
+                    type="object"
+                    icon="fa-tasks"
+                >
+                    <field
+                        string="Requests"
+                        name="maintenance_request_count"
+                        widget="statinfo"
+                    />
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

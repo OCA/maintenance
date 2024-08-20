@@ -1,0 +1,136 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-18 17:04+0000\n"
+"PO-Revision-Date: 2023-07-22 23:09+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.view_project_kanban
+msgid "<span class=\"o_label\">Equipments</span>"
+msgstr "<span class=\"o_label\">Equipos</span>"
+
+#. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.view_project_kanban
+msgid "<span class=\"o_label\">Requests</span>"
+msgstr "<span class=\"o_label\">Peticiones</span>"
+
+#. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.report_maintenance_request_document
+msgid "<strong>Project:</strong>"
+msgstr "<strong>Proyecto:</strong>"
+
+#. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.report_maintenance_request_document
+msgid "<strong>Task:</strong>"
+msgstr "<strong>Tarea:</strong>"
+
+#. module: maintenance_project
+#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__create_project_from_equipment
+msgid "Create Project From Equipment"
+msgstr "Crear proyecto a partir del equipo"
+
+#. module: maintenance_project
+#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__preventive_default_task_id
+msgid "Default Task"
+msgstr "Tarea por defecto"
+
+#. module: maintenance_project
+#: model:ir.model.fields,field_description:maintenance_project.field_project_project__equipment_count
+msgid "Equipment Count"
+msgstr "N??mero de equipos"
+
+#. module: maintenance_project
+#: model:ir.model.fields,field_description:maintenance_project.field_project_project__equipment_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_project.edit_project
+msgid "Equipments"
+msgstr "Equipos"
+
+#. module: maintenance_project
+#: model:project.project,name:maintenance_project.project_project_1
+msgid "General equipment project"
+msgstr "Proyecto de equipamiento general"
+
+#. module: maintenance_project
+#: model:maintenance.equipment,name:maintenance_project.equipment_3
+msgid "Generic Computer with own project"
+msgstr "Ordenador gen??rico con su propio proyecto"
+
+#. module: maintenance_project
+#: model:maintenance.equipment,name:maintenance_project.equipment_1
+msgid "Generic Monitor"
+msgstr "Monitor gen??rico"
+
+#. module: maintenance_project
+#: model:maintenance.equipment,name:maintenance_project.equipment_2
+msgid "Generic Monitor with preventive"
+msgstr "Monitor gen??rico con preventivo"
+
+#. module: maintenance_project
+#: model:ir.model,name:maintenance_project.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipo"
+
+#. module: maintenance_project
+#: model:ir.model,name:maintenance_project.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Petici??n de mantenimiento"
+
+#. module: maintenance_project
+#: model:ir.model.fields,field_description:maintenance_project.field_project_project__maintenance_request_count
+msgid "Maintenance Request Count"
+msgstr "N??mero de peticiones de mantenimiento"
+
+#. module: maintenance_project
+#: model:ir.model.fields,field_description:maintenance_project.field_project_project__maintenance_request_ids
+msgid "Maintenance Requests"
+msgstr "Peticiones de mantenimiento"
+
+#. module: maintenance_project
+#: model:ir.model,name:maintenance_project.model_project_project
+#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__project_id
+#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__project_id
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.hr_equipment_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:maintenance_project.hr_equipment_view_kanban
+msgid "Project:"
+msgstr "Proyecto:"
+
+#. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.edit_project
+msgid "Requests"
+msgstr "Peticiones"
+
+#. module: maintenance_project
+#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__task_id
+msgid "Task"
+msgstr "Tarea"
+
+#. module: maintenance_project
+#: model:project.project,label_tasks:maintenance_project.project_project_1
+msgid "Tasks"
+msgstr "Tareas"
+
+#~ msgid "Display Name"
+#~ msgstr "Nombre a mostrar"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última modificación en"
