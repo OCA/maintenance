@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [base_maintenance](base_maintenance/) | 17.0.1.0.0 |  | Base Maintenance
 [maintenance_account](maintenance_account/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Account
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 17.0.1.0.0 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
+[maintenance_equipment_sequence](maintenance_equipment_sequence/) | 17.0.1.0.0 | [![AdriaGForgeFlow](https://github.com/AdriaGForgeFlow.png?size=30px)](https://github.com/AdriaGForgeFlow) | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 17.0.1.0.0 |  | Maintenance Equipment Status
 [maintenance_plan](maintenance_plan/) | 17.0.1.0.0 |  | Extends preventive maintenance planning
 [maintenance_product](maintenance_product/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Product
