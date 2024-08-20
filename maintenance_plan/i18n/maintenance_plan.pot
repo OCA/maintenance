@@ -492,6 +492,11 @@ msgid "Preventive Maintenance (%(kind)s) - %(plan)s"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__interval_step
 msgid "Recurrence"
 msgstr ""
