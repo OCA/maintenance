@@ -21,7 +21,7 @@
                     string="Start work"
                     type="object"
                     icon="fa-play-circle text-success"
-                    attrs="{'invisible': [('show_time_control', '!=', 'start')]}"
+                    invisible="show_time_control != 'start'"
                     class="oe_stat_button"
                     groups="hr_timesheet.group_hr_timesheet_user"
                 />
@@ -30,7 +30,7 @@
                     string="Stop work"
                     type="object"
                     icon="fa-stop-circle text-warning"
-                    attrs="{'invisible': [('show_time_control', '!=', 'stop')]}"
+                    invisible="show_time_control != 'stop'"
                     class="oe_stat_button"
                     groups="hr_timesheet.group_hr_timesheet_user"
                 />
@@ -72,7 +72,7 @@
                     tabindex="-1"
                     type="object"
                     icon="fa-play-circle text-success"
-                    attrs="{'invisible': [('show_time_control', '!=', 'resume')]}"
+                    invisible="show_time_control != 'resume'"
                     class="oe_stat_button"
                     groups="hr_timesheet.group_hr_timesheet_user"
                 />
@@ -82,7 +82,7 @@
                     tabindex="-1"
                     type="object"
                     icon="fa-stop-circle text-warning"
-                    attrs="{'invisible': [('show_time_control', '!=', 'stop')]}"
+                    invisible="show_time_control != 'stop'"
                     class="oe_stat_button"
                     groups="hr_timesheet.group_hr_timesheet_user"
                 />
@@ -107,7 +107,7 @@
                 />
                 <a
                     name="button_start_work"
-                    attrs="{'invisible': [('show_time_control', '!=', 'start')]}"
+                    invisible="show_time_control != 'start'"
                     class="o_kanban_inline_block fa fa-lg fa-play-circle text-success"
                     title="Start work"
                     tabindex="-1"
@@ -116,7 +116,7 @@
                 />
                 <a
                     name="button_end_work"
-                    attrs="{'invisible': [('show_time_control', '!=', 'stop')]}"
+                    invisible="show_time_control != 'stop'"
                     class="o_kanban_inline_block fa fa-lg fa-stop-circle text-warning"
                     title="Stop work"
                     tabindex="-1"
@@ -148,7 +148,7 @@
                     tabindex="-1"
                     type="object"
                     icon="fa-play-circle text-success"
-                    attrs="{'invisible': [('show_time_control', '!=', 'start')]}"
+                    invisible="show_time_control != 'start'"
                     class="oe_stat_button"
                     groups="hr_timesheet.group_hr_timesheet_user"
                 />
@@ -158,7 +158,7 @@
                     tabindex="-1"
                     type="object"
                     icon="fa-stop-circle text-warning"
-                    attrs="{'invisible': [('show_time_control', '!=', 'stop')]}"
+                    invisible="show_time_control != 'stop'"
                     class="oe_stat_button"
                     groups="hr_timesheet.group_hr_timesheet_user"
                 />
