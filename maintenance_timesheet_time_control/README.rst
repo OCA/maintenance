@@ -17,20 +17,20 @@ Maintenance Timesheets Time Control
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fmaintenance-lightgray.png?logo=github
-    :target: https://github.com/OCA/maintenance/tree/16.0/maintenance_timesheet_time_control
+    :target: https://github.com/OCA/maintenance/tree/17.0/maintenance_timesheet_time_control
     :alt: OCA/maintenance
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/maintenance-16-0/maintenance-16-0-maintenance_timesheet_time_control
+    :target: https://translation.odoo-community.org/projects/maintenance-17-0/maintenance-17-0-maintenance_timesheet_time_control
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/maintenance&target_branch=16.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/maintenance&target_branch=17.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-It allows to track the exact moment when a timesheet line is started (not only
-the day, but also the minute and second) and let users start and stop timers
-easily.
+It allows to track the exact moment when a timesheet line is started
+(not only the day, but also the minute and second) and let users start
+and stop timers easily.
 
 **Table of contents**
 
@@ -40,39 +40,42 @@ easily.
 Installation
 ============
 
-This module is auto-installed when ``maintenance_timesheet`` and ``project_timesheet_time_control`` are
-installed.
+This module is auto-installed when ``maintenance_timesheet`` and
+``project_timesheet_time_control`` are installed.
 
 This module depends on modules found in these repositories:
 
-* `OCA/timesheet <https://github.com/OCA/timesheet>`__
-* `OCA/web <https://github.com/OCA/web>`__
-* `OCA/project <https://github.com/OCA/project>`__
+-  `OCA/timesheet <https://github.com/OCA/timesheet>`__
+-  `OCA/web <https://github.com/OCA/web>`__
+-  `OCA/project <https://github.com/OCA/project>`__
 
 Configuration
 =============
 
-Maintenance request must have a project defined for seeing the start/stop buttons.
+Maintenance request must have a project defined for seeing the
+start/stop buttons.
 
 Usage
 =====
 
-In general the usage instructions from ``project_timesheet_time_control`` apply with the following additions.
+In general the usage instructions from
+``project_timesheet_time_control`` apply with the following additions.
 
 Via maintenance requests:
 
-#. Go to *Maintenance > Maintenance > Maintenance Requests*.
-#. If a request has a running timesheet line, it will display a *Stop* button.
-#. Other requests that have enabled timesheets will display a *Start* button
-   that will open the same wizard as the timesheet lines, duplicating task's
-   last timesheet line.
-#. You can see the same in list view.
-#. Click on any existing request or create a new one.
-#. You can see the same feature in the action buttons box.
+1. Go to *Maintenance > Maintenance > Maintenance Requests*.
+2. If a request has a running timesheet line, it will display a *Stop*
+   button.
+3. Other requests that have enabled timesheets will display a *Start*
+   button that will open the same wizard as the timesheet lines,
+   duplicating task's last timesheet line.
+4. You can see the same in list view.
+5. Click on any existing request or create a new one.
+6. You can see the same feature in the action buttons box.
 
-Note: All the *Start/Resume/Stop* features are disabled if you don't belong to
-the *Timesheets/User* group or if you are viewing a timesheet that belongs
-to another user.
+Note: All the *Start/Resume/Stop* features are disabled if you don't
+belong to the *Timesheets/User* group or if you are viewing a timesheet
+that belongs to another user.
 
 Bug Tracker
 ===========
@@ -80,7 +83,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/maintenance/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/maintenance/issues/new?body=module:%20maintenance_timesheet_time_control%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/maintenance/issues/new?body=module:%20maintenance_timesheet_time_control%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -88,20 +91,20 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Tecnativa <https://www.tecnativa.com>`_:
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Víctor Martínez
-  * Pedro M. Baeza
+   -  Víctor Martínez
+   -  Pedro M. Baeza
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -121,6 +124,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-victoralmau| 
 
-This module is part of the `OCA/maintenance <https://github.com/OCA/maintenance/tree/16.0/maintenance_timesheet_time_control>`_ project on GitHub.
+This module is part of the `OCA/maintenance <https://github.com/OCA/maintenance/tree/17.0/maintenance_timesheet_time_control>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
