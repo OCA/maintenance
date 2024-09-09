@@ -6,9 +6,9 @@
         <field name="binding_model_id" ref="model_maintenance_plan" />
         <field name="view_mode">kanban,tree,form,pivot,graph,calendar</field>
         <field name="context">{
-            'default_maintenance_plan_id': id,
+            'default_maintenance_plan_id': active_id,
         }</field>
-        <field name="domain">[('maintenance_plan_id', '=', id)]</field>
+        <field name="domain">[('maintenance_plan_id', '=', active_id)]</field>
     </record>
     <record id="maintenance_plan_view_form" model="ir.ui.view">
         <field name="name">maintenance.plan.form</field>
@@ -188,10 +188,10 @@
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="maintenance_plan_view_tree" />
         <field name="context">{
-            'default_equipment_id': id, 'hide_equipment_id': 0
+            'default_equipment_id': active_id, 'hide_equipment_id': 0
         }</field>
         <field name="domain">['|', ('active', '=', True), ('active', '=',
-            False), ('search_equipment_id', '=', id)]
+            False), ('search_equipment_id', '=', active_id)]
         </field>
     </record>
     <menuitem
