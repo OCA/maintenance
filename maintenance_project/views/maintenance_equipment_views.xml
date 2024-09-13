@@ -37,11 +37,24 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='location']" position="after">
-                <field name="create_project_from_equipment" invisible="id" />
-                <field
-                    name="project_id"
-                    invisible="create_project_from_equipment and not id"
-                />
+                <field name="project_id" invisible="1" />
+                <label for="project_id" />
+                <div>
+                    <field
+                        name="project_id"
+                        groups="project.group_project_manager"
+                        class="oe_inline"
+                    />
+                    <button
+                        name="action_create_project"
+                        groups="project.group_project_manager"
+                        type="object"
+                        class="oe_link"
+                        invisible="not id or project_id"
+                    >
+                        <span class="fa fa-plus" /><span> Create project</span>
+                    </button>
+                </div>
             </xpath>
             <xpath expr="//group[@name='statistics']" position="after">
                 <group name="project_task">

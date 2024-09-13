@@ -102,7 +102,6 @@ class TestMaintenanceTimesheet(TransactionCase):
         self.assertFalse(act1["context"]["readonly_employee_id"])
 
     def test_prepare_project_from_equipment_values(self):
-        data = self.env["maintenance.equipment"]._prepare_project_from_equipment_values(
-            {"name": "my name"}
-        )
-        self.assertTrue(data["allow_timesheets"])
+        equipment = self.env["maintenance.equipment"].create({"name": "Test equipment"})
+        equipment.action_create_project()
+        self.assertTrue(equipment.project_id.allow_timesheets)
