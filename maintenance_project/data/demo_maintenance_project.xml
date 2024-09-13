@@ -21,7 +21,6 @@
         <field name="assign_date" eval="time.strftime('%Y-%m-10')" />
         <field name="serial_no">S/N 1</field>
         <field name="model">MODEL1</field>
-        <field name="create_project_from_equipment" eval="False" />
         <field name="project_id" ref="maintenance_project.project_project_1" />
     </record>
     <record id="equipment_2" model="maintenance.equipment">
@@ -36,7 +35,6 @@
         <field name="assign_date" eval="time.strftime('%Y-%m-10')" />
         <field name="serial_no">S/N 2</field>
         <field name="model">MODEL2</field>
-        <field name="create_project_from_equipment" eval="False" />
         <field name="project_id" ref="maintenance_project.project_project_1" />
         <field name="period" eval="30" />
         <field name="maintenance_duration" eval="2" />
@@ -53,6 +51,10 @@
         <field name="assign_date" eval="time.strftime('%Y-%m-10')" />
         <field name="serial_no">S/N 3</field>
         <field name="model">MODEL3</field>
-        <field name="create_project_from_equipment" eval="True" />
     </record>
+    <function
+        model="maintenance.equipment"
+        name="action_create_project"
+        eval="[[ref('equipment_3')]]"
+    />
 </odoo>
