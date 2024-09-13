@@ -7,7 +7,7 @@ from odoo import models
 class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
-    def _prepare_project_from_equipment_values(self, values):
-        data = super()._prepare_project_from_equipment_values(values)
+    def _prepare_project_from_equipment_values(self):
+        data = super()._prepare_project_from_equipment_values()
         data["allow_timesheets"] = True
         return data
