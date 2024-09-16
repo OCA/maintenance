@@ -16,7 +16,9 @@ class TestMaintenanceProject(BaseCommon):
         cls.project1 = cls.env["project.project"].create({"name": "My project"})
         cls.project_demo = cls.env.ref("maintenance_project.project_project_1")
         new_test_user(
-            cls.env, login="test-user", groups="maintenance.group_equipment_manager"
+            cls.env,
+            login="test-user",
+            groups="maintenance.group_equipment_manager,project.group_project_user",
         )
         new_test_user(
             cls.env,

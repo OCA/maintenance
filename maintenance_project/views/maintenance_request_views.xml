@@ -5,7 +5,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='maintenance_team_id']" position="after">
-                <field name="project_id" />
+                <field name="project_id" groups="project.group_project_user" />
             </xpath>
         </field>
     </record>
@@ -14,7 +14,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='category_id']" position="after">
-                <field name="project_id" />
+                <field name="project_id" groups="project.group_project_user" />
             </xpath>
         </field>
     </record>
@@ -23,10 +23,13 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='activity_state']" position="after">
-                <field name="project_id" />
+                <field name="project_id" groups="project.group_project_user" />
             </xpath>
             <xpath expr="//div[hasclass('o_kanban_record_body')]" position="inside">
-                <div t-if="record.project_id.raw_value">
+                <div
+                    t-if="record.project_id.raw_value"
+                    groups="project.group_project_user"
+                >
                     <small>Project: <t t-raw="record.project_id.value" /></small>
                 </div>
             </xpath>
@@ -37,11 +40,14 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='priority']" position="after">
-                <field name="project_id" />
+                <field name="project_id" invisible="1" />
+                <field name="project_id" groups="project.group_project_user" />
+                <field name="task_id" invisible="1" />
                 <field
                     name="task_id"
                     domain="[('project_id', '=', project_id)]"
                     context="{'default_project_id': project_id}"
+                    groups="project.group_project_user"
                 />
             </xpath>
         </field>
