@@ -5,14 +5,21 @@
         <field name="inherit_id" ref="project.view_project_kanban" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='rating_status']" position="after">
-                <field name="equipment_count" />
-                <field name="maintenance_request_count" />
+                <field
+                    name="equipment_count"
+                    groups="maintenance.group_equipment_manager"
+                />
+                <field
+                    name="maintenance_request_count"
+                    groups="maintenance.group_equipment_manager"
+                />
             </xpath>
             <xpath expr="//div[hasclass('o_project_kanban_boxes')]" position="inside">
                 <a
                     class="o_project_kanban_box"
                     name="action_view_equipment_ids"
                     type="object"
+                    groups="maintenance.group_equipment_manager"
                 >
                     <div>
                         <span class="o_value">
@@ -25,6 +32,7 @@
                     class="o_project_kanban_box"
                     name="action_view_maintenance_request_ids"
                     type="object"
+                    groups="maintenance.group_equipment_manager"
                 >
                     <div>
                         <span class="o_value">
@@ -46,6 +54,7 @@
                     name="action_view_equipment_ids"
                     type="object"
                     icon="fa-ticket"
+                    groups="maintenance.group_equipment_manager"
                 >
                     <field
                         string="Equipments"
@@ -58,6 +67,7 @@
                     name="action_view_maintenance_request_ids"
                     type="object"
                     icon="fa-tasks"
+                    groups="maintenance.group_equipment_manager"
                 >
                     <field
                         string="Requests"
