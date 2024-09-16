@@ -4,7 +4,7 @@
     "name": "Maintenance Plan",
     "summary": "Extends preventive maintenance planning",
     "version": "14.0.1.6.5",
-    "author": "Camptocamp SA, ForgeFlow, Odoo Community Association (OCA)",
+    "author": "Camptocamp, ForgeFlow, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Maintenance",
     "website": "https://github.com/OCA/maintenance",
