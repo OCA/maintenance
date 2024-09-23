@@ -3,7 +3,7 @@
 {
     "name": "Maintenance Projects",
     "summary": "Adds projects to maintenance equipments and requests",
-    "version": "16.0.1.0.0",
+    "version": "16.0.2.0.0",
     "author": "Odoo Community Association (OCA), Solvos",
     "license": "AGPL-3",
     "category": "Maintenance",
