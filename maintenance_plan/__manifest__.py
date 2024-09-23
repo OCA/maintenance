@@ -3,7 +3,7 @@
 {'name': 'Maintenance Plan',
  'summary': 'Extends preventive maintenance planning',
  'version': '11.0.2.4.1',
- 'author': 'Camptocamp SA, Eficent, Odoo Community Association (OCA)',
+ 'author': 'Camptocamp, Eficent, Odoo Community Association (OCA)',
  'license': 'AGPL-3',
  'category': 'Maintenance',
  'website': 'https://github.com/OCA/maintenance',
