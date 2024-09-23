@@ -5,7 +5,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='owner_user_id']" position="after">
-                <field name="project_id" />
+                <field name="project_id" groups="project.group_project_user" />
             </xpath>
         </field>
     </record>
@@ -14,7 +14,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='category_id']" position="after">
-                <field name="project_id" />
+                <field name="project_id" groups="project.group_project_user" />
             </xpath>
         </field>
     </record>
@@ -23,10 +23,13 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='activity_state']" position="after">
-                <field name="project_id" />
+                <field name="project_id" groups="project.group_project_user" />
             </xpath>
             <xpath expr="//div[hasclass('o_kanban_record_body')]" position="inside">
-                <div t-if="record.project_id.raw_value">
+                <div
+                    t-if="record.project_id.raw_value"
+                    groups="project.group_project_user"
+                >
                     <small>Project: <t t-raw="record.project_id.value" /></small>
                 </div>
             </xpath>
@@ -37,14 +40,24 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='location']" position="after">
-                <field
-                    name="create_project_from_equipment"
-                    attrs="{'invisible': [('id', '!=', False)]}"
-                />
-                <field
-                    name="project_id"
-                    attrs="{'invisible': [('create_project_from_equipment', '=', True), ('id', '=', False)]}"
-                />
+                <field name="project_id" invisible="1" />
+                <label for="project_id" groups="project.group_project_user" />
+                <div>
+                    <field
+                        name="project_id"
+                        groups="project.group_project_user"
+                        class="oe_inline"
+                    />
+                    <button
+                        name="action_create_project"
+                        groups="project.group_project_manager"
+                        type="object"
+                        class="oe_link"
+                        attrs="{'invisible': ['|', ('id', '=', False),('project_id', '!=', False)]}"
+                    >
+                        <span class="fa fa-plus" /><span> Create project</span>
+                    </button>
+                </div>
             </xpath>
             <xpath expr="//group[@name='maintenance']" position="after">
                 <group name="project_task">
@@ -52,6 +65,7 @@
                         name="preventive_default_task_id"
                         domain="[('project_id', '=', project_id)]"
                         context="{'default_project_id': project_id}"
+                        groups="project.group_project_user"
                     />
                 </group>
             </xpath>
