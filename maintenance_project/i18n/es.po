@@ -18,6 +18,11 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.hr_equipment_view_form
+msgid "<span class=\"fa fa-plus\"/><span> Create project</span>"
+msgstr ""
+
+#. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.view_project_kanban
 msgid "<span class=\"o_label\">Equipments</span>"
 msgstr "<span class=\"o_label\">Equipos</span>"
@@ -36,11 +41,6 @@ msgstr "<strong>Proyecto:</strong>"
 #: model_terms:ir.ui.view,arch_db:maintenance_project.report_maintenance_request_document
 msgid "<strong>Task:</strong>"
 msgstr "<strong>Tarea:</strong>"
-
-#. module: maintenance_project
-#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__create_project_from_equipment
-msgid "Create Project From Equipment"
-msgstr "Crear proyecto a partir del equipo"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_equipment__preventive_default_task_id
@@ -125,6 +125,9 @@ msgstr "Tarea"
 #: model:project.project,label_tasks:maintenance_project.project_project_1
 msgid "Tasks"
 msgstr "Tareas"
+
+#~ msgid "Create Project From Equipment"
+#~ msgstr "Crear proyecto a partir del equipo"
 
 #~ msgid "Display Name"
 #~ msgstr "Nombre a mostrar"
