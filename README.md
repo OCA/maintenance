@@ -35,7 +35,7 @@ addon | version | maintainers | summary
 [maintenance_plan](maintenance_plan/) | 16.0.1.0.0 |  | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 16.0.1.0.0 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
 [maintenance_product](maintenance_product/) | 16.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Product
-[maintenance_project](maintenance_project/) | 16.0.1.0.0 |  | Adds projects to maintenance equipments and requests
+[maintenance_project](maintenance_project/) | 16.0.2.0.0 |  | Adds projects to maintenance equipments and requests
 [maintenance_purchase](maintenance_purchase/) | 16.0.1.0.0 |  | Create Equipments with purchases
 [maintenance_request_purchase](maintenance_request_purchase/) | 16.0.1.0.0 |  | Allows you to link PO with maintenance requests
 [maintenance_request_repair](maintenance_request_repair/) | 16.0.1.0.0 |  | This is a bridge module between Maintenance and Repair
@@ -43,7 +43,7 @@ addon | version | maintainers | summary
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 16.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Manage transition visibility and management between stages
 [maintenance_security](maintenance_security/) | 16.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Security
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 16.0.1.0.0 |  | Create hierarchies on teams
-[maintenance_timesheet](maintenance_timesheet/) | 16.0.1.0.1 |  | Adds timesheets to maintenance requests
+[maintenance_timesheet](maintenance_timesheet/) | 16.0.2.0.0 |  | Adds timesheets to maintenance requests
 [maintenance_timesheet_time_control](maintenance_timesheet_time_control/) | 16.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Timesheets Timesheet Time Control
 
 [//]: # (end addons)
