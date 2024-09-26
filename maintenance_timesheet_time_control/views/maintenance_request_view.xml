@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_equipment_request_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >hr.maintenance.request.form (in maintenance_timesheet_time_control)</field>
+        <field name="model">maintenance.request</field>
+        <field
+            name="inherit_id"
+            ref="maintenance_timesheet.hr_equipment_request_view_form"
+        />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <field
+                    name="show_time_control"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                    invisible="1"
+                />
+                <button
+                    name="button_start_work"
+                    string="Start work"
+                    type="object"
+                    icon="fa-play-circle text-success"
+                    invisible="show_time_control != 'start'"
+                    class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+                <button
+                    name="button_end_work"
+                    string="Stop work"
+                    type="object"
+                    icon="fa-stop-circle text-warning"
+                    invisible="show_time_control != 'stop'"
+                    class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+            </div>
+        </field>
+    </record>
+    <record id="equipment_request_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.request.form (in maintenance_timesheet_time_control)</field>
+        <field name="model">maintenance.request</field>
+        <field
+            name="inherit_id"
+            ref="maintenance_timesheet.equipment_request_view_form"
+        />
+        <field name="arch" type="xml">
+            <!-- Sub-tree view for timesheet_ids -->
+            <xpath
+                expr="//field[@name='timesheet_ids']/tree//field[@name='date']"
+                position="attributes"
+            >
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='timesheet_ids']/tree//field[@name='date']"
+                position="after"
+            >
+                <field name="date_time" string="Date" required="1" />
+            </xpath>
+            <xpath expr="//field[@name='timesheet_ids']/tree" position="inside">
+                <field
+                    name="show_time_control"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                    invisible="1"
+                />
+                <button
+                    name="button_resume_work"
+                    title="Resume work"
+                    tabindex="-1"
+                    type="object"
+                    icon="fa-play-circle text-success"
+                    invisible="show_time_control != 'resume'"
+                    class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+                <button
+                    name="button_end_work"
+                    title="Stop work"
+                    tabindex="-1"
+                    type="object"
+                    icon="fa-stop-circle text-warning"
+                    invisible="show_time_control != 'stop'"
+                    class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+            </xpath>
+            <xpath expr="//field[@name='timesheet_ids']/tree" position="attributes">
+                <attribute name="default_order">date_time</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_request_view_kanban" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.request.kanban (in maintenance_timesheet_time_control)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//*[hasclass('oe_kanban_bottom_left')]" position="inside">
+                <field
+                    name="show_time_control"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                    invisible="1"
+                />
+                <a
+                    name="button_start_work"
+                    invisible="show_time_control != 'start'"
+                    class="o_kanban_inline_block fa fa-lg fa-play-circle text-success"
+                    title="Start work"
+                    tabindex="-1"
+                    type="object"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+                <a
+                    name="button_end_work"
+                    invisible="show_time_control != 'stop'"
+                    class="o_kanban_inline_block fa fa-lg fa-stop-circle text-warning"
+                    title="Stop work"
+                    tabindex="-1"
+                    type="object"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_request_view_tree" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.request.tree (in maintenance_timesheet_time_control)</field>
+        <field name="model">maintenance.request</field>
+        <field
+            name="inherit_id"
+            ref="maintenance_timesheet.hr_equipment_request_view_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="timesheet_total_hours" position="after">
+                <field
+                    name="show_time_control"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                    invisible="1"
+                />
+                <button
+                    name="button_start_work"
+                    title="Start work"
+                    tabindex="-1"
+                    type="object"
+                    icon="fa-play-circle text-success"
+                    invisible="show_time_control != 'start'"
+                    class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+                <button
+                    name="button_end_work"
+                    title="Stop work"
+                    tabindex="-1"
+                    type="object"
+                    icon="fa-stop-circle text-warning"
+                    invisible="show_time_control != 'stop'"
+                    class="oe_stat_button"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
