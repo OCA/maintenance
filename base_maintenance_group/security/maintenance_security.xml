@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017-2019 Onestein (<https://www.onestein.eu>)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <data noupdate="0">
+        <record id="group_maintenance_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="module_maintenance" />
+        </record>
+        <record id="maintenance.group_equipment_manager" model="res.groups">
+            <field name="category_id" ref="module_maintenance" />
+            <field name="implied_ids" eval="[(4, ref('group_maintenance_user'))]" />
+        </record>
+        <record id="group_maintenance_manager" model="res.groups">
+            <field name="name">Full Access</field>
+            <field name="category_id" ref="module_maintenance" />
+            <field
+                name="implied_ids"
+                eval="[(4, ref('maintenance.group_equipment_manager')), (4, ref('group_maintenance_user'))]"
+            />
+            <field
+                name="users"
+                eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+            />
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="only_subscribe_maintenance_team" model="ir.rule">
+            <field name="name">Only Subscribe Maintenance Team</field>
+            <field name="model_id" ref="maintenance.model_maintenance_team" />
+            <field name="groups" eval="[(6, 0, [ref('group_maintenance_user')])]" />
+            <field name="domain_force">[('member_ids', 'in', [user.id])]</field>
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="True" />
+            <field name="perm_unlink" eval="True" />
+            <field name="perm_create" eval="True" />
+        </record>
+        <record id="all_maintenance_team" model="ir.rule">
+            <field name="name">All Maintenance Team</field>
+            <field name="model_id" ref="maintenance.model_maintenance_team" />
+            <field
+                name="groups"
+                eval="[(6, 0, [ref('maintenance.group_equipment_manager')])]"
+            />
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="True" />
+            <field name="perm_unlink" eval="True" />
+            <field name="perm_create" eval="True" />
+        </record>
+    </data>
+</odoo>
