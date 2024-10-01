@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_request_repair
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-22 23:09+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: maintenance_request_repair
+#: model:ir.model.fields,field_description:maintenance_request_repair.field_repair_order__maintenance_request_count
+msgid "# Maintenances"
+msgstr "# Mantenimientos"
+
+#. module: maintenance_request_repair
+#: model:ir.model,name:maintenance_request_repair.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Solicitud de mantenimiento"
+
+#. module: maintenance_request_repair
+#: model:ir.model.fields,field_description:maintenance_request_repair.field_repair_order__maintenance_request_ids
+msgid "Maintenance Requests"
+msgstr "Peticiones de mantenimiento"
+
+#. module: maintenance_request_repair
+#: model_terms:ir.ui.view,arch_db:maintenance_request_repair.repair_order_form_view
+msgid "Maintenances"
+msgstr "Mantenimientos"
+
+#. module: maintenance_request_repair
+#: model:ir.model,name:maintenance_request_repair.model_repair_order
+#: model:ir.model.fields,field_description:maintenance_request_repair.field_maintenance_request__repair_order_id
+msgid "Repair Order"
+msgstr "Orden de reparación"
