@@ -36,7 +36,7 @@
     <menuitem
         id="menu_maintenance_config_settings"
         parent="maintenance.menu_maintenance_configuration"
-        sequence="100"
+        sequence="0"
         action="action_maintenance_config_settings"
         groups="maintenance.group_equipment_manager"
     />
