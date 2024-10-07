@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_maintenance](base_maintenance/) | 16.0.1.0.1 |  | Base Maintenance
+[base_maintenance_config](base_maintenance_config/) | 16.0.1.0.0 |  | Provides general settings for the Maintenance App
 [base_maintenance_group](base_maintenance_group/) | 16.0.1.0.0 |  | Provides base access groups for the Maintenance App
 [maintenance_account](maintenance_account/) | 16.0.1.1.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Account
 [maintenance_equipment_contract](maintenance_equipment_contract/) | 16.0.1.0.0 |  | Manage equipment contracts
