@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<template id="report_maintenance_request">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h2>Maintenance Request</h2>
+                    <p t-field="o.name" />
+                    <table class="table table-sm table-bordered">
+                        <tr>
+                            <td><strong>Name</strong></td>
+                            <td><span t-field="o.name" /></td>
+                            <td><strong>Equipment</strong></td>
+                            <td><span t-field="o.equipment_id.name" /></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Category</strong></td>
+                            <td><span t-field="o.category_id.name" /></td>
+                            <td><strong>Request Date</strong></td>
+                            <td><span t-field="o.request_date" /></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Maintenance Type</strong></td>
+                            <td><span t-field="o.maintenance_type" /></td>
+                            <td><strong>Maintenance Team</strong></td>
+                            <td><span t-field="o.maintenance_team_id.name" /></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Responsible</strong></td>
+                            <td><span t-field="o.user_id.partner_id.name" /></td>
+                            <td><strong>Scheduled Date</strong></td>
+                            <td><span t-field="o.schedule_date" /></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Duration</strong></td>
+                            <td><span
+                                        t-field="o.duration"
+                                        t-options='{"widget": "float_time"}'
+                                    /></td>
+                            <td><strong>Priority</strong></td>
+                            <td><span t-field="o.priority" /></td>
+                        </tr>
+                    </table>
+
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Checklist</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>State</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="o.checklist_ids" t-as="line">
+                                <td><span t-field="line.checklist_id.name" /></td>
+                                <td><span t-field="line.name" /></td>
+                                <td><span t-field="line.description" /></td>
+                                <td><span
+                                            t-field="line.state"
+                                            t-options="{'classes': {'new': 'default', 'done': 'success','process': 'default', 'block': 'danger'}}"
+                                        /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </t>
+</template>
+
+</odoo>
