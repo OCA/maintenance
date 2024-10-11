@@ -20,7 +20,7 @@
     <record id="hr_equipment_view_kanban_image" model="ir.ui.view">
         <field name="name">maintenance.equipment.kanban.image</field>
         <field name="model">maintenance.equipment</field>
-        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban"/>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
         <field name="arch" type="xml">
             <field name="activity_state" position="after">
                 <field name="id" />
