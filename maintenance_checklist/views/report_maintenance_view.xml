@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<template
+        id="report_maintenance_request_document"
+        inherit_id="base_maintenance.report_maintenance_request_document"
+    >
+    <xpath expr="//div[@id='description']" position="before">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>Checklist</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr t-foreach="doc.checklist_ids" t-as="line">
+                    <td><span t-field="line.checklist_id.name" /></td>
+                    <td><span t-field="line.name" /></td>
+                    <td><span t-field="line.description_checklist" /></td>
+                    <td><span
+                                t-field="line.state"
+                                t-options="{'classes': {'new': 'default', 'done': 'success','process': 'default', 'block': 'danger'}}"
+                            />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </xpath>
+</template>
+
+</odoo>

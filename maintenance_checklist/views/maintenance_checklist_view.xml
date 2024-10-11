@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_equipment_checklist_tree" model="ir.ui.view">
+        <field name="name">equipment.checklist.tree</field>
+        <field name="model">equipment.checklist</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="description" />
+                <field name="active" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_equipment_checklist_form" model="ir.ui.view">
+        <field name="name">equipment.checklist.form</field>
+        <field name="model">equipment.checklist</field>
+        <field name="arch" type="xml">
+            <form string="Payslip">
+            <sheet>
+                <widget
+                        name="web_ribbon"
+                        text="Archived"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}"
+                    />
+                <field name="active" invisible="1" />
+                <group>
+                    <group>
+                        <field name="name" />
+                        <field name="description" />
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Instructions">
+                        <field name="instruction" nolabel="1" />
+                    </page>
+                </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_equipment_checklist_filter" model="ir.ui.view">
+        <field name="name">equipment.checklist.select</field>
+        <field name="model">equipment.checklist</field>
+        <field name="arch" type="xml">
+            <search string="Search Payslips">
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_view_equipment_checklist_form" model="ir.actions.act_window">
+        <field name="name">Checklist Instructions</field>
+        <field name="res_model">equipment.checklist</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="search_view_id" ref="view_equipment_checklist_filter" />
+    </record>
+
+    <menuitem
+        id="menu_maintenance_checklist_instructions"
+        name="Checklist Instructions"
+        parent="maintenance.menu_maintenance_configuration"
+        action="action_view_equipment_checklist_form"
+        groups="maintenance.group_equipment_manager"
+        sequence="-1"
+    />
+
+    <record id="maintenance_request_view_form_inherit_checklist" model="ir.ui.view">
+        <field name="name">maintenance.request.view.form.inherit.checklist</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="base_maintenance.equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="before">
+                <group col="6">
+                    <field
+                        name="total_checklist"
+                        widget="gauge"
+                        nolabel="1"
+                        options="{'max_field': 'total_checklist', 'style': 'width:160px; height: 120px;'}"
+                    />
+                    <field
+                        name="completed_checklist"
+                        widget="gauge"
+                        nolabel="1"
+                        options="{'max_field': 'total_checklist', 'style': 'width:160px; height: 120px;'}"
+                    />
+                    <field
+                        name="inprogress_checklist"
+                        widget="gauge"
+                        nolabel="1"
+                        options="{'max_field': 'total_checklist', 'style': 'width:160px; height: 120px;'}"
+                    />
+                    <field
+                        name="onhold_checklist"
+                        widget="gauge"
+                        nolabel="1"
+                        options="{'max_field': 'total_checklist', 'style': 'width:160px; height: 120px;'}"
+                    />
+                </group>
+                <h2>Checklists</h2>
+                <field name="checklist_ids">
+                    <tree>
+                        <field name="checklist_id" />
+                        <field name="name" />
+                        <field name="description_checklist" />
+                        <field
+                            name="state"
+                            widget="label_selection"
+                            options="{'classes': {'new': 'default', 'done': 'success','process': 'default', 'block': 'danger'}}"
+                        />
+                        <button
+                            name="confirm_checklist"
+                            string="Start"
+                            states="new"
+                            type="object"
+                            icon="fa-check text-success"
+                        />
+                        <button
+                            name="mark_as_done"
+                            string="Mark as Done"
+                            states="process"
+                            type="object"
+                            icon="fa-level-down text-success"
+                        />
+                        <button
+                            name="mark_as_hold"
+                            string="On-Hold"
+                            states="process"
+                            type="object"
+                            icon="fa-level-down text-danger"
+                        />
+                        <button
+                            name="confirm_checklist"
+                            string="Start"
+                            states="block"
+                            type="object"
+                            icon="fa-check text-success"
+                        />
+                    </tree>
+                    <form string="Payslip">
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="checklist_id" />
+                                    <field name="name" />
+                                    <field name="state" invisible="1" />
+                                </group>
+                                <group>
+                                    <field name="description_checklist" />
+                                    <field name="reason" />
+                                </group>
+                            </group>
+                            <notebook>
+                                <page string="Instructions">
+                                    <field name="instruction" nolabel="1" />
+                                </page>
+                            </notebook>
+                        </sheet>
+                    </form>
+                </field>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
