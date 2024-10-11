@@ -8,7 +8,7 @@
     "website": "https://github.com/OCA/maintenance",
     "summary": "Checklist Maintenance",
     "license": "AGPL-3",
-    "depends": ["base", "maintenance"],
+    "depends": ["base_maintenance"],
     "data": [
         "security/ir.model.access.csv",
         "views/report_maintenance_view.xml",

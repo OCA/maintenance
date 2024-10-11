@@ -71,9 +71,9 @@
     <record id="maintenance_request_view_form_inherit_checklist" model="ir.ui.view">
         <field name="name">maintenance.request.view.form.inherit.checklist</field>
         <field name="model">maintenance.request</field>
-        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="inherit_id" ref="base_maintenance.equipment_request_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='description']" position="before">
+            <xpath expr="//notebook" position="before">
                 <group col="6">
                     <field
                         name="total_checklist"
@@ -164,15 +164,5 @@
             </xpath>
         </field>
     </record>
-
-     <report
-        id="report_maintenance_request_id"
-        model="maintenance.request"
-        string="Maintenance Request"
-        report_type="qweb-pdf"
-        name="maintenance_checklist.report_maintenance_request"
-        file="maintenance_checklist.report_maintenance_request"
-        print_report_name="'Maintenance - %s' % (object.equipment_id.name)"
-    />
 
 </odoo>
