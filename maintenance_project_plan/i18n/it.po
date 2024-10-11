@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_project_plan
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-07-28 11:49+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: maintenance_project_plan
+#: model:ir.model.fields,field_description:maintenance_project_plan.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_project_plan.field_maintenance_plan__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: maintenance_project_plan
+#: model:ir.model.fields,field_description:maintenance_project_plan.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_project_plan.field_maintenance_plan__id
+msgid "ID"
+msgstr "ID"
+
+#. module: maintenance_project_plan
+#: model:ir.model.fields,field_description:maintenance_project_plan.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:maintenance_project_plan.field_maintenance_plan____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: maintenance_project_plan
+#: model:ir.model,name:maintenance_project_plan.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Attrezzatura manutenzione"
+
+#. module: maintenance_project_plan
+#: model:ir.model,name:maintenance_project_plan.model_maintenance_plan
+msgid "Maintenance Plan"
+msgstr "Piano manutenzione"
+
+#. module: maintenance_project_plan
+#: model:ir.model.fields,field_description:maintenance_project_plan.field_maintenance_plan__project_id
+msgid "Project"
+msgstr "Progetto"
+
+#. module: maintenance_project_plan
+#: model:ir.model.fields,field_description:maintenance_project_plan.field_maintenance_plan__task_id
+msgid "Task"
+msgstr "Lavoro"
