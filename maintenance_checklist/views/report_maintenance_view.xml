@@ -56,7 +56,7 @@
                             <tr t-foreach="o.checklist_ids" t-as="line">
                                 <td><span t-field="line.checklist_id.name" /></td>
                                 <td><span t-field="line.name" /></td>
-                                <td><span t-field="line.description" /></td>
+                                <td><span t-field="line.description_checklist" /></td>
                                 <td><span
                                             t-field="line.state"
                                             t-options="{'classes': {'new': 'default', 'done': 'success','process': 'default', 'block': 'danger'}}"
