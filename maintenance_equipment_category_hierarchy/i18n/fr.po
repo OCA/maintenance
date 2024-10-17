@@ -27,25 +27,11 @@ msgid "Complete Name"
 msgstr "Nom complet"
 
 #. module: maintenance_equipment_category_hierarchy
-#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__display_name
-msgid "Display Name"
-msgstr "Nom affiché"
-
-#. module: maintenance_equipment_category_hierarchy
+#. odoo-python
 #: code:addons/maintenance_equipment_category_hierarchy/models/maintenance_equipment_category.py:0
 #, python-format
 msgid "Error ! You cannot create recursive categories."
 msgstr "Erreur ! Vous ne pouvez pas créer de catégories récursives."
-
-#. module: maintenance_equipment_category_hierarchy
-#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__id
-msgid "ID"
-msgstr "ID"
-
-#. module: maintenance_equipment_category_hierarchy
-#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category____last_update
-msgid "Last Modified on"
-msgstr "Dernière modification le"
 
 #. module: maintenance_equipment_category_hierarchy
 #: model:ir.model,name:maintenance_equipment_category_hierarchy.model_maintenance_equipment_category
@@ -61,3 +47,12 @@ msgstr "Catégorie parente"
 #: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__parent_path
 msgid "Parent Path"
 msgstr "Chemin parent"
+
+#~ msgid "Display Name"
+#~ msgstr "Nom affiché"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Dernière modification le"
