@@ -47,11 +47,12 @@ class MaintenanceTeam(models.Model):
                     rec.sequence_id = self.env["ir.sequence"].create(seq_vals)
         return super().write(vals)
 
-    @api.model
-    def create(self, vals):
-        prefix = vals.get("code_prefix")
-        if prefix:
-            seq_vals = self._prepare_ir_sequence(prefix)
-            sequence = self.env["ir.sequence"].create(seq_vals)
-            vals["sequence_id"] = sequence.id
-        return super().create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            prefix = vals.get("code_prefix")
+            if prefix:
+                seq_vals = self._prepare_ir_sequence(prefix)
+                sequence = self.env["ir.sequence"].create(seq_vals)
+                vals["sequence_id"] = sequence.id
+        return super().create(vals_list)
