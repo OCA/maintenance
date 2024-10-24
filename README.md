@@ -41,7 +41,7 @@ addon | version | maintainers | summary
 [maintenance_purchase](maintenance_purchase/) | 16.0.1.0.0 |  | Create Equipments with purchases
 [maintenance_request_purchase](maintenance_request_purchase/) | 16.0.1.0.0 |  | Allows you to link PO with maintenance requests
 [maintenance_request_repair](maintenance_request_repair/) | 16.0.1.0.0 |  | This is a bridge module between Maintenance and Repair
-[maintenance_request_sequence](maintenance_request_sequence/) | 16.0.1.0.0 |  | Adds sequence to maintenance requests
+[maintenance_request_sequence](maintenance_request_sequence/) | 16.0.1.0.1 |  | Adds sequence to maintenance requests
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 16.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Manage transition visibility and management between stages
 [maintenance_security](maintenance_security/) | 16.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Security
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 16.0.1.0.0 |  | Create hierarchies on teams
