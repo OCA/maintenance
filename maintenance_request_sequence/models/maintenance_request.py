@@ -11,14 +11,15 @@ class MaintenanceRequest(models.Model):
 
     code = fields.Char(readonly=True, copy=False, default="/")
 
-    @api.model
-    def create(self, vals):
-        if vals.get("code", "/") == "/":
-            team_id = vals.get("maintenance_team_id")
-            sequence = self.env["maintenance.team"].browse(
-                team_id
-            ).sequence_id or self.env.ref(
-                "maintenance_request_sequence.seq_maintenance_request_auto"
-            )
-            vals["code"] = sequence.next_by_id()
-        return super().create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get("code", "/") == "/":
+                team_id = vals.get("maintenance_team_id")
+                sequence = self.env["maintenance.team"].browse(
+                    team_id
+                ).sequence_id or self.env.ref(
+                    "maintenance_request_sequence.seq_maintenance_request_auto"
+                )
+                vals["code"] = sequence.next_by_id()
+        return super().create(vals_list)
