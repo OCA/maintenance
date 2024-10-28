@@ -27,7 +27,9 @@ class MaintenanceChecklist(models.Model):
         "Equipment",
         related="request_id.equipment_id",
     )
-    request_id = fields.Many2one("maintenance.request", "Maintenance Request")
+    request_id = fields.Many2one(
+        "maintenance.request", "Maintenance Request", required=True, ondelete="cascade"
+    )
     checklist_id = fields.Many2one("equipment.checklist", "Checklist")
     state = fields.Selection(
         [
