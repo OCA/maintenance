@@ -63,16 +63,17 @@ class MaintenanceEquipmentCategory(models.Model):
                 sequence = category.sequence_id._get_current_sequence()
                 sequence.sudo().number_next = category.sequence_number_next
 
-    @api.model
-    def create(self, vals):
-        if not vals.get("sequence_id", False):
-            if vals.get("sequence_prefix", False):
-                vals["sequence_id"] = self.sudo()._create_sequence(vals).id
-        else:
-            vals["sequence_prefix"] = (
-                self.env["ir.sequence"].browse(vals["sequence_id"]).prefix
-            )
-        result = super(MaintenanceEquipmentCategory, self).create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if not vals.get("sequence_id", False):
+                if vals.get("sequence_prefix", False):
+                    vals["sequence_id"] = self.sudo()._create_sequence(vals).id
+            else:
+                vals["sequence_prefix"] = (
+                    self.env["ir.sequence"].browse(vals["sequence_id"]).prefix
+                )
+        result = super().create(vals_list)
         self._compute_equipment_code()
         return result
 

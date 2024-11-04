@@ -59,3 +59,27 @@ class TestMaintenanceEquipmentSequence(TransactionCase):
         # Remove code and be automatically set to sequence next value
         equipment_1.write({"serial_no": False})
         self.assertEqual(equipment_1.serial_no, "TTC0002")
+
+    def test_02_maintenance_equipment_sequence(self):
+        """Create an equipment category linked to a default sequence with a prefix,
+        and verify that the category correctly inherits the sequence prefix.
+        """
+        # Create a sequence
+        seq_1 = self.sequence_obj.create(
+            {
+                "name": "Test Sequence",
+                "implementation": "no_gap",
+                "prefix": "TTC_TEST",
+                "padding": 4,
+                "number_increment": 1,
+                "use_date_range": False,
+            }
+        )
+        # Create an equipment category linked to the sequence
+        categ_1 = self.maintenance_equipment_categ_obj.create(
+            {
+                "name": "Test Category 0",
+                "sequence_id": seq_1.id,
+            }
+        )
+        self.assertEqual(categ_1.sequence_prefix, seq_1.prefix)
