@@ -45,9 +45,9 @@
         <field name="model">maintenance.equipment</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
         <field name="arch" type="xml">
-            <field name="name" position="before">
-                <field name="serial_no" />
-            </field>
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="serial_no" position="move" />
+            </xpath>
         </field>
     </record>
     <record id="hr_equipment_view_search" model="ir.ui.view">

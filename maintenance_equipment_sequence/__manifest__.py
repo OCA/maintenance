@@ -6,7 +6,7 @@
     "summary": """
         Adds sequence to maintenance equipment defined in the equipment's
         category""",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.0.1",
     "license": "AGPL-3",
     "author": "ForgeFlow S.L.," "Odoo Community Association (OCA)",
     "maintainers": ["AdriaGForgeFlow"],
