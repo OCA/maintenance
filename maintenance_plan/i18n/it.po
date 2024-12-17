@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-12-19 15:34+0000\n"
+"PO-Revision-Date: 2024-12-17 11:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.report_maintenance_request_document
@@ -35,7 +35,7 @@ msgstr "Attivo"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__active
 msgid "Active Kind"
-msgstr "Pianificazione attiva"
+msgstr "Genere attivo"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_ids
@@ -292,7 +292,7 @@ msgstr "Attrezzatura manutenzione"
 #: model:ir.model,name:maintenance_plan.model_maintenance_kind
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_kind_id
 msgid "Maintenance Kind"
-msgstr "Pianificazione manutenzione"
+msgstr "Genere manutenzione"
 
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_plan
@@ -339,18 +339,18 @@ msgstr "Durata manutenzione in ore"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__maintenance_kind_id
 msgid "Maintenance kind"
-msgstr "Pianificazione manutenzione"
+msgstr "Genere manutenzione"
 
 #. module: maintenance_plan
 #: model:ir.model.constraint,message:maintenance_plan.constraint_maintenance_kind_name_uniq
 msgid "Maintenance kind name already exists."
-msgstr "Nome pianificazione manutenzione già esistente."
+msgstr "Nome genere manutenzione già esistente."
 
 #. module: maintenance_plan
 #: model:ir.actions.act_window,name:maintenance_plan.maintenance_kind_action
 #: model:ir.ui.menu,name:maintenance_plan.menu_maintenance_kind_configuration
 msgid "Maintenance kinds"
-msgstr "Pianificazioni manutenzione"
+msgstr "Generi manutenzione"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__maintenance_plan_ids
@@ -615,7 +615,7 @@ msgstr "Numero messaggi non letti"
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 #, python-format
 msgid "Unspecified kind"
-msgstr "Pianificazione non specificata"
+msgstr "Genere non specificato"
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
@@ -656,8 +656,8 @@ msgid ""
 "You cannot define multiple times the same maintenance kind on an equipment "
 "maintenance plan."
 msgstr ""
-"Non si può definire più volte la stessa pianificazione nel piano di "
-"manutenzione di una attrezzatura."
+"Non si può definire più volte lo stesso genere di manutenzione in un piano "
+"di manutenzione attrezzatura."
 
 #. module: maintenance_plan
 #: code:addons/maintenance_plan/hooks.py:0
