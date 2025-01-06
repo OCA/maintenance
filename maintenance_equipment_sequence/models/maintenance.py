@@ -74,7 +74,7 @@ class MaintenanceEquipmentCategory(models.Model):
                     self.env["ir.sequence"].browse(vals["sequence_id"]).prefix
                 )
         result = super().create(vals_list)
-        self._compute_equipment_code()
+        result._compute_equipment_code()
         return result
 
     def write(self, vals):
