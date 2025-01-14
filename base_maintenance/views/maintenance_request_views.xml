@@ -13,13 +13,9 @@
                     <!--Empty, to be inherited by other modules.-->
                 </div>
             </xpath>
-            <field name="description" position="replace">
-                <notebook colspan="2">
-                    <page name="description_page" string="Description">
-                        <field name="description" />
-                    </page>
-                </notebook>
-            </field>
+            <xpath expr="//field[@name='description']/.." position="attributes">
+                <attribute name="name">description_page</attribute>
+            </xpath>
         </field>
     </record>
 </odoo>
