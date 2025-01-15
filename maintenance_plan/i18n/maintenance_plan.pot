@@ -423,7 +423,6 @@ msgstr ""
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__notes
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_request_view_form
 msgid "Notes"
 msgstr ""
 
