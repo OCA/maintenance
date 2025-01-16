@@ -17,11 +17,6 @@ msgstr ""
 "X-Generator: Weblate 4.14.1\n"
 
 #. module: maintenance_request_employee
-#: model_terms:ir.ui.view,arch_db:maintenance_request_employee.maintenance_request_view_kanban_inherit_hr
-msgid "Employee"
-msgstr "Dipendente"
-
-#. module: maintenance_request_employee
 #: model:ir.model.fields,field_description:maintenance_request_employee.field_maintenance_request__employee_ids
 msgid "Employees"
 msgstr "Dipendenti"
@@ -35,3 +30,6 @@ msgstr "Manutenzioni coinvolte"
 #: model:ir.model,name:maintenance_request_employee.model_maintenance_request
 msgid "Maintenance Request"
 msgstr "Richiesta manutenzione"
+
+#~ msgid "Employee"
+#~ msgstr "Dipendente"
