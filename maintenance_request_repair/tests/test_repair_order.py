@@ -163,7 +163,7 @@ class TestRepairOrder(common.TransactionCase):
         self.assertEqual(self.action["type"], "ir.actions.act_window")
         self.assertEqual(self.action["res_model"], "maintenance.request")
         self.assertEqual(
-            self.action["view_mode"], "kanban,tree,form,pivot,graph,calendar"
+            self.action["view_mode"], "kanban,list,form,pivot,graph,calendar,activity"
         )
         self.assertEqual(self.action["target"], "current")
         self.assertEqual(self.action["res_id"], self.maintenance_request.id)
@@ -185,9 +185,10 @@ class TestRepairOrder(common.TransactionCase):
             self.action["context"], {"default_repair_order_id": self.repair_order.id}
         )
         self.assertEqual(self.action["views"][0][1], "kanban")
-        self.assertEqual(self.action["views"][1][1], "tree")
+        self.assertEqual(self.action["views"][1][1], "list")
         self.assertEqual(self.action["views"][2][1], "form")
         self.assertEqual(self.action["views"][3][1], "pivot")
         self.assertEqual(self.action["views"][4][1], "graph")
         self.assertEqual(self.action["views"][5][1], "calendar")
-        self.assertEqual(len(self.action["views"]), 6)
+        self.assertEqual(self.action["views"][6][1], "activity")
+        self.assertEqual(len(self.action["views"]), 7)
