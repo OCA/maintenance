@@ -6,7 +6,6 @@ from odoo.exceptions import ValidationError
 
 
 class MaintenanceEquipmentCategory(models.Model):
-
     _inherit = "maintenance.equipment.category"
 
     _parent_name = "parent_id"
@@ -34,9 +33,8 @@ class MaintenanceEquipmentCategory(models.Model):
     def _compute_complete_name(self):
         for category in self:
             if category.parent_id:
-                category.complete_name = "{} / {}".format(
-                    category.parent_id.complete_name,
-                    category.name,
+                category.complete_name = (
+                    f"{category.parent_id.complete_name} / {category.name}"
                 )
             else:
                 category.complete_name = category.name
