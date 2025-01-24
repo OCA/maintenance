@@ -11,19 +11,17 @@ class TestMaintenanceEquipmentUsage(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.user = new_test_user(
-            cls.env,
-            login="test_basic_user",
-        )
+        cls.user = new_test_user(cls.env, login="test_basic_user")
         cls.equipment = cls.env["maintenance.equipment"].create(
             {"name": "Test equipment"}
         )
-        cls.equipment_usage = cls._create_equipment_usage(cls)
+        cls.equipment_usage = cls._create_equipment_usage()
 
-    def _create_equipment_usage(self):
-        equipment_usage_form = Form(self.env["maintenance.equipment.usage"])
-        equipment_usage_form.equipment_id = self.equipment
-        equipment_usage_form.user_id = self.user
+    @classmethod
+    def _create_equipment_usage(cls):
+        equipment_usage_form = Form(cls.env["maintenance.equipment.usage"])
+        equipment_usage_form.equipment_id = cls.equipment
+        equipment_usage_form.user_id = cls.user
         return equipment_usage_form.save()
 
     def test_maintenance_equipment_full_process(self):
@@ -54,3 +52,14 @@ class TestMaintenanceEquipmentUsage(BaseCommon):
         self.assertEqual(self.equipment_usage.state, "cancel")
         equipment_usage2.action_pick()
         self.assertEqual(equipment_usage2.state, "in_use")
+
+    def test_compute_usage_count(self):
+        equipment_usage2 = self.env["maintenance.equipment.usage"].create(
+            {"equipment_id": self.equipment.id, "user_id": self.user.id}
+        )
+        self.equipment._compute_usage_count()
+        self.assertEqual(self.equipment.usage_count, 2)
+
+        equipment_usage2.unlink()
+        self.equipment._compute_usage_count()
+        self.assertEqual(self.equipment.usage_count, 1)

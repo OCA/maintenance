@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-03-13 13:36+0000\n"
+"PO-Revision-Date: 2025-01-10 14:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,17 +14,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: maintenance_equipment_usage
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_kanban
 msgid ""
 "<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
-"primary\" attrs=\"{'invisible': [('in_use', '=', False)]}\">In use</span>"
+"primary\" invisible=\"not in_use\">In use</span>"
 msgstr ""
 "<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
-"primary\" attrs=\"{'invisible': [('in_use', '=', False)]}\">In uso</span>"
+"primary\" invisible=\"not in_use\">In uso</span>"
 
 #. module: maintenance_equipment_usage
 #: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_needaction
@@ -187,11 +187,6 @@ msgid "Is Follower"
 msgstr "Segue"
 
 #. module: maintenance_equipment_usage
-#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: maintenance_equipment_usage
 #: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__write_uid
 msgid "Last Updated by"
 msgstr "Ultimo aggiornamento di"
@@ -205,11 +200,6 @@ msgstr "Ultimo aggiornamento il"
 #: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__partner_id
 msgid "Location"
 msgstr "Ubicazione"
-
-#. module: maintenance_equipment_usage
-#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_main_attachment_id
-msgid "Main Attachment"
-msgstr "Allegato principale"
 
 #. module: maintenance_equipment_usage
 #: model:ir.model,name:maintenance_equipment_usage.model_maintenance_equipment
@@ -238,8 +228,6 @@ msgstr "Scadenza mia attività"
 
 #. module: maintenance_equipment_usage
 #. odoo-python
-#: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
-#: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
 #: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
 #: model:ir.model.fields.selection,name:maintenance_equipment_usage.selection__maintenance_equipment_usage__state__draft
 #, python-format
@@ -316,6 +304,11 @@ msgstr "Data prelievo per mese"
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
 msgid "Picking Month"
 msgstr "Mese prelievo"
+
+#. module: maintenance_equipment_usage
+#: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__rating_ids
+msgid "Ratings"
+msgstr "Valutazioni"
 
 #. module: maintenance_equipment_usage
 #: model:ir.model.fields.selection,name:maintenance_equipment_usage.selection__maintenance_equipment_usage__state__reserved
@@ -407,3 +400,16 @@ msgstr "Messaggi sito web"
 #: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__website_message_ids
 msgid "Website communication history"
 msgstr "Cronologia comunicazioni sito web"
+
+#~ msgid ""
+#~ "<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
+#~ "primary\" attrs=\"{'invisible': [('in_use', '=', False)]}\">In use</span>"
+#~ msgstr ""
+#~ "<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
+#~ "primary\" attrs=\"{'invisible': [('in_use', '=', False)]}\">In uso</span>"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
+
+#~ msgid "Main Attachment"
+#~ msgstr "Allegato principale"

@@ -4,7 +4,7 @@
         <field name="name">maintenance.equipment.usage.tree</field>
         <field name="model">maintenance.equipment.usage</field>
         <field name="arch" type="xml">
-            <tree decoration-muted="state in ('done','cancel')">
+            <list decoration-muted="state in ('done','cancel')">
                 <field name="name" />
                 <field name="equipment_id" />
                 <field name="user_id" />
@@ -12,7 +12,7 @@
                 <field name="date_picking" />
                 <field name="date_return" />
                 <field name="state" />
-            </tree>
+            </list>
         </field>
     </record>
     <record id="maintenance_equipment_usage_form" model="ir.ui.view">
@@ -23,21 +23,21 @@
                 <header>
                     <button
                         name="action_pick"
-                        states="draft,reserved"
+                        invisible="state not in ('draft','reserved')"
                         string="Pick"
                         type="object"
                         class="oe_highlight"
                     />
                     <button
                         name="action_return"
-                        states="in_use"
+                        invisible="state!='in_use'"
                         string="Return"
                         type="object"
                         class="oe_highlight"
                     />
                     <button
                         name="action_cancel"
-                        states="draft,reserved,in_use"
+                        invisible="state not in ('draft','reserved','in_use')"
                         string="Cancel"
                         type="object"
                     />
@@ -51,13 +51,23 @@
                     </div>
                     <group>
                         <group>
-                            <field name="user_id" />
-                            <field name="equipment_id" />
+                            <field
+                                name="user_id"
+                                readonly="state not in ('draft','reserved')"
+                            />
+                            <field
+                                name="equipment_id"
+                                readonly="state not in ('draft','reserved')"
+                            />
                         </group>
                         <group>
-                            <field name="partner_id" />
+                            <field
+                                name="partner_id"
+                                readonly="state not in ('draft','reserved')"
+                            />
                             <field
                                 name="company_id"
+                                readonly="state not in ('draft','reserved')"
                                 groups="base.group_multi_company"
                             />
                         </group>
@@ -67,26 +77,32 @@
                             <field name="create_date" invisible="1" />
                             <field
                                 name="picking_user_id"
-                                attrs="{'required': [('create_date', '!=', False)]}"
+                                readonly="state not in ('draft','reserved')"
+                                required="create_date"
                             />
                             <field
                                 name="return_user_id"
-                                states="in_use,returned,cancel"
+                                required="state=='in_use'"
+                                readonly="state in ('returned','cancel')"
+                                invisible="state not in ('in_use','returned','cancel')"
                             />
                         </group>
                         <group>
-                            <field name="date_picking" />
-                            <field name="date_return" states="in_use,returned,cancel" />
+                            <field
+                                name="date_picking"
+                                readonly="state not in ('draft','reserved')"
+                            />
+                            <field
+                                name="date_return"
+                                readonly="state in ('returned','cancel')"
+                                invisible="state not in ('in_use','returned','cancel')"
+                            />
                         </group>
                     </group>
                     <separator string="Notes" />
                     <field name="notes" />
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" />
-                    <field name="activity_ids" />
-                    <field name="message_ids" />
-                </div>
+                <chatter />
             </form>
         </field>
     </record>
@@ -159,7 +175,7 @@
         <field name="name">Equipment Usage</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">maintenance.equipment.usage</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="search_view_id" ref="maintenance_equipment_usage_search" />
         <field name="context">{'search_default_not_returned': 1}</field>
         <field name="help" type="html">
@@ -189,7 +205,7 @@
         <field name="name">Equipment Usage</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">maintenance.equipment.usage</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="view_id" eval="False" />
         <field name="search_view_id" ref="maintenance_equipment_usage_search" />
         <field
