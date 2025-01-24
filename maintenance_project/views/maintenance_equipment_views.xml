@@ -55,7 +55,8 @@
                         class="oe_link"
                         attrs="{'invisible': ['|', ('id', '=', False),('project_id', '!=', False)]}"
                     >
-                        <span class="fa fa-plus" /><span> Create project</span>
+                        <span class="fa fa-plus" />
+                        <span> Create project</span>
                     </button>
                 </div>
             </xpath>
