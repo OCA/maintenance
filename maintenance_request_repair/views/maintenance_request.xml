@@ -2,7 +2,6 @@
 <!-- Copyright 2020 - TODAY, Marcel Savegnago - Escodoo
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-
     <record model="ir.ui.view" id="maintenance_request_form_view">
         <field
             name="name"
@@ -16,7 +15,6 @@
         </field>
     </record>
 
-
     <record model="ir.ui.view" id="maintenance_request_tree_view">
         <field
             name="name"
@@ -29,5 +27,4 @@
             </field>
         </field>
     </record>
-
 </odoo>
