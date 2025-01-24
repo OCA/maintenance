@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class RepairOrder(models.Model):
-
     _inherit = "repair.order"
 
     maintenance_request_ids = fields.One2many(
@@ -33,7 +32,7 @@ class RepairOrder(models.Model):
         maintenance_request_ids = self.mapped("maintenance_request_ids")
         # choose the view_mode accordingly
         if not maintenance_request_ids or len(maintenance_request_ids) > 1:
-            result["domain"] = "[('id','in',%s)]" % (maintenance_request_ids.ids)
+            result["domain"] = f"[('id','in',{maintenance_request_ids.ids})]"
         elif len(maintenance_request_ids) == 1:
             res = self.env.ref("maintenance.hr_equipment_request_view_form", False)
             form_view = [(res and res.id or False, "form")]
