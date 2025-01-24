@@ -56,10 +56,19 @@ Authors
 Contributors
 ------------
 
-- Enric Tobella
-- Jaime Arroyo
-- Olga Marco
-- Kevin Luna
+- CreuBlanca
+
+  - Jaime Arroyo
+  - Olga Marco
+  - Kevin Luna
+
+- `Dixmit <www.dixmit.com>`__
+
+  - Enric Tobella
+
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
+
+  - Bhavesh Heliconia
 
 Maintainers
 -----------
