@@ -36,8 +36,8 @@
                                     <th>Responsible</th>
                                     <th>Description</th>
                                     <th t-if="show_task"><t
-                                            t-if="show_project"
-                                        >Project - </t>Task</th>
+                                        t-if="show_project"
+                                    >Project - </t>Task</th>
                                     <th class="text-right">Time</th>
                                 </tr>
                             </thead>
