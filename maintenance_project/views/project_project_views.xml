@@ -4,7 +4,7 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.view_project_kanban" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='rating_status']" position="after">
+            <xpath expr="//field[@name='rating_active']" position="before">
                 <field
                     name="equipment_count"
                     groups="maintenance.group_equipment_manager"
