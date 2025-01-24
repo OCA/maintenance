@@ -1,7 +1,7 @@
 # Copyright 2019 Creu Blanca
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -27,7 +27,7 @@ class MaintenanceEquipmentCategory(models.Model):
     child_id = fields.One2many(
         "maintenance.equipment.category", "parent_id", "Child Categories"
     )
-    parent_path = fields.Char(index=True, unaccent=False)
+    parent_path = fields.Char(index=True)
 
     @api.depends("name", "parent_id.complete_name")
     def _compute_complete_name(self):
@@ -41,6 +41,8 @@ class MaintenanceEquipmentCategory(models.Model):
 
     @api.constrains("parent_id")
     def _check_category_recursion(self):
-        if not self._check_recursion():
-            raise ValidationError(_("Error ! You cannot create recursive categories."))
+        if self._has_cycle():
+            raise ValidationError(
+                self.env._("Error ! You cannot create recursive categories.")
+            )
         return True
