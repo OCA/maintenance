@@ -7,12 +7,12 @@
     "author": "Onestein, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
     "category": "Maintenance",
-    "version": "16.0.1.0.0",
+    "version": "18.0.1.0.0",
     "license": "AGPL-3",
     "depends": ["maintenance"],
     "data": [
         "data/maintenance_data.xml",
         "security/maintenance_security.xml",
-        "menuitems.xml",
+        "views/maintenance_views.xml",
     ],
 }
