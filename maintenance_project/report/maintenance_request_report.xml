@@ -6,11 +6,11 @@
     >
         <xpath expr="//div[@id='schedule_informations']" position="after">
             <div class="row mt32 mb32" id="project_informations">
-                <div t-if="doc.project_id" class="col-auto mw-100 mb-2">
+                <div t-if="doc.project_id" class="col-3">
                     <strong>Project:</strong>
                     <p class="m-0" t-field="doc.project_id" />
                 </div>
-                <div t-if="doc.task_id" class="col-auto mw-100 mb-2">
+                <div t-if="doc.task_id" class="col-3">
                     <strong>Task:</strong>
                     <p class="m-0" t-field="doc.task_id" />
                 </div>
