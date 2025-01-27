@@ -60,26 +60,109 @@ class TestMaintenanceEquipmentSequence(TransactionCase):
         equipment_1.write({"serial_no": False})
         self.assertEqual(equipment_1.serial_no, "TTC0002")
 
-    def test_02_maintenance_equipment_sequence(self):
-        """Create an equipment category linked to a default sequence with a prefix,
-        and verify that the category correctly inherits the sequence prefix.
-        """
-        # Create a sequence
-        seq_1 = self.sequence_obj.create(
+    def test_02_compute_seq_number_next(self):
+        """Test Compute 'sequence_number_next' according to the current sequence in use,
+        an ir.sequence or an ir.sequence.date_range."""
+
+        sequence = self.sequence_obj.create(
             {
                 "name": "Test Sequence",
-                "implementation": "no_gap",
-                "prefix": "TTC_TEST",
-                "padding": 4,
+                "prefix": "TST",
+                "padding": 3,
+                "number_next": 5,
+                "use_date_range": False,
+            }
+        )
+
+        category = self.maintenance_equipment_categ_obj.create(
+            {
+                "name": "Test Category with Sequence",
+                "sequence_id": sequence.id,
+            }
+        )
+
+        category._compute_seq_number_next()
+        self.assertEqual(category.sequence_number_next, 5)
+
+        sequence.write({"number_next_actual": 10})
+        category._compute_seq_number_next()
+        self.assertEqual(category.sequence_number_next, 10)
+
+        category_no_seq = self.maintenance_equipment_categ_obj.create(
+            {
+                "name": "Test Category without Sequence",
+            }
+        )
+
+        category_no_seq._compute_seq_number_next()
+        self.assertEqual(category_no_seq.sequence_number_next, 1)
+
+    def test_03_create_with_existing_sequence(self):
+        """Test def create(self, vals):"""
+
+        existing_sequence = self.sequence_obj.create(
+            {
+                "name": "Existing Sequence",
+                "prefix": "EXS",
+                "padding": 3,
                 "number_increment": 1,
                 "use_date_range": False,
             }
         )
-        # Create an equipment category linked to the sequence
-        categ_1 = self.maintenance_equipment_categ_obj.create(
+
+        category_with_seq = self.maintenance_equipment_categ_obj.create(
             {
-                "name": "Test Category 0",
-                "sequence_id": seq_1.id,
+                "name": "Category with Existing Sequence",
+                "sequence_id": existing_sequence.id,
             }
         )
-        self.assertEqual(categ_1.sequence_prefix, seq_1.prefix)
+
+        self.assertEqual(category_with_seq.sequence_prefix, "EXS")
+        self.assertEqual(category_with_seq.sequence_id.id, existing_sequence.id)
+
+    def test_04_compute_equipment_code(self):
+        """Test def _compute_equipment_code(self):"""
+
+        seq_01 = self.sequence_obj.create(
+            {
+                "name": "Test Sequence",
+                "prefix": "TST",
+                "padding": 3,
+                "number_increment": 1,
+                "use_date_range": False,
+            }
+        )
+
+        cat_01 = self.maintenance_equipment_categ_obj.create(
+            {"name": "Test Category", "sequence_id": seq_01.id}
+        )
+
+        equipment_01 = self.env["maintenance.equipment"].create(
+            {
+                "name": "Test Equipment 1",
+                "category_id": cat_01.id,
+                "serial_no": False,
+            }
+        )
+
+        equipment_02 = self.env["maintenance.equipment"].create(
+            {
+                "name": "Test Equipment 2",
+                "category_id": cat_01.id,
+                "serial_no": False,
+            }
+        )
+
+        equipment_03 = self.env["maintenance.equipment"].create(
+            {
+                "name": "Test Equipment 3",
+                "category_id": False,
+                "serial_no": False,
+            }
+        )
+        self.assertEqual(equipment_01.serial_no, "TST001")
+        self.assertEqual(equipment_02.serial_no, "TST002")
+        self.assertFalse(equipment_03.serial_no)
+
+        equipment_03.write({"category_id": cat_01.id})
+        self.assertEqual(equipment_03.serial_no, "TST003")

@@ -74,7 +74,7 @@ class MaintenanceEquipmentCategory(models.Model):
                     self.env["ir.sequence"].browse(vals["sequence_id"]).prefix
                 )
         result = super().create(vals_list)
-        result._compute_equipment_code()
+        self._compute_equipment_code()
         return result
 
     def write(self, vals):
@@ -108,17 +108,18 @@ class MaintenanceEquipmentCategory(models.Model):
 class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
-    @api.model
-    def create(self, vals):
-        equipment = super().create(vals)
-        if equipment.category_id and not equipment.serial_no:
-            sequence_id = (
-                self.env["maintenance.equipment.category"]
-                .browse(vals["category_id"])
-                .sequence_id
-            )
-            if sequence_id:
-                equipment.serial_no = sequence_id._next()
+    @api.model_create_multi
+    def create(self, vals_list):
+        equipment = super().create(vals_list)
+        for vals in vals_list:
+            if equipment.category_id and not equipment.serial_no:
+                sequence_id = (
+                    self.env["maintenance.equipment.category"]
+                    .browse(vals["category_id"])
+                    .sequence_id
+                )
+                if sequence_id:
+                    equipment.serial_no = sequence_id._next()
         return equipment
 
     def write(self, vals):
