@@ -31,10 +31,13 @@
         <field name="model">maintenance.equipment</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
         <field name="arch" type="xml">
-            <field name="activity_state" position="after">
+            <xpath expr="//progressbar[@field='activity_state']" position="before">
                 <field name="status_id" />
-            </field>
-            <xpath expr="//div[hasclass('oe_kanban_bottom_left')]" position="inside">
+            </xpath>
+            <xpath
+                expr="//div[@t-if='record.maintenance_open_count.raw_value']"
+                position="after"
+            >
                 <div class="badge badge-primary" t-if="record.status_id.value">
                     <t t-out="record.status_id.value" />
                 </div>
