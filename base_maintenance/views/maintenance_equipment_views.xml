@@ -8,8 +8,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
         <field name="arch" type="xml">
             <sheet position="before">
-                <header>
-                </header>
+                <header />
             </sheet>
         </field>
     </record>
