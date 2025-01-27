@@ -8,7 +8,6 @@ from odoo.exceptions import UserError
 
 
 def post_init_hook(cr, registry):
-
     logging.getLogger("odoo.addons.maintenance_plan").info(
         "Migrating existing preventive maintenance"
     )
@@ -18,23 +17,22 @@ def post_init_hook(cr, registry):
     equipments = env["maintenance.equipment"].search([("period", "!=", False)])
 
     if equipments:
-
         maintenance_kind = env["maintenance.kind"].create(
             {"name": "Install", "active": True}
         )
 
         for equipment in equipments:
             request = equipment.maintenance_ids.filtered(
-                lambda r: r.maintenance_type == "preventive"
+                lambda r, equipment_data=equipment: r.maintenance_type == "preventive"
                 and not r.stage_id.done
-                and r.request_date == equipment.next_action_date
+                and r.request_date == equipment_data.next_action_date
             )
             if len(request) > 1:
                 raise UserError(
                     _(
                         "You have multiple preventive maintenance requests on "
-                        "equipment %(name)s next action date (%(date)s). Please leave only "
-                        "one preventive request on the date of equipment's next "
+                        "equipment %(name)s next action date (%(date)s). Please leave"
+                        "only one preventive request on the date of equipment's next "
                         "action to install the module.",
                         name=equipment.name,
                         date=equipment.next_action_date,

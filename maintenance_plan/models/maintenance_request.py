@@ -6,7 +6,6 @@ from odoo import fields, models
 
 
 class MaintenanceRequest(models.Model):
-
     _inherit = "maintenance.request"
 
     maintenance_kind_id = fields.Many2one(

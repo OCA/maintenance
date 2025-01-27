@@ -78,18 +78,18 @@
             </field>
             <!-- TODO: Use position="move" instead -->
             <xpath expr="//notebook/page[@name='description_page']" position="before">
-                    <page string="Instructions">
-                        <field
+                <page string="Instructions">
+                    <field
                         name="note"
                         placeholder="Describe the maintenance to do..."
                     />
-                    </page>
+                </page>
             </xpath>
             <xpath
                 expr="//notebook/page[@name='description_page']"
                 position="attributes"
             >
-                    <attribute name="string">Notes</attribute>
+                <attribute name="string">Notes</attribute>
             </xpath>
         </field>
     </record>
@@ -103,9 +103,8 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
         <field name="arch" type="xml">
             <xpath expr="field[@name='request_date']" position="attributes">
-                    <attribute name="groups" />
+                <attribute name="groups" />
             </xpath>
         </field>
     </record>
-
 </odoo>

@@ -161,7 +161,6 @@ class MaintenancePlan(models.Model):
     )
     def _compute_next_maintenance(self):
         for plan in self.filtered(lambda x: x.interval > 0):
-
             interval_timedelta = plan.get_relativedelta(
                 plan.interval, plan.interval_step
             )
@@ -214,8 +213,8 @@ class MaintenancePlan(models.Model):
         requests of this kind which are not done for its equipment"""
         for plan in self:
             request = plan.equipment_id.mapped("maintenance_ids").filtered(
-                lambda r: (
-                    r.maintenance_kind_id == plan.maintenance_kind_id
+                lambda r, plan_data=plan: (
+                    r.maintenance_kind_id == plan_data.maintenance_kind_id
                     and not r.stage_id.done
                     and r.maintenance_type == "preventive"
                 )

@@ -7,7 +7,6 @@ from odoo.exceptions import ValidationError
 
 
 class MaintenanceEquipment(models.Model):
-
     _inherit = "maintenance.equipment"
 
     maintenance_plan_ids = fields.One2many(
