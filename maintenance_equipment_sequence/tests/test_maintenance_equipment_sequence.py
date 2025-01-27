@@ -6,7 +6,7 @@ from odoo.tests.common import TransactionCase
 
 class TestMaintenanceEquipmentSequence(TransactionCase):
     def setUp(self):
-        super(TestMaintenanceEquipmentSequence, self).setUp()
+        super().setUp()
         self.maintenance_equipment_categ_obj = self.env[
             "maintenance.equipment.category"
         ]
