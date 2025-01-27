@@ -42,9 +42,9 @@
         <field name="model">maintenance.request</field>
         <field name="arch" type="xml">
             <field name="user_id" position="after">
-                <field name="employee_ids" />
+                <field name="employee_ids" invisible="1" />
             </field>
-            <xpath expr="//span[@t-if='record.employee_id.raw_value']" position="after">
+            <xpath expr="//field[@name='employee_id']" position="after">
                 <div t-if="record.employee_ids.raw_value">
                     <field name="employee_ids" widget="many2many_avatar_user" />
                 </div>
