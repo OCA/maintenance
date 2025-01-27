@@ -65,7 +65,5 @@ msgstr "Asiento"
 msgid "Move line"
 msgstr "Apunte"
 
-#. module: maintenance_account
-#: model:ir.model.fields,help:maintenance_account.field_maintenance_equipment__move_id
-msgid "The move of this entry line."
-msgstr "El movimiento de esta línea de entrada."
+#~ msgid "The move of this entry line."
+#~ msgstr "El movimiento de esta línea de entrada."
