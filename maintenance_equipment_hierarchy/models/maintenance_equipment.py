@@ -1,7 +1,7 @@
 # Copyright 2020 ForgeFlow S.L. (https://forgeflow.com)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 
 
 class MaintenanceEquipment(models.Model):
@@ -29,7 +29,7 @@ class MaintenanceEquipment(models.Model):
     complete_name = fields.Char(
         compute="_compute_complete_name", store=True, recursive=True
     )
-    parent_path = fields.Char(index=True, unaccent=False)
+    parent_path = fields.Char(index=True)
 
     def name_get(self):
         return [(equipment.id, equipment.complete_name) for equipment in self]
@@ -54,10 +54,11 @@ class MaintenanceEquipment(models.Model):
 
     def preview_child_list(self):
         return {
-            "name": _("Child equipment of %s") % self.name,
+            "name": self.env._("Child equipment of %s") % self.name,
             "type": "ir.actions.act_window",
             "res_model": "maintenance.equipment",
             "view_mode": "list,form",
+            "path": "child-equipments",
             "context": {
                 **self.env.context,
                 "default_parent_id": self.id,
