@@ -2,7 +2,7 @@
 # Copyright 2019-20 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -60,7 +60,7 @@ class MaintenanceEquipment(models.Model):
                 rec.company_id == p.company_id for p in rec.maintenance_plan_ids
             ):
                 raise ValidationError(
-                    _(
+                    self.env._(
                         "Some maintenance plan's company is incompatible with "
                         "the company of this equipment."
                     )
@@ -86,8 +86,10 @@ class MaintenanceEquipment(models.Model):
             team_id = request_model._get_default_team_id()
 
         description = self.name if self else maintenance_plan.name
-        kind = maintenance_plan.maintenance_kind_id.name or _("Unspecified kind")
-        name = _(
+        kind = maintenance_plan.maintenance_kind_id.name or self.env._(
+            "Unspecified kind"
+        )
+        name = self.env._(
             "Preventive Maintenance (%(kind)s) - %(description)s",
             kind=kind,
             description=description,

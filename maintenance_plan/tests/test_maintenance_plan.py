@@ -4,6 +4,7 @@
 from dateutil.relativedelta import relativedelta
 
 from odoo import _, fields
+from odoo.exceptions import UserError, ValidationError
 
 from .common import TestMaintenancePlanBase
 
@@ -229,3 +230,166 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         self.assertEqual(len(self.maintenance_plan_1.maintenance_ids), 0)
         self.maintenance_plan_1.button_manual_request_generation()
         self.assertEqual(len(self.maintenance_plan_1.maintenance_ids), 3)
+
+    def test_maintenance_equipment_company_check(self):
+        """Test company constraint between equipment and maintenance plans"""
+        # Create a different company
+        different_company = self.env["res.company"].create({"name": "Test Company"})
+
+        # Create an equipment with a specific company
+        test_equipment = self.maintenance_equipment_obj.create(
+            {"name": "Test Equipment", "company_id": different_company.id}
+        )
+
+        # Try to create a maintenance plan with a different company
+        with self.assertRaises(ValidationError):
+            self.maintenance_plan_obj.create(
+                {
+                    "equipment_id": test_equipment.id,
+                    "company_id": self.env.company.id,
+                    "interval": 1,
+                    "interval_step": "month",
+                }
+            )
+
+    def test_maintenance_equipment_multiple_plans(self):
+        """Test multiple maintenance plans on an equipment"""
+        # Store the initial plan count
+        initial_plan_count = len(self.equipment_1.maintenance_plan_ids)
+
+        # Create additional maintenance plans for the existing equipment
+        additional_plan = self.maintenance_plan_obj.create(
+            {
+                "equipment_id": self.equipment_1.id,
+                "interval": 2,
+                "interval_step": "month",
+                "maintenance_plan_horizon": 2,
+                "planning_step": "month",
+                "name": "Additional Test Plan",
+            }
+        )
+
+        # Verify the plan is correctly associated with the equipment
+        self.assertIn(additional_plan, self.equipment_1.maintenance_plan_ids)
+        self.assertEqual(
+            len(self.equipment_1.maintenance_plan_ids), initial_plan_count + 1
+        )
+
+    def test_maintenance_equipment_notes(self):
+        """Test notes field on maintenance equipment"""
+        # Add notes to an existing equipment
+        self.equipment_1.notes = "Test equipment notes"
+
+        # Verify the notes are correctly saved
+        self.assertEqual(self.equipment_1.notes, "Test equipment notes")
+
+    def test_maintenance_team_required_computation(self):
+        """Test maintenance_team_required computation"""
+        # The equipment should now have maintenance_team_required as True
+        self.assertTrue(self.equipment_1.maintenance_team_required)
+
+    def test_create_request_with_skip_notify(self):
+        """Test creating maintenance requests with skip notification"""
+        # Create a maintenance plan with skip notification
+        plan_with_skip = self.maintenance_plan_obj.create(
+            {
+                "equipment_id": self.equipment_1.id,
+                "interval": 1,
+                "interval_step": "month",
+                "skip_notify_follower_on_requests": True,
+            }
+        )
+
+        # Trigger request generation
+        self.cron.method_direct_trigger()
+
+        # Verify requests exist and were generated with context
+        generated_requests = self.maintenance_request_obj.search(
+            [("maintenance_plan_id", "=", plan_with_skip.id)]
+        )
+        self.assertTrue(generated_requests)
+
+    def test_maintenance_plan_unlink_with_existing_requests(self):
+        """Test unlinking a maintenance plan with existing non-done requests"""
+        # Generate requests first
+        self.cron.method_direct_trigger()
+
+        # Find a maintenance plan with requests
+        plan_to_delete = self.maintenance_plan_1
+
+        # Try to unlink and expect a UserError
+        with self.assertRaises(UserError):
+            plan_to_delete.unlink()
+
+    def test_maintenance_plan_get_maintenance_equipments(self):
+        """Test _get_maintenance_equipments method with domain generation"""
+        # Create a plan with domain generation
+        plan_with_domain = self.maintenance_plan_obj.create(
+            {
+                "generate_with_domain": True,
+                "generate_domain": "[('name', 'like', 'Laptop%')]",
+                "interval": 1,
+                "interval_step": "month",
+            }
+        )
+
+        # Get equipments for this plan
+        equipments = plan_with_domain._get_maintenance_equipments()
+
+        # Verify multiple equipments are returned based on domain
+        self.assertTrue(len(equipments) > 0)
+        self.assertTrue(all("Laptop" in eq.name for eq in equipments))
+
+    def test_search_search_equipment(self):
+        """Test _search_search_equipment method"""
+        # Create additional equipment
+        equipment_2 = self.maintenance_equipment_obj.create({"name": "Laptop 2"})
+
+        # Create a plan with a domain
+        plan_with_domain = self.maintenance_plan_obj.create(
+            {
+                "generate_with_domain": True,
+                "generate_domain": "[('name', 'like', 'Laptop%')]",
+                "interval": 1,
+                "interval_step": "month",
+            }
+        )
+
+        # Search for plans related to this equipment
+        plans = self.maintenance_plan_obj.search(
+            [("search_equipment_id", "=", equipment_2.id)]
+        )
+
+        # Verify the plan is found
+        self.assertIn(plan_with_domain, plans)
+
+    def test_equipment_company_constraint(self):
+        """Test company constraint between equipment and maintenance plans"""
+        # Create a different company
+        different_company = self.env["res.company"].create(
+            {"name": "Test Different Company"}
+        )
+
+        # Create a maintenance plan with a different company
+        conflicting_plan = self.maintenance_plan_obj.create(
+            {
+                "company_id": different_company.id,
+                "interval": 1,
+                "interval_step": "month",
+            }
+        )
+
+        # Create an equipment and try to link the conflicting plan
+        with self.assertRaises(ValidationError):
+            conflicting_plan.write({"equipment_id": self.equipment_1.id})
+
+    def test_equipment_search_maintenance_plan_count(self):
+        """Test search maintenance plan count computation"""
+        # Recompute the search maintenance plan count
+        self.equipment_1._compute_search_maintenance_plan_count()
+
+        # Verify the count includes both direct and searchable plans
+        self.assertGreaterEqual(
+            self.equipment_1.search_maintenance_plan_count,
+            len(self.equipment_1.maintenance_plan_ids),
+        )

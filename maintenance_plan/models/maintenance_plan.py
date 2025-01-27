@@ -4,7 +4,7 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import UserError, ValidationError
 from odoo.tools import safe_eval
 
@@ -90,7 +90,7 @@ class MaintenancePlan(models.Model):
     @api.model
     def _search_search_equipment(self, operator, value):
         if operator != "=" or (not value and not isinstance(value, models.NewId)):
-            raise ValueError(_("Unsupported search operator"))
+            raise ValueError(self.env._("Unsupported search operator"))
         plans = self.search([("generate_with_domain", "=", True)])
         plan_ids = []
         equipment = self.env["maintenance.equipment"].browse(value)
@@ -125,7 +125,7 @@ class MaintenancePlan(models.Model):
                 (
                     plan.id,
                     plan.name
-                    or _(
+                    or self.env._(
                         "Unnamed %(kind)s plan (%(eqpmt)s)",
                         kind=plan.maintenance_kind_id.name or "",
                         eqpmt=plan.equipment_id.name,
@@ -205,7 +205,9 @@ class MaintenancePlan(models.Model):
                 and rec.company_id != rec.equipment_id.company_id
             ):
                 raise ValidationError(
-                    _("Maintenace Equipment must belong to the equipment's company")
+                    self.env._(
+                        "Maintenace Equipment must belong to the equipment's company"
+                    )
                 )
 
     def unlink(self):
@@ -221,7 +223,7 @@ class MaintenancePlan(models.Model):
             )
             if request:
                 raise UserError(
-                    _(
+                    self.env._(
                         "The maintenance plan %(kind)s of equipment %(eqpmnt)s "
                         "has generated a request which is not done "
                         "yet. You should either set the request as "

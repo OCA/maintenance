@@ -20,16 +20,16 @@
                     />
                 </button>
             </div>
-            <xpath expr="//group[@name='maintenance']" position="attributes">
-                <attribute name="attrs">{'invisible': 1}</attribute>
+            <xpath expr="//group[@name='statistics']" position="attributes">
+                <attribute name="invisible">True</attribute>
             </xpath>
-            <xpath expr="//group[@name='maintenance']/.." position="after">
+            <xpath expr="//group[@name='statistics']/.." position="after">
                 <field
                     name="maintenance_plan_ids"
                     nolabel="1"
-                    context="{'default_equipment_id': active_id, 'hide_equipment_id': 1}"
+                    context="{'default_equipment_id': id, 'hide_equipment_id': 1}"
                 >
-                    <tree>
+                    <list>
                         <field name="maintenance_kind_id" string="Kind" />
                         <field name="maintenance_team_id" string="Team" />
                         <field name="name" />
@@ -43,16 +43,14 @@
                             string="P. Horizon period"
                         />
                         <field name="planning_step" string="P. Horizon step" />
-                    </tree>
+                    </list>
                 </field>
             </xpath>
             <field name="maintenance_team_id" position="after">
-                <field name="maintenance_team_required" attrs="{'invisible': 1}" />
+                <field name="maintenance_team_required" invisible="True" />
             </field>
             <field name="maintenance_team_id" position="attributes">
-                <attribute
-                    name="attrs"
-                >{'required': [('maintenance_team_required', '=', True)]}</attribute>
+                <attribute name="required">maintenance_team_required</attribute>
             </field>
         </field>
     </record>
@@ -84,12 +82,6 @@
                         placeholder="Describe the maintenance to do..."
                     />
                 </page>
-            </xpath>
-            <xpath
-                expr="//notebook/page[@name='description_page']"
-                position="attributes"
-            >
-                <attribute name="string">Notes</attribute>
             </xpath>
         </field>
     </record>

@@ -6,3 +6,5 @@
 - Lois Rilo \<<lois.rilo@forgeflow.com>\>
 - Enric Tobella \<<enric.tobella@dixmit.com>\>
 - Alexei Rivera \<<arivera@archeti.com>\>
+- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
+  - Bhavesh Heliconia
