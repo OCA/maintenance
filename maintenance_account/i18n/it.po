@@ -64,7 +64,5 @@ msgstr "Movimento"
 msgid "Move line"
 msgstr "Riga movimento"
 
-#. module: maintenance_account
-#: model:ir.model.fields,help:maintenance_account.field_maintenance_equipment__move_id
-msgid "The move of this entry line."
-msgstr "Il movimento per questa riga di registrazione."
+#~ msgid "The move of this entry line."
+#~ msgstr "Il movimento per questa riga di registrazione."
