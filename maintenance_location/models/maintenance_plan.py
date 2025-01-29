@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class MaintenancePlan(models.Model):
-
     _inherit = "maintenance.plan"
 
     location_id = fields.Many2one("maintenance.location")
