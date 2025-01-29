@@ -53,15 +53,23 @@ Authors
 -------
 
 * CreuBlanca
+* Dixmit
 
 Contributors
 ------------
 
-- CreuBlanca
+- `Dixmit <https://www.dixmit.com/>`__
 
   - Enric Tobella
+
+- CreuBlanca
+
   - Kevin Luna
   - Jaime Arroyo
+
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
+
+  - Bhavesh Heliconia
 
 Maintainers
 -----------
