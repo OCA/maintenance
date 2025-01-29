@@ -6,7 +6,6 @@ from odoo.exceptions import ValidationError
 
 
 class MaintenanceLocation(models.Model):
-
     _name = "maintenance.location"
     _description = "Maintenance Location"
     _parent_name = "parent_id"

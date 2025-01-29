@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class MaintenanceEquipment(models.Model):
-
     _inherit = "maintenance.equipment"
 
     location_id = fields.Many2one("maintenance.location", tracking=True)
