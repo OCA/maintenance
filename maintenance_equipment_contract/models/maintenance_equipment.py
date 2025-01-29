@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class MaintenanceEquipment(models.Model):
-
     _inherit = "maintenance.equipment"
 
     contract_ids = fields.Many2many("contract.contract", string="Contracts")
