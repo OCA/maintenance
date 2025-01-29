@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class MaintenanceRequest(models.Model):
-
     _inherit = "maintenance.request"
 
     purchase_order_ids = fields.Many2many(
