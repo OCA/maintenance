@@ -6,7 +6,6 @@ from odoo.exceptions import ValidationError
 
 
 class MaintenanceEquipmentCategory(models.Model):
-
     _inherit = "maintenance.equipment.category"
 
     _parent_name = "parent_id"
