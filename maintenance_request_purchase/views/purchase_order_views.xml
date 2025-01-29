@@ -17,7 +17,7 @@
                     icon="fa-wrench"
                     type="object"
                     groups="purchase.group_purchase_user"
-                    attrs="{'invisible': [('maintenance_request_ids', '=', [])]}"
+                    invisible="not maintenance_request_ids"
                 >
                     <field
                         name="maintenance_requests_count"
