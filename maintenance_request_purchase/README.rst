@@ -61,6 +61,9 @@ Contributors
 - Jaime Arroyo
 - Olga Marco
 - Núria Sancho
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
+
+  - Bhavesh Heliconia
 
 Maintainers
 -----------
