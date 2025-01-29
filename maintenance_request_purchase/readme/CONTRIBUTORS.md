@@ -1,4 +1,8 @@
-- Enric Tobella
-- Jaime Arroyo
-- Olga Marco
-- Núria Sancho
+- [Dixmit](https://www.dixmit.com/)
+  - Enric Tobella
+- CreuBlanca
+  - Jaime Arroyo
+  - Olga Marco
+  - Núria Sancho
+- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
+  - Bhavesh Heliconia
