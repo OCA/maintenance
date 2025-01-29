@@ -12,7 +12,7 @@ class MaintenanceEquipmentCategory(models.Model):
     _parent_store = True
     _parent_order = "name"
     _rec_name = "complete_name"
-    _order = "parent_id"
+    _order = "parent_id, id"
 
     complete_name = fields.Char(
         compute="_compute_complete_name", store=True, recursive=True

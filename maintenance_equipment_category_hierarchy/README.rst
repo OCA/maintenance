@@ -60,6 +60,9 @@ Contributors
 - Jaime Arroyo
 - Olga Marco
 - Kevin Luna
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
+
+  - Bhavesh Heliconia
 
 Maintainers
 -----------
