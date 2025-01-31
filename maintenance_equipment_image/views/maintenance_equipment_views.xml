@@ -23,7 +23,7 @@
             <field name="activity_state" position="after">
                 <field name="id" />
             </field>
-            <xpath expr="//div[hasclass('o_dropdown_kanban')]" position="before">
+            <xpath expr="//div[hasclass('oe_kanban_content')]" position="before">
                 <div class="o_kanban_image mr-1">
                     <img
                         t-att-src="kanban_image('maintenance.equipment', 'image_128', record.id.raw_value)"
