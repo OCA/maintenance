@@ -31,8 +31,8 @@ Maintenance Groups
 This module provides a security group category 'Maintenance' with two
 new user groups:
 
-- 'User'
-- 'Full Access'.
+-  'User'
+-  'Full Access'.
 
 The user group 'Equipment Manager', already provided by the standard
 Odoo, will also be listed in the group category 'Maintenance'.
@@ -76,9 +76,10 @@ Authors
 Contributors
 ------------
 
-- Antonio Esposito <a.esposito@onestein.nl>
-- Andrea Stirpe <a.stirpe@onestein.nl>
-- Luisa Miguéns <luisa.miguens@solvos.es>
+-  Antonio Esposito <a.esposito@onestein.nl>
+-  Andrea Stirpe <a.stirpe@onestein.nl>
+-  Luisa Miguéns <luisa.miguens@solvos.es>
+-  Miquel Pascual <mpascual@apsl.net>
 
 Maintainers
 -----------
