@@ -15,7 +15,7 @@ class TestMaintenancePlanActivity(test_common.TransactionCase):
         self.maintenance_equipment_obj = self.env["maintenance.equipment"]
         self.maintenance_planned_activity_obj = self.env["maintenance.planned.activity"]
         self.mail_activity_obj = self.env["mail.activity"]
-        self.cron = self.env.ref("maintenance.maintenance_requests_cron")
+        self.cron = self.env.ref("maintenance_plan.maintenance_requests_cron")
 
         self.equipment_1 = self.maintenance_equipment_obj.create({"name": "Laptop 1"})
         self.call = self.env["mail.activity.type"].search(
