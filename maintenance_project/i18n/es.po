@@ -19,7 +19,9 @@ msgstr ""
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.hr_equipment_view_form
-msgid "<span class=\"fa fa-plus\"/><span> Create project</span>"
+msgid ""
+"<span class=\"fa fa-plus\"/>\n"
+"                        <span> Create project</span>"
 msgstr ""
 
 #. module: maintenance_project
