@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_maintenance](base_maintenance/) | 18.0.1.0.0 |  | Base Maintenance
+[maintenance_project](maintenance_project/) | 18.0.1.0.0 |  | Adds projects to maintenance equipments and requests
 
 [//]: # (end addons)
 
