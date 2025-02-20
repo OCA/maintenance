@@ -18,8 +18,10 @@ msgstr ""
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.hr_equipment_view_form
-msgid "<span class=\"fa fa-plus\"/><span> Create project</span>"
-msgstr "<span class=\"fa fa-plus\"/><span> Crea progetto</span>"
+msgid ""
+"<span class=\"fa fa-plus\"/>\n"
+"                        <span> Create project</span>"
+msgstr ""
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.view_project_kanban
@@ -124,6 +126,9 @@ msgstr "Lavoro"
 #: model:project.project,label_tasks:maintenance_project.project_project_1
 msgid "Tasks"
 msgstr "Lavori"
+
+#~ msgid "<span class=\"fa fa-plus\"/><span> Create project</span>"
+#~ msgstr "<span class=\"fa fa-plus\"/><span> Crea progetto</span>"
 
 #~ msgid "Create Project From Equipment"
 #~ msgstr "Crea un progetto dall'attrezzatura"
