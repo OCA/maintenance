@@ -89,6 +89,14 @@ selecting the equipments. This way, we might have a single plan that
 will generate all the requests. In order to use it, we need to mark the
 Generate with Domain field.
 
+Known issues / Roadmap
+======================
+
+This module is considered deprecated already in 17.0 because the
+recurrence functionality is already included in core in the requests
+themselves.
+https://github.com/OCA/maintenance/pull/414#issuecomment-2668929617
+
 Bug Tracker
 ===========
 
@@ -111,14 +119,14 @@ Authors
 Contributors
 ------------
 
-- Akim Juillerat <akim.juillerat@camptocamp.com>
-- Matteo Mazzoni <matteo@appcademy.tech>
-- David Alonso <david.alonso@solvos.es>
-- Adrià Gil Sorribes <adria.gil@forgeflow.com>
-- Jordi Ballester Alomar <jordi.ballester@forgeflow.com>
-- Lois Rilo <lois.rilo@forgeflow.com>
-- Enric Tobella <enric.tobella@dixmit.com>
-- Alexei Rivera <arivera@archeti.com>
+-  Akim Juillerat <akim.juillerat@camptocamp.com>
+-  Matteo Mazzoni <matteo@appcademy.tech>
+-  David Alonso <david.alonso@solvos.es>
+-  Adrià Gil Sorribes <adria.gil@forgeflow.com>
+-  Jordi Ballester Alomar <jordi.ballester@forgeflow.com>
+-  Lois Rilo <lois.rilo@forgeflow.com>
+-  Enric Tobella <enric.tobella@dixmit.com>
+-  Alexei Rivera <arivera@archeti.com>
 
 Maintainers
 -----------
