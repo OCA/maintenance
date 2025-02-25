@@ -27,9 +27,8 @@ class PurchaseOrder(models.Model):
             record.maintenance_requests_count = len(record.maintenance_request_ids.ids)
 
     def action_view_maintenance_request(self):
-        action = self.env["ir.actions.act_window"]._for_xml_id(
-            "maintenance.hr_equipment_request_action"
-        )
+        action = self.env.ref("maintenance.hr_equipment_request_action")
+        action = action.read()[0]
         if len(self.maintenance_request_ids) > 1:
             action["domain"] = [("id", "in", self.maintenance_request_ids.ids)]
         elif self.maintenance_request_ids:
