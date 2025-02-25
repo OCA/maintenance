@@ -17,10 +17,7 @@ class TestMaintenancePurchase(SavepointCase):
         )
         cls.supplier = cls.env["res.partner"].create({"name": "Supplier"})
         cls.po_1 = cls.env["purchase.order"].create(
-            {
-                "partner_id": cls.supplier.id,
-                "date_planned": "2017-02-11 22:00:00",
-            }
+            {"partner_id": cls.supplier.id, "date_planned": "2017-02-11 22:00:00"}
         )
 
     def test_maintenance_purchase(self):

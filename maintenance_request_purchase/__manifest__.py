@@ -10,8 +10,5 @@
     "author": "CreuBlanca,Dixmit,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
     "depends": ["base_maintenance", "purchase"],
-    "data": [
-        "views/maintenance_request.xml",
-        "views/purchase_order_views.xml",
-    ],
+    "data": ["views/maintenance_request.xml", "views/purchase_order_views.xml"],
 }
