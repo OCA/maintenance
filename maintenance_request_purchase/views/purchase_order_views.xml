@@ -28,16 +28,4 @@
             </div>
         </field>
     </record>
-    <record model="ir.ui.view" id="purchase_order_line_search">
-        <field
-            name="name"
-        >purchase.order.line.search (in maintenance_equipment_purchase)</field>
-        <field name="model">purchase.order.line</field>
-        <field name="inherit_id" ref="purchase.purchase_order_line_search" />
-        <field name="arch" type="xml">
-            <field name="order_id" position="after">
-                <field name="name" />
-            </field>
-        </field>
-    </record>
 </odoo>
