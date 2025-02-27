@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_purchase_order_type_form">
+        <field
+            name="name"
+        >purchase.order.type.form (in maintenance_request_purchase_order_type)</field>
+        <field name="model">purchase.order.type</field>
+        <field
+            name="inherit_id"
+            ref="purchase_order_type.view_purchase_order_type_form"
+        />
+        <field name="arch" type="xml">
+            <field name="incoterm_id" position="after">
+                <field name="use_maintenance_request" widget="boolean_toggle" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_purchase_order_type_tree">
+        <field
+            name="name"
+        >purchase.order.type.tree (in maintenance_request_purchase_order_type)</field>
+        <field name="model">purchase.order.type</field>
+        <field
+            name="inherit_id"
+            ref="purchase_order_type.view_purchase_order_type_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="incoterm_id" position="after">
+                <field
+                    name="use_maintenance_request"
+                    widget="boolean_toggle"
+                    optional="show"
+                    string="Use in Mt. Req."
+                />
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="hr_equipment_request_view_form_button_box">
+        <field
+            name="name"
+        >maintenance.request.form (in maintenance_request_purchase_order_type)</field>
+        <field name="model">maintenance.request</field>
+        <field
+            name="inherit_id"
+            ref="maintenance_request_purchase.hr_equipment_request_view_form_button_box"
+        />
+        <field name="arch" type="xml">
+            <field name="purchase_order_ids" position="attributes">
+                <attribute
+                    name="domain"
+                >[('order_type.use_maintenance_request', '=', True)]</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
