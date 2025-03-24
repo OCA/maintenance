@@ -1,17 +1,16 @@
-# Copyright 2023 Tecnativa - Víctor Martínez
+# Copyright 2023-2025 Tecnativa - Víctor Martínez
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo.tests import common, new_test_user
+from odoo.tests import new_test_user
 from odoo.tests.common import users
 
-from odoo.addons.base.tests.common import DISABLED_MAIL_CONTEXT
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestMaintenanceSecurity(common.TransactionCase):
+class TestMaintenanceSecurity(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env = cls.env(context=dict(cls.env.context, **DISABLED_MAIL_CONTEXT))
         cls.user = new_test_user(
             cls.env,
             login="test-basic-user",
