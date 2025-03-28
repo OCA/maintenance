@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-03-14 15:36+0000\n"
+"PO-Revision-Date: 2025-01-11 12:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_kanban
@@ -86,6 +86,7 @@ msgstr "Attrezzatura manutenzione"
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_timesheets_analysis_report__maintenance_request_id
 msgid "Maintenance Request"
 msgstr "Richiesta manutenzione"
 
@@ -140,6 +141,11 @@ msgstr "Ore totali foglio presenze"
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Timesheets"
 msgstr "Fogli ore"
+
+#. module: maintenance_timesheet
+#: model:ir.model,name:maintenance_timesheet.model_timesheets_analysis_report
+msgid "Timesheets Analysis Report"
+msgstr "Resoconto analisi foglii ore"
 
 #~ msgid "<span class=\"o_label\" style=\"padding-left: 5px;\">Hours</span>"
 #~ msgstr "<span class=\"o_label\" style=\"padding-left: 5px;\">Ore</span>"

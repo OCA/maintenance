@@ -18,7 +18,7 @@ class MaintenanceRequest(models.Model):
     planned_hours = fields.Float(tracking=True)
     progress = fields.Float(
         compute="_compute_progress_hours",
-        group_operator="avg",
+        aggregator="avg",
         store=True,
     )
     remaining_hours = fields.Float(

@@ -1,7 +1,7 @@
 # © 2019 Solvos Consultoría Informática (<http://www.solvos.es>)
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -50,7 +50,7 @@ class AccountAnalyticLine(models.Model):
             self.env["maintenance.request"].browse(request_ids).stage_id.mapped("done")
         ):
             raise ValidationError(
-                _(
+                self.env._(
                     "Cannot save or delete a timesheet for "
                     "a maintenance request already done"
                 )
