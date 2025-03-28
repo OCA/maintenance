@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -77,6 +77,7 @@ msgstr ""
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_timesheets_analysis_report__maintenance_request_id
 msgid "Maintenance Request"
 msgstr ""
 
@@ -130,4 +131,9 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_ids
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Timesheets"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model:ir.model,name:maintenance_timesheet.model_timesheets_analysis_report
+msgid "Timesheets Analysis Report"
 msgstr ""
