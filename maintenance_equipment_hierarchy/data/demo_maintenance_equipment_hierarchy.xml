@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+        <record id="equipment_computer9_1" model="maintenance.equipment">
+            <field name="name">HP Laptop battery</field>
+            <field name="category_id" ref="maintenance.equipment_computer" />
+            <field name="owner_user_id" ref="base.user_root" />
+            <field name="technician_user_id" ref="base.user_demo" />
+            <field name="assign_date" eval="time.strftime('%Y-%m-11')" />
+            <field name="serial_no">LP/303/28292090/BAT</field>
+            <field name="model">17-j059nr-bat</field>
+            <field name="parent_id" ref="maintenance.equipment_computer9" />
+        </record>
+        <record id="equipment_computer9_2" model="maintenance.equipment">
+            <field name="name">HP Laptop case</field>
+            <field name="category_id" ref="maintenance.equipment_computer" />
+            <field name="owner_user_id" ref="base.user_root" />
+            <field name="technician_user_id" ref="base.user_demo" />
+            <field name="assign_date" eval="time.strftime('%Y-%m-11')" />
+            <field name="serial_no">LP/303/28292090/CAS</field>
+            <field name="model">17-j059nr-cas</field>
+            <field name="parent_id" ref="maintenance.equipment_computer9" />
+        </record>
+</odoo>
