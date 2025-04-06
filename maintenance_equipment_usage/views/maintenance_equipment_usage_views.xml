@@ -204,8 +204,8 @@
     />
     <record
         id="maintenance_equipment_usage_action_from_equipment"
-        model="ir.actions.act_window"
-    >
+        model="ir.actions.act_window">
+        
         <field name="name">Equipment Usage</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">maintenance.equipment.usage</field>
