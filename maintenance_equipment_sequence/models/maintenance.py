@@ -63,7 +63,7 @@ class MaintenanceEquipmentCategory(models.Model):
                 sequence = category.sequence_id._get_current_sequence()
                 sequence.sudo().number_next = category.sequence_number_next
 
-    @api.model
+    @api.model_create_multi
     def create(self, vals):
         if not vals.get("sequence_id", False):
             if vals.get("sequence_prefix", False):
@@ -107,7 +107,7 @@ class MaintenanceEquipmentCategory(models.Model):
 class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
-    @api.model
+    @api.model_create_multi
     def create(self, vals):
         equipment = super().create(vals)
         if equipment.category_id and not equipment.serial_no:
