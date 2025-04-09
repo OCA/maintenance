@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="tag_equip_samsung" model="maintenance.equipment.tag">
+        <field name="name">Samsung</field>
+    </record>
+    <record id="tag_equip_hp" model="maintenance.equipment.tag">
+        <field name="name">HP</field>
+    </record>
+    <record id="tag_equip_monitor" model="maintenance.equipment.tag">
+        <field name="name">Monitor</field>
+    </record>
+    <record id="tag_equip_printer" model="maintenance.equipment.tag">
+        <field name="name">Printer</field>
+    </record>
+</odoo>
