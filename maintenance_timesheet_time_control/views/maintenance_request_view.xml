@@ -7,15 +7,10 @@
         <field name="model">maintenance.request</field>
         <field
             name="inherit_id"
-            ref="maintenance_timesheet.hr_equipment_request_view_form"
+            ref="maintenance_timesheet.equipment_request_view_form"
         />
         <field name="arch" type="xml">
             <div name="button_box" position="inside">
-                <field
-                    name="show_time_control"
-                    groups="hr_timesheet.group_hr_timesheet_user"
-                    invisible="1"
-                />
                 <button
                     name="button_start_work"
                     string="Start work"
@@ -49,23 +44,18 @@
         <field name="arch" type="xml">
             <!-- Sub-tree view for timesheet_ids -->
             <xpath
-                expr="//field[@name='timesheet_ids']/tree//field[@name='date']"
+                expr="//field[@name='timesheet_ids']/list//field[@name='date']"
                 position="attributes"
             >
-                <attribute name="invisible">1</attribute>
+                <attribute name="column_invisible">1</attribute>
             </xpath>
             <xpath
-                expr="//field[@name='timesheet_ids']/tree//field[@name='date']"
+                expr="//field[@name='timesheet_ids']/list//field[@name='date']"
                 position="after"
             >
                 <field name="date_time" string="Date" required="1" />
             </xpath>
-            <xpath expr="//field[@name='timesheet_ids']/tree" position="inside">
-                <field
-                    name="show_time_control"
-                    groups="hr_timesheet.group_hr_timesheet_user"
-                    invisible="1"
-                />
+            <xpath expr="//field[@name='timesheet_ids']/list" position="inside">
                 <button
                     name="button_resume_work"
                     title="Resume work"
@@ -87,7 +77,7 @@
                     groups="hr_timesheet.group_hr_timesheet_user"
                 />
             </xpath>
-            <xpath expr="//field[@name='timesheet_ids']/tree" position="attributes">
+            <xpath expr="//field[@name='timesheet_ids']/list" position="attributes">
                 <attribute name="default_order">date_time</attribute>
             </xpath>
         </field>
@@ -99,12 +89,7 @@
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
         <field name="arch" type="xml">
-            <xpath expr="//*[hasclass('oe_kanban_bottom_left')]" position="inside">
-                <field
-                    name="show_time_control"
-                    groups="hr_timesheet.group_hr_timesheet_user"
-                    invisible="1"
-                />
+            <xpath expr="//footer//field[@name='activity_ids']" position="after">
                 <a
                     name="button_start_work"
                     invisible="show_time_control != 'start'"
@@ -137,11 +122,6 @@
         />
         <field name="arch" type="xml">
             <field name="timesheet_total_hours" position="after">
-                <field
-                    name="show_time_control"
-                    groups="hr_timesheet.group_hr_timesheet_user"
-                    invisible="1"
-                />
                 <button
                     name="button_start_work"
                     title="Start work"
