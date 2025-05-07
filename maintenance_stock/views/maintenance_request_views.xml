@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="hr_equipment_request_view_search" model="ir.ui.view">
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
@@ -71,5 +70,4 @@
             </xpath>
         </field>
     </record>
-
 </odoo>
