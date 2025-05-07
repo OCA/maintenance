@@ -3,7 +3,6 @@
     <record id="location_inventory" model="stock.location">
         <field name="name">Inventory adjustment</field>
         <field name="usage">inventory</field>
-
     </record>
     <record id="stock_warehouse_maintenance" model="stock.warehouse">
         <field name="name">Maintenance Warehouse</field>
@@ -46,7 +45,6 @@
             type="base64"
             file="maintenance_stock/static/img/toner.png"
         />
-
     </record>
 
     <record id="stock_inventory_toner" model="stock.inventory">
@@ -55,7 +53,6 @@
             name="product_ids"
             eval="[(6,0,[ref('maintenance_stock.product_toner'),])]"
         />
-
     </record>
 
     <record id="stock_inventory_toner_line" model="stock.inventory.line">
@@ -86,7 +83,6 @@
             name="default_consumption_warehouse_id"
             ref="maintenance_stock.stock_warehouse_maintenance"
         />
-
     </record>
 
     <record id="m_request_1" model="maintenance.request">
@@ -96,7 +92,6 @@
         <field name="equipment_id" ref="maintenance.equipment_printer1" />
         <field name="color">7</field>
         <field name="stage_id" ref="maintenance.stage_1" />
-
     </record>
     <record model="stock.quant" id="stock_quant_toner">
         <field name="product_id" ref="maintenance_stock.product_toner" />
