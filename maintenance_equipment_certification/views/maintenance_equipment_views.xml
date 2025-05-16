@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="certifications" string="Certifications">
+                    <group>
+                        <field name="certificate_ids" nolabel="1" colspan="2">
+                            <tree editable="top">
+                                <field name="date" />
+                                <field name="name" />
+                                <field name="notes" />
+                                <field name="certificate_filename" invisible="1" />
+                                <field
+                                    name="certificate_file"
+                                    filename="certificate_filename"
+                                />
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

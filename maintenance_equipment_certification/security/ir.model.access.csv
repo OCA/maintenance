@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_equipment_certification_user,Certification user,model_maintenance_equipment_certificate,base.group_user,1,0,0,0
+access_equipment_certification_admin,Certification admin,model_maintenance_equipment_certificate,maintenance.group_equipment_manager,1,1,1,1

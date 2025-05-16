@@ -1,0 +1,103 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_certification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-20 15:45+0000\n"
+"PO-Revision-Date: 2025-05-20 17:48+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__certificate_file
+msgid "Certificate"
+msgstr "Certificado"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__certificate_filename
+msgid "Certificate file name"
+msgstr "Nombre del fichero del certificado"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment__certificate_ids
+msgid "Certificates"
+msgstr "Certificados"
+
+#. module: maintenance_equipment_certification
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.hr_equipment_view_form
+msgid "Certifications"
+msgstr "Certificaciones"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__equipment_id
+msgid "Equipment"
+msgstr "Equipo"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__id
+msgid "ID"
+msgstr "Identificador"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__write_uid
+msgid "Last Updated by"
+msgstr "Última modificación por"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model,name:maintenance_equipment_certification.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipo de mantenimiento"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model,name:maintenance_equipment_certification.model_maintenance_equipment_certificate
+msgid "Maintenance equipment certificate"
+msgstr "Certificado del equipo de mantenimiento"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__notes
+msgid "Notes"
+msgstr "Notas"
