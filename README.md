@@ -22,17 +22,17 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_maintenance](base_maintenance/) | 17.0.1.1.0 |  | Base Maintenance
-[maintenance_account](maintenance_account/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Account
-[maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 17.0.1.0.0 | [![dalonsod](https://github.com/dalonsod.png?size=30px)](https://github.com/dalonsod) | Manage equipment hierarchy
-[maintenance_equipment_sequence](maintenance_equipment_sequence/) | 17.0.1.0.1 | [![AdriaGForgeFlow](https://github.com/AdriaGForgeFlow.png?size=30px)](https://github.com/AdriaGForgeFlow) | Adds sequence to maintenance equipment defined in the equipment's category
+[maintenance_account](maintenance_account/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Account
+[maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 17.0.1.0.0 | <a href='https://github.com/dalonsod'><img src='https://github.com/dalonsod.png' width='32' height='32' style='border-radius:50%;' alt='dalonsod'/></a> | Manage equipment hierarchy
+[maintenance_equipment_sequence](maintenance_equipment_sequence/) | 17.0.1.0.1 | <a href='https://github.com/AdriaGForgeFlow'><img src='https://github.com/AdriaGForgeFlow.png' width='32' height='32' style='border-radius:50%;' alt='AdriaGForgeFlow'/></a> | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 17.0.1.0.0 |  | Maintenance Equipment Status
-[maintenance_equipment_usage](maintenance_equipment_usage/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Equipment Usage
+[maintenance_equipment_usage](maintenance_equipment_usage/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Equipment Usage
 [maintenance_plan](maintenance_plan/) | 17.0.1.1.2 |  | Extends preventive maintenance planning
-[maintenance_product](maintenance_product/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Product
+[maintenance_product](maintenance_product/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
 [maintenance_project](maintenance_project/) | 17.0.2.0.0 |  | Adds projects to maintenance equipments and requests
-[maintenance_request_employee](maintenance_request_employee/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Request Employee
+[maintenance_request_employee](maintenance_request_employee/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Request Employee
 [maintenance_timesheet](maintenance_timesheet/) | 17.0.1.0.1 |  | Adds timesheets to maintenance requests
-[maintenance_timesheet_time_control](maintenance_timesheet_time_control/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Maintenance Timesheets Timesheet Time Control
+[maintenance_timesheet_time_control](maintenance_timesheet_time_control/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Timesheets Timesheet Time Control
 
 [//]: # (end addons)
 
