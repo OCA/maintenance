@@ -48,7 +48,7 @@ class MaintenanceEquipment(models.Model):
         for equipment in self:
             if equipment.parent_id:
                 parent_name = equipment.parent_id.complete_name
-                equipment.complete_name = parent_name + " / " + equipment.name
+                equipment.complete_name = parent_name + " / " + (equipment.name or "")
             else:
                 equipment.complete_name = equipment.name
 
