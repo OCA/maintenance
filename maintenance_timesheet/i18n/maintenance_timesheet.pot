@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -14,16 +14,16 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: maintenance_timesheet
-#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_kanban
-msgid "<span class=\"o_label\">Hours</span>"
-msgstr ""
-
-#. module: maintenance_timesheet
-#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid ""
 "<span class=\"o_stat_text\">\n"
 "                            Hours\n"
 "                        </span>"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_kanban
+msgid "<span class=\"oe_label\">Hours</span>"
 msgstr ""
 
 #. module: maintenance_timesheet
@@ -49,7 +49,6 @@ msgstr ""
 #. module: maintenance_timesheet
 #. odoo-python
 #: code:addons/maintenance_timesheet/models/hr_timesheet.py:0
-#, python-format
 msgid ""
 "Cannot save or delete a timesheet for a maintenance request already done"
 msgstr ""
