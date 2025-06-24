@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_timesheet_line_search" model="ir.ui.view">
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="maintenance_request_id" />
+            </xpath>
+            <xpath expr="//filter[@name='groupby_employee']" position="before">
+                <filter
+                    string="Request"
+                    name="groupby_request"
+                    domain="[]"
+                    context="{'group_by':'maintenance_request_id'}"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_timesheet_line_tree" model="ir.ui.view">
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field
+                    name="maintenance_request_id"
+                    invisible="context.get('default_maintenance_request_id', False)"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="timesheet_view_tree_user" model="ir.ui.view">
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.timesheet_view_tree_user" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employee_id']" position="attributes">
+                <attribute
+                    name="readonly"
+                >context.get('readonly_employee_id', False)</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_timesheet_line_form" model="ir.ui.view">
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_form" />
+        <field name="arch" type="xml">
+            <field name="project_id" position="before">
+                <field name="maintenance_request_id" />
+            </field>
+        </field>
+    </record>
+</odoo>
