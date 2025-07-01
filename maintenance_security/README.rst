@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 ====================
 Maintenance Security
 ====================
@@ -17,7 +13,7 @@ Maintenance Security
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fmaintenance-lightgray.png?logo=github
@@ -37,6 +33,10 @@ maintenance groups.
 
 It also removes the assignation mail when a user with no permission is
 assigned to an equipment, as if not, the mail will contain a link to it.
+
+Additionally, it will remove the inheritance of equipment manager
+maintenance group by HR users (hr.group_hr_user) to further decouple the
+modules. The group can still be manually assigned to the user.
 
 **Table of contents**
 
@@ -64,11 +64,11 @@ Authors
 Contributors
 ------------
 
-- `Tecnativa <https://www.tecnativa.com>`__
+-  `Tecnativa <https://www.tecnativa.com>`__
 
-  - Pedro M. Baeza
-  - Víctor Martínez
-  - Carolina Fernandez
+   -  Pedro M. Baeza
+   -  Víctor Martínez
+   -  Carolina Fernandez
 
 Maintainers
 -----------
