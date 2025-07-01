@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Redefine the permissions to display the maintenance menus. !-->
+    <record model="ir.ui.menu" id="maintenance.menu_maintenance_title">
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('maintenance.group_equipment_manager')])]"
+        />
+    </record>
+    <record model="ir.ui.menu" id="maintenance.menu_m_dashboard">
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('maintenance.group_equipment_manager')])]"
+        />
+    </record>
+    <record model="ir.ui.menu" id="maintenance.menu_m_request">
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('maintenance.group_equipment_manager')])]"
+        />
+    </record>
+    <record model="ir.ui.menu" id="maintenance.menu_m_request_form">
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('maintenance.group_equipment_manager')])]"
+        />
+    </record>
+    <record model="ir.ui.menu" id="maintenance.menu_m_request_calendar">
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('maintenance.group_equipment_manager')])]"
+        />
+    </record>
+    <record model="ir.ui.menu" id="maintenance.menu_equipment_form">
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('maintenance.group_equipment_manager')])]"
+        />
+    </record>
+    <record model="ir.ui.menu" id="maintenance.menu_m_reports">
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('maintenance.group_equipment_manager')])]"
+        />
+    </record>
+    <record model="ir.ui.menu" id="maintenance.menu_m_reports_oee">
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('maintenance.group_equipment_manager')])]"
+        />
+    </record>
+    <record model="ir.ui.menu" id="maintenance.menu_m_reports_losses">
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('maintenance.group_equipment_manager')])]"
+        />
+    </record>
+</odoo>
