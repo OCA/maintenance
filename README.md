@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_maintenance](base_maintenance/) | 18.0.1.0.0 |  | Base Maintenance
 [maintenance_project](maintenance_project/) | 18.0.1.0.0 |  | Adds projects to maintenance equipments and requests
+[maintenance_security](maintenance_security/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Security
 [maintenance_timesheet](maintenance_timesheet/) | 18.0.1.0.0 |  | Adds timesheets to maintenance requests
 
 [//]: # (end addons)
