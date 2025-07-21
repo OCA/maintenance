@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class MaintenanceTeam(models.Model):
-
     _inherit = "maintenance.team"
 
     code_prefix = fields.Char(
