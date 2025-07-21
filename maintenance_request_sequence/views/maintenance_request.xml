@@ -11,11 +11,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='name']/../.." position="before">
                 <strong>
-                    <field
-                        name="code"
-                        nolabel="1"
-                        attrs="{'invisible': [('code', '=', '/')]}"
-                    />
+                    <field name="code" nolabel="1" invisible="code == '/'" />
                 </strong>
             </xpath>
         </field>
@@ -53,8 +49,8 @@
         <field name="arch" type="xml">
             <field name="name" position="after">
                 <span>(<strong>
-                        <field name="code" />
-                    </strong>)</span>
+                    <field name="code" />
+                </strong>)</span>
             </field>
         </field>
     </record>
