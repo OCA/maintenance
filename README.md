@@ -31,7 +31,7 @@ addon | version | maintainers | summary
 [maintenance_product](maintenance_product/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
 [maintenance_project](maintenance_project/) | 17.0.2.0.0 |  | Adds projects to maintenance equipments and requests
 [maintenance_request_employee](maintenance_request_employee/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Request Employee
-[maintenance_timesheet](maintenance_timesheet/) | 17.0.1.0.1 |  | Adds timesheets to maintenance requests
+[maintenance_timesheet](maintenance_timesheet/) | 17.0.1.1.0 |  | Adds timesheets to maintenance requests
 [maintenance_timesheet_time_control](maintenance_timesheet_time_control/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Timesheets Timesheet Time Control
 
 [//]: # (end addons)
