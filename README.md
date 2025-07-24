@@ -44,7 +44,7 @@ addon | version | maintainers | summary
 [maintenance_request_stage_transition](maintenance_request_stage_transition/) | 15.0.1.0.0 | <a href='https://github.com/etobella'><img src='https://github.com/etobella.png' width='32' height='32' style='border-radius:50%;' alt='etobella'/></a> | Manage transition visibility and management between stages
 [maintenance_security](maintenance_security/) | 15.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Security
 [maintenance_team_hierarchy](maintenance_team_hierarchy/) | 15.0.1.0.0 |  | Create hierarchies on teams
-[maintenance_timesheet](maintenance_timesheet/) | 15.0.1.0.0 |  | Adds timesheets to maintenance requests
+[maintenance_timesheet](maintenance_timesheet/) | 15.0.1.1.0 |  | Adds timesheets to maintenance requests
 [maintenance_timesheet_time_control](maintenance_timesheet_time_control/) | 15.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Timesheets Timesheet Time Control
 
 [//]: # (end addons)
