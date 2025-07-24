@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 ======================
 Maintenance Timesheets
 ======================
@@ -17,7 +13,7 @@ Maintenance Timesheets
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fmaintenance-lightgray.png?logo=github
@@ -60,12 +56,12 @@ Authors
 Contributors
 ------------
 
-- David Alonso <david.alonso@solvos.es>
-- Luisa Miguéns <luisa.miguens@solvos.es>
-- Christian Ramos <c.ramos@binhex.es>
-- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
+-  David Alonso <david.alonso@solvos.es>
+-  Luisa Miguéns <luisa.miguens@solvos.es>
+-  Christian Ramos <c.ramos@binhex.es>
+-  `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
 
-  - Bhavesh Heliconia
+   -  Bhavesh Heliconia
 
 Maintainers
 -----------

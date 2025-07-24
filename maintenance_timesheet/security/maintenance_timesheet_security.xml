@@ -6,11 +6,8 @@
         >Users are allowed to access timesheets related to a followed request</field>
         <field name="model_id" ref="model_account_analytic_line" />
         <field name="domain_force">[
-                '|',
-                    ('maintenance_request_id', '=', False),
-                        '|',
-                            ('maintenance_request_id.message_partner_ids', 'in', [user.partner_id.id]),
-                            ('maintenance_request_id.user_id.id', '=', user.id)
+                ('maintenance_request_id.message_partner_ids', 'in', [user.partner_id.id]),
+                ('maintenance_request_id.user_id.id', '=', user.id)
             ]
         </field>
         <field
