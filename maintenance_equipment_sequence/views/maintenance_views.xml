@@ -22,7 +22,7 @@
     </record>
 
     <record id="hr_equipment_category_view_tree" model="ir.ui.view">
-        <field name="name">equipment.category.tree</field>
+        <field name="name">equipment.category.list</field>
         <field name="model">maintenance.equipment.category</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_category_view_tree" />
         <field name="arch" type="xml">
@@ -61,7 +61,7 @@
         </field>
     </record>
     <record id="hr_equipment_view_tree" model="ir.ui.view">
-        <field name="name">equipment.tree</field>
+        <field name="name">equipment.list</field>
         <field name="model">maintenance.equipment</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
         <field name="arch" type="xml">

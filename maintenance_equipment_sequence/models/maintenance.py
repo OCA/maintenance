@@ -63,18 +63,19 @@ class MaintenanceEquipmentCategory(models.Model):
                 sequence = category.sequence_id._get_current_sequence()
                 sequence.sudo().number_next = category.sequence_number_next
 
-    @api.model
-    def create(self, vals):
-        if not vals.get("sequence_id", False):
-            if vals.get("sequence_prefix", False):
-                vals["sequence_id"] = self.sudo()._create_sequence(vals).id
-        else:
-            vals["sequence_prefix"] = (
-                self.env["ir.sequence"].browse(vals["sequence_id"]).prefix
-            )
-        result = super().create(vals)
-        self._compute_equipment_code()
-        return result
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if not vals.get("sequence_id", False):
+                if vals.get("sequence_prefix", False):
+                    vals["sequence_id"] = self.sudo()._create_sequence(vals).id
+            else:
+                vals["sequence_prefix"] = (
+                    self.env["ir.sequence"].browse(vals["sequence_id"]).prefix
+                )
+        recs = super().create(vals_list)
+        recs._compute_equipment_code()
+        return recs
 
     def write(self, vals):
         if not vals.get("sequence_id", False):
@@ -107,18 +108,14 @@ class MaintenanceEquipmentCategory(models.Model):
 class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
-    @api.model
-    def create(self, vals):
-        equipment = super().create(vals)
-        if equipment.category_id and not equipment.serial_no:
-            sequence_id = (
-                self.env["maintenance.equipment.category"]
-                .browse(vals["category_id"])
-                .sequence_id
-            )
-            if sequence_id:
-                equipment.serial_no = sequence_id._next()
-        return equipment
+    @api.model_create_multi
+    def create(self, vals_list):
+        equipments = super().create(vals_list)
+        for equipment in equipments:
+            category = equipment.category_id
+            if category and category.sequence_id and not equipment.serial_no:
+                equipment.serial_no = category.sequence_id._next()
+        return equipments
 
     def write(self, vals):
         result = super().write(vals)
