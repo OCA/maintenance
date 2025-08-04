@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="equipment_with_contract" model="maintenance.equipment">
+        <field name="name">Equipment With A Contract</field>
+        <field name="owner_user_id" ref="base.user_root" />
+        <field name="technician_user_id" ref="base.user_root" />
+        <field name="serial_no">26534/5436/2</field>
+        <field name="model">532/54</field>
+    </record>
+    <record id="contract_supplier" model="res.partner">
+        <field name="name">Contract Supplier</field>
+        <field name="company_id" ref="base.main_company" />
+        <field name="supplier_rank">1</field>
+    </record>
+    <record id="equipment_contract" model="contract.contract">
+        <field name="name">Contract for an Equipment</field>
+        <field name="partner_id" ref="contract_supplier" />
+        <field name="contract_type">purchase</field>
+        <field
+            name="equipment_ids"
+            eval="[(6, 0, [ref('maintenance_equipment_contract.equipment_with_contract')])]"
+        />
+    </record>
+</odoo>
