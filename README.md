@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [base_maintenance](base_maintenance/) | 18.0.1.0.0 |  | Base Maintenance
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 18.0.1.0.0 |  | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_usage](maintenance_equipment_usage/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Equipment Usage
+[maintenance_product](maintenance_product/) | 18.0.1.0.1 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
 [maintenance_project](maintenance_project/) | 18.0.1.0.0 |  | Adds projects to maintenance equipments and requests
 [maintenance_request_employee](maintenance_request_employee/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Request Employee
 [maintenance_request_repair](maintenance_request_repair/) | 18.0.1.0.0 |  | This is a bridge module between Maintenance and Repair
