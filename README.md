@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [base_maintenance](base_maintenance/) | 18.0.1.0.0 |  | Base Maintenance
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 18.0.1.0.0 |  | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_project](maintenance_project/) | 18.0.1.0.0 |  | Adds projects to maintenance equipments and requests
+[maintenance_request_employee](maintenance_request_employee/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Request Employee
 [maintenance_security](maintenance_security/) | 18.0.2.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Security
 [maintenance_timesheet](maintenance_timesheet/) | 18.0.1.1.0 |  | Adds timesheets to maintenance requests
 [maintenance_timesheet_time_control](maintenance_timesheet_time_control/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Timesheets Timesheet Time Control
