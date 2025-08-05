@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -114,7 +114,6 @@ msgstr ""
 #. module: maintenance_equipment_usage
 #. odoo-python
 #: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
-#, python-format
 msgid "Every equipment can only be picked once at the same time!"
 msgstr ""
 
@@ -223,10 +222,7 @@ msgstr ""
 #. module: maintenance_equipment_usage
 #. odoo-python
 #: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
-#: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
-#: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
 #: model:ir.model.fields.selection,name:maintenance_equipment_usage.selection__maintenance_equipment_usage__state__draft
-#, python-format
 msgid "New"
 msgstr ""
 
