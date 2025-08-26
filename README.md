@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_maintenance](base_maintenance/) | 18.0.1.0.0 |  | Base Maintenance
+[base_maintenance_group](base_maintenance_group/) | 18.0.1.0.0 |  | Provides base access groups for the Maintenance App
 [maintenance_equipment_category_hierarchy](maintenance_equipment_category_hierarchy/) | 18.0.1.0.0 |  | Equipment Categories Hierarchy
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 18.0.1.0.0 |  | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 18.0.1.0.0 |  | Maintenance Equipment Status
