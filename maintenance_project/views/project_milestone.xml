@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Dixmit
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="project_milestone_form_view">
+        <field name="model">project.milestone</field>
+        <field name="inherit_id" ref="project.project_milestone_view_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    name="action_view_maintenance_request"
+                    type="object"
+                    title="View Maintenance Requests"
+                    string="View Maintenance Requests"
+                    class="oe_stat_button"
+                    icon="fa-wrench"
+                    groups="maintenance.group_equipment_manager"
+                    invisible="maintenance_request_count == 0"
+                >
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="maintenance_request_count" />
+                            <span> Maintenances</span>
+                        </span>
+                    </div>
+                </button>
+            </div>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="project_milestone_tree_view">
+        <field name="model">project.milestone</field>
+        <field name="inherit_id" ref="project.project_milestone_view_tree" />
+        <field name="arch" type="xml">
+            <button name="action_view_tasks" position="after">
+                <button
+                    name="action_view_maintenance_request"
+                    type="object"
+                    title="View Maintenance Requests"
+                    string="View Maintenance Requests"
+                    class="btn btn-link float-end"
+                    invisible="maintenance_request_count == 0"
+                    groups="maintenance.group_equipment_manager"
+                />
+            </button>
+        </field>
+    </record>
+</odoo>

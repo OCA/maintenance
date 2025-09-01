@@ -4,6 +4,7 @@
 
 from odoo.tests import Form, new_test_user
 from odoo.tests.common import users
+from odoo.tools.safe_eval import safe_eval
 
 from odoo.addons.base.tests.common import BaseCommon
 
@@ -14,6 +15,9 @@ class TestMaintenanceProject(BaseCommon):
         super().setUpClass()
         cls.project1 = cls.env["project.project"].create({"name": "My project"})
         cls.project_demo = cls.env.ref("maintenance_project.project_project_1")
+        cls.milestone = cls.env["project.milestone"].create(
+            {"name": "My milestone", "project_id": cls.project1.id}
+        )
         new_test_user(
             cls.env,
             login="test-user",
@@ -129,3 +133,56 @@ class TestMaintenanceProject(BaseCommon):
         act2 = self.project1.action_view_maintenance_request_ids()
         self.assertEqual(act2["domain"][0][2], self.project1.id)
         self.assertEqual(act2["context"]["default_project_id"], self.project1.id)
+
+    def test_milestones(self):
+        req_name = "My new recurring test request"
+        req = self.env["maintenance.request"].create(
+            {
+                "name": req_name,
+                "maintenance_type": "preventive",
+                "duration": 1.0,
+                "recurring_maintenance": True,
+                "repeat_interval": 1,
+                "repeat_unit": "month",
+                "repeat_type": "forever",
+                "project_id": self.project1.id,
+            }
+        )
+        self.assertFalse(req.milestone_id)
+        self.assertEqual(0, self.milestone.maintenance_request_count)
+        task = self.env["project.task"].create(
+            {
+                "name": "My test task",
+                "project_id": self.project1.id,
+                "milestone_id": self.milestone.id,
+            }
+        )
+        req.task_id = task
+        self.assertEqual(req.milestone_id, self.milestone)
+        self.assertEqual(1, self.milestone.maintenance_request_count)
+        action = self.milestone.action_view_maintenance_request()
+        self.assertIn("res_id", action)
+        self.assertEqual(action["res_id"], req.id)
+        req2 = self.env["maintenance.request"].create(
+            {
+                "name": req_name,
+                "maintenance_type": "preventive",
+                "duration": 1.0,
+                "recurring_maintenance": True,
+                "repeat_interval": 1,
+                "repeat_unit": "month",
+                "repeat_type": "forever",
+                "project_id": self.project1.id,
+                "milestone_id": self.milestone.id,
+            }
+        )
+        self.milestone.invalidate_recordset()
+        self.assertEqual(2, self.milestone.maintenance_request_count)
+        action = self.milestone.action_view_maintenance_request()
+        self.assertFalse(action.get("res_id"))
+        milestone_requests = self.env[action["res_model"]].search(
+            safe_eval(action["domain"], locals_dict={"active_id": self.milestone.id})
+        )
+        self.assertEqual(2, len(milestone_requests))
+        self.assertIn(req, milestone_requests)
+        self.assertIn(req2, milestone_requests)

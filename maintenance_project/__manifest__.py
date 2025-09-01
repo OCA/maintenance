@@ -3,13 +3,14 @@
 {
     "name": "Maintenance Projects",
     "summary": "Adds projects to maintenance equipments and requests",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.1.0",
     "author": "Odoo Community Association (OCA), Solvos",
     "license": "AGPL-3",
     "category": "Maintenance",
     "website": "https://github.com/OCA/maintenance",
     "depends": ["base_maintenance", "project"],
     "data": [
+        "views/project_milestone.xml",
         "views/maintenance_request_views.xml",
         "views/project_project_views.xml",
         "views/maintenance_equipment_views.xml",
