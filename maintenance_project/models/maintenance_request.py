@@ -9,6 +9,18 @@ class MaintenanceRequest(models.Model):
 
     project_id = fields.Many2one(comodel_name="project.project")
     task_id = fields.Many2one(comodel_name="project.task")
+    milestone_id = fields.Many2one(
+        comodel_name="project.milestone",
+        store=True,
+        compute="_compute_milestone_id",
+        readonly=False,
+    )
+
+    @api.depends("task_id")
+    def _compute_milestone_id(self):
+        for request in self:
+            if request.task_id:
+                request.milestone_id = request.task_id.milestone_id
 
     @api.model_create_multi
     def create(self, vals_list):
