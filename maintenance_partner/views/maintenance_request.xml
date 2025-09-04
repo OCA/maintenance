@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Dixmit
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="maintenance_request_form_view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <field name="equipment_id" position="after">
+                <field name="partner_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_request_tree_view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field name="partner_id" optional="hide" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_request_kanban_view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='equipment_id']/.." position="before">
+                <span
+                    name="partner_id"
+                    t-if="record.partner_id.raw_value"
+                >Partner: <field name="partner_id" /></span>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_request_search_view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
+        <field name="arch" type="xml">
+            <field name="equipment_id" position="after">
+                <field name="partner_id" />
+            </field>
+            <filter name="unscheduled" position="after">
+                <separator />
+                <filter
+                    name="with_partner"
+                    string="With Partner"
+                    domain="[('partner_id', '!=', False)]"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_maintenance_request_from_partner">
+        <field name="view_mode">kanban,list,form,pivot,graph,calendar,activity</field>
+        <field name="res_model">maintenance.request</field>
+        <field name="domain">[('partner_id', '=', active_id)]</field>
+        <field name="context">{'default_partner_id': active_id}</field>
+    </record>
+</odoo>
