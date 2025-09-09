@@ -34,7 +34,8 @@
     <record id="product_toner" model="product.product">
         <field name="default_code">TON_1234</field>
         <field name="name">Toner</field>
-        <field name="type">product</field>
+        <field name="type">consu</field>
+        <field name="is_storable" eval="True" />
         <field name="categ_id" ref="product.product_category_5" />
         <field name="lst_price">100.0</field>
         <field name="standard_price">70.0</field>
@@ -46,36 +47,6 @@
             file="maintenance_stock/static/img/toner.png"
         />
     </record>
-
-    <record id="stock_inventory_toner" model="stock.inventory">
-        <field name="name">Inventory for Toner</field>
-        <field
-            name="product_ids"
-            eval="[(6,0,[ref('maintenance_stock.product_toner'),])]"
-        />
-    </record>
-
-    <record id="stock_inventory_toner_line" model="stock.inventory.line">
-        <field name="product_id" ref="maintenance_stock.product_toner" />
-        <field name="product_uom_id" ref="uom.product_uom_unit" />
-        <field name="inventory_id" ref="maintenance_stock.stock_inventory_toner" />
-        <field name="product_qty">50.0</field>
-        <field name="location_id" ref="maintenance_stock.main_location_stock" />
-    </record>
-    <function name="action_start" model="stock.inventory">
-        <function
-            eval="[[('id', '=', ref('maintenance_stock.stock_inventory_toner'))]]"
-            model="stock.inventory"
-            name="search"
-        />
-    </function>
-    <function model="stock.inventory" name="action_validate">
-        <function
-            eval="[[('state','in', ['draft', 'confirm']),('id', '=', ref('maintenance_stock.stock_inventory_toner'))]]"
-            model="stock.inventory"
-            name="search"
-        />
-    </function>
 
     <record id="maintenance.equipment_printer1" model="maintenance.equipment">
         <field name="allow_consumptions" eval="True" />
@@ -106,7 +77,7 @@
         <field name="maintenance_request_id" ref="maintenance_stock.m_request_1" />
 
         <field
-            name="move_lines"
+            name="move_ids"
             model="stock.move"
             eval="[(0, 0, {
             'name': obj().env.ref('maintenance_stock.product_toner').name,

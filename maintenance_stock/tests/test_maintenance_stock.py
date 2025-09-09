@@ -1,10 +1,9 @@
 # © 2020 Solvos Consultoría Informática (<http://www.solvos.es>)
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
-import odoo.tests.common as test_common
-from odoo.tests.common import Form
+from odoo.tests import Form, common
 
 
-class TestMaintenanceStock(test_common.TransactionCase):
+class TestMaintenanceStock(common.TransactionCase):
     def setUp(self):
         super().setUp()
         self.maintenance_warehouse = self.env["stock.warehouse"].create(
@@ -18,9 +17,10 @@ class TestMaintenanceStock(test_common.TransactionCase):
             {
                 "default_code": "TESTOPROD",
                 "name": "Test prod",
-                "type": "product",
+                "type": "consu",
                 "uom_id": self.env.ref("uom.product_uom_unit").id,
                 "uom_po_id": self.env.ref("uom.product_uom_unit").id,
+                "is_storable": True,
             }
         )
 
@@ -108,7 +108,6 @@ class TestMaintenanceStock(test_common.TransactionCase):
     def test_picking(self):
         self.assertEqual(len(self.request_1.stock_picking_ids), 0)
         location_id = self.maintenance_warehouse.lot_stock_id
-        location_dest_id = self.maintenance_warehouse.wh_cons_loc_id
         picking_type_id = self.maintenance_warehouse.cons_type_id
         self.env["stock.quant"].create(
             {
@@ -120,7 +119,6 @@ class TestMaintenanceStock(test_common.TransactionCase):
         picking_form = Form(self.env["stock.picking"])
         picking_form.picking_type_id = picking_type_id
         picking_form.location_id = location_id
-        picking_form.location_dest_id = location_dest_id
         with picking_form.move_ids_without_package.new() as move:
             move.product_id = self.product1
             move.product_uom_qty = 5.0
@@ -141,7 +139,18 @@ class TestMaintenanceStock(test_common.TransactionCase):
 
         picking.action_confirm()
         picking.action_assign()
-        picking.move_line_ids.write({"qty_done": 5.0})
+        picking.move_line_ids.write({"quantity": 5.0, "picked": True})
         picking.button_validate()
         self.assertEqual(stock_quant_obj.search(domain_from).quantity, 0)
         self.assertEqual(stock_quant_obj.search(domain_to).quantity, 5)
+
+    def test_update_name_and_code(self):
+        """Test that _update_name_and_code updates the sequence prefix only."""
+        new_code = "UPDT"
+        self.maintenance_warehouse.code = new_code
+        self.maintenance_warehouse._update_name_and_code()
+        expected_prefix = new_code + "/CONS/"
+        self.assertEqual(
+            self.maintenance_warehouse.cons_type_id.sequence_id.prefix,
+            expected_prefix,
+        )

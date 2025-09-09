@@ -28,8 +28,9 @@ class MaintenanceRequest(models.Model):
             "stock.stock_picking_action_picking_type"
         )
         action["domain"] = [("maintenance_request_id", "=", self.id)]
+        cons_type = self.default_consumption_warehouse_id.cons_type_id
         action["context"] = {
-            "default_picking_type_id": self.default_consumption_warehouse_id.cons_type_id.id,
+            "default_picking_type_id": cons_type.id,
             "default_maintenance_request_id": self.id,
         }
         return action
