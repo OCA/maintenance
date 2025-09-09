@@ -39,11 +39,11 @@
             <xpath expr="//group[@name='origin_grp']" position="inside">
                 <field
                     name="maintenance_equipment_id"
-                    attrs="{'invisible': [('maintenance_request_id', '=', False)]}"
+                    invisible="maintenance_request_id == False"
                 />
                 <field
                     name="maintenance_request_id"
-                    attrs="{'invisible': [('maintenance_request_id', '=', False)]}"
+                    invisible="maintenance_request_id == False"
                 />
             </xpath>
         </field>

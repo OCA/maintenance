@@ -55,8 +55,8 @@ class StockWarehouse(models.Model):
         data = super()._get_picking_type_update_values()
         return {**data, "cons_type_id": {}}
 
-    def _get_sequence_values(self):
-        data = super()._get_sequence_values()
+    def _get_sequence_values(self, name=False, code=False):
+        data = super()._get_sequence_values(name=name, code=code)
         return {
             **data,
             "cons_type_id": {

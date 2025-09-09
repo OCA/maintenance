@@ -3,15 +3,12 @@
 
 import logging
 
-from odoo import SUPERUSER_ID, api
 
-
-def post_init_hook(cr, registry):
+def post_init_hook(env):
     logging.getLogger("odoo.addons.maintenance_stock").info(
         "Adding pending locations, sequences and pìcking types to " "current warehouses"
     )
 
-    env = api.Environment(cr, SUPERUSER_ID, {})
     PickingType = env["stock.picking.type"]
     for warehouse in env["stock.warehouse"].search([]):
         warehouse._create_missing_locations(vals={})
