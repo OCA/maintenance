@@ -56,3 +56,30 @@ class ProjectProject(models.Model):
         action["domain"] = [("project_id", "=", self.id), ("stage_id.done", "=", False)]
         action["context"] = {"default_project_id": self.id}
         return action
+
+    def _get_stat_buttons(self):
+        buttons = super()._get_stat_buttons()
+        if self.env.user.has_group("maintenance.group_equipment_manager"):
+            buttons.append(
+                {
+                    "icon": "cubes",
+                    "text": self.env._("Equipments"),
+                    "number": self.equipment_count,
+                    "action_type": "object",
+                    "action": "action_view_equipment_ids",
+                    "show": self.equipment_count > 0,
+                    "sequence": 5,
+                }
+            )
+            buttons.append(
+                {
+                    "icon": "wrench",
+                    "text": self.env._("Requests"),
+                    "number": self.maintenance_request_count,
+                    "action_type": "object",
+                    "action": "action_view_maintenance_request_ids",
+                    "show": self.maintenance_request_count > 0,
+                    "sequence": 6,
+                }
+            )
+        return buttons

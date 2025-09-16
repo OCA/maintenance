@@ -125,6 +125,33 @@ class TestMaintenanceProject(BaseCommon):
         my_requests = request_obj.search(domain)
         self.assertEqual(len(my_requests), 2)
 
+    def test_project_update_buttons(self):
+        """Test that the project update button is only visible to users with the
+        'Project / Project Manager' group.
+        """
+        user = self._create_new_internal_user(groups="project.group_project_user")
+
+        buttons = self.project1.with_user(user)._get_stat_buttons()
+        self.assertFalse(
+            any(button["action"] == "action_view_equipment_ids" for button in buttons)
+        )
+        self.assertFalse(
+            any(
+                button["action"] == "action_view_maintenance_request_ids"
+                for button in buttons
+            )
+        )
+        buttons = self.project1._get_stat_buttons()
+        self.assertTrue(
+            any(button["action"] == "action_view_equipment_ids" for button in buttons)
+        )
+        self.assertTrue(
+            any(
+                button["action"] == "action_view_maintenance_request_ids"
+                for button in buttons
+            )
+        )
+
     def test_project_action_views(self):
         act1 = self.project1.action_view_equipment_ids()
         self.assertEqual(act1["domain"][0][2], self.project1.id)
