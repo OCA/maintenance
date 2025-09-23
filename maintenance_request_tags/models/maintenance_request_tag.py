@@ -3,7 +3,7 @@
 
 from random import randint
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class MaintenanceRequestTag(models.Model):
@@ -19,18 +19,5 @@ class MaintenanceRequestTag(models.Model):
         "request_id",
         string="Maintenance Requests",
     )
-
-    selectable_team_ids = fields.Many2many(
-        "maintenance.team", string="Selectable Teams"
-    )
-
-    selectable_team_count = fields.Integer(
-        compute="_compute_selectable_team_count", store=True, readonly=True
-    )
-
-    @api.depends("selectable_team_ids")
-    def _compute_selectable_team_count(self):
-        for record in self:
-            record.selectable_team_count = len(record.selectable_team_ids)
 
     _sql_constraints = [("name_uniq", "unique (name)", "Tag name already exists !")]
