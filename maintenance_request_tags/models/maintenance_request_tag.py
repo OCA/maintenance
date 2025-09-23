@@ -7,7 +7,6 @@ from odoo import api, fields, models
 
 
 class MaintenanceRequestTag(models.Model):
-
     _name = "maintenance.request.tag"
     _description = "Maintenance Request Tag"
 

@@ -8,7 +8,7 @@
     "version": "16.0.1.0.0",
     "license": "AGPL-3",
     "author": "CreuBlanca,Odoo Community Association (OCA)",
-    "website": "https://github.com/tegin/cb-maintenance",
+    "website": "https://github.com/OCA/maintenance",
     "depends": ["maintenance_plan", "maintenance_team_hierarchy"],
     "data": [
         "security/ir.model.access.csv",

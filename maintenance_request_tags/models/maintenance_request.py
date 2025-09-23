@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class MaintenanceRequest(models.Model):
-
     _inherit = "maintenance.request"
 
     selectable_tags_ids = fields.Many2many(
