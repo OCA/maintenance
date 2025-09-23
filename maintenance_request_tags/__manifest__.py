@@ -5,17 +5,14 @@
     "name": "Maintenance Request Tags",
     "summary": """
         Adds tags to Maintenance Requests""",
-    "version": "16.0.1.0.0",
+    "version": "18.0.1.0.0",
     "license": "AGPL-3",
-    "author": "CreuBlanca,Odoo Community Association (OCA)",
+    "author": "Dixmit,CreuBlanca,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
-    "depends": ["maintenance_plan", "maintenance_team_hierarchy"],
+    "depends": ["maintenance"],
     "data": [
         "security/ir.model.access.csv",
-        "views/maintenance_equipment.xml",
-        "views/maintenance_plan.xml",
         "views/maintenance_request_tag.xml",
         "views/maintenance_request.xml",
-        "views/maintenance_team.xml",
     ],
 }
