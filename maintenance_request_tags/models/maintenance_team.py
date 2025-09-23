@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class MaintenanceTeam(models.Model):
-
     _inherit = "maintenance.team"
 
     selectable_tags_ids = fields.Many2many(
