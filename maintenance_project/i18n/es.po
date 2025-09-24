@@ -35,6 +35,11 @@ msgid "<span class=\"o_label\">Requests</span>"
 msgstr "<span class=\"o_label\">Peticiones</span>"
 
 #. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.project_milestone_form_view
+msgid "<span> Maintenances</span>"
+msgstr ""
+
+#. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.report_maintenance_request_document
 msgid "<strong>Project:</strong>"
 msgstr "<strong>Proyecto:</strong>"
@@ -96,9 +101,26 @@ msgid "Maintenance Request Count"
 msgstr "N??mero de peticiones de mantenimiento"
 
 #. module: maintenance_project
+#: model:ir.actions.act_window,name:maintenance_project.action_view_maintenance_request_for_milestone
+#: model:ir.model.fields,field_description:maintenance_project.field_project_milestone__maintenance_request_ids
 #: model:ir.model.fields,field_description:maintenance_project.field_project_project__maintenance_request_ids
 msgid "Maintenance Requests"
 msgstr "Peticiones de mantenimiento"
+
+#. module: maintenance_project
+#: model:ir.model.fields,field_description:maintenance_project.field_project_milestone__maintenance_request_count
+msgid "Maintenance Requests Count"
+msgstr ""
+
+#. module: maintenance_project
+#: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__milestone_id
+msgid "Milestone"
+msgstr ""
+
+#. module: maintenance_project
+#: model_terms:ir.actions.act_window,help:maintenance_project.action_view_maintenance_request_for_milestone
+msgid "No maintenance requests found. Let's create one!"
+msgstr ""
 
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_project_project
@@ -106,6 +128,11 @@ msgstr "Peticiones de mantenimiento"
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__project_id
 msgid "Project"
 msgstr "Proyecto"
+
+#. module: maintenance_project
+#: model:ir.model,name:maintenance_project.model_project_milestone
+msgid "Project Milestone"
+msgstr ""
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.hr_equipment_request_view_kanban
@@ -127,6 +154,12 @@ msgstr "Tarea"
 #: model:project.project,label_tasks:maintenance_project.project_project_1
 msgid "Tasks"
 msgstr "Tareas"
+
+#. module: maintenance_project
+#: model_terms:ir.ui.view,arch_db:maintenance_project.project_milestone_form_view
+#: model_terms:ir.ui.view,arch_db:maintenance_project.project_milestone_tree_view
+msgid "View Maintenance Requests"
+msgstr ""
 
 #~ msgid "Create Project From Equipment"
 #~ msgstr "Crear proyecto a partir del equipo"
