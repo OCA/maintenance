@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-02-21 18:06+0000\n"
+"PO-Revision-Date: 2025-09-26 16:55+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.hr_equipment_view_form
@@ -38,7 +38,7 @@ msgstr "<span class=\"o_label\">Richieste</span>"
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.project_milestone_form_view
 msgid "<span> Maintenances</span>"
-msgstr ""
+msgstr "<span> Manutenzioni</span>"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.report_maintenance_request_document
@@ -111,17 +111,17 @@ msgstr "Richieste di manutenzione"
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_project_milestone__maintenance_request_count
 msgid "Maintenance Requests Count"
-msgstr ""
+msgstr "Conta richieste manutenzione"
 
 #. module: maintenance_project
 #: model:ir.model.fields,field_description:maintenance_project.field_maintenance_request__milestone_id
 msgid "Milestone"
-msgstr ""
+msgstr "Milestone"
 
 #. module: maintenance_project
 #: model_terms:ir.actions.act_window,help:maintenance_project.action_view_maintenance_request_for_milestone
 msgid "No maintenance requests found. Let's create one!"
-msgstr ""
+msgstr "Richieste manutenzione non trovate. Creane una!"
 
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_project_project
@@ -133,7 +133,7 @@ msgstr "Progetto"
 #. module: maintenance_project
 #: model:ir.model,name:maintenance_project.model_project_milestone
 msgid "Project Milestone"
-msgstr ""
+msgstr "Milestone progetto"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.hr_equipment_request_view_kanban
@@ -160,7 +160,7 @@ msgstr "Lavori"
 #: model_terms:ir.ui.view,arch_db:maintenance_project.project_milestone_form_view
 #: model_terms:ir.ui.view,arch_db:maintenance_project.project_milestone_tree_view
 msgid "View Maintenance Requests"
-msgstr ""
+msgstr "Vedi richieste manutenzione"
 
 #~ msgid "<span class=\"fa fa-plus\"/><span> Create project</span>"
 #~ msgstr "<span class=\"fa fa-plus\"/><span> Crea progetto</span>"
