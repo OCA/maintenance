@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding='UTF-8' ?>
 <odoo>
-	<record id="maintenance_requests_cron" model="ir.cron">
+    <record id="maintenance_requests_cron" model="ir.cron">
         <field name="name">Maintenance: generate preventive maintenance requests</field>
         <field name="model_id" ref="model_maintenance_equipment" />
         <field name="state">code</field>
