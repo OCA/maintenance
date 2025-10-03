@@ -29,7 +29,7 @@
                     nolabel="1"
                     context="{'default_equipment_id': id, 'hide_equipment_id': 1}"
                 >
-                    <tree>
+                    <list>
                         <field name="maintenance_kind_id" string="Kind" />
                         <field name="maintenance_team_id" string="Team" />
                         <field name="name" />
@@ -43,7 +43,7 @@
                             string="P. Horizon period"
                         />
                         <field name="planning_step" string="P. Horizon step" />
-                    </tree>
+                    </list>
                 </field>
             </xpath>
             <field name="maintenance_team_id" position="after">
