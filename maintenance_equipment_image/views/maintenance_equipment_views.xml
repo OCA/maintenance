@@ -18,18 +18,31 @@
     <record id="hr_equipment_view_kanban" model="ir.ui.view">
         <field name="model">maintenance.equipment</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
+        <field name="priority" eval="100" />
         <field name="arch" type="xml">
-            <field name="activity_state" position="after">
-                <field name="id" />
-            </field>
-            <xpath expr="//div[hasclass('o_dropdown_kanban')]" position="before">
-                <div class="o_kanban_image mr-1">
-                    <img
-                        t-att-src="kanban_image('maintenance.equipment', 'image_128', record.id.raw_value)"
-                        alt="Equipment"
-                        class="o_image_64_contain"
-                    />
-                </div>
+            <!-- There is no way to use "replace" to move all node children, so we have
+            to rename the original card and create a new one with the image on the side.
+            When the <t> tag has been renamed to dummy, it will no longer considered by
+            Odoo will ignore it in the rendering of the kanban view.
+            -->
+            <xpath expr="//t[@t-name='card']" position="attributes">
+                <attribute name="t-name">dummy</attribute>
+            </xpath>
+            <xpath expr="//t[@t-name='dummy']" position="replace">
+                <t t-name="card" class="flex-row">
+                    <aside class="o_kanban_aside_full">
+                        <field
+                            name="image_128"
+                            options="{
+                                'placeholder': '/base/static/img/company_image.png',
+                                'size': [100, 100],
+                                'img_class': 'object-fit-cover'
+                            }"
+                            widget="image"
+                        />
+                    </aside>
+                    <main class="ps-2 ms-1">$0</main>
+                </t>
             </xpath>
         </field>
     </record>
