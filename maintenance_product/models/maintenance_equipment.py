@@ -10,10 +10,12 @@ class MaintenanceEquipment(models.Model):
         comodel_name="product.product",
         string="Product",
         tracking=True,
-        domain=[
-            ("categ_id", "child_of", "product_category_id"),
-            ("maintenance_ok", "=", True),
-        ],
+        domain="""
+            [
+                ('categ_id', 'child_of', product_category_id),
+                ('maintenance_ok', '=', True),
+            ]
+        """,
     )
     product_category_id = fields.Many2one(
         comodel_name="product.category", related="category_id.product_category_id"
