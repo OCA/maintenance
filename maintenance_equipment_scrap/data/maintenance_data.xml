@@ -1,21 +1,19 @@
 <odoo>
     <record id="equipment_scrap_mail_template" model="mail.template">
         <field name="name">Equipment Scrapped</field>
-        <field name="email_from">${('noreply@localhost')|safe}</field>
-        <field name="subject">Your equipment ${object.name} was scrapped!</field>
-        <field name="email_to">${object.owner_user_id.email}</field>
+        <field name="email_from">{{ (object.company_id.email_formatted or user.email_formatted or '') }}</field>
+        <field name="subject">Your equipment {{object.name}} was scrapped!</field>
+        <field name="email_to">{{object.owner_user_id.email}}</field>
         <field name="model_id" ref="maintenance.model_maintenance_equipment" />
-        <field
-            name="body_html"
-        ><![CDATA[
-            <p>Hello, <strong>${object.owner_user_id.name}</strong></p>
-            <p>Your equipment <strong>${object.name}</strong>
-
-            % if object.serial_no:
-                with Serial Number: <strong>${object.serial_no}</strong>
-            % endif
-
-            was scrapped.</p>]]>
+        <field name="body_html" type="html">
+            <p>Hello, <strong t-out="object.owner_user_id.name" /></p>
+            <p>
+                Your equipment <strong t-out="object.name" />
+                <t t-if="object.serial_no">
+                    with Serial Number: <strong t-out="object.serial_no" />
+                </t>
+                was scrapped.
+            </p>
         </field>
     </record>
 </odoo>
