@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class MaintenanceEquipment(models.Model):
-
     _inherit = "maintenance.equipment"
 
     equipment_scrap_template_id = fields.Many2one(

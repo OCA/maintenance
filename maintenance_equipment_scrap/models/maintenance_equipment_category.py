@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class MaintenanceEquipmentCategory(models.Model):
-
     _inherit = "maintenance.equipment.category"
 
     equipment_scrap_template_id = fields.Many2one(
