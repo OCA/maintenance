@@ -19,12 +19,6 @@
                 <attribute name="readonly">1</attribute>
                 <attribute name="groups" />
             </xpath>
-            <xpath expr="//field[@name='location']" position='after'>
-                <field
-                    name="equipment_scrap_template_id"
-                    domain="[('model','=','maintenance.equipment')]"
-                />
-            </xpath>
         </field>
     </record>
 </odoo>

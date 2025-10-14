@@ -13,6 +13,10 @@
                                 string="Scrapping equipment"
                             />
                             <field name="scrap_date" default_focus="1" />
+                            <field
+                                name="template_id"
+                                domain="[('model','=','maintenance.equipment')]"
+                            />
                         </group>
                     </group>
                 </sheet>
@@ -31,7 +35,7 @@
     <record model="ir.actions.act_window" id="wizard_perform_equipment_scrap_action">
         <field name="name">Wizard Scrap</field>
         <field name="res_model">wizard.perform.equipment.scrap</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">form</field>
         <field name="view_id" ref="view_perform_equipment_scrap" />
         <field name="target">new</field>
     </record>

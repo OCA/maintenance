@@ -10,4 +10,6 @@ class MaintenanceEquipmentCategory(models.Model):
     equipment_scrap_template_id = fields.Many2one(
         "mail.template",
         string="Equipment Scrap Email Template",
+        help="Default email template to set in the wizard when an equipment of "
+        "this category is scrapped.",
     )
