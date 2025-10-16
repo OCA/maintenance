@@ -36,6 +36,22 @@ allowing an equipment to have different preventive maintenance kinds.
 .. contents::
    :local:
 
+Use Cases / Context
+===================
+
+Despite Odoo's built-in recurrence functionality included in the
+maintenance requests themselves (since 17.0), this module could be
+needed for some reasons:
+
+- Odoo implementation is javascript only
+- Some companies already work with the existing "Maintenance Plan"
+  workflow
+- Some modules are depending on this one
+
+For reference, this module was initially set deprecated when migrated to
+17.0:
+https://github.com/OCA/maintenance/pull/414#issuecomment-2668929617
+
 Installation
 ============
 
@@ -89,14 +105,6 @@ selecting the equipments. This way, we might have a single plan that
 will generate all the requests. In order to use it, we need to mark the
 Generate with Domain field.
 
-Known issues / Roadmap
-======================
-
-This module is considered deprecated already in 17.0 because the
-recurrence functionality is already included in core in the requests
-themselves.
-https://github.com/OCA/maintenance/pull/414#issuecomment-2668929617
-
 Bug Tracker
 ===========
 
@@ -127,6 +135,7 @@ Contributors
 - Lois Rilo <lois.rilo@forgeflow.com>
 - Enric Tobella <enric.tobella@dixmit.com>
 - Alexei Rivera <arivera@archeti.com>
+- Yann Papouin <ypa@decgroupe.com>
 
 Maintainers
 -----------
