@@ -6,3 +6,4 @@
 - Lois Rilo \<<lois.rilo@forgeflow.com>\>
 - Enric Tobella \<<enric.tobella@dixmit.com>\>
 - Alexei Rivera \<<arivera@archeti.com>\>
+- Yann Papouin \<<ypa@decgroupe.com>\>
