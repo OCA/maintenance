@@ -2,14 +2,12 @@
 <!-- Copyright 2023 Dixmit
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
-
     <record model="ir.ui.view" id="maintenance_inspection_item_form_view">
         <field name="model">maintenance.inspection.item</field>
         <field name="arch" type="xml">
             <form>
                 <header />
                 <sheet>
-
                     <widget
                         name="web_ribbon"
                         title="Archived"

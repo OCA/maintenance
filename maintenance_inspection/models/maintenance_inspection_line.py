@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class MaintenanceInspectionLine(models.Model):
-
     _name = "maintenance.inspection.line"
     _description = "Maintenance Inspection Line"
 
