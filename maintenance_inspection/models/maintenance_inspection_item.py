@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class MaintenanceInspectionItem(models.Model):
-
     _name = "maintenance.inspection.item"
     _description = "Item of evaluation"
 

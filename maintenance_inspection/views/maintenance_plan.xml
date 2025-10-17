@@ -2,7 +2,6 @@
 <!-- Copyright 2023 Dixmit
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
-
     <record model="ir.ui.view" id="maintenance_plan_form_view">
         <field name="model">maintenance.plan</field>
         <field name="inherit_id" ref="maintenance_plan.maintenance_plan_view_form" />
@@ -12,7 +11,4 @@
             </field>
         </field>
     </record>
-
-
-
 </odoo>
