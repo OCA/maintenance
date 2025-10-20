@@ -188,6 +188,7 @@
 
     <record id="maintenance_plan_action" model="ir.actions.act_window">
         <field name="name">Maintenance Plans</field>
+        <field name="path">maintenance-plans</field>
         <field name="res_model">maintenance.plan</field>
         <field name="view_mode">list,form</field>
         <field name="view_id" ref="maintenance_plan_view_tree" />
@@ -198,6 +199,7 @@
 
     <record id="maintenance_plan_equipment_action" model="ir.actions.act_window">
         <field name="name">Maintenance Plans</field>
+        <field name="path">maintenance-equipment-plans</field>
         <field name="res_model">maintenance.plan</field>
         <field name="view_mode">list,form</field>
         <field name="view_id" ref="maintenance_plan_view_tree" />

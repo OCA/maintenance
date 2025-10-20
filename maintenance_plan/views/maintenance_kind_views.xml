@@ -13,6 +13,7 @@
 
     <record id="maintenance_kind_action" model="ir.actions.act_window">
         <field name="name">Maintenance Kinds</field>
+        <field name="path">maintenance-kinds</field>
         <field name="res_model">maintenance.kind</field>
         <field name="view_mode">list</field>
         <field name="view_id" ref="maintenance_kind_view_tree" />
