@@ -1,6 +1,8 @@
 # Copyright 2023 Dixmit
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
+from odoo import Command
+
 from odoo.addons.maintenance_plan.tests.common import TestMaintenancePlanBase
 
 
@@ -36,13 +38,37 @@ class TestInspection(TestMaintenancePlanBase):
         request.set_inspection()
         self.assertTrue(request.has_inspection)
         self.assertFalse(request.inspection_line_ids)
-        request.write({"inspection_line_ids": [(0, 0, {"item_id": self.item_1.id})]})
+        request.write(
+            {"inspection_line_ids": [Command.create({"item_id": self.item_1.id})]}
+        )
+
         self.assertEqual(request.inspection_line_ids.result, "todo")
         request.inspection_line_ids.action_success()
         self.assertEqual(request.inspection_line_ids.result, "success")
         request.inspection_line_ids.action_failure()
         self.assertEqual(request.inspection_line_ids.result, "failure")
         self.assertFalse(request.inspection_closed_at)
+        request.finish_inspection()
+        self.assertTrue(request.inspection_closed_at)
+
+    def test_request_reset(self):
+        request = self.env["maintenance.request"].create(
+            {
+                "name": "Request",
+                "maintenance_type": "preventive",
+                "has_inspection": True,
+                "inspection_line_ids": [Command.create({"item_id": self.item_1.id})],
+            }
+        )
+        request.inspection_line_ids.action_failure()
+        self.assertEqual(request.inspection_line_ids.result, "failure")
+        request.finish_inspection()
+        self.assertTrue(request.inspection_closed_at)
+        request.archive_equipment_request()
+        request.reset_equipment_request()
+        self.assertFalse(request.inspection_closed_at)
+        request.inspection_line_ids.action_success()
+        self.assertEqual(request.inspection_line_ids.result, "success")
         request.finish_inspection()
         self.assertTrue(request.inspection_closed_at)
 

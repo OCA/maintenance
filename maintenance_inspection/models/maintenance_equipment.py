@@ -1,7 +1,7 @@
 # Copyright 2023 Dixmit
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import models
+from odoo import Command, models
 
 
 class MaintenanceEquipment(models.Model):
@@ -16,12 +16,10 @@ class MaintenanceEquipment(models.Model):
                 {
                     "has_inspection": True,
                     "inspection_line_ids": [
-                        (
-                            0,
-                            0,
+                        Command.create(
                             {
                                 "item_id": item.id,
-                            },
+                            }
                         )
                         for item in maintenance_plan.inspection_item_ids
                     ],

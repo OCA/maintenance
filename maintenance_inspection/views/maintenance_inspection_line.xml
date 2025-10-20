@@ -94,7 +94,7 @@
     <record model="ir.ui.view" id="maintenance_inspection_line_tree_view">
         <field name="model">maintenance.inspection.line</field>
         <field name="arch" type="xml">
-            <tree editable="bottom">
+            <list editable="bottom">
                 <field name="item_id" />
                 <field name="instruction" />
                 <field name="result_description" />
@@ -107,7 +107,7 @@
                     name="action_success"
                     string="Approve"
                     type="object"
-                    attrs="{'invisible':[('inspection_closed_at', '!=',False)]}"
+                    invisible="inspection_closed_at"
                     class="oe_highlight btn-success"
                     icon="fa-check-circle"
                 />
@@ -115,12 +115,12 @@
                     name="action_failure"
                     string="Refuse"
                     type="object"
-                    attrs="{'invisible':[('inspection_closed_at', '!=',False)]}"
+                    invisible="inspection_closed_at"
                     class="oe_highlight btn-danger"
                     icon="fa-times-circle"
                 />
-                <field name="inspection_closed_at" invisible="1" />
-            </tree>
+                <field name="inspection_closed_at" column_invisible="1" />
+            </list>
         </field>
     </record>
 </odoo>
