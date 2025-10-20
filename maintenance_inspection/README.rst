@@ -30,7 +30,7 @@ Maintenance Inspection
 
 Add the concept of inspection items inside Maintenance requests.
 
-Will only be usable insidea preventive requests.
+Will only be usable inside a preventive requests.
 
 **Table of contents**
 
@@ -73,6 +73,7 @@ Contributors
 ------------
 
 - Enric Tobella
+- Yann Papouin <ypa@decgroupe.com>
 
 Maintainers
 -----------

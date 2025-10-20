@@ -15,7 +15,6 @@ class MaintenanceInspectionLine(models.Model):
     instruction = fields.Text(related="item_id.instruction")
     result = fields.Selection(
         [("todo", "Todo"), ("success", "Success"), ("failure", "Failure")],
-        "Result",
         default="todo",
         readonly=True,
         required=True,
@@ -25,7 +24,7 @@ class MaintenanceInspectionLine(models.Model):
     inspection_closed_at = fields.Datetime(related="request_id.inspection_closed_at")
 
     def action_success(self):
-        self.write({"result": "success"})
+        self.update({"result": "success"})
 
     def action_failure(self):
-        self.write({"result": "failure"})
+        self.update({"result": "failure"})

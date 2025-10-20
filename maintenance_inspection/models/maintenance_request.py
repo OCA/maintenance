@@ -11,16 +11,25 @@ class MaintenanceRequest(models.Model):
     inspection_line_ids = fields.One2many(
         "maintenance.inspection.line", inverse_name="request_id"
     )
-    inspection_closed_at = fields.Datetime(readonly=True, copy=False)
-    inspection_closed_by = fields.Many2one("res.users", readonly=True, copy=False)
+    inspection_closed_at = fields.Datetime(copy=False)
+    inspection_closed_by = fields.Many2one("res.users", copy=False)
 
     def set_inspection(self):
-        self.write({"has_inspection": True})
+        self.has_inspection = True
 
     def finish_inspection(self):
-        self.write(
+        self.update(
             {
                 "inspection_closed_at": fields.Datetime.now(),
                 "inspection_closed_by": self.env.user.id,
             }
         )
+
+    def reset_equipment_request(self):
+        self.update(
+            {
+                "inspection_closed_at": False,
+                "inspection_closed_by": False,
+            }
+        )
+        return super().reset_equipment_request()
