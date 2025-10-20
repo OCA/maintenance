@@ -18,4 +18,9 @@
         "views/maintenance_location.xml",
         "views/report_maintenance_request.xml",
     ],
+    "demo": [
+        "demo/demo_maintenance_location.xml",
+        "demo/demo_maintenance_plan.xml",
+        "demo/demo_maintenance_equipment.xml",
+    ],
 }
