@@ -11,10 +11,11 @@
     "website": "https://github.com/OCA/maintenance",
     "depends": ["maintenance_plan"],
     "data": [
+        "security/ir.model.access.csv",
         "views/maintenance_plan.xml",
         "views/maintenance_equipment.xml",
-        "security/ir.model.access.csv",
         "views/maintenance_request.xml",
         "views/maintenance_location.xml",
+        "views/report_maintenance_request.xml",
     ],
 }
