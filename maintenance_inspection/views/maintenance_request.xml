@@ -10,17 +10,28 @@
                 <page
                     name="inspection"
                     string="Inspection"
-                    attrs="{'invisible': ['|', ('maintenance_type', '!=', 'preventive'), ('has_inspection','=', False)]}"
+                    invisible="maintenance_type != 'preventive' or not has_inspection"
                 >
-                    <group>
-                        <field name="inspection_closed_at" />
-                        <field name="inspection_closed_by" />
-                    </group>
                     <field
                         name="inspection_line_ids"
-                        mode="tree,kanban"
-                        attrs="{'readonly': [('inspection_closed_at', '!=', False)]}"
+                        mode="list,kanban"
+                        readonly="inspection_closed_at"
                     />
+                    <div
+                        name="inspection_closed_info"
+                        class="d-flex"
+                        invisible="not inspection_closed_at"
+                    >
+                        <span>Inspection closed at</span>
+                        <field name="inspection_closed_at" readonly="1" class="mx-2" />
+                        <span>By</span>
+                        <field
+                            name="inspection_closed_by"
+                            widget="many2one_avatar_user"
+                            readonly="1"
+                            class="mx-2"
+                        />
+                    </div>
                     <field name="has_inspection" invisible="1" />
                 </page>
             </notebook>
@@ -29,13 +40,13 @@
                     name="set_inspection"
                     type="object"
                     string="Set inspection"
-                    attrs="{'invisible': ['|', ('has_inspection', '=', True), ('maintenance_type', '!=', 'preventive')]}"
+                    invisible="has_inspection or maintenance_type != 'preventive'"
                 />
                 <button
                     name="finish_inspection"
                     type="object"
                     string="Finish inspection"
-                    attrs="{'invisible': ['|', '|', ('has_inspection', '=', False), ('inspection_closed_at', '!=', False), ('maintenance_type', '!=', 'preventive')]}"
+                    invisible="not has_inspection or inspection_closed_at or maintenance_type != 'preventive'"
                 />
             </button>
         </field>
