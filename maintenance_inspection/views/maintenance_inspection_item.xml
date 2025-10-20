@@ -56,6 +56,7 @@
 
     <record model="ir.actions.act_window" id="maintenance_inspection_item_act_window">
         <field name="name">Inspection Item</field>
+        <field name="path">maintenance-inspection</field>
         <field name="res_model">maintenance.inspection.item</field>
         <field name="view_mode">list,form</field>
         <field name="domain">[]</field>
