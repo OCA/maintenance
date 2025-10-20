@@ -34,6 +34,7 @@
 
     <record id="hr_equipment_request_action_from_plan" model="ir.actions.act_window">
         <field name="name">Maintenance Requests</field>
+        <field name="path">maintenance-plan-requests</field>
         <field name="res_model">maintenance.request</field>
         <field name="binding_model_id" ref="model_maintenance_plan" />
         <field name="view_mode">kanban,list,form,pivot,graph,calendar</field>
