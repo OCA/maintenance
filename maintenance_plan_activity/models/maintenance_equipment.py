@@ -3,15 +3,7 @@
 
 from datetime import timedelta
 
-from odoo import _, fields, models
-
-
-class MaintenancePlan(models.Model):
-    _inherit = "maintenance.plan"
-
-    planned_activity_ids = fields.One2many(
-        "maintenance.planned.activity", "maintenance_plan_id", "Planned Activities"
-    )
+from odoo import _, models
 
 
 class MaintenanceEquipment(models.Model):
