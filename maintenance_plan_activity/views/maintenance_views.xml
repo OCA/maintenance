@@ -15,14 +15,14 @@
     </record>
     <!--    maintenance.planned.activities : views-->
     <record id="maintenance_planned_activity_view_tree" model="ir.ui.view">
-        <field name="name">maintenance.planned.activity.tree</field>
+        <field name="name">maintenance.planned.activity.list</field>
         <field name="model">maintenance.planned.activity</field>
         <field name="arch" type="xml">
-            <tree editable="bottom">
+            <list editable="bottom">
                 <field name="activity_type_id" />
                 <field name="user_id" />
                 <field name="date_before_request" />
-            </tree>
+            </list>
         </field>
     </record>
 </odoo>
