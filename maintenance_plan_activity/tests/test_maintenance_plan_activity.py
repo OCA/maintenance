@@ -9,7 +9,7 @@ from odoo import fields
 
 class TestMaintenancePlanActivity(test_common.TransactionCase):
     def setUp(self):
-        super(TestMaintenancePlanActivity, self).setUp()
+        super().setUp()
         self.maintenance_request_obj = self.env["maintenance.request"]
         self.maintenance_plan_obj = self.env["maintenance.plan"]
         self.maintenance_equipment_obj = self.env["maintenance.equipment"]
