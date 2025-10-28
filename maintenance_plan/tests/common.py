@@ -2,12 +2,10 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from freezegun import freeze_time
 
-import odoo.tests.common as test_common
-
-from odoo.addons.base.tests.common import DISABLED_MAIL_CONTEXT
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestMaintenancePlanBase(test_common.TransactionCase):
+class TestMaintenancePlanBase(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -15,7 +13,6 @@ class TestMaintenancePlanBase(test_common.TransactionCase):
         freezer = freeze_time("2023-01-25 15:30:00")
         freezer.__enter__()
         cls.addClassCleanup(freezer.__exit__)
-        cls.env = cls.env(context=dict(cls.env.context, **DISABLED_MAIL_CONTEXT))
         cls.maintenance_request_obj = cls.env["maintenance.request"]
         cls.maintenance_plan_obj = cls.env["maintenance.plan"]
         cls.maintenance_equipment_obj = cls.env["maintenance.equipment"]
