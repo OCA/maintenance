@@ -23,13 +23,13 @@
             <xpath expr="//group[@name='statistics']" position="attributes">
                 <attribute name="invisible">True</attribute>
             </xpath>
-            <xpath expr="//group[@name='statistics']/.." position="after">
+            <xpath expr="//group[@name='statistics']/.." position="before">
                 <field
                     name="maintenance_plan_ids"
                     nolabel="1"
                     context="{'default_equipment_id': id, 'hide_equipment_id': 1}"
                 >
-                    <tree>
+                    <list>
                         <field name="maintenance_kind_id" string="Kind" />
                         <field name="maintenance_team_id" string="Team" />
                         <field name="name" />
@@ -43,12 +43,9 @@
                             string="P. Horizon period"
                         />
                         <field name="planning_step" string="P. Horizon step" />
-                    </tree>
+                    </list>
                 </field>
             </xpath>
-            <field name="maintenance_team_id" position="after">
-                <field name="maintenance_team_required" invisible="True" />
-            </field>
             <field name="maintenance_team_id" position="attributes">
                 <attribute name="required">maintenance_team_required</attribute>
             </field>
@@ -90,7 +87,7 @@
     </record>
 
     <record id="hr_equipment_request_view_tree" model="ir.ui.view">
-        <field name="name">equipment.request.tree</field>
+        <field name="name">equipment.request.list</field>
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
         <field name="arch" type="xml">
