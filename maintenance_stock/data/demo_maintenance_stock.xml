@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="location_inventory" model="stock.location">
+        <field name="name">Inventory adjustment</field>
+        <field name="usage">inventory</field>
+    </record>
+    <record id="stock_warehouse_maintenance" model="stock.warehouse">
+        <field name="name">Maintenance Warehouse</field>
+        <field name="partner_id" ref="stock.res_partner_address_41" />
+        <field name="code">Main</field>
+        <field name="reception_steps">one_step</field>
+        <field name="delivery_steps">ship_only</field>
+    </record>
+
+    <function model="ir.model.data" name="_update_xmlids">
+        <value
+            model="base"
+            eval="[{
+            'xml_id': 'maintenance_stock.main_picking_type_cons',
+            'record': obj().env.ref('maintenance_stock.stock_warehouse_maintenance').cons_type_id,
+            'noupdate': True,
+        }, {
+            'xml_id': 'maintenance_stock.main_location_stock',
+            'record': obj().env.ref('maintenance_stock.stock_warehouse_maintenance').lot_stock_id,
+            'noupdate': True,
+        }, {
+            'xml_id': 'maintenance_stock.main_location_cons',
+            'record': obj().env.ref('maintenance_stock.stock_warehouse_maintenance').wh_cons_loc_id,
+            'noupdate': True,
+        }]"
+        />
+    </function>
+
+    <record id="product_toner" model="product.product">
+        <field name="default_code">TON_1234</field>
+        <field name="name">Toner</field>
+        <field name="type">consu</field>
+        <field name="is_storable" eval="True" />
+        <field name="categ_id" ref="product.product_category_5" />
+        <field name="lst_price">100.0</field>
+        <field name="standard_price">70.0</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+        <field
+            name="image_1920"
+            type="base64"
+            file="maintenance_stock/static/img/toner.png"
+        />
+    </record>
+
+    <record id="maintenance.equipment_printer1" model="maintenance.equipment">
+        <field name="allow_consumptions" eval="True" />
+        <field
+            name="default_consumption_warehouse_id"
+            ref="maintenance_stock.stock_warehouse_maintenance"
+        />
+    </record>
+
+    <record id="m_request_1" model="maintenance.request">
+        <field name="name">Change toner</field>
+        <field name="user_id" ref="base.user_demo" />
+        <field name="owner_user_id" ref="base.user_admin" />
+        <field name="equipment_id" ref="maintenance.equipment_printer1" />
+        <field name="color">7</field>
+        <field name="stage_id" ref="maintenance.stage_1" />
+    </record>
+    <record model="stock.quant" id="stock_quant_toner">
+        <field name="product_id" ref="maintenance_stock.product_toner" />
+        <field name="location_id" ref="maintenance_stock.main_location_stock" />
+        <field name="quantity">1.0</field>
+    </record>
+    <record id="consuption_picking_m_request_1" model="stock.picking">
+        <field name="picking_type_id" ref="maintenance_stock.main_picking_type_cons" />
+        <field name="date" eval="DateTime.today() - timedelta(days=15)" />
+        <field name="location_id" ref="maintenance_stock.main_location_stock" />
+        <field name="location_dest_id" ref="maintenance_stock.main_location_cons" />
+        <field name="maintenance_request_id" ref="maintenance_stock.m_request_1" />
+
+        <field
+            name="move_ids"
+            model="stock.move"
+            eval="[(0, 0, {
+            'name': obj().env.ref('maintenance_stock.product_toner').name,
+            'product_id': ref('maintenance_stock.product_toner'),
+            'product_uom': ref('uom.product_uom_unit'),
+            'product_uom_qty': 1.0,
+            'picking_type_id': ref('maintenance_stock.main_picking_type_cons'),
+            'location_id': ref('maintenance_stock.main_location_stock'),
+            'location_dest_id': ref('maintenance_stock.main_location_cons'),
+
+        })]"
+        />
+    </record>
+
+    <function model="stock.picking" name="action_confirm">
+        <value
+            model="stock.picking"
+            eval="[
+            obj().env.ref('maintenance_stock.consuption_picking_m_request_1').id]"
+        />
+    </function>
+    <function model="stock.picking" name="action_assign">
+        <value
+            model="stock.picking"
+            eval="[
+            obj().env.ref('maintenance_stock.consuption_picking_m_request_1').id]"
+        />
+    </function>
+    <function model="stock.picking" name="button_validate">
+        <value
+            model="stock.picking"
+            eval="[
+            obj().env.ref('maintenance_stock.consuption_picking_m_request_1').id]"
+        />
+    </function>
+</odoo>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <separator />
+                <filter
+                    string="Allow Consumptions"
+                    name="allow_consumptions"
+                    domain="[('allow_consumptions', '=', True)]"
+                    groups="stock.group_stock_user"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_tree" model="ir.ui.view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="allow_consumptions" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    class="oe_stat_button"
+                    type="object"
+                    name="action_view_stock_picking_ids"
+                    icon="fa-ticket"
+                    invisible="allow_consumptions == False"
+                    groups="stock.group_stock_user"
+                >
+                    <div class="o_form_field o_stat_info">
+                        <span class="o_stat_text">Picking list</span>
+                    </div>
+                </button>
+                <button
+                    class="oe_stat_button"
+                    type="object"
+                    name="action_view_stock_move_ids"
+                    icon="fa-arrows-v"
+                    invisible="allow_consumptions == False"
+                    groups="stock.group_stock_user"
+                >
+                    <div class="o_form_field o_stat_info">
+                        <span class="o_stat_text">Stock Moves</span>
+                    </div>
+                </button>
+                <button
+                    class="oe_stat_button"
+                    type="object"
+                    name="action_view_stock_move_line_ids"
+                    icon="fa-arrows-v"
+                    invisible="allow_consumptions == False"
+                    groups="stock.group_stock_user"
+                >
+                    <div class="o_form_field o_stat_info">
+                        <span class="o_stat_text">Product Moves</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='location']" position="after">
+                <field name="allow_consumptions" groups="stock.group_stock_user" />
+                <field
+                    name="default_consumption_warehouse_id"
+                    invisible="allow_consumptions == False"
+                    required="allow_consumptions == True"
+                    groups="stock.group_stock_user"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
