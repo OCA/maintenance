@@ -1,12 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* maintenance_stock
+# 	* maintenance_stock
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,9 +40,9 @@ msgid "Allow Consumptions"
 msgstr ""
 
 #. module: maintenance_stock
-#: code:addons/maintenance_stock/models/stock_warehouse.py:42
+#. odoo-python
+#: code:addons/maintenance_stock/models/stock_warehouse.py:0
 #: model:stock.picking.type,name:maintenance_stock.main_picking_type_cons
-#, python-format
 msgid "Consumption"
 msgstr ""
 
@@ -57,8 +57,8 @@ msgid "Consumption Type"
 msgstr ""
 
 #. module: maintenance_stock
-#: code:addons/maintenance_stock/models/stock_warehouse.py:79
-#, python-format
+#. odoo-python
+#: code:addons/maintenance_stock/models/stock_warehouse.py:0
 msgid "Consumptions"
 msgstr ""
 
@@ -122,8 +122,8 @@ msgid "Product Moves (Stock Move Line)"
 msgstr ""
 
 #. module: maintenance_stock
-#: code:addons/maintenance_stock/models/stock_warehouse.py:65
-#, python-format
+#. odoo-python
+#: code:addons/maintenance_stock/models/stock_warehouse.py:0
 msgid "Sequence consumption"
 msgstr ""
 
@@ -139,18 +139,14 @@ msgid "Stock Moves"
 msgstr ""
 
 #. module: maintenance_stock
-#: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_equipment__stock_picking_ids
-msgid "Stock Picking"
-msgstr ""
-
-#. module: maintenance_stock
 #: model_terms:ir.actions.act_window,help:maintenance_stock.stock_move_line_action
 msgid "There's no product move yet"
 msgstr ""
 
 #. module: maintenance_stock
 #: model_terms:ir.actions.act_window,help:maintenance_stock.stock_move_action
-msgid "This menu gives you the full traceability of inventory\n"
+msgid ""
+"This menu gives you the full traceability of inventory\n"
 "            operations on a specific product. You can filter on the product\n"
 "            to see all the past or future movements for the product."
 msgstr ""
@@ -161,7 +157,6 @@ msgid "To"
 msgstr ""
 
 #. module: maintenance_stock
-#: model:product.product,name:maintenance_stock.product_toner
 #: model:product.template,name:maintenance_stock.product_toner_product_template
 msgid "Toner"
 msgstr ""
@@ -172,19 +167,6 @@ msgid "Transfer"
 msgstr ""
 
 #. module: maintenance_stock
-#: model:product.product,uom_name:maintenance_stock.product_toner
-#: model:product.template,uom_name:maintenance_stock.product_toner_product_template
-msgid "Unit(s)"
-msgstr ""
-
-#. module: maintenance_stock
 #: model:ir.model,name:maintenance_stock.model_stock_warehouse
 msgid "Warehouse"
 msgstr ""
-
-#. module: maintenance_stock
-#: model:product.product,weight_uom_name:maintenance_stock.product_toner
-#: model:product.template,weight_uom_name:maintenance_stock.product_toner_product_template
-msgid "kg"
-msgstr ""
-
