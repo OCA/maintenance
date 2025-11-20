@@ -217,7 +217,8 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
             order="schedule_date asc",
             limit=1,
         )
-        generated_request.note = "TEST-INSTRUCTIONS"
+        generated_request.instruction_type = "text"
+        generated_request.instruction_text = "TEST-INSTRUCTIONS"
         res = self.report_obj._render_qweb_text(
             "base_maintenance.report_maintenance_request",
             generated_request.ids,

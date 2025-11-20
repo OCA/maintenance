@@ -10,7 +10,7 @@ class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
     maintenance_plan_ids = fields.One2many(
-        string="Maintenance plan",
+        string="Maintenance Plan",
         comodel_name="maintenance.plan",
         inverse_name="equipment_id",
     )
@@ -23,7 +23,6 @@ class MaintenanceEquipment(models.Model):
         string="Maintenance All Plan Count",
     )
     maintenance_team_required = fields.Boolean(compute="_compute_team_required")
-    notes = fields.Text()
 
     @api.depends("maintenance_plan_ids", "maintenance_plan_ids.active")
     def _compute_maintenance_plan_count(self):
@@ -106,7 +105,10 @@ class MaintenanceEquipment(models.Model):
             "maintenance_kind_id": maintenance_plan.maintenance_kind_id.id,
             "maintenance_plan_id": maintenance_plan.id,
             "duration": maintenance_plan.duration,
-            "note": maintenance_plan.note,
+            "instruction_type": maintenance_plan.instruction_type,
+            "instruction_pdf": maintenance_plan.instruction_pdf,
+            "instruction_google_slide": maintenance_plan.instruction_google_slide,
+            "instruction_text": maintenance_plan.instruction_text,
             "company_id": maintenance_plan.company_id.id or self.company_id.id,
         }
         # This field comes from maintenance_timesheet for avoiding a glue module

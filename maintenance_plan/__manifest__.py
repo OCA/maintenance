@@ -14,6 +14,7 @@
         "security/ir.model.access.csv",
         "security/maintenance_security.xml",
         "data/ir_cron.xml",
+        "views/maintenance_request_views.xml",
         "views/maintenance_kind_views.xml",
         "views/maintenance_plan_views.xml",
         "views/maintenance_equipment_views.xml",

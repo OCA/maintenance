@@ -65,7 +65,19 @@ class MaintenancePlan(models.Model):
         default="year",
         help="Let the event automatically repeat at that interval",
     )
-    note = fields.Html()
+    instruction_type = fields.Selection(
+        [("pdf", "PDF"), ("google_slide", "Google Slide"), ("text", "Text")],
+        string="Instruction",
+        default="text",
+    )
+    instruction_pdf = fields.Binary("PDF")
+    instruction_google_slide = fields.Char(
+        "Google Slide",
+        help="Paste the url of your Google Slide. "
+        "Make sure the access to the document is public.",
+    )
+    instruction_text = fields.Html("Text")
+
     maintenance_ids = fields.One2many(
         "maintenance.request", "maintenance_plan_id", string="Maintenance requests"
     )
