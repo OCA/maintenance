@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_equipment_request_view_form" model="ir.ui.view">
+        <field name="name">maintenance.request.form@maintenance_plan_only</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <!-- Hide Odoo's built-in recurring maintenance implementation fields -->
+            <label for="recurring_maintenance" position="replace" />
+            <div invisible="maintenance_type == 'corrective'" position="replace" />
+            <label for="repeat_interval" position="replace" />
+            <div invisible="not recurring_maintenance" position="replace" />
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_calendar" model="ir.ui.view">
+        <field name="name">equipment.request.calendar@maintenance_plan_only</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_calendar" />
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <calendar position="attributes">
+                <!-- Remove "calendar_with_recurrence" class -->
+                <attribute name="js_class" />
+            </calendar>
+            <field name="recurring_maintenance" position="replace" />
+            <field name="repeat_interval" position="replace" />
+            <field name="repeat_unit" position="replace" />
+            <field name="repeat_type" position="replace" />
+            <field name="repeat_until" position="replace" />
+        </field>
+    </record>
+</odoo>
