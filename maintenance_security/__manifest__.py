@@ -9,7 +9,7 @@
     "website": "https://github.com/OCA/maintenance",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "depends": ["maintenance"],
+    "depends": ["maintenance", "hr"],
     "data": [
         "views/maintenance_views.xml",
     ],
