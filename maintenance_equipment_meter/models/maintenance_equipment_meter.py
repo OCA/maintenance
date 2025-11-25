@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class MaintenanceEquipmentMeter(models.Model):
-
     _name = "maintenance.equipment.meter"
     _description = "Meter log for an equipment"
     _order = "date desc"
