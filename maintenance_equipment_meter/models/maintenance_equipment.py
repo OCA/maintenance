@@ -15,7 +15,9 @@ class MaintenanceEquipment(models.Model):
         string="Last meter",
         compute_sudo=True,
     )
-    current_meter_show = fields.Float(related="current_meter", readonly=True)
+    current_meter_show = fields.Float(
+        related="current_meter", string="Meter", readonly=True
+    )
 
     @api.depends()
     def _compute_meter(self):

@@ -8,16 +8,10 @@
         <field name="arch" type="xml">
             <field name="location" position="after">
                 <field name="has_meter" />
-                <label
-                    for="current_meter"
-                    attrs="{'invisible': [('has_meter','=', False)]}"
-                />
-                <div class="o_row" attrs="{'invisible': [('has_meter','=', False)]}">
+                <label for="current_meter" invisible="not has_meter" />
+                <div class="o_row" invisible="not has_meter">
                     <field name="current_meter" />
-                    <field
-                        name="meter_unit_id"
-                        attrs="{'required': [('has_meter','!=', False)]}"
-                    />
+                    <field name="meter_unit_id" required="has_meter" />
                 </div>
             </field>
             <div name="button_box" position="inside">
@@ -28,7 +22,7 @@
                     icon="fa-tachometer"
                     help="show the meter logs for this equipment"
                     groups="maintenance.group_equipment_manager"
-                    attrs="{'invisible': [('has_meter','=', False)]}"
+                    invisible="not has_meter"
                 >
                     <field name="current_meter_show" widget="statinfo" string="Meter" />
                 </button>

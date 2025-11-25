@@ -11,7 +11,7 @@ class MaintenanceEquipmentMeter(models.Model):
 
     name = fields.Char(compute="_compute_meter_name", store=True)
     date = fields.Date(default=fields.Date.context_today, required=True)
-    value = fields.Float("Meter Value", group_operator="max")
+    value = fields.Float("Meter Value", aggregator="max")
     equipment_id = fields.Many2one("maintenance.equipment", required=True)
     meter_unit_id = fields.Many2one(
         related="equipment_id.meter_unit_id", string="Unit", readonly=True
@@ -20,4 +20,4 @@ class MaintenanceEquipmentMeter(models.Model):
     @api.depends("equipment_id.name", "date")
     def _compute_meter_name(self):
         for record in self:
-            record.name = "%s / %s" % (record.equipment_id.name, str(record.date))
+            record.name = f"{record.equipment_id.name} / {str(record.date)}"
