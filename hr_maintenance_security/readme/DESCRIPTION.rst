@@ -1,1 +1,0 @@
-This module will remove the inheritance of equipment manager maintenance group by HR users (hr.group_hr_user) to further decouple the modules. The group can still be manually assigned to the user.
