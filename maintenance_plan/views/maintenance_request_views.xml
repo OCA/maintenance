@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_equipment_request_view_form" model="ir.ui.view">
+        <field name="name">maintenance.request.form@maintenance_plan</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <field name="maintenance_type" position="after">
+                <field name="maintenance_kind_id" />
+            </field>
+            <label for="recurring_maintenance" position="before">
+                <field
+                    name="maintenance_plan_id"
+                    readonly="1"
+                    invisible="not maintenance_plan_id"
+                />
+            </label>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_tree" model="ir.ui.view">
+        <field name="name">equipment.request.list@maintenance_plan</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="field[@name='request_date']" position="attributes">
+                <!-- Remove the "base.group_no_one" technical restriction -->
+                <attribute name="groups" />
+                <attribute name="optional">show</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_action_from_plan" model="ir.actions.act_window">
+        <field name="name">Maintenance Requests</field>
+        <field name="path">maintenance-plan-requests</field>
+        <field name="res_model">maintenance.request</field>
+        <field name="binding_model_id" ref="model_maintenance_plan" />
+        <field name="view_mode">kanban,list,form,pivot,graph,calendar</field>
+        <field name="context">{
+            'default_maintenance_plan_id': active_id,
+        }</field>
+        <field name="domain">[('maintenance_plan_id', '=', active_id)]</field>
+    </record>
+</odoo>

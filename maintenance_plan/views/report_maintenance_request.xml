@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="report_maintenance_request_document"
+        inherit_id="base_maintenance.report_maintenance_request_document"
+    >
+        <xpath expr="//div[@id='description']" position="after">
+            <div class="row mt32 mb32" id="note">
+                <!-- TODO: Add support for other instruction types using QRCODE/links
+                    - PDF: embed or link to the PDF file (share attachment)
+                    - Google Slide: link to the Google Slide presentation
+                -->
+                <div
+                    t-if="doc.instruction_type == 'text' and doc.instruction_text"
+                    class="col-auto mw-100 mb-2"
+                >
+                    <strong>Instructions:</strong>
+                    <div class="m-0" t-field="doc.instruction_text" />
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
