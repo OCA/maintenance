@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -75,6 +75,11 @@ msgid "Company"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.model,name:maintenance_plan.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__create_uid
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__create_uid
 msgid "Created by"
@@ -100,12 +105,6 @@ msgstr ""
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__day
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__planning_step__day
 msgid "Day(s)"
-msgstr ""
-
-#. module: maintenance_plan
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_request_view_form
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
-msgid "Describe the maintenance to do..."
 msgstr ""
 
 #. module: maintenance_plan
@@ -165,8 +164,24 @@ msgid "Generate requests for current threshold"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__instruction_google_slide
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__instruction_type__google_slide
+msgid "Google Slide"
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "Google Slide Link"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__has_message
 msgid "Has Message"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_res_config_settings__module_maintenance_plan_only
+msgid "Hide built-in recurrent settings"
 msgstr ""
 
 #. module: maintenance_plan
@@ -206,7 +221,11 @@ msgid "Inactive"
 msgstr ""
 
 #. module: maintenance_plan
-#: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_request_view_form
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__instruction_type
+msgid "Instruction"
+msgstr ""
+
+#. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Instructions"
 msgstr ""
@@ -251,7 +270,6 @@ msgstr ""
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
-#, python-format
 msgid "Maintenace Equipment must belong to the equipment's company"
 msgstr ""
 
@@ -274,12 +292,22 @@ msgstr ""
 #. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_kind
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__maintenance_kind_id
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__maintenance_kind_id
 msgid "Maintenance Kind"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.actions.act_window,name:maintenance_plan.maintenance_kind_action
+#: model:ir.ui.menu,name:maintenance_plan.menu_maintenance_kind_configuration
+msgid "Maintenance Kinds"
+msgstr ""
+
+#. module: maintenance_plan
 #: model:ir.model,name:maintenance_plan.model_maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__maintenance_plan_ids
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__maintenance_plan_id
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.res_config_settings_view_form
 msgid "Maintenance Plan"
 msgstr ""
 
@@ -289,6 +317,8 @@ msgid "Maintenance Plan Count"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.actions.act_window,name:maintenance_plan.maintenance_plan_action
+#: model:ir.actions.act_window,name:maintenance_plan.maintenance_plan_equipment_action
 #: model:ir.ui.menu,name:maintenance_plan.menu_m_plan_form
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
 msgid "Maintenance Plans"
@@ -320,25 +350,8 @@ msgid "Maintenance duration in hours"
 msgstr ""
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__maintenance_kind_id
-msgid "Maintenance kind"
-msgstr ""
-
-#. module: maintenance_plan
 #: model:ir.model.constraint,message:maintenance_plan.constraint_maintenance_kind_name_uniq
 msgid "Maintenance kind name already exists."
-msgstr ""
-
-#. module: maintenance_plan
-#: model:ir.actions.act_window,name:maintenance_plan.maintenance_kind_action
-#: model:ir.ui.menu,name:maintenance_plan.menu_maintenance_kind_configuration
-msgid "Maintenance kinds"
-msgstr ""
-
-#. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__maintenance_plan_ids
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__maintenance_plan_id
-msgid "Maintenance plan"
 msgstr ""
 
 #. module: maintenance_plan
@@ -346,12 +359,6 @@ msgstr ""
 msgid ""
 "Maintenance planning horizon. Only the maintenance requests inside the "
 "horizon will be created."
-msgstr ""
-
-#. module: maintenance_plan
-#: model:ir.actions.act_window,name:maintenance_plan.maintenance_plan_action
-#: model:ir.actions.act_window,name:maintenance_plan.maintenance_plan_equipment_action
-msgid "Maintenance plans"
 msgstr ""
 
 #. module: maintenance_plan
@@ -416,17 +423,6 @@ msgid "Next Maintenance Date"
 msgstr ""
 
 #. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__note
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__note
-msgid "Note"
-msgstr ""
-
-#. module: maintenance_plan
-#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__notes
-msgid "Notes"
-msgstr ""
-
-#. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__message_needaction_counter
 msgid "Number of Actions"
 msgstr ""
@@ -457,6 +453,19 @@ msgid "P. Horizon step"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__instruction_pdf
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__instruction_type__pdf
+msgid "PDF"
+msgstr ""
+
+#. module: maintenance_plan
+#: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__instruction_google_slide
+msgid ""
+"Paste the url of your Google Slide. Make sure the access to the document is "
+"public."
+msgstr ""
+
+#. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Planning Horizon"
 msgstr ""
@@ -479,14 +488,12 @@ msgstr ""
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
-#, python-format
 msgid "Preventive Maintenance (%(kind)s) - %(description)s"
 msgstr ""
 
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
-#, python-format
 msgid "Preventive Maintenance (%(kind)s) - %(plan)s"
 msgstr ""
 
@@ -513,7 +520,6 @@ msgstr ""
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
-#, python-format
 msgid ""
 "Some maintenance plan's company is incompatible with the company of this "
 "equipment."
@@ -544,13 +550,25 @@ msgid "Team"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__instruction_text
+#: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__instruction_type__text
+msgid "Text"
+msgstr ""
+
+#. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
-#, python-format
 msgid ""
 "The maintenance plan %(kind)s of equipment %(eqpmnt)s has generated a "
 "request which is not done yet. You should either set the request as done, "
 "remove its maintenance kind or delete it first."
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.res_config_settings_view_form
+msgid ""
+"To avoid conflicts, hide recurrent settings provided by the maintenance "
+"module."
 msgstr ""
 
 #. module: maintenance_plan
@@ -566,36 +584,36 @@ msgstr ""
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
-#, python-format
 msgid "Unnamed %(kind)s plan (%(eqpmnt)s)"
 msgstr ""
 
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
-#, python-format
 msgid "Unnamed %(kind)s plan (%(eqpmt)s)"
 msgstr ""
 
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
-#, python-format
 msgid "Unnamed %(void)s plan (%(eqpmnt)s)"
 msgstr ""
 
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
-#, python-format
 msgid "Unspecified kind"
 msgstr ""
 
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
-#, python-format
 msgid "Unsupported search operator"
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "Upload your PDF file."
 msgstr ""
 
 #. module: maintenance_plan
@@ -635,11 +653,15 @@ msgstr ""
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/hooks.py:0
-#, python-format
 msgid ""
 "You have multiple preventive maintenance requests on equipment %(name)s next"
 " action date (%(date)s). Please leave only one preventive request on the "
 "date of equipment's next action to install the module."
+msgstr ""
+
+#. module: maintenance_plan
+#: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
+msgid "Your instructions"
 msgstr ""
 
 #. module: maintenance_plan
