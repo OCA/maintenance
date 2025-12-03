@@ -3,7 +3,7 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, fields
+from odoo import fields
 
 from .common import TestMaintenancePlanBase
 
@@ -17,7 +17,7 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
     def test_display_name(self):
         self.assertEqual(
             self.maintenance_plan_1.display_name,
-            _(
+            self.env._(
                 "Unnamed %(void)s plan (%(eqpmnt)s)",
                 void="",
                 eqpmnt=self.maintenance_plan_1.equipment_id.name,
@@ -25,7 +25,7 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         )
         self.assertEqual(
             self.maintenance_plan_2.display_name,
-            _(
+            self.env._(
                 "Unnamed %(kind)s plan (%(eqpmnt)s)",
                 kind=self.maintenance_plan_2.maintenance_kind_id.name,
                 eqpmnt=self.maintenance_plan_2.equipment_id.name,
@@ -46,7 +46,8 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         )
 
     def test_next_maintenance_date_02(self):
-        self.cron.method_direct_trigger()
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
         # Check maintenance plan dates
         self.assertEqual(
             self.maintenance_plan_1.start_maintenance_date, self.today_date
@@ -98,7 +99,8 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         )
 
     def test_generate_requests(self):
-        self.cron.method_direct_trigger()
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
         generated_requests = self.maintenance_request_obj.search(
             [("maintenance_plan_id", "=", self.maintenance_plan_1.id)],
             order="schedule_date asc",
@@ -120,7 +122,7 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         )
         self.assertEqual(
             generated_request.name,
-            _(
+            self.env._(
                 "Preventive Maintenance (%(kind)s) - %(plan)s",
                 kind=self.weekly_kind.name,
                 plan=self.maintenance_plan_4.name,
@@ -128,7 +130,8 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         )
 
     def test_generate_requests2(self):
-        self.cron.method_direct_trigger()
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
         generated_requests = self.maintenance_request_obj.search(
             [("maintenance_plan_id", "=", self.maintenance_plan_1.id)],
             order="schedule_date asc",
@@ -140,7 +143,8 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         new_date = fields.Date.from_string("2023-04-25")
         self.maintenance_plan_1.next_maintenance_date = new_date
         self.maintenance_plan_1.maintenance_plan_horizon = 3
-        self.cron.method_direct_trigger()
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
         generated_requests = self.maintenance_request_obj.search(
             [("maintenance_plan_id", "=", self.maintenance_plan_1.id)],
             order="schedule_date asc",
@@ -149,7 +153,8 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         self.assertEqual(generated_requests[-1].request_date, new_date)
 
     def test_generate_requests_no_equipment(self):
-        self.cron.method_direct_trigger()
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
         generated_requests = self.maintenance_request_obj.search(
             [("maintenance_plan_id", "=", self.maintenance_plan_5.id)],
             order="schedule_date asc",
@@ -168,8 +173,8 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
                 "maintenance_plan_horizon": 3,
             }
         )
-
-        self.cron.method_direct_trigger()
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
 
         generated_requests = self.maintenance_request_obj.search(
             [("maintenance_plan_id", "=", self.maintenance_plan_5.id)],
@@ -196,14 +201,16 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
 
     def test_generate_requests_inactive_equipment(self):
         self.equipment_1.active = False
-        self.cron.method_direct_trigger()
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
         generated_requests = self.maintenance_request_obj.search(
             [("maintenance_plan_id", "=", self.maintenance_plan_1.id)],
             order="schedule_date asc",
         )
         self.assertEqual(len(generated_requests), 0)
         self.equipment_1.active = True
-        self.cron.method_direct_trigger()
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
         generated_requests = self.maintenance_request_obj.search(
             [("maintenance_plan_id", "=", self.maintenance_plan_1.id)],
             order="schedule_date asc",
@@ -211,7 +218,8 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         self.assertEqual(len(generated_requests), 3)
 
     def test_maintenance_request_report(self):
-        self.cron.method_direct_trigger()
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
         generated_request = self.maintenance_request_obj.search(
             [("maintenance_plan_id", "=", self.maintenance_plan_1.id)],
             order="schedule_date asc",

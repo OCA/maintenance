@@ -3,7 +3,6 @@
 
 import logging
 
-from odoo import _
 from odoo.exceptions import UserError
 
 
@@ -27,7 +26,7 @@ def post_init_hook(env):
             )
             if len(request) > 1:
                 raise UserError(
-                    _(
+                    env._(
                         "You have multiple preventive maintenance requests on "
                         "equipment %(name)s next action date (%(date)s). "
                         "Please leave only one preventive request on the "

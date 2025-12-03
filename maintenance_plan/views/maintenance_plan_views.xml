@@ -192,9 +192,9 @@
         <field name="res_model">maintenance.plan</field>
         <field name="view_mode">list,form</field>
         <field name="view_id" ref="maintenance_plan_view_tree" />
-        <field name="domain">['|', ('active', '=', True), ('active', '=',
-            False)]
-        </field>
+        <field
+            name="domain"
+        >['|', ('active', '=', True), ('active', '=', False)]</field>
     </record>
 
     <record id="maintenance_plan_equipment_action" model="ir.actions.act_window">
@@ -203,12 +203,12 @@
         <field name="res_model">maintenance.plan</field>
         <field name="view_mode">list,form</field>
         <field name="view_id" ref="maintenance_plan_view_tree" />
-        <field name="context">{
-            'default_equipment_id': active_id, 'hide_equipment_id': 0
-        }</field>
-        <field name="domain">['|', ('active', '=', True), ('active', '=',
-            False), ('search_equipment_id', '=', active_id)]
-        </field>
+        <field
+            name="context"
+        >{'default_equipment_id': active_id, 'hide_equipment_id': 0}</field>
+        <field
+            name="domain"
+        >['|', ('active', '=', True), ('active', '=', False), ('search_equipment_id', '=', active_id)]</field>
     </record>
 
     <menuitem

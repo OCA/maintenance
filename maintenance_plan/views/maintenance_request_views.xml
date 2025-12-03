@@ -38,9 +38,7 @@
         <field name="res_model">maintenance.request</field>
         <field name="binding_model_id" ref="model_maintenance_plan" />
         <field name="view_mode">kanban,list,form,pivot,graph,calendar</field>
-        <field name="context">{
-            'default_maintenance_plan_id': active_id,
-        }</field>
+        <field name="context">{'default_maintenance_plan_id': active_id,}</field>
         <field name="domain">[('maintenance_plan_id', '=', active_id)]</field>
     </record>
 </odoo>
