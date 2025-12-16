@@ -7,8 +7,11 @@
         <field name="model">maintenance.equipment</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='serial_no']" position="after">
-                <field name="purchase_id" />
+            <xpath
+                expr="//page[@name='product_information']//field[@name='serial_no']"
+                position="after"
+            >
+                <field name="purchase_id" groups="purchase.group_purchase_user" />
             </xpath>
         </field>
     </record>
