@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class PurchaseOrder(models.Model):
-
     _inherit = "purchase.order"
 
     equipment_count = fields.Integer(compute="_compute_equipment_count")

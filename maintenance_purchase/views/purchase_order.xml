@@ -2,7 +2,6 @@
 <!-- Copyright 2022 CreuBlanca
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
-
     <record model="ir.ui.view" id="purchase_order_form_view">
         <field name="name">purchase.order.form (in maintenance_purchase)</field>
         <field name="model">purchase.order</field>
@@ -31,7 +30,4 @@
             </xpath>
         </field>
     </record>
-
-
-
 </odoo>
