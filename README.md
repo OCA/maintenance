@@ -17,7 +17,11 @@ maintenance
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[base_maintenance](base_maintenance/) | 19.0.1.0.0 |  | Base Maintenance
 
 [//]: # (end addons)
 

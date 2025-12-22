@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-oca-maintenance"
+version = "19.0.20251222.0"
+dependencies = [
+    "odoo-addon-base_maintenance==19.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 19.0",
+]
