@@ -34,7 +34,7 @@
             <field name="product_id" position="after">
                 <field
                     name="maintenance_request_id"
-                    invisible="not context.get('show_maintenance_request_id', False)"
+                    column_invisible="not context.get('show_maintenance_request_id', False)"
                 />
             </field>
         </field>
