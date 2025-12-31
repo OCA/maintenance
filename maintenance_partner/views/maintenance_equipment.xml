@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Dixmit
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="maintenance_equipment_form_view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='category_id']/.." position="inside">
+                <field name="assigned_partner_id" />
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_equipment_tree_view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field name="assigned_partner_id" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_equipment_kanban_view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
+        <field name="arch" type="xml">
+            <field name="serial_no" position="after">
+                <field
+                    name="assigned_partner_id"
+                    t-if="record.assigned_partner_id.raw_value"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_equipment_search_view">
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field name="assigned_partner_id" />
+            </field>
+            <filter name="under_maintenance" position="after">
+                <separator />
+                <filter
+                    name="with_assigned_partner"
+                    string="With Assigned Partner"
+                    domain="[('assigned_partner_id', '!=', False)]"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <record
+        model="ir.actions.act_window"
+        id="action_maintenance_equipment_from_partner"
+    >
+        <field name="view_mode">kanban,list,form</field>
+        <field name="res_model">maintenance.equipment</field>
+        <field name="domain">[('assigned_partner_id', '=', active_id)]</field>
+        <field name="context">{'default_assigned_partner_id': active_id}</field>
+    </record>
+</odoo>
