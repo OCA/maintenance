@@ -1,0 +1,87 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-01-08 18:43+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.4\n"
+
+#. module: maintenance_partner
+#: model_terms:ir.ui.view,arch_db:maintenance_partner.res_partner_form_view
+msgid "<span class=\"o_stat_text\">Equipments</span>"
+msgstr "<span class=\"o_stat_text\">Attrezzature</span>"
+
+#. module: maintenance_partner
+#: model_terms:ir.ui.view,arch_db:maintenance_partner.res_partner_form_view
+msgid "<span class=\"o_stat_text\">Maintenances</span>"
+msgstr "<span class=\"o_stat_text\">Manutenzione</span>"
+
+#. module: maintenance_partner
+#: model:ir.model.fields,field_description:maintenance_partner.field_maintenance_equipment__assigned_partner_id
+msgid "Assigned Partner"
+msgstr "Partner assegnato"
+
+#. module: maintenance_partner
+#: model:ir.model,name:maintenance_partner.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: maintenance_partner
+#: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__equipment_ids
+msgid "Equipment"
+msgstr "Attrezzatura"
+
+#. module: maintenance_partner
+#: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__equipment_count
+msgid "Equipment Count"
+msgstr "Conteggio attrezzature"
+
+#. module: maintenance_partner
+#: model:ir.actions.act_window,name:maintenance_partner.action_maintenance_equipment_from_partner
+#: model:ir.model,name:maintenance_partner.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Attrezzatura manutenzione"
+
+#. module: maintenance_partner
+#: model:ir.actions.act_window,name:maintenance_partner.action_maintenance_request_from_partner
+#: model:ir.model,name:maintenance_partner.model_maintenance_request
+#: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__maintenance_request_ids
+#: model:ir.model.fields,field_description:maintenance_partner.field_res_users__maintenance_request_ids
+msgid "Maintenance Request"
+msgstr "Richiesta manutenzione"
+
+#. module: maintenance_partner
+#: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__maintenance_request_count
+#: model:ir.model.fields,field_description:maintenance_partner.field_res_users__maintenance_request_count
+msgid "Maintenance Request Count"
+msgstr "Conta richiesta manutenzione"
+
+#. module: maintenance_partner
+#: model:ir.model.fields,field_description:maintenance_partner.field_maintenance_request__partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: maintenance_partner
+#: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_request_kanban_view
+msgid "Partner:"
+msgstr "Partner:"
+
+#. module: maintenance_partner
+#: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_equipment_search_view
+msgid "With Assigned Partner"
+msgstr "Con partner assegnato"
+
+#. module: maintenance_partner
+#: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_request_search_view
+msgid "With Partner"
+msgstr "Con partner"
