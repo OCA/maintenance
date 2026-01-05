@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-09-26 16:55+0000\n"
+"PO-Revision-Date: 2026-01-05 21:43+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -28,12 +28,12 @@ msgstr ""
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.view_project_kanban
 msgid "<span class=\"o_label\"> Equipments</span>"
-msgstr ""
+msgstr "<span class=\"o_label\"> Attrezzature</span>"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.view_project_kanban
 msgid "<span class=\"o_label\"> Requests</span>"
-msgstr ""
+msgstr "<span class=\"o_label\"> Richieste</span>"
 
 #. module: maintenance_project
 #: model_terms:ir.ui.view,arch_db:maintenance_project.project_milestone_form_view
