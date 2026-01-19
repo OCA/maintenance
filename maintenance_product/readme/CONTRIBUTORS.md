@@ -5,3 +5,5 @@
   - Carolina Fernandez
 - [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
   - Bhavesh Heliconia
+- [APSL-Nagarro](https://apsl.tech)
+  - Antoni Marroig \<<antoni.marroig@nagarro.com>\>
