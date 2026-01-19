@@ -14,7 +14,6 @@ class TestMaintenanceProject(BaseCommon):
     def setUpClass(cls):
         super().setUpClass()
         cls.project1 = cls.env["project.project"].create({"name": "My project"})
-        cls.project_demo = cls.env.ref("maintenance_project.project_project_1")
         cls.milestone = cls.env["project.milestone"].create(
             {"name": "My milestone", "project_id": cls.project1.id}
         )
@@ -28,12 +27,11 @@ class TestMaintenanceProject(BaseCommon):
             login="test-project_manager-user",
             groups="maintenance.group_equipment_manager,project.group_project_manager",
         )
+        cls.team = cls.env["maintenance.team"].create({"name": "My maintenance team"})
         cls.equipment1 = cls.env["maintenance.equipment"].create(
             {
                 "name": "My equipment",
-                "maintenance_team_id": cls.env.ref(
-                    "maintenance.equipment_team_metrology"
-                ).id,
+                "maintenance_team_id": cls.team.id,
             }
         )
         cls.equipment2 = cls.env["maintenance.equipment"].create(
@@ -47,13 +45,11 @@ class TestMaintenanceProject(BaseCommon):
                 "project_id": cls.project1.id,
             }
         )
-        cls.equipment_demo = cls.env.ref("maintenance_project.equipment_3")
 
     def test_maintenance_equipment_project_misc(self):
         self.assertFalse(self.equipment1.project_id)
         self.assertFalse(self.equipment2.project_id)
         self.assertEqual(self.equipment3.project_id, self.project1)
-        self.assertEqual(self.equipment_demo.name, self.equipment_demo.project_id.name)
 
     @users("test-project_manager-user")
     def test_maintenance_equipment_project_admin(self):
@@ -80,8 +76,6 @@ class TestMaintenanceProject(BaseCommon):
         self.equipment1.action_create_project()
         self.assertEqual(self.project1.equipment_count, 1)
         self.assertEqual(self.equipment1.project_id.equipment_count, 1)
-        self.assertEqual(self.project_demo.equipment_count, 2)
-        self.assertEqual(self.equipment_demo.project_id.equipment_count, 1)
 
     @users("test-user")
     def test_request_equipment(self):
@@ -207,9 +201,8 @@ class TestMaintenanceProject(BaseCommon):
         self.assertEqual(2, self.milestone.maintenance_request_count)
         action = self.milestone.action_view_maintenance_request()
         self.assertFalse(action.get("res_id"))
-        milestone_requests = self.env[action["res_model"]].search(
-            safe_eval(action["domain"], locals_dict={"active_id": self.milestone.id})
-        )
+        domain = safe_eval(action["domain"], {"active_id": self.milestone.id})
+        milestone_requests = self.env[action["res_model"]].search(domain)
         self.assertEqual(2, len(milestone_requests))
         self.assertIn(req, milestone_requests)
         self.assertIn(req2, milestone_requests)

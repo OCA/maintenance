@@ -39,7 +39,7 @@
         <field name="model">maintenance.equipment</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='location']" position="after">
+            <xpath expr="//field[@name='scrap_date']" position="after">
                 <field name="project_id" invisible="1" />
                 <label for="project_id" groups="project.group_project_user" />
                 <div>
