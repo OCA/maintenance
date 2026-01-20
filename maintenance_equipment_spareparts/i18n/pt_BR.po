@@ -1,0 +1,116 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_spareparts
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_equipment__sparepart_count
+msgid "Spare Parts Count"
+msgstr "Quantidade de Peças"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_equipment__sparepart_ids
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_request__sparepart_ids
+msgid "Spare Parts"
+msgstr "Peças"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_equipment_sparepart__available_qty
+msgid "Available Quantity"
+msgstr "Quantidade Disponível"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_equipment_sparepart__installed_qty
+msgid "Installed Quantity"
+msgstr "Quantidade Instalada"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_equipment_sparepart__needs_reorder
+msgid "Needs Reorder"
+msgstr "Precisa Repor"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_equipment_sparepart__spare_qty
+msgid "Recommended Spare Quantity"
+msgstr "Quantidade Sobressalente Recomendada"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_request_sparepart_consumption__consumed_qty
+msgid "Consumed Quantity"
+msgstr "Quantidade Consumida"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_request_sparepart_consumption__state
+msgid "State"
+msgstr "Estado"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_request_sparepart_consumption__stock_picking_id
+msgid "Stock Picking"
+msgstr "Movimentação de Estoque"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_request_sparepart_consumption__purchase_request_id
+msgid "Purchase Request"
+msgstr "Requisição de Compra"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_purchase_request__equipment_id
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_purchase_request_line__equipment_id
+msgid "Equipment"
+msgstr "Equipamento"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,field_description:maintenance_equipment_spareparts.field_maintenance_request__sparepart_consumption_ids
+msgid "Spare Parts Consumption"
+msgstr "Consumo de Peças"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,help:maintenance_equipment_spareparts.field_maintenance_equipment_sparepart__available_qty
+msgid "Available quantity in stock"
+msgstr "Quantidade disponível em estoque"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,help:maintenance_equipment_spareparts.field_maintenance_equipment_sparepart__needs_reorder
+msgid "True if stock is below recommended spare quantity"
+msgstr "Verdadeiro se o estoque está abaixo da quantidade sobressalente recomendada"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,help:maintenance_equipment_spareparts.field_maintenance_equipment_sparepart__installed_qty
+msgid "Quantity of this part installed in the equipment"
+msgstr "Quantidade desta peça instalada no equipamento"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,help:maintenance_equipment_spareparts.field_maintenance_equipment_sparepart__spare_qty
+msgid "Recommended quantity to keep in stock as spare"
+msgstr "Quantidade recomendada para manter em estoque como sobressalente"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,help:maintenance_equipment_spareparts.field_purchase_request__equipment_id
+msgid "When set, product selection will be restricted to spare parts registered for this equipment"
+msgstr "Quando definido, a seleção de produtos será restrita às peças registradas para este equipamento"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,help:maintenance_equipment_spareparts.field_maintenance_request_sparepart_consumption__stock_picking_id
+msgid "Stock picking created when part was consumed from stock"
+msgstr "Movimentação de estoque criada quando a peça foi consumida do estoque"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,help:maintenance_equipment_spareparts.field_maintenance_request_sparepart_consumption__purchase_request_id
+msgid "Purchase request created when part was not in stock"
+msgstr "Requisição de compra criada quando a peça não estava em estoque"
+
+#. module: maintenance_equipment_spareparts
+#: model:ir.model.fields,help:maintenance_equipment_spareparts.field_maintenance_request_sparepart_consumption__purchase_request_line_id
+msgid "Purchase request line created when part was not in stock"
+msgstr "Linha de requisição de compra criada quando a peça não estava em estoque"

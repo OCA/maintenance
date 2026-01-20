@@ -1,0 +1,6 @@
+[ tool.black ]
+line-length = 88
+
+[build-system]
+requires = ["whool"]
+build-backend = "whool.buildapi"

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Odoo Community Association (OCA)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="maintenance_request_consume_spareparts_view_form" model="ir.ui.view">
+        <field name="name">maintenance.request.consume.spareparts.form</field>
+        <field name="model">maintenance.request.consume.spareparts</field>
+        <field name="arch" type="xml">
+            <form string="Consume Spare Parts">
+                <sheet>
+                    <group>
+                        <field name="request_id" readonly="1" />
+                    </group>
+                    <group>
+                        <field name="line_ids" nolabel="1">
+                            <list
+                                string="Spare Parts"
+                                editable="bottom"
+                                create="0"
+                                delete="0"
+                            >
+                                <field
+                                    name="sparepart_id"
+                                    readonly="1"
+                                    column_invisible="1"
+                                    force_save="1"
+                                />
+                                <field name="product_id" readonly="1" />
+                                <field
+                                    name="installed_qty"
+                                    readonly="1"
+                                    string="Installed Qty"
+                                />
+                                <field
+                                    name="available_qty"
+                                    readonly="1"
+                                    string="Available Qty"
+                                />
+                                <field name="requested_qty" string="Requested Qty" />
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button
+                        name="action_consume"
+                        type="object"
+                        string="Consume"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

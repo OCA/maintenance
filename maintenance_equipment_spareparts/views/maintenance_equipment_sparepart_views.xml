@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Odoo Community Association (OCA)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="maintenance_equipment_sparepart_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.equipment.sparepart.tree</field>
+        <field name="model">maintenance.equipment.sparepart</field>
+        <field name="arch" type="xml">
+            <list string="Spare Parts">
+                <field name="product_id" />
+                <field name="installed_qty" />
+                <field name="spare_qty" />
+                <field name="available_qty" />
+                <field name="needs_reorder" widget="boolean_toggle" />
+            </list>
+        </field>
+    </record>
+
+    <record id="maintenance_equipment_sparepart_view_form" model="ir.ui.view">
+        <field name="name">maintenance.equipment.sparepart.form</field>
+        <field name="model">maintenance.equipment.sparepart</field>
+        <field name="arch" type="xml">
+            <form string="Spare Part">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="equipment_id" />
+                            <field name="product_id" />
+                        </group>
+                        <group>
+                            <field name="installed_qty" />
+                            <field name="spare_qty" />
+                            <field name="available_qty" />
+                            <field name="needs_reorder" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="maintenance_equipment_sparepart_view_search" model="ir.ui.view">
+        <field name="name">maintenance.equipment.sparepart.search</field>
+        <field name="model">maintenance.equipment.sparepart</field>
+        <field name="arch" type="xml">
+            <search string="Spare Parts">
+                <field name="product_id" />
+                <field name="equipment_id" />
+            </search>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Odoo Community Association (OCA)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="equipment_request_view_form" model="ir.ui.view">
+        <field name="name">equipment.request.form (spareparts)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="base_maintenance.equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='description_page']" position="after">
+                <page
+                    string="Spare Parts"
+                    name="spareparts"
+                    invisible="not equipment_id"
+                >
+                    <group>
+                        <group>
+                            <field name="sparepart_ids" readonly="1" nolabel="1">
+                                <list string="Equipment Spare Parts">
+                                    <field name="product_id" />
+                                    <field name="installed_qty" />
+                                    <field name="spare_qty" />
+                                    <field name="available_qty" />
+                                    <field
+                                        name="needs_reorder"
+                                        widget="boolean_toggle"
+                                    />
+                                </list>
+                            </field>
+                            <button
+                                name="action_consume_spareparts"
+                                type="object"
+                                string="Consume Spare Parts"
+                                invisible="not allow_consumptions"
+                                groups="stock.group_stock_user"
+                                class="oe_link"
+                            />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

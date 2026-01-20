@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Odoo Community Association (OCA)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="name">equipment.form (spareparts)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    name="action_create_purchase_request"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-shopping-cart"
+                    invisible="sparepart_count == 0"
+                >
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">Create Purchase Request</span>
+                    </div>
+                </button>
+            </xpath>
+            <notebook position="inside">
+                <page string="Spare Parts" name="spareparts">
+                    <field
+                        name="sparepart_ids"
+                        nolabel="1"
+                        context="{'default_equipment_id': id}"
+                    >
+                        <list string="Spare Parts" editable="bottom">
+                            <field name="equipment_id" invisible="1" />
+                            <field name="product_id" required="1" />
+                            <field name="installed_qty" />
+                            <field name="spare_qty" />
+                            <field name="available_qty" readonly="1" />
+                            <field name="needs_reorder" widget="boolean_toggle" />
+                        </list>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
