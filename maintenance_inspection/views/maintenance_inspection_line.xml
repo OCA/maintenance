@@ -61,8 +61,8 @@
                             <footer class="pt-1 mt-0">
                                 <small class="text-muted">
                                     Last edited by <t
-                                    t-esc="record.write_uid.value"
-                                /> on <t t-esc="record.write_date.value" />
+                                        t-esc="record.write_uid.value"
+                                    /> on <t t-esc="record.write_date.value" />
                                 </small>
                                 <div name="footer_right" class="ms-auto d-flex " />
                             </footer>
