@@ -18,7 +18,7 @@
                     </group>
                     <field
                         name="inspection_line_ids"
-                        mode="list,kanban"
+                        mode="tree,kanban"
                         readonly="inspection_closed_at"
                     />
                     <field name="has_inspection" invisible="1" />

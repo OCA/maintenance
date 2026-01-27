@@ -96,7 +96,7 @@
     <record model="ir.ui.view" id="maintenance_inspection_line_tree_view">
         <field name="model">maintenance.inspection.line</field>
         <field name="arch" type="xml">
-            <list editable="bottom">
+            <tree editable="bottom">
                 <field name="item_id" />
                 <field name="instruction" />
                 <field name="result_description" />
@@ -122,7 +122,7 @@
                     icon="fa-times-circle"
                 />
                 <field name="inspection_closed_at" column_invisible="1" />
-            </list>
+            </tree>
         </field>
     </record>
 </odoo>
