@@ -7,6 +7,22 @@
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="base_maintenance.equipment_request_view_form" />
         <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    name="action_view_purchase_requests"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-shopping-cart"
+                    groups="purchase.group_purchase_user"
+                    invisible="purchase_request_count == 0"
+                >
+                    <field
+                        name="purchase_request_count"
+                        widget="statinfo"
+                        string="Purchase Requests"
+                    />
+                </button>
+            </xpath>
             <xpath expr="//page[@name='description_page']" position="after">
                 <page
                     string="Spare Parts"
@@ -37,6 +53,21 @@
                             />
                         </group>
                     </group>
+                </page>
+                <page
+                    string="Purchase Requests"
+                    name="purchase_requests"
+                    groups="purchase.group_purchase_user"
+                    invisible="purchase_request_count == 0"
+                >
+                    <field name="purchase_request_ids" nolabel="1" readonly="1">
+                        <list string="Purchase Requests">
+                            <field name="name" />
+                            <field name="origin" />
+                            <field name="requested_by" />
+                            <field name="state" />
+                        </list>
+                    </field>
                 </page>
             </xpath>
         </field>

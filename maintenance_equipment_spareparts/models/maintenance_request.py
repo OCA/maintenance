@@ -13,6 +13,17 @@ class MaintenanceRequest(models.Model):
         compute="_compute_sparepart_ids",
         readonly=True,
     )
+    purchase_request_ids = fields.One2many(
+        comodel_name="purchase.request",
+        inverse_name="maintenance_request_id",
+        string="Purchase Requests",
+        readonly=True,
+    )
+    purchase_request_count = fields.Integer(
+        string="Purchase Requests Count",
+        compute="_compute_purchase_request_count",
+        store=True,
+    )
 
     @api.depends("equipment_id", "equipment_id.sparepart_ids")
     def _compute_sparepart_ids(self):
@@ -21,6 +32,11 @@ class MaintenanceRequest(models.Model):
                 record.sparepart_ids = record.equipment_id.sparepart_ids
             else:
                 record.sparepart_ids = False
+
+    @api.depends("purchase_request_ids")
+    def _compute_purchase_request_count(self):
+        for record in self:
+            record.purchase_request_count = len(record.purchase_request_ids)
 
     def action_consume_spareparts(self):
         self.ensure_one()
@@ -35,6 +51,17 @@ class MaintenanceRequest(models.Model):
             "context": {
                 "default_request_id": self.id,
             },
+        }
+
+    def action_view_purchase_requests(self):
+        self.ensure_one()
+        return {
+            "name": _("Purchase Requests"),
+            "type": "ir.actions.act_window",
+            "res_model": "purchase.request",
+            "view_mode": "tree,form",
+            "domain": [("maintenance_request_id", "=", self.id)],
+            "context": {"default_maintenance_request_id": self.id},
         }
 
     def _create_stock_picking_for_sparepart(self, sparepart, qty):
@@ -83,9 +110,13 @@ class MaintenanceRequest(models.Model):
         # Find or create purchase request
         purchase_request = self.env["purchase.request"].search(
             [
-                ("origin", "=", self.name),
                 ("state", "in", ["draft", "to_approve"]),
                 ("company_id", "=", self.company_id.id),
+                "|",
+                ("maintenance_request_id", "=", self.id),
+                "&",
+                ("maintenance_request_id", "=", False),
+                ("origin", "=", self.name),
             ],
             limit=1,
         )
@@ -108,8 +139,14 @@ class MaintenanceRequest(models.Model):
                     "company_id": self.company_id.id,
                     "picking_type_id": picking_type.id if picking_type else False,
                     "equipment_id": self.equipment_id.id,
+                    "maintenance_request_id": self.id,
                 }
             )
+        elif not purchase_request.maintenance_request_id:
+            vals = {"maintenance_request_id": self.id}
+            if not purchase_request.equipment_id:
+                vals["equipment_id"] = self.equipment_id.id
+            purchase_request.write(vals)
         line_vals = {
             "request_id": purchase_request.id,
             "product_id": sparepart.product_id.id,

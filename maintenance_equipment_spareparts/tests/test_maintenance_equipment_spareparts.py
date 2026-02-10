@@ -1,6 +1,6 @@
 # Copyright 2024 Odoo Community Association (OCA)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-from odoo.exceptions import ValidationError
+from odoo.exceptions import UserError, ValidationError
 from odoo.tests.common import TransactionCase
 
 
@@ -186,3 +186,111 @@ class TestMaintenanceEquipmentSpareparts(TransactionCase):
         purchase_request = self.env["purchase.request"].browse(result["res_id"])
         self.assertEqual(purchase_request.equipment_id, self.equipment)
         self.assertTrue(purchase_request.line_ids)
+
+    def test_consume_spareparts_creates_purchase_request_link(self):
+        """Purchase request created from consume wizard links to request."""
+        sparepart = self.Sparepart.create(
+            {
+                "equipment_id": self.equipment.id,
+                "product_id": self.product.id,
+                "installed_qty": 1.0,
+                "spare_qty": 2.0,
+            }
+        )
+        request = self.Request.create(
+            {
+                "name": "REQ-TEST-001",
+                "equipment_id": self.equipment.id,
+            }
+        )
+        wizard = self.env["maintenance.request.consume.spareparts"].create(
+            {
+                "request_id": request.id,
+                "line_ids": [
+                    (0, 0, {"sparepart_id": sparepart.id, "requested_qty": 1.0})
+                ],
+            }
+        )
+        wizard.action_consume()
+
+        purchase_request = self.env["purchase.request"].search(
+            [("maintenance_request_id", "=", request.id)], limit=1
+        )
+        self.assertTrue(purchase_request)
+        self.assertEqual(purchase_request.maintenance_request_id, request)
+        self.assertEqual(purchase_request.equipment_id, self.equipment)
+        request.invalidate_recordset(["purchase_request_ids", "purchase_request_count"])
+        self.assertEqual(request.purchase_request_count, 1)
+
+    def test_consume_spareparts_negative_quantity(self):
+        """Negative quantities should raise an error."""
+        sparepart = self.Sparepart.create(
+            {
+                "equipment_id": self.equipment.id,
+                "product_id": self.product.id,
+                "installed_qty": 1.0,
+                "spare_qty": 2.0,
+            }
+        )
+        request = self.Request.create(
+            {
+                "name": "REQ-TEST-NEG",
+                "equipment_id": self.equipment.id,
+            }
+        )
+        wizard = self.env["maintenance.request.consume.spareparts"].create(
+            {
+                "request_id": request.id,
+                "line_ids": [(0, 0, {"sparepart_id": sparepart.id})],
+            }
+        )
+        wizard.line_ids[0].requested_qty = -1.0
+        with self.assertRaises(UserError):
+            wizard.action_consume()
+
+    def test_purchase_request_equipment_must_match_request(self):
+        """Purchase request equipment must match maintenance request equipment."""
+        other_equipment = self.Equipment.create({"name": "Other Equipment"})
+        request = self.Request.create(
+            {
+                "name": "REQ-TEST-002",
+                "equipment_id": self.equipment.id,
+            }
+        )
+        with self.assertRaises(ValidationError):
+            self.env["purchase.request"].create(
+                {
+                    "requested_by": self.env.user.id,
+                    "equipment_id": other_equipment.id,
+                    "maintenance_request_id": request.id,
+                    "picking_type_id": self.env.ref("stock.picking_type_in").id,
+                }
+            )
+
+    def test_existing_purchase_request_is_linked(self):
+        """Existing purchase request is linked to the maintenance request."""
+        sparepart = self.Sparepart.create(
+            {
+                "equipment_id": self.equipment.id,
+                "product_id": self.product.id,
+                "installed_qty": 1.0,
+                "spare_qty": 2.0,
+            }
+        )
+        request = self.Request.create(
+            {
+                "name": "REQ-TEST-003",
+                "equipment_id": self.equipment.id,
+            }
+        )
+        purchase_request = self.env["purchase.request"].create(
+            {
+                "requested_by": self.env.user.id,
+                "company_id": request.company_id.id,
+                "origin": request.name,
+                "picking_type_id": self.env.ref("stock.picking_type_in").id,
+            }
+        )
+        request._create_purchase_request_for_sparepart(sparepart, 1.0)
+        purchase_request.invalidate_recordset(["maintenance_request_id"])
+        self.assertEqual(purchase_request.maintenance_request_id, request)

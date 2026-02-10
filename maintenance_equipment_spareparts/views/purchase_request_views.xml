@@ -9,6 +9,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='origin']" position="after">
                 <field name="equipment_id" />
+                <field name="maintenance_request_id" />
             </xpath>
         </field>
     </record>

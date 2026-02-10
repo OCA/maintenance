@@ -13,6 +13,33 @@ class PurchaseRequest(models.Model):
         help="When set, product selection will be restricted to spare parts "
         "registered for this equipment",
     )
+    maintenance_request_id = fields.Many2one(
+        comodel_name="maintenance.request",
+        string="Maintenance Request",
+        index=True,
+        help="Maintenance request that originated this purchase request.",
+    )
+
+    @api.onchange("maintenance_request_id")
+    def _onchange_maintenance_request_id(self):
+        for request in self:
+            if request.maintenance_request_id:
+                request.equipment_id = request.maintenance_request_id.equipment_id
+
+    @api.constrains("maintenance_request_id", "equipment_id")
+    def _check_equipment_matches_request(self):
+        for request in self:
+            if (
+                request.maintenance_request_id
+                and request.equipment_id
+                and request.maintenance_request_id.equipment_id != request.equipment_id
+            ):
+                raise ValidationError(
+                    _(
+                        "Equipment must match the maintenance request "
+                        "equipment when both are set."
+                    )
+                )
 
 
 class PurchaseRequestLine(models.Model):

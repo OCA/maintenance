@@ -63,6 +63,9 @@ class MaintenanceRequestConsumeSpareparts(models.TransientModel):
                     "Please add at least one line with quantity > 0."
                 )
             )
+        negative_lines = self.line_ids.filtered(lambda line: line.requested_qty < 0)
+        if negative_lines:
+            raise UserError(_("Requested quantity must be greater than or equal to 0."))
         lines_with_qty = self.line_ids.filtered(lambda line: line.requested_qty > 0)
         if not lines_with_qty:
             raise UserError(

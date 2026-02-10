@@ -20,7 +20,6 @@
         "security/ir.model.access.csv",
         "views/maintenance_equipment_sparepart_views.xml",
         "views/maintenance_equipment_views.xml",
-        "views/maintenance_request_sparepart_consumption_views.xml",
         "views/maintenance_request_views.xml",
         "views/purchase_request_views.xml",
         "wizards/maintenance_request_consume_spareparts_wizard.xml",
