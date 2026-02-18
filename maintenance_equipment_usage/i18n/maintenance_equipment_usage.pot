@@ -14,14 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: maintenance_equipment_usage
-#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_form
-#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_kanban
-msgid ""
-"<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
-"primary\" invisible=\"not in_use\">In use</span>"
-msgstr ""
-
-#. module: maintenance_equipment_usage
 #: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_needaction
 msgid "Action Needed"
 msgstr ""
@@ -172,6 +164,12 @@ msgstr ""
 #: model:ir.model.fields.selection,name:maintenance_equipment_usage.selection__maintenance_equipment_usage__state__in_use
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
 msgid "In Use"
+msgstr ""
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_kanban
+msgid "In use"
 msgstr ""
 
 #. module: maintenance_equipment_usage
