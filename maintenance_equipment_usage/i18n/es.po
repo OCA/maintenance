@@ -18,16 +18,6 @@ msgstr ""
 "X-Generator: Weblate 5.6.2\n"
 
 #. module: maintenance_equipment_usage
-#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_form
-#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_kanban
-msgid ""
-"<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
-"primary\" invisible=\"not in_use\">In use</span>"
-msgstr ""
-"<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
-"primary\" invisible=\"not in_use\">En uso</span>"
-
-#. module: maintenance_equipment_usage
 #: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_needaction
 msgid "Action Needed"
 msgstr "Acción Necesaria"
@@ -120,7 +110,6 @@ msgstr "Equipos"
 #. module: maintenance_equipment_usage
 #. odoo-python
 #: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
-#, python-format
 msgid "Every equipment can only be picked once at the same time!"
 msgstr "¡Cada equipo solo se puede recoger una vez al mismo tiempo!"
 
@@ -182,6 +171,12 @@ msgid "In Use"
 msgstr "En uso"
 
 #. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_kanban
+msgid "In use"
+msgstr ""
+
+#. module: maintenance_equipment_usage
 #: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_is_follower
 msgid "Is Follower"
 msgstr "Es Seguidor"
@@ -230,7 +225,6 @@ msgstr "Mi fecha de límite de actividad"
 #. odoo-python
 #: code:addons/maintenance_equipment_usage/models/maintenance_equipment_usage.py:0
 #: model:ir.model.fields.selection,name:maintenance_equipment_usage.selection__maintenance_equipment_usage__state__draft
-#, python-format
 msgid "New"
 msgstr "Nuevo"
 
@@ -400,6 +394,13 @@ msgstr "Mensajes del Sitio Web"
 #: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__website_message_ids
 msgid "Website communication history"
 msgstr "Historial de la comunicación en el sitio web"
+
+#~ msgid ""
+#~ "<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
+#~ "primary\" invisible=\"not in_use\">In use</span>"
+#~ msgstr ""
+#~ "<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
+#~ "primary\" invisible=\"not in_use\">En uso</span>"
 
 #~ msgid ""
 #~ "<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
