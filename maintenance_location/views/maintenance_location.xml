@@ -15,13 +15,27 @@
                         </h1>
                     </div>
                     <group name="first" col="2">
-                        <field name="description" />
-                        <field name="parent_id" class="oe_inline" />
-                        <label for="latitude" string="Location" />
-                        <span class="oe_inline">
-                            Latitude: <field name="latitude" nolabel="1" /><br />
-                            Longitude: <field name="longitude" nolabel="1" />
-                        </span>
+                        <group>
+                            <field name="description" />
+                            <field name="parent_id" class="oe_inline" />
+                            <label for="latitude" string="Location" />
+                            <span class="oe_inline">
+                                Latitude: <field name="latitude" nolabel="1" /><br />
+                                Longitude: <field name="longitude" nolabel="1" />
+                            </span>
+                        </group>
+                        <group>
+                                <field
+                                name="equipment_ids"
+                                widget="many2many_tags"
+                                string="Equipments"
+                            />
+                                <field
+                                name="child_equipment_ids"
+                                widget="many2many_tags"
+                                string="Child Equipments"
+                            />
+                        </group>
                     </group>
                 </sheet>
             </form>
@@ -42,6 +56,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="complete_name" />
+                <field name="equipment_count" />
             </tree>
         </field>
     </record>
