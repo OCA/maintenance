@@ -34,6 +34,52 @@ class MaintenanceLocation(models.Model):
     longitude = fields.Float(digits=(16, 5))
     sequence = fields.Integer(default=10)
     active = fields.Boolean(default=True)
+    equipment_ids = fields.One2many(
+        "maintenance.equipment", "location_id", string="Equipments"
+    )
+    child_equipment_ids = fields.Many2many(
+        comodel_name="maintenance.equipment",
+        compute="_compute_child_equipment_ids",
+        string="Child Equipments",
+    )
+    equipment_count = fields.Integer(compute="_compute_equipment_count")
+
+    def _compute_child_equipment_ids(self):
+        all_locations = self.env["maintenance.location"].search(
+            [("id", "child_of", self.ids)]
+        )
+        all_equipments = self.env["maintenance.equipment"].search(
+            [("location_id", "in", all_locations.ids)]
+        )
+        for location in self:
+            descendant_locs = all_locations.filtered(
+                lambda sub_loc, loc=location: sub_loc.parent_path
+                and sub_loc.parent_path.startswith(loc.parent_path)
+                and sub_loc.id != loc.id
+            )
+            location.child_equipment_ids = all_equipments.filtered(
+                lambda eq, d_locs=descendant_locs: eq.location_id in d_locs
+            )
+
+    def _compute_equipment_count(self):
+        all_locations = self.env["maintenance.location"].search(
+            [("id", "child_of", self.ids)]
+        )
+        equip_data = self.env["maintenance.equipment"].read_group(
+            domain=[("location_id", "in", all_locations.ids)],
+            fields=["location_id"],
+            groupby=["location_id"],
+        )
+        count_dict = {x["location_id"][0]: x["location_id_count"] for x in equip_data}
+        for location in self:
+            descendant_ids = all_locations.filtered(
+                lambda sub_loc, loc=location: sub_loc.parent_path
+                and sub_loc.parent_path.startswith(loc.parent_path)
+            ).ids
+
+            location.equipment_count = sum(
+                count_dict.get(d_id, 0) for d_id in descendant_ids
+            )
 
     @api.depends("name", "parent_id.complete_name")
     def _compute_complete_name(self):
