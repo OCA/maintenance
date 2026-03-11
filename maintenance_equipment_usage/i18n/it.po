@@ -17,16 +17,6 @@ msgstr ""
 "X-Generator: Weblate 5.6.2\n"
 
 #. module: maintenance_equipment_usage
-#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_form
-#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_kanban
-msgid ""
-"<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
-"primary\" invisible=\"not in_use\">In use</span>"
-msgstr ""
-"<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
-"primary\" invisible=\"not in_use\">In uso</span>"
-
-#. module: maintenance_equipment_usage
 #: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_needaction
 msgid "Action Needed"
 msgstr "Azione richiesta"
@@ -180,6 +170,12 @@ msgstr "Se selezionata, alcuni messaggi hanno un errore di consegna."
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.maintenance_equipment_usage_search
 msgid "In Use"
 msgstr "In uso"
+
+#. module: maintenance_equipment_usage
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_usage.hr_equipment_view_kanban
+msgid "In use"
+msgstr ""
 
 #. module: maintenance_equipment_usage
 #: model:ir.model.fields,field_description:maintenance_equipment_usage.field_maintenance_equipment_usage__message_is_follower
@@ -400,6 +396,13 @@ msgstr "Messaggi sito web"
 #: model:ir.model.fields,help:maintenance_equipment_usage.field_maintenance_equipment_usage__website_message_ids
 msgid "Website communication history"
 msgstr "Cronologia comunicazioni sito web"
+
+#~ msgid ""
+#~ "<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
+#~ "primary\" invisible=\"not in_use\">In use</span>"
+#~ msgstr ""
+#~ "<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
+#~ "primary\" invisible=\"not in_use\">In uso</span>"
 
 #~ msgid ""
 #~ "<span groups=\"maintenance.group_equipment_manager\" class=\"label label-"
