@@ -21,11 +21,15 @@ class TestMaintenanceLocation(TransactionCase):
         self.request = self.env["maintenance.request"].create(
             {"name": "Request", "maintenance_team_id": self.team.id}
         )
-
-        self.equipment = self.env["maintenance.equipment"].create(
+        self.env["maintenance.equipment"].create(
             {"name": "Laptop", "location_id": self.location_1.id}
         )
-
+        self.env["maintenance.equipment"].create(
+            {"name": "Printer", "location_id": self.location_1.id}
+        )
+        self.env["maintenance.equipment"].create(
+            {"name": "Scanner", "location_id": self.location_2.id}
+        )
         self.plan = self.env["maintenance.plan"].create(
             {
                 "equipment_id": self.equipment.id,
@@ -37,6 +41,7 @@ class TestMaintenanceLocation(TransactionCase):
                 "location_id": self.location_1.id,
             }
         )
+        self.env.invalidate_all()
 
     def test_maintenance_location(self):
         self.assertEqual(self.location_2.complete_name, "L1 / L2")
@@ -51,3 +56,11 @@ class TestMaintenanceLocation(TransactionCase):
         self.assertTrue(request)
         for r in request:
             self.assertEqual(r.location_id.id, self.location_1.id)
+
+    def test_count_equipment(self):
+        self.assertEqual(self.location_1.equipment_count, 4)
+        self.assertEqual(self.location_2.equipment_count, 1)
+
+    def test_child_equipment_ids(self):
+        self.assertEqual(len(self.location_1.child_equipment_ids), 1)
+        self.assertEqual(len(self.location_2.child_equipment_ids), 0)
