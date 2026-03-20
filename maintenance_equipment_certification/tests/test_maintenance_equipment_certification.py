@@ -17,7 +17,7 @@ class TestMaintenanceEquipmentCertification(TransactionCase):
                 "name": "Demo User",
                 "login": "Demo",
                 "email": "demo@user.com",
-                "groups_id": [
+                "group_ids": [
                     (6, 0, [self.env.ref("base.group_user").id]),
                 ],
             }
@@ -32,7 +32,7 @@ class TestMaintenanceEquipmentCertification(TransactionCase):
         """Test user with permission can modify equipment."""
         self.user_demo.write(
             {
-                "groups_id": [
+                "group_ids": [
                     (6, 0, [self.env.ref("maintenance.group_equipment_manager").id])
                 ],
             }

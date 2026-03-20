@@ -8,16 +8,20 @@
                 <page name="certifications" string="Certifications">
                     <group>
                         <field name="certificate_ids" nolabel="1" colspan="2">
-                            <tree editable="top">
+                            <list editable="top">
                                 <field name="date" />
                                 <field name="name" />
                                 <field name="notes" />
-                                <field name="certificate_filename" invisible="1" />
+                                <field
+                                    name="certificate_filename"
+                                    force_save="1"
+                                    column_invisible="1"
+                                />
                                 <field
                                     name="certificate_file"
                                     filename="certificate_filename"
                                 />
-                            </tree>
+                            </list>
                         </field>
                     </group>
                 </page>
