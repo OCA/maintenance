@@ -1,0 +1,16 @@
+<!-- Copyright 2026 Tecnativa - Christian Ramos
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="hr_equipment_request_view_form_button_box">
+        <field name="name">maintenance.request.form</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="helpdesk_tickets" string="Helpdesk Tickets">
+                    <field name="helpdesk_ticket_ids" />
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
