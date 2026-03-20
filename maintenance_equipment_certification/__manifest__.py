@@ -4,7 +4,7 @@
     "name": "Maintenance equipment certification",
     "summary": "Add to store certifications associated with a equipment.",
     "category": "Human Resources",
-    "version": "16.0.1.0.0",
+    "version": "19.0.1.0.0",
     "author": "Trey (www.trey.es), Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
     "maintainers": ["cubells"],
