@@ -33,6 +33,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_status](maintenance_equipment_status/) | 18.0.1.0.0 |  | Maintenance Equipment Status
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 18.0.1.0.0 | <a href='https://github.com/etobella'><img src='https://github.com/etobella.png' width='32' height='32' style='border-radius:50%;' alt='etobella'/></a> | Adds category tags to equipment
 [maintenance_equipment_usage](maintenance_equipment_usage/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Equipment Usage
+[maintenance_helpdesk_mgmt](maintenance_helpdesk_mgmt/) | 18.0.1.0.0 |  | Allows you to link Helpdesk Tickets with maintenance requests
 [maintenance_partner](maintenance_partner/) | 18.0.1.0.0 |  | Add Partner information in Maintenance Requests and equipments
 [maintenance_plan](maintenance_plan/) | 18.0.1.0.0 |  | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 18.0.1.0.0 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
