@@ -6,41 +6,43 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-03-23 10:45+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_helpdesk_mgmt
 #: model:ir.model,name:maintenance_helpdesk_mgmt.model_helpdesk_ticket
 msgid "Helpdesk Ticket"
-msgstr ""
+msgstr "Ticket assistenza clienti"
 
 #. module: maintenance_helpdesk_mgmt
 #: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_maintenance_request__helpdesk_ticket_ids
 #: model_terms:ir.ui.view,arch_db:maintenance_helpdesk_mgmt.hr_equipment_request_view_form_button_box
 msgid "Helpdesk Tickets"
-msgstr ""
+msgstr "Ticket assistenza clienti"
 
 #. module: maintenance_helpdesk_mgmt
 #: model_terms:ir.ui.view,arch_db:maintenance_helpdesk_mgmt.view_helpdesk_ticket_form_inherit
 msgid "Maintenance"
-msgstr ""
+msgstr "Manutenzione"
 
 #. module: maintenance_helpdesk_mgmt
 #: model:ir.model,name:maintenance_helpdesk_mgmt.model_maintenance_request
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Richiesta manutenzione"
 
 #. module: maintenance_helpdesk_mgmt
 #: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_helpdesk_ticket__maintenance_request_ids
 msgid "Maintenance Requests"
-msgstr ""
+msgstr "Richieste manutenzione"
 
 #. module: maintenance_helpdesk_mgmt
 #: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_helpdesk_ticket__maintenance_requests_count
 msgid "Maintenance Requests Count"
-msgstr ""
+msgstr "Conta richieste manutenzione"
