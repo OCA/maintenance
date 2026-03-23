@@ -15,13 +15,23 @@ class HelpdeskTicket(models.Model):
         copy=False,
     )
 
-    maintenance_requests_count = fields.Integer(
-        compute="_compute_maintenance_requests_count"
+    maintenance_request_count = fields.Integer(
+        compute="_compute_maintenance_request_count"
     )
 
-    def _compute_maintenance_requests_count(self):
-        for record in self:
-            record.maintenance_requests_count = len(record.maintenance_request_ids)
+    def _compute_maintenance_request_count(self):
+        group_data = self.env["maintenance.request"]._read_group(
+            domain=[("helpdesk_ticket_ids", "in", self.ids)],
+            groupby=["helpdesk_ticket_ids"],
+            aggregates=["__count"],
+        )
+        mapped_data = {
+            helpdesk_ticket.id: count for (helpdesk_ticket, count) in group_data
+        }
+        for helpdesk_ticket in self:
+            helpdesk_ticket.maintenance_request_count = mapped_data.get(
+                helpdesk_ticket.id, 0
+            )
 
     def action_view_maintenance_request(self):
         action = self.env["ir.actions.act_window"]._for_xml_id(
