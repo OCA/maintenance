@@ -10,7 +10,9 @@
                         <field name="certificate_ids" nolabel="1" colspan="2">
                             <list editable="top">
                                 <field name="date" />
+                                <field name="renewal_date" />
                                 <field name="name" />
+                                <field name="certificate_number" />
                                 <field name="notes" />
                                 <field
                                     name="certificate_filename"

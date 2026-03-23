@@ -72,6 +72,10 @@ Contributors
 
   - Vicent Cubells <vicent@trey.es>
 
+- `ForgeFlow <https://www.forgeflow.com>`__:
+
+  - Jasmin Solanki
+
 Maintainers
 -----------
 
