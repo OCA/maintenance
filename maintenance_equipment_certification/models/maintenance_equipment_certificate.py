@@ -8,8 +8,10 @@ class MaintenanceEquipmentCertificate(models.Model):
     _description = "Maintenance equipment certificate"
 
     name = fields.Char()
+    certificate_number = fields.Char()
     notes = fields.Text()
     date = fields.Date()
+    renewal_date = fields.Date()
     certificate_file = fields.Binary(
         string="Certificate",
         attachment=True,
