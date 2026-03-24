@@ -6,6 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-03-24 11:45+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -23,7 +24,7 @@ msgstr "Ticket assistenza clienti"
 #. module: maintenance_helpdesk_mgmt
 #: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_maintenance_request__helpdesk_ticket_count
 msgid "Helpdesk Ticket Count"
-msgstr ""
+msgstr "Conteggio ticket assistenza clienti"
 
 #. module: maintenance_helpdesk_mgmt
 #: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_maintenance_request__helpdesk_ticket_ids
@@ -34,7 +35,7 @@ msgstr "Ticket assistenza clienti"
 #. module: maintenance_helpdesk_mgmt
 #: model_terms:ir.ui.view,arch_db:maintenance_helpdesk_mgmt.hr_equipment_request_view_kanban
 msgid "Helpdesk tickets"
-msgstr ""
+msgstr "Ticket assistenza clienti"
 
 #. module: maintenance_helpdesk_mgmt
 #: model_terms:ir.ui.view,arch_db:maintenance_helpdesk_mgmt.view_helpdesk_ticket_form_inherit
@@ -49,7 +50,7 @@ msgstr "Richiesta manutenzione"
 #. module: maintenance_helpdesk_mgmt
 #: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_helpdesk_ticket__maintenance_request_count
 msgid "Maintenance Request Count"
-msgstr ""
+msgstr "Conta richiesta manutenzione"
 
 #. module: maintenance_helpdesk_mgmt
 #: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_helpdesk_ticket__maintenance_request_ids
@@ -60,12 +61,12 @@ msgstr "Richieste manutenzione"
 #. module: maintenance_helpdesk_mgmt
 #: model_terms:ir.ui.view,arch_db:maintenance_helpdesk_mgmt.hr_equipment_request_view_search
 msgid "With helpdesk tickets"
-msgstr ""
+msgstr "Con ticket assistenza clienti"
 
 #. module: maintenance_helpdesk_mgmt
 #: model_terms:ir.ui.view,arch_db:maintenance_helpdesk_mgmt.helpdesk_ticket_view_search
 msgid "With maintenance requests"
-msgstr ""
+msgstr "Con richieste di manutenzione"
 
 #~ msgid "Maintenance Requests Count"
 #~ msgstr "Conta richieste manutenzione"
