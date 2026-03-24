@@ -19,14 +19,14 @@ msgid "Helpdesk Ticket"
 msgstr ""
 
 #. module: maintenance_helpdesk_mgmt
-#: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_maintenance_request__helpdesk_ticket_ids
-#: model_terms:ir.ui.view,arch_db:maintenance_helpdesk_mgmt.hr_equipment_request_view_form_button_box
-msgid "Helpdesk Tickets"
+#: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_maintenance_request__helpdesk_ticket_count
+msgid "Helpdesk Ticket Count"
 msgstr ""
 
 #. module: maintenance_helpdesk_mgmt
-#: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_maintenance_request__helpdesk_tickets_count
-msgid "Helpdesk Tickets Count"
+#: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_maintenance_request__helpdesk_ticket_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_helpdesk_mgmt.hr_equipment_request_view_form_button_box
+msgid "Helpdesk Tickets"
 msgstr ""
 
 #. module: maintenance_helpdesk_mgmt
@@ -45,14 +45,14 @@ msgid "Maintenance Request"
 msgstr ""
 
 #. module: maintenance_helpdesk_mgmt
-#: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_helpdesk_ticket__maintenance_request_ids
-#: model_terms:ir.ui.view,arch_db:maintenance_helpdesk_mgmt.view_helpdesk_ticket_kanban
-msgid "Maintenance Requests"
+#: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_helpdesk_ticket__maintenance_request_count
+msgid "Maintenance Request Count"
 msgstr ""
 
 #. module: maintenance_helpdesk_mgmt
-#: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_helpdesk_ticket__maintenance_requests_count
-msgid "Maintenance Requests Count"
+#: model:ir.model.fields,field_description:maintenance_helpdesk_mgmt.field_helpdesk_ticket__maintenance_request_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_helpdesk_mgmt.view_helpdesk_ticket_kanban
+msgid "Maintenance Requests"
 msgstr ""
 
 #. module: maintenance_helpdesk_mgmt
