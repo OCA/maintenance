@@ -16,12 +16,46 @@
                     invisible="not maintenance_request_ids"
                 >
                     <field
-                        name="maintenance_requests_count"
+                        name="maintenance_request_count"
                         widget="statinfo"
                         string="Maintenance"
                     />
                 </button>
             </div>
+        </field>
+    </record>
+
+    <record id="view_helpdesk_ticket_kanban" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.kanban</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.view_helpdesk_ticket_kanban" />
+        <field name="arch" type="xml">
+            <field name="assigned_date" position="after">
+                <field name="maintenance_request_count" />
+            </field>
+            <field name="tag_ids" position="after">
+                <div class="row" t-if="record.maintenance_request_count.value > 0">
+                    <a type="object" name="action_view_maintenance_request">
+                        <field name="maintenance_request_count" /> Maintenance Requests
+                    </a>
+                </div>
+            </field>
+        </field>
+    </record>
+
+    <record id="helpdesk_ticket_view_search" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.view.search</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.helpdesk_ticket_view_search" />
+        <field name="arch" type="xml">
+            <filter name="last_week" position="after">
+                <separator />
+                <filter
+                    string="With maintenance requests"
+                    name="maintenance_request"
+                    domain="[('maintenance_request_ids', '!=', False)]"
+                />
+            </filter>
         </field>
     </record>
 </odoo>
