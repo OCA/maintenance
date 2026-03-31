@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="mail_template_certificate_expiration" model="mail.template">
+        <field name="name">Certificate Expiration Reminder</field>
+        <field name="model_id" ref="model_maintenance_equipment_certificate" />
+        <field
+            name="subject"
+        >Certificate Expiring: {{ object.name }} – {{ object.equipment_id.name }}</field>
+        <field
+            name="partner_to"
+        >{{ (object.equipment_id.technician_user_id or object.equipment_id.owner_user_id).partner_id.id }}</field>
+        <field name="description">
+            Sent automatically when a certificate is approaching its renewal date.
+        </field>
+        <field name="body_html" type="html">
+            <div>
+                <t
+                t-set="user"
+                t-value="object.equipment_id.technician_user_id or object.equipment_id.owner_user_id"
+            />
+                Dear <t t-out="user.name or 'Team'">Team</t>,
+                <br /><br />
+                The following certificate is approaching its expiration date
+                and requires your attention:
+                <br /><br />
+                <strong>Certificate:</strong>
+                <t t-out="object.name or ''">Certificate name</t>
+                <br />
+                <t t-if="object.certificate_number">
+                <strong>Number:</strong>
+                <t t-out="object.certificate_number">CERT-001</t>
+                <br />
+            </t>
+                <strong>Equipment:</strong>
+                <t t-out="object.equipment_id.name or ''">Equipment name</t>
+                <br />
+                <strong>Renewal Date:</strong>
+                <t t-out="format_date(object.renewal_date)">2026-12-31</t>
+                <br /><br />
+                Please take the necessary steps to renew this certificate
+                before it expires.
+            </div>
+        </field>
+        <field name="auto_delete" eval="True" />
+    </record>
+</odoo>

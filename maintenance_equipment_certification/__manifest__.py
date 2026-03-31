@@ -14,6 +14,11 @@
     ],
     "data": [
         "security/ir.model.access.csv",
+        "data/mail_template_data.xml",
+        "data/ir_cron_data.xml",
         "views/maintenance_equipment_views.xml",
+        "views/maintenance_equipment_certificate_views.xml",
+        "views/certificate_reminder_rule_views.xml",
+        "views/res_config_settings_views.xml",
     ],
 }
