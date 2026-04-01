@@ -23,6 +23,7 @@
                                     name="certificate_file"
                                     filename="certificate_filename"
                                 />
+                                <field name="active" readonly="1" optional="hide" />
                             </list>
                         </field>
                     </group>

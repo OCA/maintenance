@@ -10,6 +10,7 @@ class MaintenanceEquipmentCertificate(models.Model):
     _name = "maintenance.equipment.certificate"
     _description = "Maintenance equipment certificate"
 
+    active = fields.Boolean(default=True)
     name = fields.Char()
     certificate_number = fields.Char()
     notes = fields.Text()

@@ -20,6 +20,13 @@
         <field name="model">maintenance.equipment.certificate</field>
         <field name="arch" type="xml">
             <form>
+                <field name="active" invisible="1" />
+                <widget
+                    name="web_ribbon"
+                    title="Archived"
+                    bg_color="text-bg-danger"
+                    invisible="active"
+                />
                 <sheet>
                     <group>
                         <group>
@@ -53,6 +60,12 @@
                 <field name="name" />
                 <field name="certificate_number" />
                 <field name="equipment_id" />
+                <filter
+                    name="inactive"
+                    string="Archived"
+                    domain="[('active', '=', False)]"
+                />
+                <separator />
                 <filter
                     name="expiring"
                     string="Expiring"

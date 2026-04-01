@@ -10,4 +10,5 @@ class MaintenanceEquipment(models.Model):
         comodel_name="maintenance.equipment.certificate",
         inverse_name="equipment_id",
         string="Certificates",
+        context={"active_test": False},
     )
