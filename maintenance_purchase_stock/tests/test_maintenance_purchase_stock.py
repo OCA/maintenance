@@ -19,13 +19,6 @@ class TestMaintenancePurchaseStock(BaseCommon):
         cls.PurchaseOrderLine = cls.env["purchase.order.line"]
         cls.ProductCategory = cls.env["product.category"]
         cls.ProductProduct = cls.env["product.product"]
-        cls.ResPartner = cls.env["res.partner"]
-
-        cls.partner = cls.ResPartner.create(
-            {
-                "name": "partner",
-            }
-        )
         uom_unit = cls.env.ref("uom.product_uom_unit")
         cls.maintenance_equipment_category1 = cls.MaintenanceEquipmentCategory.create(
             {"name": "My Maintenance Equipment Category 1"}
