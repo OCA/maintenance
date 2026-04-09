@@ -49,6 +49,11 @@
                     string="With Assigned Partner"
                     domain="[('assigned_partner_id', '!=', False)]"
                 />
+                <filter
+                    name="without_assigned_partner"
+                    string="Without Assigned Partner"
+                    domain="[('assigned_partner_id', '=', False)]"
+                />
             </filter>
         </field>
     </record>
