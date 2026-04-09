@@ -85,3 +85,8 @@ msgstr "Con partner assegnato"
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_request_search_view
 msgid "With Partner"
 msgstr "Con partner"
+
+#. module: maintenance_partner
+#: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_equipment_search_view
+msgid "Without Assigned Partner"
+msgstr ""
