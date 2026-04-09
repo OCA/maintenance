@@ -18,13 +18,6 @@ class TestMaintenanceProject(BaseCommon):
         cls.ProductCategory = cls.env["product.category"]
         cls.ProductProduct = cls.env["product.product"]
         cls.ProductTemplate = cls.env["product.template"]
-        cls.ResPartner = cls.env["res.partner"]
-
-        cls.partner = cls.ResPartner.create(
-            {
-                "name": "partner",
-            }
-        )
         uom_unit = cls.env.ref("uom.product_uom_unit")
         cls.maintenance_equipment_category1 = cls.MaintenanceEquipmentCategory.create(
             {"name": "My Maintenance Equipment Category 1"}
