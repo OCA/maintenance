@@ -35,7 +35,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_usage](maintenance_equipment_usage/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Equipment Usage
 [maintenance_helpdesk_mgmt](maintenance_helpdesk_mgmt/) | 18.0.1.1.0 |  | Allows you to link Helpdesk Tickets with maintenance requests
 [maintenance_partner](maintenance_partner/) | 18.0.1.0.1 |  | Add Partner information in Maintenance Requests and equipments
-[maintenance_plan](maintenance_plan/) | 18.0.1.0.0 |  | Extends preventive maintenance planning
+[maintenance_plan](maintenance_plan/) | 18.0.1.0.1 |  | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 18.0.1.0.0 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
 [maintenance_plan_only](maintenance_plan_only/) | 18.0.1.0.0 |  | Technical module to hide built-in recurrent settings
 [maintenance_product](maintenance_product/) | 18.0.1.0.2 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
