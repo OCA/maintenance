@@ -23,7 +23,7 @@
                 </button>
             </xpath>
             <xpath
-                expr="//notebook//field[@name='order_line']/list/field[@name='product_qty']"
+                expr="//notebook//field[@name='order_line']/tree/field[@name='product_qty']"
                 position="before"
             >
                 <field name="equipment_category_id" optional="hide" />
