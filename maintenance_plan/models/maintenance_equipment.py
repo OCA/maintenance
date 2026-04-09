@@ -92,6 +92,7 @@ class MaintenanceEquipment(models.Model):
             description=description,
         )
 
+        req_company = maintenance_plan.company_id or self.company_id
         data = {
             "name": name,
             "request_date": next_maintenance_date,
@@ -109,7 +110,7 @@ class MaintenanceEquipment(models.Model):
             "instruction_pdf": maintenance_plan.instruction_pdf,
             "instruction_google_slide": maintenance_plan.instruction_google_slide,
             "instruction_text": maintenance_plan.instruction_text,
-            "company_id": maintenance_plan.company_id.id or self.company_id.id,
+            "company_id": req_company.id or self.env.company.id,
         }
         # This field comes from maintenance_timesheet for avoiding a glue module
         if "planned_hours" in request_model._fields:
