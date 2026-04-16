@@ -5,7 +5,7 @@
     "name": "Maintenance Request Repair",
     "summary": """
         This is a bridge module between Maintenance and Repair""",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "license": "AGPL-3",
     "category": "Maintenance",
     "author": "Escodoo,Odoo Community Association (OCA)",
