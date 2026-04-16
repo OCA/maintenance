@@ -7,7 +7,6 @@
         <field name="priority" eval="8" />
         <field name="arch" type="xml">
             <div name="button_box" position="inside">
-                <field name="maintenance_request_ids" invisible="1" />
                 <button
                     type="object"
                     name="action_view_maintenance_request"
