@@ -20,4 +20,4 @@ class MaintenanceRequestTag(models.Model):
         string="Maintenance Requests",
     )
 
-    _sql_constraints = [("name_uniq", "unique (name)", "Tag name already exists !")]
+    _name_uniq = models.Constraint("unique (name)", "Tag name already exists !")
