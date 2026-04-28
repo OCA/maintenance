@@ -1,0 +1,116 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_request_tags
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-12 11:47+0000\n"
+"PO-Revision-Date: 2019-12-12 12:50+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_color
+msgid "Color Index (0-15)"
+msgstr "Número del  Color (0-15)"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: maintenance_request_tags
+#: model:ir.model,name:maintenance_request_tags.model_maintenance_request_tag
+msgid "Maintenance Request Tag"
+msgstr "Etiqueta de Peticiones"
+
+#. module: maintenance_request_tags
+#: model:ir.actions.act_window,name:maintenance_request_tags.maintenance_request_tag_act_window
+#: model:ir.ui.menu,name:maintenance_request_tags.maintenance_request_tag_menu
+msgid "Maintenance Request Tags"
+msgstr "Etiquetas de Peticiones"
+
+#. module: maintenance_request_tags
+#: model:ir.model,name:maintenance_request_tags.model_maintenance_request
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_request_ids
+msgid "Maintenance Requests"
+msgstr "Peticiones de mantenimiento"
+
+#. module: maintenance_request_tags
+#: model:ir.model,name:maintenance_request_tags.model_maintenance_team
+msgid "Maintenance Teams"
+msgstr "Equipos de mantenimiento"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_name
+msgid "Request Tag"
+msgstr "Etiqueta de Peticiones"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_selectable_tags_ids
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_team_selectable_tags_ids
+msgid "Selectable Tags"
+msgstr "Etiquetas Seleccionables"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_selectable_team_count
+msgid "Selectable Team Count"
+msgstr "Número de Etiquetas Seleccionables"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_selectable_team_ids
+msgid "Selectable Teams"
+msgstr "Equipos"
+
+#. module: maintenance_request_tags
+#: sql_constraint:maintenance.request.tag:0
+msgid "Tag name already exists !"
+msgstr "Esta etiqueta ya existe!"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag_ids
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: maintenance_request_tags
+#: model:ir.ui.view,arch_db:maintenance_request_tags.hr_equipment_request_view_form
+msgid "e.g. Computers"
+msgstr "p.e Ordenadores"

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="maintenance_request_tag_form_view">
+        <field
+            name="name"
+        >maintenance.request.tag.form (in maintenance_request_tags)</field>
+        <field name="model">maintenance.request.tag</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="color" widget="color_picker" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_request_tag_search_view">
+        <field
+            name="name"
+        >maintenance.request.tag.search (in maintenance_request_tags)</field>
+        <field name="model">maintenance.request.tag</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_request_tag_list_view">
+        <field
+            name="name"
+        >maintenance.request.tag.list (in maintenance_request_tags)</field>
+        <field name="model">maintenance.request.tag</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+                <field name="color" widget="color_picker" />
+            </list>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="maintenance_request_tag_act_window">
+        <field name="name">Request Tags</field>
+        <field name="res_model">maintenance.request.tag</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+    <record model="ir.ui.menu" id="maintenance_request_tag_menu">
+        <field name="name">Request Tags</field>
+        <field name="parent_id" ref="maintenance.menu_maintenance_configuration" />
+        <field name="action" ref="maintenance_request_tag_act_window" />
+        <field name="sequence" eval="34" />
+    </record>
+</odoo>
