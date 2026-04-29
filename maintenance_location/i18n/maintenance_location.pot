@@ -17,7 +17,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
 msgid ""
 "<br/>\n"
-"                            Longitude:"
+"                                Longitude:"
 msgstr ""
 
 #. module: maintenance_location
@@ -28,6 +28,12 @@ msgstr ""
 #. module: maintenance_location
 #: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__active
 msgid "Active"
+msgstr ""
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__child_equipment_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
+msgid "Child Equipments"
 msgstr ""
 
 #. module: maintenance_location
@@ -58,6 +64,17 @@ msgstr ""
 #. module: maintenance_location
 #: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__display_name
 msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__equipment_count
+msgid "Equipment Count"
+msgstr ""
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__equipment_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
+msgid "Equipments"
 msgstr ""
 
 #. module: maintenance_location
