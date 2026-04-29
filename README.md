@@ -29,7 +29,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 17.0.1.0.1 | <a href='https://github.com/AdriaGForgeFlow'><img src='https://github.com/AdriaGForgeFlow.png' width='32' height='32' style='border-radius:50%;' alt='AdriaGForgeFlow'/></a> | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 17.0.1.0.0 |  | Maintenance Equipment Status
 [maintenance_equipment_usage](maintenance_equipment_usage/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Equipment Usage
-[maintenance_location](maintenance_location/) | 17.0.1.0.0 |  | Define a location system for maintenance
+[maintenance_location](maintenance_location/) | 17.0.1.1.0 |  | Define a location system for maintenance
 [maintenance_plan](maintenance_plan/) | 17.0.1.1.2 |  | Extends preventive maintenance planning
 [maintenance_product](maintenance_product/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
 [maintenance_project](maintenance_project/) | 17.0.2.0.0 |  | Adds projects to maintenance equipments and requests
