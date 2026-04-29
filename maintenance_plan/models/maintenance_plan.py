@@ -101,7 +101,9 @@ class MaintenancePlan(models.Model):
 
     @api.model
     def _search_search_equipment(self, operator, value):
-        if operator != "=" or (not value and not isinstance(value, models.NewId)):
+        if operator not in ("=", "in") or (
+            not value and not isinstance(value, models.NewId)
+        ):
             raise ValueError(self.env._("Unsupported search operator"))
         plans = self.search([("generate_with_domain", "=", True)])
         plan_ids = []
@@ -113,7 +115,7 @@ class MaintenancePlan(models.Model):
                 )
             ):
                 plan_ids.append(plan.id)
-        return ["|", ("equipment_id", "=", value), ("id", "in", plan_ids)]
+        return ["|", ("equipment_id", operator, value), ("id", "in", plan_ids)]
 
     @api.depends("equipment_id")
     def _compute_search_equipment(self):

@@ -24,7 +24,7 @@ class TestMaintenancePlanBase(BaseCommon):
         cls.maintenance_plan_obj = cls.env["maintenance.plan"]
         cls.maintenance_equipment_obj = cls.env["maintenance.equipment"]
         cls.cron = cls.env.ref("maintenance_plan.maintenance_requests_cron")
-        cls.weekly_kind = cls.env.ref("maintenance_plan.maintenance_kind_weekly")
+        cls.weekly_kind = cls.env["maintenance.kind"].create({"name": "Weekly"})
         cls.done_stage = cls.env.ref("maintenance.stage_3")
 
         cls.equipment_1 = cls.maintenance_equipment_obj.create({"name": "Laptop 1"})
