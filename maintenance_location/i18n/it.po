@@ -20,10 +20,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
 msgid ""
 "<br/>\n"
-"                            Longitude:"
+"                                Longitude:"
 msgstr ""
-"<br/>\n"
-"                             Longitudine:"
 
 #. module: maintenance_location
 #: model_terms:ir.ui.view,arch_db:maintenance_location.hr_equipment_view_kanban
@@ -34,6 +32,12 @@ msgstr "<i class=\"fa fa-map-marker\" title=\"ubicazione\"/>"
 #: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__active
 msgid "Active"
 msgstr "Attiva"
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__child_equipment_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
+msgid "Child Equipments"
+msgstr ""
 
 #. module: maintenance_location
 #: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__child_id
@@ -61,34 +65,32 @@ msgid "Description"
 msgstr "Descrizione"
 
 #. module: maintenance_location
-#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_equipment__display_name
 #: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__display_name
-#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_plan__display_name
-#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_request__display_name
 msgid "Display Name"
 msgstr "Nome visualizzato"
 
 #. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__equipment_count
+msgid "Equipment Count"
+msgstr ""
+
+#. module: maintenance_location
+#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__equipment_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
+msgid "Equipments"
+msgstr ""
+
+#. module: maintenance_location
+#. odoo-python
 #: code:addons/maintenance_location/models/maintenance_location.py:0
 #, python-format
 msgid "Error ! You cannot create recursive Locations."
 msgstr "Errore! Non è possibile creare ubicazioni ricorsive."
 
 #. module: maintenance_location
-#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__id
-#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_plan__id
-#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_request__id
 msgid "ID"
 msgstr "ID"
-
-#. module: maintenance_location
-#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_equipment____last_update
-#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location____last_update
-#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_plan____last_update
-#: model:ir.model.fields,field_description:maintenance_location.field_maintenance_request____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
 
 #. module: maintenance_location
 #: model:ir.model.fields,field_description:maintenance_location.field_maintenance_location__write_uid
@@ -193,3 +195,13 @@ msgstr "Sequenza"
 #: model_terms:ir.ui.view,arch_db:maintenance_location.maintenance_location_form_view
 msgid "e.g. Building A"
 msgstr "e.g. Fabbricato A"
+
+#~ msgid ""
+#~ "<br/>\n"
+#~ "                            Longitude:"
+#~ msgstr ""
+#~ "<br/>\n"
+#~ "                             Longitudine:"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
