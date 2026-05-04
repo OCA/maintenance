@@ -85,9 +85,8 @@ class MaintenanceLocation(models.Model):
     def _compute_complete_name(self):
         for location in self:
             if location.parent_id:
-                location.complete_name = "{} / {}".format(
-                    location.parent_id.complete_name,
-                    location.name,
+                location.complete_name = (
+                    f"{location.parent_id.complete_name} / {location.name}"
                 )
             else:
                 location.complete_name = location.name

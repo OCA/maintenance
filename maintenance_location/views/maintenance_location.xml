@@ -25,12 +25,12 @@
                             </span>
                         </group>
                         <group>
-                                <field
+                            <field
                                 name="equipment_ids"
                                 widget="many2many_tags"
                                 string="Equipments"
                             />
-                                <field
+                            <field
                                 name="child_equipment_ids"
                                 widget="many2many_tags"
                                 string="Child Equipments"
