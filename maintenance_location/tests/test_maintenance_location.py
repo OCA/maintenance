@@ -50,6 +50,22 @@ class TestMaintenanceLocation(TransactionCase):
 
         self.request.write({"equipment_id": self.equipment.id})
         self.assertEqual(self.request.location_id.id, self.location_1.id)
+        # change equipment location and check that request location is updated
+        self.equipment.location_id = self.location_2
+        self.request.invalidate_recordset()
+        self.assertEqual(self.request.location_id.id, self.location_2.id)
+
+    def test_request_location_not_updated_when_stage_done(self):
+        self.request.write({"equipment_id": self.equipment.id})
+        self.assertEqual(self.request.location_id.id, self.location_1.id)
+        done_stage = self.env["maintenance.stage"].create(
+            {"name": "Done", "done": True}
+        )
+        self.request.stage_id = done_stage
+        # change equipment location and check that request location is NOT updated
+        self.equipment.location_id = self.location_2
+        self.request.invalidate_recordset()
+        self.assertEqual(self.request.location_id.id, self.location_1.id)
 
     def test_request_creation(self):
         request = self.equipment._create_new_request(self.plan)
