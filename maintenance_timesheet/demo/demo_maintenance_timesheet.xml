@@ -1,6 +1,6 @@
 <odoo noupdate="1">
     <record id="hr_timesheet.group_hr_timesheet_user" model="res.groups">
-        <field name="users" eval="[(4, ref('base.user_demo')),]" />
+        <field name="user_ids" eval="[(4, ref('base.user_demo')),]" />
     </record>
     <record id="request_1" model="maintenance.request">
         <field name="name">Corrective #1 for Generic Monitor</field>
