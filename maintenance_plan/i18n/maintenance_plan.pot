@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0\n"
+"Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -113,8 +113,11 @@ msgid "Description"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__display_name
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__display_name
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__display_name
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__display_name
+#: model:ir.model.fields,field_description:maintenance_plan.field_res_config_settings__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -185,8 +188,11 @@ msgid "Hide built-in recurrent settings"
 msgstr ""
 
 #. module: maintenance_plan
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__id
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__id
+#: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_request__id
+#: model:ir.model.fields,field_description:maintenance_plan.field_res_config_settings__id
 msgid "ID"
 msgstr ""
 
@@ -385,11 +391,6 @@ msgstr ""
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__month
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__planning_step__month
 msgid "Month(s)"
-msgstr ""
-
-#. module: maintenance_plan
-#: model:maintenance.kind,name:maintenance_plan.maintenance_kind_monthly
-msgid "Monthly"
 msgstr ""
 
 #. module: maintenance_plan
@@ -630,11 +631,6 @@ msgstr ""
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__week
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__planning_step__week
 msgid "Week(s)"
-msgstr ""
-
-#. module: maintenance_plan
-#: model:maintenance.kind,name:maintenance_plan.maintenance_kind_weekly
-msgid "Weekly"
 msgstr ""
 
 #. module: maintenance_plan
