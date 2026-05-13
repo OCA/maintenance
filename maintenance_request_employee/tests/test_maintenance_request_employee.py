@@ -4,11 +4,11 @@ from odoo.tests import TransactionCase
 
 
 class TestMaintenanceRequest(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        # Create some test employees
-        self.employee_1 = self.env["hr.employee"].create({"name": "Employee 1"})
-        self.employee_2 = self.env["hr.employee"].create({"name": "Employee 2"})
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.employee_1 = cls.env["hr.employee"].create({"name": "Employee 1"})
+        cls.employee_2 = cls.env["hr.employee"].create({"name": "Employee 2"})
 
     def test_maintenance_request_with_employees(self):
         # Create a maintenance request and assign employees
