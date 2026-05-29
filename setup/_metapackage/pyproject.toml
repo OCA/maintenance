@@ -1,6 +1,6 @@
 [project]
 name = "odoo-addons-oca-maintenance"
-version = "19.0.20260508.0"
+version = "19.0.20260529.0"
 dependencies = [
     "odoo-addon-base_maintenance==19.0.*",
     "odoo-addon-maintenance_equipment_certification==19.0.*",
@@ -8,6 +8,7 @@ dependencies = [
     "odoo-addon-maintenance_plan==19.0.*",
     "odoo-addon-maintenance_product==19.0.*",
     "odoo-addon-maintenance_project==19.0.*",
+    "odoo-addon-maintenance_request_purchase==19.0.*",
     "odoo-addon-maintenance_request_repair==19.0.*",
     "odoo-addon-maintenance_request_tags==19.0.*",
 ]
