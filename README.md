@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [maintenance_plan](maintenance_plan/) | 19.0.1.0.0 |  | Extends preventive maintenance planning
 [maintenance_product](maintenance_product/) | 19.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
 [maintenance_project](maintenance_project/) | 19.0.1.0.0 |  | Adds projects to maintenance equipments and requests
+[maintenance_request_employee](maintenance_request_employee/) | 19.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Request Employee
 [maintenance_request_purchase](maintenance_request_purchase/) | 19.0.1.0.0 |  | Allows you to link PO with maintenance requests
 [maintenance_request_repair](maintenance_request_repair/) | 19.0.1.0.0 |  | This is a bridge module between Maintenance and Repair
 [maintenance_request_tags](maintenance_request_tags/) | 19.0.1.0.0 |  | Adds tags to Maintenance Requests
