@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="maintenance_request_view_search_inherit_hr" model="ir.ui.view">
+        <field name="name">maintenance.request.view.search.inherit.hr</field>
+        <field
+            name="inherit_id"
+            ref="hr_maintenance.maintenance_request_view_search_inherit_hr"
+        />
+        <field name="model">maintenance.request</field>
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <field name="employee_ids" />
+            </field>
+            <xpath expr="//filter[@name='my_maintenances']" position="after">
+                <filter
+                    string="Involved Maintenances"
+                    name="involved_maintenances"
+                    domain="[('employee_ids.user_id', '=', uid)]"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="maintenance_request_view_form_inherit_hr" model="ir.ui.view">
+        <field name="name">maintenance.request.view.form.inherit.hr</field>
+        <field
+            name="inherit_id"
+            ref="hr_maintenance.maintenance_request_view_form_inherit_hr"
+        />
+        <field name="model">maintenance.request</field>
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <field name="employee_ids" widget="many2many_tags" />
+            </field>
+        </field>
+    </record>
+    <record id="maintenance_request_view_kanban_inherit_hr" model="ir.ui.view">
+        <field name="name">maintenance.request.view.kanban.inherit.hr</field>
+        <field
+            name="inherit_id"
+            ref="hr_maintenance.maintenance_request_view_kanban_inherit_hr"
+        />
+        <field name="model">maintenance.request</field>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="employee_ids" invisible="1" />
+            </field>
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <div t-if="record.employee_ids.raw_value">
+                    <field name="employee_ids" widget="many2many_avatar_user" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
