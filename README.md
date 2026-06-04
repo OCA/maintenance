@@ -30,6 +30,7 @@ addon | version | maintainers | summary
 [maintenance_request_purchase](maintenance_request_purchase/) | 19.0.1.0.0 |  | Allows you to link PO with maintenance requests
 [maintenance_request_repair](maintenance_request_repair/) | 19.0.1.0.0 |  | This is a bridge module between Maintenance and Repair
 [maintenance_request_tags](maintenance_request_tags/) | 19.0.1.0.0 |  | Adds tags to Maintenance Requests
+[maintenance_timesheet](maintenance_timesheet/) | 19.0.1.0.0 |  | Adds timesheets to maintenance requests
 
 [//]: # (end addons)
 
