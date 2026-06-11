@@ -6,49 +6,51 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-11 11:54+0000\n"
+"Last-Translator: Yann Papouin <ypa@decgroupe.com>\n"
 "Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.res_partner_form_view
 msgid "<span class=\"o_stat_text\">Equipments</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Équipements</span>"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.res_partner_form_view
 msgid "<span class=\"o_stat_text\">Maintenances</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Maintenances</span>"
 
 #. module: maintenance_partner
 #: model:ir.model.fields,field_description:maintenance_partner.field_maintenance_equipment__assigned_partner_id
 msgid "Assigned Partner"
-msgstr ""
+msgstr "Partenaire désigné"
 
 #. module: maintenance_partner
 #: model:ir.model,name:maintenance_partner.model_res_partner
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #. module: maintenance_partner
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__equipment_ids
 msgid "Equipment"
-msgstr ""
+msgstr "Matériel"
 
 #. module: maintenance_partner
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__equipment_count
 msgid "Equipment Count"
-msgstr ""
+msgstr "Nombre d'équipements"
 
 #. module: maintenance_partner
 #: model:ir.actions.act_window,name:maintenance_partner.action_maintenance_equipment_from_partner
 #: model:ir.model,name:maintenance_partner.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Équipement de maintenance"
 
 #. module: maintenance_partner
 #: model:ir.actions.act_window,name:maintenance_partner.action_maintenance_request_from_partner
@@ -56,35 +58,35 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__maintenance_request_ids
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_users__maintenance_request_ids
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Demande de maintenance"
 
 #. module: maintenance_partner
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__maintenance_request_count
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_users__maintenance_request_count
 msgid "Maintenance Request Count"
-msgstr ""
+msgstr "Nombre de demandes de maintenance"
 
 #. module: maintenance_partner
 #: model:ir.model.fields,field_description:maintenance_partner.field_maintenance_request__partner_id
 msgid "Partner"
-msgstr ""
+msgstr "Partenaire"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_request_kanban_view
 msgid "Partner:"
-msgstr ""
+msgstr "Partenaire :"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_equipment_search_view
 msgid "With Assigned Partner"
-msgstr ""
+msgstr "Avec un partenaire attitré"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_request_search_view
 msgid "With Partner"
-msgstr ""
+msgstr "Avec un partenaire"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_equipment_search_view
 msgid "Without Assigned Partner"
-msgstr ""
+msgstr "Sans partenaire attitré"
