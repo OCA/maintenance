@@ -19,7 +19,6 @@ class TestMaintenanceStock(common.TransactionCase):
                 "name": "Test prod",
                 "type": "consu",
                 "uom_id": self.env.ref("uom.product_uom_unit").id,
-                "uom_po_id": self.env.ref("uom.product_uom_unit").id,
                 "is_storable": True,
             }
         )
@@ -34,7 +33,6 @@ class TestMaintenanceStock(common.TransactionCase):
         self.request_1 = self.env["maintenance.request"].create(
             {
                 "name": "Test request",
-                "user_id": self.env.ref("base.user_demo").id,
                 "owner_user_id": self.env.ref("base.user_admin").id,
                 "equipment_id": self.equipment_1.id,
                 "stage_id": self.env.ref("maintenance.stage_1").id,
@@ -119,7 +117,7 @@ class TestMaintenanceStock(common.TransactionCase):
         picking_form = Form(self.env["stock.picking"])
         picking_form.picking_type_id = picking_type_id
         picking_form.location_id = location_id
-        with picking_form.move_ids_without_package.new() as move:
+        with picking_form.move_ids.new() as move:
             move.product_id = self.product1
             move.product_uom_qty = 5.0
         picking = picking_form.save()

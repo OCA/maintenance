@@ -68,7 +68,7 @@
                     </div>
                 </button>
             </xpath>
-            <xpath expr="//field[@name='location']" position="after">
+            <xpath expr="//field[@name='scrap_date']" position="after">
                 <field name="allow_consumptions" groups="stock.group_stock_user" />
                 <field
                     name="default_consumption_warehouse_id"

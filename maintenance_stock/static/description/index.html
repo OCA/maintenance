@@ -374,7 +374,7 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:be98361e9be2cfee606016d2449925fd179417e40416fd66883992fd29a13255
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/license-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/maintenance/tree/18.0/maintenance_stock"><img alt="OCA/maintenance" src="https://img.shields.io/badge/github-OCA%2Fmaintenance-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/maintenance-18-0/maintenance-18-0-maintenance_stock"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/maintenance&amp;target_branch=18.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/license-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/maintenance/tree/19.0/maintenance_stock"><img alt="OCA/maintenance" src="https://img.shields.io/badge/github-OCA%2Fmaintenance-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/maintenance-19-0/maintenance-19-0-maintenance_stock"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/maintenance&amp;target_branch=19.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
 <p>This module extends the functionality of Odoo Maintenance module by
 allowing link stock consumptions to maintenance requests.</p>
 <p><strong>Table of contents</strong></p>
@@ -395,22 +395,22 @@ allowing link stock consumptions to maintenance requests.</p>
 <h2><a class="toc-backref" href="#toc-entry-1">Usage</a></h2>
 <p>Once installed, first you should enable consumptions for a certain
 equipment and filling a default warehouse for the picking operations:</p>
-<p><img alt="image1" src="https://raw.githubusercontent.com/OCA/maintenance/18.0/maintenance_stock/static/description/equipment.png" /></p>
+<p><img alt="image1" src="https://raw.githubusercontent.com/OCA/maintenance/19.0/maintenance_stock/static/description/equipment.png" /></p>
 <p>Then, for every mainteance request of this equipment, <em>Picking List</em>
 button allows us to make consumptions, that will be picking documents
 with their own sequence:</p>
-<p><img alt="image2" src="https://raw.githubusercontent.com/OCA/maintenance/18.0/maintenance_stock/static/description/request-1.png" /></p>
-<p><img alt="image3" src="https://raw.githubusercontent.com/OCA/maintenance/18.0/maintenance_stock/static/description/pick-1.png" /></p>
+<p><img alt="image2" src="https://raw.githubusercontent.com/OCA/maintenance/19.0/maintenance_stock/static/description/request-1.png" /></p>
+<p><img alt="image3" src="https://raw.githubusercontent.com/OCA/maintenance/19.0/maintenance_stock/static/description/pick-1.png" /></p>
 <p>By default, the origin location for this operations will be the stock
 location for the default warehouse, and destination a new <em>Consumptions</em>
 location, that will not compute for stock inventory, like e.g. partner
 locations:</p>
-<p><img alt="image4" src="https://raw.githubusercontent.com/OCA/maintenance/18.0/maintenance_stock/static/description/move-line.png" /></p>
+<p><img alt="image4" src="https://raw.githubusercontent.com/OCA/maintenance/19.0/maintenance_stock/static/description/move-line.png" /></p>
 <p>From both request and equipment forms these stock operations and
 <em>Product Moves</em> are available.</p>
 <p>Return operations are also enabled, and will be linked to the request
 and equipment as well:</p>
-<p><img alt="image5" src="https://raw.githubusercontent.com/OCA/maintenance/18.0/maintenance_stock/static/description/pick-2.png" /></p>
+<p><img alt="image5" src="https://raw.githubusercontent.com/OCA/maintenance/19.0/maintenance_stock/static/description/pick-2.png" /></p>
 </div>
 <div class="section" id="known-issues-roadmap">
 <h2><a class="toc-backref" href="#toc-entry-2">Known issues / Roadmap</a></h2>
@@ -426,7 +426,7 @@ automatically fill the product and quantity list.</li>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/OCA/maintenance/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/OCA/maintenance/issues/new?body=module:%20maintenance_stock%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/OCA/maintenance/issues/new?body=module:%20maintenance_stock%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
@@ -452,7 +452,7 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <p>OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.</p>
-<p>This module is part of the <a class="reference external" href="https://github.com/OCA/maintenance/tree/18.0/maintenance_stock">OCA/maintenance</a> project on GitHub.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/OCA/maintenance/tree/19.0/maintenance_stock">OCA/maintenance</a> project on GitHub.</p>
 <p>You are welcome to contribute. To learn how please visit <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>.</p>
 </div>
 </div>

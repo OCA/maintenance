@@ -1,6 +1,6 @@
 # © 2020 Solvos Consultoría Informática (<http://www.solvos.es>)
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
-from odoo import _, fields, models
+from odoo import fields, models
 
 
 class StockWarehouse(models.Model):
@@ -37,7 +37,7 @@ class StockWarehouse(models.Model):
             {
                 **data,
                 "cons_type_id": {
-                    "name": _("Consumption"),
+                    "name": self.env._("Consumption"),
                     "code": "outgoing",
                     "use_create_lots": False,
                     "use_existing_lots": True,
@@ -60,7 +60,7 @@ class StockWarehouse(models.Model):
         return {
             **data,
             "cons_type_id": {
-                "name": self.name + " " + _("Sequence consumption"),
+                "name": self.name + " " + self.env._("Sequence consumption"),
                 "prefix": self.code + "/CONS/",
                 "padding": 5,
                 "company_id": self.company_id.id,
@@ -75,7 +75,7 @@ class StockWarehouse(models.Model):
         return {
             **sub_locations,
             "wh_cons_loc_id": {
-                "name": _("Consumptions"),
+                "name": self.env._("Consumptions"),
                 "usage": "inventory",
                 "barcode": self._valid_barcode(code + "-CONS", company_id),
             },
