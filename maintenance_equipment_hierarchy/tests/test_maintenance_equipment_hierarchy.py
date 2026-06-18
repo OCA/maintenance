@@ -31,11 +31,9 @@ class TestMaintenanceEquipmentHierarchy(BaseCommon):
             self.equipment1.name + " / " + self.equipment1_1.name
         )
 
-        self.assertEqual(self.equipment1.name_get()[0][1], self.equipment1.name)
         self.assertEqual(self.equipment1.complete_name, self.equipment1.name)
         self.assertEqual(self.equipment1.display_name, self.equipment1.name)
 
-        self.assertEqual(self.equipment1_1.name_get()[0][1], equipment1_1_complete_name)
         self.assertEqual(self.equipment1_1.complete_name, equipment1_1_complete_name)
         self.assertEqual(self.equipment1_1.display_name, equipment1_1_complete_name)
 
