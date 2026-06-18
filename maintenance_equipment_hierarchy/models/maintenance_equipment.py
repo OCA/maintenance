@@ -8,7 +8,6 @@ class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
     _parent_name = "parent_id"
     _parent_store = True
-    _parent_order = "name"
 
     parent_id = fields.Many2one(
         "maintenance.equipment",
@@ -31,9 +30,6 @@ class MaintenanceEquipment(models.Model):
     )
     parent_path = fields.Char(index=True)
 
-    def name_get(self):
-        return [(equipment.id, equipment.complete_name) for equipment in self]
-
     @api.depends("child_ids")
     def _compute_child_count(self):
         for equipment in self:
@@ -54,7 +50,7 @@ class MaintenanceEquipment(models.Model):
 
     def preview_child_list(self):
         return {
-            "name": self.env._("Child equipment of %s") % self.name,
+            "name": self.env._("Child equipment of %s", self.name),
             "type": "ir.actions.act_window",
             "res_model": "maintenance.equipment",
             "view_mode": "list,form",
