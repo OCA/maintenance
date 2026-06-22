@@ -10,7 +10,6 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
         <field name="arch" type="xml">
             <div name="button_box" position="inside">
-                <field name="contract_ids" invisible="1" />
                 <button
                     name="action_view_contracts"
                     class="oe_stat_button"
