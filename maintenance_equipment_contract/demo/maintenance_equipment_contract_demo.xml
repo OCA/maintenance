@@ -20,7 +20,7 @@
         <field name="contract_type">purchase</field>
         <field
             name="equipment_ids"
-            eval="[(6, 0, [ref('maintenance_equipment_contract.equipment_with_contract')])]"
+            eval="[Command.set([ref('maintenance_equipment_contract.equipment_with_contract')])]"
         />
     </record>
 </odoo>
