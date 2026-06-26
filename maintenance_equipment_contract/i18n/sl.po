@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 13:55+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,44 +15,45 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_equipment_contract
 #: model:ir.model,name:maintenance_equipment_contract.model_contract_contract
 msgid "Contract"
-msgstr ""
+msgstr "Pogodba"
 
 #. module: maintenance_equipment_contract
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__contract_count
 msgid "Contract Count"
-msgstr ""
+msgstr "Št. pogodb"
 
 #. module: maintenance_equipment_contract
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_maintenance_equipment__contract_ids
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_form
 msgid "Contracts"
-msgstr ""
+msgstr "Pogodbe"
 
 #. module: maintenance_equipment_contract
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_search
 msgid "Doesn't have Contracts"
-msgstr ""
+msgstr "Nima pogodb"
 
 #. module: maintenance_equipment_contract
 #: model:maintenance.equipment,name:maintenance_equipment_contract.equipment_with_contract
 msgid "Equipment With A Contract"
-msgstr ""
+msgstr "Oprema s pogodbo"
 
 #. module: maintenance_equipment_contract
 #: model:ir.model.fields,field_description:maintenance_equipment_contract.field_contract_contract__equipment_ids
 msgid "Equipments"
-msgstr ""
+msgstr "Oprema"
 
 #. module: maintenance_equipment_contract
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_contract.hr_equipment_view_search
 msgid "Has Contracts"
-msgstr ""
+msgstr "Ima pogodbe"
 
 #. module: maintenance_equipment_contract
 #: model:ir.model,name:maintenance_equipment_contract.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Servisna oprema"
