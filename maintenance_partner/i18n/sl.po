@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 13:35+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,42 +15,43 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.res_partner_form_view
 msgid "<span class=\"o_stat_text\">Equipments</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Oprema</span>"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.res_partner_form_view
 msgid "<span class=\"o_stat_text\">Maintenances</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Servisi</span>"
 
 #. module: maintenance_partner
 #: model:ir.model.fields,field_description:maintenance_partner.field_maintenance_equipment__assigned_partner_id
 msgid "Assigned Partner"
-msgstr ""
+msgstr "Dodeljeni partner"
 
 #. module: maintenance_partner
 #: model:ir.model,name:maintenance_partner.model_res_partner
 msgid "Contact"
-msgstr ""
+msgstr "Stik"
 
 #. module: maintenance_partner
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__equipment_ids
 msgid "Equipment"
-msgstr ""
+msgstr "Oprema"
 
 #. module: maintenance_partner
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__equipment_count
 msgid "Equipment Count"
-msgstr ""
+msgstr "Št. opreme"
 
 #. module: maintenance_partner
 #: model:ir.actions.act_window,name:maintenance_partner.action_maintenance_equipment_from_partner
 #: model:ir.model,name:maintenance_partner.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Servisna oprema"
 
 #. module: maintenance_partner
 #: model:ir.actions.act_window,name:maintenance_partner.action_maintenance_request_from_partner
@@ -57,35 +59,35 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__maintenance_request_ids
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_users__maintenance_request_ids
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Servisni zahtevek"
 
 #. module: maintenance_partner
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_partner__maintenance_request_count
 #: model:ir.model.fields,field_description:maintenance_partner.field_res_users__maintenance_request_count
 msgid "Maintenance Request Count"
-msgstr ""
+msgstr "Št. servisnih zahtevkov"
 
 #. module: maintenance_partner
 #: model:ir.model.fields,field_description:maintenance_partner.field_maintenance_request__partner_id
 msgid "Partner"
-msgstr ""
+msgstr "Partner"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_request_kanban_view
 msgid "Partner:"
-msgstr ""
+msgstr "Partner:"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_equipment_search_view
 msgid "With Assigned Partner"
-msgstr ""
+msgstr "Z dodeljenim partnerjem"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_request_search_view
 msgid "With Partner"
-msgstr ""
+msgstr "S partnerjem"
 
 #. module: maintenance_partner
 #: model_terms:ir.ui.view,arch_db:maintenance_partner.maintenance_equipment_search_view
 msgid "Without Assigned Partner"
-msgstr ""
+msgstr "Brez dodeljenega partnerja"
