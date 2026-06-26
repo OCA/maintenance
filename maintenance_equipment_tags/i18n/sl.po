@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 14:04+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,79 +15,80 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__color
 msgid "Color Index (0-15)"
-msgstr ""
+msgstr "Barvni indeks (0-15)"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Ustvaril"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Ustvarjeno"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Prikazani naziv"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__equipment_ids
 msgid "Equipment"
-msgstr ""
+msgstr "Oprema"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__name
 msgid "Equipment Tag"
-msgstr ""
+msgstr "Oznaka opreme"
 
 #. module: maintenance_equipment_tags
 #: model:ir.actions.act_window,name:maintenance_equipment_tags.maintenance_equipment_tag_act_window
 #: model:ir.ui.menu,name:maintenance_equipment_tags.maintenance_equipment_tag_menu
 msgid "Equipment Tags"
-msgstr ""
+msgstr "Oznake opreme"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Zadnji posodobil"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment_tag__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Zadnjič posodobljeno"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model,name:maintenance_equipment_tags.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Servisna oprema"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model,name:maintenance_equipment_tags.model_maintenance_equipment_tag
 msgid "Maintenance Equipment Tag"
-msgstr ""
+msgstr "Oznaka servisne opreme"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.constraint,message:maintenance_equipment_tags.constraint_maintenance_equipment_tag_name_uniq
 msgid "Tag name already exists !"
-msgstr ""
+msgstr "Naziv oznake že obstaja!"
 
 #. module: maintenance_equipment_tags
 #: model:ir.model.fields,field_description:maintenance_equipment_tags.field_maintenance_equipment__tag_ids
 msgid "Tags"
-msgstr ""
+msgstr "Oznake"
 
 #. module: maintenance_equipment_tags
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_tags.hr_equipment_view_form
 msgid "e.g. Computers"
-msgstr ""
+msgstr "npr. računalniki"
