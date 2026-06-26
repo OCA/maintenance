@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 13:28+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,26 +15,27 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_request__code
 msgid "Code"
-msgstr ""
+msgstr "Koda"
 
 #. module: maintenance_request_sequence
 #: model:ir.model,name:maintenance_request_sequence.model_maintenance_request
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Servisni zahtevek"
 
 #. module: maintenance_request_sequence
 #: model:ir.model,name:maintenance_request_sequence.model_maintenance_team
 msgid "Maintenance Teams"
-msgstr ""
+msgstr "Servisne ekipe"
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team__code_prefix
 msgid "Prefix for Team Reference"
-msgstr ""
+msgstr "Predpona za sklic ekipe"
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,help:maintenance_request_sequence.field_maintenance_team__code_prefix
@@ -41,8 +43,10 @@ msgid ""
 "Prefix used to generate the internal reference for re created with this "
 "category. If blank the default sequence will be used."
 msgstr ""
+"Predpona, ki se uporablja za ustvarjanje internega sklica za ponovno "
+"ustvarjanje s to kategorijo. Če je prazno, bo uporabljeno privzeto zaporedje."
 
 #. module: maintenance_request_sequence
 #: model:ir.model.fields,field_description:maintenance_request_sequence.field_maintenance_team__sequence_id
 msgid "Team Sequence"
-msgstr ""
+msgstr "Zaporedje ekipe"
