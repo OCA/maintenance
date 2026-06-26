@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 13:31+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,47 +15,48 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_product
 #: model:ir.model.fields,field_description:maintenance_product.field_product_product__maintenance_ok
 #: model:ir.model.fields,field_description:maintenance_product.field_product_template__maintenance_ok
 msgid "Can be Maintenance"
-msgstr ""
+msgstr "Se lahko servisira"
 
 #. module: maintenance_product
 #: model:ir.model.fields,field_description:maintenance_product.field_product_category__equipment_category_ids
 msgid "Equipment Categories"
-msgstr ""
+msgstr "Kategorije opreme"
 
 #. module: maintenance_product
 #: model:ir.model.fields,field_description:maintenance_product.field_product_product__equipment_ids
 msgid "Equipments"
-msgstr ""
+msgstr "Oprema"
 
 #. module: maintenance_product
 #: model:ir.model,name:maintenance_product.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Servisna oprema"
 
 #. module: maintenance_product
 #: model:ir.model,name:maintenance_product.model_maintenance_equipment_category
 msgid "Maintenance Equipment Category"
-msgstr ""
+msgstr "Kategorija servisne opreme"
 
 #. module: maintenance_product
 #: model:ir.model,name:maintenance_product.model_product_template
 #: model:ir.model.fields,field_description:maintenance_product.field_maintenance_equipment__product_id
 msgid "Product"
-msgstr ""
+msgstr "Proizvod"
 
 #. module: maintenance_product
 #: model:ir.model,name:maintenance_product.model_product_category
 #: model:ir.model.fields,field_description:maintenance_product.field_maintenance_equipment__product_category_id
 #: model:ir.model.fields,field_description:maintenance_product.field_maintenance_equipment_category__product_category_id
 msgid "Product Category"
-msgstr ""
+msgstr "Kategorija proizvoda"
 
 #. module: maintenance_product
 #: model:ir.model,name:maintenance_product.model_product_product
 msgid "Product Variant"
-msgstr ""
+msgstr "Različica proizvoda"
