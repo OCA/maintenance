@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 12:48+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: base_maintenance
 #: model:ir.actions.report,print_report_name:base_maintenance.action_report_maintenance_request
@@ -28,7 +30,7 @@ msgstr ""
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Category:</strong>"
-msgstr ""
+msgstr "<strong>Kategorija:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
@@ -38,17 +40,17 @@ msgstr ""
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Description:</strong>"
-msgstr ""
+msgstr "<strong>Opis:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Duration:</strong>"
-msgstr ""
+msgstr "<strong>Trajanje:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Equipment:</strong>"
-msgstr ""
+msgstr "<strong>Oprema:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
@@ -58,27 +60,27 @@ msgstr ""
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Model:</strong>"
-msgstr ""
+msgstr "<strong>Model:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Priority:</strong>"
-msgstr ""
+msgstr "<strong>Prioriteta:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Request Date:</strong>"
-msgstr ""
+msgstr "<strong>Datum zahtevka:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Requested By:</strong>"
-msgstr ""
+msgstr "<strong>Zahteval:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Responsible:</strong>"
-msgstr ""
+msgstr "<strong>Odgovorni:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
@@ -93,17 +95,17 @@ msgstr ""
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Stage:</strong>"
-msgstr ""
+msgstr "<strong>Stopnja:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Team:</strong>"
-msgstr ""
+msgstr "<strong>Ekipa:</strong>"
 
 #. module: base_maintenance
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__description
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.maintenance_team_view_form
@@ -123,4 +125,4 @@ msgstr ""
 #. module: base_maintenance
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__user_id
 msgid "Team Leader"
-msgstr ""
+msgstr "Vodja ekipe"
