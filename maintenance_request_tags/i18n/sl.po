@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 14:12+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,79 +15,80 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_request_tags
 #: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__color
 msgid "Color Index (0-15)"
-msgstr ""
+msgstr "Barvni indeks (0-15)"
 
 #. module: maintenance_request_tags
 #: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Ustvaril"
 
 #. module: maintenance_request_tags
 #: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Ustvarjeno"
 
 #. module: maintenance_request_tags
 #: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Prikazani naziv"
 
 #. module: maintenance_request_tags
 #: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_request_tags
 #: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Zadnji posodobil"
 
 #. module: maintenance_request_tags
 #: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Zadnjič posodobljeno"
 
 #. module: maintenance_request_tags
 #: model:ir.model,name:maintenance_request_tags.model_maintenance_request
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Servisni zahtevek"
 
 #. module: maintenance_request_tags
 #: model:ir.model,name:maintenance_request_tags.model_maintenance_request_tag
 msgid "Maintenance Request Tag"
-msgstr ""
+msgstr "Oznaka servisnega zahtevka"
 
 #. module: maintenance_request_tags
 #: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__request_ids
 msgid "Maintenance Requests"
-msgstr ""
+msgstr "Servisni zahtevki"
 
 #. module: maintenance_request_tags
 #: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__name
 msgid "Request Tag"
-msgstr ""
+msgstr "Oznaka zahtevka"
 
 #. module: maintenance_request_tags
 #: model:ir.actions.act_window,name:maintenance_request_tags.maintenance_request_tag_act_window
 #: model:ir.ui.menu,name:maintenance_request_tags.maintenance_request_tag_menu
 msgid "Request Tags"
-msgstr ""
+msgstr "Oznake zahtevkov"
 
 #. module: maintenance_request_tags
 #: model:ir.model.constraint,message:maintenance_request_tags.constraint_maintenance_request_tag_name_uniq
 msgid "Tag name already exists !"
-msgstr ""
+msgstr "Naziv oznake že obstaja!"
 
 #. module: maintenance_request_tags
 #: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request__tag_ids
 msgid "Tags"
-msgstr ""
+msgstr "Oznake"
 
 #. module: maintenance_request_tags
 #: model_terms:ir.ui.view,arch_db:maintenance_request_tags.hr_equipment_request_view_form
 msgid "e.g. Computers"
-msgstr ""
+msgstr "npr. računalniki"
