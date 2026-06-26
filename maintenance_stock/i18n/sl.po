@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 13:44+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,24 +15,25 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_stock
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.equipment_request_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.hr_equipment_view_form
 msgid "<span class=\"o_stat_text\">Picking list</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Seznam za prevzem</span>"
 
 #. module: maintenance_stock
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.equipment_request_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.hr_equipment_view_form
 msgid "<span class=\"o_stat_text\">Product Moves</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Premiki proizvoda</span>"
 
 #. module: maintenance_stock
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.equipment_request_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.hr_equipment_view_form
 msgid "<span class=\"o_stat_text\">Stock Moves</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Premiki zaloge</span>"
 
 #. module: maintenance_stock
 #: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_equipment__allow_consumptions
@@ -39,58 +41,58 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.hr_equipment_request_view_search
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.hr_equipment_view_search
 msgid "Allow Consumptions"
-msgstr ""
+msgstr "Dovoli porabo"
 
 #. module: maintenance_stock
 #. odoo-python
 #: code:addons/maintenance_stock/models/stock_warehouse.py:0
 #: model:stock.picking.type,name:maintenance_stock.main_picking_type_cons
 msgid "Consumption"
-msgstr ""
+msgstr "Poraba"
 
 #. module: maintenance_stock
 #: model:ir.model.fields,field_description:maintenance_stock.field_stock_warehouse__wh_cons_loc_id
 msgid "Consumption Location"
-msgstr ""
+msgstr "Lokacija porabe"
 
 #. module: maintenance_stock
 #: model:ir.model.fields,field_description:maintenance_stock.field_stock_warehouse__cons_type_id
 msgid "Consumption Type"
-msgstr ""
+msgstr "Tip porabe"
 
 #. module: maintenance_stock
 #. odoo-python
 #: code:addons/maintenance_stock/models/stock_warehouse.py:0
 msgid "Consumptions"
-msgstr ""
+msgstr "Poraba"
 
 #. module: maintenance_stock
 #: model_terms:ir.actions.act_window,help:maintenance_stock.stock_move_action
 msgid "Create a new stock movement"
-msgstr ""
+msgstr "Ustvari nov premik zaloge"
 
 #. module: maintenance_stock
 #: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_equipment__default_consumption_warehouse_id
 #: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_request__default_consumption_warehouse_id
 msgid "Default Consumption Warehouse"
-msgstr ""
+msgstr "Privzeto skladišče porabe"
 
 #. module: maintenance_stock
 #: model:ir.model.fields,field_description:maintenance_stock.field_stock_move__maintenance_equipment_id
 #: model:ir.model.fields,field_description:maintenance_stock.field_stock_move_line__maintenance_equipment_id
 #: model:ir.model.fields,field_description:maintenance_stock.field_stock_picking__maintenance_equipment_id
 msgid "Equipment"
-msgstr ""
+msgstr "Oprema"
 
 #. module: maintenance_stock
 #: model:ir.model,name:maintenance_stock.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Servisna oprema"
 
 #. module: maintenance_stock
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.view_picking_form
 msgid "Maintenance Info"
-msgstr ""
+msgstr "Servisne informacije"
 
 #. module: maintenance_stock
 #: model:ir.model,name:maintenance_stock.model_maintenance_request
@@ -98,52 +100,52 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_stock.field_stock_move_line__maintenance_request_id
 #: model:ir.model.fields,field_description:maintenance_stock.field_stock_picking__maintenance_request_id
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Servisni zahtevek"
 
 #. module: maintenance_stock
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.stock_move_line_view_search
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.view_move_search
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.view_picking_internal_search
 msgid "Maintenance Request consumption"
-msgstr ""
+msgstr "Servisni zahtevek - poraba"
 
 #. module: maintenance_stock
 #: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_request__stock_picking_ids
 msgid "Picking list"
-msgstr ""
+msgstr "Seznam za prevzem"
 
 #. module: maintenance_stock
 #: model:ir.actions.act_window,name:maintenance_stock.stock_move_line_action
 #: model:ir.ui.menu,name:maintenance_stock.stock_move_line_menu
 msgid "Product Moves"
-msgstr ""
+msgstr "Premiki proizvoda"
 
 #. module: maintenance_stock
 #: model:ir.model,name:maintenance_stock.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
-msgstr ""
+msgstr "Premiki proizvoda (postavka premika zaloge)"
 
 #. module: maintenance_stock
 #. odoo-python
 #: code:addons/maintenance_stock/models/stock_warehouse.py:0
 msgid "Sequence consumption"
-msgstr ""
+msgstr "Zaporedje porabe"
 
 #. module: maintenance_stock
 #: model:ir.model,name:maintenance_stock.model_stock_move
 msgid "Stock Move"
-msgstr ""
+msgstr "Premik zaloge"
 
 #. module: maintenance_stock
 #: model:ir.actions.act_window,name:maintenance_stock.stock_move_action
 #: model:ir.ui.menu,name:maintenance_stock.stock_move_menu
 msgid "Stock Moves"
-msgstr ""
+msgstr "Premiki zaloge"
 
 #. module: maintenance_stock
 #: model_terms:ir.actions.act_window,help:maintenance_stock.stock_move_line_action
 msgid "There's no product move yet"
-msgstr ""
+msgstr "Ni še premikov proizvoda"
 
 #. module: maintenance_stock
 #: model_terms:ir.actions.act_window,help:maintenance_stock.stock_move_action
@@ -152,23 +154,27 @@ msgid ""
 "            operations on a specific product. You can filter on the product\n"
 "            to see all the past or future movements for the product."
 msgstr ""
+"Ta meni vam omogoča popolno sledljivost zalog operacij\n"
+"            za določen izdelek. Izdelek lahko filtrirate za ogled vseh "
+"preteklih\n"
+"            ali prihodnjih premikov izdelka."
 
 #. module: maintenance_stock
 #: model_terms:ir.ui.view,arch_db:maintenance_stock.stock_move_line_view_search
 msgid "To"
-msgstr ""
+msgstr "Za"
 
 #. module: maintenance_stock
 #: model:product.template,name:maintenance_stock.product_toner_product_template
 msgid "Toner"
-msgstr ""
+msgstr "Toner"
 
 #. module: maintenance_stock
 #: model:ir.model,name:maintenance_stock.model_stock_picking
 msgid "Transfer"
-msgstr ""
+msgstr "Premestitev"
 
 #. module: maintenance_stock
 #: model:ir.model,name:maintenance_stock.model_stock_warehouse
 msgid "Warehouse"
-msgstr ""
+msgstr "Skladišče"
