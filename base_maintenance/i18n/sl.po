@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-06-26 12:48+0000\n"
+"PO-Revision-Date: 2026-06-26 12:53+0000\n"
 "Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
@@ -20,12 +20,12 @@ msgstr ""
 #. module: base_maintenance
 #: model:ir.actions.report,print_report_name:base_maintenance.action_report_maintenance_request
 msgid "'Maintenance Request - %s' % (object.name)"
-msgstr ""
+msgstr "'Servisni zahtevek - %s' % (object.name)"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<span>Maintenance Request</span>"
-msgstr ""
+msgstr "<span>Servisni zahtevek</span>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
@@ -35,7 +35,7 @@ msgstr "<strong>Kategorija:</strong>"
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Close Date:</strong>"
-msgstr ""
+msgstr "<strong>Datum zaključka:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
@@ -55,7 +55,7 @@ msgstr "<strong>Oprema:</strong>"
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Maintenance Type:</strong>"
-msgstr ""
+msgstr "<strong>Tip servisa:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
@@ -85,12 +85,12 @@ msgstr "<strong>Odgovorni:</strong>"
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Schedule Date:</strong>"
-msgstr ""
+msgstr "<strong>Načrtovani datum:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
 msgid "<strong>Serial:</strong>"
-msgstr ""
+msgstr "<strong>Serijska številka:</strong>"
 
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.report_maintenance_request_document
@@ -110,17 +110,17 @@ msgstr "Opis"
 #. module: base_maintenance
 #: model_terms:ir.ui.view,arch_db:base_maintenance.maintenance_team_view_form
 msgid "Description of the team's function"
-msgstr ""
+msgstr "Opis funkcije ekipe"
 
 #. module: base_maintenance
 #: model:ir.actions.report,name:base_maintenance.action_report_maintenance_request
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Servisni zahtevek"
 
 #. module: base_maintenance
 #: model:ir.model,name:base_maintenance.model_maintenance_team
 msgid "Maintenance Teams"
-msgstr ""
+msgstr "Servisne ekipe"
 
 #. module: base_maintenance
 #: model:ir.model.fields,field_description:base_maintenance.field_maintenance_team__user_id
