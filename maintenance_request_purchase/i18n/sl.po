@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 13:26+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,39 +15,40 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_request_purchase
 #: model_terms:ir.ui.view,arch_db:maintenance_request_purchase.purchase_order_form
 msgid "Maintenance"
-msgstr ""
+msgstr "Servis"
 
 #. module: maintenance_request_purchase
 #: model:ir.model,name:maintenance_request_purchase.model_maintenance_request
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Servisni zahtevek"
 
 #. module: maintenance_request_purchase
 #: model:ir.model.fields,field_description:maintenance_request_purchase.field_purchase_order__maintenance_request_ids
 msgid "Maintenance Requests"
-msgstr ""
+msgstr "Servisni zahtevki"
 
 #. module: maintenance_request_purchase
 #: model:ir.model.fields,field_description:maintenance_request_purchase.field_purchase_order__maintenance_requests_count
 msgid "Maintenance Requests Count"
-msgstr ""
+msgstr "Št. servisnih zahtevkov"
 
 #. module: maintenance_request_purchase
 #: model:ir.model,name:maintenance_request_purchase.model_purchase_order
 msgid "Purchase Order"
-msgstr ""
+msgstr "Nabavni nalog"
 
 #. module: maintenance_request_purchase
 #: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__purchase_order_ids
 #: model_terms:ir.ui.view,arch_db:maintenance_request_purchase.hr_equipment_request_view_form_button_box
 msgid "Purchase Orders"
-msgstr ""
+msgstr "Nabavni nalogi"
 
 #. module: maintenance_request_purchase
 #: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__purchases_count
 msgid "Purchases Count"
-msgstr ""
+msgstr "Število nabav"
