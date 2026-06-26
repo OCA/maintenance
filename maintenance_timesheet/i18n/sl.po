@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 14:01+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
@@ -22,31 +24,34 @@ msgid ""
 "                            Hours\n"
 "                        </span>"
 msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            Ure\n"
+"                        </span>"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_kanban
 msgid "<span class=\"oe_label\">Hours</span>"
-msgstr ""
+msgstr "<span class=\"oe_label\">Ure</span>"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "<span id=\"timesheet_information_title\">Timesheet Entries</span>"
-msgstr ""
+msgstr "<span id=\"timesheet_information_title\">Vnosi v časovnico</span>"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "<strong>Timesheet Total Hours:</strong>"
-msgstr ""
+msgstr "<strong>Časovnica skupaj ur:</strong>"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "<strong>Total</strong>"
-msgstr ""
+msgstr "<strong>Skupaj</strong>"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_account_analytic_line
 msgid "Analytic Line"
-msgstr ""
+msgstr "Analitična postavka"
 
 #. module: maintenance_timesheet
 #. odoo-python
@@ -54,87 +59,88 @@ msgstr ""
 msgid ""
 "Cannot save or delete a timesheet for a maintenance request already done"
 msgstr ""
+"Časovnice za že opravljeni servisni zahtevek ni mogoče shraniti ali izbrisati"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Duration (Hour(s))"
-msgstr ""
+msgstr "Trajanje (ura(e))"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Servisna oprema"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_maintenance_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_timesheets_analysis_report__maintenance_request_id
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Servisni zahtevek"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__planned_hours
 msgid "Planned Hours"
-msgstr ""
+msgstr "Planirane ure"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__progress
 msgid "Progress"
-msgstr ""
+msgstr "Napredek"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Project -"
-msgstr ""
+msgstr "Projekt -"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__remaining_hours
 msgid "Remaining Hours"
-msgstr ""
+msgstr "Preostale ure"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_timesheet_line_search
 msgid "Request"
-msgstr ""
+msgstr "Zahtevek"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Responsible"
-msgstr ""
+msgstr "Odgovorni"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Task"
-msgstr ""
+msgstr "Opravilo"
 
 #. module: maintenance_timesheet
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
 msgid "Time"
-msgstr ""
+msgstr "Čas"
 
 #. module: maintenance_timesheet
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_total_hours
 msgid "Timesheet Total Hours"
-msgstr ""
+msgstr "Časovnica skupaj ur"
 
 #. module: maintenance_timesheet
 #: model:ir.actions.act_window,name:maintenance_timesheet.timesheet_action_from_request
 #: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_ids
 #: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
 msgid "Timesheets"
-msgstr ""
+msgstr "Časovnice"
 
 #. module: maintenance_timesheet
 #: model:ir.model,name:maintenance_timesheet.model_timesheets_analysis_report
 msgid "Timesheets Analysis Report"
-msgstr ""
+msgstr "Poročilo o analizi delovnega časa"
