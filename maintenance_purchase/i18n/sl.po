@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-26 13:36+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,60 +15,61 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_purchase
 #: model:ir.model.fields,field_description:maintenance_purchase.field_purchase_order_line__equipment_category_id
 msgid "Equipment Category"
-msgstr ""
+msgstr "Kategorija opreme"
 
 #. module: maintenance_purchase
 #: model:ir.model.fields,field_description:maintenance_purchase.field_purchase_order__equipment_count
 #: model:ir.model.fields,field_description:maintenance_purchase.field_purchase_order_line__equipment_count
 msgid "Equipment Count"
-msgstr ""
+msgstr "Št. opreme"
 
 #. module: maintenance_purchase
 #: model_terms:ir.ui.view,arch_db:maintenance_purchase.purchase_order_form_view
 msgid "Equipment(s)"
-msgstr ""
+msgstr "Oprema"
 
 #. module: maintenance_purchase
 #: model:ir.model.fields,field_description:maintenance_purchase.field_purchase_order_line__equipment_ids
 msgid "Equipments"
-msgstr ""
+msgstr "Oprema"
 
 #. module: maintenance_purchase
 #: model:ir.model,name:maintenance_purchase.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Servisna oprema"
 
 #. module: maintenance_purchase
 #: model:ir.model,name:maintenance_purchase.model_product_template
 msgid "Product"
-msgstr ""
+msgstr "Proizvod"
 
 #. module: maintenance_purchase
 #: model:ir.model.fields,field_description:maintenance_purchase.field_maintenance_equipment__purchase_id
 msgid "Purchase"
-msgstr ""
+msgstr "Nabava"
 
 #. module: maintenance_purchase
 #: model:ir.model.fields,field_description:maintenance_purchase.field_product_product__purchase_equipment_category_id
 #: model:ir.model.fields,field_description:maintenance_purchase.field_product_template__purchase_equipment_category_id
 msgid "Purchase Equipment Category"
-msgstr ""
+msgstr "Nabavna kategorija opreme"
 
 #. module: maintenance_purchase
 #: model:ir.model.fields,field_description:maintenance_purchase.field_maintenance_equipment__purchase_line_id
 msgid "Purchase Line"
-msgstr ""
+msgstr "Nabavna postavka"
 
 #. module: maintenance_purchase
 #: model:ir.model,name:maintenance_purchase.model_purchase_order
 msgid "Purchase Order"
-msgstr ""
+msgstr "Nabavni nalog"
 
 #. module: maintenance_purchase
 #: model:ir.model,name:maintenance_purchase.model_purchase_order_line
 msgid "Purchase Order Line"
-msgstr ""
+msgstr "Postavka nabavnega naloga"
