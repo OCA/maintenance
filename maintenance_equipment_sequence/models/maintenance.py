@@ -80,7 +80,7 @@ class MaintenanceEquipmentCategory(models.Model):
                 if vals.get("sequence_id"):
                     vals["sequence_prefix"] = prefix_map.get(vals["sequence_id"])
         result = super().create(vals_list)
-        self._compute_equipment_code()
+        result._compute_equipment_code()
         return result
 
     def write(self, vals):
