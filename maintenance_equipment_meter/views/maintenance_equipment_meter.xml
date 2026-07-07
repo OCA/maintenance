@@ -2,7 +2,6 @@
 <!-- Copyright 2023 Dixmit
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
-
     <record model="ir.ui.view" id="maintenance_equipment_meter_form_view">
         <field name="model">maintenance.equipment.meter</field>
         <field name="arch" type="xml">
@@ -46,12 +45,12 @@
     <record id="maintenance_equipment_meter_graph_view" model="ir.ui.view">
         <field name="model">maintenance.equipment.meter</field>
         <field name="arch" type="xml">
-             <graph string="Meter Values Per Equipment" type="line" sample="1">
-                 <field name="date" type="row" />
-                 <field name="value" type="measure" />
-             </graph>
-         </field>
-     </record>
+            <graph string="Meter Values Per Equipment" type="line" sample="1">
+                <field name="date" type="row" />
+                <field name="value" type="measure" />
+            </graph>
+        </field>
+    </record>
     <record
         model="ir.actions.act_window"
         id="maintenance_equipment_meter_equipment_act_window"

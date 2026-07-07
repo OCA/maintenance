@@ -6,7 +6,6 @@ from odoo.exceptions import UserError
 
 
 class MaintenanceRequest(models.Model):
-
     _inherit = "maintenance.request"
     has_meter = fields.Boolean(related="equipment_id.has_meter")
     meter_unit_id = fields.Many2one("uom.uom", related="equipment_id.meter_unit_id")
