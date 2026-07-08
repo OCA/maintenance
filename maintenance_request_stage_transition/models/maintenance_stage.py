@@ -9,7 +9,6 @@ from odoo import _, fields, models
 
 
 class MaintenanceStage(models.Model):
-
     _inherit = "maintenance.stage"
 
     next_stage_ids = fields.Many2many(
