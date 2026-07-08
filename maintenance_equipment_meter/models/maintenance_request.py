@@ -1,7 +1,7 @@
 # Copyright 2023 Dixmit
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import UserError
 
 
@@ -25,9 +25,11 @@ class MaintenanceRequest(models.Model):
 
     def _inverse_meter(self):
         for rec in self:
-            if not rec.current_meter and self.meter_id:
+            if not rec.current_meter and rec.meter_id:
                 raise UserError(
-                    _("Emptying the odometer value of an equipment is not allowed.")
+                    self.env._(
+                        "Emptying the odometer value of an equipment is not allowed."
+                    )
                 )
             if not rec.current_meter:
                 continue
@@ -45,8 +47,6 @@ class MaintenanceRequest(models.Model):
             self.meter_id = meter
 
     @api.onchange("equipment_id")
-    def onchange_equipment_id(self):
-        result = super().onchange_equipment_id()
+    def _onchange_equipment_id_meter(self):
         if self.meter_id and self.equipment_id != self.meter_id.sudo().equipment_id:
             self.meter_id = False
-        return result

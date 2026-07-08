@@ -2,10 +2,12 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo.exceptions import UserError
-from odoo.tests.common import Form, SavepointCase
+from odoo.tests import Form
+from odoo.tests.common import TransactionCase, tagged
 
 
-class TestEquipmentMeter(SavepointCase):
+@tagged("post_install", "-at_install")
+class TestEquipmentMeter(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -48,7 +50,7 @@ class TestEquipmentMeter(SavepointCase):
             .search([("equipment_id", "=", self.equipment.id)])
             .value,
         )
-        self.equipment.invalidate_cache()
+        self.equipment.invalidate_recordset()
         self.assertEqual(self.equipment.current_meter, 1000.0)
 
     def test_request(self):
@@ -80,7 +82,7 @@ class TestEquipmentMeter(SavepointCase):
             .value,
         )
         self.assertTrue(request.meter_id)
-        self.equipment.invalidate_cache()
+        self.equipment.invalidate_recordset()
         self.assertEqual(self.equipment.current_meter, 1000.0)
         with Form(request) as f:
             f.equipment_id = self.equipment_02
@@ -115,7 +117,7 @@ class TestEquipmentMeter(SavepointCase):
             .value,
         )
         self.assertTrue(request.meter_id)
-        self.equipment.invalidate_cache()
+        self.equipment.invalidate_recordset()
         self.assertEqual(self.equipment.current_meter, 1000.0)
         with self.assertRaises(UserError):
             request.current_meter = 0.0
