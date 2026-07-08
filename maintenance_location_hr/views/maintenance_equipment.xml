@@ -9,24 +9,34 @@
         <field name="model">maintenance.equipment</field>
         <field name="inherit_id" ref="maintenance_location.hr_equipment_view_form" />
         <field name="arch" type="xml">
-            <field name="location_id" position="after">
-                <field name="equipment_assign_to" invisible="1" />
-            </field>
             <field name="location_id" position="attributes">
+                <attribute name="required">equipment_assign_to == 'location'</attribute>
                 <attribute
-                    name="attrs"
-                >{'required': [('equipment_assign_to', '=', 'location')], 'invisible': [('equipment_assign_to', 'not in', [False, 'location', 'other'])]}</attribute>
+                    name="invisible"
+                >equipment_assign_to not in [False, 'location', 'other']</attribute>
             </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_equipment_view_form_inherit_hr">
+        <field
+            name="name"
+        >maintenance.equipment.form.inherit.hr (in maintenance_location_hr)</field>
+        <field name="model">maintenance.equipment</field>
+        <field
+            name="inherit_id"
+            ref="hr_maintenance.maintenance_equipment_view_form_inherit_hr"
+        />
+        <field name="arch" type="xml">
             <!--Odoo is not setting the state properly. This should fix it-->
             <field name="employee_id" position="attributes">
                 <attribute
-                    name="attrs"
-                >{'invisible': [('equipment_assign_to', 'not in', [False, 'employee', 'other'])]}</attribute>
+                    name="invisible"
+                >equipment_assign_to not in [False, 'employee', 'other']</attribute>
             </field>
             <field name="department_id" position="attributes">
                 <attribute
-                    name="attrs"
-                >{'invisible': [('equipment_assign_to', 'not in', [False, 'department', 'other'])]}</attribute>
+                    name="invisible"
+                >equipment_assign_to not in [False, 'department', 'other']</attribute>
             </field>
         </field>
     </record>
