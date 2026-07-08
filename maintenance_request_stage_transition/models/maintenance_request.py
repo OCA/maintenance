@@ -9,7 +9,6 @@ from odoo.addons.base.models import ir_ui_view
 
 
 class MaintenanceRequest(models.Model):
-
     _inherit = "maintenance.request"
 
     stage_id = fields.Many2one("maintenance.stage", readonly=True)
