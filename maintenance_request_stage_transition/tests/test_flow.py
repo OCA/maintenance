@@ -1,4 +1,5 @@
 # Copyright 2019 Creu Blanca
+# Copyright 2026 NuoBiT Solutions - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 import json
@@ -6,18 +7,20 @@ import json
 from lxml import etree
 
 from odoo.tests.common import TransactionCase
+from odoo.tools.safe_eval import safe_eval
 
 
 class TestFlow(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.request = self.env["maintenance.request"].create({"name": "Request"})
-        self.original_stage = self.request.stage_id
-        self.last_stage = self.env["maintenance.stage"].create({"name": "Last state"})
-        self.stage = self.env["maintenance.stage"].create(
-            {"name": "New state", "next_stage_ids": [(4, self.last_stage.id)]}
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.request = cls.env["maintenance.request"].create({"name": "Request"})
+        cls.original_stage = cls.request.stage_id
+        cls.last_stage = cls.env["maintenance.stage"].create({"name": "Last state"})
+        cls.stage = cls.env["maintenance.stage"].create(
+            {"name": "New state", "next_stage_ids": [(4, cls.last_stage.id)]}
         )
-        self.original_stage.write({"next_stage_ids": [(4, self.stage.id)]})
+        cls.original_stage.write({"next_stage_ids": [(4, cls.stage.id)]})
 
     def test_inverse(self):
         self.assertIn(self.original_stage, self.stage.previous_stage_ids)
@@ -30,32 +33,27 @@ class TestFlow(TransactionCase):
         self.assertTrue(etree.iselement(button))
         return button
 
+    def is_button_invisible(self, button):
+        return bool(
+            safe_eval(
+                button.attrib["invisible"], {"stage_id": self.request.stage_id.id}
+            )
+        )
+
     def test_nochange(self):
         self.request.set_maintenance_stage()
         self.assertEqual(self.original_stage, self.request.stage_id)
 
     def test_form(self):
         button_stage = self.get_button(self.stage)
-        attr_stage = json.loads(button_stage.attrib["modifiers"])
-        self.assertNotIn(
-            self.request,
-            self.env["maintenance.request"].search(attr_stage["invisible"]),
-        )
+        self.assertFalse(self.is_button_invisible(button_stage))
         button = self.get_button(self.last_stage)
-        attr = json.loads(button.attrib["modifiers"])
-        self.assertIn(
-            self.request, self.env["maintenance.request"].search(attr["invisible"])
-        )
+        self.assertTrue(self.is_button_invisible(button))
         getattr(
             self.request.with_context(**json.loads(button_stage.attrib["context"])),
             button.attrib["name"],
         )()
-        self.request.env.invalidate_all()
+        self.env.invalidate_all()
         self.assertEqual(self.request.stage_id, self.stage)
-        self.assertIn(
-            self.request,
-            self.env["maintenance.request"].search(attr_stage["invisible"]),
-        )
-        self.assertNotIn(
-            self.request, self.env["maintenance.request"].search(attr["invisible"])
-        )
+        self.assertTrue(self.is_button_invisible(button_stage))
+        self.assertFalse(self.is_button_invisible(button))

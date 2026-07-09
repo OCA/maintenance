@@ -1,11 +1,12 @@
 # Copyright 2019 Creu Blanca
+# Copyright 2026 NuoBiT Solutions - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 import json
 
 from lxml import etree
 
-from odoo import _, fields, models
+from odoo import fields, models
 
 
 class MaintenanceStage(models.Model):
@@ -36,11 +37,11 @@ class MaintenanceStage(models.Model):
         help="For default, the system uses primary",
     )
 
-    def _get_stage_node_attrs(self):
-        return {"invisible": [("stage_id", "not in", self.previous_stage_ids.ids)]}
+    def _get_stage_node_invisible(self):
+        return f"stage_id not in {self.previous_stage_ids.ids}"
 
     def _get_stage_node_name(self):
-        return _("To %s") % self.name
+        return self.env._("To %s") % self.name
 
     def _get_stage_node(self):
         return etree.Element(
@@ -51,7 +52,7 @@ class MaintenanceStage(models.Model):
                 "type": "object",
                 "class": "btn-%s" % (self.button_class or "primary"),
                 "context": json.dumps({"next_stage_id": self.id}),
-                "attrs": json.dumps(self._get_stage_node_attrs()),
+                "invisible": self._get_stage_node_invisible(),
                 "string": self._get_stage_node_name(),
             },
         )
