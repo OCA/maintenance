@@ -51,7 +51,10 @@ class TestMaintenancePlanActivity(test_common.TransactionCase):
         request_1 = generated_requests[0]
         # Check if activity Call has been created for the request 1
         generated_activities = self.mail_activity_obj.search(
-            [("res_id", "=", request_1.id)]
+            [
+                ("res_model", "=", "maintenance.request"),
+                ("res_id", "=", request_1.id),
+            ]
         )
         self.assertEqual(len(generated_activities), 2)
         self.assertEqual(generated_activities[0].activity_type_id.name, self.call.name)
