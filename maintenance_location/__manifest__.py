@@ -1,0 +1,26 @@
+# Copyright 2019 Creu Blanca
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
+{
+    "name": "Maintenance Location",
+    "summary": """
+        Define a location system for maintenance""",
+    "version": "18.0.1.0.0",
+    "license": "AGPL-3",
+    "author": "CreuBlanca, Dixmit,Odoo Community Association (OCA)",
+    "website": "https://github.com/OCA/maintenance",
+    "depends": ["maintenance_plan"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/maintenance_plan.xml",
+        "views/maintenance_equipment.xml",
+        "views/maintenance_request.xml",
+        "views/maintenance_location.xml",
+        "views/report_maintenance_request.xml",
+    ],
+    "demo": [
+        "demo/demo_maintenance_location.xml",
+        "demo/demo_maintenance_plan.xml",
+        "demo/demo_maintenance_equipment.xml",
+    ],
+}
