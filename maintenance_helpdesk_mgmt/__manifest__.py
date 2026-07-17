@@ -5,7 +5,7 @@
     "name": "Maintenance Request Helpdesk Ticket",
     "summary": """
         Allows you to link Helpdesk Tickets with maintenance requests""",
-    "version": "18.0.1.1.0",
+    "version": "18.0.1.1.1",
     "license": "AGPL-3",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
