@@ -7,13 +7,14 @@
         <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form" />
         <field name="arch" type="xml">
             <div name="button_box" position="inside">
-                <field name="maintenance_request_ids" invisible="1" />
+                <!-- groups explicitly set for avoiding errors if accessed by other group - see base_group_subcontractor -->
                 <button
                     name="action_view_maintenance_request"
                     class="oe_stat_button"
                     icon="fa-wrench"
                     type="object"
                     invisible="not maintenance_request_ids"
+                    groups="base.group_user"
                 >
                     <field
                         name="maintenance_request_count"
@@ -31,10 +32,16 @@
         <field name="inherit_id" ref="helpdesk_mgmt.view_helpdesk_ticket_kanban" />
         <field name="arch" type="xml">
             <field name="assigned_date" position="after">
-                <field name="maintenance_request_count" />
+                <!-- groups explicitly set for avoiding errors if accessed by other group - see base_group_subcontractor -->
+                <field name="maintenance_request_count" groups="base.group_user" />
             </field>
             <field name="tag_ids" position="after">
-                <div class="row" t-if="record.maintenance_request_count.value > 0">
+                <!-- groups explicitly set for avoiding errors if accessed by other group - see base_group_subcontractor -->
+                <div
+                    class="row"
+                    t-if="record.maintenance_request_count.value > 0"
+                    groups="base.group_user"
+                >
                     <a type="object" name="action_view_maintenance_request">
                         <field name="maintenance_request_count" /> Maintenance Requests
                     </a>
@@ -50,10 +57,12 @@
         <field name="arch" type="xml">
             <filter name="last_week" position="after">
                 <separator />
+                <!-- groups explicitly set for avoiding errors if accessed by other group - see base_group_subcontractor -->
                 <filter
                     string="With maintenance requests"
                     name="maintenance_request"
                     domain="[('maintenance_request_ids', '!=', False)]"
+                    groups="base.group_user"
                 />
             </filter>
         </field>
