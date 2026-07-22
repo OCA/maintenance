@@ -141,7 +141,7 @@
                     name="not_returned"
                     domain="[('state', 'not in', ('returned', 'cancel'))]"
                 />
-                <group expand="0" string="Group By...">
+                <group>
                     <filter
                         name="group_by_user_id"
                         string="Driver"

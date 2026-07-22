@@ -17,12 +17,12 @@ class MaintenanceEquipment(models.Model):
 
     @api.depends("usage_ids")
     def _compute_usage_count(self):
-        res = self.env["maintenance.equipment.usage"].read_group(
+        res = self.env["maintenance.equipment.usage"]._read_group(
             domain=[("equipment_id", "in", self.ids)],
-            fields=["equipment_id"],
             groupby=["equipment_id"],
+            aggregates=["__count"],
         )
-        res_dict = {x["equipment_id"][0]: x["equipment_id_count"] for x in res}
+        res_dict = {equipment.id: count for equipment, count in res}
         for rec in self:
             rec.usage_count = res_dict.get(rec.id, 0)
 
