@@ -47,10 +47,10 @@ Despite Odoo's built-in recurrence functionality included in the
 maintenance requests themselves (since 17.0), this module could be
 needed for some reasons:
 
-- Odoo implementation is javascript only
-- Some companies already work with the existing "Maintenance Plan"
-  workflow
-- Some modules are depending on this one
+-  Odoo implementation is javascript only
+-  Some companies already work with the existing "Maintenance Plan"
+   workflow
+-  Some modules are depending on this one
 
 For reference, this module was initially set deprecated when migrated to
 17.0:
@@ -131,16 +131,17 @@ Authors
 Contributors
 ------------
 
-- Akim Juillerat <akim.juillerat@camptocamp.com>
-- Matteo Mazzoni <matteo@appcademy.tech>
-- David Alonso <david.alonso@solvos.es>
-- Adrià Gil Sorribes <adria.gil@forgeflow.com>
-- Jordi Ballester Alomar <jordi.ballester@forgeflow.com>
-- Lois Rilo <lois.rilo@forgeflow.com>
-- Enric Tobella <enric.tobella@dixmit.com>
-- Alexei Rivera <arivera@archeti.com>
-- Yann Papouin <ypa@decgroupe.com>
-- Yannick Payot <yannick.payot@acsone.eu>
+-  Akim Juillerat <akim.juillerat@camptocamp.com>
+-  Matteo Mazzoni <matteo@appcademy.tech>
+-  David Alonso <david.alonso@solvos.es>
+-  Adrià Gil Sorribes <adria.gil@forgeflow.com>
+-  Jordi Ballester Alomar <jordi.ballester@forgeflow.com>
+-  Lois Rilo <lois.rilo@forgeflow.com>
+-  Enric Tobella <enric.tobella@dixmit.com>
+-  Alexei Rivera <arivera@archeti.com>
+-  Yann Papouin <ypa@decgroupe.com>
+-  Yannick Payot <yannick.payot@acsone.eu>
+-  Carlos Espinosa <carlos.espinosa@ffp.mx>
 
 Maintainers
 -----------
