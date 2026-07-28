@@ -65,12 +65,12 @@ class MaintenanceLocation(models.Model):
         all_locations = self.env["maintenance.location"].search(
             [("id", "child_of", self.ids)]
         )
-        equip_data = self.env["maintenance.equipment"].read_group(
+        equip_data = self.env["maintenance.equipment"]._read_group(
             domain=[("location_id", "in", all_locations.ids)],
-            fields=["location_id"],
             groupby=["location_id"],
+            aggregates=["__count"],
         )
-        count_dict = {x["location_id"][0]: x["location_id_count"] for x in equip_data}
+        count_dict = {location.id: count for location, count in equip_data}
         for location in self:
             descendant_ids = all_locations.filtered(
                 lambda sub_loc, loc=location: sub_loc.parent_path
