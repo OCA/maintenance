@@ -21,7 +21,6 @@
                         bg_color="bg-danger"
                         invisible="active"
                     />
-                    <field name="active" invisible="True" />
                     <div class="oe_button_box" name="button_box">
                         <button
                             name="%(hr_equipment_request_action_from_plan)d"
@@ -47,7 +46,7 @@
                         </h1>
                     </div>
                     <group>
-                        <group>
+                        <group id="group_general_info">
                             <field
                                 name="equipment_id"
                                 invisible="context.get('hide_equipment_id', 0)"
@@ -68,7 +67,7 @@
                                 invisible="equipment_id or not generate_with_domain"
                             />
                         </group>
-                        <group>
+                        <group id="group_additional_info">
                             <field name="skip_notify_follower_on_requests" />
                             <field
                                 name="company_id"
@@ -76,15 +75,15 @@
                             />
                         </group>
                     </group>
-                    <group>
-                        <group>
+                    <group id="group_time_info">
+                        <group id="date_infos">
                             <field name="start_maintenance_date" />
                             <field name="next_maintenance_date" />
                         </group>
-                        <group>
+                        <group id="duration_infos">
                             <field name="duration" />
                             <label for="interval" />
-                            <div class="o_row">
+                            <div id="interval_infos" class="o_row">
                                 <field name="interval" />
                                 <field name="interval_step" />
                             </div>
@@ -92,7 +91,7 @@
                                 for="maintenance_plan_horizon"
                                 string="Planning Horizon"
                             />
-                            <div class="o_row">
+                            <div id="planning_horizon" class="o_row">
                                 <field name="maintenance_plan_horizon" />
                                 <field name="planning_step" />
                             </div>
