@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="group_maintenance_request_edit_done" model="res.groups">
+        <field name="name">Maintenance: Edit Completed Requests</field>
+        <field name="category_id" ref="base.module_category_usability" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        <field
+            name="comment"
+        >The user will be able to edit completed maintenance requests.</field>
+    </record>
+    <!-- Equipment managers keep editing completed requests, as before. -->
+    <record id="maintenance.group_equipment_manager" model="res.groups">
+        <field
+            name="implied_ids"
+            eval="[(4, ref('group_maintenance_request_edit_done'))]"
+        />
+    </record>
+</odoo>
