@@ -4,7 +4,7 @@
 from odoo import exceptions, fields
 from odoo.tests.common import users
 
-from odoo.addons.project_timesheet_time_control.tests import (
+from odoo.addons.hr_timesheet_time_control.tests import (
     test_project_timesheet_time_control,
 )
 
@@ -15,7 +15,7 @@ class TestMaintenanceTimesheetTimeControl(
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.user.groups_id |= cls.env.ref("maintenance.group_equipment_manager")
+        cls.user.group_ids |= cls.env.ref("maintenance.group_equipment_manager")
         cls.category = cls.env["maintenance.equipment.category"].create(
             {"name": "Test category"}
         )

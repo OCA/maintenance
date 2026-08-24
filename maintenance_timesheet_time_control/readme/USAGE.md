@@ -1,4 +1,4 @@
-In general the usage instructions from `project_timesheet_time_control`
+In general the usage instructions from `hr_timesheet_time_control`
 apply with the following additions.
 
 Via maintenance requests:

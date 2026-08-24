@@ -19,8 +19,9 @@ class MaintenanceRequest(models.Model):
     )
     def _compute_show_time_control(self):
         result = super()._compute_show_time_control()
-        for item in self.filtered(lambda x: not x.project_id.allow_timesheets):
-            item.show_time_control = False
+        self.filtered(
+            lambda x: not x.project_id.allow_timesheets
+        ).show_time_control = False
         return result
 
     def button_start_work(self):
