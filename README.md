@@ -33,6 +33,7 @@ addon | version | maintainers | summary
 [maintenance_request_repair](maintenance_request_repair/) | 19.0.1.0.0 |  | This is a bridge module between Maintenance and Repair
 [maintenance_request_tags](maintenance_request_tags/) | 19.0.1.0.0 |  | Adds tags to Maintenance Requests
 [maintenance_timesheet](maintenance_timesheet/) | 19.0.1.0.0 |  | Adds timesheets to maintenance requests
+[maintenance_timesheet_time_control](maintenance_timesheet_time_control/) | 19.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Timesheets Timesheet Time Control
 
 [//]: # (end addons)
 
