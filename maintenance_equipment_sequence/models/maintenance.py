@@ -95,14 +95,15 @@ class MaintenanceEquipmentCategory(models.Model):
             self.sequence_prefix = self.sequence_id.prefix
 
     def _compute_equipment_code(self):
-        for category in self:
-            if category.sequence_id:
-                category_equipments = category.env["maintenance.equipment"].search(
-                    [("category_id", "=", category.id)]
-                )
-                for equipment in category_equipments:
-                    if not equipment.serial_no and equipment.category_id.sequence_id:
-                        equipment.serial_no = equipment.category_id.sequence_id._next()
+        equipments = self.env["maintenance.equipment"].search(
+            [
+                ("category_id", "in", self.ids),
+                ("category_id.sequence_id", "!=", False),
+                ("serial_no", "=", False),
+            ]
+        )
+        for equipment in equipments:
+            equipment.serial_no = equipment.category_id.sequence_id._next()
 
 
 class MaintenanceEquipment(models.Model):

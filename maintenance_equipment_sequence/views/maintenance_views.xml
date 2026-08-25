@@ -6,7 +6,10 @@
         <field name="model">maintenance.equipment.category</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_category_view_form" />
         <field name="arch" type="xml">
-            <group name="group_alias" position="after">
+            <xpath
+                expr="//field[@name='company_id']/ancestor::group[1]"
+                position="after"
+            >
                 <group>
                     <field name="sequence_prefix" readonly="sequence_id != False" />
                     <field
@@ -17,7 +20,7 @@
                     />
                     <field name="sequence_id" required="0" />
                 </group>
-            </group>
+            </xpath>
         </field>
     </record>
 

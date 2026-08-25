@@ -166,3 +166,30 @@ class TestMaintenanceEquipmentSequence(TransactionCase):
 
         equipment_03.write({"category_id": cat_01.id})
         self.assertEqual(equipment_03.serial_no, "TST003")
+
+    def test_05_compute_equipment_code_multiple_categories(self):
+        sequence = self.sequence_obj.create(
+            {
+                "name": "Shared Test Sequence",
+                "prefix": "BAT",
+                "padding": 3,
+            }
+        )
+        categories = self.maintenance_equipment_categ_obj.create(
+            [
+                {"name": "Test Category 1"},
+                {"name": "Test Category 2"},
+            ]
+        )
+        equipments = self.maintenance_equipment_obj.create(
+            [
+                {"name": "Test Equipment 1", "category_id": categories[0].id},
+                {"name": "Test Equipment 2", "category_id": categories[1].id},
+            ]
+        )
+
+        self.assertFalse(any(equipments.mapped("serial_no")))
+
+        categories.write({"sequence_id": sequence.id})
+
+        self.assertEqual(set(equipments.mapped("serial_no")), {"BAT001", "BAT002"})
