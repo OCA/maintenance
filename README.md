@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [base_maintenance_group](base_maintenance_group/) | 18.0.1.0.0 |  | Provides base access groups for the Maintenance App
 [hr_maintenance_security](hr_maintenance_security/) | 18.0.1.0.0 |  | HR Maintenance Security
 [maintenance_account](maintenance_account/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Account
+[maintenance_equipment_availability](maintenance_equipment_availability/) | 18.0.1.0.0 |  | Maintenance Equipment Availability
 [maintenance_equipment_category_hierarchy](maintenance_equipment_category_hierarchy/) | 18.0.1.0.0 |  | Equipment Categories Hierarchy
 [maintenance_equipment_contract](maintenance_equipment_contract/) | 18.0.1.0.0 |  | Manage equipment contracts
 [maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 18.0.1.0.0 | <a href='https://github.com/dalonsod'><img src='https://github.com/dalonsod.png' width='32' height='32' style='border-radius:50%;' alt='dalonsod'/></a> | Manage equipment hierarchy

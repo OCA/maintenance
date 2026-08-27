@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Quartile (https://www.quartile.co)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="name">maintenance.equipment.form</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field name="availability_state" readonly="1" />
+            </field>
+            <xpath
+                expr="//page[@name='maintenance']//group[@name='statistics']"
+                position="after"
+            >
+                <group name="availability" string="Availability">
+                    <field name="latest_maintenance_result_request_id" readonly="1" />
+                    <field name="latest_maintenance_result_date" readonly="1" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.equipment.list</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field
+                    name="availability_state"
+                    widget="badge"
+                    decoration-success="availability_state == 'available'"
+                    decoration-danger="availability_state == 'unavailable'"
+                    decoration-muted="availability_state == 'unknown'"
+                    optional="show"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_kanban" model="ir.ui.view">
+        <field name="name">maintenance.equipment.kanban</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//progressbar[@field='activity_state']" position="after">
+                <field name="availability_state" />
+            </xpath>
+            <xpath
+                expr="//div[@t-if='record.maintenance_open_count.raw_value']"
+                position="after"
+            >
+                <div
+                    t-if="record.availability_state.raw_value == 'available'"
+                    class="badge text-bg-success"
+                >
+                    <t t-out="record.availability_state.value" />
+                </div>
+                <div
+                    t-elif="record.availability_state.raw_value == 'unavailable'"
+                    class="badge text-bg-danger"
+                >
+                    <t t-out="record.availability_state.value" />
+                </div>
+                <div
+                    t-elif="record.availability_state.raw_value == 'unknown'"
+                    class="badge text-bg-secondary"
+                >
+                    <t t-out="record.availability_state.value" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="name">maintenance.equipment.search</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field name="availability_state" />
+            </field>
+            <filter name="under_maintenance" position="after">
+                <separator />
+                <filter
+                    string="Available"
+                    name="available"
+                    domain="[('availability_state', '=', 'available')]"
+                />
+                <filter
+                    string="Unavailable"
+                    name="unavailable"
+                    domain="[('availability_state', '=', 'unavailable')]"
+                />
+                <filter
+                    string="Unknown Availability"
+                    name="unknown_availability"
+                    domain="[('availability_state', '=', 'unknown')]"
+                />
+            </filter>
+            <xpath expr="//group" position="inside">
+                <filter
+                    string="Availability"
+                    name="availability"
+                    context="{'group_by': 'availability_state'}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
