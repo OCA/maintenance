@@ -110,6 +110,10 @@ class TestMaintenanceEquipmentCertification(TransactionCase):
         cert = self._make_certificate(25)
         self._run_cron()
         self.assertEqual(cert.expiration_notify_count, 1)
+        chatter_msgs = self.equipment.message_ids.filtered(
+            lambda m: "Test Certificate" in (m.body or "")
+        )
+        self.assertTrue(chatter_msgs, "Expected chatter note on equipment after send")
 
         # 5 days out: 30-day + 7-day rules now triggered.
         self._shift_renewal(cert, 5)
@@ -183,3 +187,12 @@ class TestMaintenanceEquipmentCertification(TransactionCase):
             cert = self._make_certificate(10, equipment_id=equipment_no_user.id)
             self._run_cron()
             self.assertEqual(cert.expiration_notify_count, 0)
+            self.assertEqual(
+                len(equipment_no_user.activity_ids),
+                1,
+                "Expected one activity on equipment with no assignee",
+            )
+            self.assertIn(
+                "no assignee",
+                equipment_no_user.activity_ids.summary,
+            )
