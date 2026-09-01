@@ -13,6 +13,12 @@
                     <!--Empty, to be inherited by other modules.-->
                 </div>
             </xpath>
+            <field name="user_id" position="before">
+                <field name="team_member_ids" invisible="1" />
+            </field>
+            <field name="user_id" position="attributes">
+                <attribute name="domain">[('id', 'in', team_member_ids)]</attribute>
+            </field>
             <field name="description" position="replace">
                 <notebook colspan="2">
                     <page name="description_page" string="Description">
