@@ -39,7 +39,7 @@ addon | version | maintainers | summary
 [maintenance_plan](maintenance_plan/) | 16.0.1.0.0 |  | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 16.0.1.0.0 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
 [maintenance_product](maintenance_product/) | 16.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
-[maintenance_project](maintenance_project/) | 16.0.2.0.0 |  | Adds projects to maintenance equipments and requests
+[maintenance_project](maintenance_project/) | 16.0.2.0.1 |  | Adds projects to maintenance equipments and requests
 [maintenance_purchase](maintenance_purchase/) | 16.0.1.0.0 |  | Create Equipments with purchases
 [maintenance_remote](maintenance_remote/) | 16.0.1.0.0 |  | Define remote on maintenance request
 [maintenance_request_purchase](maintenance_request_purchase/) | 16.0.1.1.1 |  | Allows you to link PO with maintenance requests
