@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Quartile
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="hr_equipment_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.equipment.list - tier validation</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="state" optional="show" />
+                <field
+                    name="validation_status"
+                    widget="badge"
+                    optional="hide"
+                    decoration-info="validation_status == 'pending'"
+                    decoration-danger="validation_status == 'rejected'"
+                    decoration-success="validation_status == 'validated'"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="name">maintenance.equipment.search - tier validation</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <filter name="under_maintenance" position="after">
+                <separator />
+                <filter
+                    name="needs_review"
+                    string="Needs my Review"
+                    domain="[('reviewer_ids', 'in', uid), ('state', '=', 'draft')]"
+                    help="Equipment to review"
+                />
+                <filter
+                    name="tier_validated"
+                    string="Validated"
+                    domain="[('validated', '=', True)]"
+                    help="Equipment validated and ready to be activated"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>
