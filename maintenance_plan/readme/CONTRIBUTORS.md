@@ -8,3 +8,4 @@
 - Alexei Rivera \<<arivera@archeti.com>\>
 - Yann Papouin \<<ypa@decgroupe.com>\>
 - Yannick Payot \<<yannick.payot@acsone.eu>\>
+- Carlos Espinosa \<<carlos.espinosa@ffp.mx>\>

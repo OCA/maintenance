@@ -1,47 +1,34 @@
 # Copyright 2017 Camptocamp SA
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-
 import logging
 
-from odoo.exceptions import UserError
+_logger = logging.getLogger(__name__)
 
 
 def post_init_hook(env):
-    logging.getLogger("odoo.addons.maintenance_plan").info(
-        "Migrating existing preventive maintenance"
-    )
+    """Create a maintenance plan for equipments that had an expected MTBF.
 
+    Odoo 19 removed ``maintenance.equipment.next_action_date`` and
+    ``maintenance.equipment.mtbf``; the original migration relied on both and
+    raised ``AttributeError`` on install. We now derive the plan interval from
+    ``expected_mtbf`` (expressed in days) and no longer try to tag a specific
+    preventive request by its (now inexistent) next action date.
+    """
+    _logger.info("Migrating existing preventive maintenance")
     equipments = env["maintenance.equipment"].search([("expected_mtbf", "!=", False)])
-
-    if equipments:
-        maintenance_kind = env["maintenance.kind"].create(
-            {"name": "Install", "active": True}
-        )
-
-        for equipment in equipments:
-            request = equipment.maintenance_ids.filtered(
-                lambda r, equipment=equipment: r.maintenance_type == "preventive"
-                and not r.stage_id.done
-                and r.request_date == equipment.next_action_date
-            )
-            if len(request) > 1:
-                raise UserError(
-                    env._(
-                        "You have multiple preventive maintenance requests on "
-                        "equipment %(name)s next action date (%(date)s). "
-                        "Please leave only one preventive request on the "
-                        "date of equipment's next action to install the module.",
-                        name=equipment.name,
-                        date=equipment.next_action_date,
-                    )
-                )
-            elif len(request) == 1:
-                request.write({"maintenance_kind_id": maintenance_kind.id})
-            env["maintenance.plan"].create(
-                {
-                    "equipment_id": equipment.id,
-                    "maintenance_kind_id": maintenance_kind.id,
-                    "duration": equipment.mtbf,
-                    "interval": equipment.expected_mtbf,
-                }
-            )
+    if not equipments:
+        return
+    maintenance_kind = env["maintenance.kind"].create(
+        {"name": "Install", "active": True}
+    )
+    env["maintenance.plan"].create(
+        [
+            {
+                "equipment_id": equipment.id,
+                "maintenance_kind_id": maintenance_kind.id,
+                "interval": equipment.expected_mtbf,
+                "interval_step": "day",
+            }
+            for equipment in equipments
+        ]
+    )
