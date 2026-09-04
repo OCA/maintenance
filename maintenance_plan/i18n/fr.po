@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-09-04 08:06+0000\n"
+"PO-Revision-Date: 2026-09-04 08:17+0000\n"
 "Last-Translator: Noah Lemarinel <noahlemarinel3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -35,7 +35,7 @@ msgstr "Actif"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_kind__active
 msgid "Active Kind"
-msgstr "Genre actif"
+msgstr "Type actif"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_ids
@@ -45,7 +45,7 @@ msgstr "Activités"
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "Décoration d'exception d'activité"
+msgstr "Décoration d'activité exceptionnelle"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__activity_state
@@ -555,17 +555,21 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
+"Statut basé sur les activités\n"
+"En retard : la date d'échéance est déjà dépassée\n"
+"Aujourd'hui : la date d'activité est aujourd'hui\n"
+"Planifiée : activités futures."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.hr_equipment_view_form
 msgid "Team"
-msgstr ""
+msgstr "Équipe"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__instruction_text
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__instruction_type__text
 msgid "Text"
-msgstr ""
+msgstr "Texte"
 
 #. module: maintenance_plan
 #. odoo-python
@@ -575,6 +579,10 @@ msgid ""
 "request which is not done yet. You should either set the request as done, "
 "remove its maintenance kind or delete it first."
 msgstr ""
+"Le plan de maintenance %(kind)s de l'équipement %(eqpmnt)s a généré une "
+"demande qui n'est pas encore traitée. Vous devez soit marquer la demande "
+"comme traitée, soit supprimer son type de maintenance, soit la supprimer au "
+"préalable."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.res_config_settings_view_form
@@ -582,73 +590,75 @@ msgid ""
 "To avoid conflicts, hide recurrent settings provided by the maintenance "
 "module."
 msgstr ""
+"Pour éviter les conflits, masque les paramètres de récurrence fournis par le "
+"module de maintenance."
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr ""
+msgstr "Type de l'activité exceptionnelle enregistrée."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_search
 msgid "Under Maintenance"
-msgstr ""
+msgstr "En maintenance"
 
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 msgid "Unnamed %(kind)s plan (%(eqpmnt)s)"
-msgstr ""
+msgstr "Plan %(kind)s sans nom (%(eqpmnt)s)"
 
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 msgid "Unnamed %(kind)s plan (%(eqpmt)s)"
-msgstr ""
+msgstr "Plan %(kind)s sans nom (%(eqpmt)s)"
 
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/tests/test_maintenance_plan.py:0
 msgid "Unnamed %(void)s plan (%(eqpmnt)s)"
-msgstr ""
+msgstr "Plan %(void)s sans nom (%(eqpmnt)s)"
 
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_equipment.py:0
 msgid "Unspecified kind"
-msgstr ""
+msgstr "Type non spécifié"
 
 #. module: maintenance_plan
 #. odoo-python
 #: code:addons/maintenance_plan/models/maintenance_plan.py:0
 msgid "Unsupported search operator"
-msgstr ""
+msgstr "Opérateur de recherche non pris en charge"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Upload your PDF file."
-msgstr ""
+msgstr "Téléverser votre fichier PDF."
 
 #. module: maintenance_plan
 #: model:ir.model.fields,field_description:maintenance_plan.field_maintenance_plan__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "Messages du site web"
 
 #. module: maintenance_plan
 #: model:ir.model.fields,help:maintenance_plan.field_maintenance_plan__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "Historique de communication du site web"
 
 #. module: maintenance_plan
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__week
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__planning_step__week
 msgid "Week(s)"
-msgstr ""
+msgstr "Semaine(s)"
 
 #. module: maintenance_plan
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__interval_step__year
 #: model:ir.model.fields.selection,name:maintenance_plan.selection__maintenance_plan__planning_step__year
 msgid "Year(s)"
-msgstr ""
+msgstr "Année(s)"
 
 #. module: maintenance_plan
 #: model:ir.model.constraint,message:maintenance_plan.constraint_maintenance_plan_equipment_kind_uniq
@@ -656,6 +666,8 @@ msgid ""
 "You cannot define multiple times the same maintenance kind on an equipment "
 "maintenance plan."
 msgstr ""
+"Vous ne pouvez pas définir plusieurs fois le même type de maintenance sur un "
+"plan de maintenance d'équipement."
 
 #. module: maintenance_plan
 #. odoo-python
@@ -665,13 +677,17 @@ msgid ""
 " action date (%(date)s). Please leave only one preventive request on the "
 "date of equipment's next action to install the module."
 msgstr ""
+"Vous avez plusieurs demandes de maintenance préventive pour l'équipement \"%"
+"(name)s dont la prochaine date d'intervention est le %(date)s. Veuillez ne "
+"laisser qu'une seule demande de maintenance préventive à la date de la "
+"prochaine intervention sur l'équipement pour installer le module."
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "Your instructions"
-msgstr ""
+msgstr "Vos instructions"
 
 #. module: maintenance_plan
 #: model_terms:ir.ui.view,arch_db:maintenance_plan.maintenance_plan_view_form
 msgid "e.g. Calibration"
-msgstr ""
+msgstr "ex : Étalonnage"
