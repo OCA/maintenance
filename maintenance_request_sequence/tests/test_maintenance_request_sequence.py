@@ -8,6 +8,7 @@ class TestMaintenanceRequestSequence(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.team_id = cls.env["maintenance.team"].create(
             {"name": "Maintenance Team", "code_prefix": "MT-TEST"}
         )
