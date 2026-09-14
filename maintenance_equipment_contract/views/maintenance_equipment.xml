@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="hr_equipment_view_form">
+        <field
+            name="name"
+        >maintenance.equipment.form (in maintenance_equipment_contract)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <field name="contract_ids" invisible="1" />
+                <button
+                    name="action_view_contracts"
+                    class="oe_stat_button"
+                    icon="fa-usd"
+                    type="object"
+                >
+                    <field name="contract_count" widget="statinfo" string="Contracts" />
+                </button>
+            </div>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_equipment_view_search">
+        <field
+            name="name"
+        >maintenance.equipment.search (in maintenance_equipment_contract)</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <filter name="under_maintenance" position="after">
+                <separator />
+                <filter
+                    string="Has Contracts"
+                    name="has_contracts"
+                    domain="[('contract_ids', '!=', False)]"
+                />
+                <filter
+                    string="Doesn't have Contracts"
+                    name="no_contracts"
+                    domain="[('contract_ids', '=', False)]"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>
