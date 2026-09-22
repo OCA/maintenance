@@ -1,4 +1,4 @@
-To cotnfigure this module, you need to:
+To configure this module, you need to:
 
 #. Maintenance > Configuration > Equipment Statuses
 
