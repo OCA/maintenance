@@ -3,6 +3,8 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from datetime import timedelta
 
+from markupsafe import Markup, escape
+
 from odoo import api, fields, models
 
 
@@ -75,10 +77,29 @@ class MaintenanceEquipmentCertificate(models.Model):
             equipment = cert.equipment_id
             user = equipment.technician_user_id or equipment.owner_user_id
             if not user:
+                equipment.activity_schedule(
+                    "mail.mail_activity_data_todo",
+                    date_deadline=cert.renewal_date,
+                    summary=self.env._("Certificate expiration: no assignee to notify"),
+                    note=Markup(
+                        "Certificate <b>%s</b> (renewal: %s) could not send "
+                        "expiration reminder: no technician or owner is assigned."
+                    )
+                    % (escape(cert.name), cert.renewal_date),
+                )
                 continue
             if template:
                 template.send_mail(
                     cert.id,
                     email_layout_xmlid="mail.mail_notification_light",
+                    email_values={"partner_ids": [user.partner_id.id]},
+                )
+                equipment.message_post(
+                    body=Markup(
+                        "Certificate expiration reminder sent for "
+                        "<b>%s</b> (renewal: %s)."
+                    )
+                    % (escape(cert.name), cert.renewal_date),
+                    subtype_xmlid="mail.mt_note",
                 )
             cert.expiration_notify_count = expected
