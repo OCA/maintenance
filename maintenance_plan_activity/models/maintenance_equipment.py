@@ -3,7 +3,7 @@
 
 from datetime import timedelta
 
-from odoo import _, models
+from odoo import models
 
 
 class MaintenanceEquipment(models.Model):
@@ -15,7 +15,9 @@ class MaintenanceEquipment(models.Model):
         """
         return {
             "activity_type_id": activity.activity_type_id.id,
-            "note": _("Activity automatically generated from maintenance plan"),
+            "note": self.env._(
+                "Activity automatically generated from maintenance plan"
+            ),
             "user_id": activity.user_id.id or self.env.user.id,
             "res_id": request.id,
             "res_model_id": self.env.ref("maintenance.model_maintenance_request").id,

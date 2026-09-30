@@ -10,6 +10,7 @@ from odoo import fields
 class TestMaintenancePlanActivity(test_common.TransactionCase):
     def setUp(self):
         super().setUp()
+        self.env = self.env(context=dict(self.env.context, tracking_disable=True))
         self.maintenance_request_obj = self.env["maintenance.request"]
         self.maintenance_plan_obj = self.env["maintenance.plan"]
         self.maintenance_equipment_obj = self.env["maintenance.equipment"]
@@ -42,7 +43,8 @@ class TestMaintenancePlanActivity(test_common.TransactionCase):
         """Execute cron and check the request and the activities that have
         been created
         """
-        self.cron.method_direct_trigger()
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
 
         generated_requests = self.maintenance_request_obj.search(
             [("maintenance_plan_id", "=", self.maintenance_plan_1.id)]
