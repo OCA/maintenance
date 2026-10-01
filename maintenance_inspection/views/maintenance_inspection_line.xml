@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Dixmit
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="maintenance_inspection_line_form_view">
+        <field name="model">maintenance.inspection.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <header />
+                <sheet>
+                    <group>
+                        <field name="item_id" />
+                        <field name="request_id" />
+                        <field name="instruction" />
+                        <field name="result" />
+                        <field name="result_description" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_inspection_line_kanban_view">
+        <field name="model">maintenance.inspection.line</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="item_id" />
+                <field name="instruction" />
+                <field name="result_description" />
+                <field name="result" />
+                <field name="inspection_closed_at" />
+                <field name="write_date" />
+                <field name="write_uid" />
+                <templates>
+                    <t t-name="menu" groups="base.group_user">
+                        <a
+                            name="action_success"
+                            type="object"
+                            role="menuitem"
+                            class="dropdown-item"
+                        >Approve</a>
+                        <a
+                            name="action_failure"
+                            type="object"
+                            role="menuitem"
+                            class="dropdown-item"
+                        >Refuse</a>
+                        <a
+                            t-if="widget.deletable"
+                            role="menuitem"
+                            type="delete"
+                            class="dropdown-item"
+                        >Delete</a>
+                    </t>
+                    <t t-name="card" class="flex-row">
+                        <aside invisible="1" />
+                        <main>
+                            <field name="item_id" class="fw-bold fs-5" />
+                            <field name="instruction" />
+                            <field name="result_description" />
+                            <footer class="pt-1 mt-0">
+                                <small class="text-muted">
+                                    Last edited by <t
+                                    t-esc="record.write_uid.value"
+                                /> on <t t-esc="record.write_date.value" />
+                                </small>
+                                <div name="footer_right" class="ms-auto d-flex " />
+                            </footer>
+                        </main>
+                        <div class="position-absolute top-0 end-0 m-2 me-4">
+                            <field
+                                name="result"
+                                widget="badge"
+                                decoration-info="result == 'todo'"
+                                decoration-success="result == 'success'"
+                                decoration-danger="result == 'failure'"
+                            />
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_inspection_line_tree_view">
+        <field name="model">maintenance.inspection.line</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="item_id" />
+                <field name="instruction" />
+                <field name="result_description" />
+                <field
+                    name="result"
+                    widget="label_selection"
+                    options="{'classes': {'failure': 'danger', 'success': 'success'}}"
+                />
+                <button
+                    name="action_success"
+                    string="Approve"
+                    type="object"
+                    invisible="inspection_closed_at"
+                    class="oe_highlight btn-success"
+                    icon="fa-check-circle"
+                />
+                <button
+                    name="action_failure"
+                    string="Refuse"
+                    type="object"
+                    invisible="inspection_closed_at"
+                    class="oe_highlight btn-danger"
+                    icon="fa-times-circle"
+                />
+                <field name="inspection_closed_at" column_invisible="1" />
+            </list>
+        </field>
+    </record>
+</odoo>
