@@ -238,3 +238,66 @@ class TestMaintenancePlan(TestMaintenancePlanBase):
         self.assertEqual(len(self.maintenance_plan_1.maintenance_ids), 0)
         self.maintenance_plan_1.button_manual_request_generation()
         self.assertEqual(len(self.maintenance_plan_1.maintenance_ids), 3)
+
+    def test_next_maintenance_date_matches_generated_request(self):
+        """The plan's next_maintenance_date is the date the next generated
+        request actually carries, before and after completion."""
+        plan = self.maintenance_plan_1
+        # No request yet: shown date == first generated request_date
+        shown_before = plan.next_maintenance_date
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
+        first_request = self.maintenance_request_obj.search(
+            [("maintenance_plan_id", "=", plan.id)], order="request_date asc", limit=1
+        )
+        self.assertEqual(first_request.request_date, shown_before)
+        # Complete the whole pending series, then the shown date must equal
+        # the request_date the next cron run will generate.
+        plan.maintenance_ids.stage_id = self.done_stage
+        plan.maintenance_plan_horizon = 4
+        shown_after = plan.next_maintenance_date
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
+        new_request = self.maintenance_request_obj.search(
+            [
+                ("maintenance_plan_id", "=", plan.id),
+                ("stage_id.done", "!=", True),
+            ],
+            order="request_date asc",
+            limit=1,
+        )
+        self.assertEqual(new_request.request_date, shown_after)
+
+    def test_next_maintenance_date_advances_past_today(self):
+        """With no pending request, an overdue recurrence is advanced to the
+        first occurrence on or after today - the one the generator creates."""
+        plan = self.maintenance_plan_1
+        plan.start_maintenance_date = fields.Date.from_string("2022-06-10")
+        # A single request, done well before today.
+        self.maintenance_request_obj.create(
+            {
+                "name": "Old done maintenance",
+                "maintenance_plan_id": plan.id,
+                "equipment_id": plan.equipment_id.id,
+                "request_date": fields.Date.from_string("2022-06-10"),
+                "stage_id": self.done_stage.id,
+            }
+        )
+        # today is frozen to 2023-01-25, interval is 1 month: 2022-07-10,
+        # 2022-08-10, ... first occurrence >= today is 2023-02-10.
+        self.assertEqual(
+            plan.next_maintenance_date, fields.Date.from_string("2023-02-10")
+        )
+        with self.enter_registry_test_mode():
+            self.cron.method_direct_trigger()
+        first_generated = self.maintenance_request_obj.search(
+            [
+                ("maintenance_plan_id", "=", plan.id),
+                ("stage_id.done", "!=", True),
+            ],
+            order="request_date asc",
+            limit=1,
+        )
+        self.assertEqual(
+            first_generated.request_date, fields.Date.from_string("2023-02-10")
+        )
