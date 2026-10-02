@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record
+        model="maintenance.plan"
+        id="maintenance_plan.maintenance_plan_monthly_monitor1"
+    >
+        <field name="location_id" ref="maintenance_location.location_building_a_l1" />
+    </record>
+    <record
+        model="maintenance.plan"
+        id="maintenance_plan.maintenance_plan_monthly_monitor4"
+    >
+        <field name="location_id" ref="maintenance_location.location_building_a_l1" />
+    </record>
+    <record
+        model="maintenance.plan"
+        id="maintenance_plan.maintenance_plan_monthly_monitor6"
+    >
+        <field name="location_id" ref="maintenance_location.location_warehouse" />
+    </record>
+    <record
+        model="maintenance.plan"
+        id="maintenance_plan.maintenance_plan_monthly_printer1"
+    >
+        <field name="location_id" ref="maintenance_location.location_building_a_l2" />
+    </record>
+    <record
+        model="maintenance.plan"
+        id="maintenance_plan.maintenance_plan_weekly_printer1"
+    >
+        <field name="location_id" ref="maintenance_location.location_building_a_l2" />
+    </record>
+</odoo>
