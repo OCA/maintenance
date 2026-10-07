@@ -1,0 +1,49 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_image
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maintenance_equipment_image
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_image.hr_equipment_view_kanban
+msgid "Equipment"
+msgstr ""
+
+#. module: maintenance_equipment_image
+#: model:ir.model.fields,field_description:maintenance_equipment_image.field_maintenance_equipment__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: maintenance_equipment_image
+#: model:ir.model.fields,field_description:maintenance_equipment_image.field_maintenance_equipment__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: maintenance_equipment_image
+#: model:ir.model.fields,field_description:maintenance_equipment_image.field_maintenance_equipment__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: maintenance_equipment_image
+#: model:ir.model.fields,field_description:maintenance_equipment_image.field_maintenance_equipment__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: maintenance_equipment_image
+#: model:ir.model.fields,field_description:maintenance_equipment_image.field_maintenance_equipment__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: maintenance_equipment_image
+#: model:ir.model,name:maintenance_equipment_image.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
