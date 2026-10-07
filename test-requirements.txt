@@ -1,0 +1,1 @@
+odoo-addon-maintenance_location@git+https://github.com/OCA/maintenance.git@refs/pull/523/head#subdirectory=maintenance_location
