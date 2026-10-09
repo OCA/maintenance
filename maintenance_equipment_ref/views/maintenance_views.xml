@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="name">equipment.form</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='product_information']//field[@name='serial_no']"
+                position="after"
+            >
+                <field name="ref" />
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_view_tree" model="ir.ui.view">
+        <field name="name">equipment.list</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='serial_no']" position="after">
+                <field name="ref" />
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="name">equipment.search</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="ref" />
+            </field>
+        </field>
+    </record>
+</odoo>
