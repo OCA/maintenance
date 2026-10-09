@@ -1,0 +1,207 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_inspection
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__active
+msgid "Active"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_kanban_view
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_tree_view
+msgid "Approve"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_item_form_view
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_item_search_view
+msgid "Archived"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__create_uid
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__create_date
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__display_name
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__display_name
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan__display_name
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_kanban_view
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields.selection,name:maintenance_inspection.selection__maintenance_inspection_line__result__failure
+msgid "Failure"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_request_form_view
+msgid "Finish inspection"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__has_inspection
+msgid "Has Inspection"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__id
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__id
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan__id
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_request_form_view
+msgid "Inspection"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__inspection_closed_at
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__inspection_closed_at
+msgid "Inspection Closed At"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__inspection_closed_by
+msgid "Inspection Closed By"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.actions.act_window,name:maintenance_inspection.maintenance_inspection_item_act_window
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan__inspection_item_ids
+#: model:ir.ui.menu,name:maintenance_inspection.maintenance_inspection_item_menu
+msgid "Inspection Item"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__inspection_line_ids
+msgid "Inspection Line"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__instruction
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__instruction
+msgid "Instruction"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__item_id
+msgid "Item"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model,name:maintenance_inspection.model_maintenance_inspection_item
+msgid "Item of evaluation"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item____last_update
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line____last_update
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan____last_update
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__write_uid
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__write_date
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model,name:maintenance_inspection.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model,name:maintenance_inspection.model_maintenance_inspection_line
+msgid "Maintenance Inspection Line"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model,name:maintenance_inspection.model_maintenance_plan
+msgid "Maintenance Plan"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model,name:maintenance_inspection.model_maintenance_request
+msgid "Maintenance Request"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__name
+msgid "Name"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_kanban_view
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_tree_view
+msgid "Refuse"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__request_id
+msgid "Request"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__result
+msgid "Result"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__result_description
+msgid "Result Description"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_request_form_view
+msgid "Set inspection"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields.selection,name:maintenance_inspection.selection__maintenance_inspection_line__result__success
+msgid "Success"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model:ir.model.fields.selection,name:maintenance_inspection.selection__maintenance_inspection_line__result__todo
+msgid "Todo"
+msgstr ""
