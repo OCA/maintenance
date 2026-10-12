@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -12,6 +12,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_request_form_view
+msgid "<span>By</span>"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_request_form_view
+msgid "<span>Inspection closed at</span>"
+msgstr ""
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__active
@@ -43,17 +53,14 @@ msgid "Created on"
 msgstr ""
 
 #. module: maintenance_inspection
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment__display_name
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__display_name
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__display_name
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan__display_name
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__display_name
-msgid "Display Name"
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_kanban_view
+msgid "Delete"
 msgstr ""
 
 #. module: maintenance_inspection
-#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_kanban_view
-msgid "Dropdown menu"
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__display_name
+#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__display_name
+msgid "Display Name"
 msgstr ""
 
 #. module: maintenance_inspection
@@ -72,11 +79,8 @@ msgid "Has Inspection"
 msgstr ""
 
 #. module: maintenance_inspection
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__id
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__id
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan__id
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__id
 msgid "ID"
 msgstr ""
 
@@ -125,15 +129,6 @@ msgid "Item of evaluation"
 msgstr ""
 
 #. module: maintenance_inspection
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment____last_update
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item____last_update
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line____last_update
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan____last_update
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request____last_update
-msgid "Last Modified on"
-msgstr ""
-
-#. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__write_uid
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__write_uid
 msgid "Last Updated by"
@@ -143,6 +138,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__write_date
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__write_date
 msgid "Last Updated on"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_kanban_view
+msgid "Last edited by"
 msgstr ""
 
 #. module: maintenance_inspection
@@ -204,4 +204,9 @@ msgstr ""
 #. module: maintenance_inspection
 #: model:ir.model.fields.selection,name:maintenance_inspection.selection__maintenance_inspection_line__result__todo
 msgid "Todo"
+msgstr ""
+
+#. module: maintenance_inspection
+#: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_kanban_view
+msgid "on"
 msgstr ""
