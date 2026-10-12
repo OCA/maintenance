@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="maintenance.location" id="location_building_a">
+        <field name="name">Building A</field>
+        <field name="description">Main office building</field>
+    </record>
+
+    <record model="maintenance.location" id="location_building_a_l1">
+        <field name="name">Level 1</field>
+        <field name="parent_id" ref="location_building_a" />
+    </record>
+
+    <record model="maintenance.location" id="location_building_a_l2">
+        <field name="name">Level 2</field>
+        <field name="parent_id" ref="location_building_a" />
+    </record>
+
+    <record model="maintenance.location" id="location_building_b">
+        <field name="name">Building B</field>
+        <field name="description">Secondary building</field>
+    </record>
+
+    <record model="maintenance.location" id="location_warehouse">
+        <field name="name">Warehouse</field>
+        <field name="description">Storage and logistics area</field>
+        <field name="parent_id" ref="location_building_b" />
+    </record>
+
+    <record model="maintenance.location" id="location_workshop">
+        <field name="name">Workshop</field>
+        <field name="description">Maintenance and repair workshop</field>
+        <field name="parent_id" ref="location_building_b" />
+    </record>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="maintenance.equipment" id="maintenance.equipment_computer3">
+        <field name="location_id" ref="maintenance_location.location_workshop" />
+    </record>
+    <record model="maintenance.equipment" id="maintenance.equipment_computer5">
+        <field name="location_id" ref="maintenance_location.location_workshop" />
+    </record>
+    <record model="maintenance.equipment" id="maintenance.equipment_computer9">
+        <field name="location_id" ref="maintenance_location.location_workshop" />
+    </record>
+    <record model="maintenance.equipment" id="maintenance.equipment_computer11">
+        <field name="location_id" ref="maintenance_location.location_workshop" />
+    </record>
+</odoo>
