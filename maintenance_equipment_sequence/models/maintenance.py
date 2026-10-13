@@ -63,17 +63,24 @@ class MaintenanceEquipmentCategory(models.Model):
                 sequence = category.sequence_id._get_current_sequence()
                 sequence.sudo().number_next = category.sequence_number_next
 
-    @api.model
-    def create(self, vals):
-        if not vals.get("sequence_id", False):
-            if vals.get("sequence_prefix", False):
-                vals["sequence_id"] = self.sudo()._create_sequence(vals).id
-        else:
-            vals["sequence_prefix"] = (
-                self.env["ir.sequence"].browse(vals["sequence_id"]).prefix
-            )
-        result = super().create(vals)
-        self._compute_equipment_code()
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if not vals.get("sequence_id"):
+                if vals.get("sequence_prefix"):
+                    vals["sequence_id"] = self.sudo()._create_sequence(vals).id
+        # Batch-read prefixes for provided sequence IDs
+        sequence_ids = {
+            vals["sequence_id"] for vals in vals_list if vals.get("sequence_id")
+        }
+        if sequence_ids:
+            sequences = self.env["ir.sequence"].browse(list(sequence_ids))
+            prefix_map = {seq.id: seq.prefix for seq in sequences}
+            for vals in vals_list:
+                if vals.get("sequence_id"):
+                    vals["sequence_prefix"] = prefix_map.get(vals["sequence_id"])
+        result = super().create(vals_list)
+        result._compute_equipment_code()
         return result
 
     def write(self, vals):
@@ -107,18 +114,19 @@ class MaintenanceEquipmentCategory(models.Model):
 class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
-    @api.model
-    def create(self, vals):
-        equipment = super().create(vals)
-        if equipment.category_id and not equipment.serial_no:
-            sequence_id = (
-                self.env["maintenance.equipment.category"]
-                .browse(vals["category_id"])
-                .sequence_id
+    @api.model_create_multi
+    def create(self, vals_list):
+        equipments = super().create(vals_list)
+        category_ids = {eq.category_id.id for eq in equipments if eq.category_id}
+        if category_ids:
+            categories = self.env["maintenance.equipment.category"].browse(
+                list(category_ids)
             )
-            if sequence_id:
-                equipment.serial_no = sequence_id._next()
-        return equipment
+            seq_map = {cat.id: cat.sequence_id for cat in categories if cat.sequence_id}
+            for equipment in equipments:
+                if not equipment.serial_no and equipment.category_id.id in seq_map:
+                    equipment.serial_no = seq_map[equipment.category_id.id]._next()
+        return equipments
 
     def write(self, vals):
         result = super().write(vals)
