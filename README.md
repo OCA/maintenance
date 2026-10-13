@@ -37,6 +37,7 @@ addon | version | maintainers | summary
 [maintenance_helpdesk_mgmt](maintenance_helpdesk_mgmt/) | 18.0.1.1.1 |  | Allows you to link Helpdesk Tickets with maintenance requests
 [maintenance_inspection](maintenance_inspection/) | 18.0.1.0.0 |  | Allow to manage inspections inside Preventive requests
 [maintenance_location](maintenance_location/) | 18.0.1.0.0 |  | Define a location system for maintenance
+[maintenance_location_hr](maintenance_location_hr/) | 18.0.1.0.0 |  | Assign equipments to locations
 [maintenance_partner](maintenance_partner/) | 18.0.1.0.1 |  | Add Partner information in Maintenance Requests and equipments
 [maintenance_plan](maintenance_plan/) | 18.0.1.0.1 |  | Extends preventive maintenance planning
 [maintenance_plan_activity](maintenance_plan_activity/) | 18.0.1.0.0 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
