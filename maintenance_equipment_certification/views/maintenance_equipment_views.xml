@@ -8,7 +8,7 @@
                 <page name="certifications" string="Certifications">
                     <group>
                         <field name="certificate_ids" nolabel="1" colspan="2">
-                            <list editable="top">
+                            <list editable="top" decoration-muted="not active">
                                 <field name="date" />
                                 <field name="renewal_date" />
                                 <field name="name" />
