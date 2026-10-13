@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -43,11 +43,8 @@ msgid "Created on"
 msgstr ""
 
 #. module: maintenance_inspection
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment__display_name
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__display_name
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__display_name
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan__display_name
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -72,11 +69,8 @@ msgid "Has Inspection"
 msgstr ""
 
 #. module: maintenance_inspection
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment__id
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__id
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__id
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan__id
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__id
 msgid "ID"
 msgstr ""
 
@@ -122,15 +116,6 @@ msgstr ""
 #. module: maintenance_inspection
 #: model:ir.model,name:maintenance_inspection.model_maintenance_inspection_item
 msgid "Item of evaluation"
-msgstr ""
-
-#. module: maintenance_inspection
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment____last_update
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item____last_update
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line____last_update
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan____last_update
-#: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request____last_update
-msgid "Last Modified on"
 msgstr ""
 
 #. module: maintenance_inspection
