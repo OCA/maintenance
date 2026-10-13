@@ -34,3 +34,18 @@ class TestMaintenanceRequestSequence(TransactionCase):
 
         res = self.env["maintenance.request"].name_search(request_2.code)
         self.assertTrue(res)
+
+    def test_maintenance_request_sequence_multi(self):
+        """Requests created in batch get the sequence of their own team."""
+        requests = self.env["maintenance.request"].create(
+            [
+                {"name": "Req A", "maintenance_team_id": self.team_id.id},
+                {"name": "Req B", "maintenance_team_id": self.team_id_2.id},
+                {"name": "Req C", "maintenance_team_id": self.team_id.id},
+            ]
+        )
+        self.assertIn("MT-TEST", requests[0].code)
+        self.assertIn("MT-TEST", requests[2].code)
+        self.assertNotEqual(requests[0].code, requests[2].code)
+        # team_id_2 has no sequence of its own, so the default one is used
+        self.assertTrue(requests[1].code.startswith("MR"))

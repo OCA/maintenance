@@ -12,13 +12,24 @@ class MaintenanceRequest(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
-        for vals in vals_list:
-            if vals.get("code", "/") == "/":
-                team_id = vals.get("maintenance_team_id")
-                sequence = self.env["maintenance.team"].browse(
-                    team_id
-                ).sequence_id or self.env.ref(
-                    "maintenance_request_sequence.seq_maintenance_request_auto"
+        pending_vals = [vals for vals in vals_list if vals.get("code", "/") == "/"]
+        if pending_vals:
+            team_ids = {
+                vals["maintenance_team_id"]
+                for vals in pending_vals
+                if vals.get("maintenance_team_id")
+            }
+            # Browse all the teams at once so their sequence is read in a
+            # single query instead of one query per request being created.
+            teams = self.env["maintenance.team"].browse(team_ids)
+            team_sequences = {team.id: team.sequence_id for team in teams}
+            default_sequence = self.env.ref(
+                "maintenance_request_sequence.seq_maintenance_request_auto"
+            )
+            for vals in pending_vals:
+                sequence = (
+                    team_sequences.get(vals.get("maintenance_team_id"))
+                    or default_sequence
                 )
                 vals["code"] = sequence.next_by_id()
         return super().create(vals_list)
