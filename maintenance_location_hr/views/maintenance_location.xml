@@ -13,7 +13,7 @@
         />
         <field name="arch" type="xml">
             <field name="parent_id" position="after">
-                <field name="owner_id" />
+                <field name="owner_id" widget="many2one_avatar_user" />
             </field>
         </field>
     </record>
@@ -45,7 +45,7 @@
         />
         <field name="arch" type="xml">
             <field name="complete_name" position="after">
-                <field name="owner_id" />
+                <field name="owner_id" widget="many2one_avatar_user" />
             </field>
         </field>
     </record>
