@@ -4,7 +4,7 @@
         <field name="name">maintenance.equipment.certificate.list</field>
         <field name="model">maintenance.equipment.certificate</field>
         <field name="arch" type="xml">
-            <list>
+            <list decoration-muted="not active">
                 <field name="name" />
                 <field name="certificate_number" />
                 <field name="equipment_id" />
