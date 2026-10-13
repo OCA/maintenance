@@ -1,0 +1,282 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_certification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-07-08 16:46+0000\n"
+"Last-Translator: Laura V <laura.valls@forgeflow.com>\n"
+"Language-Team: none\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
+
+#. module: maintenance_equipment_certification
+#: model:mail.template,description:maintenance_equipment_certification.mail_template_certificate_expiration
+msgid ""
+"\n"
+"            Sent automatically when a certificate is approaching its renewal date.\n"
+"        "
+msgstr ""
+"\n"
+"            Sendes automatisk, når et certifikat nærmer sig sin "
+"fornyelsesdato.\n"
+"        "
+
+#. module: maintenance_equipment_certification
+#: model:mail.template,body_html:maintenance_equipment_certification.mail_template_certificate_expiration
+msgid ""
+"<div>\n"
+"                <t t-set=\"user\" t-value=\"object.equipment_id.technician_user_id or object.equipment_id.owner_user_id\"/>\n"
+"                Dear <t t-out=\"user.name or 'Team'\">Team</t>,\n"
+"                <br/><br/>\n"
+"                The following certificate is approaching its expiration date\n"
+"                and requires your attention:\n"
+"                <br/><br/>\n"
+"                <strong>Certificate:</strong>\n"
+"                <t t-out=\"object.name or ''\">Certificate name</t>\n"
+"                <br/>\n"
+"                <t t-if=\"object.certificate_number\">\n"
+"                <strong>Number:</strong>\n"
+"                <t t-out=\"object.certificate_number\">CERT-001</t>\n"
+"                <br/>\n"
+"            </t>\n"
+"                <strong>Equipment:</strong>\n"
+"                <t t-out=\"object.equipment_id.name or ''\">Equipment name</t>\n"
+"                <br/>\n"
+"                <strong>Renewal Date:</strong>\n"
+"                <t t-out=\"format_date(object.renewal_date)\">2026-12-31</t>\n"
+"                <br/><br/>\n"
+"                Please take the necessary steps to renew this certificate\n"
+"                before it expires.\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div>\n"
+"                <t t-set=\"user\" t-"
+"value=\"object.equipment_id.technician_user_id or "
+"object.equipment_id.owner_user_id\"/>\n"
+"                Kære <t t-out=\"user.name or 'Team'\">Team</t>,\n"
+"                <br/><br/>\n"
+"                Følgende certifikat nærmer sig sin udløbsdato\n"
+"                og kræver din opmærksomhed:\n"
+"                <br/><br/>\n"
+"                <strong>Certifikat:</strong>\n"
+"                <t t-out=\"object.name or ''\">Certificate name</t>\n"
+"                <br/>\n"
+"                <t t-if=\"object.certificate_number\">\n"
+"                <strong>Nummer:</strong>\n"
+"                <t t-out=\"object.certificate_number\">CERT-001</t>\n"
+"                <br/>\n"
+"            </t>\n"
+"                <strong>Udstyr:</strong>\n"
+"                <t t-out=\"object.equipment_id.name or ''\">Equipment name</"
+"t>\n"
+"                <br/>\n"
+"                <strong>Fornyelsesdato:</strong>\n"
+"                <t t-out=\"format_date(object.renewal_date)\">2026-12-31</t>"
+"\n"
+"                <br/><br/>\n"
+"                Tag venligst de nødvendige skridt til at forny dette "
+"certifikat,\n"
+"                inden det udløber.\n"
+"            </div>\n"
+"        "
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__active
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: maintenance_equipment_certification
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.maintenance_equipment_certificate_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.maintenance_equipment_certificate_view_search
+msgid "Archived"
+msgstr "Arkiveret"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__certificate_file
+msgid "Certificate"
+msgstr "Certifikat"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_res_config_settings__cert_expiration_notify_enabled
+msgid "Certificate Expiration Alert"
+msgstr "Certifikatudløbsadvarsel"
+
+#. module: maintenance_equipment_certification
+#: model:mail.template,name:maintenance_equipment_certification.mail_template_certificate_expiration
+msgid "Certificate Expiration Reminder"
+msgstr "Påmindelse om certifikatudløb"
+
+#. module: maintenance_equipment_certification
+#: model:mail.template,subject:maintenance_equipment_certification.mail_template_certificate_expiration
+msgid ""
+"Certificate Expiring: {{ object.name }} – {{ object.equipment_id.name }}"
+msgstr "Certifikat udløber: {{ object.name }} – {{ object.equipment_id.name }}"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__certificate_number
+msgid "Certificate Number"
+msgstr "Certifikatnummer"
+
+#. module: maintenance_equipment_certification
+#: model:ir.actions.act_window,name:maintenance_equipment_certification.certificate_reminder_rule_action
+#: model:ir.ui.menu,name:maintenance_equipment_certification.menu_certificate_reminder_rule
+msgid "Certificate Reminder Rules"
+msgstr "Regler for certifikatpåmindelse"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model,name:maintenance_equipment_certification.model_maintenance_certificate_reminder_rule
+msgid "Certificate expiration reminder rule"
+msgstr "Regel for påmindelse om certifikatudløb"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__certificate_filename
+msgid "Certificate file name"
+msgstr "Certifikatets filnavn"
+
+#. module: maintenance_equipment_certification
+#: model:ir.actions.act_window,name:maintenance_equipment_certification.maintenance_equipment_certificate_action
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment__certificate_ids
+#: model:ir.ui.menu,name:maintenance_equipment_certification.menu_maintenance_certificate
+msgid "Certificates"
+msgstr "Certifikater"
+
+#. module: maintenance_equipment_certification
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.hr_equipment_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.res_config_settings_view_form
+msgid "Certifications"
+msgstr "Certificeringer"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model,name:maintenance_equipment_certification.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationsindstillinger"
+
+#. module: maintenance_equipment_certification
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.res_config_settings_view_form
+msgid "Configure Reminder Rules"
+msgstr "Konfigurér påmindelsesregler"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__create_uid
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__create_uid
+msgid "Created by"
+msgstr "Oprettet af"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__create_date
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__create_date
+msgid "Created on"
+msgstr "Oprettet den"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__date
+msgid "Date"
+msgstr "Dato"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__days_before
+msgid "Days Before Expiration"
+msgstr "Dage før udløb"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Vis navn"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__equipment_id
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.maintenance_equipment_certificate_view_search
+msgid "Equipment"
+msgstr "Udstyr"
+
+#. module: maintenance_equipment_certification
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.res_config_settings_view_form
+msgid "Expiration Alert"
+msgstr "Udløbsadvarsel"
+
+#. module: maintenance_equipment_certification
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.maintenance_equipment_certificate_view_search
+msgid "Expiring"
+msgstr "Udløber"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,help:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__days_before
+msgid "How many days before the renewal date to schedule the reminder."
+msgstr "Hvor mange dage før fornyelsesdatoen påmindelsen skal planlægges."
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__id
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__id
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__write_uid
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__write_uid
+msgid "Last Updated by"
+msgstr "Sidst opdateret af"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__write_date
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__write_date
+msgid "Last Updated on"
+msgstr "Sidst opdateret den"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model,name:maintenance_equipment_certification.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Vedligeholdelsesudstyr"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model,name:maintenance_equipment_certification.model_maintenance_equipment_certificate
+msgid "Maintenance equipment certificate"
+msgstr "Vedligeholdelsesudstyrscertifikat"
+
+#. module: maintenance_equipment_certification
+#: model:ir.actions.server,name:maintenance_equipment_certification.ir_cron_notify_expiring_certificates_ir_actions_server
+msgid "Maintenance: Notify Expiring Certificates"
+msgstr "Vedligeholdelse: Underret om udløbende certifikater"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__name
+msgid "Name"
+msgstr "Navn"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__notes
+msgid "Notes"
+msgstr "Noter"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__expiration_notify_count
+msgid "Notifications Sent"
+msgstr "Underretninger sendt"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__renewal_date
+msgid "Renewal Date"
+msgstr "Fornyelsesdato"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__name
+msgid "Rule Name"
+msgstr "Regelnavn"
+
+#. module: maintenance_equipment_certification
+#: model:ir.model.fields,help:maintenance_equipment_certification.field_res_config_settings__cert_expiration_notify_enabled
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.res_config_settings_view_form
+msgid "Send an email notification when a certificate is about to expire."
+msgstr "Send en e-mail-underretning, når et certifikat er ved at udløbe."
