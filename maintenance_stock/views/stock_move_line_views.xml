@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="stock_move_line_view_search" model="ir.ui.view">
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.stock_move_line_view_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='location_id']" position="after">
+                <field name="maintenance_equipment_id" />
+                <field name="maintenance_request_id" />
+            </xpath>
+            <xpath expr="//filter[@name='done']" position="after">
+                <separator />
+                <filter
+                    string="Maintenance Request consumption"
+                    name="maintenance_request_consumption"
+                    domain="[('maintenance_request_id', '!=', False)]"
+                />
+            </xpath>
+            <xpath expr="//filter[@name='groupby_product_id']" position="before">
+                <filter
+                    string="To"
+                    name="groupby_location_dest_id"
+                    domain="[]"
+                    context="{'group_by': 'location_dest_id'}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_move_line_tree" model="ir.ui.view">
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_move_line_tree" />
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field
+                    name="maintenance_request_id"
+                    column_invisible="not context.get('show_maintenance_request_id', False)"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_move_line_form" model="ir.ui.view">
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_move_line_form" />
+        <field name="arch" type="xml">
+            <field name="owner_id" position="after">
+                <field
+                    name="maintenance_equipment_id"
+                    invisible="maintenance_request_id == False"
+                />
+                <field
+                    name="maintenance_request_id"
+                    invisible="maintenance_request_id == False"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="stock_move_line_action" model="ir.actions.act_window">
+        <field name="name">Product Moves</field>
+        <field name="res_model">stock.move.line</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">list,kanban,pivot,form</field>
+        <field name="view_id" ref="stock.view_move_line_tree" />
+        <field name="domain">[('maintenance_request_id', '!=', False)]</field>
+        <field name="context">{
+            'search_default_done': 1,
+            'search_default_groupby_product_id': 1,
+            'show_maintenance_request_id': True,
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+            There's no product move yet
+          </p>
+        </field>
+    </record>
+
+    <menuitem
+        action="stock_move_line_action"
+        id="stock_move_line_menu"
+        parent="maintenance.maintenance_reporting"
+        sequence="150"
+    />
+</odoo>
