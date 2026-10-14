@@ -25,7 +25,6 @@
                     widget="many2many_tags"
                     options="{'no_create_edit': True}"
                 />
-                <field name="equipment_count" invisible="1" />
             </field>
         </field>
     </record>
