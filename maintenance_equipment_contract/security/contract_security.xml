@@ -6,8 +6,7 @@
         <field name="domain_force">[("equipment_ids",'!=',False)]</field>
         <field
             name="groups"
-            eval="[
-            (4,ref('maintenance.group_equipment_manager'))]"
+            eval="[Command.link(ref('maintenance.group_equipment_manager'))]"
         />
     </record>
 </odoo>
