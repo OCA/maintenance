@@ -1,4 +1,4 @@
-# Copyright 2026 Tecnativa - Christian Ramos
+# Copyright 2026 Escodoo - Gabriel Medice
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from odoo.tests.common import TransactionCase
 
