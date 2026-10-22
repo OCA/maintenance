@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 19.0.1.0.0 |  | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 19.0.1.0.0 |  | Maintenance Equipment Status
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 19.0.1.0.0 | <a href='https://github.com/etobella'><img src='https://github.com/etobella.png' width='32' height='32' style='border-radius:50%;' alt='etobella'/></a> | Adds category tags to equipment
+[maintenance_location](maintenance_location/) | 19.0.1.0.0 |  | Define a location system for maintenance
 [maintenance_plan](maintenance_plan/) | 19.0.1.0.1 |  | Extends preventive maintenance planning
 [maintenance_product](maintenance_product/) | 19.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
 [maintenance_project](maintenance_project/) | 19.0.1.0.0 |  | Adds projects to maintenance equipments and requests
