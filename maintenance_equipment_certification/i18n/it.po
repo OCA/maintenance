@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-06-04 10:26+0000\n"
+"PO-Revision-Date: 2026-10-22 12:46+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_equipment_certification
 #: model:mail.template,description:maintenance_equipment_certification.mail_template_certificate_expiration
@@ -24,6 +24,10 @@ msgid ""
 "date.\n"
 "        "
 msgstr ""
+"\n"
+"            Inviato automaticamente quando un certificato si avvicina alla "
+"data di rinnovo.\n"
+"        "
 
 #. module: maintenance_equipment_certification
 #: model:mail.template,body_html:maintenance_equipment_certification.mail_template_certificate_expiration
@@ -59,17 +63,46 @@ msgid ""
 "            </div>\n"
 "        "
 msgstr ""
+"<div>\n"
+"                <t t-set=\"user\" t-"
+"value=\"object.equipment_id.technician_user_id or "
+"object.equipment_id.owner_user_id\"/>\n"
+"                Spettabile <t t-out=\"user.name or 'Team'\">Team</t>,\n"
+"                <br/><br/>\n"
+"                il seguente certificato si sta avvicinando alla scadenza\n"
+"                e richiede attenzione:\n"
+"                <br/><br/>\n"
+"                <strong>Certificato:</strong>\n"
+"                <t t-out=\"object.name or ''\">Nome certificato</t>\n"
+"                <br/>\n"
+"                <t t-if=\"object.certificate_number\">\n"
+"                <strong>Numero:</strong>\n"
+"                <t t-out=\"object.certificate_number\">CERT-001</t>\n"
+"                <br/>\n"
+"            </t>\n"
+"                <strong>Attrezzatura:</strong>\n"
+"                <t t-out=\"object.equipment_id.name or ''\">Nome "
+"attrezzatura</t>\n"
+"                <br/>\n"
+"                <strong>Data rinnovo:</strong>\n"
+"                <t t-out=\"format_date(object.renewal_date)\">2026-12-31</t>"
+"\n"
+"                <br/><br/>\n"
+"                Attivare i passi necessari per rinnovare questo certificato\n"
+"                prima della scadenza.\n"
+"            </div>\n"
+"        "
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__active
 msgid "Active"
-msgstr ""
+msgstr "Attiva"
 
 #. module: maintenance_equipment_certification
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.maintenance_equipment_certificate_view_form
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.maintenance_equipment_certificate_view_search
 msgid "Archived"
-msgstr ""
+msgstr "In archivio"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__certificate_file
@@ -79,40 +112,41 @@ msgstr "Certificato"
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_res_config_settings__cert_expiration_notify_enabled
 msgid "Certificate Expiration Alert"
-msgstr ""
+msgstr "Avviso scadenza certificato"
 
 #. module: maintenance_equipment_certification
 #: model:mail.template,name:maintenance_equipment_certification.mail_template_certificate_expiration
 msgid "Certificate Expiration Reminder"
-msgstr ""
+msgstr "Promemoria scadenza certificato"
 
 #. module: maintenance_equipment_certification
 #: model:mail.template,subject:maintenance_equipment_certification.mail_template_certificate_expiration
 msgid ""
 "Certificate Expiring: {{ object.name }} – {{ object.equipment_id.name }}"
 msgstr ""
+"Certificato in scadenza: {{ object.name }} – {{ object.equipment_id.name }}"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__certificate_number
 msgid "Certificate Number"
-msgstr ""
+msgstr "Numero certificato"
 
 #. module: maintenance_equipment_certification
 #: model:ir.actions.act_window,name:maintenance_equipment_certification.certificate_reminder_rule_action
 #: model:ir.ui.menu,name:maintenance_equipment_certification.menu_certificate_reminder_rule
 msgid "Certificate Reminder Rules"
-msgstr ""
+msgstr "Regole promemoria certificato"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model,name:maintenance_equipment_certification.model_maintenance_certificate_reminder_rule
 msgid "Certificate expiration reminder rule"
-msgstr ""
+msgstr "Regola promemoria scadenza certificato"
 
 #. module: maintenance_equipment_certification
 #. odoo-python
 #: code:addons/maintenance_equipment_certification/models/maintenance_equipment_certificate.py:0
 msgid "Certificate expiration: no assignee to notify"
-msgstr ""
+msgstr "Scadenza certificato: nessun riferimento per la segnalazione"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__certificate_filename
@@ -135,12 +169,12 @@ msgstr "Certificati"
 #. module: maintenance_equipment_certification
 #: model:ir.model,name:maintenance_equipment_certification.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Impostazioni configurazione"
 
 #. module: maintenance_equipment_certification
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.res_config_settings_view_form
 msgid "Configure Reminder Rules"
-msgstr ""
+msgstr "Configura regole promemoria"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__create_uid
@@ -162,7 +196,7 @@ msgstr "Data"
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__days_before
 msgid "Days Before Expiration"
-msgstr ""
+msgstr "Giorni prima della scadenza"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__display_name
@@ -181,17 +215,17 @@ msgstr "Attrezzatura"
 #. module: maintenance_equipment_certification
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.res_config_settings_view_form
 msgid "Expiration Alert"
-msgstr ""
+msgstr "Avviso scadenza"
 
 #. module: maintenance_equipment_certification
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.maintenance_equipment_certificate_view_search
 msgid "Expiring"
-msgstr ""
+msgstr "Scadenza"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,help:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__days_before
 msgid "How many days before the renewal date to schedule the reminder."
-msgstr ""
+msgstr "Giorni di anticipo sulla data rinnovo per programmare il promemoria."
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__id
@@ -226,7 +260,7 @@ msgstr "Certificato attrezzatura manutenzione"
 #. module: maintenance_equipment_certification
 #: model:ir.actions.server,name:maintenance_equipment_certification.ir_cron_notify_expiring_certificates_ir_actions_server
 msgid "Maintenance: Notify Expiring Certificates"
-msgstr ""
+msgstr "Manutenzione: notifica certificati in scadenza"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__name
@@ -241,23 +275,23 @@ msgstr "Note"
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__expiration_notify_count
 msgid "Notifications Sent"
-msgstr ""
+msgstr "Notifica inviata"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_equipment_certificate__renewal_date
 msgid "Renewal Date"
-msgstr ""
+msgstr "Data rinnovo"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,field_description:maintenance_equipment_certification.field_maintenance_certificate_reminder_rule__name
 msgid "Rule Name"
-msgstr ""
+msgstr "Nome regola"
 
 #. module: maintenance_equipment_certification
 #: model:ir.model.fields,help:maintenance_equipment_certification.field_res_config_settings__cert_expiration_notify_enabled
 #: model_terms:ir.ui.view,arch_db:maintenance_equipment_certification.res_config_settings_view_form
 msgid "Send an email notification when a certificate is about to expire."
-msgstr ""
+msgstr "Invia una notifica e-mail quando il certificato sta per scadere."
 
 #~ msgid "Last Modified on"
 #~ msgstr "Ultima modifica il"
