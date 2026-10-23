@@ -53,8 +53,8 @@ class ProjectProject(models.Model):
         action = self.env["ir.actions.actions"]._for_xml_id(
             "maintenance.hr_equipment_request_action"
         )
-        action["domain"] = [("project_id", "=", self.id), ("stage_id.done", "=", False)]
-        action["context"] = {"default_project_id": self.id}
+        action["domain"] = [("project_id", "=", self.id)]
+        action["context"] = {"default_project_id": self.id, "search_default_todo": 1}
         return action
 
     def _get_stat_buttons(self):
