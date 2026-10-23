@@ -1,0 +1,192 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* maintenance_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2020-10-02 16:16+0000\n"
+"Last-Translator: David Alonso (Solvos) <david.alonso@solvos.es>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10\n"
+
+#. module: maintenance_stock
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.hr_equipment_view_form
+msgid "<span class=\"o_stat_text\">Picking list</span>"
+msgstr "<span class=\"o_stat_text\">Lista de albaranes</span>"
+
+#. module: maintenance_stock
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.hr_equipment_view_form
+msgid "<span class=\"o_stat_text\">Product Moves</span>"
+msgstr "<span class=\"o_stat_text\">Movimientos de producto</span>"
+
+#. module: maintenance_stock
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.hr_equipment_view_form
+msgid "<span class=\"o_stat_text\">Stock Moves</span>"
+msgstr "<span class=\"o_stat_text\">Movimientos de stock</span>"
+
+#. module: maintenance_stock
+#: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_equipment__allow_consumptions
+#: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_request__allow_consumptions
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.hr_equipment_request_view_search
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.hr_equipment_view_search
+msgid "Allow Consumptions"
+msgstr "Permitir consumos"
+
+#. module: maintenance_stock
+#: code:addons/maintenance_stock/models/stock_warehouse.py:42
+#: model:stock.picking.type,name:maintenance_stock.main_picking_type_cons
+#, python-format
+msgid "Consumption"
+msgstr "Consumo"
+
+#. module: maintenance_stock
+#: model:ir.model.fields,field_description:maintenance_stock.field_stock_warehouse__wh_cons_loc_id
+msgid "Consumption Location"
+msgstr "Ubicación de consumo"
+
+#. module: maintenance_stock
+#: model:ir.model.fields,field_description:maintenance_stock.field_stock_warehouse__cons_type_id
+msgid "Consumption Type"
+msgstr "Tipo de consumo"
+
+#. module: maintenance_stock
+#: code:addons/maintenance_stock/models/stock_warehouse.py:79
+#, python-format
+msgid "Consumptions"
+msgstr "Consumos"
+
+#. module: maintenance_stock
+#: model_terms:ir.actions.act_window,help:maintenance_stock.stock_move_action
+msgid "Create a new stock movement"
+msgstr "Crear nuevo movimiento de stock"
+
+#. module: maintenance_stock
+#: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_equipment__default_consumption_warehouse_id
+#: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_request__default_consumption_warehouse_id
+msgid "Default Consumption Warehouse"
+msgstr "Almacén de consumo por defecto"
+
+#. module: maintenance_stock
+#: model:ir.model.fields,field_description:maintenance_stock.field_stock_move__maintenance_equipment_id
+#: model:ir.model.fields,field_description:maintenance_stock.field_stock_move_line__maintenance_equipment_id
+#: model:ir.model.fields,field_description:maintenance_stock.field_stock_picking__maintenance_equipment_id
+msgid "Equipment"
+msgstr "Equipo"
+
+#. module: maintenance_stock
+#: model:ir.model,name:maintenance_stock.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipo de mantenimiento"
+
+#. module: maintenance_stock
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.view_picking_form
+msgid "Maintenance Info"
+msgstr "Información de Mantenimiento"
+
+#. module: maintenance_stock
+#: model:ir.model,name:maintenance_stock.model_maintenance_request
+#: model:ir.model.fields,field_description:maintenance_stock.field_stock_move__maintenance_request_id
+#: model:ir.model.fields,field_description:maintenance_stock.field_stock_move_line__maintenance_request_id
+#: model:ir.model.fields,field_description:maintenance_stock.field_stock_picking__maintenance_request_id
+msgid "Maintenance Request"
+msgstr "Petición de mantenimiento"
+
+#. module: maintenance_stock
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.stock_move_line_view_search
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.view_move_search
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.view_picking_internal_search
+msgid "Maintenance Request consumption"
+msgstr "Consumo de la petición de mantenimiento"
+
+#. module: maintenance_stock
+#: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_request__stock_picking_ids
+msgid "Picking list"
+msgstr "Lista de albaranes"
+
+#. module: maintenance_stock
+#: model:ir.actions.act_window,name:maintenance_stock.stock_move_line_action
+#: model:ir.ui.menu,name:maintenance_stock.stock_move_line_menu
+msgid "Product Moves"
+msgstr "Movimientos de producto"
+
+#. module: maintenance_stock
+#: model:ir.model,name:maintenance_stock.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de producto (línea de movimiento de stock)"
+
+#. module: maintenance_stock
+#: code:addons/maintenance_stock/models/stock_warehouse.py:65
+#, python-format
+msgid "Sequence consumption"
+msgstr "Secuencia del consumo"
+
+#. module: maintenance_stock
+#: model:ir.model,name:maintenance_stock.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de stock"
+
+#. module: maintenance_stock
+#: model:ir.actions.act_window,name:maintenance_stock.stock_move_action
+#: model:ir.ui.menu,name:maintenance_stock.stock_move_menu
+msgid "Stock Moves"
+msgstr "Movimientos de stock"
+
+#. module: maintenance_stock
+#: model:ir.model.fields,field_description:maintenance_stock.field_maintenance_equipment__stock_picking_ids
+msgid "Stock Picking"
+msgstr "Recolección de stock"
+
+#. module: maintenance_stock
+#: model_terms:ir.actions.act_window,help:maintenance_stock.stock_move_line_action
+msgid "There's no product move yet"
+msgstr "Aún no hay ningún movimiento de producto"
+
+#. module: maintenance_stock
+#: model_terms:ir.actions.act_window,help:maintenance_stock.stock_move_action
+msgid "This menu gives you the full traceability of inventory\n"
+"            operations on a specific product. You can filter on the product\n"
+"            to see all the past or future movements for the product."
+msgstr ""
+
+#. module: maintenance_stock
+#: model_terms:ir.ui.view,arch_db:maintenance_stock.stock_move_line_view_search
+msgid "To"
+msgstr "Destino"
+
+#. module: maintenance_stock
+#: model:product.product,name:maintenance_stock.product_toner
+#: model:product.template,name:maintenance_stock.product_toner_product_template
+msgid "Toner"
+msgstr "Tóner"
+
+#. module: maintenance_stock
+#: model:ir.model,name:maintenance_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Trasferencia"
+
+#. module: maintenance_stock
+#: model:product.product,uom_name:maintenance_stock.product_toner
+#: model:product.template,uom_name:maintenance_stock.product_toner_product_template
+msgid "Unit(s)"
+msgstr "Unidad(es)"
+
+#. module: maintenance_stock
+#: model:ir.model,name:maintenance_stock.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: maintenance_stock
+#: model:product.product,weight_uom_name:maintenance_stock.product_toner
+#: model:product.template,weight_uom_name:maintenance_stock.product_toner_product_template
+msgid "kg"
+msgstr "kg"
