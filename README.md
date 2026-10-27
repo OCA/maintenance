@@ -30,6 +30,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_tags](maintenance_equipment_tags/) | 19.0.1.0.0 | <a href='https://github.com/etobella'><img src='https://github.com/etobella.png' width='32' height='32' style='border-radius:50%;' alt='etobella'/></a> | Adds category tags to equipment
 [maintenance_location](maintenance_location/) | 19.0.1.0.0 |  | Define a location system for maintenance
 [maintenance_plan](maintenance_plan/) | 19.0.1.0.1 |  | Extends preventive maintenance planning
+[maintenance_plan_activity](maintenance_plan_activity/) | 19.0.1.0.0 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
 [maintenance_product](maintenance_product/) | 19.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
 [maintenance_project](maintenance_project/) | 19.0.1.0.0 |  | Adds projects to maintenance equipments and requests
 [maintenance_request_employee](maintenance_request_employee/) | 19.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Request Employee
