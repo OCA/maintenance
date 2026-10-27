@@ -49,6 +49,7 @@ addon | version | maintainers | summary
 [maintenance_request_purchase](maintenance_request_purchase/) | 18.0.1.0.0 |  | Allows you to link PO with maintenance requests
 [maintenance_request_repair](maintenance_request_repair/) | 18.0.1.0.0 |  | This is a bridge module between Maintenance and Repair
 [maintenance_request_sequence](maintenance_request_sequence/) | 18.0.1.0.0 |  | Adds sequence to maintenance requests
+[maintenance_request_stage_transition](maintenance_request_stage_transition/) | 18.0.1.0.0 | <a href='https://github.com/etobella'><img src='https://github.com/etobella.png' width='32' height='32' style='border-radius:50%;' alt='etobella'/></a> | Manage transition visibility and management between stages
 [maintenance_request_tags](maintenance_request_tags/) | 18.0.1.0.0 |  | Adds tags to Maintenance Requests
 [maintenance_security](maintenance_security/) | 18.0.2.0.1 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Security
 [maintenance_stock](maintenance_stock/) | 18.0.1.0.1 |  | Links maintenance requests to stock
