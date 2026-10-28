@@ -10,6 +10,7 @@
     "version": "19.0.1.0.0",
     "license": "AGPL-3",
     "depends": ["maintenance"],
+    "uninstall_hook": "uninstall_hook",
     "data": [
         "security/maintenance_security.xml",
         "views/maintenance_views.xml",
