@@ -116,7 +116,7 @@
                                 <field
                                     name="instruction_google_slide"
                                     placeholder="Google Slide Link"
-                                    widget="embed_viewer"
+                                    widget="google_slide_viewer"
                                     invisible="instruction_type != 'google_slide'"
                                     required="instruction_type == 'google_slide'"
                                     nolabel="1"
