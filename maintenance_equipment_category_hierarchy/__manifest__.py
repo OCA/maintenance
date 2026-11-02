@@ -3,8 +3,7 @@
 
 {
     "name": "Maintenance Equipment Category Hierarchy",
-    "summary": """
-        Equipment Categories Hierarchy""",
+    "summary": "Equipment Categories Hierarchy",
     "version": "19.0.1.0.0",
     "license": "AGPL-3",
     "author": "CreuBlanca, Odoo Community Association (OCA)",
