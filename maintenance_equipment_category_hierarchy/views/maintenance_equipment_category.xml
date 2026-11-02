@@ -5,7 +5,7 @@
     <record id="hr_equipment_category_view_tree" model="ir.ui.view">
         <field
             name="name"
-        >maintenance.equipment.category.tree (in maintenance_equipment_category_hierarchy)</field>
+        >maintenance.equipment.category.list (in maintenance_equipment_category_hierarchy)</field>
         <field name="model">maintenance.equipment.category</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_category_view_tree" />
         <field name="arch" type="xml">
@@ -28,7 +28,9 @@
         </field>
     </record>
     <record id="hr_equipment_request_view_search" model="ir.ui.view">
-        <field name="name">maintenance.request.search (in maintenance_location)</field>
+        <field
+            name="name"
+        >maintenance.request.search (in maintenance_equipment_category_hierarchy)</field>
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
         <field name="arch" type="xml">

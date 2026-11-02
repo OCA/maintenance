@@ -10,9 +10,8 @@ class MaintenanceEquipmentCategory(models.Model):
 
     _parent_name = "parent_id"
     _parent_store = True
-    _parent_order = "name"
     _rec_name = "complete_name"
-    _order = "parent_id"
+    _order = "complete_name asc, id"
 
     complete_name = fields.Char(
         compute="_compute_complete_name", store=True, recursive=True
@@ -30,6 +29,7 @@ class MaintenanceEquipmentCategory(models.Model):
     parent_path = fields.Char(index=True)
 
     @api.depends("name", "parent_id.complete_name")
+    @api.depends_context("lang")
     def _compute_complete_name(self):
         for category in self:
             if category.parent_id:
