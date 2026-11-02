@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_category_hierarchy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-12 12:05+0000\n"
+"PO-Revision-Date: 2019-12-12 13:06+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: maintenance_equipment_category_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__child_id
+msgid "Child Categories"
+msgstr "Categorías hijas"
+
+#. module: maintenance_equipment_category_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__complete_name
+msgid "Complete Name"
+msgstr "Nombre completo"
+
+#. module: maintenance_equipment_category_hierarchy
+#. odoo-python
+#: code:addons/maintenance_equipment_category_hierarchy/models/maintenance_equipment_category.py:0
+#, python-format
+msgid "Error ! You cannot create recursive categories."
+msgstr "Error ! No se pueden crear categorías cíclicas."
+
+#. module: maintenance_equipment_category_hierarchy
+#: model:ir.model,name:maintenance_equipment_category_hierarchy.model_maintenance_equipment_category
+msgid "Maintenance Equipment Category"
+msgstr ""
+
+#. module: maintenance_equipment_category_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__parent_id
+msgid "Parent Category"
+msgstr "Categoría Padre"
+
+#. module: maintenance_equipment_category_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#~ msgid "Asset Category"
+#~ msgstr "Categoría de activo"
+
+#~ msgid "Left Parent"
+#~ msgstr "Padre izquierdo"
+
+#~ msgid "Parent Categories"
+#~ msgstr "Categorías Padre"
+
+#~ msgid "Right Parent"
+#~ msgstr "Padre derecho"
