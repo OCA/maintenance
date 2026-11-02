@@ -6,7 +6,7 @@
         <t t-call="web.internal_layout">
             <t
                 t-set="doc"
-                t-value="doc.with_context(lang=doc.user_id.partner_id.lang)"
+                t-value="doc.with_context(lang=doc.owner_user_id.partner_id.lang or doc.env.lang)"
             />
             <div class="page">
                 <div
@@ -26,9 +26,13 @@
                         <strong>Requested By:</strong>
                         <p class="m-0" t-field="doc.owner_user_id" />
                     </div>
-                    <div t-if="doc.request_date" class="col-3">
+                    <div t-if="doc.create_date" class="col-3">
                         <strong>Request Date:</strong>
-                        <p class="m-0" t-field="doc.request_date" />
+                        <p
+                            class="m-0"
+                            t-field="doc.create_date"
+                            t-options='{"widget": "date"}'
+                        />
                     </div>
                     <div t-if="doc.maintenance_type" class="col-3">
                         <strong>Maintenance Type:</strong>
@@ -78,9 +82,9 @@
                         <strong>Team:</strong>
                         <p class="m-0" t-field="doc.maintenance_team_id" />
                     </div>
-                    <div t-if="doc.user_id" class="col-3">
-                        <strong>Responsible:</strong>
-                        <p class="m-0" t-field="doc.user_id" />
+                    <div t-if="doc.user_ids" class="col-3">
+                        <strong>Technicians:</strong>
+                        <p class="m-0" t-field="doc.user_ids" />
                     </div>
                 </div>
                 <div id="description" class="row mt32 mb32">
@@ -97,7 +101,7 @@
             <t t-foreach="docs" t-as="doc">
                 <t
                     t-call="base_maintenance.report_maintenance_request_document"
-                    t-lang="doc.user_id.partner_id.lang"
+                    t-lang="doc.owner_user_id.partner_id.lang or doc.env.lang"
                 />
             </t>
         </t>
@@ -107,7 +111,6 @@
         <field name="model">maintenance.request</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">base_maintenance.report_maintenance_request</field>
-        <field name="report_file">base_maintenance.report_maintenance_request</field>
         <field
             name="print_report_name"
         >'Maintenance Request - %s' % (object.name)</field>
