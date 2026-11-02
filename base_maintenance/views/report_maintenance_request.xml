@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2020 - TODAY, Marcel Savegnago - Escodoo
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
@@ -10,8 +10,8 @@
             />
             <div class="page">
                 <div
-                    class="oe_structure"
                     id="report_maintenance_request_oe_structure"
+                    class="oe_structure"
                 />
                 <h2 class="mt16">
                     <t>
@@ -21,7 +21,7 @@
                 <h3 class="mt16">
                     <span t-field="doc.name" />
                 </h3>
-                <div class="row mt32 mb32" id="informations">
+                <div id="informations" class="row mt32 mb32">
                     <div t-if="doc.owner_user_id" class="col-3">
                         <strong>Requested By:</strong>
                         <p class="m-0" t-field="doc.owner_user_id" />
@@ -43,7 +43,7 @@
                         <p class="m-0" t-field="doc.stage_id" />
                     </div>
                 </div>
-                <div class="row mt32 mb32" id="equipament_informations">
+                <div id="equipament_informations" class="row mt32 mb32">
                     <div t-if="doc.category_id" class="col-3">
                         <strong>Category:</strong>
                         <p class="m-0" t-field="doc.category_id" />
@@ -61,7 +61,7 @@
                         <p class="m-0" t-field="doc.equipment_id.serial_no" />
                     </div>
                 </div>
-                <div class="row mt32 mb32" id="schedule_informations">
+                <div id="schedule_informations" class="row mt32 mb32">
                     <div t-if="doc.schedule_date" class="col-3">
                         <strong>Schedule Date:</strong>
                         <p class="m-0" t-field="doc.schedule_date" />
@@ -83,7 +83,7 @@
                         <p class="m-0" t-field="doc.user_id" />
                     </div>
                 </div>
-                <div class="row mt32 mb32" id="description">
+                <div id="description" class="row mt32 mb32">
                     <div t-if="doc.description" class="col-3">
                         <strong>Description:</strong>
                         <p class="m-0" t-field="doc.description" />
