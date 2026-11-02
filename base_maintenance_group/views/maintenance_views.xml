@@ -10,7 +10,7 @@
     </record>
     <record id="maintenance.menu_maintenance_title" model="ir.ui.menu">
         <field
-            eval="[(4,ref('base_maintenance_group.group_maintenance_user'))]"
+            eval="[(3,ref('base.group_user_regular')),(4,ref('base_maintenance_group.group_maintenance_user'))]"
             name="group_ids"
         />
     </record>
@@ -27,12 +27,6 @@
         />
     </record>
     <record id="maintenance.menu_m_request_form" model="ir.ui.menu">
-        <field
-            eval="[(3,ref('base.group_user')),(4,ref('base_maintenance_group.group_maintenance_user'))]"
-            name="group_ids"
-        />
-    </record>
-    <record id="maintenance.menu_m_request_calendar" model="ir.ui.menu">
         <field
             eval="[(3,ref('base.group_user')),(4,ref('base_maintenance_group.group_maintenance_user'))]"
             name="group_ids"
@@ -59,6 +53,12 @@
     <record id="maintenance.menu_m_reports_losses" model="ir.ui.menu">
         <field
             eval="[(3,ref('base.group_user')),(4,ref('base_maintenance_group.group_maintenance_user'))]"
+            name="group_ids"
+        />
+    </record>
+    <record id="maintenance.maintenance_reporting" model="ir.ui.menu">
+        <field
+            eval="[(4,ref('base_maintenance_group.group_maintenance_user'))]"
             name="group_ids"
         />
     </record>

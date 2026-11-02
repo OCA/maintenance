@@ -11,13 +11,13 @@ from odoo.addons.base_maintenance_group.hooks import uninstall_hook
 class TestUninstallHook(TransactionCase):
     def test_restore_internal_user_access(self):
         internal_group = self.env.ref("base.group_user")
+        regular_group = self.env.ref("base.group_user_regular")
         other_group = self.env["res.groups"].create({"name": "Other menu access"})
         menus = self.env["ir.ui.menu"]
         for xmlid in (
             "maintenance.menu_m_dashboard",
             "maintenance.menu_m_request",
             "maintenance.menu_m_request_form",
-            "maintenance.menu_m_request_calendar",
             "maintenance.menu_equipment_form",
             "maintenance.menu_m_reports",
             "maintenance.menu_m_reports_oee",
@@ -29,14 +29,24 @@ class TestUninstallHook(TransactionCase):
         menus.write({"group_ids": [Command.link(other_group.id)]})
         original_groups = {menu.id: menu.group_ids for menu in menus}
 
+        menu_title = self.env.ref("maintenance.menu_maintenance_title")
+        self.assertNotIn(regular_group, menu_title.group_ids)
+
+        team_access = self.env.ref("maintenance.access_maintenance_team_user")
+        self.assertFalse(team_access.active)
+
         uninstall_hook(self.env)
         for menu in menus:
             self.assertEqual(menu.group_ids, original_groups[menu.id] | internal_group)
+        self.assertIn(regular_group, menu_title.group_ids)
+        self.assertTrue(team_access.active)
 
         # Repeating the hook must leave the same groups in place (idempotency).
         uninstall_hook(self.env)
         for menu in menus:
             self.assertEqual(menu.group_ids, original_groups[menu.id] | internal_group)
+        self.assertIn(regular_group, menu_title.group_ids)
+        self.assertTrue(team_access.active)
 
     def test_missing_menu_xmlid(self):
         internal_group = self.env.ref("base.group_user")
