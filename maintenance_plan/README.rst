@@ -141,6 +141,7 @@ Contributors
 - Alexei Rivera <arivera@archeti.com>
 - Yann Papouin <ypa@decgroupe.com>
 - Yannick Payot <yannick.payot@acsone.eu>
+- Samir Guesmi <samir.guesmi@acsone.eu>
 
 Maintainers
 -----------
