@@ -33,3 +33,12 @@ class TestMaintenanceRequestSequence(TransactionCase):
 
         res = self.env["maintenance.request"].name_search(request_2.code)
         self.assertTrue(res)
+
+    def test_display_name_without_code(self):
+        request = self.env["maintenance.request"].create(
+            {"name": "Request without code", "maintenance_team_id": self.team_id.id}
+        )
+        self.assertEqual(request.display_name, f"[{request.code}] {request.name}")
+
+        request.code = False
+        self.assertEqual(request.display_name, request.name)
