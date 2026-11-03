@@ -49,3 +49,12 @@ class TestMaintenanceRequestSequence(TransactionCase):
         self.assertNotEqual(requests[0].code, requests[2].code)
         # team_id_2 has no sequence of its own, so the default one is used
         self.assertTrue(requests[1].code.startswith("MR"))
+
+    def test_display_name_without_code(self):
+        request = self.env["maintenance.request"].create(
+            {"name": "Request without code", "maintenance_team_id": self.team_id.id}
+        )
+        self.assertEqual(request.display_name, f"[{request.code}] {request.name}")
+
+        request.code = False
+        self.assertEqual(request.display_name, request.name)
