@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from datetime import timedelta
 
-from odoo import fields
+from odoo import Command, fields
 from odoo.exceptions import AccessError
 from odoo.tests.common import TransactionCase
 
@@ -19,7 +19,7 @@ class TestMaintenanceEquipmentCertification(TransactionCase):
                 "name": "Demo User",
                 "login": "demo_cert",
                 "email": "demo@user.com",
-                "group_ids": [(6, 0, [cls.env.ref("base.group_user").id])],
+                "group_ids": [Command.set([cls.env.ref("base.group_user").id])],
             }
         )
         cls.technician = cls.env["res.users"].create(
@@ -28,7 +28,9 @@ class TestMaintenanceEquipmentCertification(TransactionCase):
                 "login": "tech_cert",
                 "email": "tech@example.com",
                 "group_ids": [
-                    (6, 0, [cls.env.ref("maintenance.group_equipment_manager").id]),
+                    Command.set(
+                        [cls.env.ref("maintenance.group_equipment_manager").id]
+                    ),
                 ],
             }
         )
@@ -38,14 +40,28 @@ class TestMaintenanceEquipmentCertification(TransactionCase):
                 "technician_user_id": cls.technician.id,
             }
         )
-        cls.env["ir.config_parameter"].sudo().set_param(_PARAM_ENABLED, "True")
-        cls.rule_30 = cls.env["maintenance.certificate.reminder.rule"].create(
+
+    def setUp(self):
+        super().setUp()
+        self._set_config_param(_PARAM_ENABLED, "True")
+        # Ensure a clean slate of rules for each test method
+        self.env["maintenance.certificate.reminder.rule"].search([]).unlink()
+        self.rule_30 = self.env["maintenance.certificate.reminder.rule"].create(
             {"name": "30 Days Before", "days_before": 30}
         )
 
     # --------
     # Helpers
     # --------
+
+    @classmethod
+    def _set_config_param(cls, key, value):
+        icp = cls.env["ir.config_parameter"].sudo()
+        param = icp.search([("key", "=", key)], limit=1)
+        if param:
+            param.write({"value": str(value)})
+        else:
+            icp.create({"key": key, "value": str(value)})
 
     def _make_certificate(self, renewal_offset_days, **kwargs):
         today = fields.Date.context_today(self.env["maintenance.equipment.certificate"])
@@ -82,7 +98,9 @@ class TestMaintenanceEquipmentCertification(TransactionCase):
         self.user_demo.write(
             {
                 "group_ids": [
-                    (6, 0, [self.env.ref("maintenance.group_equipment_manager").id])
+                    Command.set(
+                        [self.env.ref("maintenance.group_equipment_manager").id]
+                    )
                 ],
             }
         )
@@ -151,11 +169,11 @@ class TestMaintenanceEquipmentCertification(TransactionCase):
         is too far in the future, or the equipment has no responsible
         user."""
         with self.subTest("feature disabled"):
-            self.env["ir.config_parameter"].sudo().set_param(_PARAM_ENABLED, "False")
+            self._set_config_param(_PARAM_ENABLED, "False")
             cert = self._make_certificate(10)
             self._run_cron()
             self.assertEqual(cert.expiration_notify_count, 0)
-            self.env["ir.config_parameter"].sudo().set_param(_PARAM_ENABLED, "True")
+            self._set_config_param(_PARAM_ENABLED, "True")
             cert.unlink()
 
         with self.subTest("no reminder rules"):
@@ -164,9 +182,9 @@ class TestMaintenanceEquipmentCertification(TransactionCase):
             self._run_cron()
             self.assertEqual(cert.expiration_notify_count, 0)
             cert.unlink()
-            self.__class__.rule_30 = self.env[
-                "maintenance.certificate.reminder.rule"
-            ].create({"name": "30 Days Before", "days_before": 30})
+            self.rule_30 = self.env["maintenance.certificate.reminder.rule"].create(
+                {"name": "30 Days Before", "days_before": 30}
+            )
 
         with self.subTest("certificate already expired"):
             cert = self._make_certificate(-5)

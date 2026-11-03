@@ -42,17 +42,30 @@ class MaintenanceEquipmentCertificate(models.Model):
 
     @api.model
     def _cron_notify_expiring_certificates(self):
-        ICP = self.env["ir.config_parameter"].sudo()
-        enabled = ICP.get_param(
-            "maintenance_equipment_certification.expiration_notify_enabled", False
+        param = (
+            self.env["ir.config_parameter"]
+            .sudo()
+            .search(
+                [
+                    (
+                        "key",
+                        "=",
+                        "maintenance_equipment_certification.expiration_notify_enabled",
+                    )
+                ],
+                limit=1,
+            )
         )
-        if not enabled or enabled == "False":
+        enabled = param.value if param else False
+        if not enabled or enabled in ("False", False):
             return False
+
         rules = self.env["maintenance.certificate.reminder.rule"].search(
-            [], order="days_before desc", limit=False
+            [], limit=None, order="days_before desc"
         )
         if not rules:
             return False
+
         template = self.env.ref(
             "maintenance_equipment_certification.mail_template_certificate_expiration",
             raise_if_not_found=False,
