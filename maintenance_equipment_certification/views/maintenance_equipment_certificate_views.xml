@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="maintenance_equipment_certificate_view_list" model="ir.ui.view">
         <field name="name">maintenance.equipment.certificate.list</field>
