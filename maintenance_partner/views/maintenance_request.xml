@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
         <field name="arch" type="xml">
             <field name="equipment_id" position="after">
-                <field name="partner_id" />
+                <field name="partner_id" widget="many2one_avatar" />
             </field>
         </field>
     </record>
@@ -16,7 +16,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
         <field name="arch" type="xml">
             <field name="category_id" position="after">
-                <field name="partner_id" optional="hide" />
+                <field name="partner_id" widget="many2one_avatar" optional="hide" />
             </field>
         </field>
     </record>

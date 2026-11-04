@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='category_id']/.." position="inside">
-                <field name="assigned_partner_id" />
+                <field name="assigned_partner_id" widget="many2one_avatar" />
             </xpath>
         </field>
     </record>
@@ -17,7 +17,11 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
         <field name="arch" type="xml">
             <field name="category_id" position="after">
-                <field name="assigned_partner_id" optional="hide" />
+                <field
+                    name="assigned_partner_id"
+                    widget="many2one_avatar"
+                    optional="hide"
+                />
             </field>
         </field>
     </record>
@@ -30,6 +34,7 @@
                 <field
                     name="assigned_partner_id"
                     t-if="record.assigned_partner_id.raw_value"
+                    widget="many2one_avatar"
                 />
             </field>
         </field>
