@@ -12,7 +12,7 @@
                 <sheet>
                     <group name="info_group">
                         <field name="name" />
-                        <field name="color" />
+                        <field name="color" widget="color_picker" />
                     </group>
                 </sheet>
             </form>
