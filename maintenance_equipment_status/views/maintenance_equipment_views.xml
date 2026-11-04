@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <!-- equipment : views -->
     <record id="hr_equipment_view_form" model="ir.ui.view">
@@ -38,7 +38,7 @@
                 expr="//div[@t-if='record.maintenance_open_count.raw_value']"
                 position="after"
             >
-                <div class="badge badge-primary" t-if="record.status_id.value">
+                <div t-if="record.status_id.value" class="badge badge-primary">
                     <t t-out="record.status_id.value" />
                 </div>
             </xpath>
