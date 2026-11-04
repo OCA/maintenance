@@ -10,7 +10,7 @@
                     <widget
                         name="web_ribbon"
                         title="Archived"
-                        bg_color="bg-danger"
+                        bg_color="text-bg-danger"
                         invisible="active"
                     />
                     <div class="oe_title">
@@ -20,7 +20,9 @@
                         </h1>
                     </div>
                     <group name="categories">
-                        <field name="category_ids" widget="many2many_tags" />
+                        <group>
+                            <field name="category_ids" widget="many2many_tags" />
+                        </group>
                     </group>
                     <group name="notes">
                         <div>
@@ -33,7 +35,7 @@
         </field>
     </record>
     <record id="maintenance_equipment_status_view_tree" model="ir.ui.view">
-        <field name="name">maintenance.equipment.status.tree</field>
+        <field name="name">maintenance.equipment.status.list</field>
         <field name="model">maintenance.equipment.status</field>
         <field name="arch" type="xml">
             <list>
@@ -61,14 +63,15 @@
     <record id="maintenance_equipment_status_action" model="ir.actions.act_window">
         <field name="name">Equipment Statuses</field>
         <field name="res_model">maintenance.equipment.status</field>
+        <field name="view_mode">list,form</field>
         <field
             name="view_id"
             ref="maintenance_equipment_status.maintenance_equipment_status_view_tree"
         />
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">
-            Click to set a new status for your equipments.
-          </p>
+            <p class="o_view_nocontent_smiling_face">
+                Click to set a new status for your equipments.
+            </p>
         </field>
     </record>
     <menuitem

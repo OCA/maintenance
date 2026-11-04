@@ -17,7 +17,7 @@
         </field>
     </record>
     <record id="hr_equipment_view_tree" model="ir.ui.view">
-        <field name="name">equipment.tree</field>
+        <field name="name">equipment.list</field>
         <field name="model">maintenance.equipment</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
         <field name="arch" type="xml">
@@ -38,7 +38,10 @@
                 expr="//div[@t-if='record.maintenance_open_count.raw_value']"
                 position="after"
             >
-                <div t-if="record.status_id.value" class="badge badge-primary">
+                <div
+                    t-if="record.status_id.value"
+                    class="badge rounded-pill text-bg-primary"
+                >
                     <t t-out="record.status_id.value" />
                 </div>
             </xpath>

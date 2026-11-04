@@ -4,6 +4,11 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestMaintenanceEquipment(BaseCommon):
+    _test_user_groups = (
+        "base.group_user",
+        "maintenance.group_equipment_manager",
+    )
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
