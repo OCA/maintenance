@@ -1,0 +1,1 @@
+This module allows to link requests and equipments with partners.
