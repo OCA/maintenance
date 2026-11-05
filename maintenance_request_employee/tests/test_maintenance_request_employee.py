@@ -1,5 +1,6 @@
 # Copyright 2023 Tecnativa - Víctor Martínez
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+from odoo.fields import Command
 from odoo.tests import TransactionCase
 
 
@@ -15,7 +16,7 @@ class TestMaintenanceRequest(TransactionCase):
         maintenance_request = self.env["maintenance.request"].create(
             {
                 "name": "Test Request",
-                "employee_ids": [(6, 0, [self.employee_1.id, self.employee_2.id])],
+                "employee_ids": [Command.set([self.employee_1.id, self.employee_2.id])],
             }
         )
 
