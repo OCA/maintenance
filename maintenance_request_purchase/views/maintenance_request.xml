@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2019 Creu Blanca
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-    <record model="ir.ui.view" id="hr_equipment_request_view_form_button_box">
+    <record id="hr_equipment_request_view_form_button_box" model="ir.ui.view">
         <field
             name="name"
         >maintenance.request.form (in maintenance_equipment_purchase)</field>
