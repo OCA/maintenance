@@ -14,7 +14,7 @@
                 <button
                     name="action_view_maintenance_request"
                     class="oe_stat_button"
-                    icon="fa-wrench"
+                    icon="build"
                     type="object"
                     groups="purchase.group_purchase_user"
                     invisible="not maintenance_request_ids"
@@ -26,18 +26,6 @@
                     />
                 </button>
             </div>
-        </field>
-    </record>
-    <record id="purchase_order_line_search" model="ir.ui.view">
-        <field
-            name="name"
-        >purchase.order.line.search (in maintenance_equipment_purchase)</field>
-        <field name="model">purchase.order.line</field>
-        <field name="inherit_id" ref="purchase.purchase_order_line_search" />
-        <field name="arch" type="xml">
-            <field name="order_id" position="after">
-                <field name="name" />
-            </field>
         </field>
     </record>
 </odoo>
