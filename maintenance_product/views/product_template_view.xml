@@ -6,10 +6,14 @@
         <field name="inherit_id" ref="product.product_template_form_view" />
         <field name="arch" type="xml">
             <xpath expr="//div[@name='options']" position="inside">
-                <div>
-                    <field name="maintenance_ok" />
+                <span class="d-inline-flex">
+                    <field
+                        name="maintenance_ok"
+                        widget="boolean_checkbox"
+                        class="w-auto"
+                    />
                     <label for="maintenance_ok" />
-                </div>
+                </span>
             </xpath>
         </field>
     </record>
