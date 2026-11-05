@@ -92,7 +92,7 @@ class TestAccountMove(BaseCommon):
         self.assertTrue(line_a.equipment_category_id)
         self.assertEqual(len(line_a.equipment_ids), 2)
         self.assertEqual(len(line_b.equipment_ids), 0)
-        equipment = fields.first(equipments)
+        equipment = equipments[:1].sudo()
         self.assertEqual(equipment.name, "Product A")
         self.assertEqual(equipment.note, "<p>Test description product A<br>B</p>")
         self.assertEqual(equipment.category_id.product_category_id, self.categ)
@@ -123,5 +123,5 @@ class TestAccountMove(BaseCommon):
         line_a = invoice.line_ids.filtered(lambda x: x.product_id == self.product_a)
         self.assertEqual(line_a.equipment_category_id, category)
         invoice.action_post()
-        equipment = fields.first(line_a.equipment_ids)
+        equipment = line_a.equipment_ids[:1]
         self.assertEqual(equipment.category_id, category)
