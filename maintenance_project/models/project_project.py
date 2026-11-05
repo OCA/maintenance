@@ -28,7 +28,7 @@ class ProjectProject(models.Model):
         Access to the current equipments for this project
         """
         self.ensure_one()
-        action = self.env["ir.actions.actions"]._for_xml_id(
+        action = self.env["ir.actions.act_window"]._for_xml_id(
             "maintenance.hr_equipment_action"
         )
         action["domain"] = [("project_id", "=", self.id)]
@@ -36,13 +36,18 @@ class ProjectProject(models.Model):
             "default_project_id": self.id,
             "default_create_project_from_equipment": False,
         }
+        if self.equipment_count == 1:
+            action["views"] = [(False, "form")]
+            action["res_id"] = self.equipment_ids.id
         return action
 
-    @api.depends("maintenance_request_ids")
+    @api.depends("maintenance_request_ids.state")
     def _compute_maintenance_request_count(self):
         for project in self:
             project.maintenance_request_count = len(
-                project.maintenance_request_ids.filtered(lambda x: not x.stage_id.done)
+                project.maintenance_request_ids.filtered(
+                    lambda x: x.state not in ("done", "cancelled")
+                )
             )
 
     def action_view_maintenance_request_ids(self):
@@ -50,19 +55,30 @@ class ProjectProject(models.Model):
         Access to the undone maintenance requests for this project
         """
         self.ensure_one()
-        action = self.env["ir.actions.actions"]._for_xml_id(
+        action = self.env["ir.actions.act_window"]._for_xml_id(
             "maintenance.hr_equipment_request_action"
         )
-        action["domain"] = [("project_id", "=", self.id), ("stage_id.done", "=", False)]
+        requests = self.maintenance_request_ids.filtered(
+            lambda x: x.state not in ("done", "cancelled")
+        )
+        action["domain"] = [
+            ("project_id", "=", self.id),
+            ("state", "not in", ["done", "cancelled"]),
+        ]
         action["context"] = {"default_project_id": self.id}
+        if len(requests) == 1:
+            action["views"] = [(False, "form")]
+            action["res_id"] = requests.id
         return action
 
     def _get_stat_buttons(self):
-        buttons = super()._get_stat_buttons()
+        buttons = (
+            super()._get_stat_buttons() if hasattr(super(), "_get_stat_buttons") else []
+        )
         if self.env.user.has_group("maintenance.group_equipment_manager"):
             buttons.append(
                 {
-                    "icon": "cubes",
+                    "icon": "inventory_2",
                     "text": self.env._("Equipments"),
                     "number": self.equipment_count,
                     "action_type": "object",
@@ -73,7 +89,7 @@ class ProjectProject(models.Model):
             )
             buttons.append(
                 {
-                    "icon": "wrench",
+                    "icon": "build",
                     "text": self.env._("Requests"),
                     "number": self.maintenance_request_count,
                     "action_type": "object",

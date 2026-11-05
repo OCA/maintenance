@@ -13,7 +13,7 @@
                     title="View Maintenance Requests"
                     string="View Maintenance Requests"
                     class="oe_stat_button"
-                    icon="fa-wrench"
+                    icon="build"
                     groups="maintenance.group_equipment_manager"
                     invisible="maintenance_request_count == 0"
                 >

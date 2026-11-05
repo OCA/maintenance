@@ -2,14 +2,19 @@
 # Copyright 2024 Tecnativa - Víctor Martínez
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-from odoo.tests import Form, new_test_user
-from odoo.tests.common import users
+from odoo.tests import Form, new_test_user, users
 from odoo.tools.safe_eval import safe_eval
 
 from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestMaintenanceProject(BaseCommon):
+    _test_user_groups = (
+        "base.group_user",
+        "project.group_project_manager",
+        "maintenance.group_equipment_manager",
+    )
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -115,7 +120,7 @@ class TestMaintenanceProject(BaseCommon):
         my_requests = request_obj.search(domain)
         self.assertEqual(len(my_requests), 1)
 
-        req.stage_id = self.env.ref("maintenance.stage_3")
+        req.write({"state": "done"})
         my_requests = request_obj.search(domain)
         self.assertEqual(len(my_requests), 2)
 
