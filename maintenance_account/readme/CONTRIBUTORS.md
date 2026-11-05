@@ -1,0 +1,7 @@
+- César Fernández Domínguez \<<cesfernandez@outlook.com>\>
+- [Tecnativa](https://www.tecnativa.com):
+  - Víctor Martínez
+  - Pedro M. Baeza
+  - Carolina Fernandez
+- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
+  - Bhavesh Heliconia
