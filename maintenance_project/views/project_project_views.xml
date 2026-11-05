@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_project_kanban" model="ir.ui.view">
+        <field name="name">project.project.card.inherit.maintenance</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_card" />
+        <field name="arch" type="xml">
+            <xpath expr="//templates" position="before">
+                <field
+                    name="equipment_count"
+                    groups="maintenance.group_equipment_manager"
+                />
+                <field
+                    name="maintenance_request_count"
+                    groups="maintenance.group_equipment_manager"
+                />
+            </xpath>
+            <xpath expr="//div[@name='card_menu_view']" position="inside">
+                <div role="menuitem" groups="maintenance.group_equipment_manager">
+                    <a name="action_view_equipment_ids" type="object">Equipments</a>
+                </div>
+                <div role="menuitem" groups="maintenance.group_equipment_manager">
+                    <a
+                        name="action_view_maintenance_request_ids"
+                        type="object"
+                    >Requests</a>
+                </div>
+            </xpath>
+            <xpath expr="//div[@name='action_view_tasks']" position="after">
+                <a
+                    role="button"
+                    class="d-flex gap-2 align-items-baseline text-muted text-truncate text-decoration-none"
+                    name="action_view_equipment_ids"
+                    type="object"
+                    groups="maintenance.group_equipment_manager"
+                >
+                    <i
+                        class="oi oi-filled"
+                        data-icon="inventory_2"
+                        title="Equipments"
+                        data-tooltip="Equipments"
+                    />
+                    <span>
+                        <field name="equipment_count" class="o_value" /> Equipments
+                    </span>
+                </a>
+                <a
+                    role="button"
+                    class="d-flex gap-2 align-items-baseline text-muted text-truncate text-decoration-none"
+                    name="action_view_maintenance_request_ids"
+                    type="object"
+                    groups="maintenance.group_equipment_manager"
+                >
+                    <i
+                        class="oi oi-filled"
+                        data-icon="build"
+                        title="Requests"
+                        data-tooltip="Requests"
+                    />
+                    <span>
+                        <field
+                        name="maintenance_request_count"
+                        class="o_value"
+                    /> Requests
+                    </span>
+                </a>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="edit_project" model="ir.ui.view">
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    class="oe_stat_button"
+                    name="action_view_equipment_ids"
+                    type="object"
+                    icon="inventory_2"
+                    groups="maintenance.group_equipment_manager"
+                >
+                    <field
+                        string="Equipments"
+                        name="equipment_count"
+                        widget="statinfo"
+                    />
+                </button>
+                <button
+                    class="oe_stat_button"
+                    name="action_view_maintenance_request_ids"
+                    type="object"
+                    icon="build"
+                    groups="maintenance.group_equipment_manager"
+                >
+                    <field
+                        string="Requests"
+                        name="maintenance_request_count"
+                        widget="statinfo"
+                    />
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>
