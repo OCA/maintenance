@@ -3,8 +3,7 @@
 
 {
     "name": "Maintenance Request Tags",
-    "summary": """
-        Adds tags to Maintenance Requests""",
+    "summary": "Adds tags to Maintenance Requests",
     "version": "19.0.1.0.0",
     "license": "AGPL-3",
     "author": "Dixmit, CreuBlanca, Odoo Community Association (OCA)",
