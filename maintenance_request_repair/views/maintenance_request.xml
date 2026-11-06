@@ -9,7 +9,7 @@
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
         <field name="arch" type="xml">
-            <field name="priority" position="before">
+            <field name="maintenance_type" position="after">
                 <field name="repair_order_id" />
             </field>
         </field>
@@ -18,12 +18,12 @@
     <record id="maintenance_request_tree_view" model="ir.ui.view">
         <field
             name="name"
-        >maintenance.request.tree (in maintenance_request_repair)</field>
+        >maintenance.request.list (in maintenance_request_repair)</field>
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
         <field name="arch" type="xml">
             <field name="stage_id" position="before">
-                <field name="repair_order_id" />
+                <field name="repair_order_id" optional="show" />
             </field>
         </field>
     </record>

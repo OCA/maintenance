@@ -25,22 +25,23 @@ class RepairOrder(models.Model):
         of given repair order ids. When only one found, show the maintenance request
         immediately.
         """
-        action = self.env.ref("maintenance.hr_equipment_request_action")
-        result = action.read()[0]
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "maintenance.hr_equipment_request_action"
+        )
         # override the context to get rid of the default filtering on repair order
-        result["context"] = {"default_repair_order_id": self.id}
+        action["context"] = {"default_repair_order_id": self.id}
         maintenance_request_ids = self.mapped("maintenance_request_ids")
         # choose the view_mode accordingly
         if not maintenance_request_ids or len(maintenance_request_ids) > 1:
-            result["domain"] = f"[('id','in',{maintenance_request_ids.ids})]"
+            action["domain"] = f"[('id','in',{maintenance_request_ids.ids})]"
         elif len(maintenance_request_ids) == 1:
             res = self.env.ref("maintenance.hr_equipment_request_view_form", False)
             form_view = [(res and res.id or False, "form")]
-            if "views" in result:
-                result["views"] = form_view + [
-                    (state, view) for state, view in result["views"] if view != "form"
+            if "views" in action:
+                action["views"] = form_view + [
+                    (state, view) for state, view in action["views"] if view != "form"
                 ]
             else:
-                result["views"] = form_view
-            result["res_id"] = maintenance_request_ids.id
-        return result
+                action["views"] = form_view
+            action["res_id"] = maintenance_request_ids.id
+        return action

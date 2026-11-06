@@ -27,7 +27,7 @@ class TestRepairOrder(common.TransactionCase):
             {
                 "name": "Test Repair Order",
                 "product_id": self.product.id,
-                "product_uom": self.product.uom_id.id,
+                "uom_id": self.product.uom_id.id,
                 "location_id": self.location_id.id,
             }
         )
