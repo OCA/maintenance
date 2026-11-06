@@ -29,7 +29,7 @@
     <record id="maintenance_team_view_tree" model="ir.ui.view">
         <field
             name="name"
-        >maintenance.team.tree (in maintenance_request_sequence)</field>
+        >maintenance.team.list (in maintenance_request_sequence)</field>
         <field name="model">maintenance.team</field>
         <field name="inherit_id" ref="maintenance.maintenance_team_view_tree" />
         <field name="arch" type="xml">
