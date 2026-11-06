@@ -9,7 +9,7 @@
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//div[hasclass('oe_title')]" position="after">
+            <xpath expr="//div[hasclass('oe_title')]" position="inside">
                 <field
                     name="tag_ids"
                     widget="many2many_tags"
@@ -22,9 +22,9 @@
     <record id="hr_equipment_request_view_kanban" model="ir.ui.view">
         <field
             name="name"
-        >maintenance.request.kanban (in maintenance_request_tags)</field>
+        >maintenance.request.card (in maintenance_request_tags)</field>
         <field name="model">maintenance.request</field>
-        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_card" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='name']" position="after">
                 <field

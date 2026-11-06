@@ -10,8 +10,11 @@ class MaintenanceRequestTag(models.Model):
     _name = "maintenance.request.tag"
     _description = "Maintenance Request Tag"
 
+    def _get_default_color(self):
+        return randint(1, 11)
+
     name = fields.Char(string="Request Tag", required=True)
-    color = fields.Integer(string="Color Index (0-15)", default=randint(1, 15))
+    color = fields.Integer(default=lambda self: self._get_default_color())
     request_ids = fields.Many2many(
         "maintenance.request",
         "request_tag_rel",
