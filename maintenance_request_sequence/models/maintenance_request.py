@@ -6,7 +6,7 @@ from odoo import api, fields, models
 
 class MaintenanceRequest(models.Model):
     _inherit = "maintenance.request"
-    _rec_names_search = ["code"]
+    _rec_names_search = "code"
 
     code = fields.Char(readonly=True, copy=False, default="/")
 

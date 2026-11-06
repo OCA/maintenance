@@ -3,8 +3,7 @@
 
 {
     "name": "Maintenance Request Sequence",
-    "summary": """
-        Adds sequence to maintenance requests""",
+    "summary": "Adds sequence to maintenance requests",
     "version": "19.0.1.0.0",
     "license": "AGPL-3",
     "author": "Creu Blanca, Odoo Community Association (OCA)",
