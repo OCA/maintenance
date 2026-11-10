@@ -9,12 +9,10 @@ class MaintenanceRequest(models.Model):
     _inherit = "maintenance.request"
 
     maintenance_kind_id = fields.Many2one(
-        string="Maintenance Kind",
         comodel_name="maintenance.kind",
         ondelete="restrict",
     )
     maintenance_plan_id = fields.Many2one(
-        string="Maintenance Plan",
         comodel_name="maintenance.plan",
         ondelete="restrict",
     )

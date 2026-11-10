@@ -8,7 +8,6 @@ class MaintenanceEquipment(models.Model):
 
     product_id = fields.Many2one(
         comodel_name="product.product",
-        string="Product",
         tracking=True,
         domain="""
             [
@@ -39,7 +38,7 @@ class MaintenanceEquipmentCategory(models.Model):
     _inherit = "maintenance.equipment.category"
 
     product_category_id = fields.Many2one(
-        comodel_name="product.category", string="Product Category", tracking=True
+        comodel_name="product.category", tracking=True
     )
 
     def _valid_field_parameter(self, field, name):

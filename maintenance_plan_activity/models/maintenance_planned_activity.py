@@ -10,7 +10,6 @@ class MaintenancePlannedActivity(models.Model):
 
     activity_type_id = fields.Many2one(
         comodel_name="mail.activity.type",
-        string="Activity Type",
         required=True,
     )
     user_id = fields.Many2one(
@@ -25,5 +24,4 @@ class MaintenancePlannedActivity(models.Model):
     )
     maintenance_plan_id = fields.Many2one(
         comodel_name="maintenance.plan",
-        string="Maintenance Plan",
     )

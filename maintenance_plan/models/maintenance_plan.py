@@ -17,14 +17,14 @@ class MaintenancePlan(models.Model):
     name = fields.Char("Description")
     active = fields.Boolean(default=True)
     equipment_id = fields.Many2one(
-        string="Equipment", comodel_name="maintenance.equipment", ondelete="cascade"
+        comodel_name="maintenance.equipment", ondelete="cascade"
     )
     company_id = fields.Many2one(
         comodel_name="res.company",
         default=lambda self: self.env.company,
     )
     maintenance_kind_id = fields.Many2one(
-        string="Maintenance Kind", comodel_name="maintenance.kind", ondelete="restrict"
+        comodel_name="maintenance.kind", ondelete="restrict"
     )
     interval = fields.Integer(
         string="Frequency", default=1, help="Interval between each maintenance"

@@ -8,7 +8,6 @@ class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
     status_id = fields.Many2one(
-        string="Status",
         comodel_name="maintenance.equipment.status",
         tracking=True,
     )
