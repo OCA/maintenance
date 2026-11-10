@@ -6,42 +6,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-11-10 13:46+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__active
 msgid "Active"
-msgstr ""
+msgstr "Attivo"
 
 #. module: maintenance_inspection
 #: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_kanban_view
 #: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_tree_view
 msgid "Approve"
-msgstr ""
+msgstr "Approva"
 
 #. module: maintenance_inspection
 #: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_item_form_view
 #: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_item_search_view
 msgid "Archived"
-msgstr ""
+msgstr "In archivio"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__create_uid
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creato da"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__create_date
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creato il"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment__display_name
@@ -50,27 +52,27 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan__display_name
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: maintenance_inspection
 #: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_kanban_view
 msgid "Dropdown menu"
-msgstr ""
+msgstr "Menu a discesa"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields.selection,name:maintenance_inspection.selection__maintenance_inspection_line__result__failure
 msgid "Failure"
-msgstr ""
+msgstr "Fallito"
 
 #. module: maintenance_inspection
 #: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_request_form_view
 msgid "Finish inspection"
-msgstr ""
+msgstr "Termina ispezione"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__has_inspection
 msgid "Has Inspection"
-msgstr ""
+msgstr "Ha ispezione"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment__id
@@ -79,51 +81,51 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan__id
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: maintenance_inspection
 #: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_request_form_view
 msgid "Inspection"
-msgstr ""
+msgstr "Ispezione"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__inspection_closed_at
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__inspection_closed_at
 msgid "Inspection Closed At"
-msgstr ""
+msgstr "Ispezione chiusa il"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__inspection_closed_by
 msgid "Inspection Closed By"
-msgstr ""
+msgstr "Ispezione chiusa da"
 
 #. module: maintenance_inspection
 #: model:ir.actions.act_window,name:maintenance_inspection.maintenance_inspection_item_act_window
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan__inspection_item_ids
 #: model:ir.ui.menu,name:maintenance_inspection.maintenance_inspection_item_menu
 msgid "Inspection Item"
-msgstr ""
+msgstr "Elemento di ispezione"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request__inspection_line_ids
 msgid "Inspection Line"
-msgstr ""
+msgstr "Riga ispezione"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__instruction
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__instruction
 msgid "Instruction"
-msgstr ""
+msgstr "Istruzione"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__item_id
 msgid "Item"
-msgstr ""
+msgstr "Elemento"
 
 #. module: maintenance_inspection
 #: model:ir.model,name:maintenance_inspection.model_maintenance_inspection_item
 msgid "Item of evaluation"
-msgstr ""
+msgstr "Elemento di valutazione"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_equipment____last_update
@@ -132,77 +134,77 @@ msgstr ""
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_plan____last_update
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_request____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__write_uid
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultimo aggiornamento di"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__write_date
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultimo aggiornamento il"
 
 #. module: maintenance_inspection
 #: model:ir.model,name:maintenance_inspection.model_maintenance_equipment
 msgid "Maintenance Equipment"
-msgstr ""
+msgstr "Attrezzatura di manutenzione"
 
 #. module: maintenance_inspection
 #: model:ir.model,name:maintenance_inspection.model_maintenance_inspection_line
 msgid "Maintenance Inspection Line"
-msgstr ""
+msgstr "Riga ispezione di manutenzione"
 
 #. module: maintenance_inspection
 #: model:ir.model,name:maintenance_inspection.model_maintenance_plan
 msgid "Maintenance Plan"
-msgstr ""
+msgstr "Piano di manutenzione"
 
 #. module: maintenance_inspection
 #: model:ir.model,name:maintenance_inspection.model_maintenance_request
 msgid "Maintenance Request"
-msgstr ""
+msgstr "Richiesta di manutenzione"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_item__name
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #. module: maintenance_inspection
 #: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_kanban_view
 #: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_inspection_line_tree_view
 msgid "Refuse"
-msgstr ""
+msgstr "Rifiuta"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__request_id
 msgid "Request"
-msgstr ""
+msgstr "Richiesta"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__result
 msgid "Result"
-msgstr ""
+msgstr "Risultato"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields,field_description:maintenance_inspection.field_maintenance_inspection_line__result_description
 msgid "Result Description"
-msgstr ""
+msgstr "Descrizione risultato"
 
 #. module: maintenance_inspection
 #: model_terms:ir.ui.view,arch_db:maintenance_inspection.maintenance_request_form_view
 msgid "Set inspection"
-msgstr ""
+msgstr "Imposta ispezione"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields.selection,name:maintenance_inspection.selection__maintenance_inspection_line__result__success
 msgid "Success"
-msgstr ""
+msgstr "Riuscito"
 
 #. module: maintenance_inspection
 #: model:ir.model.fields.selection,name:maintenance_inspection.selection__maintenance_inspection_line__result__todo
 msgid "Todo"
-msgstr ""
+msgstr "Da fare"
