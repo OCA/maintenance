@@ -1,0 +1,133 @@
+# Copyright 2022 Tecnativa - Víctor Martínez
+# Copyright 2024 Tecnativa - Carolina Fernandez
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+from odoo import api, fields, models
+from odoo.tools import plaintext2html
+
+
+class AccountMove(models.Model):
+    _inherit = "account.move"
+
+    equipment_count = fields.Integer(compute="_compute_equipment_count")
+
+    def _compute_equipment_count(self):
+        for item in self:
+            item.equipment_count = sum(item.mapped("line_ids.equipment_count"))
+
+    def unlink(self):
+        items = (
+            self.env["maintenance.equipment"]
+            .sudo()
+            .search([("move_id", "in", self.ids)])
+        )
+        items.write({"move_line_id": False, "move_id": False})
+        return super().unlink()
+
+    def action_post(self):
+        res = super().action_post()
+        # Prevent error if user does not have permission to create equipments
+        equipment_model = self.env["maintenance.equipment"].sudo()
+        for move in self.filtered(lambda r: r.is_purchase_document()):
+            for line in move.line_ids.filtered(
+                lambda x: (
+                    not x.equipment_ids
+                    and x.product_id
+                    and x.product_id.product_tmpl_id.maintenance_ok
+                )
+            ):
+                if not line.equipment_category_id:
+                    line._set_equipment_category()
+                # Create equipments
+                limit = int(line.quantity) + 1
+                vals = line._prepare_equipment_vals()
+                equipment_ids = []
+                for _i in range(1, limit):
+                    equipment = equipment_model.with_company(
+                        move.company_id,
+                    ).create(vals.copy())
+                    equipment_ids.append((4, equipment.id))
+                line.sudo().equipment_ids = equipment_ids
+        return res
+
+    def action_view_equipments(self):
+        items = self.env["maintenance.equipment"].search([("move_id", "=", self.id)])
+        if not items:
+            return {"type": "ir.actions.act_window_close"}
+        return items._get_records_action(name=self.env._("Equipments"))
+
+
+class AccountMoveLine(models.Model):
+    _inherit = "account.move.line"
+
+    equipment_category_id = fields.Many2one(
+        comodel_name="maintenance.equipment.category",
+        string="Equipment Category",
+        compute="_compute_equipment_category_id",
+        store=True,
+        readonly=False,
+    )
+    equipment_ids = fields.Many2many(
+        comodel_name="maintenance.equipment",
+        string="Equipments",
+        copy=False,
+    )
+    equipment_count = fields.Integer(compute="_compute_equipment_count")
+
+    @api.depends("product_id")
+    def _compute_equipment_category_id(self):
+        for item in self:
+            if (
+                item.product_id.maintenance_ok
+                and item.product_id.product_tmpl_id.categ_id.equipment_category_ids
+            ):
+                item.equipment_category_id = (
+                    item.product_id.product_tmpl_id.categ_id.equipment_category_ids[:1]
+                )
+            else:
+                item.equipment_category_id = item.equipment_category_id
+
+    def _compute_equipment_count(self):
+        data = self.env["maintenance.equipment"]._read_group(
+            [("move_line_id", "in", self.ids)],
+            ["move_line_id"],
+            ["__count"],
+        )
+        mapping = {move_line.id: count for move_line, count in data}
+        for item in self:
+            item.equipment_count = mapping.get(item.id, 0)
+
+    def _prepare_equipment_category_vals(self):
+        categ = self.product_id.product_tmpl_id.categ_id
+        return {"name": categ.name, "product_category_id": categ.id}
+
+    def _set_equipment_category(self):
+        if not self.equipment_category_id:
+            product_category = self.product_id.product_tmpl_id.categ_id
+            if not product_category:
+                return
+            category_model = self.env["maintenance.equipment.category"].sudo()
+            category = product_category.equipment_category_ids[:1]
+            if not category:
+                category = category_model.create(
+                    self._prepare_equipment_category_vals()
+                )
+            self.equipment_category_id = category.id
+
+    def _prepare_equipment_vals(self):
+        equipment_name = self.name
+        description = False
+        if "\n" in self.name:
+            lf_index = self.name.index("\n")
+            equipment_name = self.name[:lf_index]
+            description = plaintext2html(self.name[lf_index + 1 :])
+        return {
+            "move_line_id": self.id,
+            "name": equipment_name,
+            "product_id": self.product_id.id,
+            "category_id": self.equipment_category_id.id,
+            "assign_date": self.move_id.date,
+            "effective_date": self.move_id.date,
+            "partner_id": self.move_id.partner_id.id,
+            "partner_ref": self.move_id.ref,
+            "note": description,
+        }
