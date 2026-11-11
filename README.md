@@ -28,16 +28,16 @@ addon | version | maintainers | summary
 [maintenance_equipment_certification](maintenance_equipment_certification/) | 19.0.1.0.3 | <a href='https://github.com/cubells'><img src='https://github.com/cubells.png' width='32' height='32' style='border-radius:50%;' alt='cubells'/></a> | Add to store certifications associated with a equipment.
 [maintenance_equipment_ref](maintenance_equipment_ref/) | 19.0.1.0.0 |  | Adds reference field to maintenance equipment
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 19.0.1.0.0 |  | Adds sequence to maintenance equipment defined in the equipment's category
-[maintenance_equipment_status](maintenance_equipment_status/) | 19.0.1.0.0 |  | Maintenance Equipment Status
-[maintenance_equipment_tags](maintenance_equipment_tags/) | 19.0.1.0.0 | <a href='https://github.com/etobella'><img src='https://github.com/etobella.png' width='32' height='32' style='border-radius:50%;' alt='etobella'/></a> | Adds category tags to equipment
+[maintenance_equipment_status](maintenance_equipment_status/) | 19.0.1.0.1 |  | Maintenance Equipment Status
+[maintenance_equipment_tags](maintenance_equipment_tags/) | 19.0.1.0.1 | <a href='https://github.com/etobella'><img src='https://github.com/etobella.png' width='32' height='32' style='border-radius:50%;' alt='etobella'/></a> | Adds category tags to equipment
 [maintenance_location](maintenance_location/) | 19.0.1.0.0 |  | Define a location system for maintenance
-[maintenance_plan](maintenance_plan/) | 19.0.1.0.2 |  | Extends preventive maintenance planning
-[maintenance_plan_activity](maintenance_plan_activity/) | 19.0.1.0.0 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
-[maintenance_product](maintenance_product/) | 19.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
+[maintenance_plan](maintenance_plan/) | 19.0.1.0.3 |  | Extends preventive maintenance planning
+[maintenance_plan_activity](maintenance_plan_activity/) | 19.0.1.0.1 |  | This module allows defining in the maintenance plan activities that will be created once the maintenance requests are created as a consequence of the plan itself.
+[maintenance_product](maintenance_product/) | 19.0.1.0.1 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Product
 [maintenance_project](maintenance_project/) | 19.0.1.0.0 |  | Adds projects to maintenance equipments and requests
 [maintenance_request_employee](maintenance_request_employee/) | 19.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Maintenance Request Employee
 [maintenance_request_purchase](maintenance_request_purchase/) | 19.0.1.0.0 |  | Allows you to link PO with maintenance requests
-[maintenance_request_repair](maintenance_request_repair/) | 19.0.1.0.0 |  | This is a bridge module between Maintenance and Repair
+[maintenance_request_repair](maintenance_request_repair/) | 19.0.1.0.1 |  | This is a bridge module between Maintenance and Repair
 [maintenance_request_sequence](maintenance_request_sequence/) | 19.0.1.0.0 |  | Adds sequence to maintenance requests
 [maintenance_request_tags](maintenance_request_tags/) | 19.0.1.0.0 |  | Adds tags to Maintenance Requests
 [maintenance_timesheet](maintenance_timesheet/) | 19.0.1.0.0 |  | Adds timesheets to maintenance requests

@@ -5,7 +5,7 @@
     "name": "Maintenance Equipment Tags",
     "summary": """
         Adds category tags to equipment""",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "license": "AGPL-3",
     "author": "Creu Blanca, Odoo Community Association (OCA)",
     "maintainers": ["etobella"],
