@@ -22,7 +22,6 @@ class MaintenanceEquipmentTag(models.Model):
         "equipment_tag_rel",
         "tag_id",
         "equipment_id",
-        string="Equipment",
     )
 
     _name_uniq = models.Constraint("unique (name)", "Tag name already exists !")

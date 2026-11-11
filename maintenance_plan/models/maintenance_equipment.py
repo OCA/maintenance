@@ -10,7 +10,6 @@ class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
     maintenance_plan_ids = fields.One2many(
-        string="Maintenance Plan",
         comodel_name="maintenance.plan",
         inverse_name="equipment_id",
     )
