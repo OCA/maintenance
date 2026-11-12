@@ -7,6 +7,4 @@ from odoo import fields, models
 class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
-    assigned_partner_id = fields.Many2one(
-        "res.partner",
-    )
+    assigned_partner_id = fields.Many2one("res.partner", tracking=True)
