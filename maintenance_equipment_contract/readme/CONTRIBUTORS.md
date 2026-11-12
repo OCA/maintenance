@@ -1,0 +1,7 @@
+- Jaime Arroyo \<<jaime.arroyo@creublanca.es>\>
+- [Dixmit](https://www.dixmit.com):
+  - Enric Tobella
+- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
+  - Bhavesh Heliconia
+- [NuoBiT](https://www.nuobit.com):
+  - Deniz Gallo <dgallo@nuobit.com>
