@@ -10,6 +10,7 @@
     "author": "CreuBlanca,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
     "depends": [
+        "maintenance",
         "purchase",
     ],
     "data": [

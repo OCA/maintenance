@@ -5,7 +5,8 @@ from openupgradelib import openupgrade
 
 @openupgrade.migrate()
 def migrate(env, version):
-    # Bring the category data from maintenance_equipment_category to the product
+    # 16.0 took the first equipment category of the product category,
+    # for maintenance products only
     if openupgrade.column_exists(
         env.cr, "maintenance_equipment_category", "product_category_id"
     ):
@@ -13,8 +14,14 @@ def migrate(env, version):
             env.cr,
             """
             UPDATE product_template pt
-            SET equipment_category_id = mec.equipment_category_id
-            FROM maintenance_equipment_category mec
+            SET purchase_equipment_category_id = mec.id
+            FROM (
+                SELECT product_category_id, MIN(id) AS id
+                FROM maintenance_equipment_category
+                WHERE product_category_id IS NOT NULL
+                GROUP BY product_category_id
+            ) mec
             WHERE pt.categ_id = mec.product_category_id
-                AND pt.equipment_category_id IS NULL""",
+                AND pt.maintenance_ok
+                AND pt.purchase_equipment_category_id IS NULL""",
         )
