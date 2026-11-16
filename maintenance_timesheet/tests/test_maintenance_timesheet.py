@@ -3,9 +3,11 @@
 
 from datetime import timedelta
 
-from odoo import fields
+from odoo import Command, fields
 from odoo.exceptions import ValidationError
 from odoo.tests.common import TransactionCase, new_test_user
+
+from odoo.addons.hr.tests.test_utils import get_admin_employee
 
 
 class TestMaintenanceTimesheet(TransactionCase):
@@ -23,6 +25,7 @@ class TestMaintenanceTimesheet(TransactionCase):
             groups="base.group_user,hr_timesheet.group_hr_timesheet_user",
         )
 
+        cls.admin_employee = get_admin_employee(cls.env)
         cls.employee_demo = cls.env["hr.employee"].create(
             {
                 "name": "Test Employee Demo",
@@ -45,7 +48,7 @@ class TestMaintenanceTimesheet(TransactionCase):
             {
                 "name": "General task",
                 "project_id": cls.project_1.id,
-                "user_ids": [(4, cls.user_admin.id)],
+                "user_ids": [Command.link(cls.user_admin.id)],
             }
         )
 
@@ -53,7 +56,7 @@ class TestMaintenanceTimesheet(TransactionCase):
             {
                 "name": "Default preventive task",
                 "project_id": cls.project_1.id,
-                "user_ids": [(4, cls.user_admin.id)],
+                "user_ids": [Command.link(cls.user_admin.id)],
             }
         )
 
@@ -114,7 +117,7 @@ class TestMaintenanceTimesheet(TransactionCase):
                 "name": "Corrective #1 for Generic Monitor",
                 "equipment_id": cls.equipment_1.id,
                 "schedule_date": yesterday,
-                "user_id": cls.user_admin.id,
+                "user_ids": [Command.link(cls.user_admin.id)],
                 "project_id": cls.project_1.id,
                 "task_id": cls.task_12.id,
                 "maintenance_type": "corrective",
@@ -158,7 +161,7 @@ class TestMaintenanceTimesheet(TransactionCase):
             {
                 "name": "Corrective #2 for Generic Monitor",
                 "equipment_id": cls.equipment_1.id,
-                "user_id": cls.user_admin.id,
+                "user_ids": [Command.link(cls.user_admin.id)],
                 "schedule_date": fields.Date.today(),
                 "stage_id": cls.stage_undone.id,
                 "maintenance_type": "corrective",
@@ -173,7 +176,7 @@ class TestMaintenanceTimesheet(TransactionCase):
             "date": fields.Date.today(),
             "unit_amount": 1.5,
         }
-        cls.request2.timesheet_ids = [(0, 0, cls.timesheet21_data)]
+        cls.request2.timesheet_ids = [Command.create(cls.timesheet21_data)]
 
     def test_request_timesheets(self):
         self.assertEqual(self.request_demo1.timesheet_total_hours, 2)
@@ -199,12 +202,10 @@ class TestMaintenanceTimesheet(TransactionCase):
         self.assertEqual(ts1.project_id, self.request2.project_id)
 
     def test_check_request_done(self):
-        self.request2.stage_id = self.stage_done
+        self.request2.state = "done"
         with self.assertRaises(ValidationError):
             self.request2.timesheet_ids = [
-                (
-                    0,
-                    0,
+                Command.create(
                     {
                         "name": "Attempt to create a task for a done request",
                         "project_id": self.request2.project_id.id,
@@ -233,7 +234,7 @@ class TestMaintenanceTimesheet(TransactionCase):
             # Attempt to delete a timesheet related a done request
             self.request2.timesheet_ids.unlink()
 
-        self.request2.stage_id = self.stage_undone
+        self.request2.state = "normal"
         # Deleting timesheets is enabled again
         self.request2.timesheet_ids.unlink()
 

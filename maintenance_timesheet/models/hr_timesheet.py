@@ -47,7 +47,8 @@ class AccountAnalyticLine(models.Model):
         """
         request_ids = [request_id] if isinstance(request_id, int) else request_id
         if any(
-            self.env["maintenance.request"].browse(request_ids).stage_id.mapped("done")
+            request.state == "done"
+            for request in self.env["maintenance.request"].browse(request_ids)
         ):
             raise ValidationError(
                 self.env._(

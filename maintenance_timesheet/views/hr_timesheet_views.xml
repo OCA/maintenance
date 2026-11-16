@@ -24,7 +24,7 @@
             <xpath expr="//field[@name='name']" position="after">
                 <field
                     name="maintenance_request_id"
-                    invisible="context.get('default_maintenance_request_id', False)"
+                    column_invisible="context.get('default_maintenance_request_id', False)"
                 />
             </xpath>
         </field>
@@ -36,7 +36,7 @@
             <xpath expr="//field[@name='employee_id']" position="attributes">
                 <attribute
                     name="readonly"
-                >context.get('readonly_employee_id', False)</attribute>
+                >readonly_timesheet or context.get('readonly_employee_id', False)</attribute>
             </xpath>
         </field>
     </record>

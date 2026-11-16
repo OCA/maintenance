@@ -3,6 +3,7 @@
     <record id="timesheet_action_from_request" model="ir.actions.act_window">
         <field name="name">Timesheets</field>
         <field name="res_model">account.analytic.line</field>
+        <field name="view_mode">list,form</field>
         <field name="search_view_id" ref="hr_timesheet_line_search" />
         <field
             name="domain"
@@ -41,31 +42,45 @@
         </field>
     </record>
     <record id="hr_equipment_request_view_kanban" model="ir.ui.view">
+        <field name="name">maintenance.request.card.inherit.timesheet</field>
         <field name="model">maintenance.request</field>
-        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_card" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='archive']" position="before">
+            <xpath expr="//templates" position="before">
                 <field
                     name="timesheet_total_hours"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+                <field
+                    name="planned_hours"
                     groups="hr_timesheet.group_hr_timesheet_user"
                 />
             </xpath>
             <xpath expr="//footer//field[@name='activity_ids']" position="after">
                 <a
-                    class="o_project_kanban_box"
+                    t-attf-class="d-inline-flex align-items-center ms-2 text-decoration-none {{ record.planned_hours.raw_value and record.timesheet_total_hours.raw_value &gt; record.planned_hours.raw_value ? 'text-danger' : 'text-reset' }}"
                     name="action_view_timesheet_ids"
                     type="object"
                     groups="hr_timesheet.group_hr_timesheet_user"
+                    role="button"
+                    title="Timesheets"
                 >
-                    <div>
-                        <span class="o_value">
+                    <i
+                        t-attf-class="oi oi-fw me-1 {{ record.planned_hours.raw_value and record.timesheet_total_hours.raw_value &gt; record.planned_hours.raw_value ? 'text-danger' : 'text-muted' }}"
+                        role="img"
+                        aria-label="Hours"
+                    />
+                    <div class="d-flex flex-column text-start lh-1">
+                        <span class="o_value fw-bold">
                             <field
                                 name="timesheet_total_hours"
-                                class="oe_inline"
                                 widget="timesheet_uom"
                             />
                         </span>
-                        <span class="oe_label">Hours</span>
+                        <span
+                            class="oe_label text-muted"
+                            style="font-size: 0.7rem; margin-top: 2px;"
+                        >Hours</span>
                     </div>
                 </a>
             </xpath>
@@ -131,18 +146,19 @@
                     class="oe_stat_button"
                     type="object"
                     name="action_view_timesheet_ids"
-                    icon="fa-calendar"
+                    icon="calendar_today"
                     groups="hr_timesheet.group_hr_timesheet_user"
+                    invisible="not project_id"
                 >
-                    <div class="o_field_widget o_stat_info">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">
+                            Hours
+                        </span>
                         <span class="o_stat_value">
                             <field
                                 name="timesheet_total_hours"
                                 widget="timesheet_uom"
                             />
-                        </span>
-                        <span class="o_stat_text">
-                            Hours
                         </span>
                     </div>
                 </button>

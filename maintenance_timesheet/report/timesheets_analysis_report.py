@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.tools.sql import SQL
 
 
 class TimesheetsAnalysisReport(models.Model):
@@ -10,18 +11,18 @@ class TimesheetsAnalysisReport(models.Model):
 
     @api.model
     def _select(self):
-        return (
-            super()._select()
-            + """,
+        return SQL(
+            """%s,
             A.maintenance_request_id AS maintenance_request_id
-        """
+        """,
+            super()._select(),
         )
 
     @api.model
     def _from(self):
-        return (
-            super()._from()
-            + """
+        return SQL(
+            """%s
             LEFT JOIN maintenance_request MR ON A.maintenance_request_id = MR.id
-        """
+        """,
+            super()._from(),
         )
