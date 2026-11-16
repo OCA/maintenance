@@ -8,5 +8,4 @@ class ProductTemplate(models.Model):
 
     purchase_equipment_category_id = fields.Many2one(
         comodel_name="maintenance.equipment.category",
-        string="Purchase Equipment Category",
     )

@@ -3,9 +3,8 @@
 
 {
     "name": "Maintenance Purchase",
-    "summary": """
-        Create Equipments with purchases""",
-    "version": "18.0.1.0.1",
+    "summary": "Create Equipments with purchases",
+    "version": "20.0.1.0.0",
     "license": "AGPL-3",
     "author": "CreuBlanca,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/maintenance",
@@ -18,5 +17,4 @@
         "views/maintenance_equipment.xml",
         "views/product_template_view.xml",
     ],
-    "demo": [],
 }

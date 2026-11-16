@@ -52,7 +52,7 @@ class PurchaseOrder(models.Model):
         return result
 
     def _create_equipments(self):
-        for order in self.filtered(lambda po: po.state in ("purchase", "done")):
+        for order in self.filtered(lambda po: po.state == "purchase"):
             for line in order._get_lines_to_create_equipments():
                 line.create_equipments()
 
@@ -62,7 +62,6 @@ class PurchaseOrderLine(models.Model):
 
     equipment_category_id = fields.Many2one(
         comodel_name="maintenance.equipment.category",
-        string="Equipment Category",
         compute="_compute_equipment_category_id",
         store=True,
         readonly=False,
@@ -86,12 +85,12 @@ class PurchaseOrderLine(models.Model):
                 item.equipment_category_id = item.equipment_category_id
 
     def _compute_equipment_count(self):
-        data = self.env["maintenance.equipment"].read_group(
+        data = self.env["maintenance.equipment"]._read_group(
             [("purchase_line_id", "in", self.ids)],
             ["purchase_line_id"],
-            ["purchase_line_id"],
+            ["__count"],
         )
-        mapping = {x["purchase_line_id"][0]: x["purchase_line_id_count"] for x in data}
+        mapping = {line.id: count for line, count in data}
         for item in self:
             item.equipment_count = mapping.get(item.id, 0)
 

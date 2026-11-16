@@ -6,6 +6,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestMaintenanceProject(BaseCommon):
+    _test_user_groups = None
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -49,7 +51,6 @@ class TestMaintenanceProject(BaseCommon):
                 "list_price": 280.0,
                 "type": "consu",
                 "uom_id": uom_unit.id,
-                "uom_po_id": uom_unit.id,
                 "purchase_method": "purchase",
                 "default_code": "PROD_ORDER",
                 "taxes_id": False,
@@ -64,7 +65,6 @@ class TestMaintenanceProject(BaseCommon):
                 "list_price": 280.0,
                 "type": "consu",
                 "uom_id": uom_unit.id,
-                "uom_po_id": uom_unit.id,
                 "purchase_method": "purchase",
                 "default_code": "PROD_ORDER",
                 "taxes_id": False,
@@ -84,10 +84,10 @@ class TestMaintenanceProject(BaseCommon):
                 "name": cls.product_order_maintenance.name,
                 "product_id": cls.product_order_maintenance.id,
                 "product_qty": 10.0,
-                "product_uom": cls.product_order_maintenance.uom_id.id,
+                "uom_id": cls.product_order_maintenance.uom_id.id,
                 "price_unit": cls.product_order_maintenance.list_price,
                 "order_id": cls.purchase_order.id,
-                "taxes_id": False,
+                "tax_ids": False,
             }
         )
         cls.purchase_line_order02 = PurchaseOrderLine.create(
@@ -95,10 +95,10 @@ class TestMaintenanceProject(BaseCommon):
                 "name": cls.product_order_no_maintenance.name,
                 "product_id": cls.product_order_no_maintenance.id,
                 "product_qty": 10.0,
-                "product_uom": cls.product_order_no_maintenance.uom_id.id,
+                "uom_id": cls.product_order_no_maintenance.uom_id.id,
                 "price_unit": cls.product_order_no_maintenance.list_price,
                 "order_id": cls.purchase_order.id,
-                "taxes_id": False,
+                "tax_ids": False,
             }
         )
 
