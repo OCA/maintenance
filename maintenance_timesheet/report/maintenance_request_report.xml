@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template
         id="report_maintenance_request_document"
@@ -19,10 +19,10 @@
         </xpath>
         <xpath expr="//div[@id='description']" position="after">
             <div
-                id="timesheet_information"
                 t-if="doc.timesheet_ids"
-                groups="hr_timesheet.group_hr_timesheet_user"
+                id="timesheet_information"
                 class="col-auto mw-100 mb-2"
+                groups="hr_timesheet.group_hr_timesheet_user"
             >
                 <h5>
                     <span id="timesheet_information_title">Timesheet Entries</span>
