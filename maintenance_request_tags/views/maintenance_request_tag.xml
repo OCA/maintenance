@@ -35,9 +35,9 @@
         >maintenance.request.tag.list (in maintenance_request_tags)</field>
         <field name="model">maintenance.request.tag</field>
         <field name="arch" type="xml">
-            <list>
+            <list editable="bottom">
                 <field name="name" />
-                <field name="color" widget="color_picker" />
+                <field name="color" widget="color_picker" optional="show" />
             </list>
         </field>
     </record>
