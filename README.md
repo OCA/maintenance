@@ -18,7 +18,11 @@ maintenance
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[maintenance_equipment_ref](maintenance_equipment_ref/) | 20.0.1.0.0 |  | Adds reference field to maintenance equipment
 
 [//]: # (end addons)
 
