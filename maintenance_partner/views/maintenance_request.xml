@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2025 Dixmit
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
-    <record model="ir.ui.view" id="maintenance_request_form_view">
+    <record id="maintenance_request_form_view" model="ir.ui.view">
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
         <field name="arch" type="xml">
@@ -11,7 +11,7 @@
             </field>
         </field>
     </record>
-    <record model="ir.ui.view" id="maintenance_request_tree_view">
+    <record id="maintenance_request_tree_view" model="ir.ui.view">
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
         <field name="arch" type="xml">
@@ -20,7 +20,7 @@
             </field>
         </field>
     </record>
-    <record model="ir.ui.view" id="maintenance_request_kanban_view">
+    <record id="maintenance_request_kanban_view" model="ir.ui.view">
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
         <field name="arch" type="xml">
@@ -33,7 +33,7 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="maintenance_request_search_view">
+    <record id="maintenance_request_search_view" model="ir.ui.view">
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
         <field name="arch" type="xml">
@@ -51,7 +51,7 @@
         </field>
     </record>
 
-    <record model="ir.actions.act_window" id="action_maintenance_request_from_partner">
+    <record id="action_maintenance_request_from_partner" model="ir.actions.act_window">
         <field name="view_mode">kanban,list,form,pivot,graph,calendar,activity</field>
         <field name="res_model">maintenance.request</field>
         <field name="domain">[('partner_id', '=', active_id)]</field>
