@@ -44,6 +44,10 @@ class TestMaintenancePartner(TransactionCase):
         request_01.invalidate_recordset()
         self.assertFalse(request_01.partner_id)
 
+    def test_partner_without_equipment(self):
+        request = self.env["maintenance.request"].create({"name": "Test Request"})
+        self.assertFalse(request.partner_id)
+
     def test_request_counter(self):
         self.assertEqual(self.partner.maintenance_request_count, 0)
         self.env["maintenance.request"].create(

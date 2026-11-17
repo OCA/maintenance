@@ -9,7 +9,7 @@
             <div name="button_box" position="inside">
                 <button
                     name="%(maintenance_partner.action_maintenance_equipment_from_partner)s"
-                    icon="fa-cube"
+                    icon="deployed_code"
                     type="action"
                     class="oe_highlight"
                     invisible="equipment_count == 0"
@@ -23,7 +23,7 @@
                 </button>
                 <button
                     name="%(maintenance_partner.action_maintenance_request_from_partner)s"
-                    icon="fa-wrench"
+                    icon="build"
                     type="action"
                     class="oe_highlight"
                     invisible="maintenance_request_count == 0"

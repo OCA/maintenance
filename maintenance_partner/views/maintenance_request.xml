@@ -22,7 +22,7 @@
     </record>
     <record id="maintenance_request_kanban_view" model="ir.ui.view">
         <field name="model">maintenance.request</field>
-        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_card" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='equipment_id']/.." position="before">
                 <span
