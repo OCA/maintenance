@@ -53,3 +53,26 @@ class TestEquipmentContract(BaseCommon):
         requests = self.env["maintenance.request"].search(action["domain"])
         self.assertIn(request, requests)
         self.assertNotIn(other_request, requests)
+
+    def test_base_user_cannot_see_contract_controls(self):
+        user = self._create_new_internal_user(groups="base.group_user")
+        view = (
+            self.env["maintenance.equipment"]
+            .with_user(user)
+            .get_view(
+                view_id=self.env.ref("maintenance.hr_equipment_view_form").id,
+                view_type="form",
+            )
+        )
+        search_view = (
+            self.env["maintenance.equipment"]
+            .with_user(user)
+            .get_view(
+                view_id=self.env.ref("maintenance.hr_equipment_view_search").id,
+                view_type="search",
+            )
+        )
+
+        self.assertNotIn("action_view_contracts", view["arch"])
+        self.assertNotIn('name="has_contracts"', search_view["arch"])
+        self.assertNotIn('name="no_contracts"', search_view["arch"])
