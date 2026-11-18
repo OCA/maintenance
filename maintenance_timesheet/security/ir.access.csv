@@ -1,0 +1,3 @@
+id,name,model_id,group_id/id,operation,domain
+hr_timesheet_rule_request_user,Users are allowed to access timesheets related to a followed request,account.analytic.line,hr_timesheet.group_hr_timesheet_user,crud,"[('maintenance_request_id.message_partner_ids', 'in', [user.partner_id.id]), ('maintenance_request_id.user_ids', 'in', user.id)]"
+hr_timesheet_rule_request_manager,Managers are allowed to access timesheets related to any request,account.analytic.line,maintenance.group_equipment_manager,crud,"[('maintenance_request_id', '!=', False)]"
