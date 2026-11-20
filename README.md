@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [maintenance_equipment_category_hierarchy](maintenance_equipment_category_hierarchy/) | 19.0.1.0.0 |  | Equipment Categories Hierarchy
 [maintenance_equipment_certification](maintenance_equipment_certification/) | 19.0.1.0.3 | <a href='https://github.com/cubells'><img src='https://github.com/cubells.png' width='32' height='32' style='border-radius:50%;' alt='cubells'/></a> | Add to store certifications associated with a equipment.
 [maintenance_equipment_contract](maintenance_equipment_contract/) | 19.0.1.0.0 |  | Manage equipment contracts
+[maintenance_equipment_hierarchy](maintenance_equipment_hierarchy/) | 19.0.1.0.0 | <a href='https://github.com/dalonsod'><img src='https://github.com/dalonsod.png' width='32' height='32' style='border-radius:50%;' alt='dalonsod'/></a> | Manage equipment hierarchy
 [maintenance_equipment_ref](maintenance_equipment_ref/) | 19.0.1.0.0 |  | Adds reference field to maintenance equipment
 [maintenance_equipment_sequence](maintenance_equipment_sequence/) | 19.0.1.0.0 |  | Adds sequence to maintenance equipment defined in the equipment's category
 [maintenance_equipment_status](maintenance_equipment_status/) | 19.0.1.0.1 |  | Maintenance Equipment Status
