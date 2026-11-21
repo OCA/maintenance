@@ -159,50 +159,69 @@ class MaintenancePlan(models.Model):
         elif step == "year":
             return relativedelta(years=interval)
 
+    def _get_furthest_maintenance_request(self):
+        """Return the latest maintenance request of the current plan period."""
+        self.ensure_one()
+        return self.env["maintenance.request"].search(
+            [
+                ("maintenance_plan_id", "=", self.id),
+                ("request_date", ">=", self.start_maintenance_date),
+            ],
+            order="request_date desc",
+            limit=1,
+        )
+
+    def _get_maintenance_recurrence_anchor(self, request):
+        """Return the date from which the next recurrence must be computed.
+
+        Defaults to the request theoretical due date (``request_date``).
+        Override to anchor the recurrence on another date, e.g. the date the
+        maintenance was actually performed.
+        """
+        self.ensure_one()
+        return request.request_date
+
+    def _get_next_maintenance_date(self):
+        """Return the plan's next due date"""
+        self.ensure_one()
+        interval_timedelta = self.get_relativedelta(
+            self.interval, self.interval_step or "year"
+        )
+        next_maintenance_todo = self.env["maintenance.request"].search(
+            [
+                ("maintenance_plan_id", "=", self.id),
+                ("stage_id.done", "!=", True),
+                ("close_date", "=", False),
+                ("request_date", ">=", self.start_maintenance_date),
+            ],
+            order="request_date asc",
+            limit=1,
+        )
+        if next_maintenance_todo:
+            return next_maintenance_todo.request_date
+        furthest_request = self._get_furthest_maintenance_request()
+        if furthest_request:
+            next_date = (
+                self._get_maintenance_recurrence_anchor(furthest_request)
+                + interval_timedelta
+            )
+        else:
+            next_date = self.start_maintenance_date
+        while next_date < fields.Date.today():
+            next_date = next_date + interval_timedelta
+        return next_date
+
     @api.depends(
         "interval",
         "interval_step",
         "start_maintenance_date",
         "maintenance_ids.request_date",
         "maintenance_ids.close_date",
+        "maintenance_ids.stage_id",
     )
     def _compute_next_maintenance(self):
         for plan in self.filtered(lambda x: x.interval > 0):
-            interval_timedelta = plan.get_relativedelta(
-                plan.interval, plan.interval_step
-            )
-
-            next_maintenance_todo = self.env["maintenance.request"].search(
-                [
-                    ("maintenance_plan_id", "=", plan.id),
-                    ("stage_id.done", "!=", True),
-                    ("close_date", "=", False),
-                    ("request_date", ">=", plan.start_maintenance_date),
-                ],
-                order="request_date asc",
-                limit=1,
-            )
-
-            if next_maintenance_todo:
-                plan.next_maintenance_date = next_maintenance_todo.request_date
-            else:
-                last_maintenance_done = self.env["maintenance.request"].search(
-                    [
-                        ("maintenance_plan_id", "=", plan.id),
-                        ("request_date", ">=", plan.start_maintenance_date),
-                    ],
-                    order="request_date desc",
-                    limit=1,
-                )
-                if last_maintenance_done:
-                    plan.next_maintenance_date = (
-                        last_maintenance_done.request_date + interval_timedelta
-                    )
-                else:
-                    next_date = plan.start_maintenance_date
-                    while next_date < fields.Date.today():
-                        next_date = next_date + interval_timedelta
-                    plan.next_maintenance_date = next_date
+            plan.next_maintenance_date = plan._get_next_maintenance_date()
 
     @api.constrains("company_id", "equipment_id")
     def _check_company_id(self):
