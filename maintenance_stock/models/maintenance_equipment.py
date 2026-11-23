@@ -10,7 +10,6 @@ class MaintenanceEquipment(models.Model):
         groups="stock.group_stock_user",
     )
     default_consumption_warehouse_id = fields.Many2one(
-        string="Default Consumption Warehouse",
         comodel_name="stock.warehouse",
         groups="stock.group_stock_user",
     )
