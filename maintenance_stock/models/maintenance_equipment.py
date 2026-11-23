@@ -48,14 +48,12 @@ class MaintenanceEquipment(models.Model):
 
         # TODO Grouping by destination allows separating consumptions
         #      and returns. Look for a better system and remove this
-        show_groupby_to = (
-            len(
-                self.env["stock.move.line"]
-                .search([("maintenance_equipment_id", "=", self.id)])
-                .mapped("location_dest_id")
-            )
-            > 1
+        dest_loc_groups = self.env["stock.move.line"]._read_group(
+            domain=[("maintenance_equipment_id", "=", self.id)],
+            groupby=["location_dest_id"],
+            limit=2,
         )
+        show_groupby_to = len(dest_loc_groups) > 1
 
         action["context"] = {
             "search_default_done": 1,

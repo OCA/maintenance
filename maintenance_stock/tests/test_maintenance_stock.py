@@ -152,3 +152,53 @@ class TestMaintenanceStock(common.TransactionCase):
             self.maintenance_warehouse.cons_type_id.sequence_id.prefix,
             expected_prefix,
         )
+
+    def test_warehouse_rename(self):
+        """Renaming a warehouse renames its locations, routes and sequences."""
+        warehouse = self.maintenance_warehouse
+        warehouse.write({"name": "Renamed warehouse", "code": "RNMD"})
+        self.assertEqual(warehouse.view_location_id.name, "RNMD")
+        self.assertEqual(warehouse.in_type_id.sequence_id.prefix, "RNMD/IN/")
+        self.assertEqual(warehouse.cons_type_id.sequence_id.prefix, "RNMD/CONS/")
+        self.assertIn("Renamed warehouse", warehouse.cons_type_id.sequence_id.name)
+        self.assertTrue(warehouse.route_ids)
+        for route in warehouse.route_ids:
+            self.assertIn("Renamed warehouse", route.name)
+
+    def test_warehouse_rename_stock_manager(self):
+        """A stock manager cannot write sequences but can rename warehouses."""
+        user = common.new_test_user(
+            self.env, login="cons_manager", groups="stock.group_stock_manager"
+        )
+        self.maintenance_warehouse.with_user(user).write({"code": "RNMD"})
+        self.assertEqual(
+            self.maintenance_warehouse.cons_type_id.sequence_id.prefix, "RNMD/CONS/"
+        )
+
+    def test_move_lines_grouped_by_destination(self):
+        """Group by destination only when there are several destinations."""
+        warehouse = self.maintenance_warehouse
+        for dest in (warehouse.wh_cons_loc_id, warehouse.lot_stock_id):
+            picking = self.env["stock.picking"].create(
+                {
+                    "picking_type_id": warehouse.cons_type_id.id,
+                    "location_id": warehouse.lot_stock_id.id,
+                    "location_dest_id": dest.id,
+                    "maintenance_request_id": self.request_1.id,
+                }
+            )
+            self.env["stock.move.line"].create(
+                {
+                    "picking_id": picking.id,
+                    "product_id": self.product1.id,
+                    "location_id": warehouse.lot_stock_id.id,
+                    "location_dest_id": dest.id,
+                    "quantity": 1,
+                }
+            )
+            several = dest == warehouse.lot_stock_id
+            for record in (self.request_1, self.equipment_1):
+                context = record.action_view_stock_move_line_ids()["context"]
+                self.assertEqual(
+                    context["search_default_groupby_location_dest_id"], several
+                )
