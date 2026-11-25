@@ -23,6 +23,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [maintenance_equipment_ref](maintenance_equipment_ref/) | 20.0.1.0.0 |  | Adds reference field to maintenance equipment
+[maintenance_partner](maintenance_partner/) | 20.0.1.0.0 |  | Add Partner information in Maintenance Requests and equipments
 [maintenance_purchase](maintenance_purchase/) | 20.0.1.0.0 |  | Create Equipments with purchases
 
 [//]: # (end addons)
