@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2020 - TODAY, Marcel Savegnago - Escodoo
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="maintenance_request_form_view" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.request.form (in maintenance_request_repair)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <field name="maintenance_type" position="after">
+                <field name="repair_order_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="maintenance_request_tree_view" model="ir.ui.view">
+        <field
+            name="name"
+        >maintenance.request.list (in maintenance_request_repair)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
+        <field name="arch" type="xml">
+            <field name="stage_id" position="before">
+                <field name="repair_order_id" optional="show" />
+            </field>
+        </field>
+    </record>
+</odoo>
