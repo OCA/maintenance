@@ -154,3 +154,18 @@ class TestMaintenanceStock(common.TransactionCase):
             self.maintenance_warehouse.cons_type_id.sequence_id.prefix,
             expected_prefix,
         )
+
+    def test_warehouse_rename(self):
+        """Renaming a warehouse renames its locations, routes and sequences"""
+        warehouse = self.maintenance_warehouse
+        warehouse.write({"name": "Renamed warehouse", "code": "RNMD"})
+        self.assertEqual(warehouse.view_location_id.name, "RNMD")
+        self.assertEqual(warehouse.in_type_id.sequence_id.prefix, "RNMD/IN/")
+        self.assertEqual(warehouse.cons_type_id.sequence_id.prefix, "RNMD/CONS/")
+        self.assertIn("Renamed warehouse", warehouse.cons_type_id.sequence_id.name)
+        self.assertTrue(
+            all(
+                "Renamed warehouse" in name
+                for name in warehouse.route_ids.mapped("name")
+            )
+        )
