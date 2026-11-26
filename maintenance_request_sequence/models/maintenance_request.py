@@ -10,6 +10,11 @@ class MaintenanceRequest(models.Model):
 
     code = fields.Char(readonly=True, copy=False, default="/")
 
+    @api.depends("code", "name")
+    def _compute_display_name(self):
+        for rec in self:
+            rec.display_name = f"[{rec.code}] {rec.name}" if rec.code else rec.name
+
     @api.model_create_multi
     def create(self, vals_list):
         pending_vals = [vals for vals in vals_list if vals.get("code", "/") == "/"]
