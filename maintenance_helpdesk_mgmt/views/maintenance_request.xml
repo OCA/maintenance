@@ -1,0 +1,55 @@
+<!-- Copyright 2026 Tecnativa - Christian Ramos
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="hr_equipment_request_view_form_button_box">
+        <field name="name">maintenance.request.form</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page
+                    name="helpdesk_tickets"
+                    string="Helpdesk Tickets"
+                    groups="helpdesk_mgmt.group_helpdesk_user_own"
+                >
+                    <field name="helpdesk_ticket_ids" />
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_kanban" model="ir.ui.view">
+        <field name="name">equipment.request.kanban</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban" />
+        <field name="arch" type="xml">
+            <field name="schedule_date" position="after">
+                <div
+                    class="row"
+                    t-if="record.helpdesk_ticket_count.value > 0"
+                    groups="helpdesk_mgmt.group_helpdesk_user_own"
+                >
+                    <a type="object" name="action_view_helpdesk_tickets">
+                        <field name="helpdesk_ticket_count" /> Helpdesk tickets
+                    </a>
+                </div>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_search" model="ir.ui.view">
+        <field name="name">equipment.request.search</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search" />
+        <field name="arch" type="xml">
+            <filter name="unscheduled" position="after">
+                <separator />
+                <filter
+                    string="With helpdesk tickets"
+                    name="helpdesk_tickets"
+                    domain="[('helpdesk_ticket_ids', '!=', False)]"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>
