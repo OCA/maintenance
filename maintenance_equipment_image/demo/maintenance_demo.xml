@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="maintenance.equipment_monitor1" model="maintenance.equipment">
+        <field
+            name="image_1920"
+            type="base64"
+            file="maintenance_equipment_image/static/img/monitor_black.jpg"
+        />
+    </record>
+    <record id="maintenance.equipment_monitor4" model="maintenance.equipment">
+        <field
+            name="image_1920"
+            type="base64"
+            file="maintenance_equipment_image/static/img/monitor_gray.jpg"
+        />
+    </record>
+    <record id="maintenance.equipment_monitor6" model="maintenance.equipment">
+        <field
+            name="image_1920"
+            type="base64"
+            file="maintenance_equipment_image/static/img/monitor_white.jpg"
+        />
+    </record>
+    <record id="maintenance.equipment_computer3" model="maintenance.equipment">
+        <field
+            name="image_1920"
+            type="base64"
+            file="maintenance_equipment_image/static/img/laptop1.jpg"
+        />
+    </record>
+    <record id="maintenance.equipment_computer5" model="maintenance.equipment">
+        <field
+            name="image_1920"
+            type="base64"
+            file="maintenance_equipment_image/static/img/laptop2.jpg"
+        />
+    </record>
+    <record id="maintenance.equipment_computer9" model="maintenance.equipment">
+        <field
+            name="image_1920"
+            type="base64"
+            file="maintenance_equipment_image/static/img/laptop3.jpg"
+        />
+    </record>
+    <record id="maintenance.equipment_computer11" model="maintenance.equipment">
+        <field
+            name="image_1920"
+            type="base64"
+            file="maintenance_equipment_image/static/img/laptop4.jpg"
+        />
+    </record>
+    <record id="maintenance.equipment_printer1" model="maintenance.equipment">
+        <field
+            name="image_1920"
+            type="base64"
+            file="maintenance_equipment_image/static/img/printer1.jpg"
+        />
+    </record>
+</odoo>
