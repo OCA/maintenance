@@ -1,0 +1,5 @@
+id,name,model_id,group_id/id,operation,domain
+access_equipment_certification_user,Certification user,maintenance.equipment.certificate,base.group_user,r
+access_equipment_certification_admin,Certification admin,maintenance.equipment.certificate,maintenance.group_equipment_manager,crud
+access_cert_reminder_rule_user,Certificate reminder rule user,maintenance.certificate.reminder.rule,base.group_user,r
+access_cert_reminder_rule_admin,Certificate reminder rule admin,maintenance.certificate.reminder.rule,maintenance.group_equipment_manager,crud
