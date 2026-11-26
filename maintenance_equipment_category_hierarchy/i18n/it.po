@@ -1,0 +1,58 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_category_hierarchy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2024-02-16 17:45+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: maintenance_equipment_category_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__child_id
+msgid "Child Categories"
+msgstr "Categorie figlie"
+
+#. module: maintenance_equipment_category_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__complete_name
+msgid "Complete Name"
+msgstr "Nome completo"
+
+#. module: maintenance_equipment_category_hierarchy
+#. odoo-python
+#: code:addons/maintenance_equipment_category_hierarchy/models/maintenance_equipment_category.py:0
+#, python-format
+msgid "Error ! You cannot create recursive categories."
+msgstr "Errore! Non è possibile creare categorie ricorsive."
+
+#. module: maintenance_equipment_category_hierarchy
+#: model:ir.model,name:maintenance_equipment_category_hierarchy.model_maintenance_equipment_category
+msgid "Maintenance Equipment Category"
+msgstr "Categoria attrezzatura menutenzione"
+
+#. module: maintenance_equipment_category_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__parent_id
+msgid "Parent Category"
+msgstr "Categoria padre"
+
+#. module: maintenance_equipment_category_hierarchy
+#: model:ir.model.fields,field_description:maintenance_equipment_category_hierarchy.field_maintenance_equipment_category__parent_path
+msgid "Parent Path"
+msgstr "Percorso padre"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
